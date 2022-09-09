@@ -1,6 +1,6 @@
 #include <iostream>
 
 int main() {
-	std::cout << "HEll o word!??!";
+	std::cout << "Hel lo Word?";
 	return 0;
 }
