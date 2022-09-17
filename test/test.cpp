@@ -1,6 +1,6 @@
 #include <iostream>
 
 int main() {
-	std::cout << "WARNING: terminal is not fully functional";
+	std::cout << “Hello world!”;
 	return 0;
 }
