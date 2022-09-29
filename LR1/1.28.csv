@@ -1,0 +1,6 @@
+;a;b;!;#;x;_
+q0;!,R,q0;#,R,q0;;;;,L,q1
+q1;a,L,q1;b,L,q1;x,R,q2;x,R,q3;x,L,q1;,L,q1
+q2;a,R,q2;b,R,q2;!,R,q2;#,R,q2;x,R,q2;a,L,q1
+q3;a,R,q3;b,R,q3;!,R,q3;#,R,q3;x,R,q3;b,L,q1
+q4;a,R,q4;b,R,q4;;;,R,q4;,N,!
