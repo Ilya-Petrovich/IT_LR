@@ -1,5 +1,5 @@
 ;a;b;_
-q1;_,N,q2;_,N,q3;_,N,!
+q1;_,R,q2;_,R,q3;_,N,!
 q2;a,R,q2;b,R,q2;_,L,q4
 q3;a,R,q3;b,R,q3;_,L,q5
 q4;a,L,q6;a,L,q7;_,N,q6
