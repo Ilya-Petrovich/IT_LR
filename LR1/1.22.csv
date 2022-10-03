@@ -2,8 +2,8 @@
 q1;_,R,q2;_,R,q3;,L,
 q2;a,R,q2;b,R,q2;_,L,q4
 q3;a,R,q3;b,R,q3;_,L,q5
-q4;a,L,q6;a,L,q7;,L,
-q5;b,L,q8;b,L,q9;,L,
+q4;a,L,q6;a,L,q7;a,L,!
+q5;b,L,q8;b,L,q9;b,L,!
 q6;a,L,q6;b,L,q6;a,N,!
 q7;a,L,q7;b,L,q7;b,N,!
 q8;a,L,q8;b,L,q8;a,N,!
