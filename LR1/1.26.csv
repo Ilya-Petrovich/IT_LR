@@ -1,8 +1,8 @@
 ;A;a;B;b;_
-q1;"A,R,q1";"A,R,q2";"B,R,q1";"B,R,q3";"_,N,q6"
-q2;"A,R,q2";"a,R,q2";"B,R,q2";"b,R,q2";"A,R,q4"
-q3;"A,R,q3";"a,R,q3";"B,R,q3";"b,R,q3";"B,R,q4"
-q4;"A,L,q4";"a,L,q4";"B,L,q4";"b,L,q4";"_,L,q5"
-q5;"A,L,q5";"a,L,q5";"B,L,q5";"b,L,q5";"_,R,q1"
-q6;"a,R,q6";;"b,R,q6";;"_,L,q7"
-q7;"a,L,q7";;"b,L,q7";;"_,N,!"
+q1;A,R,q1;A,R,q2;B,R,q1;B,R,q3;_,N,q6
+q2;A,R,q2;a,R,q2;B,R,q2;b,R,q2;A,R,q4
+q3;A,R,q3;a,R,q3;B,R,q3;b,R,q3;B,R,q4
+q4;A,L,q4;a,L,q4;B,L,q4;b,L,q4;_,L,q5
+q5;A,L,q5;a,L,q5;B,L,q5;b,L,q5;_,R,q1
+q6;a,R,q6;;b,R,q6;;_,L,q7
+q7;a,L,q7;;b,L,q7;;_,N,!
