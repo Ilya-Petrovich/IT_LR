@@ -1,7 +1,5 @@
 ;a;b;c;_
-q1;a,R,q3;b,R,q1;c,R,q1; ,L,q2
-q2;;c,L,q2;c,L,q2; ,N,!
-q3;a,R,q3;b,R,q3;c,R,q3; ,L,q5
-q4; ,R,q4; ,R,q4; ,R,q4; ,N,!
-q5;a,L,q6; ,L,q5; ,L,q5;
-q6; ,L,q6; ,L,q6; ,L,q6; ,N,!
+q1;a,R,q3;b,R,q1;c,R,q1;_,L,q2
+q2;;c,L,q2;c,L,q2;_,N,!
+q3;a,R,q3;b,R,q3;c,R,q3;_,L,q4
+q4;_,L,q4;_,L,q4;_,L,q4;a,N,!

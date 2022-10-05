@@ -1,5 +1,0 @@
-;a;b;c;_
-q1;a,R,q2;b,R,q2;c,R,q2;a,L,q3
-q2;a,R,q1;b,R,q1;c,R,q1; ,L,q4
-q3; ,L,q3; ,L,q3; ,L,q3; ,N,!
-q4; ,L,q4; ,L,q4; ,L,q4; ,N,!
