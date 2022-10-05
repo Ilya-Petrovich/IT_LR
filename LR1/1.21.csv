@@ -1,0 +1,8 @@
+;a;b;_
+q1;a,R,q2;b,R,q3;,,
+q2;a,R,q7;b,R,q2;_,L,q5
+q3;a,R,q3;b,R,q7;_,L,q5
+q4;a,R,q4;b,R,q4;_,L,q5
+q5;_,L,q5;_,L,q5;_,N,!
+q6;_,L,q6;_,L,q6;a,N,!
+q7;a,R,q7;b,R,q7;_,L,q6
