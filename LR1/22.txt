@@ -1,0 +1,9 @@
+ ;a;b; ;A;B
+q1;a,L,q1;b,L,q1; ,R,q2;*;*
+q2;A,R,q3;B,R,q6;*;*;*
+q3;a,R,q3;b,R,q3; ,L,q4;*;*
+q4;a,N,q8;a,L,q5;*;*;*
+q5;a,L,q5;b,L,q5;*;b,N,!;a,N!
+q6;a,R,q6;b,R,q6; ,L,q7;*;*
+q7;b,L,q5;b,N,q8;*;*;*
+q8;a,L,q8;b,L,q8;*;a,N,!;b,N,!
