@@ -1,41 +1,12 @@
-A={a,b}. Переверуть слово Р.;;;;;;
-;;;;;;
 ;a;b;A;B;%;_
-q0;a,R,q0;b,R,q0;N;N;N;%, L,q1
-q1;A,R,q2;B,R,q6;N;N;N;N
-q2;N;N;A,R,q2;B,R,q2;%,R,q3;N
-q3;a,R,q3;b,R,q3;N;N;%,L,q4;a,L,q5
-q4;a,N,q1;b,N,q1;A,L,q4;B,L,q4;N;,R,q10
-q5;a,L,q5;b,L,q5;N;N;%,L,q4;N
-q6;N;N;A,R,q6;B,R,q6;%,R,q7;N
-q7;a,R,q7;b,R,q7;N;N;%,L,q8;b,L,q9
-q8;a,N,q1;b,N,q1;A,L,q8;B,L,q8;N;,R,q10
-q9;a,L,q9;b,L,q9;N;N;%,L,q8;N
-q10;!;!;,R,q10;,R,q10;,R,q10;N
-;;;;;;
-;;;;;;
-;;ba;;;;
-1;q0;ba;b,R,q0;;;
-2;q0;ba;a,R,q0;;;
-3;q0;ba_;%, L,q1;;;
-4;q1;ba%;A,R,q2;;;
-5;q2;bA%;%,R,q3;;;
-6;q3;bA%_;a,L,q5;;;
-7;q5;bA%a;%,L,q4;;;
-8;q4;bA%a;A,L,q4;;;
-9;q4;bA%a;b,N,q1;;;
-10;q1;bA%a;B,R,q6;;;
-11;q6;BA%a;A,R,q6;;;
-12;q6;BA%a;%,R,q7;;;
-13;q7;BA%a;a,R,q7;;;
-14;q7;BA%a_;b,L,q9;;;
-15;q9;BA%ab;a,L,q9;;;
-16;q9;BA%ab;%,L,q8;;;
-17;q8;BA%ab;A,L,q8;;;
-18;q8;BA%ab;B,L,q8;;;
-19;q8;_BA%ab;,R,q10;;;
-20;q10;BA%ab;,R,q10;;;
-21;q10;A%ab;,R,q10;;;
-22;q10;%ab;,R,q10;;;
-23;q10;ab;!;;;
-24;!;ab;;;;
+q0;a,R,q0;b,R,q0;,N,;,N,;,N,;%, L,q1
+q1;A,R,q2;B,R,q6;,N,;,N,;,N,;,N,
+q2;,N,;,N,;A,R,q2;B,R,q2;%,R,q3;,N,
+q3;a,R,q3;b,R,q3;,N,;,N,;%,L,q4;a,L,q5
+q4;a,N,q1;b,N,q1;A,L,q4;B,L,q4;,N,;,R,q10
+q5;a,L,q5;b,L,q5;,N,;,N,;%,L,q4;,N,
+q6;,N,;,N,;A,R,q6;B,R,q6;%,R,q7;,N,
+q7;a,R,q7;b,R,q7;,N,;,N,;%,L,q8;b,L,q9
+q8;a,N,q1;b,N,q1;A,L,q8;B,L,q8;,N,;,R,q10
+q9;a,L,q9;b,L,q9;,N,;,N,;%,L,q8;,N,
+q10;,N,!;,N,!;,R,q10;,R,q10;,R,q10;,N,
