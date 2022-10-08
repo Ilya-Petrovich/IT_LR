@@ -1,12 +1,8 @@
 ;a;b;A;B;%;_
-q1;a,R,q1;b,R,q1;_,N,q1;_,N,q1;_,N,q1;%, L,q2
-q2;A,R,q3;B,R,q7;_,N,q2;_,N,q2;_,N,q2;_,N,q2
-q3;_,N,q3;_,N,q3;A,R,q3;B,R,q3;%,R,q4;_,N,q3
-q4;a,R,q4;b,R,q4;_,N,q4;_,N,q4;%,L,q5;a,L,q6
-q5;a,N,q2;b,N,q2;A,L,q5;B,L,q5;,N,q5;,R,q11
-q6;a,L,q6;b,L,q6;_,N,q6;_,N,q6;%,L,q5;_,N,q6
-q7;_,N,q7;_,N,q7;A,R,q7;B,R,q7;%,R,q8;_,N,q7
-q8;a,R,q8;b,R,q8;_,N,q8;_,N,q8;%,L,q9;b,L,q10
-q9;a,N,q2;b,N,q2;A,L,q9;B,L,q9;_,N,q9;_,R,q11
-q10;a,L,q10;b,L,q10;_,N,q10;_,N,q10;%,L,q9;_,N,q10
-q11;_,N,!;_,N,!;_,R,q11;_,R,q11;_,R,q11;_,N,q11
+q1;a,R,q1;b,R,q1;A,R,q1;B,R,q1;%,R,q1;%,L,q2
+q2;A,R,q3;B,R,q4;_,N,!;_,N,!;%,R,q2;_,N,!
+q3;a,R,q3;b,R,q3;_,N,!;_,N,!;%,R,q3;a,L,q5
+q4;a,R,q4;b,R,q4;_,N,!;_,N,!;%,R,q4;b,L,q5
+q5;a,L,q5;b,L,q5;a,L,q6;b,L,q6;%,L,q5;_,N,!
+q6;A,R,q3;B,R,q4;_,N,!;_,N,!;_,N,!;_,R,q7
+q7;_,R,q7;_,R,q7;_,N,!;_,N,!;_,N,!;_,N,!
