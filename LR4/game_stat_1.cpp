@@ -9,11 +9,11 @@ int main()
 	cout << "How much fuel do you have at start? ";
 	cin >> fuel;
 	if (cin.fail()) {
-		cout << "Invalid data" << endl;
+		cout << "Invalid data";
 		return 0;
 	} else {
 		if (not((0 <= fuel) and (fuel <= 50))) {
-			cout << "Invalid data" << endl;
+			cout << "Invalid data";
 			return 0;
 		}
 	}
@@ -31,11 +31,11 @@ int main()
 	cout << "What speed will you choose? ";
 	cin >> speed;
 	if (cin.fail()) {
-		cout << "Invalid data" << endl;
+		cout << "Invalid data";
 		return 0;
 	} else {
 		if (speed < 0) {
-			cout << "Invalid data" << endl;
+			cout << "Invalid data";
 			return 0;
 		} else {
 			speed = (speed > maxSpeed) ? maxSpeed : speed;	
@@ -66,6 +66,6 @@ int main()
 	cout << "Fuel consumed: " << fuelConsumpted << " litres" << endl;
 	cout << "Fuel remained: " << fuel-fuelConsumpted << " litres" << endl << "--------------------------------" << endl;
 	(traveled != 360) ? cout << "You haven't reached destination point. " << distance-traveled << " km left." :
-		cout << "Congratulations! You have reached destination point!" << endl;
+		cout << "Congratulations! You have reached destination point!";
 	
 }
