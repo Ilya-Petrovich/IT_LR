@@ -1,0 +1,14 @@
+;a;b;_
+q1;_,R,q2;_,R,q3;_,,q10
+q2;a,R,q2;b,R,q2;_,R,q4
+q3;a,R,q3;b,R,q3;_,R,q5
+q4;a,R,q4;b,R,q4;a,L,q6
+q5;a,R,q5;b,R,q5;b,L,q7
+q6;a,L,q6;b,L,q6;_,L,q8
+q7;a,L,q7;b,L,q7;_,L,q9
+q8;a,L,q8;b,L,q8;a,R,q1
+q9;a,L,q9;b,L,q9;b,R,q1
+q10;;;_,R,q11
+q11;_,L,q13;_,L,q12;_,,!
+q12;;;b,R,q10
+q13;;;a,R,q10
