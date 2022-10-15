@@ -1,6 +1,6 @@
 ;a;b;_
-q0;b,R,q1;b, R , q0;!
-q1;_,R,q2;_, R,q3;_,,q0
-q2;a,R,q2;a,R,q3;a,L,q4
-q3;b,R,q2;b,R,q3;b,L,q4
-q4;a,L,q4;b,L,q4;b,R,q0
+q0;b,R,q1;,R,;,,!
+q1;_,R,q2;_, R,q3;,,
+q2;,R,;a,R,q3;a,L,q4
+q3;b,R,q2;,R,;b,L,q4
+q4;,L,;,L,;b,R,q0
