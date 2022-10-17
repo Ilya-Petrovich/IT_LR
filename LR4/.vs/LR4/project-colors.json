@@ -1,0 +1,21 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "11952b80-30eb-46a6-9e1c-0ebab3d0ae31": {
+      "ProjectGuid": "11952b80-30eb-46a6-9e1c-0ebab3d0ae31",
+      "DisplayName": "game_stat_1",
+      "ColorIndex": 0
+    },
+    "2ef9560c-e6de-461a-b6c4-b0d5d7a9c420": {
+      "ProjectGuid": "2ef9560c-e6de-461a-b6c4-b0d5d7a9c420",
+      "DisplayName": "game_stat_2",
+      "ColorIndex": 1
+    },
+    "bdd2b48c-4092-4453-b19a-93aab5b0cd4b": {
+      "ProjectGuid": "bdd2b48c-4092-4453-b19a-93aab5b0cd4b",
+      "DisplayName": "calc",
+      "ColorIndex": 2
+    }
+  },
+  "NextColorIndex": 3
+}
