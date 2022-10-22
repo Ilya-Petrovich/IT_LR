@@ -1,3 +1,3 @@
 ;a;b;c;_
-q0;R;R;R;b ,R,q1
-q1;R;R;R;c, N, !
+q1;a,R,q1;b,R,q1;c,R,q1;b,R,q2
+q2;;;;c,N,!
