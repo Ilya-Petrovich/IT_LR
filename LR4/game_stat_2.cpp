@@ -15,7 +15,7 @@ bool fuel_consumption_possible_values(float fuel_consumption, float fuel) {
     if ((fuel_consumption >= 0) && (fuel_consumption <= fuel)) {
         return true;
     } else {
-        return false;
+        return false; 
     }
 }
 
