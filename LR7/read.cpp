@@ -70,7 +70,9 @@ void writeText(char* buff, long fileSize)
 int main()
 {
     FILE* file;
-    file = fopen("image.bmp", "rb");
+    char filename[10];
+    std::cin >> filename;
+    file = fopen(filename, "rb");
 
     long fileSize;
     fseek(file, 0, SEEK_END);
