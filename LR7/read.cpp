@@ -70,7 +70,7 @@ void writeText(char* buff, long fileSize)
 int main()
 {
     FILE* file;
-    char filename[10];
+    char filename[100];
     std::cin >> filename;
     file = fopen(filename, "rb");
 
@@ -84,11 +84,9 @@ int main()
     fread(buff, sizeof(char), fileSize, file);
 
     ReadText(buff, fileSize);
-    // changeColor(buff, fileSize);
+    changeColor(buff, fileSize);
 
-    // writeText(buff, fileSize);
-
-    // ReadText(buff, fileSize);
+    writeText(buff, fileSize);
 
     fclose(file);
     free(buff);
