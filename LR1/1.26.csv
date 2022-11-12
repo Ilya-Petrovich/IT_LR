@@ -1,7 +1,7 @@
-;a;b ;A;B;_
-q0;a,L,q0;b,L,q0;A,L,q0;B,L,q0;_,R,q1
-q1;A,R,q1;B,R,q1;A,N,q1;B,N,q1;_,L,q2
-q2;a,L,q2;b,L,q2;A,L,q2;B,L,q2;_,R,q3
-q3;a,R,q3;b,R,q3;a,R,q5;b,R,q4;,,!
-q4;a,R,q4;b,R,q4;A,R,q4;B,R,q4;b,L,q2
-q5;a,R,q5;b,R,q5;A,R,q5;B,R,q5;a,L,2
+;a;b;A;B;_
+q1;a,L,q1;b,L,q1;,,;,,;_,R,q2
+q2;A,R,q2;B,R,q2;,,;,,;_,R,q3
+q3;a,L,q3;b,L,q3;A,L,q3;B,L,q3;_,R,q4
+q4;a,R,q4;b,R,q4;a,R,q6;b,R,q5;,,!
+q5;a,R,q5;b,R,q5;A,R,q5;B,R,q5;b,L,q3
+q6;a,R,q6;b,R,q6;A,R,q6;b,R,q6;a,L,q3
