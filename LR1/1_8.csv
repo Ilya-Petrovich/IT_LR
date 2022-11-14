@@ -1,0 +1,5 @@
+;a;b;c;_
+q1;a,R,q3;b,R,q1;c,R,q1;,L,q2
+q2;;c,L,q2;c,L,q2;,N,!
+q3;a,R,q3;b,R,q3;c,R,q3;,L,q4
+q4;,L,q4;,L,q4;,L,q4;a,N,!
