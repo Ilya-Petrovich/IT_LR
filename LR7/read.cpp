@@ -46,7 +46,7 @@ int main()
 
 	long fileSize;
 
-	fopen_s(&file, "image.bmp", "rb");
+	file = fopen("image.bmp", "rb");
 
 	fseek(file, 0, SEEK_END);
 	fileSize = ftell(file);
