@@ -9,7 +9,7 @@ void readText(char* buff, long fileSize, FILE* file) {
 
 	fread(buff, sizeof(char), fileSize, file);
 
-	for (size_t i = fileSize - 20 * 20 * 3; i < fileSize; i+=4)
+	for (size_t i = fileSize - 20 * 20 * 3; i < 83; i+=4)
 	{
 		char united_byte = 0;
 
