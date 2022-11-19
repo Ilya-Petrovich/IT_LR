@@ -9,7 +9,7 @@ int main() {
 	cout << "Введите первое число: "; cin >> num_1;
 	cout << "Введите второе число: "; cin >> num_2;
 	cout << "Введите третье число: "; cin >> num_3;
-	if (num_1 > 0 && num_2 > 0 and num_3 > 0 && num_1 > num_2) {
+	if (num_1 > 0 && num_2 > 0 && num_3 > 0 && num_1 > num_2) {
 		cout << num_1 << " + " << num_2 << " = " << num_1 + num_2 << endl;
 		cout << num_1 << " - " << num_2 << " = " << num_1 - num_2 << endl;
 		cout << num_1 << " * " << num_2 << " = " << num_1 * num_2 << endl;
