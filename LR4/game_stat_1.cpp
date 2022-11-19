@@ -58,7 +58,17 @@ int main() {
 			cout << "\nFuel consumption with chosen speed: " << fuel_consumption << " litres per 100 km\n" << endl;
 
 			distance_traveled = fuel / (0.01 * fuel_consumption);
+
+			if (fuel_consumption == 0) {
+				distance_traveled = 0;
+			}
+
 			fuel_consumed = fuel;
+			
+			if (speed == 0) {
+				fuel_consumed = 0;
+				fuel_remained = fuel;
+			}
 
 			if (distance_traveled > distance) {
 				fuel_consumed = distance * fuel_consumption * 0.01;
@@ -67,6 +77,9 @@ int main() {
 			}
 
 			time_spent = distance_traveled / speed * 3600;
+			if (speed == 0) {
+				time_spent = 0;
+			}
 
 			cout << "Destination result\nDistance traveled: " << distance_traveled << " km" << endl;
 			cout << "Time spent: " << time_spent << " sec" << endl;
