@@ -16,11 +16,6 @@ int main() {
 
 	if (fuel >= 0 && fuel <= fuel_capacity) {
 		cout << "\nCar stats" << endl;
-
-		if (fuel < fuel_capacity/2) {
-			fuel = fuel + fuel_capacity / 2;
-		}
-
 		cout << "Fuel: " << fuel << endl;
 		cout << "Fuel capacity: " << fuel_capacity << endl;
 
@@ -33,10 +28,16 @@ int main() {
 		cout << "Speed: " << speed << endl;
 		cout << "Maximum speed: " << max_speed << "\n" << endl;
 
-
 		cout << "Route info\nDistance: " << distance << " km" << endl;
 		cout << "----------------------------------------" << endl;
-		cout << "You have to drive a route " << distance << " km long.\nBut first you need to check if you have enough fuel.\n\nWhat speed will you choose? ";
+		cout << "You have to drive a route " << distance << " km long.\nBut first you need to check if you have enough fuel." << endl;
+
+		if (fuel < fuel_capacity/2) {
+			fuel = fuel + fuel_capacity / 2;
+			cout << "\nYour fuel before start: " << fuel << endl;
+		}
+
+		cout << "\nWhat speed will you choose? ";
 		cin >> speed;
 
 		if (speed >= 0) {
@@ -64,7 +65,7 @@ int main() {
 			}
 
 			fuel_consumed = fuel;
-			
+
 			if (speed == 0) {
 				fuel_consumed = 0;
 				fuel_remained = fuel;
