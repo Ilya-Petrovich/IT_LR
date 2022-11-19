@@ -70,14 +70,14 @@ int main() {
 			cout << "----------------------------------------" << endl;
 
 			if (distance_traveled == distance) {
-				cout << "Congratulations! You have reached destination point!";
+				cout << "Congratulations! You have reached destination point!" << endl;
 			} else {
-				cout << "You haven't reached destination point. " << distance - distance_traveled << " km left.";
+				cout << "You haven't reached destination point. " << distance - distance_traveled << " km left." << endl;
 			}
 		} else {
-			cout << "\nInvalid data.";
+			cout << "\nInvalid data." << endl;
 		}
 	} else {
-		cout << "\nInvalid data.";
+		cout << "\nInvalid data." << endl;
 	}
 }
