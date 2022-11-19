@@ -1,9 +1,6 @@
 #include<iostream>
-#define OPEN
 
 using namespace std;
-
-#ifdef OPEN
 
 int main() {
 	float fuel, fuel2 = 0, speed, s, fuelConsuption, time;
@@ -84,7 +81,7 @@ int main() {
 	cout << "----------------------------------------" << endl;
 	cout << "You haven't reached destination point. " << 360 - s << " km left.";
 }
-#endif // DEBUG
+
 
 
 
