@@ -3,12 +3,12 @@
 using namespace std;
 
 int main() {
-	float fuel, fuel_capacity=50, fuel_consumption=0, speed=0, s, max_speed = 110, distance = 360, distance_travelled, fuel_consumed;
+	float fuel, fuel_capacity=50, fuel_consumption, speed, s, max_speed = 110, distance = 360, distance_travelled, fuel_consumed;
 	cout << "How much fuel do you have at start? "; cin >> fuel;
 	
 	if (fuel < 0 or fuel > 50 or cin.fail()) {
 		cout << endl;
-		cout << "Invalid data.";
+		cout << "Invalid data. ";
 		return 0;
 	}
 	cout << endl;
