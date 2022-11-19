@@ -26,6 +26,7 @@ int main() {
 	cout << "What speed will you choose? "; cin >> speed;
 
 	if (speed < 0 or cin.fail()) {
+		cout << endl;
 		cout << "Invalid data.";
 		return 0;
 	} else {
