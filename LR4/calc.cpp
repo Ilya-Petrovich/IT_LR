@@ -1,7 +1,6 @@
 #include<iostream>
 
 using namespace std;
-/*
 int main() {
 	int a, b, c;
 
@@ -23,5 +22,3 @@ int main() {
 	cout << a << " + " << b <<" * "<< c << " = " << a + b * c << endl;
 	cout <<"(" << a << " + " << b << ") * " << c << " = " << (a + b) * c;
 }
-*/
-
