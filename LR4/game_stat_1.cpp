@@ -48,9 +48,14 @@ int main() {
 			cout << "Your speed before start: " << speed << " km/h" << endl;
 
 			s = speed / 10.;
-			fuel_consumption = s * s / 4 - 4.5 * s + 30;
 
-			cout << "Fuel consumption with chosen speed: " << fuel_consumption << " litres per 100 km \n" << endl;
+			if (speed == 0) {
+				fuel_consumption = 0;
+			} else {
+				fuel_consumption = s * s / 4 - 4.5 * s + 30;
+			}
+
+			cout << "\nFuel consumption with chosen speed: " << fuel_consumption << " litres per 100 km\n" << endl;
 
 			distance_traveled = fuel / (0.01 * fuel_consumption);
 			fuel_consumed = fuel;
