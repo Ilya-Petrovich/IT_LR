@@ -1,8 +1,7 @@
 #include<iostream>
-#define OPEN
+
 using namespace std;
 
-#ifdef OPEN
 int main() {
 	int a, b, c;
 
@@ -24,5 +23,5 @@ int main() {
 	cout << a << " + " << b <<" * "<< c << " = " << a + b * c << endl;
 	cout <<"(" << a << " + " << b << ") * " << c << " = " << (a + b) * c;
 }
-#endif 
+
 

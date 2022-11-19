@@ -1,5 +1,5 @@
 #include<iostream>
-#define O
+#define OPEN
 
 using namespace std;
 
