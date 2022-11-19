@@ -13,7 +13,7 @@ int main() {
 	cout << "Type the third number: ";
 	cin >> num_3;
 
-	if (num_1 >= 0 && num_2 >= 0 && num_3 >= 0 && num_1 > num_2) {
+	if (num_1 >= 0 && num_2 > 0 && num_3 >= 0 && num_1 > num_2) {
 		cout << num_1 << " + " << num_2 << " = " << num_1 + num_2 << endl;
 		cout << num_1 << " - " << num_2 << " = " << num_1 - num_2 << endl;
 		cout << num_1 << " * " << num_2 << " = " << num_1 * num_2 << endl;
