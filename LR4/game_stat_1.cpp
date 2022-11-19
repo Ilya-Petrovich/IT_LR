@@ -57,6 +57,6 @@ int main() {
 	cout << "Fuel consumed: " << fuel_consumed << " litres" << endl;
 	cout << "Fuel remained: " << fuel-fuel_consumed << " litres" << endl;
 	cout << "----------------------------------------" << endl;
-	distance_travelled != distance ? cout << "You haven't reached destination point. " << distance-distance_travelled << " km left." : cout << "Congratulations! You have reached destination point!";
+	distance_travelled != distance ? cout << "You haven't reached destination point. " << distance-distance_travelled << " km left." : cout << "Congratulations! You have reached destination point!"; cout << endl;
 
 }
