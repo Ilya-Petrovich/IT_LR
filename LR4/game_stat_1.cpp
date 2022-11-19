@@ -8,7 +8,7 @@ int main() {
 	
 	if (fuel<0 or fuel>50 or cin.fail()) {
 		cout << endl;
-		cout << "Invalid data." << endl;
+		cout << "Invalid data.";
 		return 0;
 	}
 	cout << endl;
