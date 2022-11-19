@@ -46,7 +46,7 @@ int main() {
 		fuel_consumed = speed == 0 ? 0 : fuel;
 	}
 
-	cout << "Distance travelled: " << distance_travelled << " km" << endl;
+	cout << "Distance traveled: " << distance_travelled << " km" << endl;
 
 	if (speed == 0) {
 		cout << "Time spent: 0 sec" << endl;
