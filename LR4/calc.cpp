@@ -1,20 +1,20 @@
-ï»¿#include <iostream>
-#include <cmath>
+#include <iostream>
+#include <iomanip>
 using namespace std;
 int main() {
-	int num1, num2,num3;
-	cout << "Ğ’Ğ²ĞµĞ´Ğ¸Ñ‚Ğµ Ğ¿ĞµÑ€Ğ²Ğ¾Ğµ Ñ‡Ğ¸ÑĞ»Ğ¾:"; cin >> num1;
-	cout << "Ğ’Ğ²ĞµĞ´Ğ¸Ñ‚Ğµ Ğ²Ñ‚Ğ¾Ñ€Ğ¾Ğµ Ñ‡Ğ¸ÑĞ»Ğ¾:"; cin >> num2;
-	cout << "Ğ’Ğ²ĞµĞ´Ğ¸Ñ‚Ğµ Ñ‚Ñ€ĞµÑ‚ÑŒĞµ Ñ‡Ğ¸ÑĞ»Ğ¾:"; cin >> num3;
-	if (!(num3>=0 && num1 >= 0 && num2 >= 0 && num1 > num2)){
-		cout << "Invalid data"<<endl;
+	int num1, num2, num3;
+	setlocale(LC_ALL, "russian");
+	cout << "Ââåäèòå ïåğâîå ÷èñëî : "; cin >> num1;
+	cout << "Ââåäèòå âòîğîå ÷èñëî : "; cin >> num2;
+	cout << "Ââåäèòå òğåòüå ÷èñëî : "; cin >> num3;
+	if (!(num1 > num2 && num2 != 0 && num1 * num2 * num3 > 0)) {
+		cout << "Invalid data" << endl;
 		return 0;
 	}
 	cout << num1 << " + " << num2 << " = " << num1 + num2 << endl;
 	cout << num1 << " - " << num2 << " = " << num1 - num2 << endl;
 	cout << num1 << " * " << num2 << " = " << num1 * num2 << endl;
-	cout << num1 << " / " << num2 << " = " << num1 / num2 << endl;
-	cout << (double)num1 << " / " << (double)num2 << " = " << (double)num1 / num2 << endl;
+	cout << num1 << ".0" << " / " << num2 << ".0" << " = " << (float)num1 / num2 << endl;
 	cout << num1 << " % " << num2 << " = " << num1 % num2 << endl;
 	cout << num1 << " + " << num2 << " * " << num3 << " = " << num1 + num2 * num3 << endl;
 	cout << "(" << num1 << " + " << num2 << ")" << " * " << num3 << " = " << (num1 + num2) * num3 << endl;
