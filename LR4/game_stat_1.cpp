@@ -23,7 +23,7 @@ int main() {
 	cout << "You have to drive a route " << distance << " km long." << endl;
 	cout << "But first you need to check if you have enough fuel." << endl << endl;
 	fuel = fuel < fuel_capacity/2 ? fuel+fuel_capacity/2 : fuel;
-	cout << "What speed will you chose? "; cin >> speed;
+	cout << "What speed will you choose? "; cin >> speed;
 
 	if (speed < 0 or cin.fail()) {
 		cout << "Invalid data.";
