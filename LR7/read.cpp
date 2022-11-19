@@ -35,10 +35,11 @@ void readText(char* buff, long fileSize) {
 
 int main()
 {
-
+	char filename[100];
+	cin >> filename;
 	long fileSize;
 
-	file = fopen("image.bmp", "rb");
+	file = fopen(filename, "rb");
 
 	fseek(file, 0, SEEK_END);
 	fileSize = ftell(file);
