@@ -1,13 +1,14 @@
 #include <iostream>
+#include <clocale>
 
 using namespace std;
 
 int main() {
 	setlocale(LC_ALL, "Russian");
 	int num_1, num_2, num_3;
-	cout << "Ââåäèòå ïåğâîå çíà÷åíèå: "; cin >> num_1;
-	cout << "Ââåäèòå âòîğîå çíà÷åíèå: "; cin >> num_2;
-	cout << "Ââåäèòå òğåòüå çíà÷åíèå: "; cin >> num_3;
+	cout << "Ğ’Ğ²ĞµĞ´Ğ¸Ñ‚Ğµ Ğ¿ĞµÑ€Ğ²Ğ¾Ğµ Ñ‡Ğ¸ÑĞ»Ğ¾: "; cin >> num_1;
+	cout << "Ğ’Ğ²ĞµĞ´Ğ¸Ñ‚Ğµ Ğ²Ñ‚Ğ¾Ñ€Ğ¾Ğµ Ñ‡Ğ¸ÑĞ»Ğ¾: "; cin >> num_2;
+	cout << "Ğ’Ğ²ĞµĞ´Ğ¸Ñ‚Ğµ Ñ‚Ñ€ĞµÑ‚ÑŒĞµ Ñ‡Ğ¸ÑĞ»Ğ¾: "; cin >> num_3;
 	if (num_1 >= 0 && num_2 >= 0 and num_3 >= 0 && num_1 > num_2) {
 		cout << num_1 << " + " << num_2 << " = " << num_1 + num_2 << endl;
 		cout << num_1 << " - " << num_2 << " = " << num_1 - num_2 << endl;
