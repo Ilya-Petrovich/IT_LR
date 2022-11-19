@@ -17,7 +17,7 @@ int main() {
     cin >> fuel;
 
     if (fuel < 0 || fuel > capacity) {
-        cout << "Invalid data." << endl;
+        cout << endl << "Invalid data." << endl;
         return 0;
     }
  
