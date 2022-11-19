@@ -1,7 +1,7 @@
 #include<iostream>
 
 using namespace std;
-
+/*
 int main() {
 	int a, b, c;
 
@@ -9,8 +9,8 @@ int main() {
 	cout << "Type the second number: "; cin >> b;
 	cout << "Type the third number: "; cin >> c;
 
-	if ((a < 0) or (b < 0) or (c < 0)) {
-		cout << "Invalid data." << endl;
+	if ((a < 0) or (b < 0) or (c < 0) or (a < b)) {
+		cout << "Invalid data" << endl;
 		return 0;
 	}
 
@@ -23,5 +23,5 @@ int main() {
 	cout << a << " + " << b <<" * "<< c << " = " << a + b * c << endl;
 	cout <<"(" << a << " + " << b << ") * " << c << " = " << (a + b) * c;
 }
-
+*/
 

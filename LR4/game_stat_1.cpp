@@ -3,11 +3,8 @@
 using namespace std;
 
 int main() {
-	float fuel, fuel2 = 0, speed, s, fuelConsuption, time;
-	bool flag = 1;
-
-	cout << "How much fuel do you at start? "; cin >> fuel;
-	cout << endl;
+	float fuel, fuel2 = 0, speed, s, fuelConsuption, time; bool flag = 1;
+	cout << "How much fuel do you have at start? "; cin >> fuel; cout << endl;
 
 	if ((fuel < 0) or (fuel > 50)) {
 		cout << "Invalid data.";
@@ -41,8 +38,8 @@ int main() {
 	cout << "What speed will you choose? "; cin >> speed;
 
 	if (speed < 0) {
-		cout << "Invalid data.";
 		cout << endl;
+		cout << "Invalid data.";
 		return 0;
 	}
 
@@ -60,7 +57,7 @@ int main() {
 		time = s / speed * 60 * 60;
 	}
 
-	cout << "Fuel consumption with chosen speed: " << fuelConsuption << " liters per 100 km" << endl;
+	cout << "\nFuel consumption with chosen speed: " << fuelConsuption << " liters per 100 km" << endl;
 	cout  << endl;
 	cout << "Destination result" << endl;
 
@@ -70,7 +67,7 @@ int main() {
 		cout << "Fuel consumed: " << 3.6 * fuelConsuption << " liters" << endl;
 		cout << "Fuel remained: " << fuel - 3.6 * fuelConsuption << " liters" << endl;
 		cout << "----------------------------------------" << endl;
-		cout << "Congratulation! You have reached destination point!" << endl;
+		cout << "Congratulation! You have reached destination point!";
 		return 0;
 	}
 
