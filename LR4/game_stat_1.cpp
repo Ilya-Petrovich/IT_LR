@@ -8,7 +8,7 @@ int main()
 	std::cout << "How much fuel do you have at start? ";
 	std::cin >> fuel;
 
-	if (fuel < 0 or fuel > 50) {
+	if (fuel <= 0 or fuel > 50) {
 		std::cout << "\nInvalid data.";
 		return 0;
 	}
