@@ -15,7 +15,7 @@ void Route_info(int& speed, double &fuelConsumption) {
 	cout << "You have to drive a route 360 km long.\n";
 	cout << "But first you need to check if you have enough fuel.\n\n";
 	cout << "What speed will you choose? "; cin >> speed;
-	if (speed >= 0) { cout << "Your speed before start: "; speed = (speed <= 110) ? speed : 110; cout << speed << "\n"; }
+	if (speed >= 0) { cout << "Your speed before start: "; speed = (speed <= 110) ? speed : 110; cout << speed <<" km/h" << "\n"; }
 	if (speed != 0) {
 		s = speed / 10.;
 		fuelConsumption = s * s / 4 - 4.5 * s + 30;
