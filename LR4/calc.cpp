@@ -24,15 +24,14 @@ int main() {
         cout << num_1 << " * " << num_2 << " = " << num_1 * num_2 << endl;
         cout << num_1 << " / " << num_2 << " = " << num_1 / num_2 << endl;
         cout << setprecision(1) << fixed << (float)num_1 << " / " << (float)num_2 << " = ";
-        cout << setprecision(5) << fixed << div << endl;
-        cout << setprecision(0) << fixed;
+        cout << setprecision(0) << fixed << div << endl;
         cout << num_1 << " % " << num_2 << " = " << num_1 % num_2 << endl;
         cout << num_1 << " + " << num_2 << " * " << num_3 << " = " <<
             num_1 + num_2 * num_3 << endl;
         cout << "(" << num_1 << " + " << num_2 << ")" << " * " << num_3 << " = " <<
-            (num_1 + num_2) * num_3 << endl;
+            (num_1 + num_2) * num_3;
     }
     else
-        cout << "Invalid data" << endl;
+        cout << "Invalid data";
     return 0;
 }
