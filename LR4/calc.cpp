@@ -8,11 +8,11 @@ int main() {
 
     int num_1, num_2, num_3;
 
-    cout << "Введите первое число: ";
+    cout << "Type the first number: ";
     cin >> num_1;
-    cout << "Введите второе число: ";
+    cout << "Type the second number: ";
     cin >> num_2;
-    cout << "Введите третье число: ";
+    cout << "Type the third number: ";
     cin >> num_3;
 
     float div = (float)num_1 / num_2;
