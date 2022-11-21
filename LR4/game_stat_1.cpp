@@ -4,7 +4,7 @@ int main()
 {
 	double t, mt = 50, fuelConsumption, dm, rt, ot, s, d = 360;
 	int ms = 110, speed, time;
-	cout << "How much do you have at start? ";
+	cout << "How much fuel do you have at start? ";
 	cin >> t;
 	if (t >= 0 && t <= 50)
 	{
