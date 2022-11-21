@@ -21,7 +21,7 @@ int main() {
 		std::cout << "(" << num_1 << " + " << num_2 << ") * " << num_3 << " = " << (num_1 + num_2) * num_3;
 	}
 	else {
-		std::cout << "Invalid data" << std::endl;
+		std::cout << "Invalid data";
 	}
 	return 0;
 
