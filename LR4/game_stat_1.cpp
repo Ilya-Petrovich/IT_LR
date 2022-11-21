@@ -2,31 +2,30 @@
 
 int main() {
 	float fuel, fuel2 = 0, speed, s, fuelConsuption, time; bool flag = 1;
-	std::cout << "How much fuel do you have at start? ";   std::cin >> fuel;   std::cout << std::endl;
-
+	std::cout << "How much fuel do you have at start? ";   
+	std::cin >> fuel;   
+	
 	if ((fuel < 0) or (fuel > 50)) {
-		std::cout << "Invalid data.";
+		std::cout << "\nInvalid data.";
 		return 0;
 	}
 
-	std::cout << "Car stats" << std::endl;
+	std::cout << "\nCar stats" << std::endl;
 	std::cout << "Fuel: "<< fuel << std::endl;
 
 	if (fuel < 25) {
 		fuel += 25, flag = false;
 	}
 
-	std::cout << "Fuel capacity: 50" << std::endl;
-	std::cout << "Fuel consumption: 0" << std::endl;
-	std::cout << "Speed: 0" << std::endl;
-	std::cout << "Maximum speed: 110" << std::endl;
-	std::cout << std::endl;
-	std::cout << "Route info" << std::endl;
-	std::cout << "Distance: 360 km" << std::endl;
-	std::cout << "----------------------------------------" << std::endl;
-	std::cout << "You have to drive a route 360 km long." << std::endl;
-	std::cout << "But first you need to check if you have enough fuel." << std::endl;
-	std::cout << std::endl;
+	std::cout << "Fuel capacity: 50";
+	std::cout << "\nFuel consumption: 0";
+	std::cout << "\nSpeed: 0";
+	std::cout << "\nMaximum speed: 110\n";
+	std::cout << "Route info";
+	std::cout << "\nDistance: 360 km";
+	std::cout << "\n----------------------------------------";
+	std::cout << "\nYou have to drive a route 360 km long.";
+	std::cout << "\nBut first you need to check if you have enough fuel." << std::endl;
 
 	if (flag == 0) {
 		std::cout << "Your fuel before start: " << fuel << std::endl;
