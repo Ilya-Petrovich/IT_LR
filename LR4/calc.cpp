@@ -5,11 +5,11 @@ using namespace std;
 
 int main() {
     int num_1, num_2, num_3;
-    cout << "Enter the first number:";
+    cout << "Type the first number: ";
     cin >> num_1;
-    cout << "Enter the second number:";
+    cout << "Type the second number: ";
     cin >> num_2;
-    cout << "Enter the third number:";
+    cout << "Type the third number: ";
     cin >> num_3;
     if ((num_1 > num_2) and num_1 >= 0 and num_2 >= 0 and num_3 >= 0) {
         cout << num_1 << " + " << num_2 << " = " << num_1 + num_2 << endl;
