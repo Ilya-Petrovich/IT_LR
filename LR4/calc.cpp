@@ -4,7 +4,7 @@ int main()
 {
 	setlocale(LC_ALL, "Russian");
 	float num_1, num_2, num_3;
-	cout << "¬ведите первое число:";
+	cout << "¬ведите первое  число:";
 	cin >> num_1;
 	cout << "¬ведите второе число:";
 	cin >> num_2;

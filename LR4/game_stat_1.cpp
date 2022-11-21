@@ -15,7 +15,7 @@ int main()
     cout << "Car stats" << endl;
     cout << "Fuel: " << fuel << endl;
     cout << "Fuel capacity: 50" << endl;
-    cout << "Fuel consumption: 0" << endl;
+    cout << "Fuel  consumption: 0" << endl;
     cout << "Speed: 0" << endl;
     cout << "Maximum speed: 110" << endl;
     cout << endl;
