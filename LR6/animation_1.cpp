@@ -3,7 +3,7 @@
 
 using namespace std;
 
-const int h = 12, w = 11, time = 500;
+const int h = 12, w = 11, sleeptime = 500;
 
 void output(char person[h][w])
 {
@@ -13,7 +13,7 @@ void output(char person[h][w])
         }
         cout << endl;
     }
-    usleep(time * 1000);
+    usleep(sleeptime * 1000);
     // system("cls");
 }
 
