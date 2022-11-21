@@ -1,33 +1,26 @@
 #include <iostream>
-#include <cmath>
-using namespace std;
-
 int main()
 {
-	int x, y, z;
-	cout << "Type the first number: ";
-	cin >> x;
-	cout << "Type the second number: ";
-	cin >> y;
-	cout << "Type the third number: ";
-	cin >> z;
-	if (x > y) {
-		if ((x >= 0) and (y >= 0) and (z >= 0)) {
-			cout << x << " + " << y << " = " << x + y << endl;
-			cout << x << " - " << y << " = " << x - y << endl;
-			cout << x << " * " << y << " = " << x * y << endl;
-			cout << x << " / " << y << " = " << x / y << endl;
-			cout << x << ".0" << " / " << y << ".0" << " = " << double(x) / y << endl;
-			cout << x << " % " << y << " = " << x % y << endl;
-			cout << x << " + " << y << " * " << z << " = " << x + y * z << endl;
-			cout << "(" << x << " + " << y << ")" << " * " << z << " = " << (x + y) * z << endl;
-
-		}
-		else {
-			cout << "Invalid data" << endl;
-		}
+	int num_1, num_2, num_3;
+	std::cout « "Input the first number: ";
+	std::cin » num_1;
+	std::cout « "Input the second number: ";
+	std::cin » num_2;
+	std::cout « "Input the third number: ";
+	std::cin » num_3;
+	if (num_1 > num_2 && num_1 >= 0 && num_2 > 0 && num_3 >= 0)
+	{
+		std::cout « num_1 « " + " « num_2 « " = " « num_1 + num_2 « std::endl;
+		std::cout « num_1 « " - " « num_2 « " = " « num_1 - num_2 « std::endl;
+		std::cout « num_1 « " * " « num_2 « " = " « num_1 * num_2 « std::endl;
+		std::cout « num_1 « " / " « num_2 « " = " « num_1 / num_2 « std::endl;
+		std::cout « num_1 « ".0 / " « num_2 « ".0 = " «(double)num_1 / num_2 « std::endl;
+		std::cout « num_1 « " % " « num_2 « " = " « num_1 % num_2 « std::endl;
+		std::cout « num_1 « " + " « num_2 « " * " « num_3 « " = " « num_1 + num_2 * num_3 « std::endl;
+		std::cout « "(" « num_1 « " + " « num_2 « ") *" « num_3 « " = " «(num_1 + num_2) * num_3 « std::endl;
 	}
-	else {
-		cout << "Invalid data" << endl;
+	else
+	{
+		std::cout « "Invalid data" « std::endl;
 	}
-}
+	return 0;
