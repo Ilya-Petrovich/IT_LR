@@ -22,7 +22,7 @@ int main(){
     cin >> fuelQuantity;
 
     if(fuelQuantity< 0 || fuelQuantity > 50){
-        cout << "\nInvalid data.";
+        cout << "\nInvalid data." << endl;;
         return -1;
     }
    
@@ -49,7 +49,7 @@ int main(){
     cout << "\nWhat speed will you choose? ";
     cin >> speed;
     if(speed <0){
-        cout << "\nInvalid data.";
+        cout << "\nInvalid data." << endl;
         return -1;
     }
     if(speed > 110){
