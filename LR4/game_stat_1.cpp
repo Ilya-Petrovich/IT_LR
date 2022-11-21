@@ -7,7 +7,7 @@ int main(){
     double fuel_consumption = 0, distance = 360;
     int speed = 0, time;
     int max_speed = 110;
-    cout << "How much fuel do you have at start? "; cin >> fuel;
+    cout << "How much fuel do you have at start? Fuel:  "; cin >> fuel;
     if (fuel >= 0 and fuel <= 50) {
         //// **************** Car starts ********************************
         cout << "Fuel: " << fuel << endl;
