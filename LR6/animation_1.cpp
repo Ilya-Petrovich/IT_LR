@@ -1,5 +1,5 @@
 #include <iostream>
-#include <windows.h>
+#include <unistd.h>
 
 using namespace std;
 
@@ -13,8 +13,8 @@ void output(char person[h][w])
         }
         cout << endl;
     }
-    Sleep(time);
-    system("cls");
+    usleep(time * 1000);
+    // system("cls");
 }
 
 void pos2(char person[h][w])
