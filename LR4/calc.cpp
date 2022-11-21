@@ -4,21 +4,18 @@ using namespace std;
 
 int main()
 {
-    setlocale(LC_ALL,"RU_ru");
-    
-
     int num1,num2,num3;
 
-    cout << "Введите первое число: ";
+    cout << "Type the first number: ";
     cin >> num1;
 
-    cout << "Введите второе число: ";
+    cout << "Type the second number: ";
     cin >> num2;
 
-    cout << "Введите третье число: ";
+    cout << "Type the third number: ";
     cin >> num3;
 
-    if((num1 < 0 || num2 < 0 || num3 < 0) && num1 < num2){
+    if((num1 < 0 || num2 < 0 || num3 < 0) || num1 < num2){
         cout << "Invalid data" << endl;
         return -1;
     }
