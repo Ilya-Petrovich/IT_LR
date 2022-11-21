@@ -29,16 +29,16 @@ int main(){
    
 
     cout << "\nCar stats";
-    cout << "\nFuel:" << fuelQuantity;
+    cout << "\nFuel: " << fuelQuantity;
     cout << "\nFuel capacity: 50";
-    cout << "\nFuel consumtion:" << fuelConsumption;
-    cout << "\nSpeed:" << speed;
+    cout << "\nFuel consumtion: " << fuelConsumption;
+    cout << "\nSpeed: " << speed;
     cout << "\nMaximum speed: 110" << endl;
 
     cout << "\nRoute info";
     cout << "\nDistance: "<< distance << " km";
     cout << "\n---------------------------------------";
-    cout << "\nYou have to drive a route "<< distance << "km long.";
+    cout << "\nYou have to drive a route "<< distance << " km long.";
     cout << "\nBut first you need to check if you have enough fuel." << endl;
     
     if(fuelQuantity < 25){
