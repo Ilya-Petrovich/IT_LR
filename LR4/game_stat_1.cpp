@@ -2,7 +2,7 @@
 int main() {
 
 	float fuel, speed, s, time, S; double consumed, remained;
-	std::cout << "How much fuel do you gave at start? "; std::cin >> fuel;
+	std::cout << "How much fuel do you have at start? "; std::cin >> fuel;
 	if ((fuel < 0) || (50 <= fuel)) {
 		std::cout << '\n' << "Invalid data.";
 		return 0;
