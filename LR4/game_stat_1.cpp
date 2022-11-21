@@ -13,7 +13,7 @@ int main() {
     capacity = 50;
     dis = 360;
 
-    cout << "How much fuel do you have on start? ";
+    cout << "How much fuel do you have at start? ";
     cin >> fuel;
 
     if (fuel < 0 || fuel > capacity) {
