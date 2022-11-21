@@ -20,7 +20,7 @@ int main(){
 	
 	cout << num_1 << " + " << num_2 << " * "<< num_3 << " = " << num_1 + num_2 * num_3 << endl;
 	cout <<"(" << num_1 << " + " << num_2 << ")" << " * "<< num_3 << " = " << (num_1 + num_2) * num_3 << endl;
-} else { cout << "Invalid data";
+} else { cout << "Invalid data" << endl;
 }
 	
 	
