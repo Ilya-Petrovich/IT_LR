@@ -18,7 +18,7 @@ int main(){
     int 
         timeSpent;
 
-    cout << "How much fuel do you have before start? ";
+    cout << "How much fuel do you have at start? ";
     cin >> fuelQuantity;
 
     if(fuelQuantity< 0 || fuelQuantity > 50){
