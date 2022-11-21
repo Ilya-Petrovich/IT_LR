@@ -13,6 +13,7 @@ void output(char person[h][w])
         }
         cout << endl;
     }
+    
     // usleep(sleeptime * 1000);
     // system("cls");
 }
