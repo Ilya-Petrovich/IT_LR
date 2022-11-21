@@ -4,14 +4,13 @@ using namespace std;
 
 int main() {
 	double fuel, fuel_capacity=50, fuel_consumption = 0, speed = 0, s, max_speed = 110, distance = 360, distance_travelled, fuel_consumed;
-	cout << "How much fuel do you have at start? "; cin >> fuel;
+	cout << "How much fuel do you have at start? "; cin >> fuel; cout << endl;
 
 	if (fuel < 0 or fuel > 50) {
-		cout << endl;
 		cout << "Invalid data.";
 		return 0;
 	}
-	cout << endl;
+
 	cout << "Car stats" << endl;
 	cout << "Fuel: " << fuel << endl;
 	cout << "Fuel capacity: " << fuel_capacity << endl;
