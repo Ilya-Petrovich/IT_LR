@@ -10,8 +10,8 @@ int main()
 	cin >> n2;
 	cout << "Type the third number: ";
 	cin >> n3;
-	if ((n1 < n2) or (n1 < 0) or (n2 < 0) or (n3 < 0)) {
-		cout << "Invalid data";
+	if ((n1 < n2) or (n1 <= 0) or (n2 < 0) or (n3 < 0)) {
+		cout << "Invalid data" << endl;
 	}
 	else
 	{
