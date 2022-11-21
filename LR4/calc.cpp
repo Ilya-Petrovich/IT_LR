@@ -4,11 +4,11 @@ using namespace std;
 int main()
 {
 	int n1, n2, n3;
-	cout << "1 chislo: ";
+	cout << "Type the first number: ";
 	cin >> n1;
-	cout << "2 chislo: ";
+	cout << "Type the second number: ";
 	cin >> n2;
-	cout << "3 chislo: ";
+	cout << "Type the third number: ";
 	cin >> n3;
 	if ((n1 < n2) or (n1 < 0) or (n2 < 0) or (n3 < 0)) {
 		cout << "Invalid data";
@@ -19,7 +19,7 @@ int main()
 	cout << n1 << " - " << n2 << " = " << n1 - n2 << endl;
 	cout << n1 << " * " << n2 << " = " << n1 * n2 << endl;
 	cout << n1 << " / " << n2 << " = " << n1 / n2 << endl;
-	cout << float(n1) << " / " << float(n2) << " = " << float(n1) / float(n2) << endl;
+	cout << n1 << ".0 / " << float(n2) << ".0 = " << float(n1) / float(n2) << endl;
 	cout << n1 << " % " << n2 << " = " << n1 % n2 << endl;
 	cout << n1 << " + " << n2 << " * " << n3 << " = " << n1 + n2 * n3 << endl;
 	cout << "(" << n1 << " + " << n2 << ") * " << n3 << " = " << (n1 + n2) * n3 << endl;

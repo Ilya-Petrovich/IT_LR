@@ -8,7 +8,7 @@ int main()
 	cout << "How much fuel do you have at start? "; cin >> fuel;
 	if (fuel < 0 or fuel > 50)
 	{
-		cout << "Invalid data.";
+		cout << "\nInvalid data.";
 	}
 	else
 	{
@@ -32,7 +32,7 @@ int main()
 	cout << "What speed will you choose? "; cin >> speed;
 	if (speed < 0)
 	{
-		cout << "Invalid data.";
+		cout << "\nInvalid data.";
 	}
 	else{
 	if (speed > max_speed)
@@ -42,7 +42,7 @@ int main()
 	cout << "Your speed before start: " << speed << " km/h" << endl;
 	float s = float(speed) / 10;
 	speed > 0 ? fuelConsumption = s * s / 4 - 4.5 * s + 30 : fuelConsumption = 0;
-	cout << "Fuel consumption with chosen speed: " << fuelConsumption << " litres per 100 km" << endl << endl;
+	cout << "\nFuel consumption with chosen speed: " << fuelConsumption << " litres per 100 km" << endl << endl;
 	cout << "Destination result" << endl;
 	if (fuelConsumption > 0){
 	if ((float(fuel) / (fuelConsumption / 100)) > 360)
