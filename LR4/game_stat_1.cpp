@@ -6,12 +6,6 @@ int main() {
 	double fuel, fuel_capacity=50, fuel_consumption = 0, speed = 0, s, max_speed = 110, distance = 360, distance_travelled, fuel_consumed;
 	cout << "How much fuel do you have at start? "; cin >> fuel;
 
-	while (cin.fail()) {
-		cin.clear();
-		cin.ignore(numeric_limits<streamsize>::max(), '\n');
-		cout << "How much fuel do you have at start? "; cin >> fuel;
-	}
-	
 	if (fuel < 0 or fuel > 50) {
 		cout << endl;
 		cout << "Invalid data.";
@@ -31,12 +25,6 @@ int main() {
 	cout << "But first you need to check if you have enough fuel." << endl << endl;
 	fuel = fuel < fuel_capacity / 2 ? fuel + fuel_capacity / 2 : fuel;
 	cout << "What speed will you choose? "; cin >> speed;
-
-	while (cin.fail()) {
-		cin.clear();
-		cin.ignore(numeric_limits<streamsize>::max(), '\n');
-		cout << "What speed will you choose? "; cin >> speed;
-	}
 
 	if (speed < 0) {
 		cout << endl;
