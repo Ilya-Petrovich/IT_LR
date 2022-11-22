@@ -2,11 +2,11 @@
 int main()
 {
 	int num_1,num_2,num_3;
-	std::cout << "Input the first number: ";
+	std::cout << "Type the first number: ";
 	std::cin >> num_1;
-	std::cout << "Input the second number: ";
+	std::cout << "Type the second number: ";
 	std::cin >> num_2;
-	std::cout << "Input the third number: ";
+	std::cout << "Type the third number: ";
 	std::cin >> num_3;
 	if(num_1 > num_2 && num_1>=0 && num_2>0 && num_3>=0)
 	{
@@ -14,10 +14,10 @@ int main()
 		std::cout <<num_1<< " - " << num_2 << " = " << num_1 - num_2<< std::endl;
 		std::cout <<num_1<< " * " << num_2 << " = " << num_1 * num_2<< std::endl;
 		std::cout <<num_1<< " / " << num_2 << " = " << num_1 / num_2<< std::endl;
-		std::cout <<num_1<< ".0 / " << num_2 << ".0 = " << (double)num_1 / num_2<< std::endl;
+		std::cout <<(double)num_1<< ".0"<<" / " << (double)num_2 << ".0"<<" = " << (double)num_1 / num_2<< std::endl;
 		std::cout <<num_1<< " % " << num_2 << " = " << num_1 % num_2<< std::endl;
 		std::cout <<num_1<< " + " << num_2 << " * " << num_3 << " = " << num_1 + num_2 * num_3 << std::endl;
-		std::cout << "(" << num_1<< " + " << num_2 << ") *"<< num_3 << " = " << (num_1 + num_2)*num_3<< std::endl;
+		std::cout << "(" << num_1<< " + " << num_2 << ") * "<< num_3 << " = " << (num_1 + num_2)*num_3<< std::endl;
 	} 
 	else
 	{

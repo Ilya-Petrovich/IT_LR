@@ -4,7 +4,7 @@ int main()
 {	
 	double t,mt=50,fuelConsumption,dm,rt,ot,s,d=360;
 	int ms=110,speed,time;
-	cout<<"How much do you have at start? ";
+	cout<<"How much fuel do you have at start? ";
 	cin>>t;
 	if( t>=0 && t<=50)
 	{
@@ -18,13 +18,13 @@ int main()
 		cout<<"Distance: 360 km"<<endl;
 		cout<<"\nYou have to drive a route 360 km long."<<endl;
 		cout<<"But first you need to check if you have enough fuel."<<endl;
+		cout<<"\nWhat speed will you choose? ";
+		cin>>speed;
 		if(t<mt/2)
 		{
 			t=t+mt/2;
 			cout<<"Your fuel before start: "<<t<<endl;
 		}
-		cout<<"\nWhat speed will you choose? ";
-		cin>>speed;
 		if(speed<0)
 		{
 			cout<<"Invalid data"<<endl;
