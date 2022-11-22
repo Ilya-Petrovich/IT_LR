@@ -55,7 +55,7 @@ int main() {
             fuel_consumption = 0;
         }
 
-        cout << "Fuel consumption with chosen speed: " << fuel_consumption << " litres per 100 km" << endl << endl;
+        cout << endl << "Fuel consumption with chosen speed: " << fuel_consumption << " litres per 100 km" << endl << endl;
 
         traveled_distance = fuel / fuel_consumption * 100;
 
@@ -88,7 +88,7 @@ int main() {
         }
     }
     else {
-        cout << "Invalid data." << endl;
+        cout << endl << "Invalid data." << endl;
     }
 
     return 0;
