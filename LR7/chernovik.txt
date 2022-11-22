@@ -1,0 +1,33 @@
+#include<iostream>
+#include<stdio.h>
+#include<fstream>
+using namespace std;
+
+FILE* file;
+
+void readText(char* buff, long filesize);
+
+int main(); {
+    file = fopen("image.bmp", "rb");
+    long fileSize;
+    fseek(file, 0, SEEK_END);
+    fileSize = ftell(file);
+    rewind(file);
+    char* buff = new char[fileSize]();
+    fread(buff, sizeof(char), fileSize, file);
+    readText(buff, fileSize);
+    return 0;
+}
+void readText(char* buff, long fileSize) {
+    unsigned char first, second, third, fourth, q;
+    int w = 0;
+    while (w != 336) {
+        first = buff[138 + w] & 3;
+        second = buff[139 + w] & 3;
+        third = buff[140 + w] & 3;
+        fourth = buff[141 + w] & 3;
+        q = first << 6 | second << 4 | third << 2 | fourth;
+        cout << q;
+        w += 4;
+    }
+}
