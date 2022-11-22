@@ -6,7 +6,7 @@ int main() {
 	std::cin >> fuel;   
 	
 	if ((fuel < 0) or (fuel > 50)) {
-		std::cout << "\nInvalid data.";
+		std::cout << "\nInvalid data.\n";
 		return 0;
 	}
 
@@ -34,7 +34,7 @@ int main() {
 	std::cout << "\nWhat speed will you choose? ";   std::cin >> speed;
 
 	if (speed < 0) {
-		std::cout << "\nInvalid data.";
+		std::cout << "\nInvalid data.\n";
 		return 0;
 	}
 
@@ -62,7 +62,7 @@ int main() {
 		std::cout << "Fuel consumed: " << 3.6 * fuelConsuption << " liters" << std::endl;
 		std::cout << "Fuel remained: " << fuel - 3.6 * fuelConsuption << " liters" << std::endl;
 		std::cout << "----------------------------------------" << std::endl;
-		std::cout << "Congratulation! You have reached destination point!";
+		std::cout << "Congratulation! You have reached destination point!\n";
 		return 0;
 	}
 
@@ -71,5 +71,5 @@ int main() {
 	std::cout << "Fuel consumed: " << fuel << " liters" << std::endl;
 	std::cout << "Fuel remained: " << fuel2 << " liters" << std::endl;
 	std::cout << "----------------------------------------" << std::endl;
-	std::cout << "You haven't reached destination point. " << 360 - s << " km left.";
+	std::cout << "You haven't reached destination point. " << 360 - s << " km left.\n";
 }
