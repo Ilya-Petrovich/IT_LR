@@ -8,20 +8,7 @@ void animation(string *person);
 
 int main()
 {
-	int i = 0;
-	string person[12], line1, line2, line3, line4, line5, line6, line7, line8, line9, line10, line11, line12;
-	line1 = person[0] = "   _[]_   ";
-	line2 = person[1] = "   |~~|   ";
-	line3 = person[2] = "   |oq|   ";
-	line4 = person[3] = "  (|<>|)  ";
-	line5 = person[4] = "   \\--/   ";
-	line6 = person[5] = "   _><_   ";
-	line7 = person[6] = "  -\\. /-  ";
-	line8 = person[7] = " / |. | \\ ";
-	line9 = person[8] = "/  |. |  \\";
-	line10 = person[9] = "   |__|   ";
-	line11 = person[10] = "    ||    ";
-	line12 = person[11] = "   _||_   ";
+	string person[12] = { "   _[]_   ", "   |~~|   ", "   |oq|   ", "  (|<>|)  ", "   \\--/   ", "   _><_   ", "  -\\. /-  ", " / |. | \\ ", "/  |. |  \\", "   |__|   ", "    ||    ", "   _||_   " };
 
 	animation(&person[0]); // 2
 	person[6] = " --\\. /-- ";
