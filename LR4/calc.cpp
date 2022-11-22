@@ -11,7 +11,7 @@ int main() {
     cin >> num_2;
     cout << "Type the third number: ";
     cin >> num_3;
-    if ((num_1 > num_2) and num_1 >= 0 and num_2 >= 0 and num_3 >= 0) {
+    if ((num_1 > num_2) and num_1 >= 0 and num_2 > 0 and num_3 >= 0) {
         cout << num_1 << " + " << num_2 << " = " << num_1 + num_2 << endl;
         cout << num_1 << " - " << num_2 << " = " << num_1 - num_2 << endl;
         cout << num_1 << " * " << num_2 << " = " << num_1 * num_2 << endl;
@@ -24,5 +24,5 @@ int main() {
     else {
         cout << "Invalid data" << endl;
         return 0;
-    }
+    } 
 }
