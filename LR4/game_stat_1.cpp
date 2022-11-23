@@ -122,4 +122,4 @@ int main() {
         cout << "Invalid data";
         return 0;
     }
-}//ОШИБКА ПРИ SPEED = 0, inf time
+}
