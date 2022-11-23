@@ -56,7 +56,7 @@ int main() {
 		cout << "Distance traveled: " << 360 << "km" << endl;
 		cout << "Time spend: " << int(360 / speed * 60 * 60) << " sec" << endl;
 		cout << "Fuel consumed: " << 3.6 * fuelConsuption << " liters" << endl;
-		cout << "Fuel remained: " << fuel - 3.6 * fuelConsuption << " liters" << endl;
+		cout << "Fuel remained: " << (double)((double)fuel - 3.600000 * (double)fuelConsuption) << " liters" << endl;
 		cout << "----------------------------------------" << std::endl;
 		cout << "Congratulation! You have reached destination point!\n";
 		return 0;
