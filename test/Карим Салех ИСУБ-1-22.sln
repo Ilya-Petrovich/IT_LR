@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32929.385
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "kareem2", "kareem2\kareem2.vcxproj", "{FF59F1C2-6CC0-4802-9F66-5F6EDF52A3CA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FF59F1C2-6CC0-4802-9F66-5F6EDF52A3CA}.Debug|x64.ActiveCfg = Debug|x64
+		{FF59F1C2-6CC0-4802-9F66-5F6EDF52A3CA}.Debug|x64.Build.0 = Debug|x64
+		{FF59F1C2-6CC0-4802-9F66-5F6EDF52A3CA}.Debug|x86.ActiveCfg = Debug|Win32
+		{FF59F1C2-6CC0-4802-9F66-5F6EDF52A3CA}.Debug|x86.Build.0 = Debug|Win32
+		{FF59F1C2-6CC0-4802-9F66-5F6EDF52A3CA}.Release|x64.ActiveCfg = Release|x64
+		{FF59F1C2-6CC0-4802-9F66-5F6EDF52A3CA}.Release|x64.Build.0 = Release|x64
+		{FF59F1C2-6CC0-4802-9F66-5F6EDF52A3CA}.Release|x86.ActiveCfg = Release|Win32
+		{FF59F1C2-6CC0-4802-9F66-5F6EDF52A3CA}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CE7944EA-B52D-45DA-A81F-FD50C89DF64F}
+	EndGlobalSection
+EndGlobal

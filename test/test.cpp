@@ -1,6 +1,12 @@
-#include <iostream>
+switch (expr) {
+    case 1:
 
-int main() {
-	std::cout << "Hello worfssfgld!";
-	return 0;
+    cout << "one";
+
+    case 2:
+
+    cout << "Two";
+
+    break;
+    
 }
