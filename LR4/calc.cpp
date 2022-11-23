@@ -1,27 +1,6 @@
-# include <iostream>
-#include <cmath>
-using namespace std;
-
-int main()
-{
-	int num_1, num_2, num_3;
-    cout << "Type first number = "; cin >> num_1;
-    cout << "Type second number = "; cin >> num_2;
-    cout << "Type third number = "; cin >> num_3;
-    if(num_1 > num_2 and num_1 >=0 and num_2 > 0 and num_3 >= 0)
-    {
-        cout << num_1 << " + " << num_2 << " = " << num_1 + num_2 << endl;
-        cout << num_1 << " - " << num_2 << " = " << num_1 - num_2 << endl;
-        cout << num_1 << " * " << num_2 << " = " << num_1 * num_2 << endl;
-        cout << num_1 << " / " << num_2 << " = " << num_1 / num_2 << endl;
-        cout << double(num_1) << ".0" << " / " << double(num_2) << ".0" << " = " << double(num_1) / double(num_2) << endl;
-        cout << num_1 << " % " << num_2 << " = " << num_1 % num_2 << endl;
-        cout << num_1 << " + " << num_2 << " * " << num_3 << " = " << num_1 + num_2 * num_3 << endl;
-        cout << "(" << num_1 << " + " << num_2 << ")" << " * " << num_3 << " = " << (num_1 + num_2) * num_3 << endl;
-    }
-	else{
-        cout << "Invalid data" << endl;
-    }
-
-
-}
+﻿Сборка начата…
+1>------ Сборка начата: проект: calc, Конфигурация: Debug x64 ------
+1>calc.cpp
+1>calc.vcxproj -> C:\IT\calc\x64\Debug\calc.exe
+========== Сборка: успешно выполнено — 1 , со сбоем — 0, в актуальном состоянии — 0, пропущено — 0 ==========
+========== Прошло 00:08,855 ==========
