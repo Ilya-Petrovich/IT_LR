@@ -5,14 +5,12 @@ using namespace std;
 int main()
 {
     int x, y, z;
-	cout << "¬ведите первое число: ";
-	cin >> x;
-	cout << "¬ведите второе число: ";
-	cin >> y;
-	cout << "¬ведите третье число: ";
+	cout << "Type the first number: "; cin >> x;
+	cout << "Type the second number: "; cin >> y;
+	cout << "Type the third number: ";
 	cin >> z;
 	if (x > y) {
-		if ((x>=0) and (y>=0) and (z >= 0)) {
+		if ((x>=0) && (y>0) && (z >= 0)) {
 			cout << x << " + " << y << " = " << x+y << endl;
 			cout << x << " - " << y << " = " << x-y << endl;
 			cout << x << " * " << y << " = " << x*y << endl;
