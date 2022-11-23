@@ -1,6 +1,24 @@
-﻿Сборка начата…
-1>------ Сборка начата: проект: calc, Конфигурация: Debug x64 ------
-1>calc.cpp
-1>calc.vcxproj -> C:\IT\calc\x64\Debug\calc.exe
-========== Сборка: успешно выполнено — 1 , со сбоем — 0, в актуальном состоянии — 0, пропущено — 0 ==========
-========== Прошло 00:08,855 ==========
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main() {
+	int num_1, num_2, num_3;
+	std::cout << "Type the first number: "; std::cin >> num_1;
+	std::cout << "Type the second number: "; std::cin >> num_2;
+	std::cout << "Type the third number: "; std::cin >> num_3;
+	if (num_1 > num_2 && num_1 >= 0 && num_2 >= 0 && num_3 >= 0) {
+		std::cout << num_1 << " + " << num_2 << " = " << num_1 + num_2 << std::endl;
+		std::cout << num_1 << " - " << num_2 << " = " << num_1 - num_2 << std::endl;
+		std::cout << num_1 << " * " << num_2 << " = " << num_1 * num_2 << std::endl;
+		std::cout << num_1 << " / " << num_2 << " = " << num_1 / num_2 << std::endl;
+		std::cout << num_1 << ".0 / " << num_2 << ".0 = " << (float)num_1 / num_2 << std::endl;
+		std::cout << num_1 << " % " << num_2 << " = " << num_1 % num_2 << std::endl;
+		std::cout << num_1 << " + " << num_2 << " * " << num_3 << " = " << num_1 + (num_2 * num_3) << std::endl;
+		std::cout << "(" << num_1 << " + " << num_2 << ")" << " * " << num_3 << " = " << (num_1 + num_2) * num_3 << std::endl;
+	}
+	else
+		std::cout << "Invalid data" << std::endl;
+	system("pause");
+	return 0;
+}
