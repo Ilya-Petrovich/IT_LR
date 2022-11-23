@@ -22,9 +22,9 @@ int main() {
     }
  
     cout << "\nCar stats\n";
-    printf("fuel: %i\n", fuel);
-    printf("fuel capacity: %i\n", capacity);
-    printf("fuel consumption: 0\n");
+    printf("Fuel: %i\n", fuel);
+    printf("Fuel capacity: %i\n", capacity);
+    printf("Fuel consumption: 0\n");
     printf("Speed: 0\n");
     printf("Maximum speed: %i\n", maxs);
 

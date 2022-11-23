@@ -22,7 +22,8 @@ int main() {
     if (n1 <= n2) {
     	cout << "Invalid data" << endl;
         return 0;
-    }	
+	}
+	
     cout << n1 << " + " << n2 << " = " << n1 + n2 << endl;
 	cout << n1 << " * " << n2 << " = " << n1 * n2 << endl;
 	cout << n1 << " / " << n2 << " = " << n1 / n2 << endl;
@@ -32,6 +33,5 @@ int main() {
 	cout << << n1 << " + " << n2 << " * " << n3 << " = " << n1 + n2 << endl;
 	cout << "(" << n1 << " + " << ")" << n2 << " * " << n3 << " = " << n1 + n2 << endl;
     
-
 	return 0;
 }
