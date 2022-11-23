@@ -27,7 +27,7 @@ int main() {
 		cout << "\nYour fuel before start: " << fuel;
 	}
 
-	cout << "\n\nWhat speed will you choose? ";  cin >> speed;
+	cout << "\n\nWhat speed will you choose? "; cin >> speed;
 
 	if (speed < 0) {
 		cout << "\nInvalid data.\n";
