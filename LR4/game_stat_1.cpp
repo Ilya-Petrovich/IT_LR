@@ -10,7 +10,7 @@ int main() {
 		std::cout << "Invalid data";
 		return 0;
 	} 
-	std::cout << "Car stats" << std::endl << "Fuel " << fuel << std::endl << "Fuel capacity: 50" << std::endl << "Fuel consumption: 0" << std::endl << "Speed: 0" << std::endl << "Maximum speed: 110" << std::endl << std::endl;
+	std::cout << "Car stats" << std::endl << "Fuel: " << fuel << std::endl << "Fuel capacity: 50" << std::endl << "Fuel consumption: 0" << std::endl << "Speed: 0" << std::endl << "Maximum speed: 110" << std::endl << std::endl;
 	std::cout << "Route info" << std::endl << "Distance: 360 km" << std::endl << "----------------------------------------" << std::endl;
 	std::cout << "You have to drive a route 360 km long." << std::endl << "But first you need to check if you have enough fuel." << std::endl << std::endl;
 	if (fuel < 25 ) { std::cout << "Your fuel before start: " << fuel + 25 <<  std::endl << std::endl;
