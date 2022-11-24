@@ -359,6 +359,24 @@ void run() {
         zeroing_console();
 
     }
+
+    run_pos1();
+    for (int i = 7; i < hc - 1; i++) {
+        for (int j = 1; j < w; j++) {
+            cons[i][j] = person[i - 7][j - 1];
+        }
+    }
+
+    for (int i = 0; i < hc; i++) {
+        for (int j = 0; j < wc; j++) {
+            cout << cons[i][j];
+        }
+        cout << endl;
+    }
+
+    // usleep(sleeptime);
+    // system("cls");
+    zeroing_console();
 }
 
 void console_dance() {
@@ -660,7 +678,7 @@ void ball() {
 void menu()
 {
 
-    int n;
+    // int n;
     cout << "Choose animation:" << endl;
     cout << "Dance: \t\t\t1" << endl;
     cout << "Run: \t\t\t2" << endl;
@@ -668,19 +686,38 @@ void menu()
     cout << "Throw a ball: \t\t4" << endl;
 
     cout << "Enter 5 for exit." << endl;
-    cin >> n;
+    // cin >> n;
     // system("cls");
 
-    switch(n) {
-        case 1: dance(); menu();
-        case 2: run(); menu();
-        case 3: jump(); menu();
-        case 4: ball(); menu();
-        case 5: break;
-    }
+    // switch(n) {
+    //     case 1: dance(); menu();
+    //     case 2: run(); menu();
+    //     case 3: jump(); menu();
+    //     case 4: ball(); menu();
+    //     case 5: break;
+    // }
 }
 
 int main() {
-    menu();
+    int n;
+    while (n != 5) {
+        menu();
+        cin >> n;
+        switch(n) {
+            case 1: dance(); break;
+            case 2: run(); break;
+            case 3: jump(); break;
+            case 4: ball(); break;
+            case 5: break;
+        }
+    }
+    // cin >> n;
+    // switch(n) {
+    //     case 1: dance(); menu();
+    //     case 2: run(); menu();
+    //     case 3: jump(); menu();
+    //     case 4: ball(); menu();
+    //     case 5: break;
+    // }
     return 0;
 }
