@@ -7,7 +7,7 @@ int main()
 	bool flag;
 	float s, fuelConsumption, distanceTraveled, fuelConsumed, fuelRemined;
 	if (fuel > 50 || fuel < 0) {
-		std::cout << "Invalid data";
+		std::cout << "Invalid data.";
 		return 0;
 	}
 	
