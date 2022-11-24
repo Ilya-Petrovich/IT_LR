@@ -7,16 +7,16 @@ int main()
 	int num2;
 	int num3;
 
-	cout << "Enter first number" << endl;
+	cout << "Type the first number: ";
 	cin >> num1;
-	cout << "Enter second number" << endl;
+	cout << "Type the second number: ";
 	cin >> num2;
-	cout << "Enter third number" << endl;
+	cout << "Type the third number: ";
 	cin >> num3;
 
 	if (num1 > 0 && num2 > 0 && num3 > 0 && num1 > num2)
 	{
-		printf("%i + %i = ", num1, num2); 
+		printf("%i + %i = ", num1, num2);
 		cout << num1 + num2 << endl;
 		printf("%i - %i = ", num1, num2);
 		cout << num1 - num2 << endl;
@@ -24,14 +24,14 @@ int main()
 		cout << num1 * num2 << endl;
 		printf("%i / %i = ", num1, num2);
 		cout << num1 / num2 << endl;
-		printf("%f / %f = ", (float)num1, (float)num2);
+		printf("%.1f / %.1f = ", (float)num1, (float)num2);
 		cout << (float)num1 / (float)num2 << endl;
 		printf("%i %% %i = ", num1, num2);
 		cout << num1 % num2 << endl;
 		printf("%i + %i * %i = ", num1, num2, num3);
 		cout << num1 + num2 * num3 << endl;
 		printf("(%i + %i) * %i = ", num1, num2, num3);
-		cout << (num1 + num2) * num3 << endl;
+		cout << (num1 + num2) * num3;
 	}
 	else
 		cout << "Invalid data";
