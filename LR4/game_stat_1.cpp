@@ -17,7 +17,7 @@ int main()
 	float distanceRemained = 0;
 	string line = "----------------------------------------\n";
 
-	cout << "Enter start fuel count" << endl;
+	cout << "How much fuel do you have at start? ";
 	cin >> fuel;
 	cout << endl;
 	if (!(fuel >= 0 && fuel <= 50))
@@ -35,21 +35,21 @@ int main()
 	cout << endl;
 	cout << "Route info" << endl;
 	cout << "Distance " << distance << " km\n";
-	cout << endl;
+	// cout << endl;
 	cout << line;
 	cout << "You have to drive a route " << distance << " km long." << endl;
 	cout << "But first you need to check if you have enought fuel." << endl;
 
-	if (fuel < fuelCapacity / 2)
-	{
-		fuel += fuelCapacity / 2;
-		cout << "Fuel low, charging half of tank" << endl;
-	}
-	else
-		cout << "Fuel is OK, you can drive";
+	// if (fuel < fuelCapacity / 2)
+	// {
+	// 	fuel += fuelCapacity / 2;
+	// 	cout << "Fuel low, charging half of tank" << endl;
+	// }
+	// else
+	// 	cout << "Fuel is OK, you can drive";
 
 	cout << endl;
-	cout << "Enter speed" << endl;
+	cout << "What speed will you choose? ";
 	cin >> speed;
 
 	if (speed < 0)
@@ -64,11 +64,12 @@ int main()
 	}
 
 	cout << "Your speed before start: " << speed << " km/h\n";
+	cout << endl;
 	if (speed != 0)
 		fuelConsumption = ((double)speed / 10) * ((double)speed / 10) / 4 - 4.5 * ((double)speed / 10) + 30;
 	else
 		fuelConsumption = 0;
-	cout << "Fuel consumption with chosen speed: " << fuelConsumption << " liters per 100 km";
+	cout << "Fuel consumption with chosen speed: " << fuelConsumption << " liters per 100 km\n";
 	cout << endl;
 
 	if (speed != 0)
@@ -94,9 +95,9 @@ int main()
 	cout << "Fuel consumed: " << fuelConsumed << " litres\n";
 	cout << "Fuel remained: " << fuelRemained << " litres\n";
 	cout << line;
-	cout << endl;
+	// cout << endl;
 
-	if (isReached) 
+	if (isReached)
 	{
 		cout << "Congratulations! You have reached destination point!" << endl;
 	}
