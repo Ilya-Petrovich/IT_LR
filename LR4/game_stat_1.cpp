@@ -7,6 +7,7 @@ int main()
 	int fuel,speed, timefin; 
 	float dis = 360, time, s, fc, fcon, frem,disne, disno;
 	cout << "How much fuel do you have at start? "; cin >> fuel;
+        cout << endl;
 	if (fuel > 50 || fuel < 0) {
 		cout << "Invalid data." << endl;
 	}
@@ -23,6 +24,7 @@ int main()
 		cout << "---------------------------------" << endl;
 		cout << "You have to drive a route 360 km long." << endl;
 		cout << "But first you need to check if you have enough fuel." << endl;
+                cout << endl;
 		if (fuel < 25) {
 			fuel = fuel + 25;
 			cout << "Your fuel befort start: " << fuel << endl;
@@ -34,7 +36,9 @@ int main()
 		cout << "Your speed befort start: " << speed << " km/h" << endl;
 		s = (float)speed / 10;
 		fc = ((s * s)/4 - (4.5 * s)) + 30;
+                cout << endl;
 		cout << "Fuel consumption with chosen speed: " << fc << " litres per 100 km" << endl;
+                cout << endl;
 		cout << "Destination result" << endl;
 		if (fuel - fc * 3.6 > 0) {
 			cout << "Distance traveled: " << dis << " km" << endl;
