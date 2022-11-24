@@ -14,7 +14,8 @@ int main()
     cin >> b;
     cout << "\nВведите третье число: ";
     cin >> c;
-if (a > b && a > 0  && b > 0 && c > 0) {
+if (a > b && a > 0  && b > 0 && c > 0) 
+{
     cout << a << " + " << b << " = " << a + b << endl;
     cout << a << " - " << b << " = " << a - b << endl;
     cout << a << " * " << b << " = " << a * b << endl;
@@ -23,11 +24,11 @@ if (a > b && a > 0  && b > 0 && c > 0) {
     cout << a << " % " << b << " = " << int(a) % int(b) << endl;
     cout << a << " + " << b << " * "<< c << " = " << a + b * c << endl;
     cout <<" ( " << a << " + " << b << ")" << " * " << c << " = " << (a + b) * c << endl;
-    }
+}
  else 
  {
      cout << "Invalid data" << endl;
  }
  return 0;
-}
+} 
 

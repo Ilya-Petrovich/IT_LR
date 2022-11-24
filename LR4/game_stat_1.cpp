@@ -1,4 +1,4 @@
-﻿// ИТ(4.2).cpp 
+﻿// ИТ(4.1).cpp 
 
 #include <iostream>
 using namespace std;
@@ -97,6 +97,6 @@ int main()
 	{
 		cout << "\nInvalid data\n" << endl;
 	}
-	return 0;
+	return 0; 
 }
 
