@@ -1,5 +1,8 @@
 #include <iostream>
-#include <cmath>
+
+double round(double x) {
+	return (double)(int)(x + 0.5);
+}
 
 int main() {
 	double time, fuel, speed, consumed, remained, S;
