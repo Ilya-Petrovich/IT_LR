@@ -33,7 +33,7 @@ int main() {
 	else{
 	    fuelConsumption = 0;
 	}
-	std::cout << "Fuel consumption with chosen speed: " << fuelConsumption << " litres per 100 km\n\n";
+	std::cout << "\nFuel consumption with chosen speed: " << fuelConsumption << " litres per 100 km\n\n";
 	std::cout << "Destination result\n";
 	if (fuelConsumption != 0){
 	sd = float(fuel) / fuelConsumption;
