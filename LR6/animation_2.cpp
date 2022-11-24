@@ -241,7 +241,7 @@ void run_pos1() {
 }
 
 void run() {
-    for (int k = 0; k < wc - w - 2; k++) {
+    for (int k = 0; k < wc - w - 1; k++) {
         run_pos1();
         for (int i = 7; i < hc - 1; i++) {
             for (int j = 1 + k; j < w + k; j++) {
@@ -300,7 +300,7 @@ void run() {
 
     }
 
-    for (int k = wc - w - 3; k > 0; k--) {
+    for (int k = wc - w - 1; k > 0; k--) {
         run_pos1();
         for (int i = 7; i < hc - 1; i++) {
             for (int j = 1 + k; j < w + k; j++) {
