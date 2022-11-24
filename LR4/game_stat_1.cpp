@@ -43,12 +43,12 @@ int main() {
 	if (speed == 0) {
 		fuelConsuption = 0, s = 0, time = 0, fuel2 = fuel, fuel = 0;
 	} else {
-		fuelConsuption = (speed / 10) * (speed / 10) / 4 - 4.5 * (speed / 10) + 30;
-		s = 100 * fuel / fuelConsuption;
-		time = s / speed * 60 * 60;
+		fuelConsuption = (speed / 10.0) * (speed / 10.0) / 4.0 - 4.5 * (speed / 10.0) + 30.0;
+		s = 100.0 * fuel / fuelConsuption;
+		time = s / speed * 60.0 * 60.0;
 	}
 
-	cout << "\nFuel consumption with chosen speed: " << fuelConsuption << " liters per 100 km" << endl;
+	cout << "\nFuel consumption with chosen speed: " << fuelConsuption << " litres per 100 km" << endl;
 	cout  << endl;
 	cout << "Destination result" << endl;
 
@@ -59,16 +59,16 @@ int main() {
 		FuRe = (int)FuRe;
 		FuRe /= 1000000.0;
 		cout << "Distance traveled: " << 360 << " km" << endl;
-		cout << "Time spend: " << int(360 / speed * 60 * 60) << " sec" << endl;
+		cout << "Time spent: " << int(360 / speed * 60 * 60) << " sec" << endl;
 		cout << "Fuel consumed: " << 3.6 * fuelConsuption << " liters" << endl;
 		cout << "Fuel remained: " << FuRe << " liters" << endl;
-		cout << "----------------------------------------" << std::endl;
-		cout << "Congratulation! You have reached destination point!\n";
+		cout << "----------------------------------------" << endl;
+		cout << "Congratulations! You have reached destination point!\n";
 		return 0;
 	}
 
-	cout << "Distance traveled: " << s << "km" << endl;
-	cout << "Time spend: " << int(time) << " sec" << endl;
+	cout << "Distance traveled: " << s << " km" << endl;
+	cout << "Time spent: " << int(time) << " sec" << endl;
 	cout << "Fuel consumed: " << fuel << " liters" << endl;
 	cout << "Fuel remained: " << fuel2 << " liters" << endl;
 	cout << "----------------------------------------" << endl;
