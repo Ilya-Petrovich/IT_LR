@@ -1,11 +1,11 @@
 #include <iostream>
 int main() {
 	int num_1, num_2, num_3;
-	std::cout << "Введите первое число: ";
+	std::cout << "Type the first number: ";
 	std::cin >> num_1;
-	std::cout << "Введите второе число: ";
+	std::cout << "Type the second number: ";
 	std::cin >> num_2;
-	std::cout << "Введите третье число: ";
+	std::cout << "Type the third number: ";
 	std::cin >> num_3;
     if (num_1 > num_2) {
 	    std::cout << num_1 << " + " << num_2 << " = " << num_1 + num_2 << std::endl;
