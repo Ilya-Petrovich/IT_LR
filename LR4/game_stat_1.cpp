@@ -2,7 +2,7 @@
 using namespace std;
 
 int main() {
-	float fuel, fuel2 = 0, speed, s, fuelConsuption, time; 
+	double fuel, fuel2 = 0, speed, s, fuelConsuption, time; 
 	cout << "How much fuel do you have at start? "; cin >> fuel;   
 	
 	if ((fuel < 0) or (fuel > 50)) {
@@ -24,7 +24,7 @@ int main() {
 
 	if (fuel < 25) {
 		fuel += 25;
-		cout << "\nYour fuel before start: " << fuel;
+		cout << "\n\nYour fuel before start: " << fuel;
 	}
 
 	cout << "\n\nWhat speed will you choose? "; cin >> speed;
@@ -53,10 +53,15 @@ int main() {
 	cout << "Destination result" << endl;
 
 	if (s >= 360) {
-		cout << "Distance traveled: " << 360 << "km" << endl;
+		double k = 3.6;
+		double FuRe = fuel - k * fuelConsuption;
+		FuRe *= 1000000.0;
+		FuRe = (int)FuRe;
+		FuRe /= 1000000.0;
+		cout << "Distance traveled: " << 360 << " km" << endl;
 		cout << "Time spend: " << int(360 / speed * 60 * 60) << " sec" << endl;
 		cout << "Fuel consumed: " << 3.6 * fuelConsuption << " liters" << endl;
-		cout << "Fuel remained: " << (double)((double)fuel - 3.600000 * (double)fuelConsuption) << " liters" << endl;
+		cout << "Fuel remained: " << FuRe << " liters" << endl;
 		cout << "----------------------------------------" << std::endl;
 		cout << "Congratulation! You have reached destination point!\n";
 		return 0;
@@ -67,5 +72,5 @@ int main() {
 	cout << "Fuel consumed: " << fuel << " liters" << endl;
 	cout << "Fuel remained: " << fuel2 << " liters" << endl;
 	cout << "----------------------------------------" << endl;
-	cout << "You haven't reached destination point. " << 360 - s << " km left.\n";
+	cout << "You haven't reached destination point. " << 360.0 - s << " km left.\n";
 }
