@@ -32,7 +32,7 @@ int main(){
         return 0;
     }
     if (speed < 0){
-        cout << "Invalid data." << endl;
+        cout << "\nInvalid data." << endl;
     }else {
         if (speed >= max_speed) { speed = max_speed; }
         cout << "Your speed before start: " << speed << " km/h" << endl;
