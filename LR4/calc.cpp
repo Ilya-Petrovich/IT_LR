@@ -34,7 +34,7 @@ int main()
 		cout << (num1 + num2) * num3;
 	}
 	else
-		cout << "Invalid data";
+		cout << "Invalid data" << endl;
 
 	return 0;
 }
