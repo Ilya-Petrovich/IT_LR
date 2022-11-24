@@ -177,6 +177,7 @@ void start_state() {
 	system("cls");
 	vector<string> sticman =
 	{
+
 	"      /\\      ",//0
 	"     |oo|     ",//1
 	"    (|..|)    ",//2
@@ -189,6 +190,7 @@ void start_state() {
 	"      /\\      ",//9
 	"      ||      ",//10
 	"     _||_     ",//11
+	
 	};
 	print(sticman);
 }
