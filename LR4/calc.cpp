@@ -1,7 +1,7 @@
 #include <iostream>
 int main() {
 	int num_1, num_2, num_3;
-	std::cout << "Type the first number: ";
+	std::cout << "Type the first numbert: ";
 	std::cin >> num_1;
 	std::cout << "Type the second number: ";
 	std::cin >> num_2;
