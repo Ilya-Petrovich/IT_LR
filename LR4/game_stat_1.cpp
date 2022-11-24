@@ -10,6 +10,7 @@ int main(){
     cout << "How much fuel do you have at start? "; cin >> fuel;
     if (fuel >= 0 and fuel <= 50) {
         //// **************** Car starts ********************************
+        cout << "\nCar stats" << endl;
         cout << "Fuel: " << fuel << endl;
         cout << "Fuel capacity: " << fuel_capacity << endl;
         cout << "Fuel consumption: " << fuel_consumption << endl;
