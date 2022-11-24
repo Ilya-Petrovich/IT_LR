@@ -1,6 +1,7 @@
 #include<iostream>
 #include <unistd.h>
 
+
 using namespace std;
 
 void ShowArray(char pers[12][11], int height, int width) {
@@ -13,14 +14,14 @@ void ShowArray(char pers[12][11], int height, int width) {
 	}
 }
 
-void SSS(char pers[][11], int time) {
+void SSS(char pers[][11], int t) {
 	ShowArray(pers, 12, 11);
-	usleep(time * 1000);
-	system("cls");
+	//usleep(t * 1000);
+	//system("cls");
 }
 
 int main() {
-	const int h = 12, w = 11, time = 750;
+	const int h = 12, w = 11, t = 750;
 	char pers[h][w] {
 		{' ',' ',' ','(',')','(',')',' ',' ',' ','\0'},
 		{' ',' ',' ','(',')','(',')',' ',' ',' ','\0'},
@@ -40,26 +41,26 @@ int main() {
 
 	while (l != 2) {
 
-		SSS(pers, time);
+		SSS(pers, t);
 
 		pers[6][1] = '-'; pers[7][1] = ' ';
 		pers[6][8] = '-'; pers[7][8] = ' ';
 		pers[8][0] = ' '; pers[8][9] = ' ';
 		pers[7][0] = '/'; pers[7][9] = '\\';
 
-		SSS(pers, time);
+		SSS(pers, t);
 
 		pers[6][1] = ' '; pers[7][0] = ' ';
 		pers[7][9] = ' '; pers[6][9] = '-';
 		pers[7][1] = '/'; pers[8][0] = '/';
 
-		SSS(pers, time);
+		SSS(pers, t);
 
 		pers[6][9] = ' '; pers[6][1] = '-';
 		pers[7][1] = ' '; pers[8][0] = ' ';
 		pers[7][0] = '/'; pers[5][9] = '/';
 
-		SSS(pers, time);
+		SSS(pers, t);
 
 		pers[6][1] = ' '; pers[7][0] = ' ';
 		pers[7][1] = '/'; pers[8][0] = '/';
@@ -67,57 +68,57 @@ int main() {
 		pers[5][8] = '/'; pers[5][9] = ' ';
 		pers[4][9] = '/';
 
-		SSS(pers, time);
+		SSS(pers, t);
 
 		pers[4][9] = '*'; pers[7][1] = ' ';
 		pers[8][0] = ' '; pers[6][1] = '-';
 		pers[7][0] = '/';
 
-		SSS(pers, time);
+		SSS(pers, t);
 
 		pers[4][9] = '/'; pers[7][0] = ' ';
 		pers[6][0] = '-';
 
-		SSS(pers, time);
+		SSS(pers, t);
 
 		pers[4][9] = '*'; pers[6][0] = ' ';
 		pers[5][0] = '\\';
 
-		SSS(pers, time);
+		SSS(pers, t);
 
 		pers[4][9] = '/'; pers[6][1] = ' ';
 		pers[5][1] = '\\'; pers[4][0] = '\\';
 		pers[5][0] = ' ';
 
-		SSS(pers, time);
+		SSS(pers, t);
 
 		pers[4][0] = '*'; pers[4][9] = '*';
 
-		SSS(pers, time);
+		SSS(pers, t);
 
 		pers[4][0] = ' '; pers[4][9] = ' ';
 		pers[5][1] = ' '; pers[5][8] = ' ';
 		pers[6][1] = '-'; pers[6][8] = '-';
 		pers[5][0] = '*'; pers[5][9] = '*';
 
-		SSS(pers, time);
+		SSS(pers, t);
 
 		pers[5][0] = ' '; pers[5][9] = ' ';
 		pers[6][0] = '*'; pers[6][9] = '*';
 
-		SSS(pers, time);
+		SSS(pers, t);
 
 		pers[6][0] = ' '; pers[6][9] = ' ';
 		pers[7][0] = '*'; pers[7][9] = '*';
 
-		SSS(pers, time);
+		SSS(pers, t);
 
 		pers[7][0] = ' '; pers[7][9] = ' ';
 		pers[6][1] = ' '; pers[6][8] = ' ';
 		pers[7][1] = '/'; pers[7][8] = '\\';
 		pers[8][0] = '*'; pers[8][9] = '*';
 
-		SSS(pers, time);
+		SSS(pers, t);
 
 		pers[8][0] = '/'; pers[8][9] = '\\';
 		l += 1;
