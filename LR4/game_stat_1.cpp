@@ -7,9 +7,10 @@ int main(){
     double fuel_consumption = 0, distance = 360;
     int speed = 0, time;
     int max_speed = 110;
-    cout << "How much fuel do you have at start? Fuel:  "; cin >> fuel;
+    cout << "How much fuel do you have at start? "; cin >> fuel; cout << ' ' << endl;
+    cout << "Car stats";
     if (fuel >= 0 and fuel <= 50) {
-        //// **************** Car starts ********************************
+        //// **************** Car stats ********************************
         cout << "Fuel: " << fuel << endl;
         cout << "Fuel capacity: " << fuel_capacity << endl;
         cout << "Fuel consumption: " << fuel_consumption << endl;
@@ -18,7 +19,7 @@ int main(){
 
         //// *************** Route info *********************************
         cout << "\nRoute info\nDistance: " << distance << " km" << endl;
-        cout << "_________________________________" << endl;
+        cout << "----------------------------------------" << endl;
         cout << "You have to drive a route 360 km long.\nBut first you need to checkif you have enough fuel." << endl;
         if (fuel < (fuel_capacity / 2.)) {
             fuel += (fuel_capacity / 2.);
@@ -34,7 +35,7 @@ int main(){
         cout << "Invalid data." << endl;
     }else {
         if (speed >= max_speed) { speed = max_speed; }
-        cout << "Your speed before start: " << speed << " km/h" << endl;
+        cout << "Your speed before start: " << speed << " km/h" << endl; cout << ' ' << endl;
         double s = speed / 10.;
         if (speed == 0) {
             fuel_consumption = 0;
@@ -63,7 +64,7 @@ int main(){
         cout << "Time spent: " << time << " sec" << endl;
         cout << "Fuel consumed: " << f_consumed << " litres" << endl;
         cout << "Fuel remained: " << f_remained << " litres" << endl;
-        cout << "__________________________" << endl;
+        cout << "----------------------------------------" << endl;
         if (dist_t >= distance) {
             cout << "Congratulations! You have reached destination point!" << endl;
         } else {
