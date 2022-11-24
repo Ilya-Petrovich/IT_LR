@@ -3,8 +3,6 @@ using namespace std;
 int main()
 {
 	int num_1, num_2, num_3;
-	num_1 = 7;
-	num_2 = 3;
 	cout << "Input the first number: ";
 	cin >> num_1;
 	cout << "Input the second number: ";
