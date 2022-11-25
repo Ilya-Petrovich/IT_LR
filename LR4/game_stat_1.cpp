@@ -24,7 +24,7 @@ int main()
 	s = sp / 10;
 	fuelConsumption = s * s / 4 - 4.5 * s + 30;
 	if (sp == 0) fuelConsumption = 0;
-	cout << "Fuel consumption with chosen speed: " << fuelConsumption << " litres per 100 km\n";
+	cout << "\nFuel consumption with chosen speed: " << fuelConsumption << " litres per 100 km\n";
 	dt = f / fuelConsumption * 100;
 	if (dt > 360) dt = 360;
 	t = dt / sp * 3600;
@@ -36,6 +36,5 @@ int main()
 	cout << "\nDestination result\nDistance traveled: " << dt << " km\nTime spent: " << t << " sec\nFuel consumed: " << fuelConsumed << " litres\nFuel remained " << fuelRemained << " litres\n----------------------------------------\n";
 	if (dt == 360) cout << "Congratulations! You have reached destination point!";
 	else cout << "You haven't reached destination point. " << 360 - dt << " km left.";
-	system ("pause");
 	return 0;
 }
