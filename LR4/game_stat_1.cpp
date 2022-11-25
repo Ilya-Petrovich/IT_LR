@@ -5,7 +5,8 @@ int main() {
 	float Speed, prasst, ostrast = 0, fuelcons, fuelrem;
 	cout << "How much fuel do you have at start? "; cin >> fuel;
 	if (fuel < 0 || fuel > 50) {
-		cout << "\nInvalid data.";
+		cout << endl;
+		cout << "Invalid data.";
 		return 1;
 	}
 	else {
@@ -13,7 +14,8 @@ int main() {
 			fuel += maxfuel / 2;
 		}
 	}
-	cout << "\nCar stats";
+	cout << endl;
+	cout << "Car stats";
 	cout << "\nFuel: " << fuel;
 	cout << "\nFuel capacity: " << maxfuel;
 	cout << "\nFuel consumption: " << 0;
