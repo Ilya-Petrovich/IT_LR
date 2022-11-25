@@ -24,5 +24,6 @@ int main(){
 	cout << a << " + " << b << " * "<< c << " = "<< a + b * c<<endl;
     cout <<"("<< a << " + " << b <<")"<< " * "<< c << " = "<<( a + b ) * c<<endl;
     
+
     return 0;
 }
