@@ -1,5 +1,5 @@
 #include <iostream>
-#include <cmath>
+
 int main()
 {
 	setlocale(LC_ALL, "Russian");
