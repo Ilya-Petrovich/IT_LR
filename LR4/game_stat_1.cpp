@@ -2,7 +2,7 @@
 
 using namespace std;
 
-int main(){
+int main() {
     double fuel_capacity = 50, fuel;
     double fuel_consumption = 0, distance = 360;
     int speed = 0, time;
@@ -11,12 +11,14 @@ int main(){
 
     if (fuel >= 0 and fuel < 50) {
         //// **************** Car starts ********************************
-        cout << "\nCar stats" << endl;
+        cout << "\n" <<"Car stats" << endl;
         cout << "Fuel: " << fuel << endl;
         cout << "Fuel capacity: " << fuel_capacity << endl;
         cout << "Fuel consumption: " << fuel_consumption << endl;
         cout << "Speed: " << speed << endl;
         cout << "Maximum speed: " << max_speed << endl;
+
+
 
         //// *************** Route info *********************************
         cout << "\nRoute info\nDistance: " << distance << " km" << endl;
@@ -28,21 +30,21 @@ int main(){
             cout << "\nYour fuel before start: " << fuel << endl;
         }
         
-
         cout << "\nWhat speed will you choose? ";
         cin >> speed;
 
-    }else{
+    }else {
         cout << "\nInvalid data.";
         return 0;
     }
-    if (speed < 0){
+    if (speed < 0) {
         cout << "\nInvalid data." << endl;
         return 0;
     }else {
         if (speed >= max_speed) { speed = max_speed; }
         cout << "Your speed before start: " << speed << " km/h" << endl;
         double s = speed / 10.;
+
         if (speed == 0) {
             fuel_consumption = 0;
         }else{
@@ -50,6 +52,8 @@ int main(){
         }
 
         cout << "\nFuel consumption with chosen speed: " << fuel_consumption << " litres per 100 km" << endl;
+
+
 
         //// **************** Distance result ****************************
         double dist_t, f_consumed = fuel, f_remained = 0;
@@ -64,10 +68,8 @@ int main(){
         	f_consumed = fuel;
         	f_remained = 0;
         	time = (double(dist_t) / double(speed)) * 3600;
-        }
-
-        else if (speed == 0)
-       	{   dist_t = 0;
+        }else if (speed == 0) {   
+            dist_t = 0;
             f_consumed  = 0;
             f_remained = 0;
             time = 0;
