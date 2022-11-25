@@ -1,5 +1,5 @@
 #include<iostream>
-#include <unistd.h>
+//#include <unistd.h>
 
 
 using namespace std;
@@ -37,12 +37,10 @@ int main() {
 		{' ',' ',' ','_','|','|','_',' ',' ',' ','\0'},
 
 	};
-	int l = 0;
 
-	while (l != 2) {
+	SSS(pers, t);
 
-		SSS(pers, t);
-
+	for (int i = 0; i < 2; i++) {
 		pers[6][1] = '-'; pers[7][1] = ' ';
 		pers[6][8] = '-'; pers[7][8] = ' ';
 		pers[8][0] = ' '; pers[8][9] = ' ';
@@ -121,6 +119,8 @@ int main() {
 		SSS(pers, t);
 
 		pers[8][0] = '/'; pers[8][9] = '\\';
-		l += 1;
+
+		SSS(pers, t);
 	}
+	
 }
