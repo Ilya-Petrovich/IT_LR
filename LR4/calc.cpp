@@ -1,13 +1,12 @@
 #include <iostream>
 int main()
 {
-	setlocale(LC_ALL, "Russian");
 	int num_1, num_2, num_3;
-	std::cout << "¬ведите первое число: ";
+	std::cout << "Type the first number: ";
 	std::cin >> num_1;
-	std::cout << "¬ведите второе число: ";
+	std::cout << "Type the second number: ";
 	std::cin >> num_2;
-	std::cout << "¬ведите третье число: ";
+	std::cout << "Type the third number: ";
 	std::cin >> num_3;
 	if (num_1 > num_2) {
 		std::cout << num_1 << " + " << num_2 << " = " << num_1 + num_2 << std::endl;
