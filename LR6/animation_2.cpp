@@ -2,8 +2,8 @@
 #include <vector>
 #include <string>
 #include <ctime>
-#include<unistd.h>
-//#include <windows.h>
+//#include<unistd.h>
+#include <windows.h>
 using namespace std;
 using namespace std;
 vector<string> a = {
@@ -1198,12 +1198,14 @@ void exite() {
 }
 void interfeic() {
 	int a;
-	cout << "Choose animation:" << endl;
-	cout << "Dance:                1" << endl;
-	cout << "Run:                  2" << endl;
-	cout << "Sit down and jump:    3" << endl;
-	cout << "Throw a ball:         4" << endl;
-	cout << "\n\nEnter 5 for exit." << endl;
+	std::cout << "Choose animation:" << std::endl;
+	std::cout << "Dance: \t\t\t1" << std::endl;
+	std::cout << "Run: \t\t\t2" << std::endl;
+	std::cout << "Sit down and jump: \t3" << std::endl;
+	std::cout << "Throw a ball: \t\t4" << std::endl << std::endl;
+	std::cout << "Enter 5 for exit." << std::endl;
+	std::cin >> a;
+
 	cin >> a;
 	switch (a)
 	{
