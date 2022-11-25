@@ -4,11 +4,11 @@ int main()
 
 {
     int num_1, num_2, num_3;
-    cout << "Enter the first number: ";
+    cout << "Type the first number: ";
     cin >> num_1;
-    cout << "Enter the second number: ";
+    cout << "Type the second number: ";
     cin >> num_2;
-    cout << "Enter the third number: ";
+    cout << "Type the third number: ";
     cin >> num_3;
     if (num_1 > num_2) 
     {
