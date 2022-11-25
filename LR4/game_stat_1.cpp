@@ -47,6 +47,7 @@ int main(){
         }else{
             fuel_consumption = (s * s) / 4 - 4.5 * s + 30;
         }
+        
         cout << "\nFuel consumption with chosen speed: " << fuel_consumption << " litres per 100 km" << endl;
 
         //// **************** Distance result ****************************
@@ -85,5 +86,5 @@ int main(){
             cout << "You haven't reached destination point. " << distance - dist_t << " km left." << endl;
         }
     }
-    
+
 }
