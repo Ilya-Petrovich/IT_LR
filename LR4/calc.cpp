@@ -7,7 +7,7 @@ int main() {
     std::cout << "Type the second number: "; std::cin >> num_2;
     std::cout << "Type the third number: "; std::cin >> num_3;
 
-    if ((num_1 <= 0) or (num_2 <= 0) or (num_3 <= 0) or (num_1 > num_2)) {
+    if ((num_1 < 0) or (num_2 <= 0) or (num_3 < 0) or (num_1 > num_2)) {
         std::cout << "Invalid data" << std::endl;
         return 0;
     }
