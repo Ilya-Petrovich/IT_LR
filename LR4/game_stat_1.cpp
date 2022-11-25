@@ -1,10 +1,5 @@
 #include <iostream>
 using namespace std;
-
-
-
-
-
 int main()
 {
 	double f, sp, s, d = 360, dt, fuelRemained, fuelConsumed, fuelConsumption;
@@ -16,7 +11,7 @@ int main()
 		return 0;
 	}
 	cout << "\nCar stats\nFuel: "<<f<<"\nFuel capacity: 50\nFuel consumption: 0\nSpeed: 0\nMaximum speed: 110\n";
-	cout << "\nRoute info\nDistance: 360 km\n";
+	cout << "\nRoute info\nDistance: "<<d<<" km\n";
 	cout << "----------------------------------------\nYou have to drive a route 360 km long.\nBut first you need to chek if you have enough fuel.\n";
 	if (f < 26) { f += 25; cout << "\nYour fuel before start: " << f << endl;
 	}
