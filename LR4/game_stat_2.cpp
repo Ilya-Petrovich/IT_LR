@@ -28,7 +28,7 @@ int main()
 		case 'd': cout << "\nHow much fuel do you need? "; cin >> plus; f += plus; break;
 		}
 	}
-	cout << "\nYour fuel before start: " << f << endl;
+	cout << "Your fuel before start: " << f << endl;
 	if (f > 50) {
 		cout << "\nGame over. Too much gas!"; return 0;
 	}
@@ -41,8 +41,8 @@ int main()
 	}
 	cout << "Your speed before start: " << sp << " km/h\n";
 	cout << "\nType in equation parameters.\na = "; cin >> a;
-	cout << "\nb = "; cin >> b;
-	cout << "\nc = "; cin >> c;
+	cout << "b = "; cin >> b;
+	cout << "c = "; cin >> c;
 	s = sp / 10;
 	fuelConsumption = a * s * s + b * s + c;
 	fuelConsumption1 = fuelConsumption;
@@ -89,10 +89,10 @@ int main()
 	    h = t / 3600;
 	    m = (t - h*3600) / 60;
 	    sec = t - h * 3600 - m * 60;
-	    cout<<"\n   You could save "<<fuelConsumed-fuelConsumed2<<" of fuel.\n   It would take " <<h<< " h "<<m<< " min "<<sec<<" sec.";
+	    cout<<"\n   You could save "<<fuelConsumed-fuelConsumed2<<" of fuel.\n   It would take " <<h<< " h "<<m<< " min "<<sec<<" sec."<<endl;
 	}
-	else cout<<"\n   You wouldn't reach your destination anyway, but you could drive "<<dt2-dt<<" kms more.";
+	else cout<<"\n   You wouldn't reach your destination anyway, but you could drive "<<dt2-dt<<" kms more."<<endl;
 	}
 	system ("pause");
-    return 0;
+        return 0;
 }
