@@ -1,26 +1,25 @@
 #include <iostream>
 
 int main() {
-    int a, b, c;
-    
-    std::cout << "Type the first number: "; std::cin >> a;
-    std::cout << "Type the second number: "; std::cin >> b;
-    std::cout << "Type the third number: "; std::cin >> c;
-    
-    if ((a <= 0) or (b <= 0) or (c <= 0) or (a < b)) {
+    int num_1, num_2, num_3;
+
+    std::cout << "Type the first number: "; std::cin >> num_1;
+    std::cout << "Type the second number: "; std::cin >> num_2;
+    std::cout << "Type the third number: "; std::cin >> num_3;
+
+    if ((num_1 <= 0) or (num_2 <= 0) or (num_3 <= 0) or (num_1 < num_2)) {
         std::cout << "Invalid data";
         return 0;
     }
-    
-    std::cout << a << " + " << b << " = " << a + b << std::endl;
-    std::cout << a << " - " << b << " = " << a - b << std::endl;
-    std::cout << a << " * " << b << " = " << a * b << std::endl;
-    std::cout << a << " / " << b << " = " << a / b << std::endl;
-    std::cout << a << ".0 / " << b << ".0 = " << (float)a / (float)b << std::endl;
-    std::cout << a << " % " << b << " = " << a % b << std::endl;
-    std::cout << a << " + " << b << " * " << c << " = " << a + b * c << std::endl;
-    std::cout << "(" << a << " + " << b << ") * " << c << " = " << (a + b) * c;
+
+    std::cout << num_1 << " + " << num_2 << " = " << num_1 + num_2 << std::endl;
+    std::cout << num_1 << " - " << num_2 << " = " << num_1 - num_2 << std::endl;
+    std::cout << num_1 << " * " << num_2 << " = " << num_1 * num_2 << std::endl;
+    std::cout << num_1 << " / " << num_2 << " = " << num_1 / num_2 << std::endl;
+    std::cout << num_1 << ".0 / " << num_2 << ".0 = " << (float)num_1 / (float)num_2 << std::endl;
+    std::cout << num_1 << " % " << num_2 << " = " << num_1 % num_2 << std::endl;
+    std::cout << num_1 << " + " << num_2 << " * " << num_3 << " = " << num_1 + num_2 * num_3 << std::endl;
+    std::cout << "(" << num_1 << " + " << num_2 << ") * " << num_3 << " = " << (num_1 + num_2) * num_3;
     return 0;
 }
-
 
