@@ -40,7 +40,7 @@ int main() {
 		int size_list = sizeof(pers)/sizeof(pers[0]);
 		cout << "Choose animation:" << endl << "Dance: \t\t\t1" << endl
 			<< "Run: \t\t\t2" << endl << "Sit down and jump: \t3" << endl
-			<< "Throw a ball: \t\t4" << endl << endl << "Enter 5 for exit." << endl <<;
+			<< "Throw a ball: \t\t4" << endl << "Enter 5 for exit." << endl;
 		cin >> uChoice;
 		if (uChoice == '1') {
 			system("cls");
