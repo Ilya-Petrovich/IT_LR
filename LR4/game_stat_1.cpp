@@ -80,7 +80,7 @@ int main() {
 	car_stats(fuel,speed);
 	Route_info(speed,fuelConsumption);
 	if (speed < 0) {
-		cout << "Invalid data" << endl;
+		cout << "Invalid data." << endl;
 		return 0;
 	}
 	Destination_result(fuel, fuelConsumption,speed);
