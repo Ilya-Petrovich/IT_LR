@@ -14,7 +14,7 @@ int main() {
 		"   |--|   ",
 		"   \\__/   ",
 		"    ||    ",
-		"  -|  |-  ",
+		"  -| *|-  ",
 		" / |  | \\ ",
 		"/   \\/   \\",
 		"    /\\    ",
@@ -22,7 +22,7 @@ int main() {
 		"   _||_   ",
 	};
 	string *pers0 = pers;
-	dancing (pers0, 12, 10000);
+	dancing (pers0, 12, 1000);
 	
 	return 0;
 }
@@ -34,7 +34,7 @@ void dancing (string *firstEl, int col, int t) {
 	for (int i = 0; i < col; i++) cout << pers[i] << endl;
 		
 	for (int q = 0; q < 2; q++) {
-		pers[6] = " --|  |-- ";
+		pers[6] = " --| *|-- ";
 		pers[7] = "/  |  |  \\";
 		pers[8] = "    \\/    ";
 		usleep(t);
@@ -43,7 +43,7 @@ void dancing (string *firstEl, int col, int t) {
 		for (int i = 0; i < col; i++) {
 			cout << pers[i] << endl;
 		}
-		pers[6] = "  -|  |---";
+		pers[6] = "  -| *|---";
 		pers[7] = " / |  |   ";
 		pers[8] = "/   \\/    ";
 		usleep(t);
@@ -53,7 +53,7 @@ void dancing (string *firstEl, int col, int t) {
 			cout << pers[i] << endl;
 		}
 		pers[5] = "    ||   /";
-		pers[6] = " --|  |-- ";
+		pers[6] = " --| *|-- ";
 		pers[7] = "/  |  |   ";
 		pers[8] = "    \\/    ";
 		usleep(t);
@@ -64,7 +64,7 @@ void dancing (string *firstEl, int col, int t) {
 		}
 		pers[4] = "   \\__/  /";
 		pers[5] = "    ||  / ";
-		pers[6] = "  -|  |-  ";
+		pers[6] = "  -| *|-  ";
 		pers[7] = " / |  |   ";
 		pers[8] = "/   \\/    ";
 		usleep(t);
@@ -75,7 +75,7 @@ void dancing (string *firstEl, int col, int t) {
 		}
 		pers[4] = "   \\__/  *";
 		pers[5] = "    ||  / ";
-		pers[6] = " --|  |-  ";
+		pers[6] = " --| *|-  ";
 		pers[7] = "/  |  |   ";
 		pers[8] = "    \\/    ";
 		usleep(t);
@@ -86,7 +86,7 @@ void dancing (string *firstEl, int col, int t) {
 		}
 		pers[4] = "   \\__/  /";
 		pers[5] = "    ||  / ";
-		pers[6] = "---|  |-  ";
+		pers[6] = "---| *|-  ";
 		pers[7] = "   |  |   ";
 		pers[8] = "    \\/    ";
 		usleep(t);
@@ -97,7 +97,7 @@ void dancing (string *firstEl, int col, int t) {
 		}
 		pers[4] = "   \\__/  *";
 		pers[5] = "\\   ||  / ";
-		pers[6] = " --|  |-  ";
+		pers[6] = " --| *|-  ";
 		pers[7] = "   |  |   ";
 		pers[8] = "    \\/    ";
 		usleep(t);
@@ -108,7 +108,7 @@ void dancing (string *firstEl, int col, int t) {
 		}
 		pers[4] = "\\  \\__/  /";
 		pers[5] = " \\  ||  / ";
-		pers[6] = "  -|  |-  ";
+		pers[6] = "  -| *|-  ";
 		pers[7] = "   |  |   ";
 		pers[8] = "    \\/    ";
 		usleep(t);
@@ -119,8 +119,8 @@ void dancing (string *firstEl, int col, int t) {
 		}
 		pers[4] = "*  \\__/  *";
 		pers[5] = " \\  ||  / ";
-		pers[6] = "   |  |   ";
-		pers[7] = "    \\/    ";
+		pers[6] = "   | *|   ";
+		pers[8] = "    \\/    ";
 		usleep(t);
 		system("cls");
 		
@@ -129,7 +129,7 @@ void dancing (string *firstEl, int col, int t) {
 		}
 		pers[4] = "   \\__/   ";
 		pers[5] = "*   ||   *";
-		pers[6] = " --|  |-- ";
+		pers[6] = " --| *|-- ";
 		pers[7] = "   |  |   ";
 		pers[8] = "    \\/    ";
 		usleep(t);
@@ -139,7 +139,7 @@ void dancing (string *firstEl, int col, int t) {
 			cout << pers[i] << endl;
 		}
 		pers[5] = "    ||    ";
-		pers[6] = "*--|  |--*";
+		pers[6] = "*--| *|--*";
 		pers[7] = "   |  |   ";
 		pers[8] = "    \\/    ";
 		usleep(t);
@@ -148,7 +148,7 @@ void dancing (string *firstEl, int col, int t) {
 		for (int i = 0; i < col; i++) {
 			cout << pers[i] << endl;
 		}
-		pers[6] = " --|  |-- ";
+		pers[6] = " --| *|-- ";
 		pers[7] = "*  |  |  *";
 		pers[8] = "    \\/    ";
 		usleep(t);
@@ -157,7 +157,7 @@ void dancing (string *firstEl, int col, int t) {
 		for (int i = 0; i < col; i++) {
 			cout << pers[i] << endl;
 		}
-		pers[6] = "  -|  |-  ";
+		pers[6] = "  -| *|-  ";
 		pers[7] = " / |  | \\ ";
 		pers[8] = "*   \\/   *";
 		usleep(t);
