@@ -25,8 +25,8 @@ int main(){
         
         if (fuel < (fuel_capacity / 2.)) {
             fuel += (fuel_capacity / 2.);
-            cout << "\n Your fuel before start: " << fuel << endl;
         }
+        cout << "\nYour fuel before start: " << fuel << endl;
 
         cout << "\nWhat speed will you chose? ";
         cin >> speed;
@@ -57,7 +57,12 @@ int main(){
             f_consumed = fuel_consumption * 3.6;
             f_remained = fuel - fuel_consumption * 3.6;
             time = (double(dist_t) / double(speed)) * 3600;
+        }else if (dist_t < distance and speed != 0) {
+        	f_consumed = fuel;
+        	f_remained = 0;
+        	time = (double(dist_t) / double(speed)) * 3600;
         }
+
         else if (speed == 0)
        	{   dist_t = 0;
             f_consumed  = 0;
