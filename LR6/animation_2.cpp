@@ -14,7 +14,7 @@ void ballThrow(vector<string> person);
 
 int main()
 {
-    int chooseAnim;
+    int choice;
     vector<string> person =
     {
     "****************************************",//0
@@ -40,9 +40,14 @@ int main()
     };
     while (true)
     {
-    menu();
-    cin >> chooseAnim;
-    switch(chooseAnim)
+    cout << "Choose animation:" << endl;
+    cout << "Dance: \t\t\t1" << endl;
+    cout << "Run: \t\t\t2" << endl;
+    cout << "Sit down and jump: \t3" << endl;
+    cout << "Throw a ball: \t\t4" << endl << endl;
+    cout << "Enter 5 for exit." << endl;
+    cin >> choice;
+    switch(choice)
     {
         case 1: print(person); dance(person); break;
         case 2: print(person); run(person); break;
