@@ -1,9 +1,7 @@
-
 #include<iostream>
 using namespace std;
 int main() {
 	int num_1, num_2, num_3;
-	setlocale(LC_ALL, "rus");
 	cout << "Type the first number: ";
 	cin >> num_1;
 	cout << "Type the second number: ";
@@ -21,6 +19,6 @@ int main() {
 		cout << "(" << num_1 << " + " << num_2 << ")" << " * " << num_3 << " = " << (num_1 + num_2) * num_3 << endl;
 	}
 	else {
-		cout << "Invalid data";
+		cout << "Invalid data" << endl;
 	}
 }
