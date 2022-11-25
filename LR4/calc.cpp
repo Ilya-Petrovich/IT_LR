@@ -27,6 +27,7 @@ int main()
     cout << "(7 + 3) * 5 = " << (num_1 + num_2) * num_3 << endl;
     return 0;
 
+
 }
 
 
