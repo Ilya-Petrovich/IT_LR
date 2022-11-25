@@ -1,9 +1,5 @@
 #include <iostream>
 
-double round(double x) {
-	return (double)(int)(x + 0.5);
-}
-
 int main() {
 	double time, fuel, speed, consumed, remained, S;
 	std::cout << "How much fuel do you have at start? "; 
@@ -86,7 +82,7 @@ int main() {
 		} else if (S == 0) {
 			std::cout << "\nYou haven't reached destination point. 360 km left.";
 		} else if (S < 360) {
-			std::cout << "\nYou haven't reached destination point. " << round((360 - S) * 10000) / 10000 << " km left.";
+			std::cout << "\nYou haven't reached destination point. " << (double)(int)((((360 - S) * 10000) / 10000) + 0.5) << " km left.";
 		}
 	}
 return 0;
