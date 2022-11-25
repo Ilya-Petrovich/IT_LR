@@ -4,7 +4,7 @@ int main() {
 	int fuel, distance = 360;
 	double s, fuel_consumption;
 	int speed;
-	cout << "How much fuel do you have to start? ";
+	cout << "How much fuel do you have at start? ";
 	cin >> fuel;
 	if (fuel < 0 or fuel > 50) {
 		cout << "Invalid data";
@@ -72,5 +72,3 @@ int main() {
 	}
 	return 0;
 }
-
-
