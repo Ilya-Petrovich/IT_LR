@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cmath>
 int main()
 {
 	int num_1, num_2, num_3;
