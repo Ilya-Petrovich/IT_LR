@@ -88,4 +88,5 @@ int main()
 	}
 	else cout<<"\n   You wouldn't reach your destination anyway, but you could drive "<<dt2-dt<<" kms more.";
 	}
+        return 0;
 }
