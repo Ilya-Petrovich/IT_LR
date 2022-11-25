@@ -2,6 +2,7 @@
 using namespace std;
 int main()
 {
+	
     int fuel, speed;
     cout << "How much fuel do  you have at start? ";
     cin >> fuel;
