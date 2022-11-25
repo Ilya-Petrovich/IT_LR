@@ -11,7 +11,6 @@ int main()
 {
     vector<string> person =
     {
-
     "    /\\    ",//0
     "   |oo|   ",//1
     "  (|..|)  ",//2
@@ -36,30 +35,30 @@ void print(vector<string> person)
 }
 void dance(vector<string> person)
 {
-    int delay = 650*1000;
+    int delay = 350*1000;
     for (int i = 0; i < 2; i++)
     {
         //usleep(delay);
-        //system("cls");
+        //system("clear");
         person[6] = " --|  |-- ";
         person[7] = "/  |  |  \\";
         person[8] = "    \\/    ";
         print(person);
         //usleep(delay);
-        //system("cls");
+        //system("clear");
         person[6] = "  -|  |---";
         person[7] = " / |  |   ";
         person[8] = "/   \\/    ";
         print(person);
         //usleep(delay);
-        //system("cls");
+        //system("clear");
         person[5] = "    ||   /";
         person[6] = " --|  |-- ";
         person[7] = "/  |  |   ";
         person[8] = "    \\/    ";
         print(person);
         //usleep(delay);
-        //system("cls");
+        //system("clear");
         person[4] = "   \\__/  /";
         person[5] = "    ||  / ";
         person[6] = "  -|  |-  ";
@@ -67,58 +66,58 @@ void dance(vector<string> person)
         person[8] = "/   \\/    ";
         print(person);
         //usleep(delay);
-        //system("cls");
+        //system("clear");
         person[4] = "   \\__/  *";
         person[6] = " --|  |-  ";
         person[7] = "/  |  |   ";
         person[8] = "    \\/    ";
         print(person);
         //usleep(delay);
-        //system("cls");
+        //system("clear");
         person[4] = "   \\__/  /";
         person[6] = "---|  |-  ";
         person[7] = "   |  |   ";
         print(person);
         //usleep(delay);
-        //system("cls");
+        //system("clear");
         person[4] = "   \\__/  *";
         person[5] = "\\   ||  / ";
         person[6] = " --|  |-  ";
         print(person);
         //usleep(delay);
-        //system("cls");
+        //system("clear");
         person[4] = "\\  \\__/  /";
         person[5] = " \\  ||  / ";
         person[6] = "  -|  |-  ";
         print(person);
         //usleep(delay);
-        //system("cls");
+        //system("clear");
         person[4] = "*  \\__/  *";
         print(person);
         //usleep(delay);
-        //system("cls");
+        //system("clear");
         person[4] = "   \\__/   ";
         person[5] = "*   ||   *";
         person[6] = " --|  |-- ";
         print(person);
         //usleep(delay);
-        //system("cls");
+        //system("clear");
         person[5] = "    ||    ";
         person[6] = "*--|  |--*";
         print(person);
         //usleep(delay);
-        //system("cls");
+        //system("clear");
         person[6] = " --|  |-- ";
         person[7] = "*  |  |  *";
         print(person);
         //usleep(delay);
-        //system("cls");
+        //system("clear");
         person[6] = "  -|  |-  ";
         person[7] = " / |  | \\ ";
         person[8] = "*   \\/   *";
         print(person);
         //usleep(delay);
-        //system("cls");
+        //system("clear");
         person[8] = "/   \\/   \\";
         print(person);
     }
