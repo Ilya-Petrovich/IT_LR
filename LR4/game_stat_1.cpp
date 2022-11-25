@@ -15,25 +15,29 @@ int main() {
 		}
 	}
 	cout << endl;
-	cout << "Car stats";
-	cout << "\nFuel: " << fuel;
-	cout << "\nFuel capacity: " << maxfuel;
-	cout << "\nFuel consumption: " << 0;
-	cout << "\nSpeed: " << 0;
-	cout << "\nMaximum speed: " << maxspeed << endl;
-	cout << "\nRoute info";
-	cout << "\nDistance: " << 360 << " km"  ;
-	cout << "\n----------------------------------------"  ;
-	cout << "\nYou have to drive a route 360 km long."  ;
-	cout << "\nBut first you need to check if you have enough fuel." << endl  ;
-	cout << "\nWhat speed will you choose? "; cin >> Speed;
+	cout << "Car stats" << endl;
+	cout << "Fuel: " << fuel << endl;
+	cout << "Fuel capacity: " << maxfuel << endl;
+	cout << "Fuel consumption: " << 0 << endl;
+	cout << "Speed: " << 0 << endl;
+	cout << "Maximum speed: " << maxspeed << endl;
+	cout << endl;
+	cout << "Route info" << endl;
+	cout << "Distance: " << 360 << " km" << endl;
+	cout << "----------------------------------------" << endl;
+	cout << "You have to drive a route 360 km long." << endl;
+	cout << "But first you need to check if you have enough fuel." << endl;
+	cout << endl;
+	cout << "What speed will you choose? "; cin >> Speed;
 	if (Speed > maxspeed) {
 		Speed = maxspeed;
 	}
-	cout << "Your speed before start: " << Speed << " km/h" << endl ;
+	cout << "Your speed before start: " << Speed << " km/h" << endl;
+	cout << endl;
 	double fuelConsumption = (Speed / 10) * (Speed / 10) / 4 - 4.5 * (Speed / 10) + 30;
-	cout << "\nFuel consumption with choosen speed: " << fuelConsumption << " litres per 100 km" << endl ;
-	cout << "\nDentination result"  ;
+	cout << "Fuel consumption with choosen speed: " << fuelConsumption << " litres per 100 km" << endl;
+	cout << endl;
+	cout << "Dentination result" << endl;
 	prasst = (float(fuel) / fuelConsumption) * 100;
 	if (prasst < rasst) {
 		ostrast = rasst - prasst;
@@ -45,16 +49,16 @@ int main() {
 	t = prasst / Speed * 3600;
 	fuelcons = prasst * fuelConsumption / 100;
 	fuelrem = fuel - fuelcons;
-	cout << "\nDistance traveled: " << prasst << " km"  ;
-	cout << "\nTime spent: " << t << " sec"  ;
-	cout << "\nFuel consumed: " << fuelcons << " litres";
-	cout << "\nFuel remained: " << fuelrem  << " litres";
-	cout << "\n----------------------------------------"  ;
+	cout << "Distance traveled: " << prasst << " km" << endl;
+	cout << "Time spent: " << t << " sec" << endl;
+	cout << "Fuel consumed: " << fuelcons << " litres" << endl;
+	cout << "Fuel remained: " << fuelrem  << " litres" << endl;
+	cout << "----------------------------------------" << endl;
 	if (prasst == rasst) {
-		cout << "\nCongratulations! You have reached destination point!";
+		cout << "Congratulations! You have reached destination point!";
 	}
 	else {
-		cout << "\nYou haven't reach destination point. " << ostrast << " km left.";
+		cout << "You haven't reach destination point. " << ostrast << " km left.";
 	}
 	return 0;
 
