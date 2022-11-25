@@ -19,6 +19,6 @@ int main() {
 		std::cout << "(" << num_1 << " + " << num_2 << ")" << " * " << num_3 << " = ";
 		std::cout << (num_1 + num_2) * num_3;
 	} else
-		std::cout << "Invalid data";
+		std::cout << "Invalid data" << std::endl;
 	return 0;
 }
