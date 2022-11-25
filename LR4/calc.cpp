@@ -4,6 +4,8 @@
 using namespace std;
 
 int main() {
+    setlocale(LC_ALL, "rus");
+
     int num_1, num_2, num_3;
 
     cout << "Type the first number: ";
@@ -21,8 +23,7 @@ int main() {
         cout << num_1 << " - " << num_2 << " = " << num_1 - num_2 << endl;
         cout << num_1 << " * " << num_2 << " = " << num_1 * num_2 << endl;
         cout << num_1 << " / " << num_2 << " = " << num_1 / num_2 << endl;
-        cout << setprecision(1) << fixed << (float)num_1 << " / " << (float)num_2 << " = ";
-        cout << setprecision(0) << fixed << div << endl;
+        cout << num_1 << ".0 / " << num_2 << ".0 = " << (float) num_1 / num_2 << endl;
         cout << num_1 << " % " << num_2 << " = " << num_1 % num_2 << endl;
         cout << num_1 << " + " << num_2 << " * " << num_3 << " = " <<
             num_1 + num_2 * num_3 << endl;
