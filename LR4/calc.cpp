@@ -2,9 +2,9 @@
 using namespace std;
 int main() {
 	int num1, num2, num3;
-	cout << "Vvedite pervoe chislo: "; cin >> num1;
-	cout << "Vvedite vtoroe chislo: "; cin >> num2;
-	cout << "Vvedite tretie chislo: "; cin >> num3;
+	cout << "Type the first number: "; cin >> num1;
+	cout << "Type the second number: "; cin >> num2;
+	cout << "Type the third number: "; cin >> num3;
 	if (num1 > 0 && num2 > 0 && num3 > 0) {
 		if (num1 > num2) {
 			cout << num1 << " + " << num2 << " = " << num1 + num2 << endl;
