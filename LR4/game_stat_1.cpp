@@ -35,7 +35,7 @@ int main() {
 	cout << "Your speed before start: " << Speed << " km/h" << endl;
 	cout << endl;
 	double fuelConsumption = (Speed / 10) * (Speed / 10) / 4 - 4.5 * (Speed / 10) + 30;
-	cout << "Fuel consumption with choosen speed: " << fuelConsumption << " litres per 100 km" << endl;
+	cout << "Fuel consumption with chosen speed: " << fuelConsumption << " litres per 100 km" << endl;
 	cout << endl;
 	cout << "Dentination result" << endl;
 	prasst = (float(fuel) / fuelConsumption) * 100;
