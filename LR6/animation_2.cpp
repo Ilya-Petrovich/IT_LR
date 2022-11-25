@@ -1,6 +1,6 @@
 #include <iostream>
 #include <string>
-#include "windows.h"
+#include "unistd.h"
 
 using namespace std;
 
@@ -44,16 +44,16 @@ int main() {
 		cin >> uChoice;
 		if (uChoice == '1') {
 			system("cls");
-			dancing(pers0, size_list, 150);
+			dancing(pers0, size_list, 10000);
 		} else if (uChoice == '2') {
 			system("cls");
-			rightLeft(pers0, size_list, 80);
+			rightLeft(pers0, size_list, 4000);
 		} else if (uChoice == '3') {
 			system("cls");
-			jump(pers0, size_list, 100);
+			jump(pers0, size_list, 5000);
 		} else if (uChoice == '4') {
 			system("cls");
-			ball(pers0, size_list, 100);
+			ball(pers0, size_list, 5000);
 		} else if (uChoice == '5') {
 			return 0;
 		} else {
@@ -65,7 +65,7 @@ int main() {
 
 void show(string *firstEl, int col, int t) {
 	for (int i = 0; i < col; i ++, firstEl ++) cout << *firstEl << endl;
-	Sleep(t);
+	usleep(t);
 	system("cls");
 	return;
 }
@@ -194,7 +194,7 @@ void jump (string *firstEl, int col, int t) {
 	pers[16] = g;
 	pers[17] = h;
 	pers[18] = "*   _\\/_   " + spacesRight;
-	Sleep(t);
+	usleep(t);
 	
 	for (int q = 18; q >= 14; q --) {
 		system("cls");
@@ -212,7 +212,7 @@ void jump (string *firstEl, int col, int t) {
 		pers[q-1] = l;
 		pers[q] = "*    ||    " + spacesRight;
 		if (q != 18) pers[q+1] = emptyStr;
-		Sleep(t);
+		usleep(t);
 	}
 	system("cls");
 	for (int q = 13; q <= 16; q ++) {
@@ -230,7 +230,7 @@ void jump (string *firstEl, int col, int t) {
 		pers[q] = k;
 		pers[q+1] = l;
 		pers[q+2] = "*    ||    " + spacesRight;
-		Sleep(t);
+		usleep(t);
 		system("cls");
 	}
 	pers[6] = emptyStr;
@@ -265,7 +265,7 @@ void dancing (string *firstEl, int col, int t) {
 		pers[13] = "* --|  |-- " + spacesRight;
 		pers[14] = "*/  |  |  \\" + spacesRight;
 		pers[15] = "*    \\/    " + spacesRight;
-		Sleep(t);
+		usleep(t);
 		system("cls");
 		
 		for (int i = 0; i < col; i++) {
@@ -274,7 +274,7 @@ void dancing (string *firstEl, int col, int t) {
 		pers[13] = "*  -|  |---" + spacesRight;
 		pers[14] = "* / |  |   " + spacesRight;
 		pers[15] = "*/   \\/    " + spacesRight;
-		Sleep(t);
+		usleep(t);
 		system("cls");
 		
 		for (int i = 0; i < col; i++) {
@@ -284,7 +284,7 @@ void dancing (string *firstEl, int col, int t) {
 		pers[13] = "* --|  |-- " + spacesRight;
 		pers[14] = "*/  |  |   " + spacesRight;
 		pers[15] = "*    \\/    " + spacesRight;
-		Sleep(t);
+		usleep(t);
 		system("cls");
 		
 		for (int i = 0; i < col; i++) {
@@ -295,7 +295,7 @@ void dancing (string *firstEl, int col, int t) {
 		pers[13] = "*  -|  |-  " + spacesRight;
 		pers[14] = "* / |  |   " + spacesRight;
 		pers[15] = "*/   \\/    " + spacesRight;
-		Sleep(t);
+		usleep(t);
 		system("cls");
 
 		for (int i = 0; i < col; i++) {
@@ -306,7 +306,7 @@ void dancing (string *firstEl, int col, int t) {
 		pers[13] = "* --|  |-  " + spacesRight;
 		pers[14] = "*/  |  |   " + spacesRight;
 		pers[15] = "*    \\/    " + spacesRight;
-		Sleep(t);
+		usleep(t);
 		system("cls");
 		
 		for (int i = 0; i < col; i++) {
@@ -317,7 +317,7 @@ void dancing (string *firstEl, int col, int t) {
 		pers[13] = "*---|  |-  " + spacesRight;
 		pers[14] = "*   |  |   " + spacesRight;
 		pers[15] = "*    \\/    " + spacesRight;
-		Sleep(t);
+		usleep(t);
 		system("cls");
 		
 		for (int i = 0; i < col; i++) {
@@ -328,7 +328,7 @@ void dancing (string *firstEl, int col, int t) {
 		pers[13] = "* --|  |-  " + spacesRight;
 		pers[14] = "*   |  |   " + spacesRight;
 		pers[15] = "*    \\/    " + spacesRight;
-		Sleep(t);
+		usleep(t);
 		system("cls");
 		
 		for (int i = 0; i < col; i++) {
@@ -339,7 +339,7 @@ void dancing (string *firstEl, int col, int t) {
 		pers[13] = "*  -|  |-  " + spacesRight;
 		pers[14] = "*   |  |   " + spacesRight;
 		pers[15] = "*    \\/    " + spacesRight;
-		Sleep(t);
+		usleep(t);
 		system("cls");
 		
 		for (int i = 0; i < col; i++) {
@@ -349,7 +349,7 @@ void dancing (string *firstEl, int col, int t) {
 		pers[12] = "* \\  ||  / " + spacesRight;
 		pers[14] = "*   |  |   " + spacesRight;
 		pers[15] = "*    \\/    " + spacesRight;
-		Sleep(t);
+		usleep(t);
 		system("cls");
 		
 		for (int i = 0; i < col; i++) {
@@ -360,7 +360,7 @@ void dancing (string *firstEl, int col, int t) {
 		pers[13] = "* --|  |-- " + spacesRight;
 		pers[14] = "*   |  |   " + spacesRight;
 		pers[15] = "*    \\/    " + spacesRight;
-		Sleep(t);
+		usleep(t);
 		system("cls");
 		
 		for (int i = 0; i < col; i++) {
@@ -370,7 +370,7 @@ void dancing (string *firstEl, int col, int t) {
 		pers[13] = "**--|  |--*" + spacesRight;
 		pers[14] = "*   |  |   " + spacesRight;
 		pers[15] = "*    \\/    " + spacesRight;
-		Sleep(t);
+		usleep(t);
 		system("cls");
 		
 		for (int i = 0; i < col; i++) {
@@ -379,7 +379,7 @@ void dancing (string *firstEl, int col, int t) {
 		pers[13] = "* --|  |-- " + spacesRight;
 		pers[14] = "**  |  |  *" + spacesRight;
 		pers[15] = "*    \\/    " + spacesRight;
-		Sleep(t);
+		usleep(t);
 		system("cls");
 		
 		for (int i = 0; i < col; i++) {
@@ -388,14 +388,14 @@ void dancing (string *firstEl, int col, int t) {
 		pers[13] = "*  -|  |-  " + spacesRight;
 		pers[14] = "* / |  | \\ " + spacesRight;
 		pers[15] = "**   \\/   *" + spacesRight;
-		Sleep(t);
+		usleep(t);
 		system("cls");
 		
 		for (int i = 0; i < col; i++) {
 			cout << pers[i] << endl;
 		}
 		pers[15] = "*/   \\/   \\" + spacesRight;
-		Sleep(t);
+		usleep(t);
 		system("cls");
 		
 		for (int i = 0; i < col; i++) {
@@ -432,7 +432,7 @@ void rightLeft (string *firstEl, int col, int t) {
 					( (q >= 0 && q < 7) || (q == 19) ) ? cout << pers[q] << endl :
 						cout << "*" + spaces + pers[q] + spaces_right << endl;
 				}
-				Sleep(t);
+				usleep(t);
 				system("cls");
 				spaces = "";
 			} else if (step == 0) {
@@ -454,7 +454,7 @@ void rightLeft (string *firstEl, int col, int t) {
 					( (q >= 0 && q < 7) || (q == 19) ) ? cout << pers[q] << endl :
 						cout << "*" + spaces + pers[q] + spaces_right << endl;
 				}
-				Sleep(t);
+				usleep(t);
 				system("cls");
 				spaces = "";
 				
@@ -475,7 +475,7 @@ void rightLeft (string *firstEl, int col, int t) {
 					( (q >= 0 && q < 7) || (q == 19) ) ? cout << pers[q] << endl :
 						cout << "*" + spaces + pers[q] + spaces_right << endl;
 				}
-				Sleep(t);
+				usleep(t);
 				system("cls");
 				spaces = "";
 			}
@@ -502,7 +502,7 @@ void rightLeft (string *firstEl, int col, int t) {
 					( (q >= 0 && q < 7) || (q == 19) ) ? cout << pers[q] << endl :
 						cout << "*" + spaces + pers[q] + spaces_right << endl;
 				}
-				Sleep(t);
+				usleep(t);
 				system("cls");
 				spaces = "";		
 			} else if (step == 0) {
@@ -522,7 +522,7 @@ void rightLeft (string *firstEl, int col, int t) {
 					( (q >= 0 && q < 7) || (q == 19) ) ? cout << pers[q] << endl :
 						cout << "*" + spaces + pers[q] + spaces_right << endl;
 				}
-				Sleep(t);
+				usleep(t);
 				system("cls");
 				spaces = "";
 				
@@ -543,7 +543,7 @@ void rightLeft (string *firstEl, int col, int t) {
 					( (q >= 0 && q < 7) || (q == 19) ) ? cout << pers[q] << endl :
 						cout << "*" + spaces + pers[q] + spaces_right << endl;
 				}
-				Sleep(t);
+				usleep(t);
 				system("cls");
 				spaces = "";
 			}
