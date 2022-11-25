@@ -10,7 +10,7 @@ void dance(vector<string> sticman);
 void start_state();
 
 int main()
-{
+{ // 1
 	vector<string> sticman =
 	{
 	"      /\\      ",//0

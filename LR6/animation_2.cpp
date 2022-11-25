@@ -16,7 +16,7 @@ void sleep(){
 void jump(vector<string> sticman);
 void throw_boll(vector <string> sticman);
 
-int main()
+int main() // 1
 {
 	
 	
