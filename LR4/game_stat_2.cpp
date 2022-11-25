@@ -9,7 +9,9 @@ int main()
 	int t=0, h=0, m=0, sec = 0;
 	cout << "How much fuel do you have at start? "; cin >> f;
 	if (f < 0 or f>50) {
-		cout << "\nInvalid data."; return 0;
+		cout << "\nInvalid data.";
+		system ("pause");
+		return 0;
 	}
 	cout << "\nCar stats\nFuel: " << f << "\nFuel capacity: 50\nFuel consumption: 0\nSpeed: 0\nMaximum speed: 110\n";
 	cout << "\nRoute info\nDistance: 360 km\n";
@@ -33,7 +35,9 @@ int main()
 	cout << "\nWhat speed will you choose? "; cin >> sp;
 	if (sp > 110) sp = 110;
 	if (sp < 0) {
-		cout << "Invalid data."; return 0;
+		cout << "Invalid data.";
+		system ("pause");
+		return 0;
 	}
 	cout << "Your speed before start: " << sp << " km/h\n";
 	cout << "\nType in equation parameters.\na = "; cin >> a;
@@ -71,6 +75,7 @@ int main()
 	if (dt2 > 360) dt2 = 360;
 	if (fuelConsumption1==fuelConsumption) {
 	    cout<<"You were driving at the optimum speed!";
+	    system ("pause");
 	    return 0;
 	}
 	else {
@@ -88,5 +93,6 @@ int main()
 	}
 	else cout<<"\n   You wouldn't reach your destination anyway, but you could drive "<<dt2-dt<<" kms more.";
 	}
-        return 0;
+	system ("pause");
+    return 0;
 }
