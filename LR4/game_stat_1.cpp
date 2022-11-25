@@ -21,14 +21,15 @@ int main(){
         //// *************** Route info *********************************
         cout << "\nRoute info\nDistance: " << distance << " km" << endl;
         cout << "-----------------------------------" << endl;
-        cout << "You have to drive a route 360 km long.\nBut first you need to checkif you have enough fuel." << endl;
+        cout << "You have to drive a route 360 km long.\nBut first you need to check if you have enough fuel." << endl;
         
         if (fuel < (fuel_capacity / 2.)) {
             fuel += (fuel_capacity / 2.);
+            cout << "\nYour fuel before start: " << fuel << endl;
         }
-        cout << "\nYour fuel before start: " << fuel << endl;
+        
 
-        cout << "\nWhat speed will you chose? ";
+        cout << "\nWhat speed will you choose? ";
         cin >> speed;
 
     }else{
