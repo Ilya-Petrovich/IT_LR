@@ -6,7 +6,7 @@ int main() {
 	cout << "Type the second number: "; cin >> num2;
 	cout << "Type the third number: "; cin >> num3;
 	if (!(num1 > num2&& num1 >= 0 && num2 > 0 && num3 >= 0)) {
-		cout << "Invalid data";
+		cout << "Invalid data" << endl;
 		return 0;
 	}
 	cout << num1 << " + " << num2 << " = " << num1 + num2 << endl;
