@@ -1,5 +1,7 @@
 #include <iostream>
+
 using namespace std;
+
 int main()
 {
 	double f, sp, s, d = 360, dt, fuelRemained, fuelConsumed, fuelConsumption;
@@ -34,4 +36,5 @@ int main()
 	cout << "\nDestination result\nDistance traveled: " << dt << " km\nTime spent: " << t << " sec\nFuel consumed: " << fuelConsumed << " litres\nFuel remained " << fuelRemained << " litres\n----------------------------------------\n";
 	if (dt == 360) cout << "Congratulations! You have reached destination point!";
 	else cout << "You haven't reached destination point. " << 360 - dt << " km left.";
+        return 0;
 }
