@@ -72,7 +72,7 @@ int main() {
 	int fuel, speed = 0; 
 	cout << "How much fuel do you have at start? "; cin >> fuel; cout << "\n\n";
 	if (!(fuel > 0 && fuel < 50)) {
-		cout << "Invalid data.";
+		cout << "Invalid data." << endl;
 		return 0;
 	}
 	else if (fuel < 50 / 2)
@@ -80,7 +80,7 @@ int main() {
 	car_stats(fuel,speed);
 	Route_info(speed,fuelConsumption);
 	if (speed < 0) {
-		cout << "Invalid data.";
+		cout << "Invalid data." << endl;
 		return 0;
 	}
 	Destination_result(fuel, fuelConsumption,speed);
