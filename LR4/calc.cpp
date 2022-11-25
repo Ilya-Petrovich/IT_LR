@@ -13,9 +13,10 @@ int main() {
 	cout << num1 << " + " << num2 << " = " << num1 + num2 << endl;
 	cout << num1 << " - " << num2 << " = " << num1 - num2 << endl;
 	cout << num1 << " * " << num2 << " = " << num1 * num2 << endl;
+	cout << num1 << " / " << num2 << " = " << num1 / num2 << endl;
 	cout << num1 << ".0" << " / " << num2 << ".0" << " = " << (float)num1 / num2 << endl;
 	cout << num1 << " % " << num2 << " = " << num1 % num2 << endl;
 	cout << num1 << " + " << num2 << " * " << num3 << " = " << num1 + num2 * num3 << endl;
-	cout << "(" << num1 << " + " << num2 << ")" << " * " << num3 << " = " << (num1 + num2) * num3 << endl;
+	cout << "(" << num1 << " + " << num2 << ")" << " * " << num3 << " = " << (num1 + num2) * num3;
 	return 0;
 }
