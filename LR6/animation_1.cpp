@@ -120,7 +120,7 @@ void dancing (string *firstEl, int col, int t) {
 		pers[4] = "*  \\__/  *";
 		pers[5] = " \\  ||  / ";
 		pers[6] = "   | *|   ";
-		pers[8] = "    \\/    ";
+		//pers[8] = "    \\/    ";
 		usleep(t);
 		system("cls");
 		

@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 #include "unistd.h"
+//#include "windows.h"
 
 using namespace std;
 
@@ -44,7 +45,7 @@ int main() {
 		cin >> uChoice;
 		if (uChoice == '1') {
 			system("cls");
-			dancing(pers0, size_list, 1000);
+			dancing(pers0, size_list, 500);
 		} else if (uChoice == '2') {
 			system("cls");
 			rightLeft(pers0, size_list, 4000);
@@ -348,7 +349,7 @@ void dancing (string *firstEl, int col, int t) {
 		pers[11] = "**  \\__/  *" + spacesRight;
 		pers[12] = "* \\  ||  / " + spacesRight;
 		pers[14] = "*   |  |   " + spacesRight;
-		pers[16] = "*    \\/    " + spacesRight;
+		//pers[16] = "*    \\/    " + spacesRight;
 		usleep(t);
 		system("cls");
 		
