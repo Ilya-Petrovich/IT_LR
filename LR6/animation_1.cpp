@@ -21,6 +21,7 @@ void anim2(vector<string>b) {
 	b[6] = "  -| *|---";
 	b[7] = " / |  |";
 	b[8] = "/   \\/";
+	int d;
 	print(b);
 }
 void anim3(vector<string>b) {
