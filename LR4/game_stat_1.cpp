@@ -12,12 +12,12 @@ int main() {
 	}
 	cout << "\nCar stats";
 	cout << "\nFuel: " << fuel;
-	cout << "\nFuel capacity: " << 50 << endl;
-	cout << "Fuel consumption: " << 0 << endl;
-	cout << "Speed: " << 0 << endl;;
-	cout << "Maximum speed: " << 110 << endl;
+	cout << "\nFuel capacity: 50"  << endl;
+	cout << "Fuel consumption: 0" << endl;
+	cout << "Speed: 0" << endl;
+	cout << "Maximum speed: 110" << endl;
 	cout << "\nRoute info" << endl;
-	cout << "Distance: " << distance << " km" << endl;
+	cout << "Distance: 360" << " km" << endl;
 	cout << "----------------------------------------" << endl;
 	cout << "You have to drive a route " << distance << " km long\n";
 	cout << "But first you need to check if you have enough fuel.\n" << endl;;
@@ -72,3 +72,4 @@ int main() {
 	}
 	return 0;
 }
+
