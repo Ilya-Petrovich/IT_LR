@@ -1,7 +1,8 @@
 #include <iostream>
 #include <string>
-#include <cmath>
+
 using namespace std;
+
 int main()
 {
 	double f=0, sp=0, s=0, d = 360, dt=0, dt2=0, fuelRemained=0, fuelConsumed=0, fuelConsumed2=0, fuelConsumption1=0, fuelConsumption=0, plus=0, a=0, b=0, c=0, fuelConsumptionTest=0, sp2=0, fuelConsumption2=0, fuelRemained2=0;
