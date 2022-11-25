@@ -37,7 +37,7 @@ int main() {
 	double fuelConsumption = (Speed / 10) * (Speed / 10) / 4 - 4.5 * (Speed / 10) + 30;
 	cout << "Fuel consumption with chosen speed: " << fuelConsumption << " litres per 100 km" << endl;
 	cout << endl;
-	cout << "Dentination result" << endl;
+	cout << "Destination result" << endl;
 	prasst = (float(fuel) / fuelConsumption) * 100;
 	if (prasst < rasst) {
 		ostrast = rasst - prasst;
@@ -58,7 +58,7 @@ int main() {
 		cout << "Congratulations! You have reached destination point!";
 	}
 	else {
-		cout << "You haven't reach destination point. " << ostrast << " km left.";
+		cout << "You haven't reached destination point. " << ostrast << " km left.";
 	}
 	return 0;
 
