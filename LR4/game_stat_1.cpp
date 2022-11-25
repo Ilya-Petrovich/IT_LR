@@ -9,7 +9,7 @@ int main(){
     int max_speed = 110;
     cout << "How much fuel do you have at start? "; cin >> fuel;
 
-    if (fuel >= 0 and fuel <= 50) {
+    if (fuel >= 0 and fuel < 50) {
         //// **************** Car starts ********************************
         cout << "\nCar stats" << endl;
         cout << "Fuel: " << fuel << endl;
@@ -38,6 +38,7 @@ int main(){
     }
     if (speed < 0){
         cout << "\nInvalid data." << endl;
+        return 0;
     }else {
         if (speed >= max_speed) { speed = max_speed; }
         cout << "Your speed before start: " << speed << " km/h" << endl;
@@ -47,7 +48,7 @@ int main(){
         }else{
             fuel_consumption = (s * s) / 4 - 4.5 * s + 30;
         }
-        
+
         cout << "\nFuel consumption with chosen speed: " << fuel_consumption << " litres per 100 km" << endl;
 
         //// **************** Distance result ****************************
@@ -86,5 +87,5 @@ int main(){
             cout << "You haven't reached destination point. " << distance - dist_t << " km left." << endl;
         }
     }
-
+    return 0;
 }
