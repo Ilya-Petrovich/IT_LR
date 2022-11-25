@@ -1,4 +1,5 @@
 #include <iostream>
+#include <iostream>
 using namespace std;
 int main() {
 	int fuel, distance = 360;
@@ -6,13 +7,14 @@ int main() {
 	int speed;
 	cout << "How much fuel do you have at start? ";
 	cin >> fuel;
+	cout << endl;
 	if (fuel < 0 or fuel > 50) {
 		cout << "Invalid data";
 		return 1;
 	}
-	cout << "\nCar stats";
+	cout << "Car stats" << endl;
 	cout << "\nFuel: " << fuel;
-	cout << "\nFuel capacity: 50"  << endl;
+	cout << "\nFuel capacity: 50" << endl;
 	cout << "Fuel consumption: 0" << endl;
 	cout << "Speed: 0" << endl;
 	cout << "Maximum speed: 110" << endl;
@@ -72,4 +74,3 @@ int main() {
 	}
 	return 0;
 }
-
