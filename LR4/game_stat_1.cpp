@@ -12,7 +12,7 @@ int main()
 	}
 	cout << "\nCar stats\nFuel: "<<f<<"\nFuel capacity: 50\nFuel consumption: 0\nSpeed: 0\nMaximum speed: 110\n";
 	cout << "\nRoute info\nDistance: "<<d<<" km\n";
-	cout << "----------------------------------------\nYou have to drive a route 360 km long.\nBut first you need to chek if you have enough fuel.\n";
+	cout << "----------------------------------------\nYou have to drive a route "<<d<<" km long.\nBut first you need to chek if you have enough fuel.\n";
 	if (f < 26) { f += 25; cout << "\nYour fuel before start: " << f << endl;
 	}
 	cout << "\nWhat speed will you choose? "; cin >> sp;
