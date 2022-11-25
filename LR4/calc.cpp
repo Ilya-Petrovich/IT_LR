@@ -1,12 +1,11 @@
 #include <iostream>
-#include <iomanip>
 using namespace std;
 int main() {
 	int num1, num2, num3;
 	setlocale(LC_ALL, "russian");
-	cout << "¬ведите первое число : "; cin >> num1;
-	cout << "¬ведите второе число : "; cin >> num2;
-	cout << "¬ведите третье число : "; cin >> num3;
+	cout << "Type the first number: "; cin >> num1;
+	cout << "Type the second number: "; cin >> num2;
+	cout << "Type the third number: "; cin >> num3;
 	if (!(num1 > num2 && num2 != 0 && num1 * num2 * num3 > 0)) {
 		cout << "Invalid data" << endl;
 		return 0;
