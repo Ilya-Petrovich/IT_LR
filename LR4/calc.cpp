@@ -1,0 +1,24 @@
+#include <iostream>
+using namespace std;
+int main() {
+	int num_1, num_2;
+	cout << "Type the first number: ";
+	cin >> num_1;
+	cout << "Type the second number: ";
+	cin >> num_2;
+	cout << "Type the third number: 5" << endl;
+
+	if (num_1 > num_2) {
+		cout << num_1 << " + " << num_2 << " = " << num_1 + num_2 << endl;
+		cout << num_1 << " - " << num_2 << " = " << num_1 - num_2 << endl;
+		cout << num_1 << " * " << num_2 << " = " << num_1 * num_2 << endl;
+		cout << num_1 << " / " << num_2 << " = " << num_1 / num_2 << endl;
+		cout << num_1 << ".0 / " << num_2 << ".0 = " << (float)num_1 / num_2 << endl;
+		cout << num_1 << " % " << num_2 << " = " << num_1 % num_2 << endl;
+		cout << num_1 << " + " << num_2 << " * 5 = " << num_1 + num_2 * 5 << endl;
+		cout << "(" << num_1 << " + " << num_2 << ") * 5 = " << (num_1 + num_2) * 5 << endl;
+	}
+	else {
+		cout << "Invalid data" << endl;
+	}
+}
