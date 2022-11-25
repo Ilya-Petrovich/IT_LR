@@ -55,10 +55,10 @@ int main() {
 	cout << "Fuel remained: " << fuelrem  << " litres" << endl;
 	cout << "----------------------------------------" << endl;
 	if (prasst == rasst) {
-		cout << "Congratulations! You have reached destination point!";
+		cout << "Congratulations! You have reached destination point!" << endl;
 	}
 	else {
-		cout << "You haven't reached destination point. " << ostrast << " km left.";
+		cout << "You haven't reached destination point. " << ostrast << " km left." << endl;
 	}
 	return 0;
 
