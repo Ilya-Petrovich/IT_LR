@@ -1,6 +1,5 @@
 #include <iostream>
 using namespace std;
-
 int main()
 {
 	double f, sp, s, d = 360, dt, fuelRemained, fuelConsumed, fuelConsumption;
