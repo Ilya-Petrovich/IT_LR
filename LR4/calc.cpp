@@ -3,13 +3,12 @@ using namespace std;
 int main()
 
 {
-    setlocale(LC_ALL, "rus");
     int num_1, num_2, num_3;
-    cout << "Введите первое число: ";
+    cout << "Enter the first number: ";
     cin >> num_1;
-    cout << "Введите второе число: ";
+    cout << "Enter the second number: ";
     cin >> num_2;
-    cout << "Введите третье число: ";
+    cout << "Enter the third number: ";
     cin >> num_3;
     if (num_1 > num_2) 
     {
