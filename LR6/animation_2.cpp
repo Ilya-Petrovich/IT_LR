@@ -2,8 +2,8 @@
 #include <vector>
 #include <string>
 #include <ctime>
-//#include<unistd.h>
-#include <windows.h>
+#include<unistd.h>
+//#include <windows.h>
 using namespace std;
 using namespace std;
 vector<string> a = {
