@@ -1,4 +1,4 @@
-#include <windows.h>
+#include <unistd.h>
 #include <vector>
 #include <iostream>
 #include <string>
@@ -10,8 +10,8 @@ void start_state(vector<string> sticman);
 void run(vector<string> sticman);
 void sleep(){
 	int x = 650;
-	Sleep(x);
-	system("cls");
+	//Sleep(x);
+	//system("cls");
 }
 void jump(vector<string> sticman);
 void throw_boll(vector <string> sticman);
@@ -82,8 +82,8 @@ int main() // 1
 
 void start_state(vector<string> sticman) {
 	int x = 650;
-	Sleep(x);
-	system("cls");
+	//Sleep(x);
+	//system("cls");
 	sticman = {
 	 "****************************************",//0
 	 "*                                      *",//1
