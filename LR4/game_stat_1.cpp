@@ -15,7 +15,7 @@ int main()
 	float fuelRemained = 0;
 	bool isReached = false;
 	float distanceRemained = 0;
-	string line = "----------------------------------------\n";
+	string line = "----------------------------------------";
 
 	cout << "How much fuel do you have at start? ";
 	cin >> fuel;
@@ -35,7 +35,7 @@ int main()
 	cout << "Route info" << endl;
 	cout << "Distance " << distance << " km\n";
 	// cout << endl;
-	cout << line;
+	cout << line << endl;
 	cout << "You have to drive a route " << distance << " km long." << endl;
 	cout << "But first you need to check if you have enought fuel." << endl;
 
@@ -93,7 +93,7 @@ int main()
 	cout << "Time spent: " << time << " sec\n";
 	cout << "Fuel consumed: " << fuelConsumed << " litres\n";
 	cout << "Fuel remained: " << fuelRemained << " litres\n";
-	cout << line;
+	cout << line << endl;
 	// cout << endl;
 
 	if (isReached)
