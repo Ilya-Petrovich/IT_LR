@@ -31,7 +31,7 @@ int main()
 		printf("%i + %i * %i = ", num1, num2, num3);
 		cout << num1 + num2 * num3 << endl;
 		printf("(%i + %i) * %i = ", num1, num2, num3);
-		cout << (num1 + num2) * num3;
+		cout << (num1 + num2) * num3 << endl;
 	}
 	else
 		cout << "Invalid data" << endl;
