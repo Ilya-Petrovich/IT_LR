@@ -3,10 +3,10 @@
 
 int main()
 {
-	int fuel, timeSpent, speed = 0, distance = 360; std::cout << "How much fuel do you have at start? "; std::cin >> fuel; std::cout << "\n";
+	int fuel, timeSpent, speed = 0, distance = 360; std::cout << "How much fuel do you have at start? "; std::cin >> fuel; std::cout << endl;
 	bool flag;
 	float s, fuelConsumption, distanceTraveled, fuelConsumed, fuelRemined;
-	if (fuel > 50 || fuel < 0) {
+	if (fuel >= 50 || fuel <= 0) {
 		std::cout << "Invalid data.";
 		return 0;
 	}
