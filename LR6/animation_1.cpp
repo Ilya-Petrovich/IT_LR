@@ -22,7 +22,7 @@ int main() {
 		"   _||_   ",
 	};
 	string *pers0 = pers;
-	dancing (pers0, 12, 1000);
+	dancing (pers0, 12, 2000);
 	
 	return 0;
 }
@@ -38,142 +38,115 @@ void dancing (string *firstEl, int col, int t) {
 		pers[7] = "/  |  |  \\";
 		pers[8] = "    \\/    ";
 		usleep(t);
-		system("cls");
+		//system("cls");
 		
-		for (int i = 0; i < col; i++) {
-			cout << pers[i] << endl;
-		}
+		for (int i = 0; i < col; i++) cout << pers[i] << endl;
 		pers[6] = "  -| *|---";
 		pers[7] = " / |  |   ";
 		pers[8] = "/   \\/    ";
 		usleep(t);
-		system("cls");
+		//system("cls");
 		
-		for (int i = 0; i < col; i++) {
-			cout << pers[i] << endl;
-		}
+		for (int i = 0; i < col; i++) cout << pers[i] << endl;
 		pers[5] = "    ||   /";
 		pers[6] = " --| *|-- ";
 		pers[7] = "/  |  |   ";
 		pers[8] = "    \\/    ";
 		usleep(t);
-		system("cls");
+		//system("cls");
 		
-		for (int i = 0; i < col; i++) {
-			cout << pers[i] << endl;
-		}
+		for (int i = 0; i < col; i++) cout << pers[i] << endl;
 		pers[4] = "   \\__/  /";
 		pers[5] = "    ||  / ";
 		pers[6] = "  -| *|-  ";
 		pers[7] = " / |  |   ";
 		pers[8] = "/   \\/    ";
 		usleep(t);
-		system("cls");
+		//system("cls");
 
-		for (int i = 0; i < col; i++) {
-			cout << pers[i] << endl;
-		}
+		for (int i = 0; i < col; i++) cout << pers[i] << endl;
 		pers[4] = "   \\__/  *";
 		pers[5] = "    ||  / ";
 		pers[6] = " --| *|-  ";
 		pers[7] = "/  |  |   ";
 		pers[8] = "    \\/    ";
 		usleep(t);
-		system("cls");
+		//system("cls");
 		
-		for (int i = 0; i < col; i++) {
-			cout << pers[i] << endl;
-		}
+		for (int i = 0; i < col; i++) cout << pers[i] << endl;
 		pers[4] = "   \\__/  /";
 		pers[5] = "    ||  / ";
 		pers[6] = "---| *|-  ";
 		pers[7] = "   |  |   ";
 		pers[8] = "    \\/    ";
 		usleep(t);
-		system("cls");
+		//system("cls");
 		
-		for (int i = 0; i < col; i++) {
-			cout << pers[i] << endl;
-		}
+		for (int i = 0; i < col; i++) cout << pers[i] << endl;
 		pers[4] = "   \\__/  *";
 		pers[5] = "\\   ||  / ";
 		pers[6] = " --| *|-  ";
 		pers[7] = "   |  |   ";
 		pers[8] = "    \\/    ";
 		usleep(t);
-		system("cls");
+		//system("cls");
 		
-		for (int i = 0; i < col; i++) {
-			cout << pers[i] << endl;
-		}
+		for (int i = 0; i < col; i++) cout << pers[i] << endl;
 		pers[4] = "\\  \\__/  /";
 		pers[5] = " \\  ||  / ";
 		pers[6] = "  -| *|-  ";
 		pers[7] = "   |  |   ";
 		pers[8] = "    \\/    ";
 		usleep(t);
-		system("cls");
+		//system("cls");
 		
-		for (int i = 0; i < col; i++) {
-			cout << pers[i] << endl;
-		}
+		for (int i = 0; i < col; i++) cout << pers[i] << endl;
 		pers[4] = "*  \\__/  *";
 		pers[5] = " \\  ||  / ";
 		pers[6] = "   | *|   ";
 		//pers[8] = "    \\/    ";
 		usleep(t);
-		system("cls");
+		//system("cls");
 		
-		for (int i = 0; i < col; i++) {
-			cout << pers[i] << endl;
-		}
+		for (int i = 0; i < col; i++) cout << pers[i] << endl;
 		pers[4] = "   \\__/   ";
 		pers[5] = "*   ||   *";
 		pers[6] = " --| *|-- ";
 		pers[7] = "   |  |   ";
 		pers[8] = "    \\/    ";
 		usleep(t);
-		system("cls");
+		//system("cls");
 		
-		for (int i = 0; i < col; i++) {
-			cout << pers[i] << endl;
-		}
+		for (int i = 0; i < col; i++) cout << pers[i] << endl;
 		pers[5] = "    ||    ";
 		pers[6] = "*--| *|--*";
 		pers[7] = "   |  |   ";
 		pers[8] = "    \\/    ";
 		usleep(t);
-		system("cls");
+		//system("cls");
 		
-		for (int i = 0; i < col; i++) {
-			cout << pers[i] << endl;
-		}
+		for (int i = 0; i < col; i++) cout << pers[i] << endl;
 		pers[6] = " --| *|-- ";
 		pers[7] = "*  |  |  *";
 		pers[8] = "    \\/    ";
 		usleep(t);
-		system("cls");
+		//system("cls");
 		
-		for (int i = 0; i < col; i++) {
-			cout << pers[i] << endl;
-		}
+		for (int i = 0; i < col; i++) cout << pers[i] << endl;
 		pers[6] = "  -| *|-  ";
 		pers[7] = " / |  | \\ ";
 		pers[8] = "*   \\/   *";
 		usleep(t);
-		system("cls");
+		//system("cls");
 		
-		for (int i = 0; i < col; i++) {
-			cout << pers[i] << endl;
-		}
+		for (int i = 0; i < col; i++) cout << pers[i] << endl;
 		pers[8] = "/   \\/   \\";
 		usleep(t);
-		system("cls");
+		//system("cls");
 		
-		for (int i = 0; i < col; i++) {
-			cout << pers[i] << endl;
-		}	
+		for (int i = 0; i < col; i++) cout << pers[i] << endl;	
+		usleep(t);
 	}
-	system("cls");
+	//system("cls");
 	return;
 }
