@@ -64,7 +64,7 @@ while(1){
 	cout << "Enter 5 for exit." << endl;
 	cin >> a;
 	usleep(1000000);
-	system("cls");
+	
 	if (a == 5){
 		return 0;
 	} else if (a == 1){
@@ -279,8 +279,7 @@ while(1){
 			} else if (i == 29) {
 				cout << G + M + A + D + C + G;
 			}
-			usleep(1000000);
-			system("cls");
+	
 		}
 	} else if (a == 2) {
 		A  =  "*    /\\    "+ aprobel(28) +  "*\n";
@@ -295,8 +294,8 @@ while(1){
 		A += "*    /\\    "+ aprobel(28) +  "*\n";
 		A +=  "*    ||    " + aprobel(28)+  "*\n";
 		A +=  "*   _||_   "+ aprobel(28) +  "*\n";
-		cout << G + bprobel(6) + A + G<< endl;usleep(1000000);
-	system("cls");
+		cout << G + bprobel(6) + A + G<< endl;
+	
 			 
 		for (int i = 1; i <= 28; i++){
 		
@@ -313,8 +312,7 @@ while(1){
 			A += "*" + aprobel(i - 1) + "    |\\    " + aprobel(29 - i) + "*\n";
 			A += "*" + aprobel(i - 1) + "   _| \\_  " + aprobel(29 - i) + "*\n";
 			cout << G + bprobel(6) + A + G<< endl;
-			usleep(1000000);
-			system("cls");
+			
 			
 			A  = "*" + aprobel(i) + "    /\\    " + aprobel(28 - i) + "*\n";
 			A += "*" + aprobel(i) + "   |oo|   " + aprobel(28 - i) + "*\n";
@@ -329,8 +327,7 @@ while(1){
 			A += "*" + aprobel(i) + "    /|    " + aprobel(28 - i) + "*\n";
 			A += "*" + aprobel(i) + "  _/ |_   " + aprobel(28 - i) + "*\n";
 			cout << G + bprobel(6) + A + G<< endl;
-			usleep(1000000);
-			system("cls");
+			
 			A  = "*" + aprobel(i) + "    /\\    " + aprobel(28 - i) + "*\n";
 			A += "*" + aprobel(i) + "   |oo|   " + aprobel(28 - i) + "*\n";
 			A += "*" + aprobel(i) + "  (|..|)  " + aprobel(28 - i) + "*\n";
@@ -344,8 +341,6 @@ while(1){
 			A += "*" + aprobel(i) + "    ||    " + aprobel(28 - i) + "*\n";
 			A += "*" + aprobel(i) + "   _||_   " + aprobel(28 - i) + "*\n";
 			cout << G + bprobel(6) + A + G<< endl;
-			usleep(1000000);
-			system("cls");
 			
 	    }
 	   
@@ -364,8 +359,6 @@ while(1){
 			A += "*" + aprobel(29 - i) + "    |\\    " + aprobel(i - 1) + "*\n";
 			A += "*" + aprobel(29 - i) + "   _| \\_  " + aprobel(i - 1) + "*\n";
 			cout << G + bprobel(6) + A + G<< endl;
-			usleep(1000000);
-			system("cls");
 			if (i != 28){
 			
 				A  = "*" + aprobel(28 - i) + "    /\\    " + aprobel(i) + "*\n";
@@ -381,8 +374,6 @@ while(1){
 				A += "*" + aprobel(28 - i) + "    /|    " + aprobel(i) + "*\n";
 				A += "*" + aprobel(28 - i) + "  _/ |_   " + aprobel(i) + "*\n";
 				cout << G + bprobel(6) + A + G<< endl;
-				usleep(1000000);
-				system("cls");
 			}
 			A  = "*" + aprobel(28 - i) + "    /\\    " + aprobel( i) + "*\n";
 			A += "*" + aprobel(28 - i) + "   |oo|   " + aprobel( i) + "*\n";
@@ -397,8 +388,6 @@ while(1){
 			A += "*" + aprobel(28 - i) + "    ||    " + aprobel( i) + "*\n";
 			A += "*" + aprobel(28 - i) + "   _||_   " + aprobel(i) + "*\n";
 			cout << G + bprobel(6) + A + G<< endl;
-			usleep(1000000);
-			system("cls");
 			
 	    }
 	} else if (a == 3){
@@ -460,8 +449,7 @@ while(1){
 			} else if (i == 10){cout << A + B + C + H;
 			} else if (i == 12){cout << A + B + C + H;
 			}
-			usleep(1000000);
-			system("cls");
+			
 		}			
 	} else if (a == 4){
 		A =  "****************************************\n";
@@ -539,8 +527,7 @@ while(1){
 			}else if (i == 25){ B[288] = ' '; B[329] = '/'; B[289] = '/';
 			cout << A + B + C;
 			}
-			usleep(1000000);
-			system("cls");	
+				
 		}
 	}
 }
