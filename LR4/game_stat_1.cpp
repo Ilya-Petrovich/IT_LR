@@ -10,11 +10,11 @@ int main()
 	cout << "How much fuel do you have at start? ";
 	cin >> fuel;
 	if (cin.fail()) {
-		cout << "Invalid data.";
+		cout << endl << "Invalid data.";
 		return 0;
 	} else {
-		if (not((0 <= fuel) and (fuel <= 50))) {
-			cout << "Invalid data.";
+		if (not((0 <= fuel) && (fuel <= 50))) {
+			cout << endl << "Invalid data.";
 			return 0;
 		}
 	}
