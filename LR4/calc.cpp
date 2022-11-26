@@ -17,7 +17,7 @@ int main(){
 	cout << num_1 << " % " << num_2 << " = " << num_1 % num_2 << endl;
 	
 	cout << num_1 << " + " << num_2 << " * "<< num_3 << " = " << num_1 + num_2 * num_3 << endl;
-	cout <<"(" << num_1 << " + " << num_2 << ")" << " * "<< num_3 << " = " << (num_1 + num_2) * num_3 << endl;
-} else { cout << "Invalid data" << endl;
+	cout <<"(" << num_1 << " + " << num_2 << ")" << " * "<< num_3 << " = " << (num_1 + num_2) * num_3;
+} else { cout << "Invalid data";
 }
 }
