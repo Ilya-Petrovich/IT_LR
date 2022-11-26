@@ -39,8 +39,8 @@ int main() {
 			cout << m[i] << endl;
 		}
 
-		Sleep(700);
-		system("cls");
+		//Sleep(700);
+		//system("cls");
 		m[6][1] = ' ';
 		m[6][8] = '-';
 		m[6][9] = '-';
@@ -54,8 +54,8 @@ int main() {
 			cout << m[i] << endl;
 		}
 
-		Sleep(700);
-		system("cls");
+		//Sleep(700);
+		//system("cls");
 		m[5][9] = '/';
 		m[6][1] = '-';
 		m[6][9] = ' ';
@@ -69,8 +69,8 @@ int main() {
 		for (int i = 0; i < rows; i++) {
 			cout << m[i] << endl;
 		}
-		Sleep(700);
-		system("cls");
+		//Sleep(700);
+		//system("cls");
 		m[5][8] = '/';
 		m[5][9] = ' ';
 		m[4][9] = '/';
@@ -85,8 +85,8 @@ int main() {
 			cout << m[i] << endl;
 		}
 
-		Sleep(700);
-		system("cls");
+		//Sleep(700);
+		//system("cls");
 		m[5][8] = '/';
 		m[5][9] = ' ';
 		m[4][9] = '*';
@@ -99,8 +99,8 @@ int main() {
 			cout << m[i] << endl;
 		}
 
-		Sleep(700);
-		system("cls");
+		//Sleep(700);
+		//system("cls");
 		m[4][9] = '/';
 		m[6][0] = '-';
 		m[7][0] = ' ';
@@ -109,8 +109,8 @@ int main() {
 			cout << m[i] << endl;
 		}
 
-		Sleep(700);
-		system("cls");
+		//Sleep(700);
+		//system("cls");
 		m[4][9] = '*';
 		m[5][0] = '\\';
 		m[6][0] = ' ';
@@ -119,8 +119,8 @@ int main() {
 			cout << m[i] << endl;
 		}
 
-		Sleep(700);
-		system("cls");
+		//Sleep(700);
+		//system("cls");
 		m[4][9] = '/';
 		m[4][0] = '\\';
 		m[5][0] = ' ';
@@ -132,8 +132,8 @@ int main() {
 			cout << m[i] << endl;
 		}
 
-		Sleep(700);
-		system("cls");
+		//Sleep(700);
+		//system("cls");
 		m[4][9] = '*';
 		m[4][0] = '*';
 		
@@ -141,8 +141,8 @@ int main() {
 			cout << m[i] << endl;
 		}
 
-		Sleep(700);
-		system("cls");
+		//Sleep(700);
+		//system("cls");
 		m[4][9] = ' ';
 		m[4][0] = ' ';
 		m[5][0] = '*';
@@ -156,8 +156,8 @@ int main() {
 			cout << m[i] << endl;
 		}
 
-		Sleep(700);
-		system("cls");
+		//Sleep(700);
+		//system("cls");
 		m[5][0] = ' ';
 		m[5][9] = ' ';
 		m[6][0] = '*';
@@ -167,8 +167,8 @@ int main() {
 			cout << m[i] << endl;
 		}
 
-		Sleep(700);
-		system("cls");
+		//Sleep(700);
+		//system("cls");
 		m[6][0] = ' ';
 		m[6][9] = ' ';
 		m[7][0] = '*';
@@ -178,8 +178,8 @@ int main() {
 			cout << m[i] << endl;
 		}
 
-		Sleep(700);
-		system("cls");
+		//Sleep(700);
+		//system("cls");
 		m[6][1] = ' ';
 		m[6][8] = ' ';
 		m[7][1] = '/';
@@ -193,8 +193,8 @@ int main() {
 			cout << m[i] << endl;
 		}
 
-		Sleep(700);
-		system("cls");
+		//Sleep(700);
+		//system("cls");
 		m[8][0] = '/';
 		m[8][9] = '\\';
 
