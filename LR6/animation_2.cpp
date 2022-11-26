@@ -44,30 +44,27 @@ int main() {
 			<< "Throw a ball: \t\t4" << endl << endl << "Enter 5 for exit." << endl;
 		cin >> uChoice;
 		if (uChoice == '1') {
-			system("cls");
-			dancing(pers0, size_list, 500);
+			//system("cls");
+			dancing(pers0, size_list, 2000);
 		} else if (uChoice == '2') {
-			system("cls");
+			//system("cls");
 			rightLeft(pers0, size_list, 4000);
 		} else if (uChoice == '3') {
-			system("cls");
+			//system("cls");
 			jump(pers0, size_list, 5000);
 		} else if (uChoice == '4') {
-			system("cls");
+			//system("cls");
 			ball(pers0, size_list, 5000);
-		} else if (uChoice == '5') {
+		} else (uChoice == '5') {
 			return 0;
-		} else {
-			cout << "Bad input.";
-			return 0;
-		}	
+		}
 	}
 }
 
 void show(string *firstEl, int col, int t) {
 	for (int i = 0; i < col; i ++, firstEl ++) cout << *firstEl << endl;
 	usleep(t);
-	system("cls");
+	//system("cls");
 	return;
 }
 
@@ -168,7 +165,7 @@ void ball (string *firstEl, int col, int t) {
 	pers[14] = "* / |  | \\ " + spacesRight;
 	pers[15] = "*/   \\/   \\" + spacesRight;
 	show(ptpers, col, t);
-	system("cls");
+	//system("cls");
 	return;
 }
 
@@ -198,7 +195,7 @@ void jump (string *firstEl, int col, int t) {
 	usleep(t);
 	
 	for (int q = 18; q >= 14; q --) {
-		system("cls");
+		//system("cls");
 		for (int i = 0; i < col; i++) cout << pers[i] << endl;
 		pers[q-11] = a;
 		pers[q-10] = b;
@@ -215,7 +212,7 @@ void jump (string *firstEl, int col, int t) {
 		if (q != 18) pers[q+1] = emptyStr;
 		usleep(t);
 	}
-	system("cls");
+	//system("cls");
 	for (int q = 13; q <= 16; q ++) {
 		pers[q-11] = emptyStr;
 		for (int i = 0; i < col; i++) cout << pers[i] << endl;
@@ -232,7 +229,7 @@ void jump (string *firstEl, int col, int t) {
 		pers[q+1] = l;
 		pers[q+2] = "*    ||    " + spacesRight;
 		usleep(t);
-		system("cls");
+		//system("cls");
 	}
 	pers[6] = emptyStr;
 	pers[7] = emptyStr;
@@ -267,7 +264,7 @@ void dancing (string *firstEl, int col, int t) {
 		pers[14] = "*/  |  |  \\" + spacesRight;
 		pers[15] = "*    \\/    " + spacesRight;
 		usleep(t);
-		system("cls");
+		//system("cls");
 		
 		for (int i = 0; i < col; i++) {
 			cout << pers[i] << endl;
@@ -276,7 +273,7 @@ void dancing (string *firstEl, int col, int t) {
 		pers[14] = "* / |  |   " + spacesRight;
 		pers[15] = "*/   \\/    " + spacesRight;
 		usleep(t);
-		system("cls");
+		//system("cls");
 		
 		for (int i = 0; i < col; i++) {
 			cout << pers[i] << endl;
@@ -286,7 +283,7 @@ void dancing (string *firstEl, int col, int t) {
 		pers[14] = "*/  |  |   " + spacesRight;
 		pers[15] = "*    \\/    " + spacesRight;
 		usleep(t);
-		system("cls");
+		//system("cls");
 		
 		for (int i = 0; i < col; i++) {
 			cout << pers[i] << endl;
@@ -297,7 +294,7 @@ void dancing (string *firstEl, int col, int t) {
 		pers[14] = "* / |  |   " + spacesRight;
 		pers[15] = "*/   \\/    " + spacesRight;
 		usleep(t);
-		system("cls");
+		//system("cls");
 
 		for (int i = 0; i < col; i++) {
 			cout << pers[i] << endl;
@@ -308,7 +305,7 @@ void dancing (string *firstEl, int col, int t) {
 		pers[14] = "*/  |  |   " + spacesRight;
 		pers[15] = "*    \\/    " + spacesRight;
 		usleep(t);
-		system("cls");
+		//system("cls");
 		
 		for (int i = 0; i < col; i++) {
 			cout << pers[i] << endl;
@@ -319,7 +316,7 @@ void dancing (string *firstEl, int col, int t) {
 		pers[14] = "*   |  |   " + spacesRight;
 		pers[15] = "*    \\/    " + spacesRight;
 		usleep(t);
-		system("cls");
+		//system("cls");
 		
 		for (int i = 0; i < col; i++) {
 			cout << pers[i] << endl;
@@ -330,7 +327,7 @@ void dancing (string *firstEl, int col, int t) {
 		pers[14] = "*   |  |   " + spacesRight;
 		pers[15] = "*    \\/    " + spacesRight;
 		usleep(t);
-		system("cls");
+		//system("cls");
 		
 		for (int i = 0; i < col; i++) {
 			cout << pers[i] << endl;
@@ -341,7 +338,7 @@ void dancing (string *firstEl, int col, int t) {
 		pers[14] = "*   |  |   " + spacesRight;
 		pers[15] = "*    \\/    " + spacesRight;
 		usleep(t);
-		system("cls");
+		//system("cls");
 		
 		for (int i = 0; i < col; i++) {
 			cout << pers[i] << endl;
@@ -351,7 +348,7 @@ void dancing (string *firstEl, int col, int t) {
 		pers[14] = "*   |  |   " + spacesRight;
 		//pers[16] = "*    \\/    " + spacesRight;
 		usleep(t);
-		system("cls");
+		//system("cls");
 		
 		for (int i = 0; i < col; i++) {
 			cout << pers[i] << endl;
@@ -362,7 +359,7 @@ void dancing (string *firstEl, int col, int t) {
 		pers[14] = "*   |  |   " + spacesRight;
 		pers[15] = "*    \\/    " + spacesRight;
 		usleep(t);
-		system("cls");
+		//system("cls");
 		
 		for (int i = 0; i < col; i++) {
 			cout << pers[i] << endl;
@@ -372,7 +369,7 @@ void dancing (string *firstEl, int col, int t) {
 		pers[14] = "*   |  |   " + spacesRight;
 		pers[15] = "*    \\/    " + spacesRight;
 		usleep(t);
-		system("cls");
+		//system("cls");
 		
 		for (int i = 0; i < col; i++) {
 			cout << pers[i] << endl;
@@ -381,7 +378,7 @@ void dancing (string *firstEl, int col, int t) {
 		pers[14] = "**  |  |  *" + spacesRight;
 		pers[15] = "*    \\/    " + spacesRight;
 		usleep(t);
-		system("cls");
+		//system("cls");
 		
 		for (int i = 0; i < col; i++) {
 			cout << pers[i] << endl;
@@ -390,20 +387,20 @@ void dancing (string *firstEl, int col, int t) {
 		pers[14] = "* / |  | \\ " + spacesRight;
 		pers[15] = "**   \\/   *" + spacesRight;
 		usleep(t);
-		system("cls");
+		//system("cls");
 		
 		for (int i = 0; i < col; i++) {
 			cout << pers[i] << endl;
 		}
 		pers[15] = "*/   \\/   \\" + spacesRight;
 		usleep(t);
-		system("cls");
+		//system("cls");
 		
 		for (int i = 0; i < col; i++) {
 			cout << pers[i] << endl;
 		}	
 	}
-	system("cls");
+	//system("cls");
 	return;
 }
 
@@ -434,7 +431,7 @@ void rightLeft (string *firstEl, int col, int t) {
 						cout << "*" + spaces + pers[q] + spaces_right << endl;
 				}
 				usleep(t);
-				system("cls");
+				//system("cls");
 				spaces = "";
 			} else if (step == 0) {
 				pers[17] = "    ||    ";
@@ -456,7 +453,7 @@ void rightLeft (string *firstEl, int col, int t) {
 						cout << "*" + spaces + pers[q] + spaces_right << endl;
 				}
 				usleep(t);
-				system("cls");
+				//system("cls");
 				spaces = "";
 				
 			} else {
@@ -477,7 +474,7 @@ void rightLeft (string *firstEl, int col, int t) {
 						cout << "*" + spaces + pers[q] + spaces_right << endl;
 				}
 				usleep(t);
-				system("cls");
+				//system("cls");
 				spaces = "";
 			}
 		}
@@ -504,7 +501,7 @@ void rightLeft (string *firstEl, int col, int t) {
 						cout << "*" + spaces + pers[q] + spaces_right << endl;
 				}
 				usleep(t);
-				system("cls");
+				//system("cls");
 				spaces = "";		
 			} else if (step == 0) {
 				int copy_i = i-11;
@@ -524,7 +521,7 @@ void rightLeft (string *firstEl, int col, int t) {
 						cout << "*" + spaces + pers[q] + spaces_right << endl;
 				}
 				usleep(t);
-				system("cls");
+				//system("cls");
 				spaces = "";
 				
 			} else {
@@ -545,7 +542,7 @@ void rightLeft (string *firstEl, int col, int t) {
 						cout << "*" + spaces + pers[q] + spaces_right << endl;
 				}
 				usleep(t);
-				system("cls");
+				//system("cls");
 				spaces = "";
 			}
 		}
