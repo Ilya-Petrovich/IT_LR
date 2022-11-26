@@ -1,7 +1,7 @@
 ﻿#include<iostream>
 #include<vector>
 #include<string>
-#include<windows.h>
+#include<unistd.h>
 using namespace std;
 void print(vector<string>a)
 {
@@ -31,150 +31,121 @@ void ball()
 					  "*   _||_   " + string(28,' ') + "*",
 	string(40,'*') };//11
 	print(a);
-	Sleep(1000);
-	system("cls");
 	a[14] = "* /  ||  \\o" + string(28, ' ') + "*";
 	a[15] = "*/   ||   -" + string(28, ' ') + "*";
 	print(a);
-	Sleep(1000);
-	system("cls");
 	a[13] = "*  --\\/-- o" + string(28, ' ') + "*";
 	a[14] = "* /  ||  \\-" + string(28, ' ') + "*";
 	a[15] = "*/   ||    " + string(28, ' ') + "*";
 	print(a);
-	Sleep(1000);
-	system("cls");
 	a[12] = "*  /|UU|\\ o" + string(28, ' ') + "*";
 	a[13] = "*  --\\/----" + string(28, ' ') + "*";
 	a[14] = "* /  ||    " + string(28, ' ') + "*";
 	print(a);
-	Sleep(1000);
-	system("cls");
+	
 	a[11] = "*  \\|  |/ o" + string(28, ' ') + "*";
 	a[12] = "*  /|UU|\\  " + string(28, ' ') + "*";
 	a[13] = "*  --\\/---/" + string(28, ' ') + "*";
 	print(a);
-	Sleep(1000);
-	system("cls");
+	
 	a[10] = "*   |..|  o" + string(28, ' ') + "*";
 	a[11] = "*  \\|  |/  " + string(28, ' ') + "*";
 	a[13] = "*  --\\/----" + string(28, ' ') + "*";
 	print(a);
-	Sleep(1000);
-	system("cls");
+	
 	a[9] = "*   ()()  o" + string(28, ' ') + "*";
 	a[10] = "*   |..|   " + string(28, ' ') + "*";
 	a[13] = "*  --\\/--- " + string(28, ' ') + "*";
 	a[14] = "* /  ||   \\" + string(28, ' ') + "*";
 	print(a);
-	Sleep(1000);
-	system("cls");
+	
 	a[13] = "*  --\\/--  " + string(28, ' ') + "*";
 	a[14] = "* /  ||  \\ " + string(28, ' ') + "*";
 	a[15] = "*/   ||   \\" + string(28, ' ') + "*";
 	a[9]= "*   ()()   " + string(28, ' ') + "*";
 	a[8] = "*   ()()  o" + string(28, ' ') + "*";
 	print(a);
-	Sleep(1000);
-	system("cls");
+	
 	a[8] = "*   ()()   " + string(28, ' ') + "*";
 	a[7] = "*   ()()  o" + string(28, ' ') + "*";
 	print(a);
-	Sleep(1000);
-	system("cls");
+	
 	a[7] = "*   ()()   " + string(28, ' ') + "*";
 	a[6] = "*" + string(8, ' ') + "o" + string(29, ' ') + "*";
 	print(a);
-	Sleep(1000);
-	system("cls");
+	
 	a[5] = "*" + string(7, ' ') + "o" + string(30, ' ') + "*";
 	a[6] = "*" + string(38, ' ') + "*";
 	print(a);
-	Sleep(1000);
-	system("cls");
+	
 	a[4] = "*" + string(6, ' ') + "o" + string(31, ' ') + "*";
 	a[5] = "*" + string(38, ' ') + "*";
 	print(a);
-	Sleep(1000);
-	system("cls");
+	
 	a[3] = "*" + string(5, ' ') + "o" + string(32, ' ') + "*";
 	a[4]="*"+string(38,' ')+"*";
 	print(a);
-	Sleep(1000);
-	system("cls");
+	
 	a[3]="*"+string(4,' ')+"o"+string(33,' ')+"*";
 	print(a);
-	Sleep(1000);
-	system("cls");
+	
 	a[3] = "*" + string(38, ' ') + "*";
 	a[4] = "*" + string(3, ' ') + "o" + string(34, ' ') + "*";
 	print(a);
-	Sleep(1000);
-	system("cls");
+	
 	a[4] = "*" + string(38, ' ') + "*";
 	a[5] = "*  o" + string(35, ' ') + "*";
 	print(a);
-	Sleep(1000);
-	system("cls");
+	
 	a[5]="*"+string(38,' ')+"*";
 	a[6]="* o"+string(36,' ')+"*";
 	print(a);
-	Sleep(1000);
-	system("cls");
+	
 	a[6] = "*" + string(38, ' ') + "*";
 	a[7] = "*o  ()()   " + string(28, ' ') + "*";
 	print(a);
-	Sleep(1000);
-	system("cls");
+	
 	a[7] = "*   ()()   " + string(28, ' ') + "*";
 	a[8] = "*o  ()()   " + string(28, ' ') + "*";
 	print(a);
-	Sleep(1000);
-	system("cls");
+	
 	a[8] = "*   ()()   " + string(28, ' ') + "*";
 	a[9] = "*o  ()()   " + string(28, ' ') + "*";
 	a[13] = "* ---\\/--  " + string(28, ' ') + "*";
 	a[14] = "*/   ||  \\ " + string(28, ' ') + "*";
 	a[15] = "*    ||   \\" + string(28, ' ') + "*";
 	print(a);
-	Sleep(1000);
-	system("cls");
+	
 	a[9] = "*   ()()   " + string(28, ' ') + "*";
 	a[10] = "*o  |..|   " + string(28, ' ') + "*";
 	a[13] = "*----\\/--  " + string(28, ' ') + "*";
 	a[14] = "*    ||  \\ " + string(28, ' ') + "*";
 	print(a);
-	Sleep(1000);
-	system("cls");
+	
 	a[10] = "*   |..|   " + string(28, ' ') + "*";
 	a[11] = "*o \\|  |/  " + string(28, ' ') + "*";
 	a[13] = "*\\---\\/--  " + string(28, ' ') + "*";
 	print(a);
-	Sleep(1000);
-	system("cls");
+	
 	a[11] = "*  \\|  |/  " + string(28, ' ') + "*";
 	a[13]= "*----\\/--  " + string(28, ' ') + "*";
 	a[12] = "*o /|UU|\\  " + string(28, ' ') + "*";
 	print(a);
-	Sleep(1000);
-	system("cls");
+	
 	a[12] = "*  /|UU|\\  " + string(28, ' ') + "*";
 	a[13] = "*o --\\/--  " + string(28, ' ') + "*";
 	a[14] = "*-/  ||  \\ " + string(28, ' ') + "*";
 	print(a);
-	Sleep(1000);
-	system("cls");
+	
 	a[13] = "*  --\\/--  " + string(28, ' ') + "*";
 	a[14] = "*o/  ||  \\ " + string(28, ' ') + "*";
 	a[15] = "*-   ||   \\" + string(28, ' ') + "*";
 	print(a);
-	Sleep(1000);
-	system("cls");
+	
 	a[14] = "* /  ||  \\ " + string(28, ' ') + "*";
 	a[15] = "*/   ||   \\" + string(28, ' ') + "*";
 	print(a);
-	Sleep(1000);
-	system("cls");
+	
 }
 void sid()
 {
@@ -204,8 +175,7 @@ void sid()
 	auto ite = a.cbegin();
 	a.emplace(ite + 2, "*" + string(38, ' ') + "*");
 	print(a);
-	Sleep(1000);
-	system("cls");
+	
 }
 void jump()
 {
@@ -230,13 +200,11 @@ void jump()
 					  "*   _||_   " + string(28,' ') + "*",
 	string(40,'*') };//11
 	print(a);
-	Sleep(1000);
-	system("cls");
+	
 	sid();
 	a[18] = "*    ||    " + string(28, ' ') + "*";
 	print(a);
-	Sleep(1000);
-	system("cls");
+	
 	int k = 0;
 	while (k < 4)
 	{
@@ -245,8 +213,7 @@ void jump()
 		auto ite = a.cbegin();
 		a.emplace(ite + 18, "*" + string(38, ' ') + "*");
 		print(a);
-		Sleep(1000);
-		system("cls");
+		
 		k++;
 	}
 	while (k > 0)
@@ -256,15 +223,13 @@ void jump()
 		auto ite = a.cbegin();
 		a.emplace(ite + 2, "*" + string(38, ' ') + "*");
 		print(a);
-		Sleep(1000);
-		system("cls");
+		
 		k--;
 	}
 	sid();
 	a[18] = "*   _||_   " + string(28, ' ') + "*";
 	print(a);
-	Sleep(1000);
-	system("cls");
+	
 }
 
 void run()
@@ -290,8 +255,7 @@ void run()
 					  "*   _||_   " + string(28,' ') + "*",
 	string(40,'*') };//11
 	print(a);
-	Sleep(1000);
-	system("cls");
+	
 	int k = 0;
 	while (k < 28)
 	{
@@ -308,8 +272,7 @@ void run()
 		a[17] = "*" + string(k, ' ') + "    |\\    " + string(28 - k, ' ') + "*";
 		a[18] = "*" + string(k, ' ') + "   _| \\_  " + string(28 - k, ' ') + "*";
 		print(a);
-		Sleep(1000);
-		system("cls");
+		
 		k += 1;
 		a[7] = "*" + string(k, ' ') + "   ()()   " + string(28 - k, ' ') + "*";
 		a[8] = "*" + string(k, ' ') + "   ()()   " + string(28 - k, ' ') + "*";
@@ -324,8 +287,7 @@ void run()
 		a[17] = "*" + string(k, ' ') + "    /|    " + string(28 - k, ' ') + "*";
 		a[18] = "*" + string(k, ' ') + "  _/ |_   " + string(28 - k, ' ') + "*";
 		print(a);
-		Sleep(1000);
-		system("cls");
+		
 		a[7] = "*" + string(k, ' ') + "   ()()   " + string(28 - k, ' ') + "*";
 		a[8] = "*" + string(k, ' ') + "   ()()   " + string(28 - k, ' ') + "*";
 		a[9] = "*" + string(k, ' ') + "   ()()   " + string(28 - k, ' ') + "*";
@@ -339,8 +301,7 @@ void run()
 		a[17] = "*" + string(k, ' ') + "    ||    " + string(28 - k, ' ') + "*";
 		a[18] = "*" + string(k, ' ') + "   _||_   " + string(28 - k, ' ') + "*";
 		print(a);
-		Sleep(1000);
-		system("cls");
+		
 	}
 	while (k > 0)
 	{
@@ -357,8 +318,7 @@ void run()
 		a[17] = "*" + string(k, ' ') + "    |\\    " + string(28 - k, ' ') + "*";
 		a[18] = "*" + string(k, ' ') + "   _| \\_  " + string(28 - k, ' ') + "*";
 		print(a);
-		Sleep(1000);
-		system("cls");
+		
 		k -= 1;
 		a[7] = "*" + string(k, ' ') + "   ()()   " + string(28 - k, ' ') + "*";
 		a[8] = "*" + string(k, ' ') + "   ()()   " + string(28 - k, ' ') + "*";
@@ -373,8 +333,7 @@ void run()
 		a[17] = "*" + string(k, ' ') + "    /|    " + string(28 - k, ' ') + "*";
 		a[18] = "*" + string(k, ' ') + "  _/ |_   " + string(28 - k, ' ') + "*";
 		print(a);
-		Sleep(1000);
-		system("cls");
+		
 		a[7] = "*" + string(k, ' ') + "   ()()   " + string(28 - k, ' ') + "*";
 		a[8] = "*" + string(k, ' ') + "   ()()   " + string(28 - k, ' ') + "*";
 		a[9] = "*" + string(k, ' ') + "   ()()   " + string(28 - k, ' ') + "*";
@@ -388,8 +347,7 @@ void run()
 		a[17] = "*" + string(k, ' ') + "    ||    " + string(28 - k, ' ') + "*";
 		a[18] = "*" + string(k, ' ') + "   _||_   " + string(28 - k, ' ') + "*";
 		print(a);
-		Sleep(1000);
-		system("cls");
+		
 	}
 }
 void dance()
@@ -416,92 +374,78 @@ void dance()
 	string(40,'*') };//11
 	int i = 0;
 	print(a);
-	system("cls");
 	while (i != 2)
 	{
-		system("cls");
+		
 		a[13] = "* ---\\/--- " + string(28, ' ') + "*";
 		a[14] = "*/   ||   \\" + string(28, ' ') + "*";
 		a[15] = "*    ||    " + string(28, ' ') + "*";
 		print(a);
-		Sleep(1000);
-		system("cls");
+		
 		a[13] = "*  --\\/----" + string(28, ' ') + "*";
 		a[14] = "* /  ||    " + string(28, ' ') + "*";
 		a[15] = "*/   ||    " + string(28, ' ') + "*";
 		print(a);
-		Sleep(1000);
-		system("cls");
+		
 		a[12] = "*  /|UU|\\ /" + string(28, ' ') + "*";
 		a[13] = "* ---\\/--- " + string(28, ' ') + "*";
 		a[14] = "*/   ||    " + string(28, ' ') + "*";
 		a[15] = "*    ||    " + string(28, ' ') + "*";
 		print(a);
-		Sleep(1000);
-		system("cls");
+		
 		a[11] = "*  \\|  |/ /" + string(28, ' ') + "*";
 		a[12] = "*  /|UU|\\/ " + string(28, ' ') + "*";
 		a[13] = "*  --\\/--  " + string(28, ' ') + "*";
 		a[14] = "* /  ||    " + string(28, ' ') + "*";
 		a[15] = "*/   ||    " + string(28, ' ') + "*";
 		print(a);
-		Sleep(1000);
-		system("cls");
+		
 		a[11] = "*  \\|  |/ *" + string(28, ' ') + "*";
 		a[13] = "* ---\\/--  " + string(28, ' ') + "*";
 		a[14] = "*/   ||    " + string(28, ' ') + "*";
 		a[15] = "*    ||    " + string(28, ' ') + "*";
 		print(a);
-		Sleep(1000);
-		system("cls");
+		
 		a[11] = "*  \\|  |/ /" + string(28, ' ') + "*";
 		a[13] = "*----\\/--  " + string(28, ' ') + "*";
 		a[14] = "*    ||    " + string(28, ' ') + "*";
 		a[15] = "*    ||    " + string(28, ' ') + "*";
 		print(a);
-		Sleep(1000);
-		system("cls");
+		
 		a[11] = "*  \\|  |/ *" + string(28, ' ') + "*";
 		a[12] = "*\\ /|UU|\\/ " + string(28, ' ') + "*";
 		a[13] = "* ---\\/--  " + string(28, ' ') + "*";
 		print(a);
-		Sleep(1000);
-		system("cls");
+		
 		a[11] = "*\\ \\|  |/ /" + string(28, ' ') + "*";
 		a[12] = "* \\/|UU|\\/ " + string(28, ' ') + "*";
 		a[13] = "*  --\\/--  " + string(28, ' ') + "*";
 		print(a);
-		Sleep(1000);
-		system("cls");
+		
 		a[11] = "** \\|  |/ *" + string(28, ' ') + "*";
 		print(a);
-		Sleep(1000);
-		system("cls");
+		
 		a[11] = "*  \\|  |/  " + string(28, ' ') + "*";
 		a[12] = "** /|UU|\\ *" + string(28, ' ') + "*";
 		a[13] = "* ---\\/--- " + string(28, ' ') + "*";
 		print(a);
-		Sleep(1000);
-		system("cls");
+		
 		a[12] = "*  /|UU|\\  " + string(28, ' ') + "*";
 		a[13] = "**---\\/---*" + string(28, ' ') + "*";
 		print(a);
-		Sleep(1000);
-		system("cls");
+		
 		a[13] = "* ---\\/--- " + string(28, ' ') + "*";
 		a[14] = "**   ||   *" + string(28, ' ') + "*";
 		print(a);
-		Sleep(1000);
-		system("cls");
+		
 		a[13] = "*  --\\/--  " + string(28, ' ') + "*";
 		a[14] = "* /  ||  \\ " + string(28, ' ') + "*";
 		a[15] = "**   ||   *" + string(28, ' ') + "*";
 		print(a);
-		Sleep(1000);
-		system("cls");
+		
 		a[15] = "*/   ||   \\" + string(28, ' ') + "*";
 		print(a);
-		Sleep(1000);
+		
 		i++;
 	}
 }
@@ -512,7 +456,7 @@ L1:int t;
 	cout << "Choose animation:" << "\nDance:\t1" << "\nRun:\t2" << "\nSit down and jump:\t3" << "\nThrow a ball:\t4" << endl;
 	cout << "\nEnter 5 for exit." << endl;
 	cin >> t;
-	system("cls");
+	
 	switch (t)
 	{
 	case 1: {dance();	goto L1; }

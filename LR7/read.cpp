@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <iostream>
 using namespace std;
-void Read(char* buff, long fSize) 
+void ReadText(char* buff, long fSize) 
     {
     int start = fSize - 1200;
     while (start< (fSize-3)) {
@@ -13,22 +13,18 @@ void Read(char* buff, long fSize)
     start += 4;
     }
 }
-void ReadText(char* buff, long &fSize)
-{
-    FILE* file;
-    file = fopen("changed_image.bmp", "rb");
-    fseek(file, 0, SEEK_END);
-    fSize = ftell(file);
-    rewind(file);
-    fread(buff, 1, fSize, file);
-    Read(buff,fSize);
-    fclose(file);
-}
 int main()
-{
-    long fSize;
-    char* buff = new char[fSize]();
-    ReadText(buff, fSize);
-    free(buff);
+{	
+	FILE* file;
+	file = fopen("changed_image.bmp", "rb");
+	fseek(file, 0, SEEK_END);
+	long fSize;
+	fSize = ftell(file);
+	rewind(file);
+	char* buff = new char[fSize]();
+	fread(buff, 1, fSize, file);
+	ReadText(buff, fSize);
+	fclose(file);
+	free(buff);
 }
 
