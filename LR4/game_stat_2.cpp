@@ -35,6 +35,7 @@ int main() {
 		break;
 	case 'c':
 		fuel += 30;
+		int aq2312;
 		break;
 	case 'd':
 		cout << "How much fuel do you need? "; cin >> fel;
