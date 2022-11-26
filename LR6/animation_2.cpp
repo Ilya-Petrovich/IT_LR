@@ -1,6 +1,6 @@
 #include <iostream>
 #include <string>
-#include <windows.h>
+#include <unistd.h>
 
 using namespace std;
 
@@ -43,19 +43,19 @@ int main() {
 			<< "Throw a ball: \t\t4" << endl << endl << "Enter 5 for exit." << endl;
 		cin >> uChoice;
 		if (uChoice == '1') {
-			system("cls");
+		//	system("cls");
 			dancing(character0, amount, 200);
 		}
 		else if (uChoice == '2') {
-			system("cls");
+		//	system("cls");
 			going(character0, amount, 20);
 		}
 		else if (uChoice == '3') {
-			system("cls");
+		//	system("cls");
 			jump(character0, amount, 100);
 		}
 		else if (uChoice == '4') {
-			system("cls");
+		//	system("cls");
 			ball(character0, amount, 100);
 		}
 		else if (uChoice == '5') {
@@ -70,8 +70,8 @@ int main() {
 
 void show(string* firstEl, int col, int t) {
 	for (int i = 0; i < 20; i++, firstEl++) cout << *firstEl << endl;
-	Sleep(t);
-	system("cls");
+	//Sleep(t);
+	//system("cls");
 	return;
 }
 
@@ -88,8 +88,8 @@ void dancing(string* firstEl, int col, int t) {
 		character[13] = "* ---\\/--- " + space;
 		character[14] = "* /  ||  \\ " + space;
 		character[15] = "*    ||    " + space;
-		Sleep(t);
-		system("cls");
+		//Sleep(t);
+		//system("cls");
 
 		for (int i = 0; i < 20; i++) {
 			cout << character[i] << endl;
@@ -98,8 +98,8 @@ void dancing(string* firstEl, int col, int t) {
 		character[13] = "*  --\\/---- " + space1;
 		character[14] = "* /  ||    " + space;
 		character[15] = "*/   ||    " + space;
-		Sleep(t);
-		system("cls");
+		//Sleep(t);
+		//system("cls");
 
 		for (int i = 0; i < 20; i++) {
 			cout << character[i] << endl;
@@ -108,8 +108,8 @@ void dancing(string* firstEl, int col, int t) {
 		character[13] = "* ---\\/---  " + space1;
 		character[14] = "*/   ||    " + space;
 		character[15] = "*    ||    " + space;
-		Sleep(t);
-		system("cls");
+		//Sleep(t);
+		//system("cls");
 
 		for (int i = 0; i < 20; i++) {
 			cout << character[i] << endl;
@@ -120,8 +120,8 @@ void dancing(string* firstEl, int col, int t) {
 		character[13] = "*  --\\/--   " + space1;
 		character[14] = "* /  ||    " + space;
 		character[15] = "*/   ||    " + space;
-		Sleep(t);
-		system("cls");
+		//Sleep(t);
+		//system("cls");
 
 		for (int i = 0; i < 20; i++) {
 			cout << character[i] << endl;
@@ -132,8 +132,8 @@ void dancing(string* firstEl, int col, int t) {
 		character[13] = "* ---\\/--  " + space;
 		character[14] = "*/   ||    " + space;
 		character[15] = "*    ||    " + space;
-		Sleep(t);
-		system("cls");
+		//Sleep(t);
+		//system("cls");
 
 		for (int i = 0; i < 20; i++) {
 			cout << character[i] << endl;
@@ -144,8 +144,8 @@ void dancing(string* firstEl, int col, int t) {
 		character[13] = "*----\\/--  " + space;
 		character[14] = "*    ||    " + space;
 		character[15] = "*    ||    " + space;
-		Sleep(t);
-		system("cls");
+		//Sleep(t);
+		//system("cls");
 
 		for (int i = 0; i < 20; i++) {
 			cout << character[i] << endl;
@@ -156,8 +156,8 @@ void dancing(string* firstEl, int col, int t) {
 		character[13] = "* ---\\/--  " + space;
 		character[14] = "*    ||    " + space;
 		character[15] = "*    ||    " + space;
-		Sleep(t);
-		system("cls");
+		//Sleep(t);
+		//system("cls");
 
 		for (int i = 0; i < 20; i++) {
 			cout << character[i] << endl;
@@ -168,8 +168,8 @@ void dancing(string* firstEl, int col, int t) {
 		character[13] = "*  --\\/--  " + space;
 		character[14] = "*    ||    " + space;
 		character[15] = "*    ||    " + space;
-		Sleep(t);
-		system("cls");
+		//Sleep(t);
+		//system("cls");
 
 		for (int i = 0; i < 20; i++) {
 			cout << character[i] << endl;
@@ -179,8 +179,8 @@ void dancing(string* firstEl, int col, int t) {
 		character[12] = "* \\/|UU|\\/  " + space1;
 		character[13] = "*  --\\/--  " + space;
 		character[14] = "*    ||    " + space;
-		Sleep(t);
-		system("cls");
+		//Sleep(t);
+		//system("cls");
 
 		for (int i = 0; i < 20; i++) {
 			cout << character[i] << endl;
@@ -191,8 +191,8 @@ void dancing(string* firstEl, int col, int t) {
 		character[13] = "* ---\\/--- " + space;
 		character[14] = "*    ||    " + space;
 		character[15] = "*    ||    " + space;
-		Sleep(t);
-		system("cls");
+		//Sleep(t);
+		//system("cls");
 
 		for (int i = 0; i < 20; i++) {
 			cout << character[i] << endl;
@@ -202,8 +202,8 @@ void dancing(string* firstEl, int col, int t) {
 		character[12] = "*  /|UU|\\  " + space;
 		character[13] = "**---\\/---* " + space1;
 		character[14] = "*    ||    " + space;
-		Sleep(t);
-		system("cls");
+		//Sleep(t);
+		//system("cls");
 
 		for (int i = 0; i < 20; i++) {
 			cout << character[i] << endl;
@@ -212,8 +212,8 @@ void dancing(string* firstEl, int col, int t) {
 		character[13] = "* ---\\/--- " + space;
 		character[14] = "**   ||   * " + space1;
 		character[15] = "*    ||    " + space;
-		Sleep(t);
-		system("cls");
+		//Sleep(t);
+		//system("cls");
 
 		for (int i = 0; i < 20; i++) {
 			cout << character[i] << endl;
@@ -222,8 +222,8 @@ void dancing(string* firstEl, int col, int t) {
 		character[13] = "*  --\\/--  " + space;
 		character[14] = "* /  ||  \\  " + space1;
 		character[15] = "**   ||   *  " + space2;
-		Sleep(t);
-		system("cls");
+		//Sleep(t);
+		//system("cls");
 
 		for (int i = 0; i < 20; i++) {
 			cout << character[i] << endl;
@@ -231,14 +231,14 @@ void dancing(string* firstEl, int col, int t) {
 		//14
 		character[14] = "* /  ||  \\   " + space2;
 		character[15] = "*/   ||   \\ " + space1;
-		Sleep(t);
-		system("cls");
+		//Sleep(t);
+		//system("cls");
 
 		for (int i = 0; i < 20; i++) {
 			cout << character[i] << endl;
 		}
 	}
-	system("cls");
+	//system("cls");
 	return;
 }
 
@@ -268,8 +268,8 @@ void going(string* firstEl, int col, int t) {
 					((q >= 0 && q < 7) || (q == 19)) ? cout << character[q] << endl :
 						cout << "*" + spaces + character[q] + spaces_right << endl;
 				}
-				Sleep(t);
-				system("cls");
+				//Sleep(t);
+				//system("cls");
 				spaces = "";
 			}
 			else if (step == 0) {
@@ -291,9 +291,9 @@ void going(string* firstEl, int col, int t) {
 					((q >= 0 && q < 7) || (q == 19)) ? cout << character[q] << endl :
 						cout << "*" + spaces + character[q] + spaces_right << endl;
 				}
-				Sleep(t);
-				system("cls");
-				spaces = "";
+				//Sleep(t);
+				//system("cls");
+				//spaces = "";
 
 			}
 			else {
@@ -313,8 +313,8 @@ void going(string* firstEl, int col, int t) {
 					((q >= 0 && q < 7) || (q == 19)) ? cout << character[q] << endl :
 						cout << "*" + spaces + character[q] + spaces_right << endl;
 				}
-				Sleep(t);
-				system("cls");
+				//Sleep(t);
+				//system("cls");
 				spaces = "";
 			}
 		}
@@ -340,8 +340,8 @@ void going(string* firstEl, int col, int t) {
 					((q >= 0 && q < 7) || (q == 19)) ? cout << character[q] << endl :
 						cout << "*" + spaces + character[q] + spaces_right << endl;
 				}
-				Sleep(t);
-				system("cls");
+				//Sleep(t);
+				//system("cls");
 				spaces = "";
 			}
 			else if (step == 0) {
@@ -361,8 +361,8 @@ void going(string* firstEl, int col, int t) {
 					((q >= 0 && q < 7) || (q == 19)) ? cout << character[q] << endl :
 						cout << "*" + spaces + character[q] + spaces_right << endl;
 				}
-				Sleep(t);
-				system("cls");
+				//Sleep(t);
+				//system("cls");
 				spaces = "";
 
 			}
@@ -383,8 +383,8 @@ void going(string* firstEl, int col, int t) {
 					((q >= 0 && q < 7) || (q == 19)) ? cout << character[q] << endl :
 						cout << "*" + spaces + character[q] + spaces_right << endl;
 				}
-				Sleep(t);
-				system("cls");
+				//Sleep(t);
+				//system("cls");
 				spaces = "";
 			}
 		}
@@ -498,7 +498,7 @@ void ball(string* firstEl, int col, int t) {
 	character[14] = "* /  ||  \\ " + space;
 	character[15] = "*/   ||   \\" + space;
 	show(ptcharacter, 20, t);
-	system("cls");
+	//system("cls");
 	return;
 }
 
@@ -525,10 +525,10 @@ void jump(string* firstEl, int col, int t) {
 	character[16] = g;
 	character[17] = h;
 	character[18] = "*   _\\/_   " + space;
-	Sleep(t);
+	//Sleep(t);
 
 	for (int q = 18; q >= 14; q--) {
-		system("cls");
+		//system("cls");
 		for (int i = 0; i < 20; i++) cout << character[i] << endl;
 		character[q - 11] = a;
 		character[q - 10] = b;
@@ -543,9 +543,9 @@ void jump(string* firstEl, int col, int t) {
 		character[q - 1] = l;
 		character[q] = "*    ||    " + space;
 		if (q != 18) character[q + 1] = emptyStr;
-		Sleep(t);
+		//Sleep(t);
 	}
-	system("cls");
+	//system("cls");
 	for (int q = 13; q <= 16; q++) {
 		character[q - 11] = emptyStr;
 		for (int i = 0; i < 20; i++) cout << character[i] << endl;
@@ -561,8 +561,8 @@ void jump(string* firstEl, int col, int t) {
 		character[q] = k;
 		character[q + 1] = l;
 		character[q + 2] = "*    ||    " + space;
-		Sleep(t);
-		system("cls");
+		//Sleep(t);
+		//system("cls");
 	}
 	character[6] = emptyStr;
 	character[7] = emptyStr;
