@@ -9,8 +9,6 @@ int main(){
 	if (num_1 > num_2){
 	
 	
-	
-	
 	cout << num_1 << " + " << num_2 << " = " << num_1 + num_2 << endl;
 	cout << num_1 << " - " << num_2 << " = " << num_1 - num_2 << endl;
 	cout << num_1 << " * " << num_2 << " = " << num_1 * num_2 << endl;
