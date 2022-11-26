@@ -34,11 +34,11 @@ int main()
 	cout << "What speed will you choose? ";
 	cin >> speed;
 	if (cin.fail()) {
-		cout << "Invalid data.";
+		cout << endl << "Invalid data.";
 		return 0;
 	} else {
 		if (speed < 0) {
-			cout << "Invalid data.";
+			cout << endl << "Invalid data.";
 			return 0;
 		} else {
 			speed = (speed > maxSpeed) ? maxSpeed : speed;	
