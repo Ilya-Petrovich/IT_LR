@@ -104,6 +104,6 @@ void print(vector<string>a)
 }
 int main()
 {
-	dance()
+	dance();
 	return 0;
 }

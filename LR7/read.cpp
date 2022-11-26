@@ -16,7 +16,7 @@ void ReadText(char* buff, long fSize)
 int main()
 {	
 	FILE* file;
-	file = fopen("changed_image.bmp", "rb");
+	file = fopen("image.bmp", "rb");
 	fseek(file, 0, SEEK_END);
 	long fSize;
 	fSize = ftell(file);
