@@ -33,7 +33,7 @@ int main()
 	cout << "Maximum speed: " << maxSpeed << endl;
 	cout << endl;
 	cout << "Route info" << endl;
-	cout << "Distance " << distance << " km\n";
+	cout << "Distance: " << distance << " km\n";
 	// cout << endl;
 	cout << line << endl;
 	cout << "You have to drive a route " << distance << " km long." << endl;
