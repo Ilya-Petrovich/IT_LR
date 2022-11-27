@@ -85,6 +85,5 @@ int main() {
     } else {
         cout << endl << "Invalid data." << endl;
     }
-
     return 0;
 }
