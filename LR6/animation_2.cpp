@@ -1,6 +1,6 @@
 #include<iostream>
 #include<string>
-#include<windows.h>
+
 using namespace std;
 string aprobel(int n){
 	if (n == 28){
