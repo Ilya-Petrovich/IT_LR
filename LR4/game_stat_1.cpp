@@ -10,7 +10,6 @@ int main()
 		std::cout << "Invalid data.";
 		return 0;
 	}
-	
 	std::cout << "Car stats\nFuel: " << fuel << "\n";
 	std::cout << "Fuel capacity: 50\nFuel consumption: 0\n";
 	std::cout << "Speed: " << speed << "\nMaximum speed: 110\n\n";

@@ -41,7 +41,6 @@ int main()
 	
 	return 0;
 }
-
 void dance(string *firstEl)
 {
 	string *p = new string[h];
@@ -155,7 +154,6 @@ void dance(string *firstEl)
 	
 	delete [] p;
 }
-
 void run(string *firstEl)
 {
 	string *p = new string[h];
@@ -529,9 +527,6 @@ void solve(string *firstEl)
 				throww(p0);
 				break;
 			case 5:
-				break;	
-			default:
-				cout << "Invalid input.\n";
 				break;
 		}
 	}
