@@ -53,7 +53,7 @@ int main()
 
 	if (speed < 0)
 	{
-		cout << "\nInvalid data.\n";
+		cout << "\nInvalid data." << endl;
 		return 0;
 	}
 	else if (speed > maxSpeed)
@@ -68,7 +68,7 @@ int main()
 		fuelConsumption = ((double)speed / 10) * ((double)speed / 10) / 4 - 4.5 * ((double)speed / 10) + 30;
 	else
 		fuelConsumption = 0;
-	cout << "Fuel consumption with chosen speed: " << fuelConsumption << " liters per 100 km\n";
+	cout << "Fuel consumption with chosen speed: " << fuelConsumption << " litres per 100 km\n";
 	cout << endl;
 
 	if (speed != 0)
