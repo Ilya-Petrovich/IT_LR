@@ -1,6 +1,6 @@
 #include<iostream>
 #include<string>
-#include<unistd.h>
+#include<windows.h>
 using namespace std;
 string aprobel(int n){
 	if (n == 28){
@@ -31,7 +31,7 @@ string bprobel(int n){
 }
 int main()
 {
-string B,A,C,D,G,F,M,T = "*",H = "*";
+string B,A,C,D,G,F,O,M,T = "*",H = "*";
 int a;
 G =  "****************************************\n";
 M  =  "*                                      *\n";
@@ -60,10 +60,10 @@ D += "* / |  | \\                             *\n";
 D += "*/   \\/   \\                            *\n";
 
 while(1){
-	cout << "Choose animation:" << endl << "Dance: \t\t\t1" << endl << "Run: \t\t\t2" << endl << "Sit down and jump: \t3" << endl << "Throw a ball: \t\t4" << endl; 
+	cout << "Choose animation:" << endl << "Dance: \t\t\t1" << endl << "Run: \t\t\t2" << endl << "Sit down and jump: \t3" << endl << "Throw a ball: \t\t4" << endl << endl; 
 	cout << "Enter 5 for exit." << endl;
 	cin >> a;
-	usleep(1000000);
+	
 	
 	if (a == 5){
 		return 0;
@@ -294,7 +294,7 @@ while(1){
 		A += "*    /\\    "+ aprobel(28) +  "*\n";
 		A +=  "*    ||    " + aprobel(28)+  "*\n";
 		A +=  "*   _||_   "+ aprobel(28) +  "*\n";
-		cout << G + bprobel(6) + A + G<< endl;
+		cout << G + bprobel(6) + A + G;
 	
 			 
 		for (int i = 1; i <= 28; i++){
@@ -311,7 +311,7 @@ while(1){
 			A += "*" + aprobel(i - 1) + "    /\\    " + aprobel(29 - i) + "*\n";
 			A += "*" + aprobel(i - 1) + "    |\\    " + aprobel(29 - i) + "*\n";
 			A += "*" + aprobel(i - 1) + "   _| \\_  " + aprobel(29 - i) + "*\n";
-			cout << G + bprobel(6) + A + G<< endl;
+			cout << G + bprobel(6) + A + G;
 			
 			
 			A  = "*" + aprobel(i) + "    /\\    " + aprobel(28 - i) + "*\n";
@@ -326,7 +326,7 @@ while(1){
 			A += "*" + aprobel(i) + "    /\\    " + aprobel(28 - i) + "*\n";
 			A += "*" + aprobel(i) + "    /|    " + aprobel(28 - i) + "*\n";
 			A += "*" + aprobel(i) + "  _/ |_   " + aprobel(28 - i) + "*\n";
-			cout << G + bprobel(6) + A + G<< endl;
+			cout << G + bprobel(6) + A + G;
 			
 			A  = "*" + aprobel(i) + "    /\\    " + aprobel(28 - i) + "*\n";
 			A += "*" + aprobel(i) + "   |oo|   " + aprobel(28 - i) + "*\n";
@@ -340,7 +340,7 @@ while(1){
 			A += "*" + aprobel(i) + "    /\\    " + aprobel(28 - i) + "*\n";
 			A += "*" + aprobel(i) + "    ||    " + aprobel(28 - i) + "*\n";
 			A += "*" + aprobel(i) + "   _||_   " + aprobel(28 - i) + "*\n";
-			cout << G + bprobel(6) + A + G<< endl;
+			cout << G + bprobel(6) + A + G;
 			
 	    }
 	   
@@ -358,7 +358,7 @@ while(1){
 			A += "*" + aprobel(29 - i) + "    /\\    " + aprobel(i - 1) + "*\n";
 			A += "*" + aprobel(29 - i) + "    |\\    " + aprobel(i - 1) + "*\n";
 			A += "*" + aprobel(29 - i) + "   _| \\_  " + aprobel(i - 1) + "*\n";
-			cout << G + bprobel(6) + A + G<< endl;
+			cout << G + bprobel(6) + A + G;
 			if (i != 28){
 			
 				A  = "*" + aprobel(28 - i) + "    /\\    " + aprobel(i) + "*\n";
@@ -373,7 +373,7 @@ while(1){
 				A += "*" + aprobel(28 - i) + "    /\\    " + aprobel(i) + "*\n";
 				A += "*" + aprobel(28 - i) + "    /|    " + aprobel(i) + "*\n";
 				A += "*" + aprobel(28 - i) + "  _/ |_   " + aprobel(i) + "*\n";
-				cout << G + bprobel(6) + A + G<< endl;
+				cout << G + bprobel(6) + A + G;
 			}
 			A  = "*" + aprobel(28 - i) + "    /\\    " + aprobel( i) + "*\n";
 			A += "*" + aprobel(28 - i) + "   |oo|   " + aprobel( i) + "*\n";
@@ -387,7 +387,7 @@ while(1){
 			A += "*" + aprobel(28 - i) + "    /\\    " + aprobel(i) + "*\n";
 			A += "*" + aprobel(28 - i) + "    ||    " + aprobel( i) + "*\n";
 			A += "*" + aprobel(28 - i) + "   _||_   " + aprobel(i) + "*\n";
-			cout << G + bprobel(6) + A + G<< endl;
+			cout << G + bprobel(6) + A + G;
 			
 	    }
 	} else if (a == 3){
@@ -431,6 +431,9 @@ while(1){
 		T += "*/   \\/   \\                            *\n";
 		T += "*    /\\                                *\n";
 		T += "*   _/\\_                               *\n";
+		O =  "*    /\\                                *\n";
+		O += "*    ||                                *\n";
+		O += "*    ||                                *\n";
 		
 
 		for (int i = 0; i <= 12; i++){
@@ -438,15 +441,15 @@ while(1){
 				cout << T + H;
 			} else if (i == 0) {
 				cout << A + B + C + H;
-			} else if (i == 2){ cout << A + B + C+H;
-			} else if (i == 3){ cout << H + bprobel(5) +  B + C + bprobel(1) + H; 
-			} else if (i == 4){ cout << H + bprobel(4) + B + C + bprobel(2) + H; 
-			} else if (i == 5){ cout << H + bprobel(3) + B + C + bprobel(3) + H; 
-			} else if (i == 6){cout << H + bprobel(2) + B + C + bprobel(4) + H;
-			} else if (i == 7){cout << H + bprobel(3) + B + C + bprobel(3) + H;
-			} else if (i == 8){cout << H + bprobel(4) + B + C + bprobel(2) + H;
-			} else if (i == 9){cout << H + bprobel(5) + B + C + bprobel(1) + H;
-			} else if (i == 10){cout << A + B + C + H;
+			} else if (i == 2){ cout << A + B + O+H;
+			} else if (i == 3){ cout << H + bprobel(5) +  B + O + bprobel(1) + H; 
+			} else if (i == 4){ cout << H + bprobel(4) + B + O + bprobel(2) + H; 
+			} else if (i == 5){ cout << H + bprobel(3) + B + O + bprobel(3) + H; 
+			} else if (i == 6){cout << H + bprobel(2) + B + O + bprobel(4) + H;
+			} else if (i == 7){cout << H + bprobel(3) + B + O + bprobel(3) + H;
+			} else if (i == 8){cout << H + bprobel(4) + B + O + bprobel(2) + H;
+			} else if (i == 9){cout << H + bprobel(5) + B + O + bprobel(1) + H;
+			} else if (i == 10){cout << A + B + O + H;
 			} else if (i == 12){cout << A + B + C + H;
 			}
 			
