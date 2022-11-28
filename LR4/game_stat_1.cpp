@@ -39,8 +39,9 @@ int main() {
             if (speed > max_speed) {
                 speed = max_speed;
             }
-        } else {
-            cout << "Invalid data." << endl;
+        }
+        else {
+            cout << endl << "Invalid data." << endl;
             return 0;
         }
 
@@ -49,7 +50,8 @@ int main() {
         if (speed > 0) {
             s = speed / 10;
             fuel_consumption = s * s / 4 - 4.5 * s + 30;
-        } else {
+        }
+        else {
             fuel_consumption = 0;
         }
 
@@ -63,7 +65,8 @@ int main() {
 
         if (speed > 0) {
             spent_time = traveled_distance / speed * 60 * 60;
-        } else {
+        }
+        else {
             spent_time = 0;
         }
 
@@ -79,10 +82,12 @@ int main() {
 
         if (traveled_distance == distance) {
             cout << "Congratulations! You have reached destination point!" << endl;
-        } else {
+        }
+        else {
             cout << "You haven't reached destination point. " << distance - traveled_distance << " km left." << endl;
         }
-    } else {
+    }
+    else {
         cout << endl << "Invalid data." << endl;
     }
     return 0;
