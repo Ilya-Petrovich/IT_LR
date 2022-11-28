@@ -1,3 +1,4 @@
+
 #include<iostream>
 using namespace std;
 
@@ -60,8 +61,8 @@ int main() {
 		FuRe /= 1000000.0;
 		cout << "Distance traveled: " << 360 << " km" << endl;
 		cout << "Time spent: " << int(360 / speed * 60 * 60) << " sec" << endl;
-		cout << "Fuel consumed: " << 3.6 * fuelConsuption << " liters" << endl;
-		cout << "Fuel remained: " << FuRe << " liters" << endl;
+		cout << "Fuel consumed: " << 3.6 * fuelConsuption << " litres" << endl;
+		cout << "Fuel remained: " << FuRe << " litres" << endl;
 		cout << "----------------------------------------" << endl;
 		cout << "Congratulations! You have reached destination point!\n";
 		return 0;
