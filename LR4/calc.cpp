@@ -8,7 +8,7 @@ int main(){
 	cout<<"Type the third number: ";cin>>num_3;
 
 	if (num_1 < num_2 || num_2 <= 0 || num_3 < 0){
-		cout<<"Invalid data";
+		cout<<"Invalid data\n";
 	}
 
 	else{
@@ -19,6 +19,6 @@ int main(){
 		printf("%.1f / %.1f = %.5f\n", float(num_1), float(num_2), float(num_1)/num_2);
 		printf("%d %% %d = %d\n", num_1, num_2, num_1%num_2);
 		printf("%d + %d * %d = %d\n", num_1, num_2, num_3, num_1+num_2*num_3);
-		printf("(%d + %d) * %d = %d", num_1, num_2, num_3, (num_1+num_2)*num_3);
+		printf("(%d + %d) * %d = %d\n", num_1, num_2, num_3, (num_1+num_2)*num_3);
 	}
 }
