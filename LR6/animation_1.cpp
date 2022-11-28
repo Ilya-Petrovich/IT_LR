@@ -160,4 +160,3 @@ void LeftHandChager(HandsStates state)
 			break;
 	}
 }
-
