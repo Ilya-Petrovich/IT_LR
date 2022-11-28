@@ -8,7 +8,7 @@ int main()
 	cout << "How much fuel do you have at start? "; cin >> fuel;
 	if (fuel < 0 or fuel > 50)
 	{
-		cout << "\nInvalid data.";
+		cout << "\nInvalid data." << endl;
 	}
 	else
 	{
@@ -32,7 +32,7 @@ int main()
 	cout << "What speed will you choose? "; cin >> speed;
 	if (speed < 0)
 	{
-		cout << "\nInvalid data.";
+		cout << "\nInvalid data.\n";
 	}
 	else{
 	if (speed > max_speed)

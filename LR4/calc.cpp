@@ -19,7 +19,7 @@ int main()
 	cout << n1 << " - " << n2 << " = " << n1 - n2 << endl;
 	cout << n1 << " * " << n2 << " = " << n1 * n2 << endl;
 	cout << n1 << " / " << n2 << " = " << n1 / n2 << endl;
-	cout << n1 << ".0 / " << float(n2) << ".0 = " << float(n1) / float(n2) << endl;
+	cout << n1 << ".0 / " << n2 << ".0 = " << float(n1) / float(n2) << endl;
 	cout << n1 << " % " << n2 << " = " << n1 % n2 << endl;
 	cout << n1 << " + " << n2 << " * " << n3 << " = " << n1 + n2 * n3 << endl;
 	cout << "(" << n1 << " + " << n2 << ") * " << n3 << " = " << (n1 + n2) * n3 << endl;
