@@ -89,7 +89,7 @@ int main()
 	fuelRemained = fuel - fuelConsumed;
 
 	cout << "Destination result" << endl;
-	cout << "Distance travaled: " << distanceTraveled << " km\n";
+	cout << "Distance traveled: " << distanceTraveled << " km\n";
 	cout << "Time spent: " << time << " sec\n";
 	cout << "Fuel consumed: " << fuelConsumed << " litres\n";
 	cout << "Fuel remained: " << fuelRemained << " litres\n";
