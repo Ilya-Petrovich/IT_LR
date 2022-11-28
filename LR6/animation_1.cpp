@@ -1,9 +1,9 @@
-﻿#include<iostream>
+#include<iostream>
 #include<string>
 #include<conio.h>
 #include<unistd.h>
 using namespace std;
-inline void foo(string* ar);
+void foo(string* ar);
 int main() {
 	string  ar[12];
 	string str1 = ar[0] = "   ()()   ";
@@ -63,7 +63,6 @@ int main() {
 	ar[5] = "* /|UU|\\ *";
 	ar[6] = " ---\\/--- ";
 	foo(&ar[0]);
-	system("cls");
 	ar[5] = "  /|UU|\\  ";
 	ar[6] = "*---\\/---*";
 	foo(&ar[0]);
@@ -77,7 +76,6 @@ int main() {
 	ar[6] = "  --\\/--  ";
 	ar[7] = " /  ||  \\ ";
 	ar[8] = "/   ||   \\";
-
 	foo(&ar[0]);
 	return 0;
 }
@@ -86,6 +84,6 @@ inline void foo(string* ar) {
 		cout << *ar << endl;
 		*ar++;
 	}
-	usleep(х * 1000);
-	system("cls");
+	//Sleep(1000);
+	//system("cls");
 }
