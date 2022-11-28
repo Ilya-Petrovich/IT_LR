@@ -26,8 +26,8 @@ int Dance()
 			string line_anim = AnimDance(j, probel, i);
 			cout << line_anim + Probels(10 - probel) << "\n";
 		}
-		Sleep(800);
-		system("cls");
+		//Sleep(800);
+		//system("cls");
 	}
 }
 
