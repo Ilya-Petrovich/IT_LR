@@ -22,7 +22,11 @@ int main() {
 	cout << "----------------------------------------" << endl;
 	cout << "You have to drive a route " << distance << " km long." << endl;
 	cout << "But first you need to check if you have enough fuel." << endl << endl;
-	fuel = fuel < fuel_capacity / 2 ? fuel + fuel_capacity / 2 : fuel;
+	if (fuel < fuel_capacity / 2.)
+	{
+		fuel += fuel_capacity / 2.;
+		cout << "Your fuel before start: " << fuel << endl << endl;
+	}
 	cout << "What speed will you choose? "; cin >> speed;
 
 	if (speed < 0) {
