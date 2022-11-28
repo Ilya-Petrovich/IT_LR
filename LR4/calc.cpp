@@ -1,34 +1,31 @@
-﻿// ИТ (4).cpp 
+﻿#include <iostream>
 
-#include <iostream>
-using namespace std;
+int main() {
+    setlocale(0, "1251");
 
+    int num_1, num_2, num_3;
 
-int main()
-{
-    float a, b, c;
-    setlocale(LC_ALL, "RUS");
-    cout << "Введите первое число: ";
-    cin >> a;
-    cout << "\nВведите второе число: ";
-    cin >> b;
-    cout << "\nВведите третье число: ";
-    cin >> c;
-if (a > b && a > 0  && b > 0 && c > 0) 
-{
-    cout << a << " + " << b << " = " << a + b << endl;
-    cout << a << " - " << b << " = " << a - b << endl;
-    cout << a << " * " << b << " = " << a * b << endl;
-    cout << a << " / " << b << " = " << int(a / b) << endl;
-    cout << a << " / " << b << " = " << a / b << endl;
-    cout << a << " % " << b << " = " << int(a) % int(b) << endl;
-    cout << a << " + " << b << " * "<< c << " = " << a + b * c << endl;
-    cout <<" ( " << a << " + " << b << ")" << " * " << c << " = " << (a + b) * c << endl;
+    std::cout << "Type the first number: ";
+    std::cin >> num_1;
+
+    std::cout << "Type the second number: ";
+    std::cin >> num_2;
+
+    std::cout << "Type the third number: ";
+    std::cin >> num_3;
+
+    if (num_1 > num_2 && num_1 >= 0 && num_2 > 0 && num_3 >= 0) {
+        std::cout << num_1 << " + " << num_2 << " = " << num_1 + num_2 << std::endl;
+        std::cout << num_1 << " - " << num_2 << " = " << num_1 - num_2 << std::endl;
+        std::cout << num_1 << " * " << num_2 << " = " << num_1 * num_2 << std::endl;
+        std::cout << num_1 << " / " << num_2 << " = " << num_1 / num_2 << std::endl;
+        std::cout << num_1 << ".0" << " / " << num_2 << ".0" << " = " << (float)num_1 / num_2 << std::endl;
+        std::cout << num_1 << " % " << num_2 << " = " << num_1 % num_2 << std::endl;
+        std::cout << num_1 << " + " << num_2 << " * " << num_3 << " = " << num_1 + num_2 * num_3 << std::endl;
+        std::cout << "(" << num_1 << " + " << num_2 << ")" << " * " << num_3 << " = " << (num_1 + num_2) * num_3 << std::endl;
+    }
+    else {
+        std::cout << "Invalid data" << std::endl;
+    }
+    return 0;
 }
- else 
- {
-     cout << "Invalid data" << endl;
- }
- return 0;
-} 
-
