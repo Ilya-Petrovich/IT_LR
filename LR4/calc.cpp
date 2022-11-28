@@ -4,33 +4,31 @@
 using namespace std;
 
 int main() {
-    setlocale(LC_ALL, "rus");
-
-    int num_1, num_2, num_3;
+    int num, num_2, num_3;
 
     cout << "Type the first number: ";
-    cin >> num_1;
+    cin >> num;
     cout << "Type the second number: ";
     cin >> num_2;
     cout << "Type the third number: ";
     cin >> num_3;
 
-    float div = (float)num_1 / num_2;
+    float div = (float)num / num_2;
 
-    if (num_1 > num_2 && num_1 >= 0 && num_2 >= 0 && num_3 >= 0)
+    if (num > num_2 && num >= 0 && num_2 > 0 && num_3 >= 0)
     {
-        cout << num_1 << " + " << num_2 << " = " << num_1 + num_2 << endl;
-        cout << num_1 << " - " << num_2 << " = " << num_1 - num_2 << endl;
-        cout << num_1 << " * " << num_2 << " = " << num_1 * num_2 << endl;
-        cout << num_1 << " / " << num_2 << " = " << num_1 / num_2 << endl;
-        cout << num_1 << ".0 / " << num_2 << ".0 = " << (float) num_1 / num_2 << endl;
-        cout << num_1 << " % " << num_2 << " = " << num_1 % num_2 << endl;
-        cout << num_1 << " + " << num_2 << " * " << num_3 << " = " <<
-            num_1 + num_2 * num_3 << endl;
-        cout << "(" << num_1 << " + " << num_2 << ")" << " * " << num_3 << " = " <<
-            (num_1 + num_2) * num_3;
+        cout << num << " + " << num_2 << " = " << num + num_2 << endl;
+        cout << num << " - " << num_2 << " = " << num - num_2 << endl;
+        cout << num << " * " << num_2 << " = " << num * num_2 << endl;
+        cout << num << " / " << num_2 << " = " << num / num_2 << endl;
+        cout << setprecision(1) << fixed << (float)num << " / " << (float)num_2 << " = ";
+        cout << setprecision(5) << fixed << div << endl;
+        cout << setprecision(0) << fixed;
+        cout << num << " % " << num_2 << " = " << num % num_2 << endl;
+        cout << num << " + " << num_2 << " * " << num_3 << " = " << num + num_2 * num_3 << endl;
+        cout << "(" << num << " + " << num_2 << ")" << " * " << num_3 << " = " << (num + num_2) * num_3 << endl;
     }
     else
-        cout << "Invalid data";
+        cout << "Invalid data" << endl;
     return 0;
 }
