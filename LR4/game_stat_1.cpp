@@ -2,7 +2,7 @@
 
 using namespace std;
 
-int main()
+int main1()
 {
     double fuel, speed;
     cout << "How much fuel do you have at start? ";

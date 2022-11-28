@@ -13,10 +13,8 @@ int main() {
 		cout << num_1 << " + " << num_2 << " = " << num_1 + num_2 << endl;
 		cout << num_1 << " - " << num_2 << " = " << num_1 - num_2 << endl;
 		cout << num_1 << " * " << num_2 << " = " << num_1 * num_2 << endl;
-		cout << num_1 << " / " << num_2 << " = " << int(num_1 / num_2) << endl;
-		cout << setprecision(1) << fixed << (float)num_1 << " / " <<(float) num_2<<" = ";
-		cout << setprecision(5)<< fixed << div << endl;
-		cout << setprecision(0) << fixed;
+		cout << num_1 << " / " << num_2 << " = " << num_1 / num_2 << endl;
+		cout << num_1 << ".0" << " / " << num_2 << ".0 " << " = " << (float)num_1 / num_2 << endl;
 		cout << num_1 << " % " << num_2 << " = " << num_1 % num_2 << endl;
 		cout << num_1 << " + " << num_2 << " * " << num_3 << " = " << num_1 + (num_2 * num_3) << endl;
 		cout << "(" << num_1 << " + " << num_2 << ")" << " * " << num_3 << " = " << (num_1 + num_2) * num_3 << endl;
