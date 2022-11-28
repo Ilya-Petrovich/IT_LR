@@ -31,7 +31,7 @@ int main(){
     cout << "\nCar stats";
     cout << "\nFuel: " << fuelQuantity;
     cout << "\nFuel capacity: 50";
-    cout << "\nFuel consumtion: " << fuelConsumption;
+    cout << "\nFuel consumption: " << fuelConsumption;
     cout << "\nSpeed: " << speed;
     cout << "\nMaximum speed: 110" << endl;
 
