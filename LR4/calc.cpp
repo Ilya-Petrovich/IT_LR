@@ -11,17 +11,17 @@ int main() {
     std::cin >> num_3;
 
     if ((num_1 > num_2) and num_1 >= 0 and num_2 > 0 and num_3 >= 0) {
-        std::cout << num_1 << " + " << num_2 << " = " << num_1 + num_2 << endl;
-        std::cout << num_1 << " - " << num_2 << " = " << num_1 - num_2 << endl;
-        std::cout << num_1 << " * " << num_2 << " = " << num_1 * num_2 << endl;
-        std::cout << num_1 << " / " << num_2 << " = " << num_1 / num_2 << endl;
-        std::cout << double(num_1) << ".0 " << " / " << double(num_2) << ".0 " << " = " << double(num_1) / double(num_2) << endl;
-        std::cout << num_1 << " % " << num_2 << " = " << num_1 % num_2 << endl;
-        std::cout << num_1 << " + " << num_2 << " * " << num_3 << " = " << num_1 + num_2 * num_3 << endl;
-        std::cout << "(" << num_1 << " + " << num_2 << ")" << " * " << num_3 << " = " << (num_1 + num_2) * num_3 << endl;
+        std::cout << num_1 << " + " << num_2 << " = " << num_1 + num_2 << std::endl;
+        std::cout << num_1 << " - " << num_2 << " = " << num_1 - num_2 << std::endl;
+        std::cout << num_1 << " * " << num_2 << " = " << num_1 * num_2 << std::endl;
+        std::cout << num_1 << " / " << num_2 << " = " << num_1 / num_2 << std::endl;
+        std::cout << double(num_1) << ".0 " << " / " << double(num_2) << ".0 " << " = " << double(num_1) / double(num_2) << std::endl;
+        std::cout << num_1 << " % " << num_2 << " = " << num_1 % num_2 << std::endl;
+        std::cout << num_1 << " + " << num_2 << " * " << num_3 << " = " << num_1 + num_2 * num_3 << std::endl;
+        std::cout << "(" << num_1 << " + " << num_2 << ")" << " * " << num_3 << " = " << (num_1 + num_2) * num_3 << std::endl;
     }
     else {
-        std::cout << "Invalid data" << endl;
+        std::cout << "Invalid data" << std::endl;
         return 0;
     }
 }
