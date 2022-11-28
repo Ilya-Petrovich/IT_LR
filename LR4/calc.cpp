@@ -1,7 +1,7 @@
 #include <iostream>
 #include <iomanip>
 using namespace std;
-int main() {
+int main1() {
 	setlocale(LC_ALL, "Russian");
 	int num_1, num_2, num_3;
 	cout << "¬ведите первое число: "; cin >> num_1;

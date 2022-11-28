@@ -1,8 +1,6 @@
 #include <iostream>
-
 using namespace std;
-
-int main1()
+int main()
 {
     double fuel, speed;
     cout << "How much fuel do you have at start? ";
@@ -40,6 +38,7 @@ int main1()
     cout << "Your speed before start: " << speed << "km/h" << endl;
     double s = speed / 10;
     double fuelConsumption = s * s / 4 - 4.5 * s + 30;
+    cout << endl;
     cout << "Fuel consumption with chosen speed: " << fuelConsumption << " litres per 100 km" << endl;
     cout << endl;
     cout << "Destination result" << endl;
@@ -51,6 +50,7 @@ int main1()
     double fuelConsumed = distanceTraveled * fuelConsumption / 100;
     cout << "Fuel consumed: " << fuelConsumed << " litres" << endl;
     cout << "Fuel remained: " << fuel - fuelConsumed << " litres" << endl;
+    cout << "-----------------------------------------------" << endl;
     if (distanceTraveled == 360)
         cout << "Congratulations! You have reached destination point!";
     else
