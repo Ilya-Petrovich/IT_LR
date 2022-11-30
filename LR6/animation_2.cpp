@@ -510,8 +510,8 @@ void solve(string *firstEl)
 		cout << "Sit down and jump: \t3" << endl;
 		cout << "Throw a ball: \t\t4" << endl << endl;
 		cout << "Enter 5 for exit." << endl;
-
 		cin >> n;
+		
 		switch(n)
 		{
 			case 1:
