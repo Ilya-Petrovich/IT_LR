@@ -276,7 +276,6 @@ int main() {
         //printf("\033c");
         //sleep(1);
     }
-    
     print_person(person_1);
 }
 
