@@ -21,4 +21,5 @@ int main(){
 		printf("%d + %d * %d = %d\n", num_1, num_2, num_3, num_1+num_2*num_3);
 		printf("(%d + %d) * %d = %d\n", num_1, num_2, num_3, (num_1+num_2)*num_3);
 	}
+
 }
