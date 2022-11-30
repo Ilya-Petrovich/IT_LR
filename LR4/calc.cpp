@@ -1,4 +1,5 @@
 #include <iostream>
+using namespace std;
 int main() {
 	int num_1 = 0, num_2 = 0;
 	setlocale(LC_ALL, "RUS");
