@@ -68,6 +68,5 @@ int main()
 	if (flag) std::cout << "Congratulation! You have reached destantion point!";
 	else std::cout << "You haven't reached destination point. " << std::fixed << std::setprecision(2) << distance - distanceTraveled << " km left.";
 	}
-	
 	return 0;
 }
