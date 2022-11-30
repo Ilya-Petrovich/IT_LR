@@ -67,4 +67,5 @@ int main(){
 
 		cout << "You haven't reached destination point. " << 360 - Distance << " km left.";
 	}
+
 }
