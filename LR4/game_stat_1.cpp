@@ -1,55 +1,54 @@
 #include <iostream>
-using namespace std;
 int main()
 {	
 	double t,mt=50,fuelConsumption,dm,rt,ot,s,d=360;
 	int ms=110,speed,time;
-	cout<<"How much fuel do you have at start? ";
-	cin>>t;
+	std::cout<<"How much fuel do you have at start? ";
+	std::cin>>t;
 	if( t>=0 && t<=50)
 	{
-		cout<<"\nCar stats"<<endl;
-		cout<<"Fuel: "<<t<<endl;
-		cout<<"Fuel capacity: "<<mt<<endl;
-		cout<<"Fuel consumption: 0"<<endl;
-		cout<<"Speed: 0"<<endl;
-		cout<<"Maximum speed: "<<ms<<endl;
-		cout<<"\nRoute info"<<endl;
-		cout<<"Distance: 360 km"<<endl;
-		cout<<"\nYou have to drive a route 360 km long."<<endl;
-		cout<<"But first you need to check if you have enough fuel."<<endl;
-		cout<<"\nWhat speed will you choose? ";
-		cin>>speed;
+		std::cout<<"Car stats"<<std::endl;
+		std::cout<<"Fuel: "<<t<<std::endl;
+		std::cout<<"Fuel capacity: "<<mt<<std::endl;
+		std::cout<<"Fuel consumption: 0"<<std::endl;
+		std::cout<<"Speed: 0"<<std::endl;
+		std::cout<<"Maximum speed: "<<ms<<std::endl;
+		std::cout<<"Route info"<<std::endl;
+		std::cout<<"Distance: 360 km"<<std::endl;
+		std::cout<<"You have to drive a route 360 km long."<<std::endl;
+		std::cout<<"But first you need to check if you have enough fuel."<<std::endl;
+		std::cout<<"What speed will you choose? ";
+		std::cin>>speed;
 		if(t<mt/2)
 		{
 			t=t+mt/2;
-			cout<<"Your fuel before start: "<<t<<endl;
+			std::cout<<"Your fuel before start: "<<t<<std::endl;
 		}
 		if(speed<0)
 		{
-			cout<<"Invalid data"<<endl;
+			std::cout<<"Invalid data"<<std::endl;
 			return 0;
 		}
 		if(speed>110)
 		{
 			speed=110;
 		}
-		cout<<"Your speed before start: "<<speed<<" km/h"<<endl;
+		std::cout<<"Your speed before start: "<<speed<<" km/h"<<std::endl;
 		if(speed==0)
 		{
 			fuelConsumption=0;
-			cout<<"Fuel consumption with chosen speed: "<<fuelConsumption<<" litres per 100 km"<<endl;
-			cout<<"\nDestination result"<<endl;
+			std::cout<<"Fuel consumption with chosen speed: "<<fuelConsumption<<" litres per 100 km"<<std::endl;
+			std::cout<<"Destination result"<<std::endl;
 			d=0;
-			cout<<"Distance traveled: "<<d<<" km"<<endl;
+			std::cout<<"Distance traveled: "<<d<<" km"<<std::endl;
 			time=0;
-			cout<<"Time spent: "<<time<<" sec"<<endl;
+			std::cout<<"Time spent: "<<time<<" sec"<<std::endl;
 		}
 		else
 		{
 			s=(double)speed/10;
 			fuelConsumption = s * s / 4 -4.5 * s + 30;
-			cout<<"\nFuel consumption with chosen speed: "<<fuelConsumption<<" litres per 100 km"<<endl;
+			std::cout<<"Fuel consumption with chosen speed: "<<fuelConsumption<<" litres per 100 km"<<std::endl;
 			dm=t/fuelConsumption*100;
 			if(dm<d)
 			{
@@ -57,26 +56,26 @@ int main()
 			}
 			time=d/speed*3600;
 		
-			cout<<"\nDestination result"<<endl;
-			cout<<"Distance traveled: "<<d<<" km"<<endl;
-			cout<<"Time spend: "<<time<<" sec "<<endl;
+			std::cout<<"Destination result"<<std::endl;
+			std::cout<<"Distance traveled: "<<d<<" km"<<std::endl;
+			std::cout<<"Time spend: "<<time<<" sec "<<std::endl;
 		}
 		rt=fuelConsumption/100*d;
 		ot=t-rt;
-		cout<<"Fuel consumed: "<<rt<<" litres"<<endl;
-		cout<<"Fuel remained: "<<ot<<" litres"<<endl;
+		std::cout<<"Fuel consumed: "<<rt<<" litres"<<std::endl;
+		std::cout<<"Fuel remained: "<<ot<<" litres"<<std::endl;
 		if( d==360)
 		{
-			cout<<"\nCongratulations! You have reached destination point!"<<endl;
+			std::cout<<"Congratulations! You have reached destination point!"<<std::endl;
 		}
 		else
 		{
-			cout<<"\nYou haven't reached destination point. "<< 360-d<<" km left."<<endl;
+			std::cout<<"You haven't reached destination point. "<< 360-d<<" km left."<<std::endl;
 		}
 	}
 	else
 	{
-		cout<<"\nInvalid data";
+		std::cout<<"Invalid data";
 	}
 	return 0;
 }
