@@ -3,7 +3,7 @@ using namespace std;
 
 int main()
 {
-	double f, sp, s, d = 360, dt, fuelRemained, fuelConsumed, fuelConsumption;
+	float f, sp, s, d = 360, dt, fuelConsumed, fuelConsumption, fuelRemained;
 	int t;
 	cout << "How much fuel do you have at start? "; cin >> f;
 	if (f < 0 or f>50) {
