@@ -37,7 +37,7 @@ int main()
 	if (sp == 0) {
 		t = 0; dt = 0;
 	}
-	cout << "\nDestination result\nDistance traveled: " << dt << " km\nTime spent: " << t << " sec\nFuel consumed: " << fuelConsumed << " litres\nFuel remained " << fuelRemained << " litres\n----------------------------------------\n";
+	cout << "\nDestination result\nDistance traveled: " << dt << " km\nTime spent: " << t << " sec\nFuel consumed: " << fuelConsumed << " litres\nFuel remained: " << fuelRemained << " litres\n----------------------------------------\n";
 	if (dt == 360) cout << "Congratulations! You have reached destination point!" << endl;
 	else cout << "You haven't reached destination point. " << 360 - dt << " km left." << endl;
 	system("pause");
