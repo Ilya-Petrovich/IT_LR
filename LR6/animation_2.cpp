@@ -4651,7 +4651,7 @@ void run() {
     print_person(person_168);
     //printf(«\033c»);
     //sleep(1);
-}
+    }
 
 void throw_a_ball() {
     char person_1[height][width] = {
@@ -5542,8 +5542,8 @@ void sit_down_and_jump() {
     print_person(person_13);
     //printf("\033c");
     //sleep(1);
+    }
 }
-
 
 void throw_a_ball() {
     char person_1[height][width] = {
