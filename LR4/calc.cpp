@@ -1,9 +1,10 @@
-#include<iostream> 
+#include<iostream>
 #include<cmath>
 
 using namespace std;
 int main()
 {
+	setlocale(LC_ALL, "rus");
 	int num_1, num_2, num_3;
 	cout << "¬ведите первое число: "; cin >> num_1;
 	cout << "¬ведите второе число: "; cin >> num_2;
