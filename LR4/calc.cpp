@@ -23,7 +23,7 @@ int main() {
         cout << num << " / " << num_2 << " = " << num / num_2 << endl;
         cout << setprecision(1) << fixed << (float)num << " / " << (float)num_2 << " = ";
         cout << setprecision(5) << fixed << div << endl;
-        cout << setprecision(0) << fixed;f
+        cout << setprecision(0) << fixed;
         cout << num << " % " << num_2 << " = " << num % num_2 << endl;
         cout << num << " + " << num_2 << " * " << num_3 << " = " << num + num_2 * num_3 << endl;
         cout << "(" << num << " + " << num_2 << ")" << " * " << num_3 << " = " << (num + num_2) * num_3 << endl;
