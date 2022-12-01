@@ -36,7 +36,7 @@ int main()
 }
 void carStats (int speed, double fuel)
 {
-    std::cout << "Car stats " << std::endl;
+    std::cout << "\nCar stats " << std::endl;
 	std::cout << "Fuel: " << fuel << std::endl;
 	std::cout << "Fuel capacity: 50" << std::endl;
 	std::cout << "Fuel consumption: 0" << std::endl;
@@ -47,8 +47,8 @@ int routeInfo (int speed, double fuel, double fuelConsum)
 {
     std::cout << "\nRoute info " << std::endl;
 	std::cout << "Distance: 360 km" << std::endl;
-	std::cout << "------------------------------" << std::endl;
-	std::cout << "You have to drive a raute 360 km long." << std::endl;
+	std::cout << "----------------------------------------" << std::endl;
+	std::cout << "You have to drive a route 360 km long." << std::endl;
 	std::cout << "But first you need to check if you have enough fuel." << std::endl;
 	if (fuel < 25)
 	{
@@ -97,7 +97,7 @@ void result (int speed, double fuel, double fuelConsum)
     std::cout << "Time spent: " << t << " sec " << std::endl;
 	std::cout << "Fuel consumed: " << consum << " litres " << std::endl;
 	std::cout << "fuel remained: " << remain << " litres " << std::endl;
-	std::cout << "------------------------------ " << std::endl;
+	std::cout << "----------------------------------------" << std::endl;
 	if (distance == 360)
 	{
 		std::cout << "Congratulations! You have reached destination point! " << std::endl;
