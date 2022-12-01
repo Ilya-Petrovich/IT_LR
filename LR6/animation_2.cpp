@@ -454,10 +454,14 @@ void dance()
 int main()
 {
 L1:int t;
-	cout << "Choose animation:" << "\nDance:\t1" << "\nRun:\t2" << "\nSit down and jump:\t3" << "\nThrow a ball:\t4" << endl;
-	cout << "\nEnter 5 for exit." << endl;
+	std::cout << "Choose animation:" << std::endl;
+	std::cout << "Dance: \t\t\t1" << std::endl;
+	std::cout << "Run: \t\t\t2" << std::endl;
+	std::cout << "Sit down and jump: \t3" << std::endl;
+	std::cout << "Throw a ball: \t\t4" << std::endl << std::endl;
+	std::cout << "Enter 5 for exit." << std::endl;
+	std::cin >> choice;
 	cin >> t;
-	
 	switch (t)
 	{
 	case 1: {dance();	goto L1; }
