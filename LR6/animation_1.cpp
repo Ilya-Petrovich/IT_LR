@@ -7,7 +7,7 @@ using namespace std;
 void print(vector<string>a)
 {
 	for (auto c : a)
-		cout << c << endl;g
+		cout << c << endl;
 }
 
 int main()
