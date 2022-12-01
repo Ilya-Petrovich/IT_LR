@@ -20,13 +20,7 @@ void ThirteenthPos();
 void FourteenthPos();
 
 int main() {
-	/*
-	HANDLE out_handle = GetStdHandle(STD_OUTPUT_HANDLE);
-	COORD crd = { 40, 20 };
-	SMALL_RECT src = { 0, 0, crd.X - 1, crd.Y - 1 };
-	SetConsoleWindowInfo(out_handle, true, &src);
-	SetConsoleScreenBufferSize(out_handle, crd);
-	*/
+	
 	for (int k = 0; k < 28; k++)
 	{
 
