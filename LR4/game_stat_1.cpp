@@ -1,4 +1,5 @@
-#include <iostream>
+#include <iostream> 
+#include <cmath>
 using namespace std;
 int main()
 {
@@ -51,7 +52,7 @@ int main()
     cout << "Fuel consumed: " << fuelConsumed << " litres" << endl;
     cout << "Fuel remained: " << fuel - fuelConsumed << " litres" << endl;
     cout << "----------------------------------------" << endl;
-    if (distanceTraveled == 360)
+    if (distanceTraveled >= 360)
         cout << "Congratulations! You have reached destination point!";
     else
         cout << "You haven't reached destination point. " << 360 - distanceTraveled << " km left.";
