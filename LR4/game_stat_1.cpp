@@ -6,7 +6,7 @@ int main()
     cout << "How much fuel do you have at start? ";
     cin >> fuel;
     if (fuel < 0 || fuel > 50) {
-        cout << "Invalid data";
+        cout << "Invalid data.";
         return 0;
     }
     cout << endl;
@@ -19,7 +19,7 @@ int main()
     cout << endl;
     cout << "Route info" << endl;
     cout << "Distance: 360 km" << endl;
-    cout << "-----------------------------------------------" << endl;
+    cout << "----------------------------------------" << endl;
     cout << "You have to drive a route 360 km long." << endl;
     cout << "But first you need to check if you have enough fuel." << endl;
     cout << endl;
@@ -31,11 +31,11 @@ int main()
     cout << "What speed will you choose? ";
     cin >> speed;
     if (speed < 0) {
-        cout << "Invalid data";
+        cout << "Invalid data.";
         return 0;
     }
     speed = min(110.0, speed);
-    cout << "Your speed before start: " << speed << "km/h" << endl;
+    cout << "Your speed before start: " << speed << " km/h" << endl;
     double s = speed / 10;
     double fuelConsumption = s * s / 4 - 4.5 * s + 30;
     cout << endl;
@@ -50,7 +50,7 @@ int main()
     double fuelConsumed = distanceTraveled * fuelConsumption / 100;
     cout << "Fuel consumed: " << fuelConsumed << " litres" << endl;
     cout << "Fuel remained: " << fuel - fuelConsumed << " litres" << endl;
-    cout << "-----------------------------------------------" << endl;
+    cout << "----------------------------------------" << endl;
     if (distanceTraveled == 360)
         cout << "Congratulations! You have reached destination point!";
     else
