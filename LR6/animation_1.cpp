@@ -1,7 +1,6 @@
 #include<iostream>
 #include<string>
-#include<conio.h>
-#include <stdio.h>/
+#include <stdio.h>
 #include <windows.h>
 using namespace std;
 inline void foo(string* ar);
