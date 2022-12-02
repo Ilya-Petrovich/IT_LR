@@ -50,8 +50,8 @@ int main() {
 	}
 
 	cout << "\nFuel consumption with chosen speed: " << fuelConsuption << " litres per 100 km" << endl;
-	cout  << endl;
-	cout << "Destination result" << endl;
+
+	cout << "\nDestination result" << endl;
 
 	if (s >= 360) {
 		double k = 3.6;
