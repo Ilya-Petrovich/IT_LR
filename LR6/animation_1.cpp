@@ -1,5 +1,5 @@
 #include <iostream>
-#include <windows.h> 
+#include<unistd.h>
 #include <conio.h> 
 #include <string>
 using namespace std;
@@ -108,6 +108,6 @@ void vivod(string* anim) {
         cout << *anim << endl;
         *anim++;
     }
-    Sleep(500);
+    system("clear");
     system("cls");
 }
