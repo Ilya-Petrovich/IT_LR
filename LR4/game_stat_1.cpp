@@ -58,7 +58,7 @@ int main()
 	}
 	else if (speed > maxSpeed)
 	{
-		cout << "Speed so hight, reduction to maximum" << endl;
+		// cout << "Speed so hight, reduction to maximum" << endl;
 		speed = maxSpeed;
 	}
 
