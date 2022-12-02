@@ -1,7 +1,6 @@
 #include<iostream>
 #include<string>
-#include <stdio.h>
-#include <windows.h>
+#include<unistd.h>
 using namespace std;
 inline void foo(string* ar);
 int main()
@@ -62,7 +61,6 @@ int main()
 	ar[5] = "*   ||   *";
 	ar[6] = " --| *|-- ";
 	foo(&ar[0]);
-	system("cls");
 	ar[5] = "    ||    ";
 	ar[6] = "*--| *|--*";
 	foo(&ar[0]);
@@ -81,8 +79,9 @@ void foo(string* ar)
 {
 	for (int i = 0; i < 12; i++)
 	{
-		cout << ar[i] << endl;
+		cout << *ar << endl;
+		*ar++;
 	}
-	Sleep(1000);
-	system("cls");
+	// sleep(1000);
+	// system("cls");
 }
