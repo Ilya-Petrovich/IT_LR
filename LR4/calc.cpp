@@ -7,7 +7,7 @@ int main()
 	int a, b, c;
 	cout << "Type the first number: "; cin >> a;
 	cout << "Type the second number: "; cin >> b;
-	cout << "Type the third numper "; cin >> c;
+	cout << "Type the third number "; cin >> c;
 
 	if(a > 0 and b > 0 and c > 0 and b != 0 and a > b){
 	    cout << a << " + " << b << " = " << a + b << endl;
