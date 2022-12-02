@@ -70,8 +70,8 @@ int main() {
 
 	cout << "Distance traveled: " << s << " km" << endl;
 	cout << "Time spent: " << int(time) << " sec" << endl;
-	cout << "Fuel consumed: " << fuel << " liters" << endl;
-	cout << "Fuel remained: " << fuel2 << " liters" << endl;
+	cout << "Fuel consumed: " << fuel << " litres" << endl;
+	cout << "Fuel remained: " << fuel2 << " litres" << endl;
 	cout << "----------------------------------------" << endl;
 	cout << "You haven't reached destination point. " << 360.0 - s << " km left.\n";
 }
