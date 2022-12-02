@@ -23,7 +23,7 @@ int main()
 		std::cout << n1 << " * " << n2 << " = " << n1 * n2 << std::endl;
 		std::cout << n1 << " / " << n2 << " = " << n1 / n2 << std::endl;
 		std::cout << float(n1) << " / " << float(n2) << " = " << float(n1) / float(n2) << std::endl;
-		std::cout << n1 << " % " << n2 << " = " << n1 % n2 << endl;
+		std::cout << n1 << " % " << n2 << " = " << n1 % n2 << std::endl;
 		std::cout << n1 << " + " << n2 << " * " << n3 << " = " << n1 + n2 * n3 << std::endl;
 		std::cout << "(" << n1 << " + " << n2 << ") * " << n3 << " = " << (n1 + n2) * n3 << std::endl;
 	}
