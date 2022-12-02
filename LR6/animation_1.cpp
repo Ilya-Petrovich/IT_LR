@@ -25,7 +25,7 @@ int main()
 	for (int i = 0; i < 2; i++)
 	{
 		for (int i = 0; i < b; i++) cout << s[i] << "\n"; 
-		//Sleep(1000);
+		//Sleep(300);
 		//system("cls");
 
 		s[6] = " --\\. /-- ";
@@ -33,7 +33,7 @@ int main()
 		s[8] = "   |. |   ";
 
 		for (int i = 0; i < b; i++) cout << s[i] << "\n"; 
-		//Sleep(1000);
+		//Sleep(300);
 		//system("cls");
 
 		s[6] = "  -\\. /---";
@@ -41,7 +41,7 @@ int main()
 		s[8] = "/  |. |   ";
 
 		for (int i = 0; i < b; i++) cout << s[i] << "\n"; 
-		//Sleep(1000);
+		//Sleep(300);
 		//system("cls");
 
 		s[5] = "   _><_  /";
@@ -50,7 +50,7 @@ int main()
 		s[8] = "   |. |   ";
 
 		for (int i = 0; i < b; i++) cout << s[i] << "\n"; 
-		//Sleep(1000);
+		//Sleep(300);
 		//system("cls");
 
 		s[4] = "   \\--/  /";
@@ -60,7 +60,7 @@ int main()
 		s[8] = "/  |. |   ";
 
 		for (int i = 0; i < b; i++) cout << s[i] << "\n"; 
-		//Sleep(1000);
+		//Sleep(300);
 		//system("cls");
 
 		s[4] = "   \\--/  *";
@@ -70,7 +70,7 @@ int main()
 		s[8] = "   |. |   ";
 
 		for (int i = 0; i < b; i++) cout << s[i] << "\n"; 
-		//Sleep(1000);
+		//Sleep(300);
 		//system("cls");
 
 		s[4] = "   \\--/  /";
@@ -79,7 +79,7 @@ int main()
 		s[7] = "   |. |   ";
 
 		for (int i = 0; i < b; i++) cout << s[i] << "\n"; 
-		//Sleep(1000);
+		//Sleep(300);
 		//system("cls");
 
 		s[4] = "   \\--/  *";
@@ -88,7 +88,7 @@ int main()
 		s[7] = "   |. |   ";
 
 		for (int i = 0; i < b; i++) cout << s[i] << "\n"; 
-		//Sleep(1000);
+		//Sleep(300);
 		//system("cls");
 
 		s[4] = "\\  \\--/  /";
@@ -97,13 +97,13 @@ int main()
 		s[7] = "   |. |   ";
 
 		for (int i = 0; i < b; i++) cout << s[i] << "\n"; 
-		//Sleep(1000);
+		//Sleep(300);
 		//system("cls");
 
 		s[4] = "*  \\--/  *";
 
 		for (int i = 0; i < b; i++) cout << s[i] << "\n"; 
-		//Sleep(1000);
+		//Sleep(300);
 		//system("cls");
 
 		s[4] = "   \\--/   ";
@@ -111,21 +111,21 @@ int main()
 		s[6] = " --\\. /-- ";
 
 		for (int i = 0; i < b; i++) cout << s[i] << "\n"; 
-		//Sleep(1000);
+		//Sleep(300);
 		//system("cls");
 
 		s[5] = "   _><_   ";
 		s[6] = "*--\\. /--*";
 
 		for (int i = 0; i < b; i++) cout << s[i] << "\n"; 
-		//Sleep(1000);
+		//Sleep(300);
 		//system("cls");
 
 		s[6] = " --\\. /-- ";
 		s[7] = "*  |. |  *";
 
 		for (int i = 0; i < b; i++) cout << s[i] << "\n"; 
-		//Sleep(1000);
+		//Sleep(300);
 		//system("cls");
 
 		s[6] = "  -\\. /-  ";
@@ -133,7 +133,7 @@ int main()
 		s[8] = "*  |. |  *";
 
 		for (int i = 0; i < b; i++) cout << s[i] << "\n"; 
-		//Sleep(1000);
+		//Sleep(300);
 		//system("cls");
 
 		s[8] = "/  |. |  \\";
