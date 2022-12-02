@@ -5,7 +5,7 @@ int main() {
 	float fuel, speed, s, fuelConsumption, distance_traveled, time_spent, fuel_consumed, fuel_remained, distance_remained;
 	cout << "How much fuel do you have at start? ";
 	cin >> fuel;
-	cout << endl;
+	
 	if (fuel >= 0 && fuel <= 50) {
 		cout << "Car stats" << endl;
 		cout << "Fuel: " << fuel << endl;
