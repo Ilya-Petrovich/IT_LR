@@ -1,5 +1,5 @@
 #include <iostream>
-#include <windows.h>
+#include <unistd.h>
 #include <ctime>
 #include <cmath>
 using namespace std;
@@ -368,7 +368,7 @@ void anim14() {
 		{' ', ' ', ' ', '_', '|', '|', '_', ' ', ' ', ' '}
 	};
 	for (int i = 0; i < 12; i++) {
-		for (int j = 0; j < 10; j+=1) {
+		for (int j = 0; j < 10; j++) {
 			cout << anim[i][j];
 		}
 		cout << endl;
