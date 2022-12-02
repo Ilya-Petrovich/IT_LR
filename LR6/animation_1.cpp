@@ -1,4 +1,5 @@
-﻿#include <bits/stdc++.h>
+﻿#include <iostream>
+#include <bits/stdc++.h>
 #include <unistd.h>
 using namespace std;
 
@@ -6,25 +7,24 @@ const int a = 10, b = 12;
 
 int main()
 {
-	//setlocale(LC_ALL, "rus");
 	string s[b] = {
-		"   _[]_   ",  //  0
-		"   |~~|   ",  //  1
-		"   |oq|   ",  //  2
-		"  (|<>|)  ",  //  3
-		"   \\--/   ", //  4
-		"   _><_   ",  //  5
-		"  -\\. /-  ", //  6
-		" / |. | \\ ", //  7
-		"/  |. |  \\", //  8
-		"   |__|   ",  //  9
-		"    ||    ",  //  10
-		"   _||_   "   //  11
+		"   _[]_   ",  
+		"   |~~|   ",  
+		"   |oq|   ",  
+		"  (|<>|)  ",  
+		"   \\--/   ", 
+		"   _><_   ",  
+		"  -\\. /-  ", 
+		" / |. | \\ ", 
+		"/  |. |  \\", 
+		"   |__|   ",  
+		"    ||    ",  
+		"   _||_   "   
 	};
 
 	for (int i = 0; i < 2; i++)
 	{
-		for (int i = 0; i < b; i++) cout << s[i] << "\n"; // 1
+		for (int i = 0; i < b; i++) cout << s[i] << "\n"; 
 		//Sleep(1000);
 		//system("cls");
 
@@ -32,7 +32,7 @@ int main()
 		s[7] = "/  |. |  \\";
 		s[8] = "   |. |   ";
 
-		for (int i = 0; i < b; i++) cout << s[i] << "\n"; // 2
+		for (int i = 0; i < b; i++) cout << s[i] << "\n"; 
 		//Sleep(1000);
 		//system("cls");
 
@@ -40,7 +40,7 @@ int main()
 		s[7] = " / |. |   ";
 		s[8] = "/  |. |   ";
 
-		for (int i = 0; i < b; i++) cout << s[i] << "\n"; // 3
+		for (int i = 0; i < b; i++) cout << s[i] << "\n"; 
 		//Sleep(1000);
 		//system("cls");
 
@@ -49,7 +49,7 @@ int main()
 		s[7] = "/  |. |   ";
 		s[8] = "   |. |   ";
 
-		for (int i = 0; i < b; i++) cout << s[i] << "\n"; // 4
+		for (int i = 0; i < b; i++) cout << s[i] << "\n"; 
 		//Sleep(1000);
 		//system("cls");
 
@@ -59,7 +59,7 @@ int main()
 		s[7] = " / |. |   ";
 		s[8] = "/  |. |   ";
 
-		for (int i = 0; i < b; i++) cout << s[i] << "\n"; // 5
+		for (int i = 0; i < b; i++) cout << s[i] << "\n"; 
 		//Sleep(1000);
 		//system("cls");
 
@@ -69,7 +69,7 @@ int main()
 		s[7] = "/  |. |   ";
 		s[8] = "   |. |   ";
 
-		for (int i = 0; i < b; i++) cout << s[i] << "\n"; // 7
+		for (int i = 0; i < b; i++) cout << s[i] << "\n"; 
 		//Sleep(1000);
 		//system("cls");
 
@@ -78,7 +78,7 @@ int main()
 		s[6] = "---\\. /-  ";
 		s[7] = "   |. |   ";
 
-		for (int i = 0; i < b; i++) cout << s[i] << "\n"; // 8
+		for (int i = 0; i < b; i++) cout << s[i] << "\n"; 
 		//Sleep(1000);
 		//system("cls");
 
@@ -87,7 +87,7 @@ int main()
 		s[6] = " --\\. /-  ";
 		s[7] = "   |. |   ";
 
-		for (int i = 0; i < b; i++) cout << s[i] << "\n"; // 9
+		for (int i = 0; i < b; i++) cout << s[i] << "\n"; 
 		//Sleep(1000);
 		//system("cls");
 
@@ -96,13 +96,13 @@ int main()
 		s[6] = "  -\\. /-  ";
 		s[7] = "   |. |   ";
 
-		for (int i = 0; i < b; i++) cout << s[i] << "\n"; // 10
+		for (int i = 0; i < b; i++) cout << s[i] << "\n"; 
 		//Sleep(1000);
 		//system("cls");
 
 		s[4] = "*  \\--/  *";
 
-		for (int i = 0; i < b; i++) cout << s[i] << "\n"; // 11
+		for (int i = 0; i < b; i++) cout << s[i] << "\n"; 
 		//Sleep(1000);
 		//system("cls");
 
@@ -110,21 +110,21 @@ int main()
 		s[5] = "*  _><_  *";
 		s[6] = " --\\. /-- ";
 
-		for (int i = 0; i < b; i++) cout << s[i] << "\n"; // 12
+		for (int i = 0; i < b; i++) cout << s[i] << "\n"; 
 		//Sleep(1000);
 		//system("cls");
 
 		s[5] = "   _><_   ";
 		s[6] = "*--\\. /--*";
 
-		for (int i = 0; i < b; i++) cout << s[i] << "\n"; // 13
+		for (int i = 0; i < b; i++) cout << s[i] << "\n"; 
 		//Sleep(1000);
 		//system("cls");
 
 		s[6] = " --\\. /-- ";
 		s[7] = "*  |. |  *";
 
-		for (int i = 0; i < b; i++) cout << s[i] << "\n"; // 14
+		for (int i = 0; i < b; i++) cout << s[i] << "\n"; 
 		//Sleep(1000);
 		//system("cls");
 
@@ -132,13 +132,12 @@ int main()
 		s[7] = " / |. | \\ ";
 		s[8] = "*  |. |  *";
 
-		for (int i = 0; i < b; i++) cout << s[i] << "\n"; // 15
+		for (int i = 0; i < b; i++) cout << s[i] << "\n"; 
 		//Sleep(1000);
 		//system("cls");
 
 		s[8] = "/  |. |  \\";
 	}
-
 	for (int i = 0; i < b; i++) cout << s[i] << "\n";
 	return 0;
 }
