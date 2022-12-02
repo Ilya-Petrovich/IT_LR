@@ -32,7 +32,7 @@ int main()
 	cout << "What speed will you choose? "; cin >> speed;
 	if (speed < 0)
 	{
-		cout << "\nInvalid data.\n";
+		cout << "\nInvalid data." << endl;
 	}
 	else{
 	if (speed > max_speed)
