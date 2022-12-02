@@ -13,6 +13,7 @@ string Probels(int n);
 int main()
 {
 	Dance();
+	return 0;
 }
 
 int Dance()
@@ -28,6 +29,7 @@ int Dance()
 		//Sleep(800);
 		//system("cls");
 	}
+	return 0;
 }
 
 string Probels(int n)

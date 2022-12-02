@@ -38,7 +38,7 @@ int main()
 		}
 	}
 
-
+	return 0;
 
 }
 
@@ -62,6 +62,7 @@ int Dance()
 		//Sleep(800);
 		//system("cls");
 	}
+	return 0;
 }
 
 int Run()
@@ -92,6 +93,7 @@ int Run()
 		//system("cls");
 		i++;
 	}
+	return 0;
 }
 
 int Jump()
@@ -126,6 +128,7 @@ int Jump()
 		//Sleep(1000);
 		//system("cls");
 	}	
+	return 0;
 }
 
 int Ball()
@@ -146,6 +149,7 @@ int Ball()
 		//Sleep(800);
 		//system("cls");
 	}
+	return 0;
 }
 
 string Probels(int n)
