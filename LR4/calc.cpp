@@ -1,5 +1,25 @@
-﻿Сборка начата…
-1>------ Сборка начата: проект: CALC LR4, Конфигурация: Debug x64 ------
-1>CALC LR4.cpp
-1>CALC LR4.vcxproj -> C:\Users\Arthur\source\repos\CALC LR4\x64\Debug\CALC LR4.exe
-========== Сборка: успешно: 1, сбой: 0, в актуальном состоянии: 0, пропущено: 0==========
+﻿#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int a, b, c;
+    cout << "Type the first number = "; cin >> a;
+    cout << "Type the second number = "; cin >> b;
+    cout << "Type the third number = "; cin >> c;
+    if (a > b and a >= 0 and b > 0 and c >= 0)
+    {
+        cout << a << " + " << b << " = " << a + b << endl;
+        cout << a << " - " << b << " = " << a - b << endl;
+        cout << a << " * " << b << " = " << a * b << endl;
+        cout << a << " / " << b << " = " << a / b << endl;
+        cout << a << ".0" << " / " << b << ".0" << " = " << double(a) / double(b) << endl;
+        cout << a << " % " << b << " = " << a % b << endl;
+        cout << a << " + " << b << " * " << c << " = " << a + b * c << endl;
+        cout << "(" << a << " + " << b << ")" << " * " << c << " = " << (a + b) * c << endl;
+    }
+    else {
+        cout << "Invalid data";
+    }
+}
