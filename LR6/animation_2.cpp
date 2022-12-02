@@ -41,6 +41,7 @@ int main()
 	
 	return 0;
 }
+
 void dance(string *firstEl)
 {
 	string *p = new string[h];
@@ -154,6 +155,7 @@ void dance(string *firstEl)
 	
 	delete [] p;
 }
+
 void run(string *firstEl)
 {
 	string *p = new string[h];
@@ -252,6 +254,8 @@ void run(string *firstEl)
 		//usleep(sleep_time * 1000);
 		//system("cls");
 	}
+	
+	for(int i = 0; i < h; i++) cout << p[i] << "\n";
 	
 	delete [] p;
 }
@@ -510,8 +514,8 @@ void solve(string *firstEl)
 		cout << "Sit down and jump: \t3" << endl;
 		cout << "Throw a ball: \t\t4" << endl << endl;
 		cout << "Enter 5 for exit." << endl;
+
 		cin >> n;
-		
 		switch(n)
 		{
 			case 1:
@@ -527,8 +531,14 @@ void solve(string *firstEl)
 				throww(p0);
 				break;
 			case 5:
+				break;	
+			default:
+				cout << "Invalid input.\n";
 				break;
 		}
 	}
+	
+	
 	delete [] p;
+	return;
 }
