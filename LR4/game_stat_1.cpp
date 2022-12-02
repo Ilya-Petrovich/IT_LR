@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cmath>
 using namespace std;
 int main() {
 	float fuel, speed, s, fuelConsumption, distance_traveled, time_spent, fuel_consumed, fuel_remained, distance_remained;
