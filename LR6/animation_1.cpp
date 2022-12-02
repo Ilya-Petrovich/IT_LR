@@ -32,7 +32,7 @@ void dancing(string* firstNum, int amount, int t) {
 	for (int q = 0; q < 2; q++) {
 		//1
 		character[6] = " ---\\/--- ";
-		character[7] = " /  ||  \\ ";
+		character[7] = "/   ||   \\";
 		character[8] = "    ||    ";
 	//	Sleep(t);
 	//	system("cls");

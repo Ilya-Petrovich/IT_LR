@@ -86,7 +86,7 @@ void dancing(string* firstEl, int col, int t) {
 	for (int q = 0; q < 2; q++) {
 		//1
 		character[13] = "* ---\\/--- " + space;
-		character[14] = "* /  ||  \\ " + space;
+		character[14] = "*/   ||   \\" + space;
 		character[15] = "*    ||    " + space;
 		//Sleep(t);
 		//system("cls");
