@@ -14,7 +14,7 @@ int main()
 	int t = 0;
 	cout << "How much fuel do you have at start? "; cin >> fuelValue;
 	if (fuelValue < 0 || fuelValue > 50) {
-		cout << "\nInvalid data." << endl;
+		cout << "\nInvalid data.";
 		return 0;
 	}
 	cout << "\nCar stats" << endl;
@@ -29,7 +29,7 @@ int main()
 	cout << "You have to drive a route 360 km long." << endl;
 	cout << "But first you need to check if you have enough fuel." << endl;
 	if (fuelValue < 26) {
-		fuelValue += 25; 
+		fuelValue += 25;
 		cout << "\nYour fuel before start: " << fuelValue << endl;
 	}
 	cout << "\nWhat speed will you choose? "; cin >> speedValue;
@@ -37,7 +37,7 @@ int main()
 		speedValue = 110;
 	}
 	if (speedValue < 0) {
-		cout << "\nInvalid data." << endl;
+		cout << "\nInvalid data.";
 		exit(0);
 	}
 	cout << "Your speed before start: " << speedValue << " km/h" << endl;
