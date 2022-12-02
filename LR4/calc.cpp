@@ -1,4 +1,5 @@
-#include <iostream>
+#include<iostream>
+#include<cmath>
 using namespace std;
 
 int main() {
@@ -10,7 +11,7 @@ int main() {
 	cout << "Typr the third number: ";
 	cin >> c;
 	
-	if ((a > b) & (a >= 0) & (b > 0) & (c >= 0)) {
+	if ((a > b)& (a >= 0)& (b > 0)& (c >= 0)) {
 		cout << a << " + " << b << " = " << a + b << endl;
 		cout << a << " - " << b << " = " << a - b << endl;
 		cout << a << " * " << b << " = " << a * b << endl;
