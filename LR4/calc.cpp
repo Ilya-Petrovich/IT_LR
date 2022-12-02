@@ -20,6 +20,6 @@ int main()
         cout << "(" << a << " + " << b << ")" << " * " << c << " = " << (a + b) * c << endl;
     }
     else {
-        cout << "Invalid data";
+        cout << "Invalid data" << endl;
     }
 }
