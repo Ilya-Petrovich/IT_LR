@@ -368,7 +368,7 @@ void anim14() {
 		{' ', ' ', ' ', '_', '|', '|', '_', ' ', ' ', ' '}
 	};
 	for (int i = 0; i < 12; i++) {
-		for (int j = 0; j < 10; j++) {
+		for (int j = 0; j < 10; j+=1) {
 			cout << anim[i][j];
 		}
 		cout << endl;
