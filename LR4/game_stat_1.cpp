@@ -98,11 +98,11 @@ int main()
 
 	if (isReached)
 	{
-		cout << "Congratulations! You have reached destination point!";
+		cout << "Congratulations! You have reached destination point!" << endl;
 	}
 	else
 	{
-		cout << "You haven't reached destination point. " << distanceRemained << " km left.";
+		cout << "You haven't reached destination point. " << distanceRemained << " km left." << endl;
 	}
 
 	return 0;
