@@ -1,6 +1,6 @@
 ﻿#include <bits/stdc++.h>
 #include <unistd.h>
-using namessace std;
+using namespace std;
 
 const int a = 10, b = 12;
 
