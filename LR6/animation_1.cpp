@@ -4,7 +4,7 @@
 #include <stdio.h>/
 #include <windows.h>
 using namespace std;
-inline void foo(string *ar);
+inline void foo(string* ar);
 int main()
 {
 	string ar[12];
@@ -20,7 +20,7 @@ int main()
 	string str10 = ar[9] = "    /\\    ";
 	string str11 = ar[10] = "    ||    ";
 	string str12 = ar[11] = "   _||_   ";
-	foo(&ar[0]); 
+	foo(&ar[0]);
 	ar[6] = " --| *|-- ";
 	ar[7] = "/  |  |  \\";
 	ar[8] = "    \\/    ";
@@ -82,8 +82,7 @@ void foo(string* ar)
 {
 	for (int i = 0; i < 12; i++)
 	{
-		cout << (*ar).length() << endl; 
-		cout << *(ar + i) << endl;
+		cout << ar[i] << endl;
 	}
 	Sleep(1000);
 	system("cls");
