@@ -108,6 +108,6 @@ void vivod(string* anim) {
         cout << *anim << endl;
         *anim++;
     }
-    Sleep(1000);
+    Sleep(500);
     system("cls");
 }
