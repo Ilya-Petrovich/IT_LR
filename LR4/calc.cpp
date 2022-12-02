@@ -18,10 +18,10 @@ int main() {
 		std::cout << num_1 << " * " << num_2 << " = " << num_1 * num_2 << std::endl;
 	}
 	else {
-		std::cout << "Invalid data";
+		std::cout << "Invalid data" << std::endl;
 		return 0;
 	}
-	if (num_2 != 0 and num_1 > num_2)
+	if (num_2 != 0)
 	{
 		std::cout << num_1 << " / " << num_2 << " = " << num_1 / num_2 << std::endl;
 		std::cout << num_1 << ".0" << " / " << num_2 << ".0" << " = " << (float)num_1 / num_2 << std::endl;
@@ -29,16 +29,16 @@ int main() {
 
 	}
 	else {
-		std::cout << "Invalid data";
+		std::cout << "Invalid data" << std::endl;
 		return 0;
 	}
-	if (num_1 > num_2 and num_2 > 0 and num_3 >= 0) {
+	if (num_3 >= 0) {
 		std::cout << num_1 << " + " << num_2 << " * " << num_3 << " = " << num_1 + num_2 * num_3 << std::endl;
-		std::cout << "(" << num_1 << " + " << num_2 << ") * " << num_3 << " = " << (num_1 + num_2) * num_3;
+		std::cout << "(" << num_1 << " + " << num_2 << ") * " << num_3 << " = " << (num_1 + num_2) * num_3 << std::endl;
 		return 0;
 	}
 	else {
-		std::cout << "Invalid data";
+		std::cout << "Invalid data" << std::endl;
 		return 0;
 	}
 }
