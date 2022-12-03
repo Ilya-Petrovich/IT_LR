@@ -2,19 +2,15 @@
 
 int main() 
 {
-	int time;
-	float speed, s, fuelConsumption, distance, fuelConsumed, fuelRemained, fuel; 
+	int fuel, time;
+	float speed, s, fuelConsumption, distance, fuelConsumed, fuelRemained; 
 
 	std::cout << "How much fuel do you have at start? ";
 	std::cin >> fuel;
 
-	if (fuel <= 0 or fuel > 50) {
-		std::cout << "\nInvalid data.";
+	if (fuel < 0 or fuel > 50) {
+		std::cout << "\nInvalid data.\n";
 		return 0;
-	}
-
-	if (fuel < 25) {
-		fuel += 25;
 	}
 
 	std::cout << "\nCar stats" << "\nFuel: " << fuel << "\nFuel capacity: 50 \nFuel consumption: 0 \nSpeed: 0 \nMaximum speed: 110 \n ";
@@ -22,6 +18,7 @@ int main()
 	std::cout << "\nYou have to drive a route 360 km long. \nBut first you need to check if you have enough fuel.";
 
 	if (fuel < 25) {
+		fuel += 25;
 		std::cout << "\n \nYour fuel before start: " << fuel;
 	}
 
@@ -57,9 +54,9 @@ int main()
 	std::cout << "\n----------------------------------------";
 
 	if (distance == 360) {
-		std::cout << "\nCongratulations! You have reached destination point!";
+		std::cout << "\nCongratulations! You have reached destination point!\n";
 	} else {
-		std::cout << "\nYou haven't reached destination point. " << 360 - distance << " km left.";
+		std::cout << "\nYou haven't reached destination point. " << 360 - distance << " km left.\n";
 	}	
 
 	return 0;
