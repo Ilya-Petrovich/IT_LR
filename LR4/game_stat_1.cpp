@@ -27,7 +27,7 @@ int main()
 		
 		if(speed<0)
 		{
-			std::cout<<"\nInvalid data"<<std::endl;
+			std::cout<<"\nInvalid data."<<std::endl;
 			return 0;
 		}
 		if(speed>110)
@@ -76,7 +76,7 @@ int main()
 	}
 	else
 	{
-		std::cout<<"Invalid data";
+		std::cout<<"\nInvalid data.";
 	}
 	return 0;
 }

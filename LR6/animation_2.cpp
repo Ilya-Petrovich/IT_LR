@@ -96,7 +96,6 @@ void ball()
 	a[4] = "*" + string(38, ' ') + "*";
 	a[5] = "*  o" + string(35, ' ') + "*";
 	print(a);
-	
 	a[5]="*"+string(38,' ')+"*";
 	a[6]="* o"+string(36,' ')+"*";
 	print(a);
