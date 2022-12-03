@@ -3,11 +3,11 @@
 void head(); void legs();
 void anim0(); void anim1(); void anim2(); void anim3(); void anim4();
 void anim5(); void anim6(); void anim7(); void anim8(); void anim9();
-void anim10(); void anim11(); void anim12(); void anim13(); void anim14();
+void anim10(); void anim11(); void anim12(); void anim13();
 
 int main() {
 	for (int i = 0; i < 29; i++) {
-		system("cls");
+		// system("cls");
 		head();
 		switch (i % 14) {
 			case 0: { anim0(); break; }
@@ -32,111 +32,111 @@ int main() {
 }
 
 void head() {
-	std::cout << "    /\\    " << std::endl;
-	std::cout << "   |oo|   " << std::endl;
-	std::cout << "  (|..|)  " << std::endl;
-	std::cout << "   |--|   " << std::endl;
+	std::cout << "    /\\    \n";
+	std::cout << "   |oo|   \n";
+	std::cout << "  (|..|)  \n";
+	std::cout << "   |--|   \n";
 }
 void legs() {
-	std::cout << "    /\\    " << std::endl;
-	std::cout << "    ||    " << std::endl;
-	std::cout << "   _||_   " << std::endl;
+	std::cout << "    /\\    \n";
+	std::cout << "    ||    \n";
+	std::cout << "   _||_   \n";
 }
 void anim0() {
-	std::cout << "   \\__/   " << std::endl;
-	std::cout << "    ||    " << std::endl;
-	std::cout << "  -| *|-  " << std::endl;
-	std::cout << " / |  | \\ " << std::endl;
-	std::cout << "/   \\/   \\" << std::endl;
+	std::cout << "   \\__/   \n";
+	std::cout << "    ||    \n";
+	std::cout << "  -| *|-  \n";
+	std::cout << " / |  | \\ \n";
+	std::cout << "/   \\/   \\\n";
 }
 void anim1() {
-	std::cout << "   \\__/   " << std::endl;
-	std::cout << "    ||    " << std::endl;
-	std::cout << " --| *|-- " << std::endl;
-	std::cout << "/  | *|  \\" << std::endl;
-	std::cout << "    \\/    " << std::endl;
+	std::cout << "   \\__/   \n";
+	std::cout << "    ||    \n";
+	std::cout << " --| *|-- \n";
+	std::cout << "/  | *|  \\\n";
+	std::cout << "    \\/    \n";
 }
 void anim2() {
-	std::cout << "   \\__/   " << std::endl;
-	std::cout << "    ||    " << std::endl;
-	std::cout << "  -| *|---" << std::endl;
-	std::cout << " / |  |   " << std::endl;
-	std::cout << "/   \\/    " << std::endl;
+	std::cout << "   \\__/   \n";
+	std::cout << "    ||    \n";
+	std::cout << "  -| *|---\n";
+	std::cout << " / |  |   \n";
+	std::cout << "/   \\/    \n";
 }
 void anim3() {
-	std::cout << "   \\__/   " << std::endl;
-	std::cout << "    ||   /" << std::endl;
-	std::cout << " --| *|-- " << std::endl;
-	std::cout << "/  |  |   " << std::endl;
-	std::cout << "    \\/     " << std::endl;
+	std::cout << "   \\__/   \n";
+	std::cout << "    ||   /\n";
+	std::cout << " --| *|-- \n";
+	std::cout << "/  |  |   \n";
+	std::cout << "    \\/     \n";
 }
 void anim4() {
-	std::cout << "   \\__/  /" << std::endl;
-	std::cout << "    ||  / " << std::endl;
-	std::cout << "  -| *|-  " << std::endl;
-	std::cout << " / |  |   " << std::endl;
-	std::cout << "/   \\/    " << std::endl;
+	std::cout << "   \\__/  /\n";
+	std::cout << "    ||  / \n";
+	std::cout << "  -| *|-  \n";
+	std::cout << " / |  |   \n";
+	std::cout << "/   \\/    \n";
 }
 void anim5() {
-	std::cout << "   \\__/  *" << std::endl;
-	std::cout << "    ||  / " << std::endl;
-	std::cout << " --| *|-  " << std::endl;
-	std::cout << "/  |  |   " << std::endl;
-	std::cout << "    \\/    " << std::endl;
+	std::cout << "   \\__/  *\n";
+	std::cout << "    ||  / \n";
+	std::cout << " --| *|-  \n";
+	std::cout << "/  |  |   \n";
+	std::cout << "    \\/    \n";
 }
 void anim6() {
-	std::cout << "   \\__/  /" << std::endl;
-	std::cout << "    ||  / " << std::endl;
-	std::cout << "---| *|-  " << std::endl;
-	std::cout << "   |  |   " << std::endl;
-	std::cout << "    \\/    " << std::endl;
+	std::cout << "   \\__/  /\n";
+	std::cout << "    ||  / \n";
+	std::cout << "---| *|-  \n";
+	std::cout << "   |  |   \n";
+	std::cout << "    \\/    \n";
 }
 void anim7() {
-	std::cout << "   \\__/  *" << std::endl;
-	std::cout << "\\   ||  / " << std::endl;
-	std::cout << " --| *|-  " << std::endl;
-	std::cout << "   |  |   " << std::endl;
-	std::cout << "    \\/     " << std::endl;
+	std::cout << "   \\__/  *\n";
+	std::cout << "\\   ||  / \n";
+	std::cout << " --| *|-  \n";
+	std::cout << "   |  |   \n";
+	std::cout << "    \\/     \n";
 }
 void anim8() {
-	std::cout << "\\  \\__/  /" << std::endl;
-	std::cout << " \\  ||  / " << std::endl;
-	std::cout << "  -| *|-  " << std::endl;
-	std::cout << "   |  |   " << std::endl;
-	std::cout << "    \\/     " << std::endl;
+	std::cout << "\\  \\__/  /\n";
+	std::cout << " \\  ||  / \n";
+	std::cout << "  -| *|-  \n";
+	std::cout << "   |  |   \n";
+	std::cout << "    \\/     \n";
 }
 void anim9() {
-	std::cout << "*  \\__/  *" << std::endl;
-	std::cout << " \\  ||  / " << std::endl;
-	std::cout << "  -| *|-  " << std::endl;
-	std::cout << "   |  |   " << std::endl;
-	std::cout << "    \\/    " << std::endl;
+	std::cout << "*  \\__/  *\n";
+	std::cout << " \\  ||  / \n";
+	std::cout << "  -| *|-  \n";
+	std::cout << "   |  |   \n";
+	std::cout << "    \\/    \n";
 }
 void anim10() {
-	std::cout << "   \\__/   " << std::endl;
-	std::cout << "*   ||   *" << std::endl;
-	std::cout << " --| *|-- " << std::endl;
-	std::cout << "   |  |   " << std::endl;
-	std::cout << "    \\/    " << std::endl;
+	std::cout << "   \\__/   \n";
+	std::cout << "*   ||   *\n";
+	std::cout << " --| *|-- \n";
+	std::cout << "   |  |   \n";
+	std::cout << "    \\/    \n";
 }
 void anim11() {
-	std::cout << "   \\__/   " << std::endl;
-	std::cout << "    ||    " << std::endl;
-	std::cout << "*--| *|--*" << std::endl;
-	std::cout << "   |  |   " << std::endl;
-	std::cout << "    \\/    " << std::endl;
+	std::cout << "   \\__/   \n";
+	std::cout << "    ||    \n";
+	std::cout << "*--| *|--*\n";
+	std::cout << "   |  |   \n";
+	std::cout << "    \\/    \n";
 }
 void anim12() {
-	std::cout << "   \\__/   " << std::endl;
-	std::cout << "    ||    " << std::endl;
-	std::cout << " --| *|-- " << std::endl;
-	std::cout << "*  |  |  *" << std::endl;
-	std::cout << "    \\/    " << std::endl;
+	std::cout << "   \\__/   \n";
+	std::cout << "    ||    \n";
+	std::cout << " --| *|-- \n";
+	std::cout << "*  |  |  *\n";
+	std::cout << "    \\/    \n";
 }
 void anim13() {
-	std::cout << "   \\__/   " << std::endl;
-	std::cout << "    ||    " << std::endl;
-	std::cout << "  -| *|-  " << std::endl;
-	std::cout << " / |  | \\ " << std::endl;
-	std::cout << "*   \\/   *" << std::endl;
+	std::cout << "   \\__/   \n";
+	std::cout << "    ||    \n";
+	std::cout << "  -| *|-  \n";
+	std::cout << " / |  | \\ \n";
+	std::cout << "*   \\/   *\n";
 }
