@@ -5,20 +5,18 @@ int main() {
 	float Speed, prasst, ostrast = 0, fuelcons, fuelrem;
 	double fuelConsumption;
 	cout << "How much fuel do you have at start? "; cin >> fuel;
+	cout << endl;
+	cout << "Car stats" << endl;
+	cout << "Fuel: " << fuel << endl;
 	int firstfuel = fuel;
 	if (fuel < 0 || fuel > 50) {
 		cout << endl;
 		cout << "Invalid data." << endl;
 		return 1;
 	}
-	else {
-		if (fuel < maxfuel / 2) {
-			fuel += maxfuel / 2;
-		}
+	if (fuel < maxfuel / 2) {
+	fuel += maxfuel / 2;
 	}
-	cout << endl;
-	cout << "Car stats" << endl;
-	cout << "Fuel: " << fuel << endl;
 	cout << "Fuel capacity: " << maxfuel << endl;
 	cout << "Fuel consumption: " << 0 << endl;
 	cout << "Speed: " << 0 << endl;
