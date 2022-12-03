@@ -26,7 +26,7 @@ void legs() {
     std::cout << "   _||_   \n";
 }
 void dance() {
-    for (int k = 0; k < 28; k++) {
+    for (int k = 0; k <= 28; k++) {
         //del_one_frame();
         head();
         switch (k%14) {
