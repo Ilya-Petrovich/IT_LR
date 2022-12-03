@@ -5,7 +5,7 @@ using namespace std;
 void readText(char* buff, long fileSize) {
 	
 	FILE* file;
-	char filename[100] = "masked_image.bmp";
+	char filename[100] = "image.bmp";
 	file = fopen(filename, "rb");
 	
 	fread(buff, sizeof(char), fileSize, file);
@@ -14,7 +14,7 @@ void readText(char* buff, long fileSize) {
 int main()
 {
 	FILE* file;
-	char filename[100] = "masked_image.bmp";
+	char filename[100] = "image.bmp";
 	file = fopen(filename, "rb");
 	
 	long fileSize;
