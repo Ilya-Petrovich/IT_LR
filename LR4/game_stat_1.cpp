@@ -1,18 +1,14 @@
 ﻿#include <iostream>
-
 using namespace std;
 
 int main()
 {
 	const float max_speed = 110, fuel_capacity = 50, distance = 360;
-
 	float fuelConsumption, s, speed, distance_left;
-
 	float fuel, distance_traveled, fuel_consumed, fuel_remained;
 
 	cout << "How much fuel do you have at start? "; cin >> fuel;
 	
-
 	if (0 <= fuel && fuel < fuel_capacity) {
 		cout << "\nCar stats";
 		cout << "\nFuel: " << fuel;
@@ -39,8 +35,7 @@ int main()
 
 		if (speed <= 0) {
 			cout << "\nInvalid data";
-		}
-		else {
+		} else {
 			cout << "\nYour speed before start: " << speed << " km/h";
 
 			s = speed / 10;
@@ -81,7 +76,6 @@ int main()
 		}
 	} 
 	else cout << "Invalid data" << endl;
-
 	
-	
+	return 0;
 }
