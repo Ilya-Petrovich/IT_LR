@@ -1,5 +1,4 @@
-#include <iostream>//N1.1
-#include <Windows.h>
+#include <iostream>
 using namespace std;
 void dance()
 {
