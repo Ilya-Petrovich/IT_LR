@@ -1,7 +1,7 @@
 ﻿#include<iostream>
 #include<vector>
 #include<string>
-#include<windows.h>
+#include<unistd.h>
 using namespace std;
 void print(vector<string>a)
 {
@@ -374,7 +374,7 @@ void dance()
 	int i = 0;
 	print(a);
 	
-	while (i != 2)
+	while (i < 2)
 	{
 		
 		a[13] = "* ---\\/--- " + string(28, ' ') + "*";
