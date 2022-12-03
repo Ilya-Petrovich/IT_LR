@@ -1,4 +1,4 @@
-﻿#include <iostream> // библиотека ввода и вывода
+﻿#include <iostream>
 
 using namespace std;
 
@@ -8,9 +8,9 @@ int main()
 
 	float fuelConsumption, s, speed, distance_left;
 
-	float fuel, distance_traveled, fuel_consumed, fuel_remained; // ввод переменных
+	float fuel, distance_traveled, fuel_consumed, fuel_remained;
 
-	cout << "How much fuel do you have at start? "; cin >> fuel; // запрос начального количества топлива и его ввод
+	cout << "How much fuel do you have at start? "; cin >> fuel;
 	
 
 	if (0 <= fuel && fuel < fuel_capacity) {
