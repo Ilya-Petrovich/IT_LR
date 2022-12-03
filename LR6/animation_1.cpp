@@ -1,11 +1,10 @@
 #include <iostream>
 #include <stdio.h>
-#include <tchar.h>
 #include <unistd.h>
 #include <array>
 #include <conio.h>
 
-using namespace std;
+using namespace std; 
 int main()
 { 
   int i = 0;
