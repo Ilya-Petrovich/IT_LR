@@ -12,7 +12,7 @@ int main() {
 	
 	if (fuel >= 0 && fuel <= 50) {
 		cout << "Car stats" << endl;
-		printf("Fuel: %d", fuel); cout << "\n";
+		printf("Fuel: %d", fuel); cout << "\n";f
 		printf("Fuel capacity: 50"); cout << "\n";
 		printf("Fuel consumption: 0"); cout << "\n";
 		printf("Speed: 0"); cout << "\n";
