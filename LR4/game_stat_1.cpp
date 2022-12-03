@@ -71,9 +71,9 @@ int main()
 		cout << "Fuel remained: " << (int)fuel - fuelConsumed << " litres" << endl;
 		cout << "----------------------------------------------" << endl;
 		if (pointReached)
-			cout << "Congratulations! You have reached destination point!";
+			cout << "Congratulations! You have reached destination point!" << endl;
 		else
-			cout << "You haven`t reached destination point. " << distance - distanceTraveled << " km left.";
+			cout << "You haven`t reached destination point. " << distance - distanceTraveled << " km left." << endl;
 	}
 	else
 	{
