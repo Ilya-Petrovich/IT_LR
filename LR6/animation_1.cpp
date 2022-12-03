@@ -9,7 +9,6 @@ void ShowArray(char pers[12][11], int height, int width) {
 		for (int j = 0; j < width; j++) {
 			cout << pers[i][j];
 		}
-
 		cout << endl;
 	}
 }
