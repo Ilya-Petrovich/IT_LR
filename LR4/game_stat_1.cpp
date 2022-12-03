@@ -8,7 +8,7 @@ int main() {
     std::cout << std::endl;
 
     if ((fuel < 0) or (fuel > 50)) {
-        std::cout << "Invalid data";
+        std::cout << "Invalid data" << std::endl;
         return 0;
     }
 
