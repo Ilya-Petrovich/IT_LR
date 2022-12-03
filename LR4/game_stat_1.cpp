@@ -5,6 +5,7 @@ int main() {
 	float Speed, prasst, ostrast = 0, fuelcons, fuelrem;
 	double fuelConsumption;
 	cout << "How much fuel do you have at start? "; cin >> fuel;
+	int firstfuel = fuel;
 	if (fuel < 0 || fuel > 50) {
 		cout << endl;
 		cout << "Invalid data." << endl;
@@ -29,6 +30,10 @@ int main() {
 	cout << "You have to drive a route 360 km long." << endl;
 	cout << "But first you need to check if you have enough fuel." << endl;
 	cout << endl;
+	if (firstfuel < fuel) {
+		cout << "Your fuel before start: " << fuel << endl;
+		cout << endl;
+	}
 	cout << "What speed will you choose? "; cin >> Speed;
 	if (Speed > maxspeed) {
 		Speed = maxspeed;
