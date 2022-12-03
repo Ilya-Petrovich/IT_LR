@@ -1,6 +1,6 @@
 #include<iostream>
 //#include<windows.h>
-#include<unistd.h>
+//#include<unistd.h>
 
 using namespace std;
 
@@ -22,6 +22,7 @@ void SSS(char pers[][11], int t) {
 
 int main() {
 	const int h = 12, w = 11, t = 750;
+
 	char pers[h][w]{
 		{"   _[]_   "},
 		{"   |~~|   "},
