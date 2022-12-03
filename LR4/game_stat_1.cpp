@@ -45,8 +45,11 @@ int main() {
 
     s = speed / 10.;
     fuelConsumption = s * s / 4 - 4.5 * s + 30;
+    if (speed == 0) {
+        fuelConsumption = 0;
+    }
 
-    std::cout << "Fuel consumption with chosen speed: " << fuelConsumption << " litres per 100 km" << std::endl;
+    std::cout << "Fuel consumption with chosen speed: " << fuelConsumption << " litres per 100 km" << std::endl; //94 в 5 проверке
     std::cout << std::endl;
 
     if (speed > 0) {
@@ -76,7 +79,7 @@ int main() {
     std::cout << "Distance traveled: " << distanceTraveled << " km" << std::endl;
     std::cout << "Time spent: " << time << " sec" << std::endl;
     std::cout << "Fuel consumed: " << fuelConsumed << " litres" << std::endl; //затраченное топливо
-    std::cout << "Fuel remained: " << fuelRemained << " litres" << std::endl; //оставшееся топливо //ошибка в 4 проверке (считается как 75 строка)
+    std::cout << "Fuel remained: " << fuelRemained << " litres" << std::endl; //оставшееся топливо //в 4 проверке считается как 75 строка
     std::cout << "----------------------------------------" << std::endl;
 
     if (distanceTraveled < 360) {
