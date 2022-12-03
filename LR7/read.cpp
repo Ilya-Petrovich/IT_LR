@@ -3,7 +3,7 @@
 using namespace std;
 void ReadText(char* buff, long fSize);
 int main()
-{	
+{
 	FILE* file;
 	file = fopen("image.bmp", "rb");
 	long fSize;
