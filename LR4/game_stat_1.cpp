@@ -32,11 +32,11 @@ int main()
 		fuelRemined = fuel;
 		
 		std::cout << "Your speed before start: " << speed << " km/h\n\n";
-		std::cout << "Fuel consuption with chosen speed: " << fuelConsumption << " liters per 100 km\n";
+		std::cout << "Fuel consmuption with chosen speed: " << fuelConsumption << " litres per 100 km\n";
 		std::cout << "\nDestination result\nDistance traveled: " << distanceTraveled << " km\n";
 		std::cout << "Time spent: " << timeSpent << " sec\n";
-		std::cout << "Fuel consumed: " << fuelConsumed << " liters\n";
-		std::cout << "Fuel remined: " << fuelRemined << " liters\n";
+		std::cout << "Fuel consumed: " << fuelConsumed << " litres\n";
+		std::cout << "Fuel remined: " << fuelRemined << " litres\n";
 		std::cout << "----------------------------------------\n";
 		std::cout << "You haven't reached destination point. 360 km left.";
 	}
@@ -53,7 +53,7 @@ int main()
 	if (speed != 0) timeSpent = distanceTraveled * 1. / speed * 3600;
 	else timeSpent = 0;
 	
-	std::cout << "Fuel consuption with chosen speed: " << fuelConsumption << " liters per 100 km\n";
+	std::cout << "Fuel consumption with chosen speed: " << fuelConsumption << " litres per 100 km\n";
 	std::cout << "\nDestination result\nDistance traveled: " << distanceTraveled << " km\n";
 	std::cout << "Time spent: " << timeSpent << " sec\n";
 	
@@ -61,12 +61,12 @@ int main()
 	(fuelRemined > 0 && speed != 0) ? flag = true : flag = false;
 	if (!flag) fuelRemined = 0;
 	
-	std::cout << "Fuel consumed: " << fuelConsumed << " liters\n";
-	std::cout << "Fuel remined: " << fuelRemined << " liters\n";
+	std::cout << "Fuel consumed: " << fuelConsumed << " litres\n";
+	std::cout << "Fuel remained: " << fuelRemined << " litres\n";
 	std::cout << "----------------------------------------\n";
 	
-	if (flag) std::cout << "Congratulation! You have reached destantion point!\n";
-	else std::cout << "You haven't reached destination point. " << std::fixed << std::setprecision(2) << distance - distanceTraveled << " km left.\n";
+	if (flag) std::cout << "Congratulations! You have reached destination point!\n";
+	else std::cout << "You haven't reached destination point. " << distance - distanceTraveled << " km left.\n";
 	}
 	return 0;
 }
