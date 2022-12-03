@@ -19,7 +19,7 @@ int main()
         cout << R"(                  /  \                  )" << endl;
         cout << R"(                  |  |                  )" << endl; 
         cout << R"(                  |  |                  )" << endl;
-        //Sleep(1000);
+        //sleep(1000);
         //system("cls");    
         cout << R"(               (  )  (  )               )" << endl;
         cout << R"(               (  )  (  )               )" << endl;
@@ -33,7 +33,7 @@ int main()
         cout << R"(                  /  \                  )" << endl;
         cout << R"(                  |  |                  )" << endl; 
         cout << R"(                  |  |                  )" << endl;
-        //Sleep(1000);
+        //sleep(1000);
         //system("cls");   
         cout << R"(               (  )  (  )               )" << endl;
         cout << R"(               (  )  (  )               )" << endl;
@@ -47,7 +47,7 @@ int main()
         cout << R"(                  /  \                  )" << endl;
         cout << R"(                  |  |                  )" << endl; 
         cout << R"(                  |  |                  )" << endl;
-        //Sleep(1000);
+        //sleep(1000);
         //system("cls");
         cout << R"(               (  )  (  )               )" << endl;
         cout << R"(               (  )  (  )               )" << endl;
@@ -61,7 +61,7 @@ int main()
         cout << R"(                  /  \                  )" << endl;
         cout << R"(                  |  |                  )" << endl; 
         cout << R"(                  |  |                  )" << endl;
-        //Sleep(1000);
+        //sleep(1000);
         //system("cls");  
         cout << R"(               (  )  (  )               )" << endl;
         cout << R"(               (  )  (  )               )" << endl;
@@ -75,7 +75,7 @@ int main()
         cout << R"(                  /  \                  )" << endl;
         cout << R"(                  |  |                  )" << endl; 
         cout << R"(                  |  |                  )" << endl;
-        //Sleep(1000);
+        //sleep(1000);
         //system("cls"); 
         cout << R"(               (  )  (  )               )" << endl;
         cout << R"(               (  )  (  )               )" << endl;
@@ -89,8 +89,8 @@ int main()
         cout << R"(                  /  \                  )" << endl;
         cout << R"(                  |  |                  )" << endl; 
         cout << R"(                  |  |                  )" << endl;
-        Sleep(1000);
-        system("cls");  
+        //sleep(1000);
+        //system("cls");  
         cout << R"(               (  )  (  )               )" << endl;
         cout << R"(               (  )  (  )               )" << endl;
         cout << R"(               (  )  (  )               )" << endl;
@@ -103,7 +103,7 @@ int main()
         cout << R"(                  /  \                  )" << endl;
         cout << R"(                  |  |                  )" << endl; 
         cout << R"(                  |  |                  )" << endl;
-        //Sleep(1000);
+        //sleep(1000);
         //system("cls");
         cout << R"(               (  )  (  )               )" << endl;
         cout << R"(               (  )  (  )               )" << endl;
@@ -117,7 +117,7 @@ int main()
         cout << R"(                  /  \                  )" << endl;
         cout << R"(                  |  |                  )" << endl; 
         cout << R"(                  |  |                  )" << endl;
-        //Sleep(1000);
+        //sleep(1000);
         //system("cls");
         cout << R"(               (  )  (  )               )" << endl;
         cout << R"(               (  )  (  )               )" << endl;
@@ -131,7 +131,7 @@ int main()
         cout << R"(                  /  \                  )" << endl;
         cout << R"(                  |  |                  )" << endl; 
         cout << R"(                  |  |                  )" << endl;
-        //Sleep(1000);
+        //sleep(1000);
         //system("cls");
         cout << R"(               (  )  (  )               )" << endl;
         cout << R"(               (  )  (  )               )" << endl;
@@ -145,7 +145,7 @@ int main()
         cout << R"(                  /  \                  )" << endl;
         cout << R"(                  |  |                  )" << endl; 
         cout << R"(                  |  |                  )" << endl;
-        //Sleep(1000);
+        //sleep(1000);
         //system("cls");
         cout << R"(               (  )  (  )               )" << endl;
         cout << R"(               (  )  (  )               )" << endl;
@@ -159,7 +159,7 @@ int main()
         cout << R"(                  /  \                  )" << endl;
         cout << R"(                  |  |                  )" << endl; 
         cout << R"(                  |  |                  )" << endl;
-        //Sleep(1000);
+        //sleep(1000);
         //system("cls");
         cout << R"(               (  )  (  )               )" << endl;
         cout << R"(               (  )  (  )               )" << endl;
@@ -173,7 +173,7 @@ int main()
         cout << R"(                  /  \                  )" << endl;
         cout << R"(                  |  |                  )" << endl; 
         cout << R"(                  |  |                  )" << endl;
-        //Sleep(1000);
+        //sleep(1000);
         //system("cls");
         cout << R"(               (  )  (  )               )" << endl;
         cout << R"(               (  )  (  )               )" << endl;
@@ -187,7 +187,7 @@ int main()
         cout << R"(                  /  \                  )" << endl;
         cout << R"(                  |  |                  )" << endl; 
         cout << R"(                  |  |                  )" << endl;
-        //Sleep(1000);
+        //sleep(1000);
         //system("cls");
         cout << R"(               (  )  (  )               )" << endl;
         cout << R"(               (  )  (  )               )" << endl;
@@ -201,7 +201,7 @@ int main()
         cout << R"(                  /  \                  )" << endl;
         cout << R"(                  |  |                  )" << endl; 
         cout << R"(                  |  |                  )" << endl;
-        //Sleep(1000);
+        //sleep(1000);
         //system("cls");
         cout << R"(               (  )  (  )               )" << endl;
         cout << R"(               (  )  (  )               )" << endl;
@@ -215,7 +215,7 @@ int main()
         cout << R"(                  /  \                  )" << endl;
         cout << R"(                  |  |                  )" << endl; 
         cout << R"(                  |  |                  )" << endl;
-        //Sleep(1000);
+        //sleep(1000);
         //system("cls");
         cout << R"(               (  )  (  )               )" << endl;
         cout << R"(               (  )  (  )               )" << endl;
@@ -229,7 +229,7 @@ int main()
         cout << R"(                  /  \                  )" << endl;
         cout << R"(                  |  |                  )" << endl; 
         cout << R"(                  |  |                  )" << endl;
-        //Sleep(1000);
+        //sleep(1000);
         //system("cls");
         cout << R"(               (  )  (  )               )" << endl;
         cout << R"(               (  )  (  )               )" << endl;
@@ -243,7 +243,7 @@ int main()
         cout << R"(                  /  \                  )" << endl;
         cout << R"(                  |  |                  )" << endl; 
         cout << R"(                  |  |                  )" << endl;
-        //Sleep(1000);
+        //sleep(1000);
         //system("cls");
         cout << R"(               (  )  (  )               )" << endl;
         cout << R"(               (  )  (  )               )" << endl;
@@ -257,7 +257,7 @@ int main()
         cout << R"(                  /  \                  )" << endl;
         cout << R"(                  |  |                  )" << endl; 
         cout << R"(                  |  |                  )" << endl;
-        //Sleep(1000);
+        //sleep(1000);
         //system("cls");
         cout << R"(               (  )  (  )               )" << endl;
         cout << R"(               (  )  (  )               )" << endl;
@@ -271,7 +271,7 @@ int main()
         cout << R"(                  /  \                  )" << endl;
         cout << R"(                  |  |                  )" << endl; 
         cout << R"(                  |  |                  )" << endl;
-        //Sleep(1000);
+        //sleep(1000);
         //system("cls");
         cout << R"(               (  )  (  )               )" << endl;
         cout << R"(               (  )  (  )               )" << endl;
@@ -285,7 +285,7 @@ int main()
         cout << R"(                  /  \                  )" << endl;
         cout << R"(                  |  |                  )" << endl; 
         cout << R"(                  |  |                  )" << endl;
-        //Sleep(1000);
+        //sleep(1000);
         //system("cls");
         cout << R"(               (  )  (  )               )" << endl;
         cout << R"(               (  )  (  )               )" << endl;
@@ -299,7 +299,7 @@ int main()
         cout << R"(                  /  \                  )" << endl;
         cout << R"(                  |  |                  )" << endl; 
         cout << R"(                  |  |                  )" << endl;
-        //Sleep(1000);
+        //sleep(1000);
         //system("cls");
         cout << R"(               (  )  (  )               )" << endl;
         cout << R"(               (  )  (  )               )" << endl;
@@ -313,7 +313,7 @@ int main()
         cout << R"(                  /  \                  )" << endl;
         cout << R"(                  |  |                  )" << endl; 
         cout << R"(                  |  |                  )" << endl;
-        //Sleep(1000);
+        //sleep(1000);
         //system("cls");
         cout << R"(               (  )  (  )               )" << endl;
         cout << R"(               (  )  (  )               )" << endl;
@@ -327,7 +327,7 @@ int main()
         cout << R"(                  /  \                  )" << endl;
         cout << R"(                  |  |                  )" << endl; 
         cout << R"(                  |  |                  )" << endl;
-        //Sleep(1000);
+        //sleep(1000);
         //system("cls");
         cout << R"(               (  )  (  )               )" << endl;
         cout << R"(               (  )  (  )               )" << endl;
@@ -341,7 +341,7 @@ int main()
         cout << R"(                  /  \                  )" << endl;
         cout << R"(                  |  |                  )" << endl; 
         cout << R"(                  |  |                  )" << endl;
-        //Sleep(1000);
+        //sleep(1000);
         //system("cls");
         cout << R"(               (  )  (  )               )" << endl;
         cout << R"(               (  )  (  )               )" << endl;
@@ -355,7 +355,7 @@ int main()
         cout << R"(                  /  \                  )" << endl;
         cout << R"(                  |  |                  )" << endl; 
         cout << R"(                  |  |                  )" << endl;
-        //Sleep(1000);
+        //sleep(1000);
         //system("cls");
         cout << R"(               (  )  (  )               )" << endl;
         cout << R"(               (  )  (  )               )" << endl;
@@ -369,7 +369,7 @@ int main()
         cout << R"(                  /  \                  )" << endl;
         cout << R"(                  |  |                  )" << endl; 
         cout << R"(                  |  |                  )" << endl;
-        //Sleep(1000);
+        //sleep(1000);
         //system("cls");
         cout << R"(               (  )  (  )               )" << endl;
         cout << R"(               (  )  (  )               )" << endl;
@@ -383,7 +383,7 @@ int main()
         cout << R"(                  /  \                  )" << endl;
         cout << R"(                  |  |                  )" << endl; 
         cout << R"(                  |  |                  )" << endl;
-        //Sleep(1000);
+        //sleep(1000);
         //system("cls");
         cout << R"(               (  )  (  )               )" << endl;
         cout << R"(               (  )  (  )               )" << endl;
@@ -397,7 +397,7 @@ int main()
         cout << R"(                  /  \                  )" << endl;
         cout << R"(                  |  |                  )" << endl; 
         cout << R"(                  |  |                  )" << endl;
-        //Sleep(1000);
+        //sleep(1000);
         //system("cls");
         cout << R"(               (  )  (  )               )" << endl;
         cout << R"(               (  )  (  )               )" << endl;
@@ -411,7 +411,7 @@ int main()
         cout << R"(                  /  \                  )" << endl;
         cout << R"(                  |  |                  )" << endl; 
         cout << R"(                  |  |                  )" << endl;
-        //Sleep(1000);
+        //sleep(1000);
         //system("cls");
   }
 
