@@ -77,7 +77,8 @@ int main()
                 speed == 0 ? time = 0 : time = (float)distanceTraveled * 1000 / speedMS; 
 				
 		speed == 0 ? distanceTraveled = 0: distanceTraveled;
-		cout << "\nDestination result" << endl;
+		cout << endl;
+		cout << "Destination result" << endl;
 		cout << "Distance traveled: " << distanceTraveled << " km" << endl;
 		cout << "Time spent: " << time << " sec" << endl;
 		cout << "Fuel consumed: " << fuelConsumed << " litres" << endl;
