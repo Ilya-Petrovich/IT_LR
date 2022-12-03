@@ -3,6 +3,7 @@
 #include <ctime>
 #include <cmath>
 #include <string>
+//#include <windows.h>
 using namespace std;
 
 int Dance();
