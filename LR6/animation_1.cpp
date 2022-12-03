@@ -9,6 +9,7 @@ void ShowArray(char pers[12][11], int height, int width) {
 		for (int j = 0; j < width; j++) {
 			cout << pers[i][j];
 		}
+
 		cout << endl;
 	}
 }
@@ -19,10 +20,11 @@ void SSS(char pers[][11], int t) {
 	//system("cls");
 }
 
+
 int main() {
 	const int h = 12, w = 11, t = 750;
 
-	char pers[h][w]{
+	char pers[h][w] {
 		{"   _[]_   "},
 		{"   |~~|   "},
 		{"   |oq|   "},
@@ -120,6 +122,7 @@ int main() {
 		pers[8][0] = '/'; pers[8][9] = '\\';
 
 		SSS(pers, t);
+
 	}
 }
 
