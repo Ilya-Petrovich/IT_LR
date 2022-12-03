@@ -29,7 +29,8 @@ int main() {
 		std::cin >> speed;
 
 		if (speed < 0) {
-			std::cout << "\nInvalid data";
+			std::cout << "\nInvalid data.";
+			return 0;
 		} else if (speed > 110) {
 				speed = 110;
 			}
@@ -69,6 +70,7 @@ int main() {
 			std::cout << "\nDistance traveled: " << S << " km";
 		} else {
 			S = 0;
+			consumed = 0;
 			std::cout << "\nDistance traveled 0 km";
 		}
 
@@ -82,7 +84,7 @@ int main() {
 		} else if (S == 0) {
 			std::cout << "\nYou haven't reached destination point. 360 km left.";
 		} else if (S < 360) {
-			std::cout << "\nYou haven't reached destination point. " << (double)(int)((((360 - S) * 10000) / 10000) + 0.5) << " km left.";
+			std::cout << "\nYou haven't reached destination point. " << ((((360 - S) * 10000) / 10000)) << " km left.";
 		}
 	}
 return 0;
