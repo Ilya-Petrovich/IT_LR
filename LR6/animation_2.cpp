@@ -541,6 +541,7 @@ void solve(string *firstEl)
 		}
 	}
 	
+	
 	delete [] p;
 	return;
 }
