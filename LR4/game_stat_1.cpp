@@ -1,8 +1,8 @@
 #include <iostream>
 
 int main() {
-    int fuel, speed, time; 
-    double fuelConsumption, s, fuelConsumed, fuelRemained, distanceTraveled;
+    int speed, time;
+    float fuelConsumption, s, fuelConsumed, fuelRemained, distanceTraveled, fuel;
 
     std::cout << "How much fuel do you have at start? "; std::cin >> fuel;
     std::cout << std::endl;
@@ -50,13 +50,17 @@ int main() {
     std::cout << std::endl;
 
     if (speed > 0) {
-        fuelConsumed = 360 * fuelConsumption / 100;
+        distanceTraveled = fuel / fuelConsumption * 100;
+        if (distanceTraveled >= 360) {
+            distanceTraveled = 360;
+        }
+        fuelConsumed = fuelConsumption * (distanceTraveled / 100);
         fuelRemained = fuel - fuelConsumed;
         if (fuelRemained < 0) {
             fuelConsumed = fuel;
             fuelRemained = 0;
         }
-        distanceTraveled = fuelConsumed * 100 / fuelConsumption;
+        //distanceTraveled = fuel / fuelConsumption * 100;
         time = distanceTraveled / speed * 60 * 60;
     }
 
@@ -66,13 +70,13 @@ int main() {
         fuelConsumed = 0;
         time = 0;
         distanceTraveled = 0;
-    } 
+    }
 
     std::cout << "Destination result" << std::endl;
     std::cout << "Distance traveled: " << distanceTraveled << " km" << std::endl;
     std::cout << "Time spent: " << time << " sec" << std::endl;
     std::cout << "Fuel consumed: " << fuelConsumed << " litres" << std::endl; //затраченное топливо
-    std::cout << "Fuel remained: " << fuelRemained << " litres" << std::endl; //оставшееся топливо
+    std::cout << "Fuel remained: " << fuelRemained << " litres" << std::endl; //оставшееся топливо //ошибка в 4 проверке (считается как 75 строка)
     std::cout << "----------------------------------------" << std::endl;
 
     if (distanceTraveled < 360) {
