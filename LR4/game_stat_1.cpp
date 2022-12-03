@@ -35,7 +35,8 @@ int main()
 	if (speed > 110) speed = 110;
 	std::cout << "Your speed before start: " << speed << " km/h\n\n";
 	
-	s = speed / 10., fuelConsumption = speed > 0 ? s * s / 4 - 4.5 * s + 30 : 0, distanceTraveled = fuel / fuelConsumption * 100;
+	s = speed / 10., fuelConsumption = speed > 0 ? s * s / 4 - 4.5 * s + 30 : 0;
+	distanceTraveled = fuelConsumption > 0 ? fuel / fuelConsumption * 100 : 0;
 	if (distanceTraveled > 360) distanceTraveled = 360;
 	if (speed != 0) timeSpent = distanceTraveled * 1. / speed * 3600;
 	else timeSpent = 0;
@@ -45,7 +46,7 @@ int main()
 	std::cout << "Time spent: " << timeSpent << " sec\n";
 	
 	fuelConsumed = distanceTraveled * fuelConsumption / 100, fuelRemined = fuel - fuelConsumed > 0 ? fuel - fuelConsumed : 0;
-	(fuelRemined > 0 && speed != 0) ? flag = true : flag = false;
+	(distanceTraveled == 360) ? flag = true : flag = false;
 	
 	std::cout << "Fuel consumed: " << fuelConsumed << " litres\n";
 	std::cout << "Fuel remained: " << fuelRemined << " litres\n";
