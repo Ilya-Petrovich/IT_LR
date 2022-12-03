@@ -1,8 +1,6 @@
 #include <iostream>
 #include <stdio.h>
 #include <unistd.h>
-#include <array>
-#include <conio.h>
 
 using namespace std; 
 int main()
