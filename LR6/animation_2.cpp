@@ -170,9 +170,9 @@ void sid()
 	string(40,'*') };//11
 	auto iter = a.cbegin();
 	a.erase(iter + 17);
-	a[17] = "*   _\\/_   " + string(28, ' ') + "*";
 	auto ite = a.cbegin();
 	a.emplace(ite + 2, "*" + string(38, ' ') + "*");
+	a[18] = "*   _\\/_   " + string(28, ' ') + "*";
 	print(a);
 	
 }
@@ -222,8 +222,7 @@ void jump()
 		auto ite = a.cbegin();
 		a.emplace(ite + 2, "*" + string(38, ' ') + "*");
 		print(a);
-		
-		k--;
+		k-=1;
 	}
 	sid();
 	a[18] = "*   _||_   " + string(28, ' ') + "*";
