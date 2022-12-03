@@ -14,7 +14,7 @@ int main()
 	std::cout << "\nFuel capacity: 50\nFuel consumption: 0\n";
 	std::cout << "Speed: " << speed << "\nMaximum speed: 110\n\n";
 	std::cout << "Route info\nDistance: " << distance << " km\n";
-	std::cout << "--------------------------------\n";
+	std::cout << "----------------------------------------\n";
 	std::cout << "You have to drive a route " << distance << " km long.\n";
 	std::cout << "But first you need to check if you have enough fuel.\n\n";
 	
@@ -37,7 +37,7 @@ int main()
 		std::cout << "Time spent: " << timeSpent << " sec\n";
 		std::cout << "Fuel consumed: " << fuelConsumed << " liters\n";
 		std::cout << "Fuel remined: " << fuelRemined << " liters\n";
-		std::cout << "--------------------------------\n";
+		std::cout << "----------------------------------------\n";
 		std::cout << "You haven't reached destination point. 360 km left.";
 	}
 	else {
