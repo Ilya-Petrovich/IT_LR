@@ -31,7 +31,7 @@ int main()
 		fuelConsumed = 0;
 		fuelRemined = fuel;
 		
-		std::cout << "Your speed before start: " << speed << " km/h\n";
+		std::cout << "Your speed before start: " << speed << " km/h\n\n";
 		std::cout << "Fuel consuption with chosen speed: " << fuelConsumption << " liters per 100 km\n";
 		std::cout << "\nDestination result\nDistance traveled: " << distanceTraveled << " km\n";
 		std::cout << "Time spent: " << timeSpent << " sec\n";
@@ -46,7 +46,7 @@ int main()
 		return 0;
 	}
 	else if (speed > 110) speed = 110;
-	std::cout << "Your speed before start: " << speed << " km/h\n";
+	std::cout << "Your speed before start: " << speed << " km/h\n\n";
 	
 	s = speed / 10., fuelConsumption = s * s / 4 - 4.5 * s + 30, distanceTraveled = fuel / fuelConsumption * 100;
 	if (distanceTraveled > 360) distanceTraveled = 360;
@@ -63,10 +63,10 @@ int main()
 	
 	std::cout << "Fuel consumed: " << fuelConsumed << " liters\n";
 	std::cout << "Fuel remined: " << fuelRemined << " liters\n";
-	std::cout << "--------------------------------\n";
+	std::cout << "----------------------------------------\n";
 	
-	if (flag) std::cout << "Congratulation! You have reached destantion point!";
-	else std::cout << "You haven't reached destination point. " << std::fixed << std::setprecision(2) << distance - distanceTraveled << " km left.";
+	if (flag) std::cout << "Congratulation! You have reached destantion point!\n";
+	else std::cout << "You haven't reached destination point. " << std::fixed << std::setprecision(2) << distance - distanceTraveled << " km left.\n";
 	}
 	return 0;
 }
