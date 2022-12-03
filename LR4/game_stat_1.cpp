@@ -8,7 +8,7 @@ int main()
     bool destination_reached;
     double fuel, fuel_consumed, fuel_capacity = 50, fuel_consumption = 0, s = 0, distance=360, distance_traveled=0;
     cout << "How much fuel do you have at the start?" << endl; cin >> fuel;
-    if (fuel>fuel_capacity or fuel<1)
+    if (fuel > fuel_capacity or fuel < 1)
     {
         cout << "Invalid data";
         return 0;
