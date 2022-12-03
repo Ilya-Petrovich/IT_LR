@@ -16,7 +16,7 @@ int main() {
         fuel = fuel + 25;
     }
 
-    std::cout << "Car status" << std::endl;
+    std::cout << "Car stats" << std::endl;
     std::cout << "Fuel: " << fuel << std::endl;
     std::cout << "Fuel capacity: 50" << std::endl;
     std::cout << "Fuel consumption: 0" << std::endl;
