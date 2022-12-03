@@ -18,7 +18,7 @@ void anim12();
 void anim13();
 void anim14();
 int main() {
-	system("cls");
+	//system("cls");
 	for (int i = 0; i < 2; i++){
 		anim1();
 		//usleep(700000);
