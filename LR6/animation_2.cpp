@@ -453,13 +453,13 @@ void dance()
 int main()
 {
 L1:int t;
-	std::cout << "Choose animation:" << std::endl;
-	std::cout << "Dance: \t\t\t1" << std::endl;
-	std::cout << "Run: \t\t\t2" << std::endl;
-	std::cout << "Sit down and jump: \t3" << std::endl;
-	std::cout << "Throw a ball: \t\t4" << std::endl << std::endl;
-	std::cout << "Enter 5 for exit." << std::endl;
-	std::cin >> choice;
+	cout << "Choose animation:" << endl;
+	cout << "Dance: \t\t\t1" << endl;
+	cout << "Run: \t\t\t2" << endl;
+	cout << "Sit down and jump: \t3" << endl;
+	cout << "Throw a ball: \t\t4" << endl << endl;
+	cout << "Enter 5 for exit." << endl;
+	
 	cin >> t;
 	switch (t)
 	{
