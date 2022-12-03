@@ -3,7 +3,6 @@
 #include <ctime>
 #include <cmath>
 using namespace std;
-void clearScreen(int characterLenght);
 void anim1();
 void anim2();
 void anim3();
@@ -64,6 +63,7 @@ int main() {
 		usleep(700000);
 		system("cls");
 	}
+	anim1();
 	return 0;
 }
 void anim1() {
