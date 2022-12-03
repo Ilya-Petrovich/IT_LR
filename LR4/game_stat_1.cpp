@@ -34,6 +34,7 @@ int main()
 
 		if (speed < 0)
 		{
+			cout << endl;
 			cout << "Invalid data." << endl;
 			return 0;
 		}
@@ -48,10 +49,20 @@ int main()
 		cout << endl;
 		cout << "Fuel consumption with chosen speed: " << fuelConsumption << " litres per 100 km" << endl;
 
-		fullDistance = fuel / fuelConsumption * 100;
+		if (fuelConsumption == 0)
+		{
+			fullDistance = 0;
+		}
+		else
+		{
+			fullDistance = fuel / fuelConsumption * 100;
+		}
 		if (fullDistance < distance)
 		{
 			distanceTraveled = fullDistance;
+			if (fuelConsumption == 0)
+			fuelConsumed = 0;
+			else
 			fuelConsumed = fuel;
 			pointReached = false;
 		}
