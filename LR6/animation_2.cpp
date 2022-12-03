@@ -100,19 +100,18 @@ int Run()
 int Jump()
 {
 	int probel_up = 6;
-	for (int i = 0; i < 14; i++)
+	for (int i = 0; i < 13; i++)
 	{
 		for (int j = 0; j < 20; j++)
 		{
 			int probel = 0;
 			string line_anim = "";
 			if (j == 0 || j == 19)
-				cout << "****************************************\n";
+				cout << "****************************************" << "\n";
 			else
 			{
-				int ii = probel_up+1;
-				if (j <= probel_up || j >= 19 - (6 - probel_up)
-				)
+
+				if (j < probel_up || j >= 19 - (6 - probel_up))
 				{
 					line_anim = "";
 					probel = line_anim.size();			
@@ -122,9 +121,9 @@ int Jump()
 				cout << "*" + line_anim + Probels(38-probel) + "*\n";
 			}
 		}
-		if (probel_up > 2 && i <= 6 && i > 1)
+		if (probel_up > 2 && i < 6 && i > 1)
 			probel_up--;
-		if (probel_up < 6 && i > 6)
+		if (probel_up < 6 && i >= 6)
 			probel_up++;
 		//Sleep(1000);
 		//system("cls");
@@ -329,7 +328,7 @@ string AnimJump(int n, int &nn, int i)
 		"    ||",
 		"   _||_"
 	};
-	if (i == 1 || i == 12)
+	if (i == 1 || i == 11)
 	{
 		A[0] = "";
 		A[1] = "   _[]_";
@@ -344,7 +343,7 @@ string AnimJump(int n, int &nn, int i)
 		A[10] = "   |__|";
 		A[11] = "   _\\/_";
 	}
-	if (i > 1 && i != 12 && i != 13)
+	if (i > 1 && i != 11 && i != 12)
 	{
 		A[11] = "    ||";
 	}
