@@ -36,7 +36,7 @@ int main() {
     }
     if (speed < 0) {
         std::cout << std::endl;
-        std::cout << "Invalid data";
+        std::cout << "Invalid data." << std::endl;
         return 0;
     }
 
