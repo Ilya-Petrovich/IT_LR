@@ -6,14 +6,13 @@ int main() {
 	double fuelConsumption;
 	cout << "How much fuel do you have at start? "; cin >> fuel;
 	cout << endl;
-	cout << "Car stats" << endl;
-	cout << "Fuel: " << fuel << endl;
 	int firstfuel = fuel;
 	if (fuel < 0 || fuel > 50) {
-		cout << endl;
 		cout << "Invalid data." << endl;
 		return 1;
 	}
+	cout << "Car stats" << endl;
+	cout << "Fuel: " << fuel << endl;
 	if (fuel < maxfuel / 2) {
 	fuel += maxfuel / 2;
 	}
