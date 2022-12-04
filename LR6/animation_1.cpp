@@ -1,10 +1,10 @@
 #include <iostream>
 #include <bits/stdc++.h>
 #include <unistd.h>
+
 using namespace std;
 
 const int a = 10, b = 12;
-
 int main()
 {
     string anim[b] = {
