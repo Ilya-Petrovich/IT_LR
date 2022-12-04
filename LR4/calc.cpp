@@ -6,7 +6,7 @@ int main()
 {
     int num1,num2,num3;
 
-    cout << "\nType the first number: ";
+    cout << "Type the first number: ";
     cin >> num1;
 
     cout << "Type the second number: ";

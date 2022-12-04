@@ -37,7 +37,7 @@ int main(){
 
     cout << "\nRoute info";
     cout << "\nDistance: "<< distance << " km";
-    cout << "\n---------------------------------------";
+    cout << "\n----------------------------------------";
     cout << "\nYou have to drive a route "<< distance << " km long.";
     cout << "\nBut first you need to check if you have enough fuel." << endl;
     
@@ -56,7 +56,7 @@ int main(){
         speed = 110;
     }
 
-    cout << "Your speed before start: "<< speed << "km/h";
+    cout << "Your speed before start: "<< speed << " km/h";
     if(speed == 0){
         fuelConsumption = 0;
     }else{
@@ -92,7 +92,7 @@ int main(){
     cout << "\nTime spent: " << timeSpent << " sec";
     cout << "\nFuel consumed: " << fuelConsumed << " litres";
     cout << "\nFuel remained: " << fuelRemained << " litres";
-    cout << "\n---------------------------------------"<< endl;
+    cout << "\n----------------------------------------"<< endl;
     
     if(distanceTravelled >= distance){
         cout << "Congratulations! You have reached destination point!" << endl;
