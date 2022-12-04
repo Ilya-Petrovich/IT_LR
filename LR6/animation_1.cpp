@@ -6,14 +6,12 @@ void head(); void legs();
 void dance();
 
 int main() {
-    unsigned short choice = 0;
     //del_one_frame();
     dance();
     return 0;
 }
 
-void del_one_frame() {system("clear");
-}
+void del_one_frame() {system("cls");}
 void head() {
     std::cout << "    /\\    \n";
     std::cout << "   |oo|   \n";
