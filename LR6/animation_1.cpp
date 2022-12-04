@@ -19,7 +19,8 @@ public:
 		{
 			for (int j = 0; j < 11; j++)
 			{
-				cout << BaseState[i][j];
+				if (j != 0)
+					cout << BaseState[i][j];
 			}
 			cout << "\n";
 		}
@@ -193,6 +194,9 @@ int main()
 			person.BaseState[i][j] = strs[i][j];
 		}
 	}
+
+	person.BaseState[8][10] = "\\";
+	person.Print();
 
 	while (person.CyclesCount < 2)
 	{
