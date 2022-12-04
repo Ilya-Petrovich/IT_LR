@@ -1,13 +1,14 @@
 #include <iostream>
+#include <iomanip>
 
 int main() {
     int num_1, num_2, num_3;
 
-    std::cout << "Введите первое число: ";
+    std::cout << "Value for num_1: ";
     std::cin >> num_1;
-    std::cout << "Введите второе число: ";
+    std::cout << "Value for num_2: ";
     std::cin >> num_2;
-    std::cout << "Введите третье число: ";
+    std::cout << "Value for num_3: ";
     std::cin >> num_3;
 
     if (num_1 > num_2) {
@@ -15,7 +16,9 @@ int main() {
         std::cout << num_1 << " - " << num_2 << " = " << num_1 - num_2 << std::endl;
         std::cout << num_1 << " * " << num_2 << " = " << num_1 * num_2 << std::endl;
         std::cout << num_1 << " / " << num_2 << " = " << num_1 / num_2 << std::endl;
-        std::cout << num_1 << ".0" << " / " << num_2 << ".0" << " = " << float(num_1) / float(num_2) << std::endl;
+        std::cout << std::setprecision(1) << std::fixed << (float)num_1 << " / " << (float)num_2 << " = ";
+        std::cout << std::setprecision(5) << std::fixed << (float)num_1 / num_2 << std::endl;
+        std::cout << std::setprecision(0) << std::fixed;
         std::cout << num_1 << " % " << num_2 << " = " << num_1 % num_2 << std::endl;
         std::cout << num_1 << " + " << num_2 << " * " << num_3 << " = " << num_1 + num_2 * num_3 << std::endl;
         std::cout << "(" << num_1 << " + " << num_2 << ")" << " * " << num_3 << " = " << (num_1 + num_2) * num_3 << std::endl;
