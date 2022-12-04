@@ -1,5 +1,4 @@
 #include <iostream>
-#include <bits/stdc++.h>
 #include <unistd.h>
 using namespace std;
 
@@ -139,6 +138,6 @@ int main()
 		s[7] = " / |  | \\ ";
 		s[8] = "/   \\/   \\";
 	}
-	
+	for (int i = 0; i < b; i++) cout << s[i] << "\n"; 
 	return 0;
 }
