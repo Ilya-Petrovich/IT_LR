@@ -283,6 +283,6 @@ void dance(string st1, string st2, string st3, string st4, string st5, string st
 int main()
 {
     string st1, st2, st3, st4, st5, st6, st7, st8, st9, st10, st11, st12;
-    while (true)
+    for(int i = 0; i < 2; i++)
         dance(st1, st2, st3, st4, st5, st6, st7, st8, st9, st10, st11, st12);
 }
