@@ -4,10 +4,11 @@ using namespace std;
 
 int main() {
 	double fuel, fuel_capacity=50, fuel_consumption = 0, speed = 0, s, max_speed = 110, distance = 360, distance_travelled, fuel_consumed;
-	cout << "How much fuel do you have at start? "; cin >> fuel; cout << endl;
+	cout << "How much fuel do you have at start? "; cin >> fuel;
 
 	if (fuel < 0 or fuel > 50) {
-		cout << "Invalid data.";
+		cout << "\nInvalid data.\n";
+		system("pause");
 		return 0;
 	}
 
@@ -31,7 +32,8 @@ int main() {
 
 	if (speed < 0) {
 		cout << endl;
-		cout << "Invalid data.";
+		cout << "\nInvalid data.\n";
+		system("pause");
 		return 0;
 	} else {
 		speed = speed > max_speed ? max_speed : speed;
@@ -63,5 +65,6 @@ int main() {
 	cout << "Fuel remained: " << fuel - fuel_consumed << " litres" << endl;
 	cout << "----------------------------------------" << endl;
 	distance_travelled != distance ? cout << "You haven't reached destination point. " << distance - distance_travelled << " km left." : cout << "Congratulations! You have reached destination point!";
+	system("pause");
 	return 0;
 }
