@@ -39,13 +39,13 @@ int main()
 	cout << "You have to drive a route " << distance << " km long." << endl;
 	cout << "But first you need to check if you have enough fuel." << endl;
 
-	// if (fuel < fuelCapacity / 2)
-	// {
-	// 	fuel += fuelCapacity / 2;
-	// 	cout << "Fuel low, charging half of tank" << endl;
-	// }
-	// else
-	// 	cout << "Fuel is OK, you can drive";
+	if (fuel < fuelCapacity / 2)
+	{
+		fuel += fuelCapacity / 2;
+		cout << "\nYour fuel before start: " << fuel << endl;
+	}
+	else
+		cout << "Fuel is OK, you can drive";
 
 	cout << endl;
 	cout << "What speed will you choose? ";
