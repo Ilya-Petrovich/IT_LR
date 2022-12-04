@@ -2,7 +2,7 @@
 #include <iostream>
 
 int main() {
-    int fuel, speed, timeSpent, maxSpeed = 110, distance = 360;
+    int fuel = 0, speed, timeSpent, maxSpeed = 110, distance = 360;
     float s, fuelConsumption, fuelConsumed, distanceTraveled, fuelRemained;
     bool destinationPoint;
 
@@ -10,7 +10,7 @@ int main() {
     std::cin >> fuel;
 
     // Initialize fuel
-    if (fuel < 0 || fuel > 50) {
+    if (fuel < 0 || fuel > 50 || !std::cin) {
         std::cout << "Invalid data.";
         return 0;
     } else if (fuel < 25) {
@@ -25,7 +25,6 @@ int main() {
     std::cout << "----------------------------------------" << std::endl;
     std::cout << "You have to drive a route 360km long." << std::endl;
     std::cout << "But first you need to check if you have enough fuel." << std::endl;
-
     std::cout << std::endl << "What speed will you choose? "; std::cin >> speed;
 
     // Initialize speed
