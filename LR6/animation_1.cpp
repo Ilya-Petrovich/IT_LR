@@ -1,6 +1,6 @@
 ﻿#include <iostream>
 #include <string>
-#include <Windows.h>
+#include <unistd.h>
 
 using namespace std;
 
@@ -41,8 +41,8 @@ void dancing(string* firstEl, int t) {
 		pers[6] = " ---\\\/--- ";
 		pers[7] = "/   ||   \\";
 		pers[8] = "    ||    ";
-		Sleep(t);
-		system("cls");
+		//Sleep(t);
+		//system("cls");
 
 		for (int i = 0; i < col; i++) {
 			cout << pers[i]<< endl;
@@ -50,8 +50,8 @@ void dancing(string* firstEl, int t) {
 		pers[6] = "  --\\\/----";
 		pers[7] = " /  ||    ";
 		pers[8] = "/   ||    ";
-		Sleep(t);
-		system("cls");
+		//Sleep(t);
+		//system("cls");
 
 		for (int i = 0; i < col; i++) {
 			cout<< pers[i]<< endl;
@@ -60,8 +60,8 @@ void dancing(string* firstEl, int t) {
 		pers[6] = " ---\\\/--- ";
 		pers[7] = "/   ||    ";
 		pers[8] = "    ||    ";
-		Sleep(t);
-		system("cls");
+		//Sleep(t);
+		//system("cls");
 
 		for (int i = 0; i < col; i++) {
 			cout<< pers[i]<< endl;
@@ -71,8 +71,8 @@ void dancing(string* firstEl, int t) {
 		pers[6] = "  --\\\/--  ";
 		pers[7] = " /  ||    ";
 		pers[8] = "/   ||    ";
-		Sleep(t);
-		system("cls");
+		//Sleep(t);
+		//system("cls");
 
 		for (int i = 0; i < col; i++) {
 			cout << pers[i] << endl;
@@ -82,8 +82,8 @@ void dancing(string* firstEl, int t) {
 		pers[6] = " ---\\\/--  ";
 		pers[7] = "/   ||    ";
 		pers[8] = "    ||    ";
-		Sleep(t);
-		system("cls");
+		//Sleep(t);
+		//system("cls");
 
 		for (int i = 0; i < col; i++) {
 			cout << pers[i] << endl;
@@ -93,8 +93,8 @@ void dancing(string* firstEl, int t) {
 		pers[6] = "----\\\/--  ";
 		pers[7] = "    ||    ";
 		pers[8] = "    ||    ";
-		Sleep(t);
-		system("cls");
+		//Sleep(t);
+		//system("cls");
 
 		for (int i = 0; i < col; i++) {
 			cout << pers[i] << endl;
@@ -102,8 +102,8 @@ void dancing(string* firstEl, int t) {
 		pers[4] = "  \\|  |\/ *";
 		pers[5] = "\\ \/|UU|\\/";
 		pers[6] = " ---\\\/--  ";
-		Sleep(t);
-		system("cls");
+		//Sleep(t);
+		//system("cls");
 
 		for (int i = 0; i < col; i++) {
 			cout << pers[i] << endl;
@@ -111,8 +111,8 @@ void dancing(string* firstEl, int t) {
 		pers[4] = "\\ \\|  |\/ /";
 		pers[5] = " \\\/|UU|\\/";
 		pers[6] = "  --\\\/--  ";
-		Sleep(t);
-		system("cls");
+		//Sleep(t);
+		//system("cls");
 
 		for (int i = 0; i < col; i++) {
 			cout << pers[i] << endl;
@@ -120,8 +120,8 @@ void dancing(string* firstEl, int t) {
 		pers[4] = "* \\|  |\/ *";
 		pers[5] = " \\\/|UU|\\/";
 		pers[6] = "  --\\\/--  ";
-		Sleep(t);
-		system("cls");
+		//Sleep(t);
+		//system("cls");
 
 		for (int i = 0; i < col; i++) {
 			cout << pers[i] << endl;
@@ -129,24 +129,24 @@ void dancing(string* firstEl, int t) {
 		pers[4] = "  \\|  |\/  ";
 		pers[5] = "* \/|UU|\\ *";
 		pers[6] = " ---\\\/--- ";
-		Sleep(t);
-		system("cls");
+		//Sleep(t);
+		//system("cls");
 
 		for (int i = 0; i < col; i++) {
 			cout << pers[i] << endl;
 		}
 		pers[5] = "  \/|UU|\\  ";
 		pers[6] = "*---||---*";
-		Sleep(t);
-		system("cls");
+		//Sleep(t);
+		//system("cls");
 
 		for (int i = 0; i < col; i++) {
 			cout << pers[i] << endl;
 		}
 		pers[6] = " ---||--- ";
 		pers[7] = "*   ||   *";
-		Sleep(t);
-		system("cls");
+		//Sleep(t);
+		//system("cls");
 
 		for (int i = 0; i < col; i++) {
 			cout << pers[i] << endl;
@@ -154,20 +154,20 @@ void dancing(string* firstEl, int t) {
 		pers[6] = "  --||--  ";
 		pers[7] = " /  ||  \\ ";
 		pers[8] = "*   ||   *";
-		Sleep(t);
-		system("cls");
+		//Sleep(t);
+		//system("cls");
 
 		for (int i = 0; i < col; i++) {
 			cout << pers[i] << endl;
 		}
 		pers[8] = "/   ||   \\";
-		Sleep(t);
-		system("cls");
+		//Sleep(t);
+		//system("cls");
 
 		for (int i = 0; i < col; i++) {
 			cout << pers[i] << endl;
 		}
 	}
-	system("cls");
+	//system("cls");
 	return;
 }
