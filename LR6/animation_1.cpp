@@ -1,188 +1,174 @@
 ﻿#include <iostream>
-#include <unistd.h>
 #include <string>
-int main() {
-	std::string str0, str1, str2, str3, str4, str5, str6, str7, str8, str9, str10, str11, str12, str13, str14;
-	str0.append("   _[]_   ").append("\n")
-		.append("   |~~|   ").append("\n")
-		.append("   |oq|   ").append("\n")
-		.append("  (|<>|)  ").append("\n")
-		.append("   \\--/   ").append("\n")
-		.append("   _><_   ").append("\n")
-		.append("  -\\. /-  ").append("\n")
-		.append(" / |. | \\ ").append("\n")
-		.append("/  |. |  \\").append("\n")
-		.append("   |__|   ").append("\n")
-		.append("    ||    ").append("\n")
-		.append("   _||_   ");
-	str1.append("   _[]_   ").append("\n")
-		.append("   |~~|   ").append("\n")
-		.append("   |oq|   ").append("\n")
-		.append("  (|<>|)  ").append("\n")
-		.append("   \\--/   ").append("\n")
-		.append("   _><_   ").append("\n")
-		.append(" --\\. /-- ").append("\n")
-		.append("/  |. |  \\").append("\n")
-		.append("   |. |    ").append("\n")
-		.append("   |__|   ").append("\n")
-		.append("    ||    ").append("\n")
-		.append("   _||_   ");
-	str2.append("   _[]_   ").append("\n")
-		.append("   |~~|   ").append("\n")
-		.append("   |oq|   ").append("\n")
-		.append("  (|<>|)  ").append("\n")
-		.append("   \\--/   ").append("\n")
-		.append("   _><_   ").append("\n")
-		.append("  -\\. /---").append("\n")
-		.append(" / |. |   ").append("\n")
-		.append("/  |. |   ").append("\n")
-		.append("   |__|   ").append("\n")
-		.append("    ||    ").append("\n")
-		.append("   _||_   ");
-	str3.append("   _[]_   ").append("\n")
-		.append("   |~~|   ").append("\n")
-		.append("   |oq|   ").append("\n")
-		.append("  (|<>|)  ").append("\n")
-		.append("   \\--/   ").append("\n")
-		.append("   _><_   /").append("\n")
-		.append(" --\\. /-- ").append("\n")
-		.append("/  |. |   ").append("\n")
-		.append("   |. |   ").append("\n")
-		.append("   |__|   ").append("\n")
-		.append("    ||    ").append("\n")
-		.append("   _||_   ");
-	str4.append("   _[]_   ").append("\n")
-		.append("   |~~|   ").append("\n")
-		.append("   |oq|   ").append("\n")
-		.append("  (|<>|)  ").append("\n")
-		.append("   \\--/  /").append("\n")
-		.append("   _><_ / ").append("\n")
-		.append("  -\\. /-  ").append("\n")
-		.append(" / |. |   ").append("\n")
-		.append("/  |. |   ").append("\n")
-		.append("   |__|   ").append("\n")
-		.append("    ||    ").append("\n")
-		.append("   _||_   ");
-	str5.append("   _[]_   ").append("\n")
-		.append("   |~~|   ").append("\n")
-		.append("   |oq|   ").append("\n")
-		.append("  (|<>|)  ").append("\n")
-		.append("   \\--/  *").append("\n")
-		.append("   _><_ / ").append("\n")
-		.append("  -\\. /-  ").append("\n")
-		.append(" / |. |   ").append("\n")
-		.append("/  |. |   ").append("\n")
-		.append("   |__|   ").append("\n")
-		.append("    ||    ").append("\n")
-		.append("   _||_   ");
-	str6.append("   _[]_   ").append("\n")
-		.append("   |~~|   ").append("\n")
-		.append("   |oq|   ").append("\n")
-		.append("  (|<>|)  ").append("\n")
-		.append("   \\--/  /").append("\n")
-		.append("   _><_ / ").append("\n")
-		.append("---\\. /-  ").append("\n")
-		.append("   |. |   ").append("\n")
-		.append("   |. |   ").append("\n")
-		.append("   |__|   ").append("\n")
-		.append("    ||    ").append("\n")
-		.append("   _||_   ");
-	str7.append("   _[]_   ").append("\n")
-		.append("   |~~|   ").append("\n")
-		.append("   |oq|   ").append("\n")
-		.append("  (|<>|)  ").append("\n")
-		.append("   \\--/  *").append("\n")
-		.append("\\  _><_ / ").append("\n")
-		.append(" --\\. /-  ").append("\n")
-		.append("   |. |   ").append("\n")
-		.append("   |. |   ").append("\n")
-		.append("   |__|   ").append("\n")
-		.append("    ||    ").append("\n")
-		.append("   _||_   ");
-	str8.append("   _[]_   ").append("\n")
-		.append("   |~~|   ").append("\n")
-		.append("   |oq|   ").append("\n")
-		.append("  (|<>|)  ").append("\n")
-		.append("\\  \\--/  /").append("\n")
-		.append(" \\ _><_ / ").append("\n")
-		.append("  -\\. /-  ").append("\n")
-		.append("   |. |   ").append("\n")
-		.append("   |. |   ").append("\n")
-		.append("   |__|   ").append("\n")
-		.append("    ||    ").append("\n")
-		.append("   _||_   ");
-	str9.append("   _[]_   ").append("\n")
-		.append("   |~~|   ").append("\n")
-		.append("   |oq|   ").append("\n")
-		.append("  (|<>|)  ").append("\n")
-		.append("*  \\--/  *").append("\n")
-		.append(" \\ _><_ / ").append("\n")
-		.append("  -\\. /-  ").append("\n")
-		.append("   |. |   ").append("\n")
-		.append("   |. |   ").append("\n")
-		.append("   |__|   ").append("\n")
-		.append("    ||    ").append("\n")
-		.append("   _||_   ");
-	str10.append("   _[]_   ").append("\n")
-		.append("   |~~|   ").append("\n")
-		.append("   |oq|   ").append("\n")
-		.append("  (|<>|)  ").append("\n")
-		.append("   \\--/   ").append("\n")
-		.append("*  _><_  *").append("\n")
-		.append(" --\\. /-- ").append("\n")
-		.append("   |. |   ").append("\n")
-		.append("   |. |   ").append("\n")
-		.append("   |__|   ").append("\n")
-		.append("    ||    ").append("\n")
-		.append("   _||_   ");
-	str11.append("   _[]_   ").append("\n")
-		.append("   |~~|   ").append("\n")
-		.append("   |oq|   ").append("\n")
-		.append("  (|<>|)  ").append("\n")
-		.append("   \\--/   ").append("\n")
-		.append("   _><_   ").append("\n")
-		.append("*--\\. /--*").append("\n")
-		.append("   |. |   ").append("\n")
-		.append("   |. |   ").append("\n")
-		.append("   |__|   ").append("\n")
-		.append("    ||    ").append("\n")
-		.append("   _||_   ");
-	str12.append("   _[]_   ").append("\n")
-		.append("   |~~|   ").append("\n")
-		.append("   |oq|   ").append("\n")
-		.append("  (|<>|)  ").append("\n")
-		.append("   \\--/   ").append("\n")
-		.append("   _><_   ").append("\n")
-		.append(" --\\. /-- ").append("\n")
-		.append("*  |. |  *").append("\n")
-		.append("   |. |   ").append("\n")
-		.append("   |__|   ").append("\n")
-		.append("    ||    ").append("\n")
-		.append("   _||_   ");
-	str13.append("   _[]_   ").append("\n")
-		.append("   |~~|   ").append("\n")
-		.append("   |oq|   ").append("\n")
-		.append("  (|<>|)  ").append("\n")
-		.append("   \\--/   ").append("\n")
-		.append("   _><_   ").append("\n")
-		.append("  -\\. /-  ").append("\n")
-		.append(" / |. | \\ ").append("\n")
-		.append("*  |. |  *").append("\n")
-		.append("   |__|   ").append("\n")
-		.append("    ||    ").append("\n")
-		.append("   _||_   ");
-	std::string* array = new std::string[14]{
-		str0, str1, str2, str3, str4, str5, str6, str7, str8, str9, str10, str11, str12, str13
-	};
-	int count = 0;
-	while (count < 30) {
-		for (int i = 0; i < 14; i++) {
-			if (count >= 29) {
-				break;
-			}
-			std::cout << array[i] << std::endl;
-			count++;
-		}
+//#include <unistd.h> 
+using namespace std;
+void animation(string *person)
+{
+	for (int i = 0; i < 12; i++) {
+		cout << *person++ << endl;
 	}
+}
+int main()
+{
+	string human0[12] = { "   _[]_   ", "   |~~|   ", "   |oq|   ", "  (|<>|)  ", "   \\--/   ", "   _><_   ", "  -\\. /-  ", " / |. | \\ ", "/  |. |  \\", "   |__|   ", "    ||    ", "   _||_   " };
+	animation(human0);
+	human0[6] = " --\\. /-- ";
+	human0[7] = "/  |. |  \\";
+	human0[8] = "   |. |   ";
+	animation(human0);
+	human0[6] = "  -\\. /---";
+	human0[7] = " / |. |   ";
+	human0[8] = "/  |. |   ";
+	animation(human0);
+	human0[5] = "   _><_  /";
+	human0[6] = " --\\. /-- ";
+	human0[7] = "/  |. |   ";
+	human0[8] = "   |. |   ";
+	animation(human0);
+	human0[4] = "   \\--/  /";
+	human0[5] = "   _><_ / ";
+	human0[6] = "  -\\. /-  ";
+	human0[7] = " / |. |   ";
+	human0[8] = "/  |. |   ";
+	animation(human0);
+	human0[4] = "   \\--/  *";
+	human0[5] = "   _><_ / ";
+	human0[6] = " --\\. /-  ";
+	human0[7] = "/  |. |   ";
+	human0[8] = "   |. |   ";
+	animation(human0);
+	human0[4] = "   \\--/  /";
+	human0[5] = "   _><_ / ";
+	human0[6] = "---\\. /-  ";
+	human0[7] = "   |. |   ";
+	human0[8] = "   |. |   ";
+	animation(human0);
+	human0[4] = "   \\--/  *";
+	human0[5] = "\\  _><_ / ";
+	human0[6] = " --\\. /-  ";
+	human0[7] = "   |. |   ";
+	human0[8] = "   |. |   ";
+	animation(human0);
+	human0[4] = "\\  \\--/  /";
+	human0[5] = " \\ _><_ / ";
+	human0[6] = "  -\\. /-  ";
+	human0[7] = "   |. |   ";
+	human0[8] = "   |. |   ";
+	animation(human0);
+	human0[4] = "*  \\--/  *";
+	human0[5] = " \\ _><_ / ";
+	human0[6] = "  -\\. /-  ";
+	human0[7] = "   |. |   ";
+	human0[8] = "   |. |   ";
+	animation(human0);
+	human0[4] = "   \\--/   ";
+	human0[5] = "*  _><_  *";
+	human0[6] = " --\\. /-- ";
+	human0[7] = "   |. |   ";
+	human0[8] = "   |. |   ";
+	animation(human0);
+	human0[4] = "   \\--/   ";
+	human0[5] = "   _><_   ";
+	human0[6] = "*--\\. /--*";
+	human0[7] = "   |. |   ";
+	human0[8] = "   |. |   ";
+	animation(human0);
+	human0[4] = "   \\--/   ";
+	human0[5] = "   _><_   ";
+	human0[6] = " --\\. /-- ";
+	human0[7] = "*  |. |  *";
+	human0[8] = "   |. |   ";
+	animation(human0);
+	human0[4] = "   \\--/   ";
+	human0[5] = "   _><_   ";
+	human0[6] = "  -\\. /-  ";
+	human0[7] = " / |. | \\ ";
+	human0[8] = "*  |. |  *";
+	animation(human0);
+	human0[4] = "   \\--/   ";
+	human0[5] = "   _><_   ";
+	human0[6] = "  -\\. /-  ";
+	human0[7] = " / |. | \\ ";
+	human0[8] = "/  |. |  \\";
+	animation(human0);
+	human0[6] = " --\\. /-- ";
+	human0[7] = "/  |. |  \\";
+	human0[8] = "   |. |   ";
+	animation(human0);
+	human0[6] = "  -\\. /---";
+	human0[7] = " / |. |   ";
+	human0[8] = "/  |. |   ";
+	animation(human0);
+	human0[5] = "   _><_  /";
+	human0[6] = " --\\. /-- ";
+	human0[7] = "/  |. |   ";
+	human0[8] = "   |. |   ";
+	animation(human0);
+	human0[4] = "   \\--/  /";
+	human0[5] = "   _><_ / ";
+	human0[6] = "  -\\. /-  ";
+	human0[7] = " / |. |   ";
+	human0[8] = "/  |. |   ";
+	animation(human0);
+	human0[4] = "   \\--/  *";
+	human0[5] = "   _><_ / ";
+	human0[6] = " --\\. /-  ";
+	human0[7] = "/  |. |   ";
+	human0[8] = "   |. |   ";
+	animation(human0);
+	human0[4] = "   \\--/  /";
+	human0[5] = "   _><_ / ";
+	human0[6] = "---\\. /-  ";
+	human0[7] = "   |. |   ";
+	human0[8] = "   |. |   ";
+	animation(human0);
+	human0[4] = "   \\--/  *";
+	human0[5] = "\\  _><_ / ";
+	human0[6] = " --\\. /-  ";
+	human0[7] = "   |. |   ";
+	human0[8] = "   |. |   ";
+	animation(human0);
+	human0[4] = "\\  \\--/  /";
+	human0[5] = " \\ _><_ / ";
+	human0[6] = "  -\\. /-  ";
+	human0[7] = "   |. |   ";
+	human0[8] = "   |. |   ";
+	animation(human0);
+	human0[4] = "*  \\--/  *";
+	human0[5] = " \\ _><_ / ";
+	human0[6] = "  -\\. /-  ";
+	human0[7] = "   |. |   ";
+	human0[8] = "   |. |   ";
+	animation(human0);
+	human0[4] = "   \\--/   ";
+	human0[5] = "*  _><_  *";
+	human0[6] = " --\\. /-- ";
+	human0[7] = "   |. |   ";
+	human0[8] = "   |. |   ";
+	animation(human0);
+	human0[4] = "   \\--/   ";
+	human0[5] = "   _><_   ";
+	human0[6] = "*--\\. /--*";
+	human0[7] = "   |. |   ";
+	human0[8] = "   |. |   ";
+	animation(human0);
+	human0[4] = "   \\--/   ";
+	human0[5] = "   _><_   ";
+	human0[6] = " --\\. /-- ";
+	human0[7] = "*  |. |  *";
+	human0[8] = "   |. |   ";
+	animation(human0);
+	human0[4] = "   \\--/   ";
+	human0[5] = "   _><_   ";
+	human0[6] = "  -\\. /-  ";
+	human0[7] = " / |. | \\ ";
+	human0[8] = "*  |. |  *";
+	animation(human0);
+	human0[4] = "   \\--/   ";
+	human0[5] = "   _><_   ";
+	human0[6] = "  -\\. /-  ";
+	human0[7] = " / |. | \\ ";
+	human0[8] = "/  |. |  \\";
+	animation(human0);
 	return 0;
 }
