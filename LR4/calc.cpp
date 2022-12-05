@@ -8,7 +8,7 @@ int main() {
 	cin >> w;
 	cout << "Type the third number: ";
 	cin >> z;
-	if (x > y && x >= 0 && y > 0 && z >= 0) {
+	if (x > w && x >= 0 && w > 0 && z >= 0) {
 		cout << x << " + " << w << " = " << x + w << endl;
 		cout << x << " - " << w << " = " << x - w << endl;
 		cout << x << " * " << w << " = " << x * w << endl;
