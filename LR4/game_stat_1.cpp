@@ -44,8 +44,6 @@ int main()
 		fuel += fuelCapacity / 2;
 		cout << "\nYour fuel before start: " << fuel << endl;
 	}
-	else
-		cout << "Fuel is OK, you can drive";
 
 	cout << endl;
 	cout << "What speed will you choose? ";
