@@ -3,9 +3,9 @@
 using namespace std;
 
 int main() {
-    int spent_time;
+    int spent_time, speed = 0;
     float fuel, s, traveled_distance, consumed_fuel, remained_fuel;
-    float fuel_capacity = 50, fuel_consumption = 0, speed = 0, max_speed = 110, distance = 360;
+    float fuel_capacity = 50, fuel_consumption = 0, max_speed = 110, distance = 360;
 
     cout << "How much fuel do you have at start? ";
     cin >> fuel;
