@@ -38,7 +38,7 @@ int main() {
 			cout << "Your speed before start: " << speed << " km/h" << endl;
 		}
 		else {
-			cout << "Invalid data" << endl;
+			cout << "Invalid data." << endl;
 			system("pause");
 			return 0;
 		}
