@@ -39,14 +39,14 @@ int main() {
 			cout << "Distance traveled: " << 0 << " km" << endl;
 			cout << "Time spent: " << 0 << " sec" << endl;
 			cout << "Fuel consumed: " << 0 << " litres" << endl;
-			cout << "Fuel remained: " << 0 << " litres" << endl;
+			cout << "Fuel remained: " << fuel << " litres" << endl;
 			cout << "--------------------------------------" << endl;
 			cout << "You haven't reached destination point. " << dis << " km left.";
 		}
 		else if (speed < 0) {
 			cout << "Invalid data.";
 		}
-		else if (speed > 0 && speed < 110) {
+		else if (speed > 0 && speed <= 110) {
 			cout << "Your speed befort start: " << speed << " km/h" << endl;
 			s = (float)speed / 10;
 			fc = ((s * s) / 4 - (4.5 * s)) + 30;
