@@ -24,7 +24,7 @@ int main()
 	cout << "Fuel consumption: 0" << endl;
 	cout << "Speed: 0" << endl;
 	cout << "Maximum speed : 110" << endl;
-	cout << endl << "Route info" << endl;
+	cout << "Route info" << endl;
 	cout << "Distance: 360 km" << endl;
 	cout << "------------------------------------------" << endl;
 	cout << "You have to drive a route 360 km long." << endl;
