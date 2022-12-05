@@ -19,7 +19,7 @@ int main()
 void ReadText(char* buff, long fSize) 
 {
 	int start = fSize - 1200;
-	while (start< (fSize-3)) 
+	while (start< (fSize)) 
 	{
 		int firstByte = buff[start] & 0x03;	
 		int secondByte = buff[start+1] & 0x03;
