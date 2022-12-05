@@ -15,7 +15,7 @@ void readText(char*& buff, long& fileSize) {
 	fwrite(buff, sizeof(char), fileSize, file);
 }
 
-int mai() {
+int main() {
 	char firstByte, secondByte, thirdByte, fourthByte, allByte, mask = 0x3;
 	char* buff = NULL;
 	long fileSize = 0, start = 138;
