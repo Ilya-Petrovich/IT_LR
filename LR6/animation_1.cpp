@@ -1,5 +1,4 @@
 #include <iostream>
-#include <unistd.h> // for sleep()
 using namespace std;
 
 void showCharacter(string body[11]) {
