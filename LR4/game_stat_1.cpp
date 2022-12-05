@@ -10,7 +10,7 @@ int main() {
     std::cin >> fuel;
 
     // Initialize fuel
-    if (fuel < 0 || fuel > 50 || !std::cin) {
+    if (fuel < 0 || fuel >= 50 || !std::cin) {
         std::cout << "Invalid data.";
         return 0;
     } else if (fuel < 25) {
