@@ -213,6 +213,8 @@ void run(string *firstEl)
 	
 	while(cnt != 0)
 	{
+		//cout << step << " " << cnt << "\n";
+		if (cnt == 1 && step == 1) break;
 		string f, s;
 		if (step % 3 == 0)
 		{
