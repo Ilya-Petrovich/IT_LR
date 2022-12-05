@@ -2,8 +2,7 @@
 #include<cmath>
 
 using namespace std;
-int main()
-{
+int main() {
 	int fuel,speed, timefin; 
 	float dis = 360, time, s, fc, fcon, frem,disne, disno;
 	cout << "How much fuel do you have at start? "; cin >> fuel;
