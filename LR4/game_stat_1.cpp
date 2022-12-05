@@ -1,12 +1,16 @@
 #include <iostream>
 #include <cmath>
 #include <stdlib.h>
+
 using namespace std;
-int main() {
+
+int main() {// :{
+
 	int  speed, time = 0, fuel, fuel1, maxs = 110, fc = 50, fconsumtion = 0, sbs = 0;
 	float distance = 360, fc1, dt = 0, fr = 0, kmleft, speed1, s, fconsumed;
 	std::cout << "How much fuel do you have at start?"; std::cin >> fuel; std::cout << std::endl;
 	fuel1 = fuel;
+
 	if (fuel < (1. / 2 * fc)) {
 		fuel += fc * 1. / 2;
 		std::cout << "Car stats" << std::endl;
@@ -26,6 +30,7 @@ int main() {
 		std::cout << std::endl;
 		std::cout << "What speed will you choose?"; std::cin >> speed; std::cout << std::endl;
 		speed1 = speed;
+
 		if (speed > maxs) {
 			speed = maxs;
 			speed1 = speed;
@@ -39,6 +44,7 @@ int main() {
 
 		std::cout << "Destination result" << std::endl;
 		dt = fuel / fc1 * 100;
+
 		if (dt > distance) {
 			dt = distance;
 		}
@@ -51,6 +57,7 @@ int main() {
 		std::cout << "Fuel remained: " << fr << " liters" << std::endl;
 		std::cout << "----------------------------------------" << std::endl;
 		kmleft = distance - dt;
+
 		if (dt == 360) {
 			std::cout << "Condratulations! You have reached destination point!";
 		}
@@ -84,6 +91,7 @@ int main() {
 
 		std::cout << "What speed will you choose?"; std::cin >> speed; std::cout << std::endl;
 		speed1 = speed;
+
 		if (speed > maxs) {
 			speed = maxs;
 			speed1 = speed;
@@ -95,6 +103,7 @@ int main() {
 		std::cout << std::endl;
 		std::cout << "Destination result" << std::endl;
 		dt = fuel / fc1 * 100;
+
 		if (dt > distance) {
 			dt = distance;
 		}
@@ -107,6 +116,7 @@ int main() {
 		std::cout << "Fuel remained: " << fr << " liters" << std::endl;
 		std::cout << "----------------------------------------" << std::endl;
 		kmleft = distance - dt;
+
 		if (dt == 360) {
 			std::cout << "Condratulations! You have reached destination point!";
 		}
