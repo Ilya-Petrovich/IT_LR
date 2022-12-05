@@ -70,10 +70,10 @@ int main()
 		distance = 0;
 	}
 	cout << "\nDestination result" << endl;
-	cout << "Distance traveled : " << distance << " km" << endl;
-	cout << "Time spent : " << z << " sec" << endl;
-	cout << "Fuel consumed : " << fuelConsumed << " litres" << endl;
-	cout << "Fuel remained : " << fuelRemained << " litres" << endl;
+	cout << "Distance traveled: " << distance << " km" << endl;
+	cout << "Time spent: " << z << " sec" << endl;
+	cout << "Fuel consumed: " << fuelConsumed << " litres" << endl;
+	cout << "Fuel remained: " << fuelRemained << " litres" << endl;
 	cout << "-------------------------------------------" << endl;
 
 	if (distance == 360) {
