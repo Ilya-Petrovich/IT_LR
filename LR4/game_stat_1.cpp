@@ -42,6 +42,7 @@ int main()
 				fuelConsumption = 0;
 			}
 
+			cout << "" << '\n';
 			cout << "Fuel consumption with chosen speed: " << fuelConsumption << " litres per 100 km" << '\n';
 			cout << "" << '\n';
 
