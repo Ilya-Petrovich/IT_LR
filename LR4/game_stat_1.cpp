@@ -67,7 +67,7 @@ int main() {
 		}
 
 		if (speed != 0) {
-			std::cout << "\n\nFuel consumption with chosen speed: " << fuelConsumption << " litres per 100 km\n";
+			std::cout << "\n\nFuel consumption with chosen speed: " << fuelConsumption << " litres per 100 km";
 		} else {
 			std::cout << "\n\nFuel consumption with chosen speed 0 litres per 100 km";
 		}
@@ -83,15 +83,13 @@ int main() {
 			std::cout << "\nDistance traveled 0 km";
 		}
 
-		// std::cout << "--- S = " << S << " " << consumed << " " << remained << "---\n";
-
 		std::cout << "\nTime spent: " << time << " sec";
 		std::cout << "\nFuel consumed: " << consumed << " litres";
 		std::cout << "\nFuel remained: " << remained << " litres";
 		std::cout << "\n----------------------------------------";
 		
 		if (S == 360 || S > 360) {
-			std::cout << "\nCongratulations! You have reached destination point!\n";
+			std::cout << "\nCongratulations! You have reached destination point!";
 		} else if (S == 0) {
 			std::cout << "\nYou haven't reached destination point. 360 km left.\n";
 		} else if (S < 360) {
