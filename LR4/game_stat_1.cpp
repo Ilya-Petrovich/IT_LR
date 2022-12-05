@@ -7,9 +7,9 @@ int main() {
     float max_speed = 110;
     cout << "How much fuel do you have at start? ";
     cin >> fuel;
-    cout << "\nCar stats\n";
     if (fuel >= 0 and fuel <= 50) {
         //// **************** Car stats ********************************
+        cout << "\nCar stats\n";
         cout << "Fuel: " << fuel << endl;
         cout << "Fuel capacity: " << fuel_capacity << endl;
         cout << "Fuel consumption: " << fuel_consumption << endl;
