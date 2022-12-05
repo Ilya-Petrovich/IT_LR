@@ -48,8 +48,8 @@ int main()
 	fuelRemained = fuel - fuelConsumed;
 
 	std::cout << "Your speed before start: " << speed << " km/h" << "\n ";
-	std::cout << "\nFuel consumption with chosen speed: " << fuelConsumption << " litres per 100 km";	
-	std::cout << "\n \nDestination result \nDistance traveled: " << distance << " km" << "\nTime spent: " << time << " sec"; 
+	std::cout << "\nFuel consumption with chosen speed: " << fuelConsumption << " litres per 100 km\n";	
+	std::cout << "\nDestination result\nDistance traveled: " << distance << " km" << "\nTime spent: " << time << " sec"; 
 	std::cout << "\nFuel consumed: " << fuelConsumed << " litres" << "\nFuel remained: " << fuelRemained << " litres" ;
 	std::cout << "\n----------------------------------------";
 
