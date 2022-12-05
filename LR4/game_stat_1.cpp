@@ -36,12 +36,12 @@ int main() {
 		return 0;
 	} else {
 		speed = speed > max_speed ? max_speed : speed;
-		cout << "Your speed before start: " << speed << " km/h\n";
+		cout << "Your speed before start: " << speed << " km/h";
 	}
 
 	s = speed / 10.0;
 	fuel_consumption = s == 0 ? 0 : s * s / 4 - 4.5 * s + 30;
-	cout << "\nFuel consumption with chosen speed: " << fuel_consumption << " litres per 100 km\n";
+	cout << "\n\nFuel consumption with chosen speed: " << fuel_consumption << " litres per 100 km\n";
 	cout << "\nDestination result";
 	distance_travelled = speed == 0 ? 0 : 100 * fuel / fuel_consumption;
 
