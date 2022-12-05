@@ -76,5 +76,5 @@ int main() {
             cout << "You haven't reached destination point. " << distance - dist_t << " km left." << endl;
         }
     }
-
+    return 0;
 }
