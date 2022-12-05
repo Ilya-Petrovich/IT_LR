@@ -102,7 +102,7 @@ int main()
         //system("cls");
 
         anim[4] = "* \\|  |/ *";
-        anim[5] = " \\/|UU|\\/";
+        anim[5] = " \\/|UU|\\/ ";
         anim[7] = "    ||    ";
         anim[8] = "    ||    ";
 
