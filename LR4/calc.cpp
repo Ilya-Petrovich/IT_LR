@@ -17,7 +17,7 @@ int main() {
 		std::cout << "(" << num_1 << " + " << num_2 << ")" << " * 5" << " = " << (num_1 + num_2) * 5 << std::endl;
 	}
 	else {
-		std::cout << "Invalid data" << endl;
+		std::cout << "Invalid data" << std::endl;
 	}
 	return 0;
 }
