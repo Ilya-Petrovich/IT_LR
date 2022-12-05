@@ -3,7 +3,8 @@
 using namespace std;
 
 int main() {
-	double fuel, fuel_capacity=50, fuel_consumption = 0, speed = 0, s, max_speed = 110, distance = 360, distance_travelled, fuel_consumed;
+	double fuel, fuel_capacity=50, fuel_consumption = 0, speed = 0, s, max_speed = 110, distance = 360, distance_travelled, fuel_consumed, fuel_remained;
+	int time;
 	cout << "How much fuel do you have at start? "; cin >> fuel;
 
 	if (fuel < 0 or fuel > 50) {
@@ -40,30 +41,35 @@ int main() {
 	}
 
 	s = speed / 10.0;
-	fuel_consumption = s == 0 ? 0 : s * s / 4 - 4.5 * s + 30;
+	fuel_consumption = s * s / 4 - 4.5 * s + 30;
+
+	if (speed == 0) fuel_consumption = 0;
 	cout << "\n\nFuel consumption with chosen speed: " << fuel_consumption << " litres per 100 km\n";
-	cout << "\nDestination result";
 	distance_travelled = speed == 0 ? 0 : 100 * fuel / fuel_consumption;
 
-	if (distance_travelled > distance) {
-		distance_travelled = distance;
-		fuel_consumed = distance_travelled * fuel_consumption / 100.0;
-	} else {
-		fuel_consumed = speed == 0 ? 0 : fuel;
-	}
+	if (distance_travelled > distance) distance_travelled = distance;
 
-	cout << "\nDistance traveled: " << distance_travelled << " km\n";
+	fuel_consumed = distance_travelled * fuel_consumption / 100.0;
+
+	fuel_remained = fuel - fuel_consumed;
+
+	if (fuel_remained < 0) fuel_remained = 0;
+
+	time = distance_travelled / speed * 3600;
+
+	cout << "\nDestination result";
 
 	if (speed == 0) {
-		cout << "Time spent: 0 sec\n";
-	} else {
-		cout << "Time spent: " << int(distance_travelled / speed * 3600) << " sec\n";
+		distance_travelled = 0;
+		time = 0;
 	}
-
+	cout << "\nDistance traveled: " << distance_travelled << " km\n";
+	cout << "Time spent: " << time << " sec\n";
 	cout << "Fuel consumed: " << fuel_consumed << " litres";
-	cout << "\nFuel remained: " << fuel - fuel_consumed << " litres";
+	cout << "\nFuel remained: " << fuel_remained<< " litres";
 	cout << "\n----------------------------------------\n";
-	distance_travelled != distance ? cout << "You haven't reached destination point. " << distance - distance_travelled << " km left.\n" : cout << "Congratulations! You have reached destination point!\n";
+	if (distance_travelled == distance) cout << "Congratulations! You have reached destination point!\n";
+	else  cout << "You haven't reached destination point. " << distance - distance_travelled << " km left.\n";
 	system("pause");
 	return 0;
 }
