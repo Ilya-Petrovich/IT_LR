@@ -8,7 +8,7 @@ int main() {
 	cout << "How much fuel do you have at start? "; cin >> fuel;
 	cout << endl;
 	if (fuel > 50 || fuel < 0) {
-		cout << "Invalid data." << endl;
+		cout << "Invalid data.";
 	}
 	else {
 		cout << "Car stats" << endl;
@@ -36,7 +36,7 @@ int main() {
 			cout << "Fuel consumption with chosen speed: " << 0 << " litres per 100 km" << endl;
 			cout << endl;
 			cout << "Destination result" << endl;
-			cout << "Distance traveled: " << dis << " km" << endl;
+			cout << "Distance traveled: " << 0 << " km" << endl;
 			cout << "Time spent: " << 0 << " sec" << endl;
 			cout << "Fuel consumed: " << 0 << " litres" << endl;
 			cout << "Fuel remained: " << 0 << " litres" << endl;
@@ -44,7 +44,7 @@ int main() {
 			cout << "You haven't reached destination point. " << dis << " km left.";
 		}
 		else if (speed < 0) {
-			cout << "Invalid data." << endl;
+			cout << "Invalid data.";
 		}
 		else if (speed > 0 && speed < 110) {
 			cout << "Your speed befort start: " << speed << " km/h" << endl;
@@ -64,7 +64,7 @@ int main() {
 				cout << "Fuel consumed: " << fcon << " litres" << endl;
 				cout << "Fuel remained: " << frem << " litres" << endl;
 				cout << "--------------------------------------" << endl;
-				cout << "Congratulations! You have reached destrination point!" << endl;
+				cout << "Congratulations! You have reached destrination point!";
 			}
 			else {
 				disne = ((fc * 3.6 - fuel) * 360) / (fuel + (fc * 3.6 - fuel));
