@@ -81,11 +81,11 @@ int main() {
 		std::cout << "\n----------------------------------------";
 		
 		if (S == 360) {
-			std::cout << "\nCongratulations! You have reached destination point!";
+			std::cout << "\nCongratulations! You have reached destination point!\n";
 		} else if (S == 0) {
-			std::cout << "\nYou haven't reached destination point. 360 km left.";
+			std::cout << "\nYou haven't reached destination point. 360 km left.\n";
 		} else if (S < 360) {
-			std::cout << "\nYou haven't reached destination point. " << ((((360 - S) * 10000) / 10000)) << " km left.";
+			std::cout << "\nYou haven't reached destination point. " << ((((360 - S) * 10000) / 10000)) << " km left.\n";
 		}
 	}
 return 0;
