@@ -2,13 +2,13 @@
 
 using namespace std;
 
-int main(){
-    double fuel_capacity = 50, fuel;
-    double fuel_consumption = 0, distance = 360;
+int main() {
+    float fuel_capacity = 50, fuel;
+    float fuel_consumption = 0, distance = 360;
     int speed = 0, time;
-    int max_speed = 110;
-    cout << "How much fuel do you have at start? "; cin >> fuel; cout << ' ' << endl;
-    cout << "Car stats";
+    float max_speed = 110;
+    cout << "How much fuel do you have at start? "; cin >> fuel;
+    cout << "\nCar stats\n";
     if (fuel >= 0 and fuel <= 50) {
         //// **************** Car stats ********************************
         cout << "Fuel: " << fuel << endl;
@@ -25,41 +25,46 @@ int main(){
             fuel += (fuel_capacity / 2.);
             cout << "\n Your fuel before start: " << fuel << endl;
         }
-        cout << "\nWhat speed will you chose? ";
+        cout << "\nWhat speed will you choose? ";
         cin >> speed;
-    }else{
+    }
+    else {
         cout << "Invalid data.";
         return 0;
     }
-    if (speed < 0){
+    if (speed < 0) {
         cout << "Invalid data." << endl;
-    }else {
+    }
+    else {
         if (speed >= max_speed) { speed = max_speed; }
         cout << "Your speed before start: " << speed << " km/h" << endl; cout << ' ' << endl;
-        double s = speed / 10.;
+        float s = speed / 10.;
         if (speed == 0) {
             fuel_consumption = 0;
-        }else{
+        }
+        else {
             fuel_consumption = (s * s) / 4 - 4.5 * s + 30;
         }
         cout << "Fuel consumption with chosen speed: " << fuel_consumption << " litres per 100 km" << endl;
 
         //// **************** Distance result ****************************
-        double dist_t, f_consumed = fuel, f_remained = 0;
-        dist_t = double(fuel * 100) / double(fuel_consumption);
+        float dist_t, f_consumed = fuel, f_remained = 0;
+        dist_t = float(fuel) / float(fuel_consumption) * 100;
         if (dist_t >= distance and speed != 0) {
             dist_t = distance;
-            f_consumed = fuel_consumption * 3.6;
-            f_remained = fuel - fuel_consumption * 3.6;
+            f_consumed = fuel_consumption * dist_t / 100;
+            f_remained = fuel - f_consumed;
             time = (dist_t / speed) * 3600;
-        }else if (speed == 0)
-        {   dist_t = 0;
-            f_consumed  = 0;
+        }
+        else if (speed == 0)
+        {
+            dist_t = 0;
+            f_consumed = 0;
             f_remained = 0;
             time = 0;
             fuel_consumption = 0;
         }
-        cout << "\nDistination result" << endl;
+        cout << "\nDestination result" << endl;
         cout << "Distance traveled: " << dist_t << " km" << endl;
         cout << "Time spent: " << time << " sec" << endl;
         cout << "Fuel consumed: " << f_consumed << " litres" << endl;
@@ -67,7 +72,8 @@ int main(){
         cout << "----------------------------------------" << endl;
         if (dist_t >= distance) {
             cout << "Congratulations! You have reached destination point!" << endl;
-        } else {
+        }
+        else {
             cout << "You haven't reached destination point. " << distance - dist_t << " km left." << endl;
         }
     }
