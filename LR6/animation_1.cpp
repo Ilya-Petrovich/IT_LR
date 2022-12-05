@@ -1,6 +1,6 @@
 ﻿#include <iostream>
 
-#include <windows.h>
+#include <unistd.h>
 
 using namespace std;
 
@@ -11,7 +11,7 @@ int main() {
     int l = 0;
 
 
-    string m[r] = { "   ()()   ",
+    string m[r] = {"   ()()   ",
 
                       "   ()()   ",
 
@@ -37,7 +37,7 @@ int main() {
 
     };
 
-
+    
 
     for (int i = 0; i < r; i++) {
 
@@ -86,7 +86,7 @@ int main() {
 
         m[5][9] = '/';
 
-
+        
 
         for (int i = 0; i < r; i++) {
 
@@ -121,7 +121,7 @@ int main() {
 
         m[4][9] = '/';
 
-
+        
 
         for (int i = 0; i < r; i++) {
 
@@ -143,9 +143,9 @@ int main() {
 
         m[4][9] = '*';
 
+       
 
-
-
+        
 
         for (int i = 0; i < r; i++) {
 
@@ -164,7 +164,7 @@ int main() {
 
         m[6][0] = '-';
 
-
+        
 
         for (int i = 0; i < r; i++) {
 
@@ -183,7 +183,7 @@ int main() {
 
         m[5][0] = '\\';
 
-
+        
 
         for (int i = 0; i < r; i++) {
 
@@ -206,11 +206,11 @@ int main() {
 
         m[4][0] = '\\';
 
+        
 
+        
 
-
-
-
+        
 
         for (int i = 0; i < r; i++) {
 
@@ -227,7 +227,7 @@ int main() {
 
         m[4][9] = '*';
 
-
+        
 
         for (int i = 0; i < r; i++) {
 
@@ -256,11 +256,11 @@ int main() {
 
         m[5][9] = '*';
 
+        
 
+        
 
-
-
-
+        
 
         for (int i = 0; i < r; i++) {
 
@@ -301,7 +301,7 @@ int main() {
 
         m[7][9] = '*';
 
-
+        
 
 
         for (int i = 0; i < r; i++) {
