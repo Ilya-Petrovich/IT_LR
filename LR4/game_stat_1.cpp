@@ -7,14 +7,14 @@ int main() {
 	float dis = 360, time, s, fc, fcon, frem,disne, disno;
 	cout << "How much fuel do you have at start? "; cin >> fuel;
         cout << endl;
-	if (fuel > 50 || fuel < 0) {
+	if (fuel >= 50 || fuel <= 0) {
 		cout << "Invalid data." << endl;
 	}
 	else {
 		cout << "Car stats" << endl;
 		cout << "Fuel: " << fuel << endl;
 		cout << "Fuel capacity: " << 50 << endl;
-		cout << "Fuel consumption: " << 0 << endl;
+		cout << "+Fuel consumption: " << 0 << endl;
 		cout << "Speed: " << 0 << endl;
 		cout << "Maximum speed: " << 110 << endl;
 		cout << endl;
@@ -24,7 +24,7 @@ int main() {
 		cout << "You have to drive a route " << 360 << " km long." << endl;
 		cout << "But first you need to check if you have enough fuel." << endl;
                 cout << endl;
-		if (fuel < 25) {
+		if (fuel <= 25) {
 			fuel = fuel + 25;
 			cout << "Your fuel befort start: " << fuel << endl;
 		}
