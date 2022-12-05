@@ -14,15 +14,15 @@ int main()
         cout << "   |..|   " << endl;
         cout << "  \\|  |/  " << endl;
         cout << "  /|UU|\\  " << endl;
-        cout << "  --\/--  " << endl;
-        cout << " /  ||  \ " << endl;
+        cout << "  --\\/--  " << endl;
+        cout << " /  ||  \\ " << endl;
         cout << "/   ||   \\" << endl;
         cout << "    /\\    " << endl;
         cout << "    ||    " << endl;
         cout << "   _||_   " << endl;
 
-        Sleep(200);
-        system("cls");
+        //Sleep(200);
+        //system("cls");
 
         cout << "   ()()   " << endl;
         cout << "   ()()   " << endl;
@@ -30,7 +30,7 @@ int main()
         cout << "   |..|   " << endl;
         cout << "  \\|  |/  " << endl;
         cout << "  /|UU|\\  " << endl;
-        cout << " ---\/--- " << endl;
+        cout << " ---\\/--- " << endl;
         cout << "/   ||   \\" << endl; 
         cout << "    ||    " << endl;
         cout << "    /\\    " << endl;
@@ -39,8 +39,8 @@ int main()
 
 
 
-        Sleep(200);
-        system("cls");
+        //Sleep(200);
+        //system("cls");
 
         cout << "   ()()   " << endl;
         cout << "   ()()   " << endl;
@@ -55,8 +55,8 @@ int main()
         cout << "    ||    " << endl;
         cout << "   _||_   " << endl;
 
-        Sleep(200);
-        system("cls");
+        //Sleep(200);
+        //system("cls");
 
         cout << "   ()()   " << endl;
         cout << "   ()()   " << endl;
@@ -70,8 +70,8 @@ int main()
         cout << "    /\\    " << endl;
         cout << "    ||    " << endl;
         cout << "   _||_   " << endl;
-        Sleep(200);
-        system("cls");
+        //Sleep(200);
+        //system("cls");
 
         cout << "   ()()   " << endl;
         cout << "   ()()   " << endl;
@@ -87,8 +87,8 @@ int main()
         cout << "   _||_   " << endl;
 
 
-        Sleep(200);
-        system("cls");
+        //Sleep(200);
+        //system("cls");
 
         cout << "   ()()   " << endl;
         cout << "   ()()   " << endl;
@@ -103,8 +103,8 @@ int main()
         cout << "    ||    " << endl;
         cout << "   _||_   " << endl;
 
-        Sleep(200);
-        system("cls");
+        //Sleep(200);
+        //system("cls");
 
         cout << "   ()()   " << endl;
         cout << "   ()()   " << endl;
@@ -119,8 +119,8 @@ int main()
         cout << "    ||    " << endl;
         cout << "   _||_   " << endl;
 
-        Sleep(200);
-        system("cls");
+        //Sleep(200);
+        //system("cls");
 
         cout << "   ()()   " << endl;
         cout << "   ()()   " << endl;
@@ -135,8 +135,8 @@ int main()
         cout << "    ||    " << endl;
         cout << "   _||_   " << endl;
 
-        Sleep(200);
-        system("cls");
+        //Sleep(200);
+        //system("cls");
 
         cout << "   ()()   " << endl;
         cout << "   ()()   " << endl;
@@ -152,8 +152,8 @@ int main()
         cout << "   _||_   " << endl;
 
 
-        Sleep(200);
-        system("cls");
+        //Sleep(200);
+        //system("cls");
 
         cout << "   ()()   " << endl;
         cout << "   ()()   " << endl;
@@ -168,8 +168,8 @@ int main()
         cout << "    ||    " << endl;
         cout << "   _||_   " << endl;
 
-        Sleep(200);
-        system("cls");
+        //Sleep(200);
+        //system("cls");
 
         cout << "   ()()   " << endl;
         cout << "   ()()   " << endl;
@@ -184,8 +184,8 @@ int main()
         cout << "    ||    " << endl;
         cout << "   _||_   " << endl;
 
-        Sleep(200);
-        system("cls");
+        //Sleep(200);
+        //system("cls");
 
 
         cout << "   ()()   " << endl;
@@ -201,8 +201,8 @@ int main()
         cout << "    ||    " << endl;
         cout << "   _||_   " << endl;
 
-        Sleep(200);
-        system("cls");
+        //Sleep(200);
+        //system("cls");
 
         cout << "   ()()   " << endl;
         cout << "   ()()   " << endl;
@@ -217,8 +217,8 @@ int main()
         cout << "    ||    " << endl;
         cout << "   _||_   " << endl;
 
-        Sleep(200);
-        system("cls");
+        //Sleep(200);
+        //system("cls");
 
         cout << "   ()()   " << endl;
         cout << "   ()()   " << endl;
@@ -234,7 +234,7 @@ int main()
         cout << "   _||_   " << endl;
     }
 
-    system("pause>>nul");
+    //system("pause>>nul");
     return 0;
 
 }
