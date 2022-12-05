@@ -79,7 +79,7 @@ int main()
 	}
 	else
 	{
-		std::cout<<"Invalid data.";
+		std::cout<<"Invalid data."<<std::endl;
 	}
 	return 0;
 }
