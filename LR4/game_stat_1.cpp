@@ -26,7 +26,7 @@ int main()
 	std::cin >> speed;
 	
 	if (speed < 0) {
-		std::cout << "\nInvalid data.";
+		std::cout << "\nInvalid data.\n";
 		return 0;
 	}
 	if (speed > 110) {
@@ -54,9 +54,9 @@ int main()
 	std::cout << "\n----------------------------------------";
 
 	if (distance == 360) {
-		std::cout << "\nCongratulations! You have reached destination point!\n";
+		std::cout << "\nCongratulations! You have reached destination point!";
 	} else {
-		std::cout << "\nYou haven't reached destination point. " << 360 - distance << " km left.\n";
+		std::cout << "\nYou haven't reached destination point. " << 360 - distance << " km left.";
 	}	
 
 	return 0;
