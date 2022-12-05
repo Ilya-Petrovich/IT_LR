@@ -3,7 +3,7 @@
 using namespace std;
 
 const int w = 40, h = 20;
-const int sleep_time = 10;
+const int sleep_time = 75;
 
 void dance(string *firstEl);
 void run(string *firstEl);
@@ -214,23 +214,23 @@ void run(string *firstEl)
 	while(cnt != 0)
 	{
 		//cout << step << " " << cnt << "\n";
-		if (cnt == 1 && step == 1) break;
+		//if (cnt == 1 && step == 1) break;
 		string f, s;
 		if (step % 3 == 0)
 		{
 			f = "    ||    ";
 			s = "   _||_   ";
 		}
-		else if (step % 3 == 2)
+		else if (step % 3 == 1)
 		{
 			f = "    | \\   ";
 			s = "   _|  \\_ ";
+			cnt--;
 		}
-		else if (step % 3 == 1)
+		else if (step % 3 == 2)
 		{
 			f = "   / |    ";
 			s = " _/  |_   ";
-			cnt--;
 		}
 		
 		cout << p[0] << "\n" << p[1] << "\n" << p[2] << "\n" << p[3] << "\n" << p[4] << "\n" << p[5] << "\n" << p[6] << "\n";
