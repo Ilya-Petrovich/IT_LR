@@ -4,11 +4,13 @@
 using namespace std;
 int main()
 {
-	setlocale(LC_ALL, "rus");
 	int num_1, num_2, num_3;
-	cout << "¬ведите первое число: "; cin >> num_1;
-	cout << "¬ведите второе число: "; cin >> num_2;
-	cout << "¬ведите третье число: "; cin >> num_3;
+	cout << "Type the first number: "; 
+        cin >> num_1;
+	cout << "Type the second number: "; 
+        cin >> num_2;
+	cout << "Type the third number: "; 
+	cin >> num_3;
 	if (num_1 > num_2 && num_1 > 0 && num_2 > 0 && num_3 > 0) {
 		cout << num_1 << " + " << num_2 << " = " << num_1 + num_2 << endl;
 		cout << num_1 << " - " << num_2 << " = " << num_1 - num_2 << endl;
