@@ -90,7 +90,7 @@ int main() {
 		}
 	}
 	else {
-		cout << "Invalid data" << endl;
+		cout << "Invalid data." << endl;
 		system("pause");
 		return 0;
 	}
