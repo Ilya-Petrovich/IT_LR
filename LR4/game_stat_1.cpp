@@ -30,7 +30,7 @@ int main() {
 		std::cin >> speed;
 
 		if (speed < 0) {
-			std::cout << "\nInvalid data.";
+			std::cout << "\nInvalid data.\n";
 			return 0;
 		} else if (speed > 110) {
 				speed = 110;
@@ -38,29 +38,36 @@ int main() {
 
 		std::cout << "Your speed before start: " << speed << " km/h";
 		float s = speed / 10;
-		float fuelConsumption = s * s / 4 - 4.5 * s + 30;
+		float fuelConsumption = (s == 0 ? 0 : s * s / 4 - 4.5 * s + 30);
 		float need_fuel = fuelConsumption * 3.6;
 		if (need_fuel <= fuel) {
-			S = 360;
-			time = (int)((S / speed) * 3600);
+			S = (speed == 0 ? 0 : fuel / fuelConsumption * 100);
+			if (S > 360) {
+				S = 360;
+			}
+			time = (speed == 0 ? 0 : (int)((S / speed) * 3600));
 			consumed = fuelConsumption * 3.6;
 			remained = fuel - consumed;
 		} else {
 			if (fuelConsumption != 0) {
-				S = (100 / fuelConsumption) * fuel;
-				consumed = fuel;
-				time = (int)((S / speed) * 3600);
-				remained = 0;
+				S = fuel / fuelConsumption * 100;
+				if (S > 360) {
+					S = 360;
+				}
+				consumed = fuel - remained;
+				time = (speed == 0 ? 0 : (int)((S / speed) * 3600));
+				remained = (fuel - consumed >= 0 ? fuel - consumed : 0);
+
 			} else {
 				S = 0;
 				consumed = 0;
 				time = 0;
-				remained = 0;
+				remained = fuel;
 			}
 		}
 
 		if (speed != 0) {
-			std::cout << "\n\nFuel consumption with chosen speed: " << fuelConsumption << " litres per 100 km";
+			std::cout << "\n\nFuel consumption with chosen speed: " << fuelConsumption << " litres per 100 km\n";
 		} else {
 			std::cout << "\n\nFuel consumption with chosen speed 0 litres per 100 km";
 		}
@@ -72,15 +79,18 @@ int main() {
 		} else {
 			S = 0;
 			consumed = 0;
+			time = 0;
 			std::cout << "\nDistance traveled 0 km";
 		}
+
+		// std::cout << "--- S = " << S << " " << consumed << " " << remained << "---\n";
 
 		std::cout << "\nTime spent: " << time << " sec";
 		std::cout << "\nFuel consumed: " << consumed << " litres";
 		std::cout << "\nFuel remained: " << remained << " litres";
 		std::cout << "\n----------------------------------------";
 		
-		if (S == 360) {
+		if (S == 360 || S > 360) {
 			std::cout << "\nCongratulations! You have reached destination point!\n";
 		} else if (S == 0) {
 			std::cout << "\nYou haven't reached destination point. 360 km left.\n";
