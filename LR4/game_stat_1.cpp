@@ -19,19 +19,19 @@ int main() {
 		cout << "Maximum speed: " << 110 << endl;
 		cout << endl;
 		cout << "Route info" << endl;
-		cout << "Distance: " << dis << " km" << endl;
+		cout << "Distance: 360 km" << endl;
 		cout << "----------------------------------------" << endl;
-		cout << "You have to drive a route " << 360 << " km long." << endl;
+		cout << "You have to drive a route " << dis << " km long." << endl;
 		cout << "But first you need to check if you have enough fuel." << endl;
 		cout << endl;
 		if (fuel < 25) {
 			fuel = fuel + 25;
-			cout << "Your fuel befort start: " << fuel << endl;
+			cout << "Your fuel before start: " << fuel << endl;
 		}
 		cout << "What speed will you choose? "; cin >> speed;
 		if (speed > 110) speed = 110;
 		if (speed == 0) {
-			cout << "Your speed befort start: " << speed << " km/h" << endl;
+			cout << "Your speed before start: " << speed << " km/h" << endl;
 			cout << endl;
 			cout << "Fuel consumption with chosen speed: " << 0 << " litres per 100 km" << endl;
 			cout << endl;
@@ -48,7 +48,7 @@ int main() {
 			cout << "Invalid data.";
 		}
 		else if (speed > 0 && speed <= 110) {
-			cout << "Your speed befort start: " << speed << " km/h" << endl;
+			cout << "Your speed before start: " << speed << " km/h" << endl;
 			s = (float)speed / 10;
 			fc = ((s * s) / 4 - (4.5 * s)) + 30;
 			cout << endl;
