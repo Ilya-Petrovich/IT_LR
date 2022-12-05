@@ -162,7 +162,7 @@ void run(string *firstEl)
 	for (int i = 0; i < h; i++) p[i] = *(firstEl + i);
 	
 	//system("cls");
-	for(int i = 0; i < h; i++) cout << p[i] << "\n";
+	//for(int i = 0; i < h; i++) cout << p[i] << "\n";
 	int cnt = 0, step = 0;
 	
 	while(cnt + 10 != 40-2)
