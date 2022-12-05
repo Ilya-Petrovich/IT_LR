@@ -10,7 +10,7 @@ void jump(string* firstEl, int col, int t);
 void ball(string* firstEl, int col, int t);
 void show(string* firstEl, int col, int t);
 
-int main2() {
+int main() {
 	char uChoice;
 	string character[20] = {
 		"****************************************",
