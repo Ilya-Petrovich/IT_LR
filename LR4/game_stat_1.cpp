@@ -1,7 +1,7 @@
 #include <iostream>
 int main()
 {	
-	double t,mt=50,fuelConsumption,dm,rt,ot,s,d=360;
+	float t,mt=50,fuelConsumption,dm,rt,ot,s,d=360;
 	int ms=110,speed,time;
 	std::cout<<"How much fuel do you have at start? ";
 	std::cin>>t;
