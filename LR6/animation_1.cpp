@@ -1,5 +1,5 @@
 #include <iostream>
-#include <windows.h>
+#include <unistd.h>
 
 using namespace std;
 
@@ -32,11 +32,11 @@ int main()
 }
 
 void vivod(string a[]) {
-	system("cls");
+	//system("cls");
 	for (int i = 0; i < 12; i++) {
 		cout << a[i] << '\n';
 	}
-	Sleep(200);
+	//Sleep(200);
 }
 
 void an(string a[]) {
@@ -91,7 +91,7 @@ void an(string a[]) {
 
 	vivod(a);
 
-	a[4] = "\\ \\|  |/  /";
+	a[4] = "\\ \\|  |/ /";
 	a[5] = " \\/|UU|\\/ ";
 	a[6] = "  --\\/--  ";
 	a[7] = "    ||    ";
