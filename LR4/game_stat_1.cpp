@@ -58,6 +58,7 @@ int main() {
 				time = (speed == 0 ? 0 : (int)((S / speed) * 3600));
 				remained = (fuel - consumed >= 0 ? fuel - consumed : 0);
 
+
 			} else {
 				S = 0;
 				consumed = 0;
@@ -67,12 +68,10 @@ int main() {
 		}
 
 		if (speed != 0) {
-			std::cout << "\n\nFuel consumption with chosen speed: " << fuelConsumption << " litres per 100 km";
+			std::cout << "\n\nFuel consumption with chosen speed: " << fuelConsumption << " litres per 100 km\n";
 		} else {
 			std::cout << "\n\nFuel consumption with chosen speed 0 litres per 100 km";
 		}
-
-		std::cout << "\n\nDestination result";
 
 		if (speed != 0) {
 			std::cout << "\nDistance traveled: " << S << " km";
@@ -91,9 +90,9 @@ int main() {
 		if (S == 360 || S > 360) {
 			std::cout << "\nCongratulations! You have reached destination point!";
 		} else if (S == 0) {
-			std::cout << "\nYou haven't reached destination point. 360 km left.\n";
+			std::cout << "\nYou haven't reached destination point. 360 km left.";
 		} else if (S < 360) {
-			std::cout << "\nYou haven't reached destination point. " << ((((360 - S) * 10000) / 10000)) << " km left.\n";
+			std::cout << "\nYou haven't reached destination point. " << ((((360 - S) * 10000) / 10000)) << " km left.";
 		}
 	}
 return 0;
