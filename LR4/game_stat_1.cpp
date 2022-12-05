@@ -1,7 +1,8 @@
 #include <iostream>
 
 int main() {
-	float consumed, remained, S, fuel, time, speed;
+	int fuel, time, speed;
+	float consumed, remained, S;
 	std::cout << "How much fuel do you have at start? "; 
 	std::cin >> fuel;
 
@@ -36,19 +37,19 @@ int main() {
 			}
 
 		std::cout << "Your speed before start: " << speed << " km/h";
-		double s = speed / 10;
-		double fuelConsumption = s * s / 4 - 4.5 * s + 30;
-		double need_fuel = fuelConsumption * 3.6;
+		float s = speed / 10;
+		float fuelConsumption = s * s / 4 - 4.5 * s + 30;
+		float need_fuel = fuelConsumption * 3.6;
 		if (need_fuel <= fuel) {
 			S = 360;
-			time = (short int)((S / speed) * 3600);
+			time = (int)((S / speed) * 3600);
 			consumed = fuelConsumption * 3.6;
 			remained = fuel - consumed;
 		} else {
 			if (fuelConsumption != 0) {
 				S = (100 / fuelConsumption) * fuel;
 				consumed = fuel;
-				time = (short int)((S / speed) * 3600);
+				time = (int)((S / speed) * 3600);
 				remained = 0;
 			} else {
 				S = 0;
