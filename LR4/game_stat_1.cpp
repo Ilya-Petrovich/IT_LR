@@ -6,7 +6,7 @@ int main() {
     float s, fuelConsumption, fuelConsumed, distanceTraveled, fuelRemained;
     bool destinationPoint;
 
-    std::cout << "How much fuel do you have at start? [0 - 50]: ";
+    std::cout << "How much fuel do you have at start? ";
     std::cin >> fuel;
 
     // Initialize fuel

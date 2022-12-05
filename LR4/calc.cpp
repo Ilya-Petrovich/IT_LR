@@ -4,11 +4,11 @@
 int main() {
     int num_1, num_2, num_3;
 
-    std::cout << "Value for num_1: ";
+    std::cout << "Type the first number: ";
     std::cin >> num_1;
-    std::cout << "Value for num_2: ";
+    std::cout << "Type the second number: ";
     std::cin >> num_2;
-    std::cout << "Value for num_3: ";
+    std::cout << "Type the third number: ";
     std::cin >> num_3;
 
     if (num_1 > num_2) {
