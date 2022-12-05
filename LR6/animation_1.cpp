@@ -1,6 +1,5 @@
 #include <iostream> 
-#include <unistd.h> 
-#include <conio.h> 
+#include <unistd.h>  
 
 using namespace std;
 int main()
