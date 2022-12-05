@@ -83,7 +83,7 @@ int main()
 			cout << "----------------------------------------" << '\n';
 
 			if (distancetraveled >= 360) {
-				cout << "Congratulations! You have reached destination point!";
+				cout << "Congratulations! You have reached destination point!" << '\n';
 			}
 			else {
 				if (speed > 0) {
