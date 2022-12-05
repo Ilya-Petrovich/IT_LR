@@ -13,9 +13,9 @@ int main() {
 		cout << x << " - " << w << " = " << x - w << endl;
 		cout << x << " * " << w << " = " << x * w << endl;
 		cout << x << " / " << w << " = " << x / w << endl;
-		cout << double(x) << ".0" << " / " << double(y) << ".0" << " = " << double(x) / double(w) << endl;
+		cout << double(x) << ".0" << " / " << double(w) << ".0" << " = " << double(x) / double(w) << endl;
 		cout << x << " % " << w << " = " << x % w << endl;
-		cout << x << " + " << w << " * " << z << " = " << x + y * z << endl;
+		cout << x << " + " << w << " * " << z << " = " << x + w * z << endl;
 		cout <<"(" <<x << " + " << w <<")"<< " * " << z << " = " << (x + w) * z << endl;
 	}
 	else {
