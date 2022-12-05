@@ -8,10 +8,6 @@ int main()
 	cout << "How much fuel do you have at start? "; cin >> topl;
 	cout << "" << '\n';
 	if (topl >= 0 and topl <= 50) {
-		if (topl < 25) {
-			topl += 25;
-		}
-
 		cout << "Car stats" << '\n';
 		cout << "Fuel: " << topl << '\n';
 		cout << "Fuel capacity: " << 50 << '\n';
@@ -19,6 +15,10 @@ int main()
 		cout << "Speed: " << 0 << '\n';
 		cout << "Maximum speed: " << 110 << '\n';
 		cout << "" << '\n';
+
+		if (topl < 25) {
+			topl += 25;
+		}
 
 		cout << "Route info" << '\n';
 		cout << "Distance: " << 360 << " km" << '\n';
