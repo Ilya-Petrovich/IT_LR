@@ -4,7 +4,7 @@ int main(){
 	int Fuel,Speed;
 	double Distance, FuelConsumption, FuelCons, dist=0;
 
-	std::cout<<"How much fuel do you have at start? ";std::cin>>Fuel;
+	std::cout<<"How much fuel do you have at start? ";std::cin>>Fuel; std::cout<<endl;
 
 	if (Fuel<0||Fuel>50){
 		std::cout<<"\nInvalid data.";
