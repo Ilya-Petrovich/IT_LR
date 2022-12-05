@@ -20,7 +20,7 @@ int main() {
 		cout << endl;
 		cout << "Route info" << endl;
 		cout << "Distance: " << 360 << " km" << endl;
-		cout << "---------------------------------" << endl;
+		cout << "----------------------------------------" << endl;
 		cout << "You have to drive a route " << 360 << " km long." << endl;
 		cout << "But first you need to check if you have enough fuel." << endl;
 		cout << endl;
@@ -40,10 +40,11 @@ int main() {
 			cout << "Time spent: " << 0 << " sec" << endl;
 			cout << "Fuel consumed: " << 0 << " litres" << endl;
 			cout << "Fuel remained: " << fuel << " litres" << endl;
-			cout << "--------------------------------------" << endl;
+			cout << "----------------------------------------" << endl;
 			cout << "You haven't reached destination point. " << dis << " km left.";
 		}
 		else if (speed < 0) {
+			cout << endl;
 			cout << "Invalid data.";
 		}
 		else if (speed > 0 && speed <= 110) {
@@ -63,7 +64,7 @@ int main() {
 				frem = fuel - fcon;
 				cout << "Fuel consumed: " << fcon << " litres" << endl;
 				cout << "Fuel remained: " << frem << " litres" << endl;
-				cout << "--------------------------------------" << endl;
+				cout << "-----------------------------------------" << endl;
 				cout << "Congratulations! You have reached destrination point!";
 			}
 			else {
@@ -75,7 +76,7 @@ int main() {
 				cout << "Time spent: " << timefin << " sec" << endl;
 				cout << "Fuel consumed: " << fuel << " litres" << endl;
 				cout << "Fuel remained: " << 0 << " litres" << endl;
-				cout << "--------------------------------------" << endl;
+				cout << "----------------------------------------" << endl;
 				cout << "You haven't reached destination point. " << disne << " km left.";
 			}
 		}
