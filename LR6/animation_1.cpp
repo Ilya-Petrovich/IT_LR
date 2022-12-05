@@ -16,7 +16,7 @@ int main() {
 					 "/  |. |  \\",
 					 "   |__|   ",
 					 "    ||    ",
-					 "    ||    "
+					 "   _||_   "
 	};
 	for (int i = 0; i < rows; i++) {
 		cout << m[i] << endl;
@@ -46,7 +46,7 @@ int main() {
 		m[7][0] = ' ';
 		m[7][1] = '/';
 		m[8][0] = '/';
-		
+
 		for (int i = 0; i < rows; i++) {
 			cout << m[i] << endl;
 		}
@@ -61,7 +61,7 @@ int main() {
 		m[7][9] = ' ';
 		m[7][8] = ' ';
 		m[8][0] = ' ';
-		
+
 		for (int i = 0; i < rows; i++) {
 			cout << m[i] << endl;
 		}
@@ -106,8 +106,8 @@ int main() {
 		m[4][9] = '*';
 		m[6][0] = ' ';
 		m[5][0] = '\\';
-		
-	
+
+
 		for (int i = 0; i < rows; i++) {
 			cout << m[i] << endl;
 		}
@@ -119,7 +119,7 @@ int main() {
 		m[5][0] = ' ';
 		m[5][1] = '\\';
 		m[6][1] = ' ';
-		
+
 		for (int i = 0; i < rows; i++) {
 			cout << m[i] << endl;
 		}
@@ -186,7 +186,7 @@ int main() {
 		//system("cls");
 		m[8][0] = '/';
 		m[8][9] = '\\';
-		
+
 		for (int i = 0; i < rows; i++) {
 			cout << m[i] << endl;
 		}
