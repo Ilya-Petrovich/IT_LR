@@ -16,9 +16,7 @@ int main()
 		cout << "Maximum speed: " << 110 << '\n';
 		cout << "" << '\n';
 
-		if (topl < 25) {
-			topl += 25;
-		}
+		
 
 		cout << "Route info" << '\n';
 		cout << "Distance: " << 360 << " km" << '\n';
@@ -26,6 +24,11 @@ int main()
 		cout << "You have to drive a route " << 360 << " km long." << '\n';
 		cout << "But first you need to check if you have enough fuel." << '\n';
 		cout << "" << '\n';
+
+		if (topl < 25) {
+			topl += 25;
+			cout << "Your fuel before start: " << topl << '\n' << '\n';
+		}
 
 		cout << "What speed will you choose? "; cin >> speed;
 
