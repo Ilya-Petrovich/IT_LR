@@ -35,10 +35,7 @@ void print(vector<string> person)
 	for (auto c : person)
 		cout << c << endl;
 }
-void box()
-{
 
-}
 void dance(vector<string> sticman)
 {
 	int x = 650;
