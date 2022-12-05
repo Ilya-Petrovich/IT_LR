@@ -4,7 +4,7 @@ using namespace std;
 
 int main() {
 	double fuel, fuel_capacity=50, fuel_consumption = 0, speed = 0, s, max_speed = 110, distance = 360, distance_travelled, fuel_consumed, fuel_remained;
-	int time;
+	int time_spent;
 	cout << "How much fuel do you have at start? "; cin >> fuel;
 
 	if (fuel < 0 or fuel > 50) {
@@ -55,7 +55,7 @@ int main() {
 
 	if (fuel_remained < 0) fuel_remained = 0;
 
-	time = distance_travelled / speed * 3600;
+	time_spent = distance_travelled / speed * 3600;
 
 	cout << "\nDestination result";
 
@@ -64,7 +64,7 @@ int main() {
 		time = 0;
 	}
 	cout << "\nDistance traveled: " << distance_travelled << " km\n";
-	cout << "Time spent: " << time << " sec\n";
+	cout << "Time spent: " << time_spent << " sec\n";
 	cout << "Fuel consumed: " << fuel_consumed << " litres";
 	cout << "\nFuel remained: " << fuel_remained<< " litres";
 	cout << "\n----------------------------------------\n";
