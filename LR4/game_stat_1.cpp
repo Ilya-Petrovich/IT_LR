@@ -14,8 +14,8 @@ int main()
 	}
 
 	std::cout << "\nCar stats" << "\nFuel: " << fuel << "\nFuel capacity: 50\nFuel consumption: 0\nSpeed: 0\nMaximum speed: 110\n ";
-	std::cout << "\nRoute info \nDistance: 360 km \n----------------------------------------";
-	std::cout << "\nYou have to drive a route 360 km long. \nBut first you need to check if you have enough fuel.";
+	std::cout << "\nRoute info\nDistance: 360 km \n----------------------------------------";
+	std::cout << "\nYou have to drive a route 360 km long.\nBut first you need to check if you have enough fuel.";
 
 	if (fuel < 25) {
 		fuel += 25;
