@@ -23,7 +23,7 @@ int main()
 	cout << "Fuel capacity: 50" << endl;
 	cout << "Fuel consumption: 0" << endl;
 	cout << "Speed: 0" << endl;
-	cout << "Maximum speed : 110" << endl;
+	cout << "Maximum speed: 110" << endl;
 	cout << "Route info" << endl;
 	cout << "Distance: 360 km" << endl;
 	cout << "------------------------------------------" << endl;
