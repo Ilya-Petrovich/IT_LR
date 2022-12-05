@@ -3,11 +3,11 @@
 using namespace std;
 
 int main() {
-    int spent_time, speed = 0;
+    int spent_time;
     float fuel, s, traveled_distance, consumed_fuel, remained_fuel;
-    float fuel_capacity = 50, fuel_consumption = 0, max_speed = 110, distance = 360;
+    float fuel_capacity = 50, fuel_consumption = 0, max_speed = 110, speed = 0, distance = 360;
 
-    cout << "How much fuel do you have at start? ";
+    cout << "How much fuel do you have at start?" << endl;
     cin >> fuel;
 
     if (fuel >= 0 && fuel <= 50) {
@@ -88,7 +88,7 @@ int main() {
         }
     }
     else {
-        cout << "Invalid data." << endl;
+        cout << endl << "Invalid data." << endl;
     }
 
     return 0;
