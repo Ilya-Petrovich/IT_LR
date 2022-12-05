@@ -1,13 +1,13 @@
 #include <iostream>
 
 int main() {
-	int fuel, time, speed;
-	float consumed, remained, S;
+	int fuel, time;
+	float consumed, remained, speed, S;
 	std::cout << "How much fuel do you have at start? "; 
 	std::cin >> fuel;
 
 	if (fuel > 50 || fuel < 0) {
-		std::cout << "\nInvalid data.";
+		std::cout << "\nInvalid data.\n";
 	} else {
 		std::cout << "\nCar stats";
 		std::cout << "\nFuel: " << fuel;
