@@ -28,7 +28,6 @@ int main()
 	};
 	print(sticman);
 	dance(sticman);
-	start_state();
 	return 0;
 }
 void print(vector<string> person)
