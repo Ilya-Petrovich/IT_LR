@@ -1,72 +1,31 @@
 #include <iostream>
 #include <stdio.h>
-
+#include <string>
 using namespace std;
-void readText(char* buff, long fileSize);
-void changeColor(char* buff, long fileSize);
-void writeText(char* buff, long fileSize);
-
+void ReadText(char* buff, long fileSize);
 int main() {
-
-	FILE* file;
-
-	char filename[10];
-	cin >> filename;
-	file = fopen(filename, "rb");
-
-	long fileSize;
-	fseek(file, 0, SEEK_END);
-	fileSize = ftell(file);
-	rewind(file);
-
-	char* buff = new char[fileSize]();
-	fread(buff, sizeof(char), fileSize, file);
-	readText(buff, fileSize);
-	fclose(file);
-	delete[] buff;
-	return 0;
+    FILE* file;
+    char filename[100];
+    std::cin >> filename;
+    file = fopen(filename, "rb");
+    long fileSize;
+    fseek(file, 0, SEEK_END);
+    fileSize = ftell(file);
+    rewind(file);
+    char* buff = new char[fileSize]();
+    fread(buff, sizeof(char), fileSize, file);
+    ReadText(buff, fileSize);
+    fclose(file);
+    free(buff);
 }
-void readText(char* buff, long fileSize) {
-	char firstByte, secondByte, thirdByte, fourthByte, sign;
-	int mask = 0x03;
 
-	for (int i = 138; i < fileSize; i += 4) {
-		firstByte = (buff[i] & mask) << 6;
-		secondByte = (buff[i + 1] & mask) << 4;
-		thirdByte = (buff[i + 2] & mask) << 2;
-		fourthByte = buff[i + 3] & mask;
-		sign = firstByte | secondByte | thirdByte | fourthByte;
-		printf("%c", sign);
-	}
-	cout << endl;
-}
-void changeColor(char* buff, long fileSize) {
+void ReadText(char* buff, long fileSize) {
 
-	for (int i = 138; i < fileSize; i += 3) {
-		buff[i] = 211;
-		buff[i + 1] = 85;
-		buff[i + 2] = 186;
-	}
-}
-void writeText(char* buff, long fileSize) {
+    int b1, b2, b3, b4, united_byte;
 
-	char text[12]; cin >> text;
-	int count = 0;
-
-	for (int i = 138; i < fileSize; i += 4) {
-
-		if (count < 12) {
-			buff[i] = (buff[i] & 0xfc) | ((text[count] >> 6) & 0x3);
-			buff[i + 1] = (buff[i + 1] & 0xfc) | ((text[count] >> 4) & 0x3);
-			buff[i + 2] = (buff[i + 2] & 0xfc) | ((text[count] >> 2) & 0x3);
-			buff[i + 3] = (buff[i + 3] & 0xfc) | (text[count] & 0x3);
-		}
-		else {
-			buff[i] = buff[i] & 0xfc;
-			buff[i + 1] = (buff[i + 1] & 0xfc) | 0x2;
-			buff[i + 2] = buff[i + 2] & 0xfc;
-			buff[i + 3] = buff[i + 3] & 0xfc;
-		}
-		count++;
-	}
+    for (int i = fileSize - 1200; i < fileSize; i += 4) {
+        b1 = buff[i]; b2 = buff[i + 1]; b3 = buff[i + 2]; b4 = buff[i + 3];
+        united_byte = ((b1 & 3) << 6) | ((b2 & 3) << 4) | ((b3 & 3) << 2) | (b4 & 3);
+        cout << (char)united_byte;
+    }
 }
