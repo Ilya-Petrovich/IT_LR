@@ -2,11 +2,11 @@
 int main() {
 	int num_1 = 0, num_2 = 0, num_3 = 0;
 
-	std::cout << "Type the first number: ";
+	std::cout << "Type the first number: " << std::endl;
 	std::cin >> num_1;
-	std::cout << "Type the second nunber: ";
+	std::cout << "Type the second nunber: " << std::endl;
 	std::cin >> num_2;
-	std::cout << "Type the third nunber: ";
+	std::cout << "Type the third nunber: " << std::endl;
 	std::cin >> num_3;
 	if (num_1 >= 0 && num_2 > 0 && num_1 >= num_2) {
 		std::cout << num_1 << " + " << num_2 << " = " << num_1 + num_2 << std::endl;
