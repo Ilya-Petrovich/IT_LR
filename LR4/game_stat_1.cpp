@@ -7,9 +7,9 @@ int main()
     cin >> fuel;
     if (fuel < 0 || fuel > 50) {
         cout << "Invalid data.";
+        cout << endl;
         return 0;
     }
-    cout << endl;
     cout << "Car stats" << endl;
     cout << "Fuel: " << fuel << endl;
     cout << "Fuel capacity: 50" << endl;
@@ -51,9 +51,7 @@ int main()
     cout << "Fuel consumed: " << fuelConsumed << " litres" << endl;
     cout << "Fuel remained: " << fuel - fuelConsumed << " litres" << endl;
     cout << "-----------------------------------------------" << endl;
-    if (distanceTraveled == 360)
-        cout << "Congratulations! You have reached destination point!";
-    else
-        cout << "You haven't reached destination point. " << 360 - distanceTraveled << " km left.";
+    if (distanceTraveled == 360) cout << "Congratulations! You have reached destination point!";
+    else cout << "You haven't reached destination point. " << 360 - distanceTraveled << " km left.";
     return 0;
 }
