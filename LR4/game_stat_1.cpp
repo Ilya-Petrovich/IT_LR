@@ -5,8 +5,8 @@ using namespace std;
 
 int main() {
 
-    double fuel_capacity = 50.0, fuel;
-    double fuel_consumption = 0, distance = 360;
+    float fuel_capacity = 50.0, fuel;
+    float fuel_consumption = 0, distance = 360;
     int speed = 0, time = 0, max_speed = 110;
 
     cout << "How much fuel do you have at start? "; cin >> fuel;
@@ -25,7 +25,8 @@ int main() {
         //// *************** Route info *********************************
         cout << endl << "Route info" << endl << "Distance: " << distance << " km" << endl;
         cout << "-----------------------------------" << endl;
-        cout << "You have to drive a route 360 km long." << endl << "But first you need to check if you have enough fuel." << endl;
+        cout << "You have to drive a route 360 km long." << endl;
+        cout << "But first you need to check if you have enough fuel." << endl;
 
         if (fuel < (fuel_capacity / 2)) {
             fuel += (fuel_capacity / 2);
@@ -85,7 +86,7 @@ int main() {
                 fuel_consumption = 0;
             }
 
-            cout << endl << "Distination result" << endl;
+            cout << endl << "Destination result" << endl;
             cout << "Distance traveled: " << dist_t << " km" << endl;
             cout << "Time spent: " << time << " sec" << endl;
             cout << "Fuel consumed: " << f_consumed << " litres" << endl;
