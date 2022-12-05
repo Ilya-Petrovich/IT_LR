@@ -5,16 +5,18 @@ int main()
 	int ms=110,speed,time;
 	std::cout<<"How much fuel do you have at start? ";
 	std::cin>>t;
+	std::cout<<std::endl;
 	if( t>=0 && t<=50)
 	{
-		std::cout<<"\nCar stats"<<std::endl;
+		std::cout<<"Car stats"<<std::endl;
 		std::cout<<"Fuel: "<<t<<std::endl;
 		std::cout<<"Fuel capacity: "<<mt<<std::endl;
 		std::cout<<"Fuel consumption: 0"<<std::endl;
 		std::cout<<"Speed: 0"<<std::endl;
 		std::cout<<"Maximum speed: "<<ms<<std::endl<<std::endl;
 		std::cout<<"Route info"<<std::endl;
-		std::cout<<"Distance: 360 km"<<std::endl<<std::endl;
+		std::cout<<"Distance: 360 km"<<std::endl;
+		std::cout << "----------------------------------------" << std::endl;
 		std::cout<<"You have to drive a route 360 km long."<<std::endl;
 		std::cout<<"But first you need to check if you have enough fuel."<<std::endl<<std::endl;
 		if(t<mt/2)
@@ -27,7 +29,7 @@ int main()
 		
 		if(speed<0)
 		{
-			std::cout<<"\nInvalid data."<<std::endl;
+			std::cout<<"\nInvalid data.";
 			return 0;
 		}
 		if(speed>110)
@@ -65,6 +67,7 @@ int main()
 		ot=t-rt;
 		std::cout<<"Fuel consumed: "<<rt<<" litres"<<std::endl;
 		std::cout<<"Fuel remained: "<<ot<<" litres"<<std::endl;
+		std::cout << "----------------------------------------" << std::endl;
 		if( d==360)
 		{
 			std::cout<<"Congratulations! You have reached destination point!"<<std::endl;
@@ -76,7 +79,7 @@ int main()
 	}
 	else
 	{
-		std::cout<<"\nInvalid data.";
+		std::cout<<"Invalid data.";
 	}
 	return 0;
 }
