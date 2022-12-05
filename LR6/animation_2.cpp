@@ -1,6 +1,5 @@
 #include<iostream>
 #include<string>
-#include<conio.h>
 #include<unistd.h>
 using namespace std;
 void dance(string ar[]);
