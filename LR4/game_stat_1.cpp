@@ -61,7 +61,7 @@ int main() {
 
 	if (speed == 0) {
 		distance_travelled = 0;
-		time = 0;
+		time_spent = 0;
 	}
 	cout << "\nDistance traveled: " << distance_travelled << " km\n";
 	cout << "Time spent: " << time_spent << " sec\n";
