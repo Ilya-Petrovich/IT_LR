@@ -14,7 +14,7 @@ int main()
 	std::cout << std::endl;
 	if (fuel < 0 || fuel > 50)
 	{
-		std::cout << "Invalid data.";
+		std::cout << "\nInvalid data.";
 		return 0;
 	}
 	carStats(fuel);
