@@ -1,4 +1,4 @@
-﻿#include <iostream>
+#include <iostream>
 #include <stdio.h>
 
 using namespace std;
@@ -31,8 +31,8 @@ void readText(char* buff, long fileSize) {
 	int mask = 0x03;
 
 	for (int i = 138; i < fileSize; i += 4) {
-		firstByte = (buff[i] & mask) << 6;	
-		secondByte = (buff[i + 1] & mask) << 4;	
+		firstByte = (buff[i] & mask) << 6;
+		secondByte = (buff[i + 1] & mask) << 4;
 		thirdByte = (buff[i + 2] & mask) << 2;
 		fourthByte = buff[i + 3] & mask;
 		sign = firstByte | secondByte | thirdByte | fourthByte;
@@ -43,9 +43,9 @@ void readText(char* buff, long fileSize) {
 void changeColor(char* buff, long fileSize) {
 
 	for (int i = 138; i < fileSize; i += 3) {
-		buff[i] = 180;	
-		buff[i + 1] = 105;	
-		buff[i + 2] = 255;	
+		buff[i] = 211;
+		buff[i + 1] = 85;
+		buff[i + 2] = 186;
 	}
 }
 void writeText(char* buff, long fileSize) {
