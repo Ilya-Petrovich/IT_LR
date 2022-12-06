@@ -9,17 +9,17 @@ int main() {
     cin >> fuel;
 
     if (fuel >= 0 && fuel <= 50) {
-        cout << "\nCar stats " << endl;
-        cout << "Fuel: " << fuel << endl;
-        cout << "Fuel capacity: " << max_f << endl;
-        cout << "Fuel consumption: 0" << endl;
-        cout << "Speed: 0" << endl;
-        cout << "Maximum speed: 110 \n\n";
-        cout << "Route info " << endl;
-        cout << "Distance: " << dist << " km" << endl;
+        cout << "\nCar stats";
+        cout << "\nFuel: " << fuel;
+        cout << "\nFuel capacity: " << max_f;
+        cout << "\nFuel consumption: 0";
+        cout << "\nSpeed: 0";
+        cout << "\nMaximum speed: 110 \n";
+        cout << "\nRoute info ";
+        cout << "\nDistance: " << dist << " km";
         cout << "----------------------------------------\n";
-        cout << "You have drive a route " << dist << " km long." << endl;
-        cout << "But first you need to check if you have enough fuel.\n\n";
+        cout << "You have drive a route " << dist << " km long.";
+        cout << "\nBut first you need to check if you have enough fuel.\n\n";
 
         if (fuel < max_f / 2) {
             fuel = fuel + max_f / 2;
