@@ -31,7 +31,7 @@ int main(){
     if (speed==0)distance=0,Time=0;
     std::cout<<"\nDestination result\nDistance treveled: "<<distance<<" km\nTime spent: "<<Time<<" sec\nFuel consumed: "<<FuelConsumption/100*distance<<" litres\nFuel remained: "<<fuel-FuelConsumption/100*distance<<" litres\n----------------------------------------";
     if (distance<360){
-        std::cout<<"\nYou haven't reached destination point. "<<360-distance<<" km left";
+        std::cout<<"\nYou haven't reached destination point. "<<360-distance<<" km left.";
     } else { std::cout<<"\nCongratulations! You have reached destination point!";
     }
     return 0;
