@@ -24,7 +24,7 @@ int main(){
     } else{
         FuelConsumption=s*s/4-4.5*s+30;
     }
-    std::cout<<"\nFuel consumption with chosen speed: "<<FuelConsumption<<" liters per 100 km\n";
+    std::cout<<"\nFuel consumption with chosen speed: "<<FuelConsumption<<" litres per 100 km\n";
     distance=fuel*100/FuelConsumption;
     if(distance>360)distance=360;
     Time=distance/speed*3600;
