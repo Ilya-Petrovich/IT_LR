@@ -4,22 +4,19 @@ int main() {
     float fuel_capacity = 50, fuel;
     float fuel_consumption = 0, distance = 360;
     int speed = 0, time;
-    float max_speed = 110;
+    int max_speed = 110;
     cout << "How much fuel do you have at start? ";
     cin >> fuel;
     if (fuel >= 0 and fuel <= 50) {
-        //// **************** Car stats ********************************
         cout << "\nCar stats\n";
         cout << "Fuel: " << fuel << endl;
         cout << "Fuel capacity: " << fuel_capacity << endl;
         cout << "Fuel consumption: " << fuel_consumption << endl;
         cout << "Speed: " << speed << endl;
         cout << "Maximum speed: " << max_speed << endl;
-
-        //// *************** Route info *********************************
         cout << "\nRoute info\nDistance: " << distance << " km" << endl;
         cout << "----------------------------------------" << endl;
-        cout << "You have to drive a route 360 km long.\nBut first you need to checkif you have enough fuel." << endl;
+        cout << "You have to drive a route 360 km long.\nBut first you need to check if you have enough fuel." << endl;
         if (fuel < (fuel_capacity / 2.)) {
             fuel += (fuel_capacity / 2.);
             cout << "\n Your fuel before start: " << fuel << endl;
@@ -46,7 +43,6 @@ int main() {
         }
         cout << "Fuel consumption with chosen speed: " << fuel_consumption << " litres per 100 km" << endl;
 
-        //// **************** Distance result ****************************
         float dist_t, f_consumed = fuel, f_remained = 0;
         dist_t = float(fuel) / float(fuel_consumption) * 100;
         if (dist_t >= distance and speed != 0) {
