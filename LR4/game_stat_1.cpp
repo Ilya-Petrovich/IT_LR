@@ -18,7 +18,7 @@ int main() {
         cout << "\nRoute info ";
         cout << "\nDistance: " << dist << " km";
         cout << "----------------------------------------\n";
-        cout << "You have drive a route " << dist << " km long.";
+        cout << "You have to drive a route " << dist << " km long.";
         cout << "\nBut first you need to check if you have enough fuel.\n\n";
 
         if (fuel < max_f / 2) {
