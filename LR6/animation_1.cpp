@@ -40,7 +40,7 @@ int main() {
 		}
 
 		//Sleep(700);
-		//system("cls");
+	    //system("cls");
 		m[6][1] = ' ';
 		m[6][9] = '-';
 		m[7][9] = ' ';
@@ -68,7 +68,7 @@ int main() {
 			cout << m[i] << endl;
 		}
 		//Sleep(700);
-		//system("cls");
+	    //system("cls");
 		m[6][1] = ' ';
 		m[7][0] = ' ';
 		m[8][0] = '/';
@@ -128,7 +128,7 @@ int main() {
 		for (int i = 0; i < rows; i++) {
 			cout << m[i] << endl;
 		}
-
+		
 		//Sleep(700);
 		//system("cls");
 		m[4][9] = '*';
