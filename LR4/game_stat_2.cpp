@@ -126,6 +126,8 @@ int main() {
         printf("You haven't reached destination point. %f km left.\n", max(dis - traveled, 0.0));
     }
 
+    int distance_traveled;
+
     double optimalspeed = ((-b) / (2 * a)) * 10;
     double optimaltimespent = (distance_traveled / optimalspeed * 3600);
     double optimalConsumption = a * (optimalspeed / 10) * (optimalspeed / 10) + b * (optimalspeed / 10) + c;
@@ -133,7 +135,7 @@ int main() {
     
 
     printf("The optimal speed for that car is %i km/h.\n", optimalspeed);
-    printf("With that speed:\n", );
+    printf("With that speed:\n", distance_traveled);
 
     cout << "\n" << "The optimal speed for that car is " << optimalspeed << " km/h." << "\n";
     cout << "With that speed: 90 km/h."<< endl;
