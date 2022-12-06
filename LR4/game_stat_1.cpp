@@ -19,7 +19,7 @@ int main(){
     std::cin>>speed;
     if (speed>110)speed=110;
         else if(speed<0){
-            std::cout<<"\nInvalid data.";
+            std::cout<<"\nInvalid data.\n";
             exit(0);
         }
     std::cout<<"Your speed before start: "<<speed<<" km/h\n";
