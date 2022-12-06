@@ -11,7 +11,7 @@ int main()
 	double fuel, fuelConsum, s;
 	std::cout << "How much fuel do you have at start? ";
 	std::cin >> fuel;
-	std::cout << std::endl;
+	std::cout << std::endl << std:endl;
 	if (fuel < 0 || fuel > 50)
 	{
 		std::cout << "\nInvalid data.";
