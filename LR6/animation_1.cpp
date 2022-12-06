@@ -1,7 +1,6 @@
 #include <unistd.h>
 #include <iostream>
 #include <stdio.h>
-#include <tchar.h>
 #include <array>
 #include <conio.h>
 using namespace std;
