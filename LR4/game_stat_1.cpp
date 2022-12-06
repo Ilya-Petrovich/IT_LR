@@ -62,7 +62,7 @@ int main(){
     }else{
         fuelConsumption = speed/10 * speed/10 / 4 - 4.5 * speed/10 + 30;
     }
-    cout << "\nFuel consumtion with chosen speed: " << fuelConsumption << " liters per 100km" << endl;
+    cout << "\nFuel consumtion with chosen speed: " << fuelConsumption << " litres per 100km" << endl;
 
     distanceTravelled = fuelQuantity / (fuelConsumption/100);
     if(distanceTravelled >= distance){
