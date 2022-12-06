@@ -13,7 +13,7 @@ int main() {
 		std::cout << "Fuel capacity: 50\n";
 		std::cout << "Fuel consumption: 0\n";
 		std::cout << "Speed: 0\n";
-		std::cout << "Maximum speed: 110\n";
+		std::cout << "Maximum speed: 110\n\n";
 		std::cout << "Route info\n";
 		std::cout << "Distance: 360 km\n";
 		std::cout << "----------------------------------------\n";
