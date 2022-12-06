@@ -78,7 +78,7 @@ int main() {
             cout << "You haven't reached destination point. " << dist - distTr << " km left." << endl;
         }
     } else {
-        cout << "\nInvalid data" << endl;
+        cout << "\nInvalid data." << endl;
     }
 
     end:
