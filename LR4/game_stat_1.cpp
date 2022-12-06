@@ -8,24 +8,24 @@ int main() {
 	if (fuel > 50 || fuel < 0) {
 		std::cout << "\nInvalid data.\n";
 	} else {
-		std::cout << "\nCar stats";
-		std::cout << "\nFuel: " << fuel;
-		std::cout << "\nFuel capacity: 50";
-		std::cout << "\nFuel consumption: 0";
-		std::cout << "\nSpeed: 0";
-		std::cout << "\nMaximum speed: 110\n";
-		std::cout << "\nRoute info";
-		std::cout << "\nDistance: 360 km";
-		std::cout << "\n----------------------------------------";
-		std::cout << "\nYou have to drive a route 360 km long.";
-		std::cout << "\nBut first you need to check if you have enough fuel.";
+		std::cout << "\nCar stats\n";
+		std::cout << "Fuel: " << fuel << "\n";
+		std::cout << "Fuel capacity: 50\n";
+		std::cout << "Fuel consumption: 0\n";
+		std::cout << "Speed: 0\n";
+		std::cout << "Maximum speed: 110\n";
+		std::cout << "Route info\n";
+		std::cout << "Distance: 360 km\n";
+		std::cout << "----------------------------------------\n";
+		std::cout << "You have to drive a route 360 km long.\n";
+		std::cout << "But first you need to check if you have enough fuel.\n\n";
 
 		if (fuel < 25) {
 			fuel += 25;
-			std::cout << "\n\nYour fuel before start: " << fuel;
+			std::cout << "Your fuel before start: " << fuel << "\n\n";
 		}
 
-		std::cout << "\n\nWhat speed will you choose? "; std::cin >> speed;
+		std::cout << "What speed will you choose? "; std::cin >> speed;
 
 		if (speed < 0) {
 			std::cout << "\nInvalid data.\n";
