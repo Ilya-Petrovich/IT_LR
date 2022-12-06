@@ -1,17 +1,17 @@
 #include <unistd.h>
 #include <iostream>
- 
-void del_one_frame();
+
+// void del_one_frame();
 void head(); void legs();
 void dance();
 
 int main() {
-    //del_one_frame();
+    // del_one_frame();
     dance();
     return 0;
 }
 
-void del_one_frame() {system("cls");}
+// void del_one_frame() {system("cls");}
 void head() {
     std::cout << "    /\\    \n";
     std::cout << "   |oo|   \n";
@@ -24,10 +24,10 @@ void legs() {
     std::cout << "   _||_   \n";
 }
 void dance() {
-    for (int k = 0; k <= 28; k++) {
-        //del_one_frame();
+    for (int i = 0; i <= 28; i++) {
+        // del_one_frame();
         head();
-        switch (k%14) {
+        switch (i % 14) {
             case 0: { 
                 std::cout << "   \\__/   \n"; 
                 std::cout << "    ||    \n"; 
@@ -114,7 +114,7 @@ void dance() {
                 std::cout << "*   \\/   *\n"; break;}
         }
         legs();
-        //Sleep(500);
-        //del_one_frame();
+        // Sleep(500);
+        // del_one_frame();
     }
 }
