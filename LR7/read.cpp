@@ -50,9 +50,9 @@ void readText(char* buff, long fileSize) {
 void changeColor(char* buff, long fileSize) {
 
 	for (int i = 138; i < fileSize; i += 3) {
-		buff[i] = 114;	// first byte - 01001101
-		buff[i + 1] = 128;	// second byte - 01001100
-		buff[i + 2] = 250;	// third byte - 11011110
+		buff[i] = 122;	// first byte - 01001101
+		buff[i + 1] = 160;	// second byte - 01001100
+		buff[i + 2] = 255;	// third byte - 11011110
 	}
 }
 void writeText(char* buff, long fileSize) {
