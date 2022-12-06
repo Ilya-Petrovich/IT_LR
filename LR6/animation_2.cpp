@@ -126,7 +126,7 @@ char sit(vector <string> a)
 	    //sleep(1);
 	    //system("clear");
 	}
-	for (int i = 14; i < 19; i++)
+	for (int i = 15; i < 19; i++)
 	{
 	    a[i-11] = "*   _[]_                               *";
 	    a[i-10] = "*   |~~|                               *";
