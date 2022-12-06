@@ -1,6 +1,6 @@
-#include <unistds.h>
+#include <unistd.h>
 #include <iostream>
-
+ 
 void del_one_frame();
 void head(); void legs();
 void dance();
