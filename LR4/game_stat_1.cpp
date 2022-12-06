@@ -72,7 +72,7 @@ int main() {
 			std::cout << "\nFuel remained: " << rfuel << " litres";
 			std::cout << "\n----------------------------------------";
 			if (dist == 360) {
-				std::cout << "\nCongatulations! You have reached destination point!\n";
+				std::cout << "\nCongratulations! You have reached destination point!\n";
 			}
 			if (dist < 360) {
 				std::cout << "\nYou haven't reached destination point. " << dist1 << " km left.\n";
@@ -143,7 +143,7 @@ int main() {
 			std::cout << "\nFuel remained: " << rfuel << " litres";
 			std::cout << "\n----------------------------------------";
 			if (dist == 360) {
-				std::cout << "\nCongatulations! You have reached destination point!\n";
+				std::cout << "\nCongratulations! You have reached destination point!\n";
 			}
 			if (dist < 360) {
 				std::cout << "\nYou haven't reached destination point. " << dist1 << " km left.\n";
