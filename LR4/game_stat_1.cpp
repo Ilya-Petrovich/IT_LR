@@ -1,4 +1,4 @@
-﻿#include <iostream> // библиотека ввода и вывода
+﻿#include <iostream>
 using namespace std;
 
 int main()
@@ -32,7 +32,7 @@ int main()
 			speed = 110;
 		}
 
-		if (speed <= 110 && speed >= 0) {
+		if (speed <= 110 && speed > 0) {
 			cout << "Your speed before start: " << speed << " km/h";
 			s = speed / 10;
 			fuelConsumption = s * s / 4 - 4.5 * s + 30;
@@ -49,6 +49,9 @@ int main()
 				int time = (distance_traveled / speed) * 3600;
 				cout << "\nTime spent: " << time << " sec";
 				fuel_consumed = fuelConsumption * (distance / 100.0F);
+				if (fuel_consumed > fuel) {
+					fuel_consumed = fuel;
+				}
 				cout << "\nFuel consumed: " << fuel_consumed << " litres";
 				fuel_remained = fuel - fuel_consumed;
 				cout << "\nFuel remained: " << fuel_remained << " litres";
@@ -63,11 +66,27 @@ int main()
 				distance_left = distance - distance_traveled;
 				cout << "\nYou haven't reached destination point. " << distance_left << " km left.";
 			}
+		} else if (speed == 0) {
+			cout << "Your speed before start: " << speed << " km/h";
+			fuelConsumption = 0;
+			cout << "\n\nFuel consumption with chosen speed: " << fuelConsumption << " litres per 100 km";
+			distance_traveled = 0;
+			cout << "\n\nDestination result";
+			cout << "\nDistance traveled: " << distance_traveled << " km";
+			int time = 0;
+			cout << "\nTime spent: " << time << " sec";
+			fuel_consumed = 0;
+			cout << "\nFuel consumed: " << fuel_consumed << " litres";
+			fuel_remained = 0;
+			cout << "\nFuel remained: " << fuel_remained << " litres";
+			cout << "\n--------------------------------------------";
+			distance_left = distance - distance_traveled;
+			cout << "\nYou haven't reached destination point. " << distance_left << " km left.";
 		} else {
-			cout << "\nInvalid data";
+			cout << "\nInvalid data.";
 		}
 	} else {
-		cout << "Invalid data" << endl;
+		cout << "\nInvalid data.";
 	}
 
 	return 0;
