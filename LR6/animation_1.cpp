@@ -203,6 +203,20 @@ int main()
 		cout << R"(   _||_   )" << endl;
 		////Sleep(100);
 		//system("clr");
+		cout << R"(   _[]_   )" << endl;
+		cout << R"(   |~~|   )" << endl;
+		cout << R"(   |oq|   )" << endl;
+		cout << R"(  (|<>|)  )" << endl;
+		cout << R"(   \--/   )" << endl;
+		cout << R"(   _><_   )" << endl;
+		cout << R"(  -\. /-  )" << endl;
+		cout << R"( / |. | \ )" << endl;
+		cout << R"(/  |. |  \)" << endl;
+		cout << R"(   |--|   )" << endl;
+		cout << R"(    ||    )" << endl;
+		cout << R"(   _||_   )" << endl;
+		//////Sleep(100);
+		//system("clr");
 	}
 	return 0;
 }
