@@ -2,8 +2,8 @@
 #include <unistd.h>
 int main()
 {
-    int x=1000,y=1;
-    system("cls");
+    int x=500,y=1;
+    //system("cls");
     for(y;y<3;y++){
         std::cout<<"    /\\\n   |oo|\n  (|..|)\n   |--|\n   \\__/\n    ||\n  -| *|-\n / |  | \\\n/   \\/   \\\n    /\\\n    ||\n   _||_";
         //Sleep(x);
