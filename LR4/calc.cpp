@@ -1,4 +1,4 @@
-#include <iostream>;
+#include <iostream>
 int main() {
 	int n1, n2, n3;
 	std :: cout << "Type the first number: ";
