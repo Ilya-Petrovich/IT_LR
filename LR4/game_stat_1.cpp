@@ -1,5 +1,5 @@
 #include <iostream>
-#include <cmath>
+
 int main() {
 	float fuel, fuels = 0, speed, fcon, rfuel = 0, fuelkonec = 0, dist = 0;
 	float time = 0, dist1 = 0;

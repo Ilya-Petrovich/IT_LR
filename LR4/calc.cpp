@@ -9,12 +9,19 @@ int main() {
 	std :: cin >> n3;
 	if (n1 > n2 && n1 != 0 && n2 != 0 && n3 != 0) {
 		std::cout << n1 << " + " << n2 << " = " << n1 + n2 << std::endl;
+
 		std::cout << n1 << " - " << n2 << " = " << n1 - n2 << std::endl;
+
 		std::cout << n1 << " * " << n2 << " = " << n1 * n2 << std::endl;
+
 		std::cout << n1 << " / " << n2 << " = " << n1 / n2 << std::endl;
+
 		std::cout << n1 << ".0" << " / " << n2 << ".0" << " = " << (float)n1 / n2 << std::endl;
+
 		std::cout << n1 << " % " << n2 << " = " << n1 % n2 << std::endl;
+
 		std::cout << n1 << " + " << n2 << " * " << n3 << " = " << n1 + n2 * n3 << std::endl;
+
 		std::cout << "(" << n1 << " + " << n2 << ")" << " * " << n3 << " = " << (n1 + n2) * n3 << std::endl;
 	} else {
 		std :: cout << "Invalid data" << std::endl;
