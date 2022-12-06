@@ -1,6 +1,5 @@
 #include <iostream>
-int main() 
-{
+int main() {
 	float fuel, fuels = 0, speed, fcon, rfuel = 0, fuelkonec = 0, dist = 0;
 	float time = 0, dist1 = 0;
 	std::cout << "How much fuel do you have at start? "; std::cin >> fuel;
