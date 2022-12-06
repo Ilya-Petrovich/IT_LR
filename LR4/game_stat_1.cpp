@@ -7,17 +7,22 @@ int main(){
     if (fuel>50 || fuel<0){
         std::cout<<"\nInvalid data.\n";
         exit(0);
-    }else if(fuel<25)fuel+=25;
+    }
     std::cout<<"\nCar stats\nFuel: "<<fuel;
     std::cout<<"\nFuel capacity: 50\nFuel consumption: 0\nSpeed: 0\nMaximum speed: 110\n\n";
-    std::cout<<"Route info\nDistance: 360 km\n----------------------------------------\nYou have to drive a route 360 km long.\nBut first you need to check if you have enough fuel.\n\nWhat speed will you choose? ";
+    std::cout<<"Route info\nDistance: 360 km\n----------------------------------------\nYou have to drive a route 360 km long.\nBut first you need to check if you have enough fuel.\n";
+    if(fuel<25){
+        fuel+=25;
+        std::cout<<"\nYour fuel before start: "<<fuel;
+    }
+    std::cout<<"\n\nWhat speed will you choose? ";
     std::cin>>speed;
     if (speed>110)speed=110;
         else if(speed<0){
             std::cout<<"\nInvalid data.";
             exit(0);
         }
-    std::cout<<"Your speed before start: "<<speed<<" km/h\n";
+    std::cout<<"\nYour speed before start: "<<speed<<" km/h\n";
     s=float(speed)/10;
     if (speed==0){
         FuelConsumption=0;
