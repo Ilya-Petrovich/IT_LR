@@ -35,4 +35,4 @@ int main(){
     } else { std::cout<<"\nCongratulations! You have reached destination point!";
     }
     return 0;
-}}
+}
