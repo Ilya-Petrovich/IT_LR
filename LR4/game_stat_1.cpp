@@ -23,11 +23,9 @@ int main() {
 		if (speed < 0) {
 			std::cout << "\nInvalid data.\n";
 		}
-
 		if (speed > 110) {
 			speed = 110;
 		}
-
 		if (speed >= 0) {
 			std::cout << "Your speed before start: " << speed << " km/h";
 		}
@@ -74,10 +72,10 @@ int main() {
 			std::cout << "\nFuel remained: " << rfuel << " litres";
 			std::cout << "\n----------------------------------------";
 			if (dist == 360) {
-				std::cout << "\nCongatulations! You have reached destination point!";
+				std::cout << "\nCongatulations! You have reached destination point!\n";
 			}
 			if (dist < 360) {
-				std::cout << "\nYou haven't reached destination point. " << dist1 << " km left.";
+				std::cout << "\nYou haven't reached destination point. " << dist1 << " km left.\n";
 			}
 		}
 	}else {
@@ -145,10 +143,10 @@ int main() {
 			std::cout << "\nFuel remained: " << rfuel << " litres";
 			std::cout << "\n----------------------------------------";
 			if (dist == 360) {
-				std::cout << "\nCongatulations! You have reached destination point!";
+				std::cout << "\nCongatulations! You have reached destination point!\n";
 			}
 			if (dist < 360) {
-				std::cout << "\nYou haven't reached destination point. " << dist1 << " km left.";
+				std::cout << "\nYou haven't reached destination point. " << dist1 << " km left.\n";
 			}
 		}
 	}
