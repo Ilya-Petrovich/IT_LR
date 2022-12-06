@@ -2,26 +2,26 @@
 
 int main() 
 {
-	int n1, n2, n3;
+	int num_1, num_2, num_3;
 	std::cout << "Type the first number: ";
-	std::cin >> n1;
+	std::cin >> num_1;
 
 	std::cout << "Type the second number: "; 
-	std::cin >> n2;
+	std::cin >> num_2;
 
 	std::cout << "Type the third number: ";
-	std::cin >> n3;
+	std::cin >> num_3;
 
-	if (n1 > n2 && n1 >= 0 && n2 >= 0 && n3 >= 0) 
+	if (num_1 > num_2 && num_1 >= 0 && num_2 >= 0 && num_3 >= 0) 
 	{
-		std::cout << n1 << " + " << n2 << " = " << n1 + n2 << std::endl;
-		std::cout << n1 << " - " << n2 << " = " << n1 - n2 << std::endl;
-		std::cout << n1 << " * " << n2 << " = " << n1 * n2 << std::endl;
-		std::cout << n1 << " / " << n2 << " = " << n1 / n2 << std::endl;
-		std::cout << n1 << ".0" << " / " << n2 << ".0" << " = " << (float)n1 / n2 << std::endl;
-		std::cout << n1 << " % " << n2 << " = " << n1 % n2 << std::endl;
-		std::cout << n1 << " + " << n2 << " * " << n3 << " = " << n1 + n2 * n3 << std::endl;
-		std::cout << "(" << n1 << " + " << n2 << ")" << " * " << n3 << " = " << (n1 + n2) * n3 << std::endl;
+		std::cout << num_1 << " + " << num_2 << " = " << num_1 + num_2 << std::endl;
+		std::cout << num_1 << " - " << num_2 << " = " << num_1 - num_2 << std::endl;
+		std::cout << num_1 << " * " << num_2 << " = " << num_1 * num_2 << std::endl;
+		std::cout << num_1 << " / " << num_2 << " = " << num_1 / num_2 << std::endl;
+		std::cout << num_1 << ".0" << " / " << num_2 << ".0" << " = " << (float)num_1 / num_2 << std::endl;
+		std::cout << num_1 << " % " << num_2 << " = " << num_1 % num_2 << std::endl;
+		std::cout << num_1 << " + " << num_2 << " * " << num_3 << " = " << num_1 + num_2 * num_3 << std::endl;
+		std::cout << "(" << num_1 << " + " << num_2 << ")" << " * " << num_3 << " = " << (num_1 + num_2) * num_3 << std::endl;
 	} else {
 		std::cout << "Invalid data" << std::endl;
 	}
