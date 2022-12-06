@@ -23,7 +23,6 @@ int main()
 		std::cout << n1 << " + " << n2 << " * " << n3 << " = " << n1 + n2 * n3 << std::endl;
 		std::cout << "(" << n1 << " + " << n2 << ")" << " * " << n3 << " = " << (n1 + n2) * n3 << std::endl;
 	} else {
-		std :: cout << "Invalid data" << std::endl;
+		std::cout << "Invalid data" << std::endl;
 	}
-	return 0;
 }
