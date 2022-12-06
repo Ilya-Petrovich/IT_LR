@@ -4,7 +4,7 @@ int main() {
 	float time = 0, dist1 = 0;
 	std::cout << "How much fuel do you have at start? "; std::cin >> fuel;
 	if (fuel > 50 || fuel <= 0) {
-		std::cout << "\nInvalid data.";
+		std::cout << "\nInvalid data.\n";
 	} else if (fuel < 25) {
 		std::cout << "\nCar stats";
 		std::cout << "\nFuel: " << fuel;
@@ -21,7 +21,7 @@ int main() {
 		std::cout << "\n\nYour fuel before start: " << fuel << "km/h";
 		std::cout << "\n\nWhat speed will you choose? "; std::cin >> speed;
 		if (speed < 0) {
-			std::cout << "\nInvalid data.";
+			std::cout << "\nInvalid data.\n";
 		}
 
 		if (speed > 110) {
@@ -94,7 +94,7 @@ int main() {
 		std::cout << "\nBut first you need to check if you have enough fuel.";
 		std::cout << "\n\nWhat speed will you choose? "; std::cin >> speed;
 		if (speed < 0) {
-			std::cout << "\nInvalid data.";
+			std::cout << "\nInvalid data.\n";
 		}
 		if (speed > 110) {
 			speed = 110;
