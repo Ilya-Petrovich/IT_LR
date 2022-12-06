@@ -18,7 +18,7 @@ int main() {
 		std::cout << "\nYou have to drive a route 360 km long.";
 		std::cout << "\nBut first you need to check if you have enough fuel.";
 		fuel += 25;
-		std::cout << "\n\nYour fuel before start: " << fuel << "km/h";
+		std::cout << "\n\nYour fuel before start: " << fuel;
 		std::cout << "\n\nWhat speed will you choose? "; std::cin >> speed;
 		if (speed < 0) {
 			std::cout << "\nInvalid data.\n";
