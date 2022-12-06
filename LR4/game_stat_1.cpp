@@ -29,7 +29,7 @@ int main()
 		
 		if(speed<0)
 		{
-			std::cout<<"\nInvalid data.";
+			std::cout<<"\nInvalid data."<<std::endl;
 			return 0;
 		}
 		if(speed>110)
