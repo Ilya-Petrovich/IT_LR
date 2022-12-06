@@ -7,7 +7,7 @@ int main() {
 	float dis = 360, time, s, fc, fcon, frem, disne, disno;
 	std::cout << "How much fuel do you have at start? "; std::cin >> fuel;
 	if (fuel > 50 || fuel < 0) {
-		std::cout << "\nInvalid data.";
+		std::cout << "\nInvalid data.\n"; 
 	}
 	else {
 		std::cout << "\nCar stats\n";
@@ -36,10 +36,11 @@ int main() {
 			std::cout << "Fuel consumed: " << 0 << " litres\n";
 			std::cout << "Fuel remained: " << fuel << " litres\n";
 			std::cout << "----------------------------------------\n";
-			std::cout << "You haven't reached destination point. " << dis << " km left.";
+			std::cout << "You haven't reached destination point. " << dis << " km left.\n";
 		}
 		else if (speed < 0) {
-			std::cout << "\nInvalid data.";
+			std::cout << "\nInvalid data.\n";
+			return 0;
 		}
 		else if (speed > 0 && speed <= 110) {
 			std::cout << "Your speed before start: " << speed << " km/h\n\n";
@@ -57,7 +58,7 @@ int main() {
 				std::cout << "Fuel consumed: " << fcon << " litres\n";
 				std::cout << "Fuel remained: " << frem << " litres\n";
 				std::cout << "-----------------------------------------\n";
-				std::cout << "Congratulations! You have reached destrination point!";
+				std::cout << "Congratulations! You have reached destrination point!\n";
 			}
 			else {
 				disne = ((fc * 3.6 - fuel) * 360) / (fuel + (fc * 3.6 - fuel));
@@ -69,9 +70,10 @@ int main() {
 				std::cout << "Fuel consumed: " << fuel << " litres\n";
 				std::cout << "Fuel remained: " << 0 << " litres\n";
 				std::cout << "----------------------------------------\n";
-				std::cout << "You haven't reached destination point. " << disne << " km left.";
+				std::cout << "You haven't reached destination point. " << disne << " km left.\n";
 			}
 		}
 	}
 	return 0;
 }
+
