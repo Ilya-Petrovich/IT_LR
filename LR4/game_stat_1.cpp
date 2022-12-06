@@ -9,7 +9,7 @@ int main() {
     cin >> fuel;
 
     if (fuel >= 0 && fuel <= 50) {
-        cout << "\nCar stats" << endl;
+        cout << "\nCar stats " << endl;
         cout << "Fuel: " << fuel << endl;
         cout << "Fuel capacity: " << max_f << endl;
         cout << "Fuel consumption: 0" << endl;
