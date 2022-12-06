@@ -10,7 +10,7 @@ int main(){
     }else if(fuel<25)fuel+=25;
     std::cout<<"\nCar stats\nFuel: "<<fuel;
     std::cout<<"\nFuel capacity: 50\nFuel consumption: 0\nSpeed: 0\nMaximum speed: 110\n\n";
-    std::cout<<"Route info\nDistance: 360 km\n---------------------------------\nYou have to drive a route 360 km long.\nBut first you need to check if you have enough fuel.\n\nWhat speed will you choose? ";
+    std::cout<<"Route info\nDistance: 360 km\n----------------------------------------\nYou have to drive a route 360 km long.\nBut first you need to check if you have enough fuel.\n\nWhat speed will you choose? ";
     std::cin>>speed;
     if (speed>110)speed=110;
         else if(speed<0){
@@ -29,7 +29,7 @@ int main(){
     if(distance>360)distance=360;
     Time=distance/speed*3600;
     if (speed==0)distance=0,Time=0;
-    std::cout<<"\nDestination result\nDistance treveled: "<<distance<<" km\nTime spent: "<<Time<<" sec\nFuel consumed: "<<FuelConsumption/100*distance<<" liters\nFuel remained: "<<fuel-FuelConsumption/100*distance<<" liters\n-------------------------------------";
+    std::cout<<"\nDestination result\nDistance treveled: "<<distance<<" km\nTime spent: "<<Time<<" sec\nFuel consumed: "<<FuelConsumption/100*distance<<" liters\nFuel remained: "<<fuel-FuelConsumption/100*distance<<" liters\n----------------------------------------";
     if (distance<360){
         std::cout<<"\nYou haven't reached destination point. "<<360-distance<<" km left";
     } else { std::cout<<"\nCongratulations! You have reached destination point!";
