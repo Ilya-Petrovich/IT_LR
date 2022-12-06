@@ -6,7 +6,7 @@ int main() {
 	std::cout << "How much fuel do you have at start? "; std::cin >> fuel;
 
 	if (fuel > 50 || fuel < 0) {
-		std::cout << "\nInvalid data.\n";
+		std::cout << "\nInvalid data.";
 	} else {
 		std::cout << "\nCar stats";
 		std::cout << "\nFuel: " << fuel;
@@ -28,7 +28,7 @@ int main() {
 		std::cout << "\n\nWhat speed will you choose? "; std::cin >> speed;
 
 		if (speed < 0) {
-			std::cout << "\nInvalid data.\n";
+			std::cout << "\nInvalid data.";
 			return 0;
 		} else if (speed > 110) {
 				speed = 110;
@@ -68,33 +68,28 @@ int main() {
 		if (speed != 0) {
 			std::cout << "\nFuel consumption with chosen speed: " << fuelConsumption << " litres per 100 km" << std::endl;
 		} 
-		// else {
-		// 	std::cout << "\nFuel consumption with chosen speed 0 litres per 100 km\n";
-		// }
 
 		std::cout << "\nDestination result" << std::endl;
+		if (speed != 0) {
+			std::cout << "Distance traveled: " << S << " km" << std::endl;
+		} else {
+			S = 0;
+			consumed = 0;
+			time = 0;
+			std::cout << "\nDistance traveled 0 km";
+		}
 
-		// if (speed != 0) {
-		// 	std::cout << "Distance traveled: " << S << " km" << std::endl;
-		// } 
-		//  else {
-		// 	S = 0;
-		// 	consumed = 0;
-		// 	time = 0;
-		// 	std::cout << "\nDistance traveled 0 km";
-		// }
-		std::cout << "Distance traveled: " << S << " km" << std::endl;
 		std::cout << "Time spent: " << time << " sec" << std::endl;
 		std::cout << "Fuel consumed: " << consumed << " litres" << std::endl;
 		std::cout << "Fuel remained: " << remained << " litres" << std::endl;
 		std::cout << "----------------------------------------" << std::endl;
 		
 		if (S == 360 || S > 360) {
-			std::cout << "Congratulations! You have reached destination point!\n";
+			std::cout << "Congratulations! You have reached destination point!";
 		} else if (S == 0) {
-			std::cout << "You haven't reached destination point. 360 km left.\n";
+			std::cout << "You haven't reached destination point. 360 km left.";
 		} else if (S < 360) {
-			std::cout << "You haven't reached destination point. " << ((((360 - S) * 10000) / 10000)) << " km left.\n";
+			std::cout << "You haven't reached destination point. " << ((((360 - S) * 10000) / 10000)) << " km left.";
 		}
 	}
 return 0;
