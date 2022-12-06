@@ -38,8 +38,8 @@ int main()
 	for (int i = 0; i < 29; i++)
 	{
 		cout << An[i];
-		system("clear");
-		system("cls");
+		//system("clear");
+		//system("cls");
 	}
 	cin.get();
 }

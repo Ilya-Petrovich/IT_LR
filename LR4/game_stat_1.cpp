@@ -6,7 +6,7 @@ int main()
 	int t;
 	std::cout << "How much fuel do you have at start? "; std::cin >> f;
 	if (f < 0 or f>50) {
-		cout << "\nInvalid data."; return 0;
+		std::cout << "\nInvalid data."; return 0;
 	}
 	std::cout << "\nCar stats\nFuel: "<<f<<"\nFuel capacity: 50\nFuel consumption: 0\nSpeed: 0\nMaximum speed: 110\n";
 	std::cout << "\nRoute info\nDistance: 360 km\n";
@@ -32,8 +32,8 @@ int main()
 	    t = 0; dt = 0;
 	}
 	std::cout << "\nDestination result\nDistance traveled: " << dt << " km\nTime spent: " << t << " sec\nFuel consumed: " << fuelConsumed << " litres\nFuel remained " << fuelRemained << " litres\n----------------------------------------\n";
-	if (dt == 360) cout << "Congratulations! You have reached destination point!";
-	else cout << "You haven't reached destination point. " << 360 - dt << " km left.";
+	if (dt == 360) std::cout << "Congratulations! You have reached destination point!";
+	else std::cout << "You haven't reached destination point. " << 360 - dt << " km left.";
 	system ("pause");
 	return 0;
 }
