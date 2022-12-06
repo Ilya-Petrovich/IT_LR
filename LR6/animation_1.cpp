@@ -1,5 +1,5 @@
 #include <iostream>
-#include <windows.h>
+#include <unistd.h>
 char a1[11]{ "   _[]_   " };
 char a2[11]{ "   |~~|   " };
 char a3[11]{ "   |oq|   " };
@@ -290,51 +290,51 @@ void ryki14() {
 }
 int main() {
 	nach();
-	Sleep(1500);
-	system("cls");
+	//Sleep(1500);
+	//system("cls");
 	for(int i = 0;i < 2;i++){
 	ryki1();
-	Sleep(1500);
-	system("cls");
+	//Sleep(1500);
+	//system("cls");
 	ryki2();
-	Sleep(1500);
-	system("cls");
+	//Sleep(1500);
+	//system("cls");
 	ryki3();
-	Sleep(1500);
-	system("cls");
+	//Sleep(1500);
+	//system("cls");
 	ryki4();
-	Sleep(1500);
-	system("cls");
+	//Sleep(1500);
+	//system("cls");
 	ryki5();
-	Sleep(1500);
-	system("cls");
+	//Sleep(1500);
+	//system("cls");
 	ryki6();
-	Sleep(1500);
-	system("cls");
+	//Sleep(1500);
+	//system("cls");
 	ryki7();
-	Sleep(1500);
-	system("cls");
+	//Sleep(1500);
+	//system("cls");
 	ryki8();
-	Sleep(1500);
-	system("cls");
+	//Sleep(1500);
+	//system("cls");
 	ryki9();
-	Sleep(1500);
-	system("cls");
+	//Sleep(1500);
+	//system("cls");
 	ryki10();
-	Sleep(1500);
-	system("cls");
+	//Sleep(1500);
+	//system("cls");
 	ryki11();
-	Sleep(1500);
-	system("cls");
+	//Sleep(1500);
+	//system("cls");
 	ryki12();
-	Sleep(1500);
-	system("cls");
+	//Sleep(1500);
+	//system("cls");
 	ryki13();
-	Sleep(1500);
-	system("cls");
+	//Sleep(1500);
+	//system("cls");
 	ryki14();
-	Sleep(1500);
-	system("cls");
+	//Sleep(1500);
+	//system("cls");
 	}
 	return 0;
 }
