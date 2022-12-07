@@ -8,7 +8,7 @@ int main()
 
     int ms=110,speed,time;
 
-    std::cout<<"How much fuel do you have at start? ";
+    std::cout<<"How much fuel do you have at start? "<< std::endl;
 
     std::cin>>t;
 
@@ -16,7 +16,7 @@ int main()
 
     {
 
-        std::cout<<"\nCar stats"<<std::endl;
+        std::cout<<"Car stats"<<std::endl;
 
         std::cout<<"Fuel: "<<t<<std::endl;
 
