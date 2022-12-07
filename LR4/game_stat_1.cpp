@@ -11,7 +11,7 @@ int main() {
 		cout << "Invalid data." << endl;
 		return 0;
 	}
-	
+
 	cout << "Car stats" << endl;
 	cout << "Fuel: " << K << endl;
 	cout << "Fuel capacity: " << Fuelcapacity << endl;
@@ -20,17 +20,18 @@ int main() {
 	cout << "Maximum speed: " << maxV << endl;
 	cout << "\n";
 	cout << "Route info " << endl;
-	cout << "Distance: " << S << " km " << endl;
+	cout << "Distance: " << S << " km" << endl;
 	cout << "----------------------------------------" << endl;
-	cout << "You have to drive a route 360 km long. " << endl;
+	cout << "You have to drive a route 360 km long." << endl;
 	cout << "But first you need to check if you have enough fuel." << endl;
 	cout << "\n";
 
 	if (K > 0 && K < 25) {
-		K = K + Fuelcapacity / 2;
+		K += 25;
 		cout << "Your speed before start: " << K << endl;
 		cout << "\n";
 	}
+
 	cout << "What speed will you choose? "; cin >> V;
 
 	if (V > maxV) {
