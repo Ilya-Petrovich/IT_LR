@@ -16,7 +16,6 @@ int main()
         if(fuel < 25)
         {
             fuel += 25;
-            cout << endl;
             cout << "Your fuel before start: " << fuel << endl;
             cout << endl;
         }
@@ -44,7 +43,7 @@ int main()
         if(speed < 0)
         {
             cout << endl;
-            cout << "Invalid data" << endl;
+            cout << "Invalid data";
             return 0;
         }
         else if(speed > 110)
@@ -70,7 +69,7 @@ int main()
             cout << "Fuel consumed: " << 0 << " litres" << endl;
             cout << "Fuel remained: " << fuel << " litres" << endl;
             cout << "----------------------------------------" << endl;
-            cout << "You haven't reached destination point. 360 km left." << endl;
+            cout << "You haven't reached destination point. 360 km left.";
         }
         else if(ostalos > 0)
         {
@@ -81,7 +80,7 @@ int main()
             cout << "Fuel consumed: " << fuel << " litres" << endl;
             cout << "Fuel remained: " << 0 << " litres" << endl;
             cout << "----------------------------------------" << endl;
-            cout << "You haven't reached destination point. " << 360 - nedoexal << " km left." << endl;
+            cout << "You haven't reached destination point. " << 360 - nedoexal << " km left.";
         }
         else
         {
@@ -91,13 +90,12 @@ int main()
             cout << "Fuel consumed: " << fuel_consumed << " litres" << endl;
             cout << "Fuel remained: " << fuel - fuel_consumed << " litres" << endl;
             cout << "----------------------------------------" << endl;
-            cout << "Congratulations! You have reached destination point!" << endl;
+            cout << "Congratulations! You have reached destination point!";
         }
     }
     else
     {
-        cout << endl;
-        cout << "Invalid data" << endl;
+        cout << "Invalid data";
         return 0;
     }
 }
