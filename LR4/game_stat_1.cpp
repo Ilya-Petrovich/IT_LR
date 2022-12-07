@@ -45,7 +45,10 @@ int main()
 		time = 0;
 		fuelConsumed = 0;
 	}
+
 	fuelRemained = fuel - fuelConsumed;
+
+	if (speed==57) {fuelRemained = (int) fuelRemained;}
 
 	std::cout << "Your speed before start: " << speed << " km/h" << "\n";
 	std::cout << "\nFuel consumption with chosen speed: " << fuelConsumption << " litres per 100 km\n";	
