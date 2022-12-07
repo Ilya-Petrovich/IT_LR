@@ -58,8 +58,8 @@ int main() {
 	std::cout << "Fuel remained: " << fuel - distance * fuelconsumption / 100 << " litres" << std::endl << "----------------------------------------" << std::endl;}
 	if ( distance >= 360 ) {
 		
-		std::cout << "Congratulations! You have reached destination point!";	
-	} else { std::cout << "You haven't reached destination point. " << 360 - distance << " km left.";
+		std::cout << "Congratulations! You have reached destination point!\n";	
+	} else { std::cout << "You haven't reached destination point. " << 360 - distance << " km left.\n";
 	
 }
 }
