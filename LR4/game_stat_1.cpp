@@ -86,7 +86,7 @@ int main()
 			cout << "\nInvalid data.";
 		}
 	} else {
-		cout << "\nInvalid data.";
+		cout << "\nInvalid data." << endl;
 	}
 
 	return 0;
