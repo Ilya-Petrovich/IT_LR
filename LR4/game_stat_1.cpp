@@ -9,12 +9,16 @@ int main()
 
     cout << "How much fuel do you have at start? ";
     cin >> fuel;
+    cout << endl;
 
     if(fuel >= 0 and fuel <= 50)
     {
         if(fuel < 25)
         {
             fuel += 25;
+            cout << endl;
+            cout << "Your fuel before start: " << fuel << endl;
+            cout << endl;
         }
         else
         {
@@ -37,13 +41,15 @@ int main()
 
         cout << "What speed will you choose? ";
         cin >> speed;
-        if(speed > 110)
+        if(speed < 0)
+        {
+            cout << endl;
+            cout << "Invalid data" << endl;
+            return 0;
+        }
+        else if(speed > 110)
         {
             speed = 110;
-        }
-        else
-        {
-            speed = speed;
         }
         cout << "Your speed before start: " << speed << " km/h" << endl;
         cout << endl;
@@ -90,6 +96,8 @@ int main()
     }
     else
     {
+        cout << endl;
         cout << "Invalid data" << endl;
+        return 0;
     }
 }
