@@ -682,8 +682,8 @@ L1:int t;
 	switch (t)
 	{
 	case 1: {dance();goto L1; }
-	case 2: {run();	goto L1; }
-	case 3: {jump();goto L1; }
+	case 3 {run();	goto L1; }
+	case 2: {jump();goto L1; }
 	case 4: {ball(); goto L1; }
 	case 5: {return 0; }
 	}
