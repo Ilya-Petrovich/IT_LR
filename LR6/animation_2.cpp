@@ -143,11 +143,11 @@ int main() {
 void menu(string* pers0) {
 	int num;
 	cout << "Choose animation:" << endl;
-	cout << "Dance:                 1" << endl;
-	cout << "Run:                   2" << endl;
-	cout << "Sit down and jump:     3" << endl;
-	cout << "Throw a ball:          4" << endl;
-	cout << "\nEnter 5 for exit." << endl;
+	cout << "Dance: \t\t\t1" << endl;
+	cout << "Run: \t\t\t2" << endl;
+	cout << "Sit down and jump: \t3" << endl;
+	cout << "Throw a ball: \t\t4" << endl;
+	cout << "Enter 5 for exit." << endl;
 	cin >> num;
 	switch (num)
 	{
