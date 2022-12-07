@@ -6,7 +6,7 @@ using namespace std;
 int main(){
     setlocale(LC_ALL,"RU_ru");
     
-    double 
+    float
         fuelQuantity,
         fuelConsumed,
         fuelConsumption = 0,
