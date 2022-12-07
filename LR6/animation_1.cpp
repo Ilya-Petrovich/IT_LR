@@ -1,5 +1,5 @@
 #include <iostream>
-#include <windows.h>
+#include <unistd.h>
 
 using namespace std;
 
@@ -20,72 +20,71 @@ void ThirteenthPos();
 void FourteenthPos();
 
 int main() {
-	
 	for (int k = 0; k < 28; k++)
 	{
 
 		switch (k%14)
 		{
 		case 0:
-			system("cls");
+			//system("cls");
 			FirstPos();
 			break;
 		case 1:
-			system("cls");
+			//system("cls");
 			SecondPos();
 			break;
 		case 2:
-			system("cls");
+			//system("cls");
 			ThirdPos();
 			break;
 		case 3:
-			system("cls");
+			//system("cls");
 			FourthPos();
 			break;
 		case 4:
-			system("cls");
+			//system("cls");
 			FifthPos();
 			break;
 		case 5:
-			system("cls");
+			//system("cls");
 			SixthPos();
 			break;
 		case 6:
-			system("cls");
+			//system("cls");
 			SeventhPos();
 			break;
 		case 7:
-			system("cls");
+			//system("cls");
 			EigthPos();
 			break;
 		case 8:
-			system("cls");
+			//system("cls");
 			NinthPos();
 			break;
 		case 9:
-			system("cls");
+			//system("cls");
 			TenthPos();
 			break;
 		case 10:
-			system("cls");
+			//system("cls");
 			EleventhPos();
 			break;
 		case 11:
-			system("cls");
+			//system("cls");
 			TvelvethPos();
 			break;
 		case 12:
-			system("cls");
+			//system("cls");
 			ThirteenthPos();
 			break;
 		case 13:
-			system("cls");
+			//system("cls");
 			FourteenthPos();
 			break;
 		}
-		Sleep(500);
+		//Sleep(500);
 	}
-	system("cls");
+	//system("cls");
 	Idle();
 }
 
