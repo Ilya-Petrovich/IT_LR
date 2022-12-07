@@ -4,7 +4,7 @@ using namespace std;
 
 int main() {
 	int n1, n2, n3;
-
+	
 	cout << "Type the first number: ";
 	cin >> n1;
 	
@@ -14,15 +14,10 @@ int main() {
     cout << "Type the third number: ";
     cin >> n3;
     
-    if (n1 < 0 || n2 < 0 || n3 < 0) {
+    if (n1 < 0 || n2 < 0 || n3 < 0 || n1 <= n2 || n2 == 0) {
     	cout << "Invalid data" << endl;
         return 0;
     }
-
-    if (n1 <= n2) {
-    	cout << "Invalid data" << endl;
-        return 0;
-	}
 	
     cout << n1 << " + " << n2 << " = " << n1 + n2 << endl;
 	cout << n1 << " * " << n2 << " = " << n1 * n2 << endl;
@@ -30,8 +25,8 @@ int main() {
 	cout << (double)n1 << " / " << (double)n2 << " = " << (double)n1 / n2 << endl;
 	cout << n1 << " % " << n2 << " = " << n1 % n2 << endl;
 	cout << n1 << " + " << n2 << " = " << n1 + n2 << endl;
-	cout << n1 << " + " << n2 << " * " << n3 << " = " << n1 + n2 << endl;
-	cout << "(" << n1 << " + " << ")" << n2 << " * " << n3 << " = " << n1 + n2 << endl;
+	cout << n1 << " + " << n2 << " * " << n3 << " = " << n1 + n2 * n3 << endl;
+	cout << "(" << n1 << " + " << n2 << ")" << " * " << n3 << " = " << (n1 + n2) * n3 << endl;
     
 	return 0;
 }

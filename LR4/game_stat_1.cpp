@@ -66,18 +66,15 @@ int main() {
     double consumed = fuelConsumption * traveled / 100;
 
     cout << endl << "Destination result\n";
-    cout << "----------------------------------\n";
+    cout << "--------------------------------------\n";
 
     cout << "Distance traveled: " << traveled << " km\n";
     cout << "Time spent: " << traveled / speed * 360 << " sec\n";
     cout << "Fuel consumed: " << consumed << " litres\n";
     cout << "Fuel remained: " << fuel - consumed << " litres\n";
 
-    //printf("Distance traveled: %f km\n", traveled);
-    //printf("Time spent: %.f sec\n", traveled / speed * 3600);
-    //printf("Fuel consumed: %f litres\n", consumed);
-    //printf("Fuel remained: %f litres\n", fuel - consumed);
-    cout << "----------------------------------\n";
+
+    cout << "--------------------------------------\n";
     
     if (traveled == 360.0) {
     cout << "Congratulations! You have reached destination point\n";
