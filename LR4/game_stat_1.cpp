@@ -9,7 +9,7 @@ int main()
 	std::cin >> fuel;
 
 	if (fuel < 0 or fuel > 50) {
-		std::cout << "\nInvalid data\n";
+		std::cout << "\nInvalid data.\n";
 		return 0;
 	}
 
@@ -50,16 +50,16 @@ int main()
 
 	if (speed==57) {fuelRemained = (int) fuelRemained;}
 
-	std::cout << "Your speed before start: " << speed << " km/h" << "\n";
+	std::cout << "Your speed before start: " << speed << " km/h\n";
 	std::cout << "\nFuel consumption with chosen speed: " << fuelConsumption << " litres per 100 km\n";	
 	std::cout << "\nDestination result\nDistance traveled: " << distance << " km" << "\nTime spent: " << time << " sec"; 
 	std::cout << "\nFuel consumed: " << fuelConsumed << " litres" << "\nFuel remained: " << fuelRemained << " litres" ;
 	std::cout << "\n----------------------------------------";
 
 	if (distance == 360) {
-		std::cout << "\nCongratulations! You have reached destination point!";
+		std::cout << "\nCongratulations! You have reached destination point!\n";
 	} else {
-		std::cout << "\nYou haven't reached destination point. " << 360 - distance << " km left.";
+		std::cout << "\nYou haven't reached destination point. " << 360 - distance << " km left.\n";
 	}	
 
 	return 0;
