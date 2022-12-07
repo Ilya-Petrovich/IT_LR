@@ -181,7 +181,7 @@ void menu(string* pers0) {
 }
 
 void dancing(string* firstEl, int t) {
-	system("cls");
+	//system("cls");
 	int col = 20;
 	string pers[20];
 	string* ptpers = pers;
@@ -194,8 +194,8 @@ void dancing(string* firstEl, int t) {
 		pers[14] = "*/   ||   \\                            *";
 		pers[15] = "*    ||                                *";
 
-		Sleep(t);
-		system("cls");
+		//Sleep(t);
+		//system("cls");
 
 		for (int i = 0; i < col; i++) {
 			cout << pers[i] << endl;
@@ -203,8 +203,8 @@ void dancing(string* firstEl, int t) {
 		pers[13] = "*  --\\/----                            *";
 		pers[14] = "* /  ||                                *";
 		pers[15] = "*/   ||                                *";
-		Sleep(t);
-		system("cls");
+		//Sleep(t);
+		//system("cls");
 
 		for (int i = 0; i < col; i++) {
 			cout << pers[i] << endl;
@@ -213,8 +213,8 @@ void dancing(string* firstEl, int t) {
 		pers[13] = "* ---\\/---                             *";
 		pers[14] = "*/   ||                                *";
 		pers[15] = "*    ||                                *";
-		Sleep(t);
-		system("cls");
+		//Sleep(t);
+		//system("cls");
 
 		for (int i = 0; i < col; i++) {
 			cout << pers[i] << endl;
@@ -224,8 +224,8 @@ void dancing(string* firstEl, int t) {
 		pers[13] = "*  --\\/--                              *";
 		pers[14] = "* /  ||                                *";
 		pers[15] = "*/   ||                                *";
-		Sleep(t);
-		system("cls");
+		//Sleep(t);
+		//system("cls");
 
 		for (int i = 0; i < col; i++) {
 			cout << pers[i] << endl;
@@ -235,19 +235,19 @@ void dancing(string* firstEl, int t) {
 		pers[13] = "* ---\\/--                              *";
 		pers[14] = "*/   ||                                *";
 		pers[15] = "*    ||                                *";
-		Sleep(t);
-		system("cls");
+		//Sleep(t);
+		//system("cls");
 
 		for (int i = 0; i < col; i++) {
 			cout << pers[i] << endl;
 		}
-		pers[11].replace(0, strlen("*  \\|  |/ /"), "*  \\|  |/ /");
+		pers[11] = "*  \\|  |/ /                            *";
 		pers[12] = "*  /|UU|\\/                             *";
 		pers[13] = "*----\\/--                              *";
 		pers[14] = "*    ||                                *";
 		pers[15] = "*    ||                                *";
-		Sleep(t);
-		system("cls");
+		//Sleep(t);
+		//system("cls");
 
 		for (int i = 0; i < col; i++) {
 			cout << pers[i] << endl;
@@ -255,8 +255,8 @@ void dancing(string* firstEl, int t) {
 		pers[11] = "*  \\|  |/ *                            *";
 		pers[12] = "*\\ /|UU|\\/                             *";
 		pers[13] = "* ---\\/--                              *";
-		Sleep(t);
-		system("cls");
+		//Sleep(t);
+		//system("cls");
 
 		for (int i = 0; i < col; i++) {
 			cout << pers[i] << endl;
@@ -264,8 +264,8 @@ void dancing(string* firstEl, int t) {
 		pers[11] = "*\\ \\|  |/ /                            *";
 		pers[12] = "* \\/|UU|\\/                             *";
 		pers[13] = "*  --\\/--                              *";
-		Sleep(t);
-		system("cls");
+		//Sleep(t);
+		//system("cls");
 
 		for (int i = 0; i < col; i++) {
 			cout << pers[i] << endl;
@@ -273,8 +273,8 @@ void dancing(string* firstEl, int t) {
 		pers[11] = "** \\|  |/ *                            *";
 		pers[12] = "* \\/|UU|\\/                             *";
 		pers[13] = "*  --\\/--                              *";
-		Sleep(t);
-		system("cls");
+		//Sleep(t);
+		//system("cls");
 
 		for (int i = 0; i < col; i++) {
 			cout << pers[i] << endl;
@@ -282,24 +282,24 @@ void dancing(string* firstEl, int t) {
 		pers[11] = "*  \\|  |/                              *";
 		pers[12] = "** /|UU|\\ *                            *";
 		pers[13] = "* ---\\/---                             *";
-		Sleep(t);
-		system("cls");
+		//Sleep(t);
+		//system("cls");
 
 		for (int i = 0; i < col; i++) {
 			cout << pers[i] << endl;
 		}
 		pers[12] = "*  /|UU|\\                              *";
 		pers[13] = "**---\\/---*                            *";
-		Sleep(t);
-		system("cls");
+		//Sleep(t);
+		//system("cls");
 
 		for (int i = 0; i < col; i++) {
 			cout << pers[i] << endl;
 		}
 		pers[13] = "* ---\\/---                             *";
 		pers[14] = "**   ||   *                            *";
-		Sleep(t);
-		system("cls");
+		//Sleep(t);
+		//system("cls");
 
 		for (int i = 0; i < col; i++) {
 			cout << pers[i] << endl;
@@ -307,22 +307,22 @@ void dancing(string* firstEl, int t) {
 		pers[13] = "*  --\\/--                              *";
 		pers[14] = "* /  ||  \\                             *";
 		pers[15] = "**   ||   *                            *";
-		Sleep(t);
-		system("cls");
+		//Sleep(t);
+		//system("cls");
 
 		for (int i = 0; i < col; i++) {
 			cout << pers[i] << endl;
 		}
 		pers[15] = "*/   ||   \\                            *";
-		Sleep(t);
-		system("cls");
+		//Sleep(t);
+		//system("cls");
 
 		for (int i = 0; i < col; i++) {
 			cout << pers[i] << endl;
 		}
 
 	}
-	system("cls");
+	//system("cls");
 	return;
 }
 
@@ -348,15 +348,15 @@ void run_pos3() {
 void run(string* firstEl, int t) {
 	zeroing_pers();
 	zeroing_console();
-	system("cls");
+	//system("cls");
 	int col = 20;
 	string pers[20];
 	string* ptpers = pers;
 	for (int i = 0; i < col; i++, firstEl++) pers[i] = *firstEl;
 	for (int i = 0; i < col; i++) cout << pers[i] << endl;
 
-	Sleep(t);
-	system("cls");
+	//Sleep(t);
+	//system("cls");
 
 	for (int k = 0; k < wc - w - 1; k++) {
 		run_pos2();
@@ -375,8 +375,8 @@ void run(string* firstEl, int t) {
 		zeroing_pers();
 
 		run_pos3();
-		Sleep(t);
-		system("cls");
+		//Sleep(t);
+		//system("cls");
 		for (int i = 7; i < hc - 1; i++) {
 			for (int j = 2 + k; j < w + k + 1; j++) {
 				cons[i][j] = person[i - 7][j - 2 - k];
@@ -390,8 +390,8 @@ void run(string* firstEl, int t) {
 		}
 		zeroing_console();
 		zeroing_pers();
-		Sleep(t);
-		system("cls");
+		//Sleep(t);
+		//system("cls");
 
 		for (int i = 7; i < hc - 1; i++) {
 			for (int j = 2 + k; j < w + k + 1; j++) {
@@ -405,8 +405,8 @@ void run(string* firstEl, int t) {
 			cout << endl;
 		}
 
-		Sleep(t);
-		system("cls");
+		//Sleep(t);
+		//system("cls");
 	}
 
 
@@ -429,8 +429,8 @@ void run(string* firstEl, int t) {
 		zeroing_pers();
 
 		run_pos2();
-		Sleep(t);
-		system("cls");
+		//Sleep(t);
+		//system("cls");
 		for (int i = 7; i < hc - 1; i++) {
 			for (int j = k; j < w + k - 1; j++) {
 				cons[i][j] = person[i - 7][j - k];
@@ -444,8 +444,8 @@ void run(string* firstEl, int t) {
 		}
 		zeroing_console();
 		zeroing_pers();
-		Sleep(t);
-		system("cls");
+		//Sleep(t);
+		//system("cls");
 
 		for (int i = 7; i < hc - 1; i++) {
 			for (int j = k; j < w + k - 1; j++) {
@@ -459,8 +459,8 @@ void run(string* firstEl, int t) {
 			cout << endl;
 		}
 
-		Sleep(t);
-		system("cls");
+		//Sleep(t);
+		//system("cls");
 	}
 
 
@@ -473,7 +473,7 @@ void run(string* firstEl, int t) {
 void sit(int t) {
 	zeroing_console();
 	zeroing_pers();
-	system("cls");
+	//system("cls");
 	for (int i = 7; i < hc - 1; i++) {
 		for (int j = 1; j < w; j++) {
 			cons[i][j] = person[i - 7][j - 1];
@@ -485,7 +485,7 @@ void sit(int t) {
 		}
 		cout << endl;
 	}
-	Sleep(t);
+	//Sleep(t);
 	for (int i = 10; i >= 0; i--)
 	{
 		for (int j = 0; j < w; j++)
@@ -503,7 +503,7 @@ void sit(int t) {
 	person[11][4] = '\\';
 	person[11][5] = '/';
 
-	system("cls");
+	//system("cls");
 
 	for (int i = 7; i < hc - 1; i++) {
 		for (int j = 1; j < w; j++) {
@@ -522,8 +522,8 @@ void sit(int t) {
 	person[11][6] = ' ';
 
 
-	Sleep(t);
-	system("cls");
+	//Sleep(t);
+	//system("cls");
 	for (int i = 7; i < hc - 1; i++) {
 		for (int j = 1; j < w; j++) {
 			cons[i][j] = person[i - 7][j - 1];
@@ -537,8 +537,8 @@ void sit(int t) {
 	}
 
 	zeroing_console();
-	Sleep(t);
-	system("cls");
+	//Sleep(t);
+	//system("cls");
 	for (int i = 7; i < hc - 1; i++) {
 		for (int j = 1; j < w; j++) {
 			cons[i - 1][j] = person[i - 7][j - 1];
@@ -555,8 +555,8 @@ void sit(int t) {
 	}
 
 	zeroing_console();
-	Sleep(t);
-	system("cls");
+	//Sleep(t);
+	//system("cls");
 	for (int i = 7; i < hc - 1; i++) {
 		for (int j = 1; j < w; j++) {
 			cons[i - 2][j] = person[i - 7][j - 1];
@@ -573,8 +573,8 @@ void sit(int t) {
 	}
 
 	zeroing_console();
-	Sleep(t);
-	system("cls");
+	//Sleep(t);
+	//system("cls");
 	for (int i = 7; i < hc - 1; i++) {
 		for (int j = 1; j < w; j++) {
 			cons[i - 3][j] = person[i - 7][j - 1];
@@ -592,8 +592,8 @@ void sit(int t) {
 
 
 	zeroing_console();
-	Sleep(t);
-	system("cls");
+	//Sleep(t);
+	//system("cls");
 	for (int i = 7; i < hc - 1; i++) {
 		for (int j = 1; j < w; j++) {
 			cons[i - 4][j] = person[i - 7][j - 1];
@@ -610,8 +610,8 @@ void sit(int t) {
 	}
 
 	zeroing_console();
-	Sleep(t);
-	system("cls");
+	//Sleep(t);
+	//system("cls");
 	for (int i = 7; i < hc - 1; i++) {
 		for (int j = 1; j < w; j++) {
 			cons[i - 3][j] = person[i - 7][j - 1];
@@ -628,8 +628,8 @@ void sit(int t) {
 	}
 
 	zeroing_console();
-	Sleep(t);
-	system("cls");
+	//Sleep(t);
+	//system("cls");
 	for (int i = 7; i < hc - 1; i++) {
 		for (int j = 1; j < w; j++) {
 			cons[i - 2][j] = person[i - 7][j - 1];
@@ -646,8 +646,8 @@ void sit(int t) {
 	}
 
 	zeroing_console();
-	Sleep(t);
-	system("cls");
+	//Sleep(t);
+	//system("cls");
 	for (int i = 7; i < hc - 1; i++) {
 		for (int j = 1; j < w; j++) {
 			cons[i - 1][j] = person[i - 7][j - 1];
@@ -664,8 +664,8 @@ void sit(int t) {
 	}
 
 	zeroing_console();
-	Sleep(t);
-	system("cls");
+	//Sleep(t);
+	//system("cls");
 	for (int i = 7; i < hc; i++) {
 		for (int j = 1; j < w; j++) {
 			cons[i][j] = person[i - 7][j - 1];
@@ -686,8 +686,8 @@ void sit(int t) {
 	person[11][5] = '/';
 	person[11][6] = '_';
 
-	Sleep(t);
-	system("cls");
+	//Sleep(t);
+	//system("cls");
 
 	for (int i = 7; i < hc - 1; i++) {
 		for (int j = 1; j < w; j++) {
@@ -703,8 +703,8 @@ void sit(int t) {
 
 	zeroing_pers();
 	zeroing_console();
-	Sleep(t);
-	system("cls");
+	//Sleep(t);
+	//system("cls");
 
 	for (int i = 7; i < hc - 1; i++) {
 		for (int j = 1; j < w; j++) {
@@ -718,15 +718,15 @@ void sit(int t) {
 		cout << endl;
 	}
 
-	Sleep(t);
-	system("cls");
+	//Sleep(t);
+	//system("cls");
 
 }
 
 void throwBall(int t){
 	zeroing_console();
 	zeroing_pers();
-	system("cls");
+	//system("cls");
 	for (int i = 7; i < hc - 1; i++) {
 		for (int j = 1; j < w; j++) {
 			cons[i][j] = person[i - 7][j - 1];
@@ -738,12 +738,12 @@ void throwBall(int t){
 		}
 		cout << endl;
 	}
-	Sleep(t);
+	//Sleep(t);
 
 	person[8][9] = '-';
 	person[7][9] = '\\';
     person[7][10] = 'o';
-	system("cls");
+	//system("cls");
 	for (int i = 7; i < hc - 1; i++) {
 		for (int j = 1; j < w; j++) {
 			cons[i][j] = person[i - 7][j - 1];
@@ -755,7 +755,7 @@ void throwBall(int t){
 		}
 		cout << endl;
 	}
-	Sleep(t);
+	//Sleep(t);
 
 	zeroing_pers();
 	person[6][9] = 'o';
@@ -763,7 +763,7 @@ void throwBall(int t){
 	person[7][9] = ' ';
 	person[7][9] = '-';
 	person[8][9] = ' ';
-	system("cls");
+	//system("cls");
 	for (int i = 7; i < hc - 1; i++) {
 		for (int j = 1; j < w; j++) {
 			cons[i][j] = person[i - 7][j - 1];
@@ -775,14 +775,14 @@ void throwBall(int t){
 		}
 		cout << endl;
 	}
-	Sleep(t);
+	//Sleep(t);
 
 	person[5][9] = 'o';
 	person[6][8] = '-';
 	person[6][9] = '-';
 	person[7][8] = ' ';
 	person[7][9] = ' ';
-	system("cls");
+	//system("cls");
 	for (int i = 7; i < hc - 1; i++) {
 		for (int j = 1; j < w; j++) {
 			cons[i][j] = person[i - 7][j - 1];
@@ -794,12 +794,12 @@ void throwBall(int t){
 		}
 		cout << endl;
 	}
-	Sleep(t);
+	//Sleep(t);
 	
 	person[4][9] = 'o';
 	person[5][9] = ' ';
 	person[6][9] = '/';
-	system("cls");
+	//system("cls");
 	for (int i = 7; i < hc - 1; i++) {
 		for (int j = 1; j < w; j++) {
 			cons[i][j] = person[i - 7][j - 1];
@@ -811,12 +811,12 @@ void throwBall(int t){
 		}
 		cout << endl;
 	}
-	Sleep(t);
+	//Sleep(t);
 
 	person[3][9] = 'o';
 	person[4][9] = ' ';
 	person[6][9] = '-';
-	system("cls");
+	//system("cls");
 	for (int i = 7; i < hc - 1; i++) {
 		for (int j = 1; j < w; j++) {
 			cons[i][j] = person[i - 7][j - 1];
@@ -828,7 +828,7 @@ void throwBall(int t){
 		}
 		cout << endl;
 	}
-	Sleep(t);
+	//Sleep(t);
 
 	
 	
@@ -837,7 +837,7 @@ void throwBall(int t){
 	person[3][9] = ' ';
 	person[6][9] = ' ';
 	person[7][9] = '\\';
-	system("cls");
+	//system("cls");
 	for (int i = 7; i < hc - 1; i++) {
 		for (int j = 1; j < w; j++) {
 			cons[i][j] = person[i - 7][j - 1];
@@ -849,7 +849,7 @@ void throwBall(int t){
 		}
 		cout << endl;
 	}
-	Sleep(t);
+	//Sleep(t);
 
 	person[1][9] = 'o';
 	person[2][9] = ' ';
@@ -858,7 +858,7 @@ void throwBall(int t){
 	person[7][8] = '\\';
 	person[8][9] = '\\';
 
-	system("cls");
+	//system("cls");
 	for (int i = 7; i < hc - 1; i++) {
 		for (int j = 1; j < w; j++) {
 			cons[i][j] = person[i - 7][j - 1];
@@ -870,12 +870,12 @@ void throwBall(int t){
 		}
 		cout << endl;
 	}
-	Sleep(t);
+	//Sleep(t);
 
 	person[0][9] = 'o';
 	person[1][9] = ' ';
 
-	system("cls");
+	//system("cls");
 	for (int i = 7; i < hc - 1; i++) {
 		for (int j = 1; j < w; j++) {
 			cons[i][j] = person[i - 7][j - 1];
@@ -887,11 +887,11 @@ void throwBall(int t){
 		}
 		cout << endl;
 	}
-	Sleep(t);
+	//Sleep(t);
 
 	person[0][9] = ' ';
 
-	system("cls");
+	//system("cls");
 	for (int i = 7; i < hc - 1; i++) {
 		for (int j = 1; j < w; j++) {
 			cons[i][j] = person[i - 7][j - 1];
@@ -904,10 +904,10 @@ void throwBall(int t){
 		}
 		cout << endl;
 	}
-	Sleep(t);
+	//Sleep(t);
 
 	zeroing_console();
-	system("cls");
+	//system("cls");
 	for (int i = 7; i < hc - 1; i++) {
 		for (int j = 1; j < w; j++) {
 			cons[i][j] = person[i - 7][j - 1];
@@ -920,10 +920,10 @@ void throwBall(int t){
 		}
 		cout << endl;
 	}
-	Sleep(t);
+	//Sleep(t);
 
 	zeroing_console();
-	system("cls");
+	//system("cls");
 	for (int i = 7; i < hc - 1; i++) {
 		for (int j = 1; j < w; j++) {
 			cons[i][j] = person[i - 7][j - 1];
@@ -936,10 +936,10 @@ void throwBall(int t){
 		}
 		cout << endl;
 	}
-	Sleep(t);
+	//Sleep(t);
 
 	zeroing_console();
-	system("cls");
+	//system("cls");
 	for (int i = 7; i < hc - 1; i++) {
 		for (int j = 1; j < w; j++) {
 			cons[i][j] = person[i - 7][j - 1];
@@ -952,10 +952,10 @@ void throwBall(int t){
 		}
 		cout << endl;
 	}
-	Sleep(t);
+	//Sleep(t);
 
 	zeroing_console();
-	system("cls");
+	//system("cls");
 	for (int i = 7; i < hc - 1; i++) {
 		for (int j = 1; j < w; j++) {
 			cons[i][j] = person[i - 7][j - 1];
@@ -968,10 +968,10 @@ void throwBall(int t){
 		}
 		cout << endl;
 	}
-	Sleep(t);
+	//Sleep(t);
 
 	zeroing_console();
-	system("cls");
+	//system("cls");
 	for (int i = 7; i < hc - 1; i++) {
 		for (int j = 1; j < w; j++) {
 			cons[i][j] = person[i - 7][j - 1];
@@ -984,10 +984,10 @@ void throwBall(int t){
 		}
 		cout << endl;
 	}
-	Sleep(t);
+	//Sleep(t);
 
 	zeroing_console();
-	system("cls");
+	//system("cls");
 	for (int i = 7; i < hc - 1; i++) {
 		for (int j = 1; j < w; j++) {
 			cons[i][j] = person[i - 7][j - 1];
@@ -1000,10 +1000,10 @@ void throwBall(int t){
 		}
 		cout << endl;
 	}
-	Sleep(t);
+	//Sleep(t);
 
 	zeroing_console();
-	system("cls");
+	//system("cls");
 	for (int i = 7; i < hc - 1; i++) {
 		for (int j = 1; j < w; j++) {
 			cons[i][j] = person[i - 7][j - 1];
@@ -1016,10 +1016,10 @@ void throwBall(int t){
 		}
 		cout << endl;
 	}
-	Sleep(t);
+	//Sleep(t);
 
 	zeroing_console();
-	system("cls");
+	//system("cls");
 
 	person[6][1] = '-';
 	person[7][0] = '/';
@@ -1038,10 +1038,10 @@ void throwBall(int t){
 		}
 		cout << endl;
 	}
-	Sleep(t);
+	//Sleep(t);
 
 	zeroing_console();
-	system("cls");
+	//system("cls");
 
 	person[6][0] = '-';
 	person[7][0] = ' ';
@@ -1058,10 +1058,10 @@ void throwBall(int t){
 		}
 		cout << endl;
 	}
-	Sleep(t);
+	//Sleep(t);
 
 	zeroing_console();
-	system("cls");
+	//system("cls");
 
 	person[6][0] = '\\';
 
@@ -1077,10 +1077,10 @@ void throwBall(int t){
 		}
 		cout << endl;
 	}
-	Sleep(t);
+	//Sleep(t);
 
 	zeroing_console();
-	system("cls");
+	//system("cls");
 
 	person[6][0] = '-';
 
@@ -1096,10 +1096,10 @@ void throwBall(int t){
 		}
 		cout << endl;
 	}
-	Sleep(t);
+	//Sleep(t);
 
 	zeroing_console();
-	system("cls");
+	//system("cls");
 
 	person[6][0] = ' ';
 	person[6][1] = ' ';
@@ -1118,10 +1118,10 @@ void throwBall(int t){
 		}
 		cout << endl;
 	}
-	Sleep(t);
+	//Sleep(t);
 
 	zeroing_console();
-	system("cls");
+	//system("cls");
 
 	person[6][0] = ' ';
 	person[6][1] = ' ';
@@ -1141,11 +1141,11 @@ void throwBall(int t){
 		}
 		cout << endl;
 	}
-	Sleep(t);
+	//Sleep(t);
 
 	zeroing_console();
 	zeroing_pers();
-	system("cls");
+	//system("cls");
 
 	for (int i = 7; i < hc - 1; i++) {
 		for (int j = 1; j < w; j++) {
@@ -1159,6 +1159,6 @@ void throwBall(int t){
 		}
 		cout << endl;
 	}
-	Sleep(t);
-	system("cls");
+	//Sleep(t);
+	////system("cls");
 }
