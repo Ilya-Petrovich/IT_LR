@@ -136,14 +136,14 @@ void dancing(string* firstEl, int t) {
 			cout << pers[i] << endl;
 		}
 		pers[5] = "  /|UU|\\  ";
-		pers[6] = "*---||---*";
+		pers[6] = "*---\\/---*";
 		//Sleep(t);
 		//system("cls");
 
 		for (int i = 0; i < col; i++) {
 			cout << pers[i] << endl;
 		}
-		pers[6] = " ---||--- ";
+		pers[6] = " ---\\/--- ";
 		pers[7] = "*   ||   *";
 		//Sleep(t);
 		//system("cls");
@@ -151,7 +151,7 @@ void dancing(string* firstEl, int t) {
 		for (int i = 0; i < col; i++) {
 			cout << pers[i] << endl;
 		}
-		pers[6] = "  --||--  ";
+		pers[6] = "  --\\/--  ";
 		pers[7] = " /  ||  \\ ";
 		pers[8] = "*   ||   *";
 		//Sleep(t);
