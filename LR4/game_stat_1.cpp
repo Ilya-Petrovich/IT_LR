@@ -4,7 +4,7 @@
 
 using namespace std;
 
-int main() {// :{
+int main() {// :{  :}
 
 	int  speed, time = 0, fuel, fuel1, maxs = 110, fc = 50, fconsumtion = 0, sbs = 0;
 	float distance = 360, fc1, dt = 0, fr = 0, kmleft, speed1, s, fconsumed;
