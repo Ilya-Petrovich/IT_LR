@@ -88,7 +88,7 @@ int main(){
     }
 
     cout << "\nDestination result";
-    cout << "\nDistance travelled: " << distanceTravelled << " km";
+    cout << "\nDistance traveled: " << distanceTravelled << " km";
     cout << "\nTime spent: " << timeSpent << " sec";
     cout << "\nFuel consumed: " << fuelConsumed << " litres";
     cout << "\nFuel remained: " << fuelRemained << " litres";
