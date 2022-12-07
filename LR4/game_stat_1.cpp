@@ -20,13 +20,14 @@ int main() {
 	fuel = fuel + 25;
 	}
 	std::cout << "What speed will you choose? "; std::cin >> speed;
+	
 	if ( speed < 0 || speed > 110) { 
 		std::cout << "Invalid data.\n";
 	
 		return 0;
 	}
 	std::cout << "Your speed before start: " << speed << " km/h" << std::endl;
-	
+	std::cout << "\n";
 	s = speed / 10;
 	
 	if (speed == 0) { fuelconsumption = 0;
@@ -57,7 +58,7 @@ int main() {
 	std::cout << "Fuel remained: " << fuel - distance * fuelconsumption / 100 << " litres" << std::endl << "----------------------------------------" << std::endl;}
 	if ( distance >= 360 ) {
 		
-		std::cout << "Congratulations! You have reached destination point!" << std::endl;	
+		std::cout << "Congratulations! You have reached destination point!";	
 	} else { std::cout << "You haven't reached destination point. " << 360 - distance << " km left.";
 	
 }
