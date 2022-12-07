@@ -140,7 +140,7 @@ int main()
 
         {
 
-            std::cout<<"Congratulations! You have reached destination point!"<<std::endl;
+            std::cout<<"Congratulations! You have reached destination point!";
 
         }
 
@@ -148,7 +148,7 @@ int main()
 
         {
 
-            std::cout<<"You haven't reached destination point. "<< 360-d<<" km left."<<std::endl;
+            std::cout<<"You haven't reached destination point. "<< 360-d<<" km left.";
 
         }
 
@@ -158,10 +158,10 @@ int main()
 
     {
 
-        std::cout<<"Invalid data."<<std::endl;
+        std::cout<<"Invalid data.";
 
     }
 
-    return 0;
+ 
 
 }
