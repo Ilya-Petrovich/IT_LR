@@ -8,9 +8,10 @@ int main()
 
     int ms=110,speed,time;
 
-    std::cout<<"How much fuel do you have at start? "<< std::endl;
+    std::cout<<"How much fuel do you have at start? ";
 
     std::cin>>t;
+    std::cout << "\n";
 
     if( t>=0 && t<=50)
 
