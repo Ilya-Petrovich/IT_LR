@@ -103,7 +103,7 @@ int main()
 
             fuelConsumption = s * s / 4 -4.5 * s + 30;
 
-            std::cout<<"Fuel consumption with chosen speed: "<<fuelConsumption<<" litres per 100 km"<<std::endl<<std::endl;
+            std::cout<<"Fuel consumption with chosen speed: "<<fuelConsumption<<" litres per 100 km"<<std::endl;
 
             dm=t/fuelConsumption*100;
 
