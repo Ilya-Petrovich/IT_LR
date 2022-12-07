@@ -1,27 +1,32 @@
 #include <iostream>
+#include <iomanip>
 using namespace std;
+
 int main() {
-	setlocale(LC_ALL, "Russian");
-	int num_1, num_2, num_3;
-	cout << "¬ведите первое число: ";
-	cin >> num_1;
-	cout << "¬ведите второе число: ";
-	cin >> num_2;
-	cout << "¬ведите третье число: ";
-	cin >> num_3;
-	if (num_1 > num_2 && num_1 >= 0 && num_2 >= 0 && num_3 >= 0) {
-		cout << num_1 << " + " << num_2 << " = " << num_1 + num_2 << endl;
-		cout << num_1 << " - " << num_2 << " = " << num_1 - num_2 << endl;
-		cout << num_1 << " * " << num_2 << " = " << num_1 * num_2 << endl;
-		cout << num_1 << " / " << num_2 << " = " << num_1 / num_2 << endl;
-		cout << num_1 << ".0" << " / " << num_2 << ".0" << " = " << float(num_1) / float(num_2) << endl;
-		cout << num_1 << " % " << num_2 << " = " << num_1 % num_2 << endl;
-		cout << num_1 << " + " << num_2 << " * " << num_3 << " = " << num_1 + num_2 * num_3 << endl;
-		cout << "(" << num_1 << " + " << num_2 << ")" << " * " << num_3 << " = " << (num_1 + num_2) * num_3 << endl;
-	}
-	else {
-		cout << "Invalid data" << endl;
-	}
-	system("pause");
-	return 0;
+    int chislo, chislo_2, chislo_3;
+    cout << "Type the first number: ";
+    cin >> chislo;
+    cout << "Type the second number: ";
+    cin >> chislo_2;
+    cout << "Type the third number: ";
+    cin >> chislo_3;
+
+    float div = (float)chislo / chislo_2;
+
+    if (chislo > chislo_2 && chislo >= 0 && chislo_2 > 0 && chislo_3 >= 0)
+    {
+        cout << chislo << " + " << chislo_2 << " = " << chislo + chislo_2 << endl;
+        cout << chislo << " - " << chislo_2 << " = " << chislo - chislo_2 << endl;
+        cout << chislo << " * " << chislo_2 << " = " << chislo * chislo_2 << endl;
+        cout << chislo << " / " << chislo_2 << " = " << chislo / chislo_2 << endl;
+        cout << setprecision(1) << fixed << (float)chislo << " / " << (float)chislo_2 << " = ";
+        cout << setprecision(5) << fixed << div << endl;
+        cout << setprecision(0) << fixed;
+        cout << chislo << " % " << chislo_2 << " = " << chislo % chislo_2 << endl;
+        cout << chislo << " + " << chislo_2 << " * " << chislo_3 << " = " << chislo + chislo_2 * chislo_3 << endl;
+        cout << "(" << chislo << " + " << chislo_2 << ")" << " * " << chislo_3 << " = " << (chislo + chislo_2) * chislo_3 << endl;
+    }
+    else
+        cout << "Invalid data" << endl;
+    return 0;
 }
