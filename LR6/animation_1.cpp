@@ -1,5 +1,5 @@
 #include <iostream>
-#include <unistd.h>
+//#include <unistd.h>
 
 using namespace std;
 
@@ -23,7 +23,7 @@ int main() {
 	for (int k = 0; k < 28; k++)
 	{
 
-		switch (k%14)
+		switch (k % 14)
 		{
 		case 0:
 			//system("cls");
@@ -105,7 +105,7 @@ void Idle() {
 	{
 		for (int j = 0; j < 10; j++)
 		{
-			cout << mas[i][j] << " ";
+			cout << mas[i][j];
 		}
 		cout << endl;
 	}
@@ -238,7 +238,7 @@ void SixthPos() {
 	{
 		for (int j = 0; j < 10; j++)
 		{
-			cout << mas[i][j] << " ";
+			cout << mas[i][j];
 		}
 		cout << endl;
 	}
@@ -260,7 +260,7 @@ void SeventhPos() {
 	{
 		for (int j = 0; j < 10; j++)
 		{
-			cout << mas[i][j] << " ";
+			cout << mas[i][j];
 		}
 		cout << endl;
 	}
@@ -282,7 +282,7 @@ void EigthPos() {
 	{
 		for (int j = 0; j < 10; j++)
 		{
-			cout << mas[i][j] << " ";
+			cout << mas[i][j];
 		}
 		cout << endl;
 	}
@@ -304,7 +304,7 @@ void NinthPos() {
 	{
 		for (int j = 0; j < 10; j++)
 		{
-			cout << mas[i][j] << " ";
+			cout << mas[i][j];
 		}
 		cout << endl;
 	}
@@ -326,7 +326,7 @@ void TenthPos() {
 	{
 		for (int j = 0; j < 10; j++)
 		{
-			cout << mas[i][j] << " ";
+			cout << mas[i][j];
 		}
 		cout << endl;
 	}
@@ -348,7 +348,7 @@ void EleventhPos() {
 	{
 		for (int j = 0; j < 10; j++)
 		{
-			cout << mas[i][j] << " ";
+			cout << mas[i][j];
 		}
 		cout << endl;
 	}
@@ -370,7 +370,7 @@ void TvelvethPos() {
 	{
 		for (int j = 0; j < 10; j++)
 		{
-			cout << mas[i][j] << " ";
+			cout << mas[i][j];
 		}
 		cout << endl;
 	}
@@ -392,7 +392,7 @@ void ThirteenthPos() {
 	{
 		for (int j = 0; j < 10; j++)
 		{
-			cout << mas[i][j] << " ";
+			cout << mas[i][j];
 		}
 		cout << endl;
 	}
@@ -414,7 +414,7 @@ void FourteenthPos() {
 	{
 		for (int j = 0; j < 10; j++)
 		{
-			cout << mas[i][j] << " ";
+			cout << mas[i][j];
 		}
 		cout << endl;
 	}
