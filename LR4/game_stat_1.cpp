@@ -3,7 +3,7 @@
 using namespace std;
 
 int main() {
-	double fuel, fuel_capacity=50, fuel_consumption = 0, speed, s, max_speed = 110, distance = 360, distance_travelled, fuel_consumed, fuel_remained;
+	double fuel, fuel_capacity=50, fuel_consumption = 0, s, max_speed = 110, distance = 360, distance_travelled, fuel_consumed, fuel_remained;
 	int time_spent, speed;
 	cout << "How much fuel do you have at start? "; cin >> fuel;
 
