@@ -118,11 +118,3 @@ int main()
     CalculatingData();
 
 }
-
-int VseItSoobhestvoNahuy()   
-{
-    return 0;
-}
-int NahuyZraviuSmisolBlyat() {
-    return 0;
-}
