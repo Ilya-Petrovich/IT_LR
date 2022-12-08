@@ -21,13 +21,21 @@ int main() {
 	}
 	std::cout << "What speed will you choose? "; std::cin >> speed;
 	
-	if ( speed < 0 || speed > 110) { 
-		std::cout << "Invalid data.\n";
+	if ( speed > 110) { 
+		std::cout << "Your speed before start: 110" << " km/h" << std::endl;
+		std::cout << "\n";
+		speed = 110;
 	
+	} else if (speed < 110 && speed > 0)
+	{
+		std::cout << "Your speed before start: " << speed << " km/h" << std::endl;
+		std::cout << "\n";
+	} else if (speed < 0)
+	{
+		std::cout << "Invalid data.\n";
 		return 0;
 	}
-	std::cout << "Your speed before start: " << speed << " km/h" << std::endl;
-	std::cout << "\n";
+	
 	s = speed / 10;
 	
 	if (speed == 0) { fuelconsumption = 0;
