@@ -1,7 +1,6 @@
 #include <iostream>
 #include <string>
-#include <unistd.h>
-using namespace std;
+#include "unistd.h"
 
 void dancing(string* firstNum, const int amount, int t);
 
@@ -20,12 +19,14 @@ int main() {
 		"    ||    ",
 		"   _||_   ",
 	};
+	string* pers0 = pers;
 	dancing(character, 12, 1000);
 	return 0;
 }
 
 void dancing(string* firstNum, int amount, int t) {
-	string character[12];
+	string character[amount]
+	string* ptpers = pers;;
 	for (int i = 0; i < amount; i++, firstNum++) character[i] = *firstNum;
 	for (int i = 0; i < amount; i++) cout << character[i] << endl;
 
@@ -34,7 +35,7 @@ void dancing(string* firstNum, int amount, int t) {
 		character[6] = " ---\\/--- ";
 		character[7] = "/   ||   \\";
 		character[8] = "    ||    ";
-	//	Sleep(t);
+	usleep(t);
 	//	system("cls");
 
 		for (int i = 0; i < 12; i++) {
@@ -44,7 +45,7 @@ void dancing(string* firstNum, int amount, int t) {
 		character[6] = "  --\\/---- ";
 		character[7] = " /  ||    ";
 		character[8] = "/   ||    ";
-	//	Sleep(t);
+	usleep(t);
 	//	system("cls");
 
 		for (int i = 0; i < 12; i++) {
@@ -54,7 +55,7 @@ void dancing(string* firstNum, int amount, int t) {
 		character[6] = " ---\\/---  ";
 		character[7] = "/   ||    ";
 		character[8] = "    ||    ";
-	//	Sleep(t);
+	usleep(t);
 	//	system("cls");
 
 		for (int i = 0; i < 12; i++) {
@@ -66,7 +67,7 @@ void dancing(string* firstNum, int amount, int t) {
 		character[6] = "  --\\/--   ";
 		character[7] = " /  ||    ";
 		character[8] = "/   ||    " ;
-	//	Sleep(t);
+	usleep(t);
 	//	system("cls");
 
 		for (int i = 0; i < 12; i++) {
@@ -78,7 +79,7 @@ void dancing(string* firstNum, int amount, int t) {
 		character[6] = " ---\\/--  ";
 		character[7] = "/   ||    ";
 		character[8] = "    ||    ";
-	//	Sleep(t);
+	usleep(t);
 	//	system("cls");
 
 		for (int i = 0; i < 12; i++) {
@@ -90,7 +91,7 @@ void dancing(string* firstNum, int amount, int t) {
 		character[6] = "----\\/--  ";
 		character[7] = "    ||    ";
 		character[8] = "    ||    ";
-	//	Sleep(t);
+	usleep(t);
 	//	system("cls");
 
 		for (int i = 0; i < 12; i++) {
@@ -102,7 +103,7 @@ void dancing(string* firstNum, int amount, int t) {
 		character[6] = " ---\\/--  ";
 		character[7] = "    ||    ";
 		character[8] = "    ||    ";
-	//	Sleep(t);
+	usleep(t);
 	//	system("cls");
 
 		for (int i = 0; i < 12; i++) {
@@ -114,7 +115,7 @@ void dancing(string* firstNum, int amount, int t) {
 		character[6] = "  --\\/--  ";
 		character[7] = "    ||    ";
 		character[8] = "    ||    ";
-	//	Sleep(t);
+	usleep(t);
 	//	system("cls");
 
 		for (int i = 0; i < 12; i++) {
@@ -125,7 +126,7 @@ void dancing(string* firstNum, int amount, int t) {
 		character[5] = " \\/|UU|\\/  ";
 		character[6] = "  --\\/--  ";
 		character[7] = "    ||    ";
-	//	Sleep(t);
+	usleep(t);
 	//	system("cls");
 
 		for (int i = 0; i < 12; i++) {
@@ -137,7 +138,7 @@ void dancing(string* firstNum, int amount, int t) {
 		character[6] = " ---\\/--- " ;
 		character[7] = "    ||    ";
 		character[8] = "    ||    " ;
-	//	Sleep(t);
+	usleep(t);
 	//	system("cls");
 
 		for (int i = 0; i < 12; i++) {
@@ -148,7 +149,7 @@ void dancing(string* firstNum, int amount, int t) {
 		character[5] = "  /|UU|\\  ";
 		character[6] = "*---\\/---* ";
 		character[7] = "    ||    ";
-	//	Sleep(t);
+	usleep(t);
 	//	system("cls");
 
 		for (int i = 0; i < 12; i++) {
@@ -158,7 +159,7 @@ void dancing(string* firstNum, int amount, int t) {
 		character[6] = " ---\\/--- ";
 		character[7] = "*   ||   * ";
 		character[8] = "    ||    ";
-	//	Sleep(t);
+	usleep(t);
 	//	system("cls");
 
 		for (int i = 0; i < 12; i++) {
@@ -168,7 +169,7 @@ void dancing(string* firstNum, int amount, int t) {
 		character[6] = "  --\\/--  ";
 		character[7] = " /  ||  \\  ";
 		character[8] = "*   ||   *  ";
-	//	Sleep(t);
+	usleep(t);
 	//	system("cls");
 
 		for (int i = 0; i < 12; i++) {
@@ -177,7 +178,7 @@ void dancing(string* firstNum, int amount, int t) {
 		//14
 		character[7] = " /  ||  \\   ";
 		character[8] = "/   ||   \\ ";
-	//	Sleep(t);
+	usleep(t);
 	//	system("cls");
 
 		for (int i = 0; i < 12; i++) {
