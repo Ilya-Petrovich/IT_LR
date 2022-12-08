@@ -47,9 +47,9 @@ int main() {
 			s = (float)speed / 10;
 			fc = ((s * s) / 4 - (4.5 * s)) + 30;
 			std::cout << "Fuel consumption with chosen speed: " << fc << " litres per 100 km\n\n";
-			std::cout << "Destination result\n";
+			std::cout << "Destination result";
 			if (fuel - fc * 3.6 > 0) {
-				std::cout << "Distance traveled: " << dis << " km\n";
+				std::cout << "\nDistance traveled: " << dis << " km\n";
 				time = dis / speed;
 				timefin = time * 3600;
 				std::cout << "Time spent: " << timefin << " sec\n";
@@ -63,7 +63,7 @@ int main() {
 			else {
 				disne = ((fc * 3.6 - fuel) * 360) / (fuel + (fc * 3.6 - fuel));
 				disno = 360 - disne;
-				std::cout << "Distance traveled: " << disno << " km\n";
+				std::cout << "\nDistance traveled: " << disno << " km\n";
 				time = disno / speed;
 				timefin = time * 3600;
 				std::cout << "Time spent: " << timefin << " sec\n";
