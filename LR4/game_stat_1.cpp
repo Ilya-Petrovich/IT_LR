@@ -35,7 +35,6 @@ int main()
 	cout << "Maximum speed: " << maxSpeed << endl << endl << "Route info" << endl << "Distance: " << distance << " km" << endl << "--------------------------------" << endl;
 	cout << "You have to drive a route " << distance << " km long." << endl;
 	cout << "But first you need to check if you have enough fuel." << endl << endl;
-
 	cout << "What speed will you choose? ";
 	cin >> speed;
 	if (cin.fail()) {

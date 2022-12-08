@@ -207,5 +207,4 @@ int main()
 		cout << "	It would take " << bestH << " h " << bestMin << " min " << bestSec << " sec.";
 	}
 
-
 }
