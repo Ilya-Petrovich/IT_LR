@@ -78,7 +78,7 @@ int main()
 				
 		speed == 0 ? distanceTraveled = 0: distanceTraveled;
 		cout << endl;
-		cout << "Destination result" << endl;
+		cout << "Destination result \n";
 		cout << "Distance traveled: " << distanceTraveled << " km" << endl;
 		cout << "Time spent: " << time << " sec" << endl;
 		cout << "Fuel consumed: " << fuelConsumed << " litres" << endl;
