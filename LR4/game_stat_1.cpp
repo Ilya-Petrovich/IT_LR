@@ -66,7 +66,7 @@ void start()
 		s = speed / 10;
 		fuelConsumption = s * s / 4 - 4.5 * s + 30;
 
-		cout << "Fuel consumption with chosen speed: " << fuelConsumption << " litres per 100 km." << endl;
+		cout << "Fuel consumption with chosen speed: " << fuelConsumption << " litres per 100 km.\n" << endl;
 
 	}
 
