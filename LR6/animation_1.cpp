@@ -1,12 +1,12 @@
 #include<iostream>
 //#include<windows.h>
-#include<unistd.h>
+//#include<unistd.h>
 
 using namespace std;
 
 void ShowArray(char pers[12][11], int height, int width) {
 	for (int i = 0; i < height; i++) {
-		for (int j = 0; j < width; j++) {
+		for (int j = 0; j < width - 1; j++) {
 			cout << pers[i][j];
 		}
 
