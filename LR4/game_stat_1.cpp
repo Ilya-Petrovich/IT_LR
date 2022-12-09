@@ -18,10 +18,10 @@ int main() {
 		cout << "Route info" << endl;
 		cout << "Distance: " << distance << " km" << endl;
 		cout << endl;
-		cout << "-------------------------------------------------------" << endl;
+		cout << "----------------------------------------" << endl;
 	}
 	else {
-		cout << "Invalid data.";
+		cout << "Invalid data." << endl;
 		exit(0);
 	}
 
