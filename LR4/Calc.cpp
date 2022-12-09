@@ -3,7 +3,7 @@
 
 using namespace std;
 
-int main() { // :) :(
+int main() { // 
  
 
     int num_1, num_2, num_3;
@@ -33,7 +33,8 @@ int main() { // :) :(
             (num_1 + num_2) * num_3 << endl;
 
     }
-    else
+    else {
         cout << "Invalid data" << endl;
+    }
     return 0;
 }
