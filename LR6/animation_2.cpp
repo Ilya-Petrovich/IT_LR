@@ -9,9 +9,9 @@ void dance(vector<string> sticman);
 void start_state(vector<string> sticman);
 void run(vector<string> sticman);
 void sleep(){
-	int x = 650;
-	Sleep(x);
-	system("cls");
+	//int x = 650;
+	//Sleep(x);
+	//system("cls");
 }
 void jump(vector<string> sticman);
 void throw_boll(vector <string> sticman);
