@@ -15,11 +15,11 @@ int main() {
         cout << "\nFuel consumption: 0";
         cout << "\nSpeed: 0";
         cout << "\nMaximum speed: 110 \n";
-        cout << "\nRoute info";
-        cout << "\nDistance: 360 km" << endl;
+        cout << "\nRoute info" << endl;
+        cout << "Distance: " << dist <<" km" << endl;
         cout << "----------------------------------------" << endl;;
-        cout << "You have to drive a route 360 km long.";
-        cout << "\nBut first you need to check if you have enough fuel.\n\n";
+        cout << "You have to drive a route " << dist << " km long." << endl;
+        cout << "But first you need to check if you have enough fuel.\n\n";
 
         if (fuel < max_f / 2) {
             fuel = fuel + max_f / 2;
