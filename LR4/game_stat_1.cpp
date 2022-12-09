@@ -47,7 +47,7 @@ int main()
 		s = (float)speed / 10;
 		speed == 0 ? fuelConsumption = 0 : fuelConsumption = s * s / 4 - 4.5 * s + 30;
 		cout << endl;
-		cout << "Fuel consumption with chosen speed: " << fuelConsumption << " litres per 100 km" << endl;
+		cout << "Fuel consumption with chosen speed: " << fuelConsumption << " litres per 100 km" << endl << endl;
 
 		if (fuelConsumption == 0)
 		{
@@ -77,8 +77,8 @@ int main()
                 speed == 0 ? time = 0 : time = (float)distanceTraveled * 1000 / speedMS; 
 				
 		speed == 0 ? distanceTraveled = 0: distanceTraveled;
-		cout << endl;
-		cout << "Destination result \n";
+		
+		cout << "Destination result " << endl;
 		cout << "Distance traveled: " << distanceTraveled << " km" << endl;
 		cout << "Time spent: " << time << " sec" << endl;
 		cout << "Fuel consumed: " << fuelConsumed << " litres" << endl;
