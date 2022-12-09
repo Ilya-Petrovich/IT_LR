@@ -16,6 +16,7 @@ int main() {
     cin >> num_3;
 
     if (num_2 > 0 and num_1 > -1 and num_3 > -1 and (num_1 > num_2)) {
+
         cout << num_1 << " + " << num_2 << " = " << num_1 + num_2 << endl;
         cout << num_1 << " - " << num_2 << " = " << num_1 - num_2 << endl;
         cout << num_1 << " * " << num_2 << " = " << num_1 * num_2 << endl;
@@ -24,6 +25,7 @@ int main() {
         cout << num_1 << " % " << num_2 << " = " << num_1 % num_2 << endl;
         cout << num_1 << " + " << num_2 << " * " << num_3 << " = " << num_1 + num_2 * num_3 << endl;
         cout << "(" << num_1 << " + " << num_2 << ")" << " * " << num_3 << " = " << (num_1 + num_2) * num_3 << endl;
+
     }
 
     else cout << "Invalid data" << endl;
