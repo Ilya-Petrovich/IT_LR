@@ -17,7 +17,7 @@ int main()
     "   |--|   ",//3
     "   \\__/   ",//4
     "    ||    ",//5
-    "  -|  |-  ",//6
+    "  -| *|-  ",//6
     " / |  | \\ ",//7
     "/   \\/   \\",//8
     "    /\\    ",//9
@@ -40,20 +40,20 @@ void dance(vector<string> person)
     {
         //usleep(delay);
         //system("clear");
-        person[6] = " --|  |-- ";
+        person[6] = " --| *|-- ";
         person[7] = "/  |  |  \\";
         person[8] = "    \\/    ";
         print(person);
         //usleep(delay);
         //system("clear");
-        person[6] = "  -|  |---";
+        person[6] = "  -| *|---";
         person[7] = " / |  |   ";
         person[8] = "/   \\/    ";
         print(person);
         //usleep(delay);
         //system("clear");
         person[5] = "    ||   /";
-        person[6] = " --|  |-- ";
+        person[6] = " --| *|-- ";
         person[7] = "/  |  |   ";
         person[8] = "    \\/    ";
         print(person);
@@ -61,34 +61,34 @@ void dance(vector<string> person)
         //system("clear");
         person[4] = "   \\__/  /";
         person[5] = "    ||  / ";
-        person[6] = "  -|  |-  ";
+        person[6] = "  -| *|-  ";
         person[7] = " / |  |   ";
         person[8] = "/   \\/    ";
         print(person);
         //usleep(delay);
         //system("clear");
         person[4] = "   \\__/  *";
-        person[6] = " --|  |-  ";
+        person[6] = " --| *|-  ";
         person[7] = "/  |  |   ";
         person[8] = "    \\/    ";
         print(person);
         //usleep(delay);
         //system("clear");
         person[4] = "   \\__/  /";
-        person[6] = "---|  |-  ";
+        person[6] = "---| *|-  ";
         person[7] = "   |  |   ";
         print(person);
         //usleep(delay);
         //system("clear");
         person[4] = "   \\__/  *";
         person[5] = "\\   ||  / ";
-        person[6] = " --|  |-  ";
+        person[6] = " --| *|-  ";
         print(person);
         //usleep(delay);
         //system("clear");
         person[4] = "\\  \\__/  /";
         person[5] = " \\  ||  / ";
-        person[6] = "  -|  |-  ";
+        person[6] = "  -| *|-  ";
         print(person);
         //usleep(delay);
         //system("clear");
@@ -98,21 +98,21 @@ void dance(vector<string> person)
         //system("clear");
         person[4] = "   \\__/   ";
         person[5] = "*   ||   *";
-        person[6] = " --|  |-- ";
+        person[6] = " --| *|-- ";
         print(person);
         //usleep(delay);
         //system("clear");
         person[5] = "    ||    ";
-        person[6] = "*--|  |--*";
+        person[6] = "*--| *|--*";
         print(person);
         //usleep(delay);
         //system("clear");
-        person[6] = " --|  |-- ";
+        person[6] = " --| *|-- ";
         person[7] = "*  |  |  *";
         print(person);
         //usleep(delay);
         //system("clear");
-        person[6] = "  -|  |-  ";
+        person[6] = "  -| *|-  ";
         person[7] = " / |  | \\ ";
         person[8] = "*   \\/   *";
         print(person);
