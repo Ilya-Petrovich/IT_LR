@@ -121,3 +121,4 @@ void dance(vector<string> person)
         person[8] = "/   \\/   \\";
         print(person);
     }
+}
