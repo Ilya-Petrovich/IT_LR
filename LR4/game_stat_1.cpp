@@ -117,11 +117,11 @@ void d()
 
 void win_or_lose() {
 	if (distancetraveled == 360) {
-		cout << "Congratulations! You have reached destination point!";
+		cout << "Congratulations! You have reached destination point!\n";
 	}
 
 	else {
-		cout << "You haven't reached destination point. " << 360 - distancetraveled << " km left.";
+		cout << "You haven't reached destination point. " << 360 - distancetraveled << " km left.\n";
 	}
 }
 
