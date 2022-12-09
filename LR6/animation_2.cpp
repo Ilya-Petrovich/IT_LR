@@ -250,7 +250,7 @@ void jump(vector<string> person)
     person[13] = "*    ||                                *";
     person[14] = "*    ||                                *";
     person[15] = "*                                      *";
-    print(person); print(person);//usleep(jumpDelay);//system("clear");
+    print(person);//usleep(jumpDelay);//system("clear");
     person[3] = "*                                      *";
     person[4] = "*    /\\                                *";
     person[5] = "*   |oo|                               *";
