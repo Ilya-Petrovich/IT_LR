@@ -82,8 +82,8 @@ int main()
 
 void start_state(vector<string> sticman) {
 	int x = 650;
-	Sleep(x);
-	system("cls");
+	//Sleep(x);
+	//system("cls");
 	sticman = {
 	 "****************************************",//0
 	 "*                                      *",//1
