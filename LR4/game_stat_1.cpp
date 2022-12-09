@@ -14,9 +14,9 @@ int main() {
         cout << "\nFuel capacity: " << max_f;
         cout << "\nFuel consumption: 0";
         cout << "\nSpeed: 0";
-        cout << "\nMaximum speed: 110 \n";
+        cout << "\nMaximum speed: 110\n";
         cout << "\nRoute info" << endl;
-        cout << "Distance: " << dist <<" km" << endl;
+        cout << "Distance: " << dist << " km" << endl;
         cout << "----------------------------------------" << endl;;
         cout << "You have to drive a route " << dist << " km long." << endl;
         cout << "But first you need to check if you have enough fuel.\n\n";
@@ -33,8 +33,8 @@ int main() {
         if (speed > 0) {
             s = speed / 10;
             f_cons = s * s / 4 - 4.5 * s + 30; //Расход топлива
-            cout << "Your speed before start: " << speed << " km/h \n\n";
-            cout << "Fuel consumption with chosen speed: " << f_cons << " litres per 100 km \n\n";
+            cout << "Your speed before start: " << speed << " km/h\n\n";
+            cout << "Fuel consumption with chosen speed: " << f_cons << " litres per 100 km\n\n";
             fuel1 = dist / f_cons; //нужное количество топлива
             distCanTr = fuel / f_cons * 100; //Расстояние, которое можно преодолеть
             fuel_cons = min(dist, distCanTr) / 100 * f_cons; //Затраченное топливо
@@ -43,8 +43,8 @@ int main() {
         }
         else if (speed == 0) {
             f_cons = 0;
-            cout << "Your speed before start: " << speed << " km/h \n\n";
-            cout << "Fuel consumption with chosen speed: " << f_cons << " litres per 100 km \n\n";
+            cout << "Your speed before start: " << speed << " km/h\n\n";
+            cout << "Fuel consumption with chosen speed: " << f_cons << " litres per 100 km\n\n";
             fuel1 = 0;
             distCanTr = 0;
             fuel_cons = 0;
@@ -62,7 +62,7 @@ int main() {
             cout << "Distance traveled: " << distTr << " km" << endl;
             cout << "Time spent: " << int(distTr / speed * 3600) << " sec" << endl;
             cout << "Fuel consumed: " << fuel_cons << " litres" << endl;
-            cout << "Fuel remained: " << fuel - fuel_cons << " litres " << endl;
+            cout << "Fuel remained: " << fuel - fuel_cons << " litres" << endl;
             cout << "----------------------------------------" << endl;
             cout << "Congratulations! You have reached destination point!" << endl;
         }
@@ -72,10 +72,10 @@ int main() {
             cout << "Fuel consumed: " << fuel_cons << " litres" << endl;
 
             if (fuel_cons > fuel) {
-                cout << "Fuel remained: " << 0 << " litres \n";
+                cout << "Fuel remained: " << 0 << " litres\n";
             }
             else {
-                cout << "Fuel remained: " << fuel - fuel_cons << " litres \n";
+                cout << "Fuel remained: " << fuel - fuel_cons << " litres\n";
             }
 
             cout << "----------------------------------------" << endl;
