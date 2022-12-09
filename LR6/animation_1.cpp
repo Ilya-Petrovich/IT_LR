@@ -44,7 +44,7 @@ void dancing(string* firstNum, int t) {
 			cout << character[i] << endl;
 		}
 		//2
-		character[6] = "  --\\/---- ";
+		character[6] = "  --\\/----";
 		character[7] = " /  ||    ";
 		character[8] = "/   ||    ";
 		//usleep(t);
@@ -53,8 +53,8 @@ void dancing(string* firstNum, int t) {
 		for (int i = 0; i < 12; i++) {
 			cout << character[i] << endl;
 		}//3
-		character[5] = "  /|UU|\\ /  ";
-		character[6] = " ---\\/---  ";
+		character[5] = "  /|UU|\\ /";
+		character[6] = " ---\\/--- ";
 		character[7] = "/   ||    ";
 		character[8] = "    ||    ";
 		//usleep(t);
@@ -64,9 +64,9 @@ void dancing(string* firstNum, int t) {
 			cout << character[i] << endl;
 		}
 		//4
-		character[4] = "  \\|  |/ /  ";
-		character[5] = "  /|UU|\\/   ";
-		character[6] = "  --\\/--   ";
+		character[4] = "  \\|  |/ /";
+		character[5] = "  /|UU|\\/ ";
+		character[6] = "  --\\/--  ";
 		character[7] = " /  ||    ";
 		character[8] = "/   ||    ";
 		//usleep(t);
@@ -76,8 +76,8 @@ void dancing(string* firstNum, int t) {
 			cout << character[i] << endl;
 		}
 		//5
-		character[4] = "  \\|  |/ *  ";
-		character[5] = "  /|UU|\\/   ";
+		character[4] = "  \\|  |/ *";
+		character[5] = "  /|UU|\\/ ";
 		character[6] = " ---\\/--  ";
 		character[7] = "/   ||    ";
 		character[8] = "    ||    ";
@@ -88,8 +88,8 @@ void dancing(string* firstNum, int t) {
 			cout << character[i] << endl;
 		}
 		//6
-		character[4] = "  \\|  |/ /  ";
-		character[5] = "  /|UU|\\/  ";
+		character[4] = "  \\|  |/ /";
+		character[5] = "  /|UU|\\/ ";
 		character[6] = "----\\/--  ";
 		character[7] = "    ||    ";
 		character[8] = "    ||    ";
@@ -100,8 +100,8 @@ void dancing(string* firstNum, int t) {
 			cout << character[i] << endl;
 		}
 		//7
-		character[4] = "  \\|  |/ *  ";
-		character[5] = "\\ /|UU|\\/  ";
+		character[4] = "  \\|  |/ *";
+		character[5] = "\\ /|UU|\\/ ";
 		character[6] = " ---\\/--  ";
 		character[7] = "    ||    ";
 		character[8] = "    ||    ";
@@ -112,8 +112,8 @@ void dancing(string* firstNum, int t) {
 			cout << character[i] << endl;
 		}
 		//8
-		character[4] = "\\ \\|  |/ /  ";
-		character[5] = " \\/|UU|\\/   ";
+		character[4] = "\\ \\|  |/ /";
+		character[5] = " \\/|UU|\\/ ";
 		character[6] = "  --\\/--  ";
 		character[7] = "    ||    ";
 		character[8] = "    ||    ";
@@ -124,8 +124,8 @@ void dancing(string* firstNum, int t) {
 			cout << character[i] << endl;
 		}
 		//9
-		character[4] = "* \\|  |/ *  ";
-		character[5] = " \\/|UU|\\/  ";
+		character[4] = "* \\|  |/ *";
+		character[5] = " \\/|UU|\\/ ";
 		character[6] = "  --\\/--  ";
 		character[7] = "    ||    ";
 		//usleep(t);
@@ -136,7 +136,7 @@ void dancing(string* firstNum, int t) {
 		}
 		//10
 		character[4] = "  \\|  |/  ";
-		character[5] = "* /|UU|\\ *  ";
+		character[5] = "* /|UU|\\ *";
 		character[6] = " ---\\/--- ";
 		character[7] = "    ||    ";
 		character[8] = "    ||    ";
@@ -149,7 +149,7 @@ void dancing(string* firstNum, int t) {
 		//11
 		character[4] = "  \\|  |/  ";
 		character[5] = "  /|UU|\\  ";
-		character[6] = "*---\\/---* ";
+		character[6] = "*---\\/---*";
 		character[7] = "    ||    ";
 		//usleep(t);
 		//	system("cls");
@@ -159,7 +159,7 @@ void dancing(string* firstNum, int t) {
 		}
 		//12
 		character[6] = " ---\\/--- ";
-		character[7] = "*   ||   * ";
+		character[7] = "*   ||   *";
 		character[8] = "    ||    ";
 		//usleep(t);
 		//	system("cls");
@@ -169,8 +169,8 @@ void dancing(string* firstNum, int t) {
 		}
 		//13
 		character[6] = "  --\\/--  ";
-		character[7] = " /  ||  \\  ";
-		character[8] = "*   ||   *  ";
+		character[7] = " /  ||  \\ ";
+		character[8] = "*   ||   *";
 		//usleep(t);
 		//	system("cls");
 
@@ -178,8 +178,8 @@ void dancing(string* firstNum, int t) {
 			cout << character[i] << endl;
 		}
 		//14
-		character[7] = " /  ||  \\   ";
-		character[8] = "/   ||   \\ ";
+		character[7] = " /  ||  \\ ";
+		character[8] = "/   ||   \\";
 		//usleep(t);
 		//	system("cls");
 
