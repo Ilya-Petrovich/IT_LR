@@ -4,12 +4,12 @@
 #include <string>
 using namespace std;
 
-void print(vector<string> sticman);
-void dance(vector<string> sticman);
+void print(vector<string> person);
+void dance(vector<string> person);
 
 int main()
 {
-    vector<string> sticman =
+    vector<string> person =
     {
     "    /\\    ",//0
     "   |oo|   ",//1
@@ -24,100 +24,100 @@ int main()
     "    ||    ",//10
     "   _||_   ",//11
     };
-    print(sticman);
-    dance(sticman);
+    print(person);
+    dance(person);
     return 0;
 }
-void print(vector<string> sticman)
+void print(vector<string> person)
 {
-    for (auto c : sticman)
+    for (auto c : person)
         cout << c << endl;
 }
-void dance(vector<string> sticman)
+void dance(vector<string> person)
 {
     int delay = 350*1000;
     for (int i = 0; i < 2; i++)
     {
         //usleep(delay);
         //system("clear");
-        sticman[6] = " --| *|-- ";
-        sticman[7] = "/  |  |  \\";
-        sticman[8] = "    \\/    ";
-        print(sticman);
+        person[6] = " --| *|-- ";
+        person[7] = "/  |  |  \\";
+        person[8] = "    \\/    ";
+        print(person);
         //usleep(delay);
         //system("clear");
-        sticman[6] = "  -| *|---";
-        sticman[7] = " / |  |   ";
-        sticman[8] = "/   \\/    ";
-        print(sticman);
+        person[6] = "  -| *|---";
+        person[7] = " / |  |   ";
+        person[8] = "/   \\/    ";
+        print(person);
         //usleep(delay);
         //system("clear");
-        sticman[5] = "    ||   /";
-        sticman[6] = " --| *|-- ";
-        sticman[7] = "/  |  |   ";
-        sticman[8] = "    \\/    ";
-        print(sticman);
+        person[5] = "    ||   /";
+        person[6] = " --| *|-- ";
+        person[7] = "/  |  |   ";
+        person[8] = "    \\/    ";
+        print(person);
         //usleep(delay);
         //system("clear");
-        sticman[4] = "   \\__/  /";
-        sticman[5] = "    ||  / ";
-        sticman[6] = "  -| *|-  ";
-        sticman[7] = " / |  |   ";
-        sticman[8] = "/   \\/    ";
-        print(sticman);
+        person[4] = "   \\__/  /";
+        person[5] = "    ||  / ";
+        person[6] = "  -| *|-  ";
+        person[7] = " / |  |   ";
+        person[8] = "/   \\/    ";
+        print(person);
         //usleep(delay);
         //system("clear");
-        sticman[4] = "   \\__/  *";
-        sticman[6] = " --| *|-  ";
-        sticman[7] = "/  |  |   ";
-        sticman[8] = "    \\/    ";
-        print(sticman);
+        person[4] = "   \\__/  *";
+        person[6] = " --| *|-  ";
+        person[7] = "/  |  |   ";
+        person[8] = "    \\/    ";
+        print(person);
         //usleep(delay);
         //system("clear");
-        sticman[4] = "   \\__/  /";
-        sticman[6] = "---| *|-  ";
-        sticman[7] = "   |  |   ";
-        print(sticman);
+        person[4] = "   \\__/  /";
+        person[6] = "---| *|-  ";
+        person[7] = "   |  |   ";
+        print(person);
         //usleep(delay);
         //system("clear");
-        sticman[4] = "   \\__/  *";
-        sticman[5] = "\\   ||  / ";
-        sticman[6] = " --| *|-  ";
-        print(sticman);
+        person[4] = "   \\__/  *";
+        person[5] = "\\   ||  / ";
+        person[6] = " --| *|-  ";
+        print(person);
         //usleep(delay);
         //system("clear");
-        sticman[4] = "\\  \\__/  /";
-        sticman[5] = " \\  ||  / ";
-        sticman[6] = "  -| *|-  ";
-        print(sticman);
+        person[4] = "\\  \\__/  /";
+        person[5] = " \\  ||  / ";
+        person[6] = "  -| *|-  ";
+        print(person);
         //usleep(delay);
         //system("clear");
-        sticman[4] = "*  \\__/  *";
-        print(sticman);
+        person[4] = "*  \\__/  *";
+        print(person);
         //usleep(delay);
         //system("clear");
-        sticman[4] = "   \\__/   ";
-        sticman[5] = "*   ||   *";
-        sticman[6] = " --| *|-- ";
-        print(sticman);
+        person[4] = "   \\__/   ";
+        person[5] = "*   ||   *";
+        person[6] = " --| *|-- ";
+        print(person);
         //usleep(delay);
         //system("clear");
-        sticman[5] = "    ||    ";
-        sticman[6] = "*--| *|--*";
-        print(sticman);
+        person[5] = "    ||    ";
+        person[6] = "*--| *|--*";
+        print(person);
         //usleep(delay);
         //system("clear");
-        sticman[6] = " --| *|-- ";
-        sticman[7] = "*  |  |  *";
-        print(sticman);
+        person[6] = " --| *|-- ";
+        person[7] = "*  |  |  *";
+        print(person);
         //usleep(delay);
         //system("clear");
-        sticman[6] = "  -| *|-  ";
-        sticman[7] = " / |  | \\ ";
-        sticman[8] = "*   \\/   *";
-        print(sticman);
+        person[6] = "  -| *|-  ";
+        person[7] = " / |  | \\ ";
+        person[8] = "*   \\/   *";
+        print(person);
         //usleep(delay);
         //system("clear");
-        sticman[8] = "/   \\/   \\";
-        print(sticman);
+        person[8] = "/   \\/   \\";
+        print(person);
     }
