@@ -2,8 +2,8 @@
 using namespace std;
 
 int main() {
-	int  S = 360, maxV = 110, T, V = 0;
-	double fuelConsumption, V1, K, D, Fuelconsumed, Fuelremained, Fuelcapacity = 50;
+	int  S = 360, maxV = 110, T, V = 0, K;
+	float fuelConsumption, V1, D, Fuelconsumed, Fuelremained, Fuelcapacity = 50;
 	cout << "How much fuel do you have at start? "; cin >> K;
 	cout << "\n";
 
