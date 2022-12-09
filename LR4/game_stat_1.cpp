@@ -31,7 +31,7 @@ int main()
 	cout << "Time spent: " << timespent << " sec" << endl;
 	cout << "Fuel consumed: " << fuelconsumed << " litres" << endl;
 	cout << "Fuel remained: " << fuelremained << " litres" << endl;
-	cout << "---------------------------------------" << endl;
+	cout << "----------------------------------------" << endl;
 	win_or_lose();
 
 }
@@ -52,7 +52,7 @@ void start()
 		cout << "Maximum speed: 110" << endl;
 		cout << "\nRoute info" << endl;
 		cout << "Distance: 360 km" << endl;
-		cout << "---------------------------------------" << endl;
+		cout << "----------------------------------------" << endl;
 		cout << "You have to drive a route 360 km long." << endl;
 		cout << "But first you need to check if you have enough fuel." << endl;
 		cout <<  endl;
