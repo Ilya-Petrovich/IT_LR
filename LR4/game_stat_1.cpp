@@ -7,8 +7,8 @@ int main() {
     float fuel_consumption = 0, distance = 360, distC, speed = 0;
     int time;
     int max_speed = 110;
-    cout << "How much fuel do you have at start? "; cin >> fuel;
-    cout << endl;
+    cout << "How much fuel do you have at start? "; 
+    cin >> fuel;
     if (fuel >= 0 and fuel <= 50) {
         cout << "Car stats" << endl;
         cout << "Fuel: " << fuel << endl;
@@ -28,7 +28,7 @@ int main() {
         cin >> speed;
     }
     else {
-        cout << "\nInvalid data.";
+        cout << "\nInvalid data." << endl;
         return 0;
     }
     if (speed < 0) {
