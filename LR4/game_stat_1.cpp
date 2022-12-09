@@ -56,11 +56,11 @@ int main()
 				cout << "\nFuel consumed: " << fuel_consumed << " litres";
 				fuel_remained = fuel - fuel_consumed;
 				cout << "\nFuel remained: " << fuel_remained << " litres";
-				cout << "\n--------------------------------------------";
+				cout << "\n----------------------------------------";
 			}
 
 			if (distance_traveled == 360) {
-				cout << "\nCongratulations! You have reached destination point!";
+				cout << "\nCongratulations! You have reached destination point!" << endl;
 			}
 
 			if (distance_traveled < 360) {
@@ -81,7 +81,7 @@ int main()
 			cout << "\nFuel consumed: " << fuel_consumed << " litres";
 			fuel_remained = 0;
 			cout << "\nFuel remained: " << fuel_remained << " litres";
-			cout << "\n--------------------------------------------";
+			cout << "\n----------------------------------------";
 			distance_left = distance - distance_traveled;
 			cout << "\nYou haven't reached destination point. " << distance_left << " km left.";
 		}
