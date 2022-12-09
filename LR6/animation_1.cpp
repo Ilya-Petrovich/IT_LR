@@ -196,6 +196,18 @@ int main()
 	}
 
 	person.BaseState[8][10] = "\\";
+	person.BaseState[9][10] = " ";
+	person.BaseState[10][10] = " ";
+	person.BaseState[11][10] = " ";
+	person.BaseState[0][10] = " ";
+	person.BaseState[1][10] = " ";
+	person.BaseState[2][10] = " ";
+	person.BaseState[3][10] = " ";
+	person.BaseState[4][10] = " ";
+	person.BaseState[5][10] = " ";
+	person.BaseState[6][10] = " ";
+	person.BaseState[7][10] = " ";
+
 	person.Print();
 
 	while (person.CyclesCount < 2)
