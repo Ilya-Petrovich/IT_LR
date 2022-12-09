@@ -7,13 +7,13 @@ int main() {
 	cin >> fuel;
 
 	if (fuel >= 0 and fuel <= 50) {
-		cout << "Car stats" << endl;
+		cout << "\nCar stats" << endl;
 		cout << "Fuel: " << fuel << endl;
 		cout << "Fuel capacity: " << fuel_capacity << endl;
 		cout << "Fuel consumption: " << fuel_consumption << endl;
 		cout << "Speed: " << speed << endl;
 		cout << "Maximum speed: " << maximum_speed << endl;
-		cout << endl << endl;
+		cout << endl;
 		cout << "Route info" << endl;
 		cout << "Distance: " << distance << " km" << endl;
 		cout << endl;
