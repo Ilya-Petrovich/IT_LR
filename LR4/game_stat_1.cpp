@@ -66,12 +66,13 @@ int main()
 				distance_left = distance - distance_traveled;
 				cout << "\nYou haven't reached destination point. " << distance_left << " km left.";
 			}
-		} else if (speed == 0) {
+		}
+		else if (speed == 0) {
 			cout << "Your speed before start: " << speed << " km/h" << endl;
 			fuelConsumption = 0;
-			cout << "\nFuel consumption with chosen speed: " << fuelConsumption << " litres per 100 km";
+			cout << "\nFuel consumption with chosen speed: " << fuelConsumption << " litres per 100 km" << endl;
 			distance_traveled = 0;
-			cout << "\n\nDestination result";
+			cout << "\nDestination result";
 			cout << "\nDistance traveled: " << distance_traveled << " km";
 			int time = 0;
 			cout << "\nTime spent: " << time << " sec";
@@ -82,10 +83,12 @@ int main()
 			cout << "\n--------------------------------------------";
 			distance_left = distance - distance_traveled;
 			cout << "\nYou haven't reached destination point. " << distance_left << " km left.";
-		} else {
+		}
+		else {
 			cout << "\nInvalid data.";
 		}
-	} else {
+	}
+	else {
 		cout << "\nInvalid data." << endl;
 	}
 
