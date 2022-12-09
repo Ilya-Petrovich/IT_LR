@@ -1,6 +1,6 @@
 #include<iostream>
 //#include<windows.h>
-//#include<unistd.h>
+#include<unistd.h>
 
 using namespace std;
 
@@ -16,8 +16,6 @@ void ShowArray(char pers[12][11], int height, int width) {
 
 void SSS(char pers[][11], int t) {
 	ShowArray(pers, 12, 11);
-	//
-	// 
 	//Sleep(t);
 	//system("cls");
 }
