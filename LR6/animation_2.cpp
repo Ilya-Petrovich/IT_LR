@@ -1572,6 +1572,7 @@ void run(vector<string> person)
     print(person);//usleep(runDelay);
 }
 void dance(vector<string> person)
+
 {
     int delay = 350 * 1000;
     for (int i = 0; i < 2; i++)
