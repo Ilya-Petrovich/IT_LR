@@ -24,7 +24,7 @@ void SSS(char pers[][11], int t) {
 int main() {
 	const int h = 12, w = 11, t = 750;
 
-	char pers[h][w] {
+	char pers[h][w] = {
 		{"   _[]_   "},
 		{"   |~~|   "},
 		{"   |oq|   "},
