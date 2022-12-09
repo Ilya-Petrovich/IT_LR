@@ -14,8 +14,9 @@ int main()
 		cout << "\nFuel capacity: " << fuel_capacity;
 		cout << "\nFuel consumption: 0";
 		cout << "\nSpeed: 0";
-		cout << "\nMaximum speed: 110";
-		cout << "\n\nRoute info" << "\nDistance: 360 km";
+		cout << "\nMaximum speed: 110" << endl;
+		cout << "\nRoute info";
+		cout << "\nDistance: 360 km";
 		cout << "\n-----------------------------------";
 		cout << "\nYou have to drive a route 360 km long.";
 		cout << "\nBut first you need to check if you have enough fuel.";
