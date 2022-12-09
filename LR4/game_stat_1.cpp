@@ -43,10 +43,9 @@ int main()
 			speed = maxSpeed;
 		}
 
-		cout << "Your speed before start: " << speed << " km/h" << endl;
+		cout << "Your speed before start: " << speed << " km/h" << endl << endl;
 		s = (float)speed / 10;
 		speed == 0 ? fuelConsumption = 0 : fuelConsumption = s * s / 4 - 4.5 * s + 30;
-		cout << endl;
 		cout << "Fuel consumption with chosen speed: " << fuelConsumption << " litres per 100 km" << endl << endl;
 
 		if (fuelConsumption == 0)
