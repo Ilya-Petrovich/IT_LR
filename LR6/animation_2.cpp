@@ -1,3171 +1,1650 @@
 #include <unistd.h>
+#include <cstdlib>
 #include <vector>
 #include <iostream>
 #include <string>
 using namespace std;
 
-void print(vector<string> sticman);
-void dance(vector<string> sticman);
-void start_state(vector<string> sticman);
-void run(vector<string> sticman);
-void sleep(){
-	//int x = 650;
-	//Sleep(x);
-	//system("cls");
-}
-void jump(vector<string> sticman);
-void throw_boll(vector <string> sticman);
+void print(vector<string> person);
+void menu();
+void dance(vector<string> person);
+void run(vector<string> person);
+void jump(vector<string> person);
+void ballThrow(vector<string> person);
 
 int main()
 {
-	
-	
-	vector<string> sticman = {
-	 "****************************************",//0
-	 "*                                      *",//1
-	 "*                                      *",//2
-	 "*                                      *",//3
-	 "*                                      *",//4
-	 "*                                      *",//5
-	 "*                                      *",//6
-	 "*    /\\                                *",//7
-	 "*   |oo|                               *",//8
-	 "*  (|..|)                              *",//9
-	 "*   |--|                               *",//10
-	 "*   \\__/                               *",//11
-	 "*    ||                                *",//12
-	 "*  -| *|-                              *",//13
-	 "* / |  | \\                             *",//14
-	 "*/   \\/   \\                            *",//15
-	 "*    /\\                                *",//16
-	 "*    ||                                *",//17
-	 "*   _||_                               *",//18
-	 "****************************************"//19
-	 };
-	
-	int choice;
-
-	while(1) {
-		cout << "Choose animation:" << endl;
-		cout << "Dance: \t\t\t1" << endl;
-		cout << "Run: \t\t\t2" << endl;
-		cout << "Sit down and jump: \t3" << endl;
-		cout << "Throw a ball: \t\t4" << endl << endl;
-		cout << "Enter 5 for exit." << endl;
-		cin >> choice;
-		if (choice == 1){
-			start_state(sticman);
-			dance(sticman);
-			sleep();
-		}
-		else if (choice == 2){
-			start_state(sticman);
-			run(sticman);
-			sleep();
-		}
-		else if (choice == 3){
-			start_state(sticman);
-			jump(sticman);
-			sleep();
-		}
-		else if (choice == 4){
-			start_state(sticman);
-			throw_boll(sticman);
-		}
-		else if (choice == 5){
-			break;
-		}
-	}
-
-	return 0;
+    int choice;
+    vector<string> person =
+    {
+    "****************************************",//0
+    "*                                      *",//1
+    "*                                      *",//2
+    "*                                      *",//3
+    "*                                      *",//4
+    "*                                      *",//5
+    "*                                      *",//6
+    "*    /\\                                *",//7
+    "*   |oo|                               *",//8
+    "*  (|..|)                              *",//9
+    "*   |--|                               *",//10
+    "*   \\__/                               *",//11
+    "*    ||                                *",//12
+    "*  -| *|-                              *",//13
+    "* / |  | \\                             *",//14
+    "*/   \\/   \\                            *",//15
+    "*    /\\                                *",//16
+    "*    ||                                *",//17
+    "*   _||_                               *",//18
+    "****************************************",//19
+    };
+    while (true)
+    {
+        cout << "Choose animation:" << endl;
+        cout << "Dance: \t\t\t1" << endl;
+        cout << "Run: \t\t\t2" << endl;
+        cout << "Sit down and jump: \t3" << endl;
+        cout << "Throw a ball: \t\t4" << endl << endl;
+        cout << "Enter 5 for exit." << endl;
+        cin >> choice;
+        switch (choice)
+        {
+        case 1: print(person); dance(person); break;
+        case 2: print(person); run(person); break;
+        case 3: print(person); jump(person); break;
+        case 4: print(person); ballThrow(person); break;
+        case 5: return 0; break;
+        }
+    }
+}
+void ballThrow(vector<string> person)
+{
+    int ballThrowDelay = 250 * 1000;
+    //usleep(ballThrowDelay);//system("clear");
+    person[7] = "*    /\\                                *";
+    person[8] = "*   |oo|                               *";
+    person[9] = "*  (|..|)                              *";
+    person[10] = "*   |--|                               *";
+    person[11] = "*   \\__/                               *";
+    person[12] = "*    ||                                *";
+    person[13] = "*  -| *|-                              *";
+    person[14] = "* / |  | \\o                            *";
+    person[15] = "*/   \\/   -                            *";
+    person[16] = "*    /\\                                *";
+    person[17] = "*    ||                                *";
+    person[18] = "*   _||_                               *";
+    print(person);//usleep(ballThrowDelay);//system("clear");
+    person[13] = "*  -| *|- o                            *";
+    person[14] = "* / |  | \\-                            *";
+    person[15] = "*/   \\/                                *";
+    print(person);//usleep(ballThrowDelay);//system("clear");
+    person[12] = "*    ||   o                            *";
+    person[13] = "*  -| *|---                            *";
+    person[14] = "* / |  |                               *";
+    print(person);//usleep(ballThrowDelay);//system("clear");
+    person[11] = "*   \\__/  o                            *";
+    person[12] = "*    ||                                *";
+    person[13] = "*  -| *|--/                            *";
+    print(person);//usleep(ballThrowDelay);//system("clear");
+    person[10] = "*   |--|  o                            *";
+    person[11] = "*   \\__/                               *";
+    person[13] = "*  -| *|---                            *";
+    print(person);//usleep(ballThrowDelay);//system("clear");
+    person[9] = "*  (|..|) o                            *";
+    person[10] = "*   |--|                               *";
+    person[13] = "*  -| *|--                             *";
+    person[14] = "* / |  |  \\                            *";
+    print(person);//usleep(ballThrowDelay);//system("clear");
+    person[8] = "*   |oo|  o                            *";
+    person[9] = "*  (|..|)                              *";
+    person[13] = "*  -| *|-                              *";
+    person[14] = "* / |  | \\                             *";
+    person[15] = "*/   \\/   \\                            *";
+    print(person);//usleep(ballThrowDelay);//system("clear");
+    person[7] = "*    /\\   o                            *";
+    person[8] = "*   |oo|                               *";
+    print(person);//usleep(ballThrowDelay);//system("clear");
+    person[6] = "*        o                             *";
+    person[7] = "*    /\\                                *";
+    print(person);//usleep(ballThrowDelay);//system("clear");
+    person[5] = "*       o                              *";
+    person[6] = "*                                      *";
+    print(person);//usleep(ballThrowDelay);//system("clear");
+    person[4] = "*      o                               *";
+    person[5] = "*                                      *";
+    print(person);//usleep(ballThrowDelay);//system("clear");
+    person[3] = "*     o                                *";
+    person[4] = "*                                      *";
+    print(person);//usleep(ballThrowDelay);//system("clear");
+    person[3] = "*    o                                 *";
+    print(person);//usleep(ballThrowDelay);//system("clear");
+    person[3] = "*                                      *";
+    person[4] = "*   o                                  *";
+    print(person);//usleep(ballThrowDelay);//system("clear");
+    person[4] = "*                                      *";
+    person[5] = "*  o                                   *";
+    print(person);//usleep(ballThrowDelay);//system("clear");
+    person[5] = "*                                      *";
+    person[6] = "* o                                    *";
+    print(person);//usleep(ballThrowDelay);//system("clear");
+    person[6] = "*                                      *";
+    person[7] = "*o   /\\                                *";
+    print(person);//usleep(ballThrowDelay);//system("clear");
+    person[7] = "*    /\\                                *";
+    person[8] = "*o  |oo|                               *";
+    print(person);//usleep(ballThrowDelay);//system("clear");
+    person[8] = "*   |oo|                               *";
+    person[9] = "*o (|..|)                              *";
+    person[13] = "* --| *|-                              *";
+    person[14] = "*/  |  | \\                             *";
+    person[15] = "*    \\/   \\                            *";
+    print(person);//usleep(ballThrowDelay);//system("clear");
+    person[9] = "*  (|..|)                              *";
+    person[10] = "*o  |--|                               *";
+    person[13] = "*---| *|-                              *";
+    person[14] = "*   |  | \\                             *";
+    print(person);//usleep(ballThrowDelay);//system("clear");
+    person[10] = "*   |--|                               *";
+    person[11] = "*o  \\__/                               *";
+    person[13] = "*\\--| *|-                              *";
+    print(person);//usleep(ballThrowDelay);//system("clear");
+    person[11] = "*   \\__/                               *";
+    person[12] = "*o   ||                                *";
+    person[13] = "*---| *|-                              *";
+    print(person);//usleep(ballThrowDelay);//system("clear");
+    person[12] = "*    ||                                *";
+    person[13] = "*o -| *|-                              *";
+    person[14] = "*-/ |  | \\                             *";
+    print(person);//usleep(ballThrowDelay);//system("clear");
+    person[13] = "*  -| *|-                              *";
+    person[14] = "*o/ |  | \\                             *";
+    person[15] = "*-   \\/   \\                            *";
+    print(person);//usleep(ballThrowDelay);//system("clear");
+    person[14] = "* / |  | \\                             *";
+    person[15] = "*/   \\/   \\                            *";
+    print(person);
 }
 
-void start_state(vector<string> sticman) {
-	int x = 650;
-	//Sleep(x);
-	//system("cls");
-	sticman = {
-	 "****************************************",//0
-	 "*                                      *",//1
-	 "*                                      *",//2
-	 "*                                      *",//3
-	 "*                                      *",//4
-	 "*                                      *",//5
-	 "*                                      *",//6
-	 "*    /\\                                *",//7
-	 "*   |oo|                               *",//8
-	 "*  (|..|)                              *",//9
-	 "*   |--|                               *",//10
-	 "*   \\__/                               *",//11
-	 "*    ||                                *",//12
-	 "*  -| *|-                              *",//13
-	 "* / |  | \\                             *",//14
-	 "*/   \\/   \\                            *",//15
-	 "*    /\\                                *",//16
-	 "*    ||                                *",//17
-	 "*   _||_                               *",//18
-	 "****************************************"//19
-	 };
-	print(sticman);
+void jump(vector<string> person)
+{
+    int jumpDelay = 270 * 1000;
+    //usleep(jumpDelay);//system("clear");
+    person[7] = "*                                      *";
+    person[8] = "*    /\\                                *";
+    person[9] = "*   |oo|                               *";
+    person[10] = "*  (|..|)                              *";
+    person[11] = "*   |--|                               *";
+    person[12] = "*   \\__/                               *";
+    person[13] = "*    ||                                *";
+    person[14] = "*  -| *|-                              *";
+    person[15] = "* / |  | \\                             *";
+    person[16] = "*/   \\/   \\                            *";
+    person[17] = "*    /\\                                *";
+    person[18] = "*   _\\/_                               *";
+    print(person);//usleep(jumpDelay);//system("clear");
+    person[7] = "*    /\\                                *";
+    person[8] = "*   |oo|                               *";
+    person[9] = "*  (|..|)                              *";
+    person[10] = "*   |--|                               *";
+    person[11] = "*   \\__/                               *";
+    person[12] = "*    ||                                *";
+    person[13] = "*  -| *|-                              *";
+    person[14] = "* / |  | \\                             *";
+    person[15] = "*/   \\/   \\                            *";
+    person[16] = "*    /\\                                *";
+    person[17] = "*    ||                                *";
+    person[18] = "*    ||                                *";
+    print(person);//usleep(jumpDelay);//system("clear");
+    person[6] = "*    /\\                                *";
+    person[7] = "*   |oo|                               *";
+    person[8] = "*  (|..|)                              *";
+    person[9] = "*   |--|                               *";
+    person[10] = "*   \\__/                               *";
+    person[11] = "*    ||                                *";
+    person[12] = "*  -| *|-                              *";
+    person[13] = "* / |  | \\                             *";
+    person[14] = "*/   \\/   \\                            *";
+    person[15] = "*    /\\                                *";
+    person[16] = "*    ||                                *";
+    person[17] = "*    ||                                *";
+    person[18] = "*                                      *";
+    print(person);//usleep(jumpDelay);//system("clear");
+    person[5] = "*    /\\                                *";
+    person[6] = "*   |oo|                               *";
+    person[7] = "*  (|..|)                              *";
+    person[8] = "*   |--|                               *";
+    person[9] = "*   \\__/                               *";
+    person[10] = "*    ||                                *";
+    person[11] = "*  -| *|-                              *";
+    person[12] = "* / |  | \\                             *";
+    person[13] = "*/   \\/   \\                            *";
+    person[14] = "*    /\\                                *";
+    person[15] = "*    ||                                *";
+    person[16] = "*    ||                                *";
+    person[17] = "*                                      *";
+    print(person);//usleep(jumpDelay);//system("clear");
+    person[4] = "*    /\\                                *";
+    person[5] = "*   |oo|                               *";
+    person[6] = "*  (|..|)                              *";
+    person[7] = "*   |--|                               *";
+    person[8] = "*   \\__/                               *";
+    person[9] = "*    ||                                *";
+    person[10] = "*  -| *|-                              *";
+    person[11] = "* / |  | \\                             *";
+    person[12] = "*/   \\/   \\                            *";
+    person[13] = "*    /\\                                *";
+    person[14] = "*    ||                                *";
+    person[15] = "*    ||                                *";
+    person[16] = "*                                      *";
+    print(person);//usleep(jumpDelay);//system("clear");
+    person[3] = "*    /\\                                *";
+    person[4] = "*   |oo|                               *";
+    person[5] = "*  (|..|)                              *";
+    person[6] = "*   |--|                               *";
+    person[7] = "*   \\__/                               *";
+    person[8] = "*    ||                                *";
+    person[9] = "*  -| *|-                              *";
+    person[10] = "* / |  | \\                             *";
+    person[11] = "*/   \\/   \\                            *";
+    person[12] = "*    /\\                                *";
+    person[13] = "*    ||                                *";
+    person[14] = "*    ||                                *";
+    person[15] = "*                                      *";
+    print(person);print(person);//usleep(jumpDelay);//system("clear");
+    person[3] = "*                                      *";
+    person[4] = "*    /\\                                *";
+    person[5] = "*   |oo|                               *";
+    person[6] = "*  (|..|)                              *";
+    person[7] = "*   |--|                               *";
+    person[8] = "*   \\__/                               *";
+    person[9] = "*    ||                                *";
+    person[10] = "*  -| *|-                              *";
+    person[11] = "* / |  | \\                             *";
+    person[12] = "*/   \\/   \\                            *";
+    person[13] = "*    /\\                                *";
+    person[14] = "*    ||                                *";
+    person[15] = "*    ||                                *";
+    print(person);//usleep(jumpDelay);//system("clear");
+    person[4] = "*                                      *";
+    person[5] = "*    /\\                                *";
+    person[6] = "*   |oo|                               *";
+    person[7] = "*  (|..|)                              *";
+    person[8] = "*   |--|                               *";
+    person[9] = "*   \\__/                               *";
+    person[10] = "*    ||                                *";
+    person[11] = "*  -| *|-                              *";
+    person[12] = "* / |  | \\                             *";
+    person[13] = "*/   \\/   \\                            *";
+    person[14] = "*    /\\                                *";
+    person[15] = "*    ||                                *";
+    person[16] = "*    ||                                *";
+    print(person);//usleep(jumpDelay);//system("clear");
+    person[5] = "*                                      *";
+    person[6] = "*    /\\                                *";
+    person[7] = "*   |oo|                               *";
+    person[8] = "*  (|..|)                              *";
+    person[9] = "*   |--|                               *";
+    person[10] = "*   \\__/                               *";
+    person[11] = "*    ||                                *";
+    person[12] = "*  -| *|-                              *";
+    person[13] = "* / |  | \\                             *";
+    person[14] = "*/   \\/   \\                            *";
+    person[15] = "*    /\\                                *";
+    person[16] = "*    ||                                *";
+    person[17] = "*    ||                                *";
+    print(person);//usleep(jumpDelay);//system("clear");
+    person[6] = "*                                      *";
+    person[7] = "*    /\\                                *";
+    person[8] = "*   |oo|                               *";
+    person[9] = "*  (|..|)                              *";
+    person[10] = "*   |--|                               *";
+    person[11] = "*   \\__/                               *";
+    person[12] = "*    ||                                *";
+    person[13] = "*  -| *|-                              *";
+    person[14] = "* / |  | \\                             *";
+    person[15] = "*/   \\/   \\                            *";
+    person[16] = "*    /\\                                *";
+    person[17] = "*    ||                                *";
+    person[18] = "*    ||                                *";
+    print(person);//usleep(jumpDelay);//system("clear");
+    person[7] = "*                                      *";
+    person[8] = "*    /\\                                *";
+    person[9] = "*   |oo|                               *";
+    person[10] = "*  (|..|)                              *";
+    person[11] = "*   |--|                               *";
+    person[12] = "*   \\__/                               *";
+    person[13] = "*    ||                                *";
+    person[14] = "*  -| *|-                              *";
+    person[15] = "* / |  | \\                             *";
+    person[16] = "*/   \\/   \\                            *";
+    person[17] = "*    /\\                                *";
+    person[18] = "*   _\\/_                               *";
+    print(person);//usleep(jumpDelay);//system("clear");
+    person[7] = "*    /\\                                *";
+    person[8] = "*   |oo|                               *";
+    person[9] = "*  (|..|)                              *";
+    person[10] = "*   |--|                               *";
+    person[11] = "*   \\__/                               *";
+    person[12] = "*    ||                                *";
+    person[13] = "*  -| *|-                              *";
+    person[14] = "* / |  | \\                             *";
+    person[15] = "*/   \\/   \\                            *";
+    person[16] = "*    /\\                                *";
+    person[17] = "*    ||                                *";
+    person[18] = "*   _||_                               *";
+    print(person);//usleep(jumpDelay);
 }
 
-void throw_boll(vector <string> sticman){
-	sleep();
-	sticman = {
-	 "****************************************",//0
-	 "*                                      *",//1
-	 "*                                      *",//2
-	 "*                                      *",//3
-	 "*                                      *",//4
-	 "*                                      *",//5
-	 "*                                      *",//6
-	 "*    /\\                                *",//7
-	 "*   |oo|                               *",//8
-	 "*  (|..|)                              *",//9
-	 "*   |--|                               *",//10
-	 "*   \\__/                               *",//11
-	 "*    ||                                *",//12
-	 "*  -| *|-                              *",//13
-	 "* / |  | \\o                            *",//14
-	 "*/   \\/   -                            *",//15
-	 "*    /\\                                *",//16
-	 "*    ||                                *",//17
-	 "*   _||_                               *",//18
-	 "****************************************"//19
-	 };
-	print(sticman);
+void run(vector<string> person)
+{
+    int runDelay = 165 * 1000;
+    //usleep(runDelay);//system("clear");
+    person[17] = "*    | \\                               *";
+    person[18] = "*   _|  \\_                             *";
 
-	sleep();
-	sticman = {
-	 "****************************************",//0
-	 "*                                      *",//1
-	 "*                                      *",//2
-	 "*                                      *",//3
-	 "*                                      *",//4
-	 "*                                      *",//5
-	 "*                                      *",//6
-	 "*    /\\                                *",//7
-	 "*   |oo|                               *",//8
-	 "*  (|..|)                              *",//9
-	 "*   |--|                               *",//10
-	 "*   \\__/                               *",//11
-	 "*    ||                                *",//12
-	 "*  -| *|- o                            *",//13
-	 "* / |  | \\-                            *",//14
-	 "*/   \\/                                *",//15
-	 "*    /\\                                *",//16
-	 "*    ||                                *",//17
-	 "*   _||_                               *",//18
-	 "****************************************"//19
-	 };
-	print(sticman);
+    print(person);//usleep(runDelay);//system("clear");
+    person[7] = "*     /\\                               *";
+    person[8] = "*    |oo|                              *";
+    person[9] = "*   (|..|)                             *";
+    person[10] = "*    |--|                              *";
+    person[11] = "*    \\__/                              *";
+    person[12] = "*     ||                               *";
+    person[13] = "*   -| *|-                             *";
+    person[14] = "*  / |  | \\                            *";
+    person[15] = "* /   \\/   \\                           *";
+    person[16] = "*     /\\                               *";
+    person[17] = "*    / |                               *";
+    person[18] = "*  _/  |_                              *";
 
-	sleep();
-	sticman = {
-	 "****************************************",//0
-	 "*                                      *",//1
-	 "*                                      *",//2
-	 "*                                      *",//3
-	 "*                                      *",//4
-	 "*                                      *",//5
-	 "*                                      *",//6
-	 "*    /\\                                *",//7
-	 "*   |oo|                               *",//8
-	 "*  (|..|)                              *",//9
-	 "*   |--|                               *",//10
-	 "*   \\__/                               *",//11
-	 "*    ||   o                            *",//12
-	 "*  -| *|---                            *",//13
-	 "* / |  |                               *",//14
-	 "*/   \\/                                *",//15
-	 "*    /\\                                *",//16
-	 "*    ||                                *",//17
-	 "*   _||_                               *",//18
-	 "****************************************"//19
-	 };
-	print(sticman);
+    print(person);//usleep(runDelay);//system("clear");
+    person[17] = "*     ||                               *";
+    person[18] = "*    _||_                              *";
 
-	sleep();
-	sticman = {
-	 "****************************************",//0
-	 "*                                      *",//1
-	 "*                                      *",//2
-	 "*                                      *",//3
-	 "*                                      *",//4
-	 "*                                      *",//5
-	 "*                                      *",//6
-	 "*    /\\                                *",//7
-	 "*   |oo|                               *",//8
-	 "*  (|..|)                              *",//9
-	 "*   |--|                               *",//10
-	 "*   \\__/  o                            *",//11
-	 "*    ||                                *",//12
-	 "*  -| *|--/                            *",//13
-	 "* / |  |                               *",//14
-	 "*/   \\/                                *",//15
-	 "*    /\\                                *",//16
-	 "*    ||                                *",//17
-	 "*   _||_                               *",//18
-	 "****************************************"//19
-	 };
-	print(sticman);
+    print(person);//usleep(runDelay);//system("clear");
+    person[17] = "*     | \\                              *";
+    person[18] = "*    _|  \\_                            *";
 
-	sleep();
-	sticman = {
-	 "****************************************",//0
-	 "*                                      *",//1
-	 "*                                      *",//2
-	 "*                                      *",//3
-	 "*                                      *",//4
-	 "*                                      *",//5
-	 "*                                      *",//6
-	 "*    /\\                                *",//7
-	 "*   |oo|                               *",//8
-	 "*  (|..|)                              *",//9
-	 "*   |--|  o                            *",//10
-	 "*   \\__/                               *",//11
-	 "*    ||                                *",//12
-	 "*  -| *|---                            *",//13
-	 "* / |  |                                *",//14
-	 "*/   \\/                                *",//15
-	 "*    /\\                                *",//16
-	 "*    ||                                *",//17
-	 "*   _||_                               *",//18
-	 "****************************************"//19
-	 };
-	print(sticman);
+    print(person);//usleep(runDelay);//system("clear");
+    person[7] = "*      /\\                              *";
+    person[8] = "*     |oo|                             *";
+    person[9] = "*    (|..|)                            *";
+    person[10] = "*     |--|                             *";
+    person[11] = "*     \\__/                             *";
+    person[12] = "*      ||                              *";
+    person[13] = "*    -| *|-                            *";
+    person[14] = "*   / |  | \\                           *";
+    person[15] = "*  /   \\/   \\                          *";
+    person[16] = "*      /\\                              *";
+    person[17] = "*     / |                              *";
+    person[18] = "*   _/  |_                             *";
 
-	sleep();
-	sticman = {
-	 "****************************************",//0
-	 "*                                      *",//1
-	 "*                                      *",//2
-	 "*                                      *",//3
-	 "*                                      *",//4
-	 "*                                      *",//5
-	 "*                                      *",//6
-	 "*    /\\                                *",//7
-	 "*   |oo|                               *",//8
-	 "*  (|..|) o                            *",//9
-	 "*   |--|                               *",//10
-	 "*   \\__/                               *",//11
-	 "*    ||                                *",//12
-	 "*  -| *|--                             *",//13
-	 "* / |  |  \\                            *",//14
-	 "*/   \\/                                *",//15
-	 "*    /\\                                *",//16
-	 "*    ||                                *",//17
-	 "*   _||_                               *",//18
-	 "****************************************"//19
-	 };
-	print(sticman);
+    print(person);//usleep(runDelay);//system("clear");
+    person[17] = "*      ||                              *";
+    person[18] = "*     _||_                             *";
 
-	sleep();
-	sticman = {
-	 "****************************************",//0
-	 "*                                      *",//1
-	 "*                                      *",//2
-	 "*                                      *",//3
-	 "*                                      *",//4
-	 "*                                      *",//5
-	 "*                                      *",//6
-	 "*    /\\                                *",//7
-	 "*   |oo|  o                            *",//8
-	 "*  (|..|)                              *",//9
-	 "*   |--|                               *",//10
-	 "*   \\__/                               *",//11
-	 "*    ||                                *",//12
-	 "*  -| *|--                             *",//13
-	 "* / |  |  \\                            *",//14
-	 "*/   \\/    \\                           *",//15
-	 "*    /\\                                *",//16
-	 "*    ||                                *",//17
-	 "*   _||_                               *",//18
-	 "****************************************"//19
-	 };
-	print(sticman);
+    print(person);//usleep(runDelay);//system("clear");
+    person[17] = "*      | \\                             *";
+    person[18] = "*     _|  \\_                           *";
 
-	sleep();
-	sticman = {
-	 "****************************************",//0
-	 "*                                      *",//1
-	 "*                                      *",//2
-	 "*                                      *",//3
-	 "*                                      *",//4
-	 "*                                      *",//5
-	 "*                                      *",//6
-	 "*    /\\   o                            *",//7
-	 "*   |oo|                               *",//8
-	 "*  (|..|)                              *",//9
-	 "*   |--|                               *",//10
-	 "*   \\__/                               *",//11
-	 "*    ||                                *",//12
-	 "*  -| *|--                             *",//13
-	 "* / |  |  \\                            *",//14
-	 "*/   \\/    \\                           *",//15
-	 "*    /\\                                *",//16
-	 "*    ||                                *",//17
-	 "*   _||_                               *",//18
-	 "****************************************"//19
-	 };
-	print(sticman);
+    print(person);//usleep(runDelay);//system("clear");
+    person[7] = "*       /\\                             *";
+    person[8] = "*      |oo|                            *";
+    person[9] = "*     (|..|)                           *";
+    person[10] = "*      |--|                            *";
+    person[11] = "*      \\__/                            *";
+    person[12] = "*       ||                             *";
+    person[13] = "*     -| *|-                           *";
+    person[14] = "*    / |  | \\                          *";
+    person[15] = "*   /   \\/   \\                         *";
+    person[16] = "*       /\\                             *";
+    person[17] = "*      / |                             *";
+    person[18] = "*    _/  |_                            *";
 
-	sleep();
-	sticman = {
-	 "****************************************",//0
-	 "*                                      *",//1
-	 "*                                      *",//2
-	 "*                                      *",//3
-	 "*                                      *",//4
-	 "*                                      *",//5
-	 "*         o                            *",//6
-	 "*    /\\                                *",//7
-	 "*   |oo|                               *",//8
-	 "*  (|..|)                              *",//9
-	 "*   |--|                               *",//10
-	 "*   \\__/                               *",//11
-	 "*    ||                                *",//12
-	 "*  -| *|--                             *",//13
-	 "* / |  |  \\                            *",//14
-	 "*/   \\/    \\                           *",//15
-	 "*    /\\                                *",//16
-	 "*    ||                                *",//17
-	 "*   _||_                               *",//18
-	 "****************************************"//19
-	 };
-	print(sticman);
+    print(person);//usleep(runDelay);//system("clear");
+    person[17] = "*       ||                             *";
+    person[18] = "*      _||_                            *";
 
-	sleep();
-	sticman = {
-	 "****************************************",//0
-	 "*                                      *",//1
-	 "*                                      *",//2
-	 "*                                      *",//3
-	 "*                                      *",//4
-	 "*        o                             *",//5
-	 "*                                      *",//6
-	 "*    /\\                                *",//7
-	 "*   |oo|                               *",//8
-	 "*  (|..|)                              *",//9
-	 "*   |--|                               *",//10
-	 "*   \\__/                               *",//11
-	 "*    ||                                *",//12
-	 "*  -| *|--                             *",//13
-	 "* / |  |  \\                            *",//14
-	 "*/   \\/    \\                           *",//15
-	 "*    /\\                                *",//16
-	 "*    ||                                *",//17
-	 "*   _||_                               *",//18
-	 "****************************************"//19
-	 };
-	print(sticman);
+    print(person);//usleep(runDelay);//system("clear");
+    person[17] = "*       | \\                            *";
+    person[18] = "*      _|  \\_                          *";
 
-	sleep();
-	sticman = {
-	 "****************************************",//0
-	 "*                                      *",//1
-	 "*                                      *",//2
-	 "*                                      *",//3
-	 "*       o                              *",//4
-	 "*                                      *",//5
-	 "*                                      *",//6
-	 "*    /\\                                *",//7
-	 "*   |oo|                               *",//8
-	 "*  (|..|)                              *",//9
-	 "*   |--|                               *",//10
-	 "*   \\__/                               *",//11
-	 "*    ||                                *",//12
-	 "*  -| *|--                             *",//13
-	 "* / |  |  \\                            *",//14
-	 "*/   \\/    \\                           *",//15
-	 "*    /\\                                *",//16
-	 "*    ||                                *",//17
-	 "*   _||_                               *",//18
-	 "****************************************"//19
-	 };
-	print(sticman);
+    print(person);//usleep(runDelay);//system("clear");
+    person[7] = "*        /\\                            *";
+    person[8] = "*       |oo|                           *";
+    person[9] = "*      (|..|)                          *";
+    person[10] = "*       |--|                           *";
+    person[11] = "*       \\__/                           *";
+    person[12] = "*        ||                            *";
+    person[13] = "*      -| *|-                          *";
+    person[14] = "*     / |  | \\                         *";
+    person[15] = "*    /   \\/   \\                        *";
+    person[16] = "*        /\\                            *";
+    person[17] = "*       / |                            *";
+    person[18] = "*     _/  |_                           *";
 
-	sleep();
-	sticman = {
-	 "****************************************",//0
-	 "*                                      *",//1
-	 "*                                      *",//2
-	 "*      o                               *",//3
-	 "*                                      *",//4
-	 "*                                      *",//5
-	 "*                                      *",//6
-	 "*    /\\                                *",//7
-	 "*   |oo|                               *",//8
-	 "*  (|..|)                              *",//9
-	 "*   |--|                               *",//10
-	 "*   \\__/                               *",//11
-	 "*    ||                                *",//12
-	 "*  -| *|--                             *",//13
-	 "* / |  |  \\                            *",//14
-	 "*/   \\/    \\                           *",//15
-	 "*    /\\                                *",//16
-	 "*    ||                                *",//17
-	 "*   _||_                               *",//18
-	 "****************************************"//19
-	 };
-	print(sticman);
+    print(person);//usleep(runDelay);//system("clear");
+    person[17] = "*        ||                            *";
+    person[18] = "*       _||_                           *";
 
-	sleep();
-	sticman = {
-	 "****************************************",//0
-	 "*                                      *",//1
-	 "*                                      *",//2
-	 "*     o                                *",//3
-	 "*                                      *",//4
-	 "*                                      *",//5
-	 "*                                      *",//6
-	 "*    /\\                                *",//7
-	 "*   |oo|                               *",//8
-	 "*  (|..|)                              *",//9
-	 "*   |--|                               *",//10
-	 "*   \\__/                               *",//11
-	 "*    ||                                *",//12
-	 "*  -| *|--                             *",//13
-	 "* / |  |  \\                            *",//14
-	 "*/   \\/    \\                           *",//15
-	 "*    /\\                                *",//16
-	 "*    ||                                *",//17
-	 "*   _||_                               *",//18
-	 "****************************************"//19
-	 };
-	print(sticman);
+    print(person);//usleep(runDelay);//system("clear");
+    person[17] = "*        | \\                           *";
+    person[18] = "*       _|  \\_                         *";
 
-	sleep();
-	sticman = {
-	 "****************************************",//0
-	 "*                                      *",//1
-	 "*                                      *",//2
-	 "*                                      *",//3
-	 "*    o                                 *",//4
-	 "*                                      *",//5
-	 "*                                      *",//6
-	 "*    /\\                                *",//7
-	 "*   |oo|                               *",//8
-	 "*  (|..|)                              *",//9
-	 "*   |--|                               *",//10
-	 "*   \\__/                               *",//11
-	 "*    ||                                *",//12
-	 "*  -| *|--                             *",//13
-	 "* / |  |  \\                            *",//14
-	 "*/   \\/    \\                           *",//15
-	 "*    /\\                                *",//16
-	 "*    ||                                *",//17
-	 "*   _||_                               *",//18
-	 "****************************************"//19
-	 };
-	print(sticman);
+    print(person);//usleep(runDelay);//system("clear");
+    person[7] = "*         /\\                           *";
+    person[8] = "*        |oo|                          *";
+    person[9] = "*       (|..|)                         *";
+    person[10] = "*        |--|                          *";
+    person[11] = "*        \\__/                          *";
+    person[12] = "*         ||                           *";
+    person[13] = "*       -| *|-                         *";
+    person[14] = "*      / |  | \\                        *";
+    person[15] = "*     /   \\/   \\                       *";
+    person[16] = "*         /\\                           *";
+    person[17] = "*        / |                           *";
+    person[18] = "*      _/  |_                          *";
 
-	sleep();
-	sticman = {
-	 "****************************************",//0
-	 "*                                      *",//1
-	 "*                                      *",//2
-	 "*                                      *",//3
-	 "*                                      *",//4
-	 "*  o                                   *",//5
-	 "*                                      *",//6
-	 "*    /\\                                *",//7
-	 "*   |oo|                               *",//8
-	 "*  (|..|)                              *",//9
-	 "*   |--|                               *",//10
-	 "*   \\__/                               *",//11
-	 "*    ||                                *",//12
-	 "*  -| *|--                             *",//13
-	 "* / |  |  \\                            *",//14
-	 "*/   \\/    \\                           *",//15
-	 "*    /\\                                *",//16
-	 "*    ||                                *",//17
-	 "*   _||_                               *",//18
-	 "****************************************"//19
-	 };
-	print(sticman);
+    print(person);//usleep(runDelay);//system("clear");
+    person[17] = "*         ||                           *";
+    person[18] = "*        _||_                          *";
 
-	sleep();
-	sticman = {
-	 "****************************************",//0
-	 "*                                      *",//1
-	 "*                                      *",//2
-	 "*                                      *",//3
-	 "*                                      *",//4
-	 "*                                      *",//5
-	 "* o                                    *",//6
-	 "*    /\\                                *",//7
-	 "*   |oo|                               *",//8
-	 "*  (|..|)                              *",//9
-	 "*   |--|                               *",//10
-	 "*   \\__/                               *",//11
-	 "*    ||                                *",//12
-	 "*  -| *|--                             *",//13
-	 "* / |  |  \\                            *",//14
-	 "*/   \\/    \\                           *",//15
-	 "*    /\\                                *",//16
-	 "*    ||                                *",//17
-	 "*   _||_                               *",//18
-	 "****************************************"//19
-	 };
-	print(sticman);
+    print(person);//usleep(runDelay);//system("clear");
+    person[17] = "*         | \\                          *";
+    person[18] = "*        _|  \\_                        *";
 
-	sleep();
-	sticman = {
-	 "****************************************",//0
-	 "*                                      *",//1
-	 "*                                      *",//2
-	 "*                                      *",//3
-	 "*                                      *",//4
-	 "*                                      *",//5
-	 "*                                      *",//6
-	 "*o   /\\                                *",//7
-	 "*   |oo|                               *",//8
-	 "*  (|..|)                              *",//9
-	 "*   |--|                               *",//10
-	 "*   \\__/                               *",//11
-	 "*    ||                                *",//12
-	 "*  -| *|--                             *",//13
-	 "* / |  |  \\                            *",//14
-	 "*/   \\/    \\                           *",//15
-	 "*    /\\                                *",//16
-	 "*    ||                                *",//17
-	 "*   _||_                               *",//18
-	 "****************************************"//19
-	 };
-	print(sticman);
+    print(person);//usleep(runDelay);//system("clear");
+    person[7] = "*          /\\                          *";
+    person[8] = "*         |oo|                         *";
+    person[9] = "*        (|..|)                        *";
+    person[10] = "*         |--|                         *";
+    person[11] = "*         \\__/                         *";
+    person[12] = "*          ||                          *";
+    person[13] = "*        -| *|-                        *";
+    person[14] = "*       / |  | \\                       *";
+    person[15] = "*      /   \\/   \\                      *";
+    person[16] = "*          /\\                          *";
+    person[17] = "*         / |                          *";
+    person[18] = "*       _/  |_                         *";
 
-	sleep();
-	sticman = {
-	 "****************************************",//0
-	 "*                                      *",//1
-	 "*                                      *",//2
-	 "*                                      *",//3
-	 "*                                      *",//4
-	 "*                                      *",//5
-	 "*                                      *",//6
-	 "*    /\\                                *",//7
-	 "*o  |oo|                               *",//8
-	 "*  (|..|)                              *",//9
-	 "*   |--|                               *",//10
-	 "*   \\__/                               *",//11
-	 "*    ||                                *",//12
-	 "*  -| *|--                             *",//13
-	 "* / |  |  \\                            *",//14
-	 "*/   \\/    \\                           *",//15
-	 "*    /\\                                *",//16
-	 "*    ||                                *",//17
-	 "*   _||_                               *",//18
-	 "****************************************"//19
-	 };
-	print(sticman);
+    print(person);//usleep(runDelay);//system("clear");
+    person[17] = "*          ||                          *";
+    person[18] = "*         _||_                         *";
 
-	sleep();
-	sticman = {
-	 "****************************************",//0
-	 "*                                      *",//1
-	 "*                                      *",//2
-	 "*                                      *",//3
-	 "*                                      *",//4
-	 "*                                      *",//5
-	 "*                                      *",//6
-	 "*    /\\                                *",//7
-	 "*   |oo|                               *",//8
-	 "*o (|..|)                              *",//9
-	 "*   |--|                               *",//10
-	 "*   \\__/                               *",//11
-	 "*    ||                                *",//12
-	 "* --| *|--                             *",//13
-	 "*/  |  |  \\                            *",//14
-	 "*    \\/   \\                            *",//15
-	 "*    /\\                                *",//16
-	 "*    ||                                *",//17
-	 "*   _||_                               *",//18
-	 "****************************************"//19
-	 };
-	print(sticman);
+    print(person);//usleep(runDelay);//system("clear");
+    person[17] = "*          | \\                         *";
+    person[18] = "*         _|  \\_                       *";
 
-	sleep();
-	sticman = {
-	 "****************************************",//0
-	 "*                                      *",//1
-	 "*                                      *",//2
-	 "*                                      *",//3
-	 "*                                      *",//4
-	 "*                                      *",//5
-	 "*                                      *",//6
-	 "*    /\\                                *",//7
-	 "*   |oo|                               *",//8
-	 "*  (|..|)                              *",//9
-	 "*o  |--|                               *",//10
-	 "*   \\__/                               *",//11
-	 "*    ||                                *",//12
-	 "*---| *|--                             *",//13
-	 "*   |  |  \\                            *",//14
-	 "*    \\/   \\                            *",//15
-	 "*    /\\                                *",//16
-	 "*    ||                                *",//17
-	 "*   _||_                               *",//18
-	 "****************************************"//19
-	 };
-	print(sticman);
+    print(person);//usleep(runDelay);//system("clear");
+    person[7] = "*           /\\                         *";
+    person[8] = "*          |oo|                        *";
+    person[9] = "*         (|..|)                       *";
+    person[10] = "*          |--|                        *";
+    person[11] = "*          \\__/                        *";
+    person[12] = "*           ||                         *";
+    person[13] = "*         -| *|-                       *";
+    person[14] = "*        / |  | \\                      *";
+    person[15] = "*       /   \\/   \\                     *";
+    person[16] = "*           /\\                         *";
+    person[17] = "*          / |                         *";
+    person[18] = "*        _/  |_                        *";
 
-	sleep();
-	sticman = {
-	 "****************************************",//0
-	 "*                                      *",//1
-	 "*                                      *",//2
-	 "*                                      *",//3
-	 "*                                      *",//4
-	 "*                                      *",//5
-	 "*                                      *",//6
-	 "*    /\\                                *",//7
-	 "*   |oo|                               *",//8
-	 "*  (|..|)                              *",//9
-	 "*   |--|                               *",//10
-	 "*o  \\__/                               *",//11
-	 "*    ||                                *",//12
-	 "*\\--| *|--                              *",//13
-	 "*   |  |  \\                            *",//14
-	 "*    \\/   \\                            *",//15
-	 "*    /\\                                *",//16
-	 "*    ||                                *",//17
-	 "*   _||_                               *",//18
-	 "****************************************"//19
-	 };
-	print(sticman);
+    print(person);//usleep(runDelay);//system("clear");
+    person[17] = "*           ||                         *";
+    person[18] = "*          _||_                        *";
 
-	sleep();
-	sticman = {
-	 "****************************************",//0
-	 "*                                      *",//1
-	 "*                                      *",//2
-	 "*                                      *",//3
-	 "*                                      *",//4
-	 "*                                      *",//5
-	 "*                                      *",//6
-	 "*    /\\                                *",//7
-	 "*   |oo|                               *",//8
-	 "*  (|..|)                              *",//9
-	 "*   |--|                               *",//10
-	 "*   \\__/                               *",//11
-	 "*o   ||                                *",//12
-	 "*---| *|--                             *",//13
-	 "*   |  |  \\                            *",//14
-	 "*    \\/   \\                            *",//15
-	 "*    /\\                                *",//16
-	 "*    ||                                *",//17
-	 "*   _||_                               *",//18
-	 "****************************************"//19
-	 };
-	print(sticman);
+    print(person);//usleep(runDelay);//system("clear");
+    person[17] = "*           | \\                        *";
+    person[18] = "*          _|  \\_                      *";
 
-	sleep();
-	sticman = {
-	 "****************************************",//0
-	 "*                                      *",//1
-	 "*                                      *",//2
-	 "*                                      *",//3
-	 "*                                      *",//4
-	 "*                                      *",//5
-	 "*                                      *",//6
-	 "*    /\\                                *",//7
-	 "*   |oo|                               *",//8
-	 "*  (|..|)                              *",//9
-	 "*   |--|                               *",//10
-	 "*   \\__/                               *",//11
-	 "*    ||                                *",//12
-	 "*o -| *|--                             *",//13
-	 "*-/ |  |  \\                            *",//14
-	 "*    \\/   \\                            *",//15
-	 "*    /\\                                *",//16
-	 "*    ||                                *",//17
-	 "*   _||_                               *",//18
-	 "****************************************"//19
-	 };
-	print(sticman);
+    print(person);//usleep(runDelay);//system("clear");
+    person[7] = "*            /\\                        *";
+    person[8] = "*           |oo|                       *";
+    person[9] = "*          (|..|)                      *";
+    person[10] = "*           |--|                       *";
+    person[11] = "*           \\__/                       *";
+    person[12] = "*            ||                        *";
+    person[13] = "*          -| *|-                      *";
+    person[14] = "*         / |  | \\                     *";
+    person[15] = "*        /   \\/   \\                    *";
+    person[16] = "*            /\\                        *";
+    person[17] = "*           / |                        *";
+    person[18] = "*         _/  |_                       *";
 
-	sleep();
-	sticman = {
-	 "****************************************",//0
-	 "*                                      *",//1
-	 "*                                      *",//2
-	 "*                                      *",//3
-	 "*                                      *",//4
-	 "*                                      *",//5
-	 "*                                      *",//6
-	 "*    /\\                                *",//7
-	 "*   |oo|                               *",//8
-	 "*  (|..|)                              *",//9
-	 "*   |--|                               *",//10
-	 "*   \\__/                               *",//11
-	 "*    ||                                *",//12
-	 "*  -| *|--                             *",//13
-	 "*o/ |  |  \\                            *",//14
-	 "*-   \\/   \\                            *",//15
-	 "*    /\\                                *",//16
-	 "*    ||                                *",//17
-	 "*   _||_                               *",//18
-	 "****************************************"//19
-	 };
-	print(sticman);
+    print(person);//usleep(runDelay);//system("clear");
+    person[17] = "*            ||                        *";
+    person[18] = "*           _||_                       *";
 
-	start_state(sticman);
+    print(person);//usleep(runDelay);//system("clear");
+    person[17] = "*            | \\                       *";
+    person[18] = "*           _|  \\_                     *";
+
+    print(person);//usleep(runDelay);//system("clear");
+    person[7] = "*             /\\                       *";
+    person[8] = "*            |oo|                      *";
+    person[9] = "*           (|..|)                     *";
+    person[10] = "*            |--|                      *";
+    person[11] = "*            \\__/                      *";
+    person[12] = "*             ||                       *";
+    person[13] = "*           -| *|-                     *";
+    person[14] = "*          / |  | \\                    *";
+    person[15] = "*         /   \\/   \\                   *";
+    person[16] = "*             /\\                       *";
+    person[17] = "*            / |                       *";
+    person[18] = "*          _/  |_                      *";
+
+    print(person);//usleep(runDelay);//system("clear");
+    person[17] = "*             ||                       *";
+    person[18] = "*            _||_                      *";
+
+    print(person);//usleep(runDelay);//system("clear");
+    person[17] = "*             | \\                      *";
+    person[18] = "*            _|  \\_                    *";
+
+    print(person);//usleep(runDelay);//system("clear");
+    person[7] = "*              /\\                      *";
+    person[8] = "*             |oo|                     *";
+    person[9] = "*            (|..|)                    *";
+    person[10] = "*             |--|                     *";
+    person[11] = "*             \\__/                     *";
+    person[12] = "*              ||                      *";
+    person[13] = "*            -| *|-                    *";
+    person[14] = "*           / |  | \\                   *";
+    person[15] = "*          /   \\/   \\                  *";
+    person[16] = "*              /\\                      *";
+    person[17] = "*             / |                      *";
+    person[18] = "*           _/  |_                     *";
+
+    print(person);//usleep(runDelay);//system("clear");
+    person[17] = "*              ||                      *";
+    person[18] = "*             _||_                     *";
+
+    print(person);//usleep(runDelay);//system("clear");
+    person[17] = "*              | \\                     *";
+    person[18] = "*             _|  \\_                   *";
+
+    print(person);//usleep(runDelay);//system("clear");
+    person[7] = "*               /\\                     *";
+    person[8] = "*              |oo|                    *";
+    person[9] = "*             (|..|)                   *";
+    person[10] = "*              |--|                    *";
+    person[11] = "*              \\__/                    *";
+    person[12] = "*               ||                     *";
+    person[13] = "*             -| *|-                   *";
+    person[14] = "*            / |  | \\                  *";
+    person[15] = "*           /   \\/   \\                 *";
+    person[16] = "*               /\\                     *";
+    person[17] = "*              / |                     *";
+    person[18] = "*            _/  |_                    *";
+
+    print(person);//usleep(runDelay);//system("clear");
+    person[17] = "*               ||                     *";
+    person[18] = "*              _||_                    *";
+
+    print(person);//usleep(runDelay);//system("clear");
+    person[17] = "*               | \\                    *";
+    person[18] = "*              _|  \\_                  *";
+
+    print(person);//usleep(runDelay);//system("clear");
+    person[7] = "*                /\\                    *";
+    person[8] = "*               |oo|                   *";
+    person[9] = "*              (|..|)                  *";
+    person[10] = "*               |--|                   *";
+    person[11] = "*               \\__/                   *";
+    person[12] = "*                ||                    *";
+    person[13] = "*              -| *|-                  *";
+    person[14] = "*             / |  | \\                 *";
+    person[15] = "*            /   \\/   \\                *";
+    person[16] = "*                /\\                    *";
+    person[17] = "*               / |                    *";
+    person[18] = "*             _/  |_                   *";
+
+    print(person);//usleep(runDelay);//system("clear");
+    person[17] = "*                ||                    *";
+    person[18] = "*               _||_                   *";
+
+    print(person);//usleep(runDelay);//system("clear");
+    person[17] = "*                | \\                   *";
+    person[18] = "*               _|  \\_                 *";
+
+    print(person);//usleep(runDelay);//system("clear");
+    person[7] = "*                 /\\                   *";
+    person[8] = "*                |oo|                  *";
+    person[9] = "*               (|..|)                 *";
+    person[10] = "*                |--|                  *";
+    person[11] = "*                \\__/                  *";
+    person[12] = "*                 ||                   *";
+    person[13] = "*               -| *|-                 *";
+    person[14] = "*              / |  | \\                *";
+    person[15] = "*             /   \\/   \\               *";
+    person[16] = "*                 /\\                   *";
+    person[17] = "*                / |                   *";
+    person[18] = "*              _/  |_                  *";
+
+    print(person);//usleep(runDelay);//system("clear");
+    person[17] = "*                 ||                   *";
+    person[18] = "*                _||_                  *";
+
+    print(person);//usleep(runDelay);//system("clear");
+    person[17] = "*                 | \\                  *";
+    person[18] = "*                _|  \\_                *";
+
+    print(person);//usleep(runDelay);//system("clear");
+    person[7] = "*                  /\\                  *";
+    person[8] = "*                 |oo|                 *";
+    person[9] = "*                (|..|)                *";
+    person[10] = "*                 |--|                 *";
+    person[11] = "*                 \\__/                 *";
+    person[12] = "*                  ||                  *";
+    person[13] = "*                -| *|-                *";
+    person[14] = "*               / |  | \\               *";
+    person[15] = "*              /   \\/   \\              *";
+    person[16] = "*                  /\\                  *";
+    person[17] = "*                 / |                  *";
+    person[18] = "*               _/  |_                 *";
+
+    print(person);//usleep(runDelay);//system("clear");
+    person[17] = "*                  ||                  *";
+    person[18] = "*                 _||_                 *";
+
+    print(person);//usleep(runDelay);//system("clear");
+    person[17] = "*                  | \\                 *";
+    person[18] = "*                 _|  \\_               *";
+
+    print(person);//usleep(runDelay);//system("clear");
+    person[7] = "*                   /\\                 *";
+    person[8] = "*                  |oo|                *";
+    person[9] = "*                 (|..|)               *";
+    person[10] = "*                  |--|                *";
+    person[11] = "*                  \\__/                *";
+    person[12] = "*                   ||                 *";
+    person[13] = "*                 -| *|-               *";
+    person[14] = "*                / |  | \\              *";
+    person[15] = "*               /   \\/   \\             *";
+    person[16] = "*                   /\\                 *";
+    person[17] = "*                  / |                 *";
+    person[18] = "*                _/  |_                *";
+
+    print(person);//usleep(runDelay);//system("clear");
+    person[17] = "*                   ||                 *";
+    person[18] = "*                  _||_                *";
+
+    print(person);//usleep(runDelay);//system("clear");
+    person[17] = "*                   | \\                *";
+    person[18] = "*                  _|  \\_              *";
+
+    print(person);//usleep(runDelay);//system("clear");
+    person[7] = "*                    /\\                *";
+    person[8] = "*                   |oo|               *";
+    person[9] = "*                  (|..|)              *";
+    person[10] = "*                   |--|               *";
+    person[11] = "*                   \\__/               *";
+    person[12] = "*                    ||                *";
+    person[13] = "*                  -| *|-              *";
+    person[14] = "*                 / |  | \\             *";
+    person[15] = "*                /   \\/   \\            *";
+    person[16] = "*                    /\\                *";
+    person[17] = "*                   / |                *";
+    person[18] = "*                 _/  |_               *";
+
+    print(person);//usleep(runDelay);//system("clear");
+    person[17] = "*                    ||                *";
+    person[18] = "*                   _||_               *";
+
+    print(person);//usleep(runDelay);//system("clear");
+    person[17] = "*                    | \\               *";
+    person[18] = "*                   _|  \\_             *";
+
+    print(person);//usleep(runDelay);//system("clear");
+    person[7] = "*                     /\\               *";
+    person[8] = "*                    |oo|              *";
+    person[9] = "*                   (|..|)             *";
+    person[10] = "*                    |--|              *";
+    person[11] = "*                    \\__/              *";
+    person[12] = "*                     ||               *";
+    person[13] = "*                   -| *|-             *";
+    person[14] = "*                  / |  | \\            *";
+    person[15] = "*                 /   \\/   \\           *";
+    person[16] = "*                     /\\               *";
+    person[17] = "*                    / |               *";
+    person[18] = "*                  _/  |_              *";
+
+    print(person);//usleep(runDelay);//system("clear");
+    person[17] = "*                     ||               *";
+    person[18] = "*                    _||_              *";
+
+    print(person);//usleep(runDelay);//system("clear");
+    person[17] = "*                     | \\              *";
+    person[18] = "*                    _|  \\_            *";
+
+    print(person);//usleep(runDelay);//system("clear");
+    person[7] = "*                      /\\              *";
+    person[8] = "*                     |oo|             *";
+    person[9] = "*                    (|..|)            *";
+    person[10] = "*                     |--|             *";
+    person[11] = "*                     \\__/             *";
+    person[12] = "*                      ||              *";
+    person[13] = "*                    -| *|-            *";
+    person[14] = "*                   / |  | \\           *";
+    person[15] = "*                  /   \\/   \\          *";
+    person[16] = "*                      /\\              *";
+    person[17] = "*                     / |              *";
+    person[18] = "*                   _/  |_             *";
+
+    print(person);//usleep(runDelay);//system("clear");
+    person[17] = "*                      ||              *";
+    person[18] = "*                     _||_             *";
+
+    print(person);//usleep(runDelay);//system("clear");
+    person[17] = "*                      | \\             *";
+    person[18] = "*                     _|  \\_           *";
+
+    print(person);//usleep(runDelay);//system("clear");
+    person[7] = "*                       /\\             *";
+    person[8] = "*                      |oo|            *";
+    person[9] = "*                     (|..|)           *";
+    person[10] = "*                      |--|            *";
+    person[11] = "*                      \\__/            *";
+    person[12] = "*                       ||             *";
+    person[13] = "*                     -| *|-           *";
+    person[14] = "*                    / |  | \\          *";
+    person[15] = "*                   /   \\/   \\         *";
+    person[16] = "*                       /\\             *";
+    person[17] = "*                      / |             *";
+    person[18] = "*                    _/  |_            *";
+
+    print(person);//usleep(runDelay);//system("clear");
+    person[17] = "*                       ||             *";
+    person[18] = "*                      _||_            *";
+
+    print(person);//usleep(runDelay);//system("clear");
+    person[17] = "*                       | \\            *";
+    person[18] = "*                      _|  \\_          *";
+
+    print(person);//usleep(runDelay);//system("clear");
+    person[7] = "*                        /\\            *";
+    person[8] = "*                       |oo|           *";
+    person[9] = "*                      (|..|)          *";
+    person[10] = "*                       |--|           *";
+    person[11] = "*                       \\__/           *";
+    person[12] = "*                        ||            *";
+    person[13] = "*                      -| *|-          *";
+    person[14] = "*                     / |  | \\         *";
+    person[15] = "*                    /   \\/   \\        *";
+    person[16] = "*                        /\\            *";
+    person[17] = "*                       / |            *";
+    person[18] = "*                     _/  |_           *";
+
+    print(person);//usleep(runDelay);//system("clear");
+    person[17] = "*                        ||            *";
+    person[18] = "*                       _||_           *";
+
+    print(person);//usleep(runDelay);//system("clear");
+    person[17] = "*                        | \\           *";
+    person[18] = "*                       _|  \\_         *";
+
+    print(person);//usleep(runDelay);//system("clear");
+    person[7] = "*                         /\\           *";
+    person[8] = "*                        |oo|          *";
+    person[9] = "*                       (|..|)         *";
+    person[10] = "*                        |--|          *";
+    person[11] = "*                        \\__/          *";
+    person[12] = "*                         ||           *";
+    person[13] = "*                       -| *|-         *";
+    person[14] = "*                      / |  | \\        *";
+    person[15] = "*                     /   \\/   \\       *";
+    person[16] = "*                         /\\           *";
+    person[17] = "*                        / |           *";
+    person[18] = "*                      _/  |_          *";
+
+    print(person);//usleep(runDelay);//system("clear");
+    person[17] = "*                         ||           *";
+    person[18] = "*                        _||_          *";
+
+    print(person);//usleep(runDelay);//system("clear");
+    person[17] = "*                         | \\          *";
+    person[18] = "*                        _|  \\_        *";
+
+    print(person);//usleep(runDelay);//system("clear");
+    person[7] = "*                          /\\          *";
+    person[8] = "*                         |oo|         *";
+    person[9] = "*                        (|..|)        *";
+    person[10] = "*                         |--|         *";
+    person[11] = "*                         \\__/         *";
+    person[12] = "*                          ||          *";
+    person[13] = "*                        -| *|-        *";
+    person[14] = "*                       / |  | \\       *";
+    person[15] = "*                      /   \\/   \\      *";
+    person[16] = "*                          /\\          *";
+    person[17] = "*                         / |          *";
+    person[18] = "*                       _/  |_         *";
+
+    print(person);//usleep(runDelay);//system("clear");
+    person[17] = "*                          ||          *";
+    person[18] = "*                         _||_         *";
+
+    print(person);//usleep(runDelay);//system("clear");
+    person[17] = "*                          | \\         *";
+    person[18] = "*                         _|  \\_       *";
+
+    print(person);//usleep(runDelay);//system("clear");
+    person[7] = "*                           /\\         *";
+    person[8] = "*                          |oo|        *";
+    person[9] = "*                         (|..|)       *";
+    person[10] = "*                          |--|        *";
+    person[11] = "*                          \\__/        *";
+    person[12] = "*                           ||         *";
+    person[13] = "*                         -| *|-       *";
+    person[14] = "*                        / |  | \\      *";
+    person[15] = "*                       /   \\/   \\     *";
+    person[16] = "*                           /\\         *";
+    person[17] = "*                          / |         *";
+    person[18] = "*                        _/  |_        *";
+
+    print(person);//usleep(runDelay);//system("clear");
+    person[17] = "*                           ||         *";
+    person[18] = "*                          _||_        *";
+
+    print(person);//usleep(runDelay);//system("clear");
+    person[17] = "*                           | \\        *";
+    person[18] = "*                          _|  \\_      *";
+
+    print(person);//usleep(runDelay);//system("clear");
+    person[7] = "*                            /\\        *";
+    person[8] = "*                           |oo|       *";
+    person[9] = "*                          (|..|)      *";
+    person[10] = "*                           |--|       *";
+    person[11] = "*                           \\__/       *";
+    person[12] = "*                            ||        *";
+    person[13] = "*                          -| *|-      *";
+    person[14] = "*                         / |  | \\     *";
+    person[15] = "*                        /   \\/   \\    *";
+    person[16] = "*                            /\\        *";
+    person[17] = "*                           / |        *";
+    person[18] = "*                         _/  |_       *";
+
+    print(person);//usleep(runDelay);//system("clear");
+    person[17] = "*                            ||        *";
+    person[18] = "*                           _||_       *";
+
+    print(person);//usleep(runDelay);//system("clear");
+    person[17] = "*                            | \\       *";
+    person[18] = "*                           _|  \\_     *";
+
+    print(person);//usleep(runDelay);//system("clear");
+    person[7] = "*                             /\\       *";
+    person[8] = "*                            |oo|      *";
+    person[9] = "*                           (|..|)     *";
+    person[10] = "*                            |--|      *";
+    person[11] = "*                            \\__/      *";
+    person[12] = "*                             ||       *";
+    person[13] = "*                           -| *|-     *";
+    person[14] = "*                          / |  | \\    *";
+    person[15] = "*                         /   \\/   \\   *";
+    person[16] = "*                             /\\       *";
+    person[17] = "*                            / |       *";
+    person[18] = "*                          _/  |_      *";
+
+    print(person);//usleep(runDelay);//system("clear");
+    person[17] = "*                             ||       *";
+    person[18] = "*                            _||_      *";
+
+    print(person);//usleep(runDelay);//system("clear");
+    person[17] = "*                             | \\      *";
+    person[18] = "*                            _|  \\_    *";
+
+    print(person);//usleep(runDelay);//system("clear");
+    person[7] = "*                              /\\      *";
+    person[8] = "*                             |oo|     *";
+    person[9] = "*                            (|..|)    *";
+    person[10] = "*                             |--|     *";
+    person[11] = "*                             \\__/     *";
+    person[12] = "*                              ||      *";
+    person[13] = "*                            -| *|-    *";
+    person[14] = "*                           / |  | \\   *";
+    person[15] = "*                          /   \\/   \\  *";
+    person[16] = "*                              /\\      *";
+    person[17] = "*                             / |      *";
+    person[18] = "*                           _/  |_     *";
+
+    print(person);//usleep(runDelay);//system("clear");
+    person[17] = "*                              ||      *";
+    person[18] = "*                             _||_     *";
+
+    print(person);//usleep(runDelay);//system("clear");
+    person[17] = "*                              | \\     *";
+    person[18] = "*                             _|  \\_   *";
+
+    print(person);//usleep(runDelay);//system("clear");
+    person[7] = "*                               /\\     *";
+    person[8] = "*                              |oo|    *";
+    person[9] = "*                             (|..|)   *";
+    person[10] = "*                              |--|    *";
+    person[11] = "*                              \\__/    *";
+    person[12] = "*                               ||     *";
+    person[13] = "*                             -| *|-   *";
+    person[14] = "*                            / |  | \\  *";
+    person[15] = "*                           /   \\/   \\ *";
+    person[16] = "*                               /\\     *";
+    person[17] = "*                              / |     *";
+    person[18] = "*                            _/  |_    *";
+
+    print(person);//usleep(runDelay);//system("clear");
+    person[17] = "*                               ||     *";
+    person[18] = "*                              _||_    *";
+
+    print(person);//usleep(runDelay);//system("clear");
+    person[17] = "*                               | \\    *";
+    person[18] = "*                              _|  \\_  *";
+
+    print(person);//usleep(runDelay);//system("clear");
+    person[7] = "*                                /\\    *";
+    person[8] = "*                               |oo|   *";
+    person[9] = "*                              (|..|)  *";
+    person[10] = "*                               |--|   *";
+    person[11] = "*                               \\__/   *";
+    person[12] = "*                                ||    *";
+    person[13] = "*                              -| *|-  *";
+    person[14] = "*                             / |  | \\ *";
+    person[15] = "*                            /   \\/   \\*";
+    person[16] = "*                                /\\    *";
+    person[17] = "*                               / |    *";
+    person[18] = "*                             _/  |_   *";
+
+    print(person);//usleep(runDelay);//system("clear");
+    person[17] = "*                                ||    *";
+    person[18] = "*                               _||_   *";
+
+    print(person);//usleep(runDelay);//system("clear");
+    person[17] = "*                                | \\   *";
+    person[18] = "*                               _|  \\_ *";
+
+    print(person);//usleep(runDelay);//system("clear");
+    person[7] = "*                               /\\     *";
+    person[8] = "*                              |oo|    *";
+    person[9] = "*                             (|..|)   *";
+    person[10] = "*                              |--|    *";
+    person[11] = "*                              \\__/    *";
+    person[12] = "*                               ||     *";
+    person[13] = "*                             -| *|-   *";
+    person[14] = "*                            / |  | \\  *";
+    person[15] = "*                           /   \\/   \\ *";
+    person[16] = "*                               /\\     *";
+    person[17] = "*                              / |     *";
+    person[18] = "*                            _/  |_    *";
+
+    print(person);//usleep(runDelay);//system("clear");
+    person[17] = "*                               ||     *";
+    person[18] = "*                              _||_    *";
+
+    print(person);//usleep(runDelay);//system("clear");
+    person[17] = "*                               | \\    *";
+    person[18] = "*                              _|  \\_  *";
+
+    print(person);//usleep(runDelay);//system("clear");
+    person[7] = "*                              /\\      *";
+    person[8] = "*                             |oo|     *";
+    person[9] = "*                            (|..|)    *";
+    person[10] = "*                             |--|     *";
+    person[11] = "*                             \\__/     *";
+    person[12] = "*                              ||      *";
+    person[13] = "*                            -| *|-    *";
+    person[14] = "*                           / |  | \\   *";
+    person[15] = "*                          /   \\/   \\  *";
+    person[16] = "*                              /\\      *";
+    person[17] = "*                             / |      *";
+    person[18] = "*                           _/  |_     *";
+
+    print(person);//usleep(runDelay);//system("clear");
+    person[17] = "*                              ||      *";
+    person[18] = "*                             _||_     *";
+
+    print(person);//usleep(runDelay);//system("clear");
+    person[17] = "*                              | \\     *";
+    person[18] = "*                             _|  \\_   *";
+
+    print(person);//usleep(runDelay);//system("clear");
+    person[7] = "*                             /\\       *";
+    person[8] = "*                            |oo|      *";
+    person[9] = "*                           (|..|)     *";
+    person[10] = "*                            |--|      *";
+    person[11] = "*                            \\__/      *";
+    person[12] = "*                             ||       *";
+    person[13] = "*                           -| *|-     *";
+    person[14] = "*                          / |  | \\    *";
+    person[15] = "*                         /   \\/   \\   *";
+    person[16] = "*                             /\\       *";
+    person[17] = "*                            / |       *";
+    person[18] = "*                          _/  |_      *";
+
+    print(person);//usleep(runDelay);//system("clear");
+    person[17] = "*                             ||       *";
+    person[18] = "*                            _||_      *";
+
+    print(person);//usleep(runDelay);//system("clear");
+    person[17] = "*                             | \\      *";
+    person[18] = "*                            _|  \\_    *";
+
+    print(person);//usleep(runDelay);//system("clear");
+    person[7] = "*                            /\\        *";
+    person[8] = "*                           |oo|       *";
+    person[9] = "*                          (|..|)      *";
+    person[10] = "*                           |--|       *";
+    person[11] = "*                           \\__/       *";
+    person[12] = "*                            ||        *";
+    person[13] = "*                          -| *|-      *";
+    person[14] = "*                         / |  | \\     *";
+    person[15] = "*                        /   \\/   \\    *";
+    person[16] = "*                            /\\        *";
+    person[17] = "*                           / |        *";
+    person[18] = "*                         _/  |_       *";
+
+    print(person);//usleep(runDelay);//system("clear");
+    person[17] = "*                            ||        *";
+    person[18] = "*                           _||_       *";
+
+    print(person);//usleep(runDelay);//system("clear");
+    person[17] = "*                            | \\       *";
+    person[18] = "*                           _|  \\_     *";
+
+    print(person);//usleep(runDelay);//system("clear");
+    person[7] = "*                           /\\         *";
+    person[8] = "*                          |oo|        *";
+    person[9] = "*                         (|..|)       *";
+    person[10] = "*                          |--|        *";
+    person[11] = "*                          \\__/        *";
+    person[12] = "*                           ||         *";
+    person[13] = "*                         -| *|-       *";
+    person[14] = "*                        / |  | \\      *";
+    person[15] = "*                       /   \\/   \\     *";
+    person[16] = "*                           /\\         *";
+    person[17] = "*                          / |         *";
+    person[18] = "*                        _/  |_        *";
+
+    print(person);//usleep(runDelay);//system("clear");
+    person[17] = "*                           ||         *";
+    person[18] = "*                          _||_        *";
+
+    print(person);//usleep(runDelay);//system("clear");
+    person[17] = "*                           | \\        *";
+    person[18] = "*                          _|  \\_      *";
+
+    print(person);//usleep(runDelay);//system("clear");
+    person[7] = "*                          /\\          *";
+    person[8] = "*                         |oo|         *";
+    person[9] = "*                        (|..|)        *";
+    person[10] = "*                         |--|         *";
+    person[11] = "*                         \\__/         *";
+    person[12] = "*                          ||          *";
+    person[13] = "*                        -| *|-        *";
+    person[14] = "*                       / |  | \\       *";
+    person[15] = "*                      /   \\/   \\      *";
+    person[16] = "*                          /\\          *";
+    person[17] = "*                         / |          *";
+    person[18] = "*                       _/  |_         *";
+
+    print(person);//usleep(runDelay);//system("clear");
+    person[17] = "*                          ||          *";
+    person[18] = "*                         _||_         *";
+
+    print(person);//usleep(runDelay);//system("clear");
+    person[17] = "*                          | \\         *";
+    person[18] = "*                         _|  \\_       *";
+
+    print(person);//usleep(runDelay);//system("clear");
+    person[7] = "*                         /\\           *";
+    person[8] = "*                        |oo|          *";
+    person[9] = "*                       (|..|)         *";
+    person[10] = "*                        |--|          *";
+    person[11] = "*                        \\__/          *";
+    person[12] = "*                         ||           *";
+    person[13] = "*                       -| *|-         *";
+    person[14] = "*                      / |  | \\        *";
+    person[15] = "*                     /   \\/   \\       *";
+    person[16] = "*                         /\\           *";
+    person[17] = "*                        / |           *";
+    person[18] = "*                      _/  |_          *";
+
+    print(person);//usleep(runDelay);//system("clear");
+    person[17] = "*                         ||           *";
+    person[18] = "*                        _||_          *";
+
+    print(person);//usleep(runDelay);//system("clear");
+    person[17] = "*                         | \\          *";
+    person[18] = "*                        _|  \\_        *";
+
+    print(person);//usleep(runDelay);//system("clear");
+    person[7] = "*                        /\\            *";
+    person[8] = "*                       |oo|           *";
+    person[9] = "*                      (|..|)          *";
+    person[10] = "*                       |--|           *";
+    person[11] = "*                       \\__/           *";
+    person[12] = "*                        ||            *";
+    person[13] = "*                      -| *|-          *";
+    person[14] = "*                     / |  | \\         *";
+    person[15] = "*                    /   \\/   \\        *";
+    person[16] = "*                        /\\            *";
+    person[17] = "*                       / |            *";
+    person[18] = "*                     _/  |_           *";
+
+    print(person);//usleep(runDelay);//system("clear");
+    person[17] = "*                        ||            *";
+    person[18] = "*                       _||_           *";
+
+    print(person);//usleep(runDelay);//system("clear");
+    person[17] = "*                        | \\           *";
+    person[18] = "*                       _|  \\_         *";
+
+    print(person);//usleep(runDelay);//system("clear");
+    person[7] = "*                       /\\             *";
+    person[8] = "*                      |oo|            *";
+    person[9] = "*                     (|..|)           *";
+    person[10] = "*                      |--|            *";
+    person[11] = "*                      \\__/            *";
+    person[12] = "*                       ||             *";
+    person[13] = "*                     -| *|-           *";
+    person[14] = "*                    / |  | \\          *";
+    person[15] = "*                   /   \\/   \\         *";
+    person[16] = "*                       /\\             *";
+    person[17] = "*                      / |             *";
+    person[18] = "*                    _/  |_            *";
+
+    print(person);//usleep(runDelay);//system("clear");
+    person[17] = "*                       ||             *";
+    person[18] = "*                      _||_            *";
+
+    print(person);//usleep(runDelay);//system("clear");
+    person[17] = "*                       | \\            *";
+    person[18] = "*                      _|  \\_          *";
+
+    print(person);//usleep(runDelay);//system("clear");
+    person[7] = "*                      /\\              *";
+    person[8] = "*                     |oo|             *";
+    person[9] = "*                    (|..|)            *";
+    person[10] = "*                     |--|             *";
+    person[11] = "*                     \\__/             *";
+    person[12] = "*                      ||              *";
+    person[13] = "*                    -| *|-            *";
+    person[14] = "*                   / |  | \\           *";
+    person[15] = "*                  /   \\/   \\          *";
+    person[16] = "*                      /\\              *";
+    person[17] = "*                     / |              *";
+    person[18] = "*                   _/  |_             *";
+
+    print(person);//usleep(runDelay);//system("clear");
+    person[17] = "*                      ||              *";
+    person[18] = "*                     _||_             *";
+
+    print(person);//usleep(runDelay);//system("clear");
+    person[17] = "*                      | \\             *";
+    person[18] = "*                     _|  \\_           *";
+
+    print(person);//usleep(runDelay);//system("clear");
+    person[7] = "*                     /\\               *";
+    person[8] = "*                    |oo|              *";
+    person[9] = "*                   (|..|)             *";
+    person[10] = "*                    |--|              *";
+    person[11] = "*                    \\__/              *";
+    person[12] = "*                     ||               *";
+    person[13] = "*                   -| *|-             *";
+    person[14] = "*                  / |  | \\            *";
+    person[15] = "*                 /   \\/   \\           *";
+    person[16] = "*                     /\\               *";
+    person[17] = "*                    / |               *";
+    person[18] = "*                  _/  |_              *";
+
+    print(person);//usleep(runDelay);//system("clear");
+    person[17] = "*                     ||               *";
+    person[18] = "*                    _||_              *";
+
+    print(person);//usleep(runDelay);//system("clear");
+    person[17] = "*                     | \\              *";
+    person[18] = "*                    _|  \\_            *";
+
+    print(person);//usleep(runDelay);//system("clear");
+    person[7] = "*                    /\\                *";
+    person[8] = "*                   |oo|               *";
+    person[9] = "*                  (|..|)              *";
+    person[10] = "*                   |--|               *";
+    person[11] = "*                   \\__/               *";
+    person[12] = "*                    ||                *";
+    person[13] = "*                  -| *|-              *";
+    person[14] = "*                 / |  | \\             *";
+    person[15] = "*                /   \\/   \\            *";
+    person[16] = "*                    /\\                *";
+    person[17] = "*                   / |                *";
+    person[18] = "*                 _/  |_               *";
+
+    print(person);//usleep(runDelay);//system("clear");
+    person[17] = "*                    ||                *";
+    person[18] = "*                   _||_               *";
+
+    print(person);//usleep(runDelay);//system("clear");
+    person[17] = "*                    | \\               *";
+    person[18] = "*                   _|  \\_             *";
+
+    print(person);//usleep(runDelay);//system("clear");
+    person[7] = "*                   /\\                 *";
+    person[8] = "*                  |oo|                *";
+    person[9] = "*                 (|..|)               *";
+    person[10] = "*                  |--|                *";
+    person[11] = "*                  \\__/                *";
+    person[12] = "*                   ||                 *";
+    person[13] = "*                 -| *|-               *";
+    person[14] = "*                / |  | \\              *";
+    person[15] = "*               /   \\/   \\             *";
+    person[16] = "*                   /\\                 *";
+    person[17] = "*                  / |                 *";
+    person[18] = "*                _/  |_                *";
+
+    print(person);//usleep(runDelay);//system("clear");
+    person[17] = "*                   ||                 *";
+    person[18] = "*                  _||_                *";
+
+    print(person);//usleep(runDelay);//system("clear");
+    person[17] = "*                   | \\                *";
+    person[18] = "*                  _|  \\_              *";
+
+    print(person);//usleep(runDelay);//system("clear");
+    person[7] = "*                  /\\                  *";
+    person[8] = "*                 |oo|                 *";
+    person[9] = "*                (|..|)                *";
+    person[10] = "*                 |--|                 *";
+    person[11] = "*                 \\__/                 *";
+    person[12] = "*                  ||                  *";
+    person[13] = "*                -| *|-                *";
+    person[14] = "*               / |  | \\               *";
+    person[15] = "*              /   \\/   \\              *";
+    person[16] = "*                  /\\                  *";
+    person[17] = "*                 / |                  *";
+    person[18] = "*               _/  |_                 *";
+
+    print(person);//usleep(runDelay);//system("clear");
+    person[17] = "*                  ||                  *";
+    person[18] = "*                 _||_                 *";
+
+    print(person);//usleep(runDelay);//system("clear");
+    person[17] = "*                  | \\                 *";
+    person[18] = "*                 _|  \\_               *";
+
+    print(person);//usleep(runDelay);//system("clear");
+    person[7] = "*                 /\\                   *";
+    person[8] = "*                |oo|                  *";
+    person[9] = "*               (|..|)                 *";
+    person[10] = "*                |--|                  *";
+    person[11] = "*                \\__/                  *";
+    person[12] = "*                 ||                   *";
+    person[13] = "*               -| *|-                 *";
+    person[14] = "*              / |  | \\                *";
+    person[15] = "*             /   \\/   \\               *";
+    person[16] = "*                 /\\                   *";
+    person[17] = "*                / |                   *";
+    person[18] = "*              _/  |_                  *";
+
+    print(person);//usleep(runDelay);//system("clear");
+    person[17] = "*                 ||                   *";
+    person[18] = "*                _||_                  *";
+
+    print(person);//usleep(runDelay);//system("clear");
+    person[17] = "*                 | \\                  *";
+    person[18] = "*                _|  \\_                *";
+
+    print(person);//usleep(runDelay);//system("clear");
+    person[7] = "*                /\\                    *";
+    person[8] = "*               |oo|                   *";
+    person[9] = "*              (|..|)                  *";
+    person[10] = "*               |--|                   *";
+    person[11] = "*               \\__/                   *";
+    person[12] = "*                ||                    *";
+    person[13] = "*              -| *|-                  *";
+    person[14] = "*             / |  | \\                 *";
+    person[15] = "*            /   \\/   \\                *";
+    person[16] = "*                /\\                    *";
+    person[17] = "*               / |                    *";
+    person[18] = "*             _/  |_                   *";
+
+    print(person);//usleep(runDelay);//system("clear");
+    person[17] = "*                ||                    *";
+    person[18] = "*               _||_                   *";
+
+    print(person);//usleep(runDelay);//system("clear");
+    person[17] = "*                | \\                   *";
+    person[18] = "*               _|  \\_                 *";
+
+    print(person);//usleep(runDelay);//system("clear");
+    person[7] = "*               /\\                     *";
+    person[8] = "*              |oo|                    *";
+    person[9] = "*             (|..|)                   *";
+    person[10] = "*              |--|                    *";
+    person[11] = "*              \\__/                    *";
+    person[12] = "*               ||                     *";
+    person[13] = "*             -| *|-                   *";
+    person[14] = "*            / |  | \\                  *";
+    person[15] = "*           /   \\/   \\                 *";
+    person[16] = "*               /\\                     *";
+    person[17] = "*              / |                     *";
+    person[18] = "*            _/  |_                    *";
+
+    print(person);//usleep(runDelay);//system("clear");
+    person[17] = "*               ||                     *";
+    person[18] = "*              _||_                    *";
+
+    print(person);//usleep(runDelay);//system("clear");
+    person[17] = "*               | \\                    *";
+    person[18] = "*              _|  \\_                  *";
+
+    print(person);//usleep(runDelay);//system("clear");
+    person[7] = "*              /\\                      *";
+    person[8] = "*             |oo|                     *";
+    person[9] = "*            (|..|)                    *";
+    person[10] = "*             |--|                     *";
+    person[11] = "*             \\__/                     *";
+    person[12] = "*              ||                      *";
+    person[13] = "*            -| *|-                    *";
+    person[14] = "*           / |  | \\                   *";
+    person[15] = "*          /   \\/   \\                  *";
+    person[16] = "*              /\\                      *";
+    person[17] = "*             / |                      *";
+    person[18] = "*           _/  |_                     *";
+
+    print(person);//usleep(runDelay);//system("clear");
+    person[17] = "*              ||                      *";
+    person[18] = "*             _||_                     *";
+
+    print(person);//usleep(runDelay);//system("clear");
+    person[17] = "*              | \\                     *";
+    person[18] = "*             _|  \\_                   *";
+
+    print(person);//usleep(runDelay);//system("clear");
+    person[7] = "*             /\\                       *";
+    person[8] = "*            |oo|                      *";
+    person[9] = "*           (|..|)                     *";
+    person[10] = "*            |--|                      *";
+    person[11] = "*            \\__/                      *";
+    person[12] = "*             ||                       *";
+    person[13] = "*           -| *|-                     *";
+    person[14] = "*          / |  | \\                    *";
+    person[15] = "*         /   \\/   \\                   *";
+    person[16] = "*             /\\                       *";
+    person[17] = "*            / |                       *";
+    person[18] = "*          _/  |_                      *";
+
+    print(person);//usleep(runDelay);//system("clear");
+    person[17] = "*             ||                       *";
+    person[18] = "*            _||_                      *";
+
+    print(person);//usleep(runDelay);//system("clear");
+    person[17] = "*             | \\                      *";
+    person[18] = "*            _|  \\_                    *";
+
+    print(person);//usleep(runDelay);//system("clear");
+    person[7] = "*            /\\                        *";
+    person[8] = "*           |oo|                       *";
+    person[9] = "*          (|..|)                      *";
+    person[10] = "*           |--|                       *";
+    person[11] = "*           \\__/                       *";
+    person[12] = "*            ||                        *";
+    person[13] = "*          -| *|-                      *";
+    person[14] = "*         / |  | \\                     *";
+    person[15] = "*        /   \\/   \\                    *";
+    person[16] = "*            /\\                        *";
+    person[17] = "*           / |                        *";
+    person[18] = "*         _/  |_                       *";
+
+    print(person);//usleep(runDelay);//system("clear");
+    person[17] = "*            ||                        *";
+    person[18] = "*           _||_                       *";
+
+    print(person);//usleep(runDelay);//system("clear");
+    person[17] = "*            | \\                       *";
+    person[18] = "*           _|  \\_                     *";
+
+    print(person);//usleep(runDelay);//system("clear");
+    person[7] = "*           /\\                         *";
+    person[8] = "*          |oo|                        *";
+    person[9] = "*         (|..|)                       *";
+    person[10] = "*          |--|                        *";
+    person[11] = "*          \\__/                        *";
+    person[12] = "*           ||                         *";
+    person[13] = "*         -| *|-                       *";
+    person[14] = "*        / |  | \\                      *";
+    person[15] = "*       /   \\/   \\                     *";
+    person[16] = "*           /\\                         *";
+    person[17] = "*          / |                         *";
+    person[18] = "*        _/  |_                        *";
+
+    print(person);//usleep(runDelay);//system("clear");
+    person[17] = "*           ||                         *";
+    person[18] = "*          _||_                        *";
+
+    print(person);//usleep(runDelay);//system("clear");
+    person[17] = "*           | \\                        *";
+    person[18] = "*          _|  \\_                      *";
+
+    print(person);//usleep(runDelay);//system("clear");
+    person[7] = "*          /\\                          *";
+    person[8] = "*         |oo|                         *";
+    person[9] = "*        (|..|)                        *";
+    person[10] = "*         |--|                         *";
+    person[11] = "*         \\__/                         *";
+    person[12] = "*          ||                          *";
+    person[13] = "*        -| *|-                        *";
+    person[14] = "*       / |  | \\                       *";
+    person[15] = "*      /   \\/   \\                      *";
+    person[16] = "*          /\\                          *";
+    person[17] = "*         / |                          *";
+    person[18] = "*       _/  |_                         *";
+
+    print(person);//usleep(runDelay);//system("clear");
+    person[17] = "*          ||                          *";
+    person[18] = "*         _||_                         *";
+
+    print(person);//usleep(runDelay);//system("clear");
+    person[17] = "*          | \\                         *";
+    person[18] = "*         _|  \\_                       *";
+
+    print(person);//usleep(runDelay);//system("clear");
+    person[7] = "*         /\\                           *";
+    person[8] = "*        |oo|                          *";
+    person[9] = "*       (|..|)                         *";
+    person[10] = "*        |--|                          *";
+    person[11] = "*        \\__/                          *";
+    person[12] = "*         ||                           *";
+    person[13] = "*       -| *|-                         *";
+    person[14] = "*      / |  | \\                        *";
+    person[15] = "*     /   \\/   \\                       *";
+    person[16] = "*         /\\                           *";
+    person[17] = "*        / |                           *";
+    person[18] = "*      _/  |_                          *";
+
+    print(person);//usleep(runDelay);//system("clear");
+    person[17] = "*         ||                           *";
+    person[18] = "*        _||_                          *";
+
+    print(person);//usleep(runDelay);//system("clear");
+    person[17] = "*         | \\                          *";
+    person[18] = "*        _|  \\_                        *";
+
+    print(person);//usleep(runDelay);//system("clear");
+    person[7] = "*        /\\                            *";
+    person[8] = "*       |oo|                           *";
+    person[9] = "*      (|..|)                          *";
+    person[10] = "*       |--|                           *";
+    person[11] = "*       \\__/                           *";
+    person[12] = "*        ||                            *";
+    person[13] = "*      -| *|-                          *";
+    person[14] = "*     / |  | \\                         *";
+    person[15] = "*    /   \\/   \\                        *";
+    person[16] = "*        /\\                            *";
+    person[17] = "*       / |                            *";
+    person[18] = "*     _/  |_                           *";
+
+    print(person);//usleep(runDelay);//system("clear");
+    person[17] = "*        ||                            *";
+    person[18] = "*       _||_                           *";
+
+    print(person);//usleep(runDelay);//system("clear");
+    person[17] = "*        | \\                           *";
+    person[18] = "*       _|  \\_                         *";
+
+    print(person);//usleep(runDelay);//system("clear");
+    person[7] = "*       /\\                             *";
+    person[8] = "*      |oo|                            *";
+    person[9] = "*     (|..|)                           *";
+    person[10] = "*      |--|                            *";
+    person[11] = "*      \\__/                            *";
+    person[12] = "*       ||                             *";
+    person[13] = "*     -| *|-                           *";
+    person[14] = "*    / |  | \\                          *";
+    person[15] = "*   /   \\/   \\                         *";
+    person[16] = "*       /\\                             *";
+    person[17] = "*      / |                             *";
+    person[18] = "*    _/  |_                            *";
+
+    print(person);//usleep(runDelay);//system("clear");
+    person[17] = "*       ||                             *";
+    person[18] = "*      _||_                            *";
+
+    print(person);//usleep(runDelay);//system("clear");
+    person[17] = "*       | \\                            *";
+    person[18] = "*      _|  \\_                          *";
+
+    print(person);//usleep(runDelay);//system("clear");
+    person[7] = "*      /\\                              *";
+    person[8] = "*     |oo|                             *";
+    person[9] = "*    (|..|)                            *";
+    person[10] = "*     |--|                             *";
+    person[11] = "*     \\__/                             *";
+    person[12] = "*      ||                              *";
+    person[13] = "*    -| *|-                            *";
+    person[14] = "*   / |  | \\                           *";
+    person[15] = "*  /   \\/   \\                          *";
+    person[16] = "*      /\\                              *";
+    person[17] = "*     / |                              *";
+    person[18] = "*   _/  |_                             *";
+
+    print(person);//usleep(runDelay);//system("clear");
+    person[17] = "*      ||                              *";
+    person[18] = "*     _||_                             *";
+
+    print(person);//usleep(runDelay);//system("clear");
+    person[17] = "*      | \\                             *";
+    person[18] = "*     _|  \\_                           *";
+
+    print(person);//usleep(runDelay);//system("clear");
+    person[7] = "*     /\\                               *";
+    person[8] = "*    |oo|                              *";
+    person[9] = "*   (|..|)                             *";
+    person[10] = "*    |--|                              *";
+    person[11] = "*    \\__/                              *";
+    person[12] = "*     ||                               *";
+    person[13] = "*   -| *|-                             *";
+    person[14] = "*  / |  | \\                            *";
+    person[15] = "* /   \\/   \\                           *";
+    person[16] = "*     /\\                               *";
+    person[17] = "*    / |                               *";
+    person[18] = "*  _/  |_                              *";
+
+    print(person);//usleep(runDelay);//system("clear");
+    person[17] = "*     ||                               *";
+    person[18] = "*    _||_                              *";
+
+    print(person);//usleep(runDelay);//system("clear");
+    person[17] = "*     | \\                              *";
+    person[18] = "*    _|  \\_                            *";
+
+    print(person);//usleep(runDelay);//system("clear");
+    person[7] = "*    /\\                                *";
+    person[8] = "*   |oo|                               *";
+    person[9] = "*  (|..|)                              *";
+    person[10] = "*   |--|                               *";
+    person[11] = "*   \\__/                               *";
+    person[12] = "*    ||                                *";
+    person[13] = "*  -| *|-                              *";
+    person[14] = "* / |  | \\                             *";
+    person[15] = "*/   \\/   \\                            *";
+    person[16] = "*    /\\                                *";
+    person[17] = "*   / |                                *";
+    person[18] = "* _/  |_                               *";
+
+    print(person);//usleep(runDelay);//system("clear");
+    person[17] = "*    ||                                *";
+    person[18] = "*   _||_                               *";
+    print(person);//usleep(runDelay);
 }
-
-void jump(vector<string> sticman){
-	sleep();
-	sticman[7]  = "*                                      *"  ;
-	sticman[8]  = "*    /\\                                *" ;
-	sticman[9]  = "*   |oo|                               *"  ;
-	sticman[10] = "*  (|..|)                              *"  ;
-	sticman[11] = "*   |--|                               *"  ;
-	sticman[12] = "*   \\__/                               *" ;
-	sticman[13] = "*    ||                                *"  ;
-	sticman[14] = "*  -| *|-                              *"  ;
-	sticman[15] = "* / |  | \\                             *" ;
-	sticman[16] = "*/   \\/   \\                            *";
-	sticman[17] = "*    /\\                                *";
-	sticman[18] = "*   _\\/_                               *";
-	print(sticman);
-
-	sleep();
-	sticman = {
-	 "****************************************",//0
-	 "*                                      *",//1
-	 "*                                      *",//2
-	 "*                                      *",//3
-	 "*                                      *",//4
-	 "*                                      *",//5
-	 "*                                      *",//6
-	 "*    /\\                                *",//7
-	 "*   |oo|                               *",//8
-	 "*  (|..|)                              *",//9
-	 "*   |--|                               *",//10
-	 "*   \\__/                               *",//11
-	 "*    ||                                *",//12
-	 "*  -| *|-                              *",//13
-	 "* / |  | \\                             *",//14
-	 "*/   \\/   \\                            *",//15
-	 "*    /\\                                *",//16
-	 "*    ||                                *",//17
-	 "*    ||                                *",//18
-	 "****************************************"//19
-	 };
-	 print(sticman);
-
-	 sleep();
-		sticman = {
-	 "****************************************",//0
-	 "*                                      *",//2
-	 "*                                      *",//3
-	 "*                                      *",//4
-	 "*                                      *",//5
-	 "*                                      *",//6
-	 "*    /\\                                *",//7
-	 "*   |oo|                               *",//8
-	 "*  (|..|)                              *",//9
-	 "*   |--|                               *",//10
-	 "*   \\__/                               *",//11
-	 "*    ||                                *",//12
-	 "*  -| *|-                              *",//13
-	 "* / |  | \\                             *",//14
-	 "*/   \\/   \\                            *",//15
-	 "*    /\\                                *",//16
-	 "*    ||                                *",//17
-	 "*    ||                                *",//18
-	 "*                                      *",//1
-	 "****************************************"//19
-	 };
-	 print(sticman);
-
-	 sleep();
-	 sticman = {
-	 "****************************************",//0
-	 "*                                      *",//3
-	 "*                                      *",//4
-	 "*                                      *",//5
-	 "*                                      *",//6
-	 "*    /\\                                *",//7
-	 "*   |oo|                               *",//8
-	 "*  (|..|)                              *",//9
-	 "*   |--|                               *",//10
-	 "*   \\__/                               *",//11
-	 "*    ||                                *",//12
-	 "*  -| *|-                              *",//13
-	 "* / |  | \\                             *",//14
-	 "*/   \\/   \\                            *",//15
-	 "*    /\\                                *",//16
-	 "*    ||                                *",//17
-	 "*    ||                                *",//18
-	 "*                                      *",//1
-	 "*                                      *",//2
-	 "****************************************"//19
-	 };
-	 print(sticman);
-
-	 sleep();
-	 sticman = {
-	 "****************************************",//0
-	 "*                                      *",//4
-	 "*                                      *",//5
-	 "*                                      *",//6
-	 "*    /\\                                *",//7
-	 "*   |oo|                               *",//8
-	 "*  (|..|)                              *",//9
-	 "*   |--|                               *",//10
-	 "*   \\__/                               *",//11
-	 "*    ||                                *",//12
-	 "*  -| *|-                              *",//13
-	 "* / |  | \\                             *",//14
-	 "*/   \\/   \\                            *",//15
-	 "*    /\\                                *",//16
-	 "*    ||                                *",//17
-	 "*    ||                                *",//18
-	 "*                                      *",//1
-	 "*                                      *",//2
-	 "*                                      *",//3
-	 "****************************************"//19
-	 };
-	 print(sticman);
-
-	 sleep();
-	 sticman = {
-	 "****************************************",//0
-	 "*                                      *",//5
-	 "*                                      *",//6
-	 "*    /\\                                *",//7
-	 "*   |oo|                               *",//8
-	 "*  (|..|)                              *",//9
-	 "*   |--|                               *",//10
-	 "*   \\__/                               *",//11
-	 "*    ||                                *",//12
-	 "*  -| *|-                              *",//13
-	 "* / |  | \\                             *",//14
-	 "*/   \\/   \\                            *",//15
-	 "*    /\\                                *",//16
-	 "*    ||                                *",//17
-	 "*    ||                                *",//18
-	 "*                                      *",//1
-	 "*                                      *",//2
-	 "*                                      *",//3
-	 "*                                      *",//4
-	 "****************************************"//19
-	 };
-	 print(sticman);
-
-	 sleep();
-	 sticman = {
-	 "****************************************",//0
-	 "*                                      *",//4
-	 "*                                      *",//5
-	 "*                                      *",//6
-	 "*    /\\                                *",//7
-	 "*   |oo|                               *",//8
-	 "*  (|..|)                              *",//9
-	 "*   |--|                               *",//10
-	 "*   \\__/                               *",//11
-	 "*    ||                                *",//12
-	 "*  -| *|-                              *",//13
-	 "* / |  | \\                             *",//14
-	 "*/   \\/   \\                            *",//15
-	 "*    /\\                                *",//16
-	 "*    ||                                *",//17
-	 "*    ||                                *",//18
-	 "*                                      *",//1
-	 "*                                      *",//2
-	 "*                                      *",//3
-	 "****************************************"//19
-	 };
-	 print(sticman);
-
-	 sleep();
-	 sticman = {
-	 "****************************************",//0
-	 "*                                      *",//3
-	 "*                                      *",//4
-	 "*                                      *",//5
-	 "*                                      *",//6
-	 "*    /\\                                *",//7
-	 "*   |oo|                               *",//8
-	 "*  (|..|)                              *",//9
-	 "*   |--|                               *",//10
-	 "*   \\__/                               *",//11
-	 "*    ||                                *",//12
-	 "*  -| *|-                              *",//13
-	 "* / |  | \\                             *",//14
-	 "*/   \\/   \\                            *",//15
-	 "*    /\\                                *",//16
-	 "*    ||                                *",//17
-	 "*    ||                                *",//18
-	 "*                                      *",//1
-	 "*                                      *",//2
-	 "****************************************"//19
-	 };
-	 print(sticman);
-
-	 sleep();
-	 sticman = {
-	 "****************************************",//0
-	 "*                                      *",//2
-	 "*                                      *",//3
-	 "*                                      *",//4
-	 "*                                      *",//5
-	 "*                                      *",//6
-	 "*    /\\                                *",//7
-	 "*   |oo|                               *",//8
-	 "*  (|..|)                              *",//9
-	 "*   |--|                               *",//10
-	 "*   \\__/                               *",//11
-	 "*    ||                                *",//12
-	 "*  -| *|-                              *",//13
-	 "* / |  | \\                             *",//14
-	 "*/   \\/   \\                            *",//15
-	 "*    /\\                                *",//16
-	 "*    ||                                *",//17
-	 "*    ||                                *",//18
-	 "*                                      *",//1
-	 "****************************************"//19
-	 };
-	 print(sticman);
-
-	 sleep();
-	 sticman = {
-	 "****************************************",//0
-	 "*                                      *",//1
-	 "*                                      *",//2
-	 "*                                      *",//3
-	 "*                                      *",//4
-	 "*                                      *",//5
-	 "*                                      *",//6
-	 "*    /\\                                *",//7
-	 "*   |oo|                               *",//8
-	 "*  (|..|)                              *",//9
-	 "*   |--|                               *",//10
-	 "*   \\__/                               *",//11
-	 "*    ||                                *",//12
-	 "*  -| *|-                              *",//13
-	 "* / |  | \\                             *",//14
-	 "*/   \\/   \\                            *",//15
-	 "*    /\\                                *",//16
-	 "*    ||                                *",//17
-	 "*    ||                                *",//18
-	 "****************************************"//19
-	 };
-	 print(sticman);
-
-	sleep();
-	sticman[7]  = "*                                      *"  ;
-	sticman[8]  = "*    /\\                                *" ;
-	sticman[9]  = "*   |oo|                               *"  ;
-	sticman[10] = "*  (|..|)                              *"  ;
-	sticman[11] = "*   |--|                               *"  ;
-	sticman[12] = "*   \\__/                               *" ;
-	sticman[13] = "*    ||                                *"  ;
-	sticman[14] = "*  -| *|-                              *"  ;
-	sticman[15] = "* / |  | \\                             *" ;
-	sticman[16] = "*/   \\/   \\                            *";
-	sticman[17] = "*    /\\                                *";
-	sticman[18] = "*   _\\/_                               *";
-	print(sticman);
-
-	start_state(sticman);
+void dance(vector<string> person)
+{
+    int delay = 350 * 1000;
+    for (int i = 0; i < 2; i++)
+    {
+        //usleep(delay);//system("clear");
+        person[13] = "* --| *|--                             *";
+        person[14] = "*/  |  |  \\                            *";
+        person[15] = "*    \\/                                *";
+        print(person);//usleep(delay);//system("clear");
+        person[13] = "*  -| *|---                            *";
+        person[14] = "* / |  |                               *";
+        person[15] = "*/   \\/                                *";
+        print(person);//usleep(delay);//system("clear");
+        person[12] = "*    ||   /                            *";
+        person[13] = "* --| *|--                             *";
+        person[14] = "*/  |  |                               *";
+        person[15] = "*    \\/                                *";
+        print(person);//usleep(delay);//system("clear");
+        person[11] = "*   \\__/  /                            *";
+        person[12] = "*    ||  /                             *";
+        person[13] = "*  -| *|-                              *";
+        person[14] = "* / |  |                               *";
+        person[15] = "*/   \\/                                *";
+        print(person);//usleep(delay);//system("clear");
+        person[11] = "*   \\__/  *                            *";
+        person[13] = "* --| *|-                              *";
+        person[14] = "*/  |  |                               *";
+        person[15] = "*    \\/                                *";
+        print(person);//usleep(delay);//system("clear");
+        person[11] = "*   \\__/  /                            *";
+        person[13] = "*---| *|-                              *";
+        person[14] = "*   |  |                               *";
+        print(person);//usleep(delay);//system("clear");
+        person[11] = "*   \\__/  *                            *";
+        person[12] = "*\\   ||  /                             *";
+        person[13] = "* --| *|-                              *";
+        print(person);//usleep(delay);//system("clear");
+        person[11] = "*\\  \\__/  /                            *";
+        person[12] = "* \\  ||  /                             *";
+        person[13] = "*  -| *|-                              *";
+        print(person);//usleep(delay);//system("clear");
+        person[11] = "**  \\__/  *                            *";
+        print(person);//usleep(delay);//system("clear");
+        person[11] = "*   \\__/                               *";
+        person[12] = "**   ||   *                            *";
+        person[13] = "* --| *|--                             *";
+        print(person);//usleep(delay);//system("clear");
+        person[12] = "*    ||                                *";
+        person[13] = "**--| *|--*                            *";
+        print(person);//usleep(delay);//system("clear");
+        person[13] = "* --| *|--                             *";
+        person[14] = "**  |  |  *                            *";
+        print(person);//usleep(delay);//system("clear");
+        person[13] = "*  -| *|-                              *";
+        person[14] = "* / |  | \\                             *";
+        person[15] = "**   \\/   *                            *";
+        print(person);//usleep(delay);//system("clear");
+        person[15] = "*/   \\/   \\                            *";
+        print(person);//usleep(delay);
+    }
 }
-
-void print(vector<string> sticman) {
-	for (auto c : sticman)
-		cout << c << endl;
+void menu()
+{
+    //system("clear");
+    cout << "Choose animation:" << endl;
+    cout << "Dance:                     1" << endl;
+    cout << "Run:                       2" << endl;
+    cout << "Sit down and jump:         3" << endl;
+    cout << "Throw a ball:              4" << endl;
+    cout << "\nEnter 5 for exit." << endl;
 }
-
-void dance(vector<string> sticman) {
-	for (int i = 0; i < 2; i++)
-	{	// state 1
-		sleep();
-		system("cls");
-		sticman[13] = "* --| *|--                             *";//13
-		sticman[14] = "*/  |  |  \\                            *";//14
-		sticman[15] = "*    \\/                                *";//15
-		print(sticman);
-
-		//state 2
-		sleep();
-		sticman[11] = "*   \\__/                               *";//11
-		sticman[12] = "*    ||                                *";//12
-		sticman[13] = "*  -| *|---                            *";//13
-		sticman[14] = "* / |  |                               *";//14
-		sticman[15] = "*/   \\/                                *";//15
-		print(sticman);
-
-		//state 3
-		sleep();
-		sticman[11] = "*   \\__/                               *";//11
-		sticman[12] = "*    ||    /                           *";//12
-		sticman[13] = "*  -| *|--                             *";//13
-		sticman[14] = "* / |  |                               *";//14
-		sticman[15] = "*    \\/                                *";//15
-		print(sticman);
-
-		//state 4
-		sleep();
-		sticman[11] = "*   \\__/  /                            *";
-		sticman[12] = "*    ||  /                             *";
-		sticman[13] = "*  -| *|-                              *";
-		sticman[14] = "* / |  |                               *";
-		sticman[15] = "*/   \\/                                *";
-		print(sticman);
-
-		//state 5
-		sleep();
-		sticman[11] = "*   \\__/  *                            *";
-		sticman[12] = "*    ||  /                             *";
-		sticman[13] = "* --| *|-                              *";
-		sticman[14] = "*/  |  |                               *";
-		sticman[15] = "*    \\/                                *";
-		print(sticman);
-
-		//state 6
-		sleep();
-		sticman[11] = "*   \\__/  /                            *";
-		sticman[12] = "*    ||  /                             *";
-		sticman[13] = "*---| *|-                              *";
-		sticman[14] = "*   |  |                               *";
-		sticman[15] = "*    \\/                                *";
-		print(sticman);
-
-		//state 7
-		sleep();
-		sticman[11] = "*   \\__/  *                            *";
-		sticman[12] = "*\\   ||  /                             *";
-		sticman[13] = "* --| *|-                              *";
-		sticman[14] = "*   |  |                               *";
-		sticman[15] = "*    \\/                                *";
-		print(sticman);
-
-		// state 8
-		sleep();
-		sticman[11] = "*\\   \\__/  /                            *";
-		sticman[12] = "*\\   ||  /                             *";
-		sticman[13] = "* --| *|-                              *";
-		sticman[14] = "*   |  |                               *";
-		sticman[15] = "*    \\/                                *";
-		print(sticman);
-
-		// state 9
-		sleep();
-		sticman[11] = "**   \\__/  *                            *";
-		sticman[12] = "*\\   ||  /                             *";
-		sticman[13] = "* --| *|-                              *";
-		sticman[14] = "*   |  |                               *";
-		sticman[15] = "*    \\/                                *";
-		print(sticman);
-
-		//state 10
-		sleep();
-		sticman[11] = "*   \\__/                               *";
-		sticman[12] = "**   ||   *                            *";
-		sticman[13] = "* --| *|--                             *";
-		sticman[14] = "*   |  |                               *";
-		sticman[15] = "*    \\/                                *";
-		print(sticman);
-
-		//state 11
-		sleep();
-		sticman[11] = "*   \\__/                               *";
-		sticman[12] = "*    ||                                *";
-		sticman[13] = "**--| *|--*                            *";
-		sticman[14] = "*   |  |                               *";
-		sticman[15] = "*    \\/                                *";
-		print(sticman);
-
-		//state 12
-		sleep();
-		sticman[11] = "*   \\__/                               *";
-		sticman[12] = "*    ||                                *";
-		sticman[13] = "* --| *|--                             *";
-		sticman[14] = "**  |  |  *                            *";
-		sticman[15] = "*    \\/                                *";
-		print(sticman);
-
-		//state 13
-		sleep();
-		sticman[11] = "*   \\__/                               *";
-		sticman[12] = "*    ||                                *";
-		sticman[13] = "*  -| *|-                              *";
-		sticman[14] = "*/  |  |  \\                            *";
-		sticman[15] = "**    \\/    *                           *";
-		print(sticman);
-
-
-		start_state(sticman);
-	}
-}
-
-void run(vector<string> sticman){
-
-        // 1
-        sleep();
-        sticman[7]   = "*    /\\                                *";//7
-        sticman[8]   = "*   |oo|                               *";//8
-        sticman[9]   = "*  (|..|)                              *";//9
-        sticman[10]  = "*   |--|                               *";//10
-        sticman[11]  = "*   \\__/                               *";//11
-        sticman[12]  = "*    ||                                *";//12
-        sticman[13]  = "*  -| *|-                              *";//13
-        sticman[14]  = "* / |  | \\                             *";//14
-        sticman[15]  = "*/   \\/   \\                            *";//15
-        sticman[16]  = "*    /\\                                *";
-        sticman[17]  = "*    | \\                               *";
-        sticman[18]  = "*   _|  \\_                             *";
-
-        print(sticman);
-        sleep();
-        sticman[7]   = "*     /\\                               *";//7
-        sticman[8]   = "*    |oo|                              *";//8
-        sticman[9]   = "*   (|..|)                             *";//9
-        sticman[10]  = "*    |--|                              *";//10
-        sticman[11]  = "*    \\__/                              *";//11
-        sticman[12]  = "*     ||                               *";//12
-        sticman[13]  = "*   -| *|-                             *";//13
-        sticman[14]  = "*  / |  | \\                            *";//14
-        sticman[15]  = "* /   \\/   \\                           *";//15
-        sticman[16]  = "*     /\\                               *";
-        sticman[17]  = "*    / |                               *";
-        sticman[18]  = "*  _/  |_                              *";
-        print(sticman);
-        sleep();
-        sticman[7]   = "*     /\\                               *";//7
-        sticman[8]   = "*    |oo|                              *";//8
-        sticman[9]   = "*   (|..|)                             *";//9
-        sticman[10]  = "*    |--|                              *";//10
-        sticman[11]  = "*    \\__/                              *";//11
-        sticman[12]  = "*     ||                               *";//12
-        sticman[13]  = "*   -| *|-                             *";//13
-        sticman[14]  = "*  / |  | \\                            *";//14
-        sticman[15]  = "* /   \\/   \\                           *";//15
-        sticman[16]  = "*     /\\                               *";
-        sticman[17]  = "*     ||                               *";
-        sticman[18]  = "*    _||_                              *";
-        //2
-        print(sticman);
-        sleep();
-        sticman[7]   = "*     /\\                               *";//7
-        sticman[8]   = "*    |oo|                              *";//8
-        sticman[9]   = "*   (|..|)                             *";//9
-        sticman[10]  = "*    |--|                              *";//10
-        sticman[11]  = "*    \\__/                              *";//11
-        sticman[12]  = "*     ||                               *";//12
-        sticman[13]  = "*   -| *|-                             *";//13
-        sticman[14]  = "*  / |  | \\                            *";//14
-        sticman[15]  = "* /   \\/   \\                           *";//15
-        sticman[16]  = "*     /\\                               *";
-        sticman[17]  = "*     | \\                              *";
-        sticman[18]  = "*    _|  \\_                            *";
-        print(sticman);
-        sleep();
-        sticman[7]   = "*       /\\                             *";	
-        sticman[8]   = "*      |oo|                            *";	
-        sticman[9]   = "*     (|..|)                           *";	
-        sticman[10]  = "*      |--|                            *";	
-        sticman[11]  = "*      \\__/                            *";	
-        sticman[12]  = "*       ||                             *";	
-        sticman[13]  = "*     -| *|-                           *";	
-        sticman[14]  = "*    / |  | \\                          *";	
-        sticman[15]  = "*   /   \\/   \\                         *";	
-        sticman[16]  = "*       /\\                             *";	
-        sticman[17]  = "*      / |                             *";	
-        sticman[18]  = "*    _/  |_                            *";	
-    
-        print(sticman);
-        sleep();
-        sticman[7]   = "*       /\\                             *";//7	
-        sticman[8]   = "*      |oo|                            *";//8	
-        sticman[9]   = "*     (|..|)                           *";//9	
-        sticman[10]  = "*      |--|                            *";//10	
-        sticman[11]  = "*      \\__/                            *";//11	
-        sticman[12]  = "*       ||                             *";//12	
-        sticman[13]  = "*     -| *|-                           *";//13	
-        sticman[14]  = "*    / |  | \\                          *";//14	
-        sticman[15]  = "*   /   \\/   \\                         *";//15	
-        sticman[16]  = "*       /\\                             *";	
-        sticman[17]  = "*       ||                             *";	
-        sticman[18]  = "*      _||_                            *";
-        //3
-        print(sticman);
-        sleep();
-        sticman[7]   = "*       /\\                             *";//7
-        sticman[8]   = "*      |oo|                            *";//8
-        sticman[9]   = "*     (|..|)                           *";//9
-        sticman[10]  = "*      |--|                            *";//10
-        sticman[11]  = "*      \\__/                            *";//11
-        sticman[12]  = "*       ||                             *";//12
-        sticman[13]  = "*     -| *|-                           *";//13
-        sticman[14]  = "*    / |  | \\                          *";//14
-        sticman[15]  = "*   /   \\/   \\                         *";//15
-        sticman[16]  = "*       /\\                             *";
-        sticman[17]  = "*       | \\                            *";
-        sticman[18]  = "*      _|  \\_                          *";      
-
-        print(sticman);
-        sleep();
-        sticman[7]   = "*        /\\                            *";//7
-        sticman[8]   = "*       |oo|                           *";//8
-        sticman[9]   = "*      (|..|)                          *";//9
-        sticman[10]  = "*       |--|                           *";//10
-        sticman[11]  = "*       \\__/                           *";//11
-        sticman[12]  = "*        ||                            *";//12
-        sticman[13]  = "*      -| *|-                          *";//13
-        sticman[14]  = "*     / |  | \\                         *";//14
-        sticman[15]  = "*    /   \\/   \\                        *";//15
-        sticman[16]  = "*        /\\                            *";
-        sticman[17]  = "*       / |                            *";
-        sticman[18]  = "*     _/  |_                           *";
-        
-        print(sticman);
-        sleep();
-        sticman[7]   = "*        /\\                            *";//7
-        sticman[8]   = "*       |oo|                           *";//8
-        sticman[9]   = "*      (|..|)                          *";//9
-        sticman[10]  = "*       |--|                           *";//10
-        sticman[11]  = "*       \\__/                           *";//11
-        sticman[12]  = "*        ||                            *";//12
-        sticman[13]  = "*      -| *|-                          *";//13
-        sticman[14]  = "*     / |  | \\                         *";//14
-        sticman[15]  = "*    /   \\/   \\                        *";//15
-        sticman[16]  = "*        /\\                            *";
-        sticman[17]  = "*        ||                            *";
-        sticman[18]  = "*       _||_                           *";
-        //4
-        print(sticman);
-        sleep();
-        sticman[7]   = "*        /\\                            *";//7
-        sticman[8]   = "*       |oo|                           *";//8
-        sticman[9]   = "*      (|..|)                          *";//9
-        sticman[10]  = "*       |--|                           *";//10
-        sticman[11]  = "*       \\__/                           *";//11
-        sticman[12]  = "*        ||                            *";//12
-        sticman[13]  = "*      -| *|-                          *";//13
-        sticman[14]  = "*     / |  | \\                         *";//14
-        sticman[15]  = "*    /   \\/   \\                        *";//15
-        sticman[16]  = "*        /\\                            *";
-        sticman[17]  = "*        | \\                           *";
-        sticman[18]  = "*       _|  \\_                         *";      
-
-        print(sticman);
-        sleep();
-        sticman[7]   = "*         /\\                           *";//7
-        sticman[8]   = "*        |oo|                          *";//8
-        sticman[9]   = "*       (|..|)                         *";//9
-        sticman[10]  = "*        |--|                          *";//10
-        sticman[11]  = "*        \\__/                          *";//11
-        sticman[12]  = "*         ||                           *";//12
-        sticman[13]  = "*       -| *|-                         *";//13
-        sticman[14]  = "*      / |  | \\                        *";//14
-        sticman[15]  = "*     /   \\/   \\                       *";//15
-        sticman[16]  = "*         /\\                           *";
-        sticman[17]  = "*        / |                           *";
-        sticman[18]  = "*      _/  |_                          *";
-        
-        print(sticman);
-        sleep();
-        sticman[7]   = "*         /\\                           *";//7
-        sticman[8]   = "*        |oo|                          *";//8
-        sticman[9]   = "*       (|..|)                         *";//9
-        sticman[10]  = "*        |--|                          *";//10
-        sticman[11]  = "*        \\__/                          *";//11
-        sticman[12]  = "*         ||                           *";//12
-        sticman[13]  = "*       -| *|-                         *";//13
-        sticman[14]  = "*      / |  | \\                        *";//14
-        sticman[15]  = "*     /   \\/   \\                       *";//15
-        sticman[16]  = "*         /\\                           *";
-        sticman[17]  = "*         ||                           *";
-        sticman[18]  = "*        _||_                          *";
-        //5
-        print(sticman);
-        sleep();
-        sticman[7]   = "*         /\\                           *";//7
-        sticman[8]   = "*        |oo|                          *";//8
-        sticman[9]   = "*       (|..|)                         *";//9
-        sticman[10]  = "*        |--|                          *";//10
-        sticman[11]  = "*        \\__/                          *";//11
-        sticman[12]  = "*         ||                           *";//12
-        sticman[13]  = "*       -| *|-                         *";//13
-        sticman[14]  = "*      / |  | \\                        *";//14
-        sticman[15]  = "*     /   \\/   \\                       *";//15
-        sticman[16]  = "*         /\\                           *";
-        sticman[17]  = "*         | \\                          *";
-        sticman[18]  = "*        _|  \\_                        *";      
-
-        print(sticman);
-        sleep();
-        sticman[7]   = "*          /\\                          *";//7
-        sticman[8]   = "*         |oo|                         *";//8
-        sticman[9]   = "*        (|..|)                        *";//9
-        sticman[10]  = "*         |--|                         *";//10
-        sticman[11]  = "*         \\__/                         *";//11
-        sticman[12]  = "*          ||                          *";//12
-        sticman[13]  = "*        -| *|-                        *";//13
-        sticman[14]  = "*       / |  | \\                       *";//14
-        sticman[15]  = "*      /   \\/   \\                      *";//15
-        sticman[16]  = "*          /\\                          *";
-        sticman[17]  = "*         / |                          *";
-        sticman[18]  = "*       _/  |_                         *";
-        
-        print(sticman);
-        sleep();
-        sticman[7]   = "*          /\\                          *";//7
-        sticman[8]   = "*         |oo|                         *";//8
-        sticman[9]   = "*        (|..|)                        *";//9
-        sticman[10]  = "*         |--|                         *";//10
-        sticman[11]  = "*         \\__/                         *";//11
-        sticman[12]  = "*          ||                          *";//12
-        sticman[13]  = "*        -| *|-                        *";//13
-        sticman[14]  = "*       / |  | \\                       *";//14
-        sticman[15]  = "*      /   \\/   \\                      *";//15
-        sticman[16]  = "*          /\\                          *";
-        sticman[17]  = "*          ||                          *";
-        sticman[18]  = "*         _||_                         *";
-        //6
-        print(sticman);
-        sleep();
-        sticman[7]   = "*          /\\                          *";//7
-        sticman[8]   = "*         |oo|                         *";//8
-        sticman[9]   = "*        (|..|)                        *";//9
-        sticman[10]  = "*         |--|                         *";//10
-        sticman[11]  = "*         \\__/                         *";//11
-        sticman[12]  = "*          ||                          *";//12
-        sticman[13]  = "*        -| *|-                        *";//13
-        sticman[14]  = "*       / |  | \\                       *";//14
-        sticman[15]  = "*      /   \\/   \\                      *";//15
-        sticman[16]  = "*          /\\                          *";
-        sticman[17]  = "*          | \\                         *";
-        sticman[18]  = "*         _|  \\_                       *";      
-
-        print(sticman);
-        sleep();
-        sticman[7]   = "*           /\\                         *";//7
-        sticman[8]   = "*          |oo|                        *";//8
-        sticman[9]   = "*         (|..|)                       *";//9
-        sticman[10]  = "*          |--|                        *";//10
-        sticman[11]  = "*          \\__/                        *";//11
-        sticman[12]  = "*           ||                         *";//12
-        sticman[13]  = "*         -| *|-                       *";//13
-        sticman[14]  = "*        / |  | \\                      *";//14
-        sticman[15]  = "*       /   \\/   \\                     *";//15
-        sticman[16]  = "*           /\\                         *";
-        sticman[17]  = "*          / |                         *";
-        sticman[18]  = "*        _/  |_                        *";
-        
-        print(sticman);
-        sleep();
-        sticman[7]   = "*           /\\                         *";//7
-        sticman[8]   = "*          |oo|                        *";//8
-        sticman[9]   = "*         (|..|)                       *";//9
-        sticman[10]  = "*          |--|                        *";//10
-        sticman[11]  = "*          \\__/                        *";//11
-        sticman[12]  = "*           ||                         *";//12
-        sticman[13]  = "*         -| *|-                       *";//13
-        sticman[14]  = "*        / |  | \\                      *";//14
-        sticman[15]  = "*       /   \\/   \\                     *";//15
-        sticman[16]  = "*           /\\                         *";
-        sticman[17]  = "*           ||                         *";
-        sticman[18]  = "*          _||_                        *";
-        //7
-        print(sticman);
-        sleep();
-        sticman[7]   = "*           /\\                         *";//7
-        sticman[8]   = "*          |oo|                        *";//8
-        sticman[9]   = "*         (|..|)                       *";//9
-        sticman[10]  = "*          |--|                        *";//10
-        sticman[11]  = "*          \\__/                        *";//11
-        sticman[12]  = "*           ||                         *";//12
-        sticman[13]  = "*         -| *|-                       *";//13
-        sticman[14]  = "*        / |  | \\                      *";//14
-        sticman[15]  = "*       /   \\/   \\                     *";//15
-        sticman[16]  = "*           /\\                         *";
-        sticman[17]  = "*           | \\                        *";
-        sticman[18]  = "*          _|  \\_                      *";      
-
-        print(sticman);
-        sleep();
-        sticman[7]   = "*            /\\                        *";//7
-        sticman[8]   = "*           |oo|                       *";//8
-        sticman[9]   = "*          (|..|)                      *";//9
-        sticman[10]  = "*           |--|                       *";//10
-        sticman[11]  = "*           \\__/                       *";//11
-        sticman[12]  = "*            ||                        *";//12
-        sticman[13]  = "*          -| *|-                      *";//13
-        sticman[14]  = "*         / |  | \\                     *";//14
-        sticman[15]  = "*        /   \\/   \\                    *";//15
-        sticman[16]  = "*            /\\                        *";
-        sticman[17]  = "*           / |                        *";
-        sticman[18]  = "*         _/  |_                       *";
-        
-        print(sticman);
-        sleep();
-        sticman[7]   = "*            /\\                        *";//7
-        sticman[8]   = "*           |oo|                       *";//8
-        sticman[9]   = "*          (|..|)                      *";//9
-        sticman[10]  = "*           |--|                       *";//10
-        sticman[11]  = "*           \\__/                       *";//11
-        sticman[12]  = "*            ||                        *";//12
-        sticman[13]  = "*          -| *|-                      *";//13
-        sticman[14]  = "*         / |  | \\                     *";//14
-        sticman[15]  = "*        /   \\/   \\                    *";//15
-        sticman[16]  = "*            /\\                        *";
-        sticman[17]  = "*            ||                        *";
-        sticman[18]  = "*           _||_                       *";
-        //8
-        print(sticman);
-        sleep();
-        sticman[7]   = "*            /\\                        *";//7
-        sticman[8]   = "*           |oo|                       *";//8
-        sticman[9]   = "*          (|..|)                      *";//9
-        sticman[10]  = "*           |--|                       *";//10
-        sticman[11]  = "*           \\__/                       *";//11
-        sticman[12]  = "*            ||                        *";//12
-        sticman[13]  = "*          -| *|-                      *";//13
-        sticman[14]  = "*         / |  | \\                     *";//14
-        sticman[15]  = "*        /   \\/   \\                    *";//15
-        sticman[16]  = "*            /\\                        *";
-        sticman[17]  = "*            | \\                       *";
-        sticman[18]  = "*           _|  \\_                     *";      
-        print(sticman);
-        sleep();
-        sticman[7]   = "*             /\\                       *";//7
-        sticman[8]   = "*            |oo|                      *";//8
-        sticman[9]   = "*           (|..|)                     *";//9
-        sticman[10]  = "*            |--|                      *";//10
-        sticman[11]  = "*            \\__/                      *";//11
-        sticman[12]  = "*             ||                       *";//12
-        sticman[13]  = "*           -| *|-                     *";//13
-        sticman[14]  = "*          / |  | \\                    *";//14
-        sticman[15]  = "*         /   \\/   \\                   *";//15
-        sticman[16]  = "*             /\\                       *";
-        sticman[17]  = "*            / |                       *";
-        sticman[18]  = "*          _/  |_                      *";
-        
-        print(sticman);
-        sleep();
-        sticman[7]   = "*             /\\                       *";//7
-        sticman[8]   = "*            |oo|                      *";//8
-        sticman[9]   = "*           (|..|)                     *";//9
-        sticman[10]  = "*            |--|                      *";//10
-        sticman[11]  = "*            \\__/                      *";//11
-        sticman[12]  = "*             ||                       *";//12
-        sticman[13]  = "*           -| *|-                     *";//13
-        sticman[14]  = "*          / |  | \\                    *";//14
-        sticman[15]  = "*         /   \\/   \\                   *";//15
-        sticman[16]  = "*             /\\                       *";
-        sticman[17]  = "*             ||                       *";
-        sticman[18]  = "*            _||_                      *";
-        //9
-        print(sticman);
-        sleep();
-        sticman[7]   = "*             /\\                       *";//7
-        sticman[8]   = "*            |oo|                      *";//8
-        sticman[9]   = "*           (|..|)                     *";//9
-        sticman[10]  = "*            |--|                      *";//10
-        sticman[11]  = "*            \\__/                      *";//11
-        sticman[12]  = "*             ||                       *";//12
-        sticman[13]  = "*           -| *|-                     *";//13
-        sticman[14]  = "*          / |  | \\                    *";//14
-        sticman[15]  = "*         /   \\/   \\                   *";//15
-        sticman[16]  = "*             /\\                       *";
-        sticman[17]  = "*             | \\                      *";
-        sticman[18]  = "*            _|  \\_                    *";      
-        print(sticman);
-        sleep();                                                 
-        sticman[7]   = "*              /\\                      *";//7
-        sticman[8]   = "*             |oo|                     *";//8
-        sticman[9]   = "*            (|..|)                    *";//9
-        sticman[10]  = "*             |--|                     *";//10
-        sticman[11]  = "*             \\__/                     *";//11
-        sticman[12]  = "*              ||                      *";//12
-        sticman[13]  = "*            -| *|-                    *";//13
-        sticman[14]  = "*           / |  | \\                   *";//14
-        sticman[15]  = "*          /   \\/   \\                  *";//15
-        sticman[16]  = "*              /\\                      *";
-        sticman[17]  = "*             / |                      *";
-        sticman[18]  = "*           _/  |_                     *";
-        print(sticman);
-        sleep();                                                
-        sticman[7]   = "*              /\\                      *";//7
-        sticman[8]   = "*             |oo|                     *";//8
-        sticman[9]   = "*            (|..|)                    *";//9
-        sticman[10]  = "*             |--|                     *";//10
-        sticman[11]  = "*             \\__/                     *";//11
-        sticman[12]  = "*              ||                      *";//12
-        sticman[13]  = "*            -| *|-                    *";//13
-        sticman[14]  = "*           / |  | \\                   *";//14
-        sticman[15]  = "*          /   \\/   \\                  *";//15
-        sticman[16]  = "*              /\\                      *";
-        sticman[17]  = "*              ||                      *";
-        sticman[18]  = "*             _||_                     *";
-        //10
-        print(sticman);
-        sleep();
-        sticman[7]   = "*              /\\                      *";//7
-        sticman[8]   = "*             |oo|                     *";//8
-        sticman[9]   = "*            (|..|)                    *";//9
-        sticman[10]  = "*             |--|                     *";//10
-        sticman[11]  = "*             \\__/                     *";//11
-        sticman[12]  = "*              ||                      *";//12
-        sticman[13]  = "*            -| *|-                    *";//13
-        sticman[14]  = "*           / |  | \\                   *";//14
-        sticman[15]  = "*          /   \\/   \\                  *";//15
-        sticman[16]  = "*              /\\                      *";
-        sticman[17]  = "*              | \\                     *";
-        sticman[18]  = "*             _|  \\_                   *";      
-        print(sticman);
-        sleep();                                                   
-        sticman[7]   = "*               /\\                     *";//7
-        sticman[8]   = "*              |oo|                    *";//8
-        sticman[9]   = "*             (|..|)                   *";//9
-        sticman[10]  = "*              |--|                    *";//10
-        sticman[11]  = "*              \\__/                    *";//11
-        sticman[12]  = "*               ||                     *";//12
-        sticman[13]  = "*             -| *|-                   *";//13
-        sticman[14]  = "*            / |  | \\                  *";//14
-        sticman[15]  = "*           /   \\/   \\                 *";//15
-        sticman[16]  = "*               /\\                     *";
-        sticman[17]  = "*              / |                     *";
-        sticman[18]  = "*            _/  |_                    *";
-        print(sticman);
-        sleep();                                                         
-        sticman[7]   = "*               /\\                     *";//7
-        sticman[8]   = "*              |oo|                    *";//8
-        sticman[9]   = "*             (|..|)                   *";//9
-        sticman[10]  = "*              |--|                    *";//10
-        sticman[11]  = "*              \\__/                    *";//11
-        sticman[12]  = "*               ||                     *";//12
-        sticman[13]  = "*             -| *|-                   *";//13
-        sticman[14]  = "*            / |  | \\                  *";//14
-        sticman[15]  = "*           /   \\/   \\                 *";//15
-        sticman[16]  = "*               /\\                     *";
-        sticman[17]  = "*               ||                     *";
-        sticman[18]  = "*              _||_                    *";
-        print(sticman);
-        //11
-        sleep();
-        sticman[7]   = "*               /\\                     *";//7
-        sticman[8]   = "*              |oo|                    *";//8
-        sticman[9]   = "*             (|..|)                   *";//9
-        sticman[10]  = "*              |--|                    *";//10
-        sticman[11]  = "*              \\__/                    *";//11
-        sticman[12]  = "*               ||                     *";//12
-        sticman[13]  = "*             -| *|-                   *";//13
-        sticman[14]  = "*            / |  | \\                  *";//14
-        sticman[15]  = "*           /   \\/   \\                 *";//15
-        sticman[16]  = "*               /\\                     *";
-        sticman[17]  = "*               | \\                    *";
-        sticman[18]  = "*              _|  \\_                  *";      
-       	print(sticman);
-        sleep();                                                   
-        sticman[7]   = "*                /\\                    *";//7
-        sticman[8]   = "*               |oo|                   *";//8
-        sticman[9]   = "*              (|..|)                  *";//9
-        sticman[10]  = "*               |--|                   *";//10
-        sticman[11]  = "*               \\__/                   *";//11
-        sticman[12]  = "*                ||                    *";//12
-        sticman[13]  = "*              -| *|-                  *";//13
-        sticman[14]  = "*             / |  | \\                 *";//14
-        sticman[15]  = "*            /   \\/   \\                *";//15
-        sticman[16]  = "*                /\\                    *";
-        sticman[17]  = "*               / |                    *";
-        sticman[18]  = "*             _/  |_                   *";
-        print(sticman);
-        sleep();                                                         
-        sticman[7]   = "*                /\\                    *";//7
-        sticman[8]   = "*               |oo|                   *";//8
-        sticman[9]   = "*              (|..|)                  *";//9
-        sticman[10]  = "*               |--|                   *";//10
-        sticman[11]  = "*               \\__/                   *";//11
-        sticman[12]  = "*                ||                    *";//12
-        sticman[13]  = "*              -| *|-                  *";//13
-        sticman[14]  = "*             / |  | \\                 *";//14
-        sticman[15]  = "*            /   \\/   \\                *";//15
-        sticman[16]  = "*                /\\                    *";
-        sticman[17]  = "*                ||                    *";
-        sticman[18]  = "*               _||_                   *";
-        print(sticman);
-        //12
-        sleep();
-        sticman[7]   = "*                /\\                    *";//7
-        sticman[8]   = "*               |oo|                   *";//8
-        sticman[9]   = "*              (|..|)                  *";//9
-        sticman[10]  = "*               |--|                   *";//10
-        sticman[11]  = "*               \\__/                   *";//11
-        sticman[12]  = "*                ||                    *";//12
-        sticman[13]  = "*              -| *|-                  *";//13
-        sticman[14]  = "*             / |  | \\                 *";//14
-        sticman[15]  = "*            /   \\/   \\                *";//15
-        sticman[16]  = "*                /\\                    *";
-        sticman[17]  = "*                | \\                   *";
-        sticman[18]  = "*               _|  \\_                 *";      
-        print(sticman);
-        sleep();                                                   
-        sticman[7]   = "*                 /\\                   *";//7
-        sticman[8]   = "*                |oo|                  *";//8
-        sticman[9]   = "*               (|..|)                 *";//9
-        sticman[10]  = "*                |--|                  *";//10
-        sticman[11]  = "*                \\__/                  *";//11
-        sticman[12]  = "*                 ||                   *";//12
-        sticman[13]  = "*               -| *|-                 *";//13
-        sticman[14]  = "*              / |  | \\                *";//14
-        sticman[15]  = "*             /   \\/   \\               *";//15
-        sticman[16]  = "*                 /\\                   *";
-        sticman[17]  = "*                / |                   *";
-        sticman[18]  = "*              _/  |_                  *";
-        print(sticman);
-        sleep();                                                         
-        sticman[7]   = "*                 /\\                   *";//7
-        sticman[8]   = "*                |oo|                  *";//8
-        sticman[9]   = "*               (|..|)                 *";//9
-        sticman[10]  = "*                |--|                  *";//10
-        sticman[11]  = "*                \\__/                  *";//11
-        sticman[12]  = "*                 ||                   *";//12
-        sticman[13]  = "*               -| *|-                 *";//13
-        sticman[14]  = "*              / |  | \\                *";//14
-        sticman[15]  = "*             /   \\/   \\               *";//15
-        sticman[16]  = "*                 /\\                   *";
-        sticman[17]  = "*                 ||                   *";
-        sticman[18]  = "*                _||_                  *";
-        print(sticman);
-        //13
-        sleep();
-        sticman[7]   = "*                 /\\                   *";//7
-        sticman[8]   = "*                |oo|                  *";//8
-        sticman[9]   = "*               (|..|)                 *";//9
-        sticman[10]  = "*                |--|                  *";//10
-        sticman[11]  = "*                \\__/                  *";//11
-        sticman[12]  = "*                 ||                   *";//12
-        sticman[13]  = "*               -| *|-                 *";//13
-        sticman[14]  = "*              / |  | \\                *";//14
-        sticman[15]  = "*             /   \\/   \\               *";//15
-        sticman[16]  = "*                 /\\                   *";
-        sticman[17]  = "*                 | \\                  *";
-        sticman[18]  = "*                _|  \\_                *";      
-        print(sticman);
-        sleep();                                                   
-        sticman[7]   = "*                  /\\                  *";//7
-        sticman[8]   = "*                 |oo|                 *";//8
-        sticman[9]   = "*                (|..|)                *";//9
-        sticman[10]  = "*                 |--|                 *";//10
-        sticman[11]  = "*                 \\__/                 *";//11
-        sticman[12]  = "*                  ||                  *";//12
-        sticman[13]  = "*                -| *|-                *";//13
-        sticman[14]  = "*               / |  | \\               *";//14
-        sticman[15]  = "*              /   \\/   \\              *";//15
-        sticman[16]  = "*                  /\\                  *";
-        sticman[17]  = "*                 / |                  *";
-        sticman[18]  = "*               _/  |_                 *";
-        print(sticman);
-        sleep();                                                         
-        sticman[7]   = "*                  /\\                  *";//7
-        sticman[8]   = "*                 |oo|                 *";//8
-        sticman[9]   = "*                (|..|)                *";//9
-        sticman[10]  = "*                 |--|                 *";//10
-        sticman[11]  = "*                 \\__/                 *";//11
-        sticman[12]  = "*                  ||                  *";//12
-        sticman[13]  = "*                -| *|-                *";//13
-        sticman[14]  = "*               / |  | \\               *";//14
-        sticman[15]  = "*              /   \\/   \\              *";//15
-        sticman[16]  = "*                  /\\                  *";
-        sticman[17]  = "*                  ||                  *";
-        sticman[18]  = "*                 _||_                 *";
-        print(sticman);
-        //14
-        sleep();
-        sticman[7]   = "*                  /\\                  *";//7
-        sticman[8]   = "*                 |oo|                 *";//8
-        sticman[9]   = "*                (|..|)                *";//9
-        sticman[10]  = "*                 |--|                 *";//10
-        sticman[11]  = "*                 \\__/                 *";//11
-        sticman[12]  = "*                  ||                  *";//12
-        sticman[13]  = "*                -| *|-                *";//13
-        sticman[14]  = "*               / |  | \\               *";//14
-        sticman[15]  = "*              /   \\/   \\              *";//15
-        sticman[16]  = "*                  /\\                  *";
-        sticman[17]  = "*                  | \\                 *";
-        sticman[18]  = "*                 _|  \\_               *";      
-        print(sticman);
-        sleep();                                                   
-        sticman[7]   = "*                   /\\                 *";//7
-        sticman[8]   = "*                  |oo|                *";//8
-        sticman[9]   = "*                 (|..|)               *";//9
-        sticman[10]  = "*                  |--|                *";//10
-        sticman[11]  = "*                  \\__/                *";//11
-        sticman[12]  = "*                   ||                 *";//12
-        sticman[13]  = "*                 -| *|-               *";//13
-        sticman[14]  = "*                / |  | \\              *";//14
-        sticman[15]  = "*               /   \\/   \\             *";//15
-        sticman[16]  = "*                   /\\                 *";
-        sticman[17]  = "*                  / |                 *";
-        sticman[18]  = "*                _/  |_                *";
-        print(sticman);
-        sleep();                                                         
-        sticman[7]   = "*                   /\\                 *";//7
-        sticman[8]   = "*                  |oo|                *";//8
-        sticman[9]   = "*                 (|..|)               *";//9
-        sticman[10]  = "*                  |--|                *";//10
-        sticman[11]  = "*                  \\__/                *";//11
-        sticman[12]  = "*                   ||                 *";//12
-        sticman[13]  = "*                 -| *|-               *";//13
-        sticman[14]  = "*                / |  | \\              *";//14
-        sticman[15]  = "*               /   \\/   \\             *";//15
-        sticman[16]  = "*                   /\\                 *";
-        sticman[17]  = "*                   ||                 *";
-        sticman[18]  = "*                  _||_                *";
-        print(sticman);
-        //15
-        sleep();
-        sticman[7]   = "*                   /\\                 *";//7
-        sticman[8]   = "*                  |oo|                *";//8
-        sticman[9]   = "*                 (|..|)               *";//9
-        sticman[10]  = "*                  |--|                *";//10
-        sticman[11]  = "*                  \\__/                *";//11
-        sticman[12]  = "*                   ||                 *";//12
-        sticman[13]  = "*                 -| *|-               *";//13
-        sticman[14]  = "*                / |  | \\              *";//14
-        sticman[15]  = "*               /   \\/   \\             *";//15
-        sticman[16]  = "*                   /\\                 *";
-        sticman[17]  = "*                   | \\                *";
-        sticman[18]  = "*                  _|  \\_              *";      
-        print(sticman);
-        sleep();                                                   
-        sticman[7]   = "*                    /\\                *";//7
-        sticman[8]   = "*                   |oo|               *";//8
-        sticman[9]   = "*                  (|..|)              *";//9
-        sticman[10]  = "*                   |--|               *";//10
-        sticman[11]  = "*                   \\__/               *";//11
-        sticman[12]  = "*                    ||                *";//12
-        sticman[13]  = "*                  -| *|-              *";//13
-        sticman[14]  = "*                 / |  | \\             *";//14
-        sticman[15]  = "*                /   \\/   \\            *";//15
-        sticman[16]  = "*                    /\\                *";
-        sticman[17]  = "*                   / |                *";
-        sticman[18]  = "*                 _/  |_               *";
-        print(sticman);
-        sleep();                                                         
-        sticman[7]   = "*                    /\\                *";//7
-        sticman[8]   = "*                   |oo|               *";//8
-        sticman[9]   = "*                  (|..|)              *";//9
-        sticman[10]  = "*                   |--|               *";//10
-        sticman[11]  = "*                   \\__/               *";//11
-        sticman[12]  = "*                    ||                *";//12
-        sticman[13]  = "*                  -| *|-              *";//13
-        sticman[14]  = "*                 / |  | \\             *";//14
-        sticman[15]  = "*                /   \\/   \\            *";//15
-        sticman[16]  = "*                    /\\                *";
-        sticman[17]  = "*                    ||                *";
-        sticman[18]  = "*                   _||_               *";
-        print(sticman);
-        //16
-        sleep();
-        sticman[7]   = "*                    /\\                *";//7
-        sticman[8]   = "*                   |oo|               *";//8
-        sticman[9]   = "*                  (|..|)              *";//9
-        sticman[10]  = "*                   |--|               *";//10
-        sticman[11]  = "*                   \\__/               *";//11
-        sticman[12]  = "*                    ||                *";//12
-        sticman[13]  = "*                  -| *|-              *";//13
-        sticman[14]  = "*                 / |  | \\             *";//14
-        sticman[15]  = "*                /   \\/   \\            *";//15
-        sticman[16]  = "*                    /\\                *";
-        sticman[17]  = "*                    | \\               *";
-        sticman[18]  = "*                   _|  \\_             *";      
-        print(sticman);
-        sleep();                                                   
-        sticman[7]   = "*                     /\\               *";//7
-        sticman[8]   = "*                    |oo|              *";//8
-        sticman[9]   = "*                   (|..|)             *";//9
-        sticman[10]  = "*                    |--|              *";//10
-        sticman[11]  = "*                    \\__/              *";//11
-        sticman[12]  = "*                     ||               *";//12
-        sticman[13]  = "*                   -| *|-             *";//13
-        sticman[14]  = "*                  / |  | \\            *";//14
-        sticman[15]  = "*                 /   \\/   \\           *";//15
-        sticman[16]  = "*                     /\\               *";
-        sticman[17]  = "*                    / |               *";
-        sticman[18]  = "*                  _/  |_              *";
-        print(sticman);
-        sleep();                                                         
-        sticman[7]   = "*                     /\\               *";//7
-        sticman[8]   = "*                    |oo|              *";//8
-        sticman[9]   = "*                   (|..|)             *";//9
-        sticman[10]  = "*                    |--|              *";//10
-        sticman[11]  = "*                    \\__/              *";//11
-        sticman[12]  = "*                     ||               *";//12
-        sticman[13]  = "*                   -| *|-             *";//13
-        sticman[14]  = "*                  / |  | \\            *";//14
-        sticman[15]  = "*                 /   \\/   \\           *";//15
-        sticman[16]  = "*                     /\\               *";
-        sticman[17]  = "*                     ||               *";
-        sticman[18]  = "*                    _||_              *";
-        //17
-        print(sticman);
-        sleep();
-        sticman[7]   = "*                     /\\               *";//7
-        sticman[8]   = "*                    |oo|              *";//8
-        sticman[9]   = "*                   (|..|)             *";//9
-        sticman[10]  = "*                    |--|              *";//10
-        sticman[11]  = "*                    \\__/              *";//11
-        sticman[12]  = "*                     ||               *";//12
-        sticman[13]  = "*                   -| *|-             *";//13
-        sticman[14]  = "*                  / |  | \\            *";//14
-        sticman[15]  = "*                 /   \\/   \\           *";//15
-        sticman[16]  = "*                     /\\               *";
-        sticman[17]  = "*                     | \\              *";
-        sticman[18]  = "*                    _|  \\_            *";      
-        print(sticman);
-        sleep();                                                   
-        sticman[7]   = "*                      /\\              *";//7
-        sticman[8]   = "*                     |oo|             *";//8
-        sticman[9]   = "*                    (|..|)            *";//9
-        sticman[10]  = "*                     |--|             *";//10
-        sticman[11]  = "*                     \\__/             *";//11
-        sticman[12]  = "*                      ||              *";//12
-        sticman[13]  = "*                    -| *|-            *";//13
-        sticman[14]  = "*                   / |  | \\           *";//14
-        sticman[15]  = "*                  /   \\/   \\          *";//15
-        sticman[16]  = "*                      /\\              *";
-        sticman[17]  = "*                     / |              *";
-        sticman[18]  = "*                   _/  |_             *";
-        print(sticman);
-        sleep();                                                         
-        sticman[7]   = "*                      /\\              *";//7
-        sticman[8]   = "*                     |oo|             *";//8
-        sticman[9]   = "*                    (|..|)            *";//9
-        sticman[10]  = "*                     |--|             *";//10
-        sticman[11]  = "*                     \\__/             *";//11
-        sticman[12]  = "*                      ||              *";//12
-        sticman[13]  = "*                    -| *|-            *";//13
-        sticman[14]  = "*                   / |  | \\           *";//14
-        sticman[15]  = "*                  /   \\/   \\          *";//15
-        sticman[16]  = "*                      /\\              *";
-        sticman[17]  = "*                      ||              *";
-        sticman[18]  = "*                     _||_             *";
-        print(sticman);
-        //18
-        sleep();
-        sticman[7]   = "*                      /\\              *";//7
-        sticman[8]   = "*                     |oo|             *";//8
-        sticman[9]   = "*                    (|..|)            *";//9
-        sticman[10]  = "*                     |--|             *";//10
-        sticman[11]  = "*                     \\__/             *";//11
-        sticman[12]  = "*                      ||              *";//12
-        sticman[13]  = "*                    -| *|-            *";//13
-        sticman[14]  = "*                   / |  | \\           *";//14
-        sticman[15]  = "*                  /   \\/   \\          *";//15
-        sticman[16]  = "*                      /\\              *";
-        sticman[17]  = "*                      | \\             *";
-        sticman[18]  = "*                     _|  \\_           *";      
-        print(sticman);
-        sleep();                                                   
-        sticman[7]   = "*                       /\\             *";//7
-        sticman[8]   = "*                      |oo|            *";//8
-        sticman[9]   = "*                     (|..|)           *";//9
-        sticman[10]  = "*                      |--|            *";//10
-        sticman[11]  = "*                      \\__/            *";//11
-        sticman[12]  = "*                       ||             *";//12
-        sticman[13]  = "*                     -| *|-           *";//13
-        sticman[14]  = "*                    / |  | \\          *";//14
-        sticman[15]  = "*                   /   \\/   \\         *";//15
-        sticman[16]  = "*                       /\\             *";
-        sticman[17]  = "*                      / |             *";
-        sticman[18]  = "*                    _/  |_            *";
-        print(sticman);
-        sleep();                                                         
-        sticman[7]   = "*                       /\\             *";//7
-        sticman[8]   = "*                      |oo|            *";//8
-        sticman[9]   = "*                     (|..|)           *";//9
-        sticman[10]  = "*                      |--|            *";//10
-        sticman[11]  = "*                      \\__/            *";//11
-        sticman[12]  = "*                       ||             *";//12
-        sticman[13]  = "*                     -| *|-           *";//13
-        sticman[14]  = "*                    / |  | \\          *";//14
-        sticman[15]  = "*                   /   \\/   \\         *";//15
-        sticman[16]  = "*                       /\\             *";
-        sticman[17]  = "*                       ||             *";
-        sticman[18]  = "*                      _||_            *";
-        print(sticman);
-        //19
-        sleep();
-        sticman[7]   = "*                       /\\             *";//7
-        sticman[8]   = "*                      |oo|            *";//8
-        sticman[9]   = "*                     (|..|)           *";//9
-        sticman[10]  = "*                      |--|            *";//10
-        sticman[11]  = "*                      \\__/            *";//11
-        sticman[12]  = "*                       ||             *";//12
-        sticman[13]  = "*                     -| *|-           *";//13
-        sticman[14]  = "*                    / |  | \\          *";//14
-        sticman[15]  = "*                   /   \\/   \\         *";//15
-        sticman[16]  = "*                       /\\             *";
-        sticman[17]  = "*                       | \\            *";
-        sticman[18]  = "*                      _|  \\_          *";      
-        print(sticman);
-        sleep();                                                   
-        sticman[7]   = "*                        /\\            *";//7
-        sticman[8]   = "*                       |oo|           *";//8
-        sticman[9]   = "*                      (|..|)          *";//9
-        sticman[10]  = "*                       |--|           *";//10
-        sticman[11]  = "*                       \\__/           *";//11
-        sticman[12]  = "*                        ||            *";//12
-        sticman[13]  = "*                      -| *|-          *";//13
-        sticman[14]  = "*                     / |  | \\         *";//14
-        sticman[15]  = "*                    /   \\/   \\        *";//15
-        sticman[16]  = "*                        /\\            *";
-        sticman[17]  = "*                       / |            *";
-        sticman[18]  = "*                     _/  |_           *";
-        print(sticman);
-        sleep();                                                         
-        sticman[7]   = "*                        /\\            *";//7
-        sticman[8]   = "*                       |oo|           *";//8
-        sticman[9]   = "*                      (|..|)          *";//9
-        sticman[10]  = "*                       |--|           *";//10
-        sticman[11]  = "*                       \\__/           *";//11
-        sticman[12]  = "*                        ||            *";//12
-        sticman[13]  = "*                      -| *|-          *";//13
-        sticman[14]  = "*                     / |  | \\         *";//14
-        sticman[15]  = "*                    /   \\/   \\        *";//15
-        sticman[16]  = "*                        /\\            *";
-        sticman[17]  = "*                        ||            *";
-        sticman[18]  = "*                       _||_           *";
-        print(sticman);
-        //20
-        sleep();
-        sticman[7]   = "*                        /\\            *";//7
-        sticman[8]   = "*                       |oo|           *";//8
-        sticman[9]   = "*                      (|..|)          *";//9
-        sticman[10]  = "*                       |--|           *";//10
-        sticman[11]  = "*                       \\__/           *";//11
-        sticman[12]  = "*                        ||            *";//12
-        sticman[13]  = "*                      -| *|-          *";//13
-        sticman[14]  = "*                     / |  | \\         *";//14
-        sticman[15]  = "*                    /   \\/   \\        *";//15
-        sticman[16]  = "*                        /\\            *";
-        sticman[17]  = "*                        | \\           *";
-        sticman[18]  = "*                       _|  \\_         *";      
-        print(sticman);
-        sleep();                                                   
-        sticman[7]   = "*                         /\\           *";//7
-        sticman[8]   = "*                        |oo|          *";//8
-        sticman[9]   = "*                       (|..|)         *";//9
-        sticman[10]  = "*                        |--|          *";//10
-        sticman[11]  = "*                        \\__/          *";//11
-        sticman[12]  = "*                         ||           *";//12
-        sticman[13]  = "*                       -| *|-         *";//13
-        sticman[14]  = "*                      / |  | \\        *";//14
-        sticman[15]  = "*                     /   \\/   \\       *";//15
-        sticman[16]  = "*                         /\\           *";
-        sticman[17]  = "*                        / |           *";
-        sticman[18]  = "*                      _/  |_          *";
-        print(sticman);
-        sleep();                                                         
-        sticman[7]   = "*                         /\\           *";//7
-        sticman[8]   = "*                        |oo|          *";//8
-        sticman[9]   = "*                       (|..|)         *";//9
-        sticman[10]  = "*                        |--|          *";//10
-        sticman[11]  = "*                        \\__/          *";//11
-        sticman[12]  = "*                         ||           *";//12
-        sticman[13]  = "*                       -| *|-         *";//13
-        sticman[14]  = "*                      / |  | \\        *";//14
-        sticman[15]  = "*                     /   \\/   \\       *";//15
-        sticman[16]  = "*                         /\\           *";
-        sticman[17]  = "*                         ||           *";
-        sticman[18]  = "*                        _||_          *";
-        print(sticman);
-        //21
-        sleep();
-        sticman[7]   = "*                         /\\           *";//7
-        sticman[8]   = "*                        |oo|          *";//8
-        sticman[9]   = "*                       (|..|)         *";//9
-        sticman[10]  = "*                        |--|          *";//10
-        sticman[11]  = "*                        \\__/          *";//11
-        sticman[12]  = "*                         ||           *";//12
-        sticman[13]  = "*                       -| *|-         *";//13
-        sticman[14]  = "*                      / |  | \\        *";//14
-        sticman[15]  = "*                     /   \\/   \\       *";//15
-        sticman[16]  = "*                         /\\           *";
-        sticman[17]  = "*                         | \\          *";
-        sticman[18]  = "*                        _|  \\_        *";      
-        print(sticman);
-        sleep();                                                   
-        sticman[7]   = "*                          /\\          *";//7
-        sticman[8]   = "*                         |oo|         *";//8
-        sticman[9]   = "*                        (|..|)        *";//9
-        sticman[10]  = "*                         |--|         *";//10
-        sticman[11]  = "*                         \\__/         *";//11
-        sticman[12]  = "*                          ||          *";//12
-        sticman[13]  = "*                        -| *|-        *";//13
-        sticman[14]  = "*                       / |  | \\       *";//14
-        sticman[15]  = "*                      /   \\/   \\      *";//15
-        sticman[16]  = "*                          /\\          *";
-        sticman[17]  = "*                         / |          *";
-        sticman[18]  = "*                       _/  |_         *";
-        print(sticman);
-        sleep();                                                         
-        sticman[7]   = "*                          /\\          *";//7
-        sticman[8]   = "*                         |oo|         *";//8
-        sticman[9]   = "*                        (|..|)        *";//9
-        sticman[10]  = "*                         |--|         *";//10
-        sticman[11]  = "*                         \\__/         *";//11
-        sticman[12]  = "*                          ||          *";//12
-        sticman[13]  = "*                        -| *|-        *";//13
-        sticman[14]  = "*                       / |  | \\       *";//14
-        sticman[15]  = "*                      /   \\/   \\      *";//15
-        sticman[16]  = "*                          /\\          *";
-        sticman[17]  = "*                          ||          *";
-        sticman[18]  = "*                         _||_         *";
-        print(sticman);
-        //22
-        sleep();
-        sticman[7]   = "*                          /\\          *";//7
-        sticman[8]   = "*                         |oo|         *";//8
-        sticman[9]   = "*                        (|..|)        *";//9
-        sticman[10]  = "*                         |--|         *";//10
-        sticman[11]  = "*                         \\__/         *";//11
-        sticman[12]  = "*                          ||          *";//12
-        sticman[13]  = "*                        -| *|-        *";//13
-        sticman[14]  = "*                       / |  | \\       *";//14
-        sticman[15]  = "*                      /   \\/   \\      *";//15
-        sticman[16]  = "*                          /\\          *";
-        sticman[17]  = "*                          | \\         *";
-        sticman[18]  = "*                         _|  \\_       *";      
-        print(sticman);        
-        sleep();                                                   
-        sticman[7]   = "*                           /\\         *";//7
-        sticman[8]   = "*                          |oo|        *";//8
-        sticman[9]   = "*                         (|..|)       *";//9
-        sticman[10]  = "*                          |--|        *";//10
-        sticman[11]  = "*                          \\__/        *";//11
-        sticman[12]  = "*                           ||         *";//12
-        sticman[13]  = "*                         -| *|-       *";//13
-        sticman[14]  = "*                        / |  | \\      *";//14
-        sticman[15]  = "*                       /   \\/   \\     *";//15
-        sticman[16]  = "*                           /\\         *";
-        sticman[17]  = "*                          / |         *";
-        sticman[18]  = "*                        _/  |_        *";
-        print(sticman);
-        sleep();                                                         
-        sticman[7]   = "*                           /\\         *";//7
-        sticman[8]   = "*                          |oo|        *";//8
-        sticman[9]   = "*                         (|..|)       *";//9
-        sticman[10]  = "*                          |--|        *";//10
-        sticman[11]  = "*                          \\__/        *";//11
-        sticman[12]  = "*                           ||         *";//12
-        sticman[13]  = "*                         -| *|-       *";//13
-        sticman[14]  = "*                        / |  | \\      *";//14
-        sticman[15]  = "*                       /   \\/   \\     *";//15
-        sticman[16]  = "*                           /\\         *";
-        sticman[17]  = "*                           ||         *";
-        sticman[18]  = "*                          _||_        *";
-        print(sticman);
-        //23
-        sleep();
-        sticman[7]   = "*                           /\\         *";//7
-        sticman[8]   = "*                          |oo|        *";//8
-        sticman[9]   = "*                         (|..|)       *";//9
-        sticman[10]  = "*                          |--|        *";//10
-        sticman[11]  = "*                          \\__/        *";//11
-        sticman[12]  = "*                           ||         *";//12
-        sticman[13]  = "*                         -| *|-       *";//13
-        sticman[14]  = "*                        / |  | \\      *";//14
-        sticman[15]  = "*                       /   \\/   \\     *";//15
-        sticman[16]  = "*                           /\\         *";
-        sticman[17]  = "*                           | \\        *";
-        sticman[18]  = "*                          _|  \\_      *";
-        print(sticman);      
-        sleep();                                                   
-        sticman[7]   = "*                            /\\        *";//7
-        sticman[8]   = "*                           |oo|       *";//8
-        sticman[9]   = "*                          (|..|)      *";//9
-        sticman[10]  = "*                           |--|       *";//10
-        sticman[11]  = "*                           \\__/       *";//11
-        sticman[12]  = "*                            ||        *";//12
-        sticman[13]  = "*                          -| *|-      *";//13
-        sticman[14]  = "*                         / |  | \\     *";//14
-        sticman[15]  = "*                        /   \\/   \\    *";//15
-        sticman[16]  = "*                            /\\        *";
-        sticman[17]  = "*                           / |        *";
-        sticman[18]  = "*                         _/  |_       *";
-        print(sticman);
-        sleep();                                                         
-        sticman[7]   = "*                            /\\        *";//7
-        sticman[8]   = "*                           |oo|       *";//8
-        sticman[9]   = "*                          (|..|)      *";//9
-        sticman[10]  = "*                           |--|       *";//10
-        sticman[11]  = "*                           \\__/       *";//11
-        sticman[12]  = "*                            ||        *";//12
-        sticman[13]  = "*                          -| *|-      *";//13
-        sticman[14]  = "*                         / |  | \\     *";//14
-        sticman[15]  = "*                        /   \\/   \\    *";//15
-        sticman[16]  = "*                            /\\        *";
-        sticman[17]  = "*                            ||        *";
-        sticman[18]  = "*                           _||_       *";
-        print(sticman);
-        //24
-        sleep();
-        sticman[7]   = "*                            /\\        *";//7
-        sticman[8]   = "*                           |oo|       *";//8
-        sticman[9]   = "*                          (|..|)      *";//9
-        sticman[10]  = "*                           |--|       *";//10
-        sticman[11]  = "*                           \\__/       *";//11
-        sticman[12]  = "*                            ||        *";//12
-        sticman[13]  = "*                          -| *|-      *";//13
-        sticman[14]  = "*                         / |  | \\     *";//14
-        sticman[15]  = "*                        /   \\/   \\    *";//15
-        sticman[16]  = "*                            /\\        *";
-        sticman[17]  = "*                            | \\       *";
-        sticman[18]  = "*                           _|  \\_     *";
-        print(sticman);      
-        sleep();                                                   
-        sticman[7]   = "*                             /\\       *";//7
-        sticman[8]   = "*                            |oo|      *";//8
-        sticman[9]   = "*                           (|..|)     *";//9
-        sticman[10]  = "*                            |--|      *";//10
-        sticman[11]  = "*                            \\__/      *";//11
-        sticman[12]  = "*                             ||       *";//12
-        sticman[13]  = "*                           -| *|-     *";//13
-        sticman[14]  = "*                          / |  | \\    *";//14
-        sticman[15]  = "*                         /   \\/   \\   *";//15
-        sticman[16]  = "*                             /\\       *";
-        sticman[17]  = "*                            / |       *";
-        sticman[18]  = "*                          _/  |_      *";
-        print(sticman);
-        sleep();                                                         
-        sticman[7]   = "*                             /\\       *";//7
-        sticman[8]   = "*                            |oo|      *";//8
-        sticman[9]   = "*                           (|..|)     *";//9
-        sticman[10]  = "*                            |--|      *";//10
-        sticman[11]  = "*                            \\__/      *";//11
-        sticman[12]  = "*                             ||       *";//12
-        sticman[13]  = "*                           -| *|-     *";//13
-        sticman[14]  = "*                          / |  | \\    *";//14
-        sticman[15]  = "*                         /   \\/   \\   *";//15
-        sticman[16]  = "*                             /\\       *";
-        sticman[17]  = "*                             ||       *";
-        sticman[18]  = "*                            _||_      *";
-        print(sticman);	
-        //25
-        sleep();                                                   
-        sticman[7]   = "*                             /\\       *";//7
-        sticman[8]   = "*                            |oo|      *";//8
-        sticman[9]   = "*                           (|..|)     *";//9
-        sticman[10]  = "*                            |--|      *";//10
-        sticman[11]  = "*                            \\__/      *";//11
-        sticman[12]  = "*                             ||       *";//12
-        sticman[13]  = "*                           -| *|-     *";//13
-        sticman[14]  = "*                          / |  | \\    *";//14
-        sticman[15]  = "*                         /   \\/   \\   *";//15
-        sticman[16]  = "*                             /\\       *";
-        sticman[17]  = "*                            / |       *";
-        sticman[18]  = "*                          _/  |_      *";
-        print(sticman);
-        //26
-        sleep();
-        sticman[7]   = "*                            /\\        *";//7
-        sticman[8]   = "*                           |oo|       *";//8
-        sticman[9]   = "*                          (|..|)      *";//9
-        sticman[10]  = "*                           |--|       *";//10
-        sticman[11]  = "*                           \\__/       *";//11
-        sticman[12]  = "*                            ||        *";//12
-        sticman[13]  = "*                          -| *|-      *";//13
-        sticman[14]  = "*                         / |  | \\     *";//14
-        sticman[15]  = "*                        /   \\/   \\    *";//15
-        sticman[16]  = "*                            /\\        *";
-        sticman[17]  = "*                            | \\       *";
-        sticman[18]  = "*                           _|  \\_     *";
-        print(sticman);                                             
-        sleep();                                                            
-        sticman[7]   = "*                            /\\        *";//7
-        sticman[8]   = "*                           |oo|       *";//8
-        sticman[9]   = "*                          (|..|)      *";//9
-        sticman[10]  = "*                           |--|       *";//10
-        sticman[11]  = "*                           \\__/       *";//11
-        sticman[12]  = "*                            ||        *";//12
-        sticman[13]  = "*                          -| *|-      *";//13
-        sticman[14]  = "*                         / |  | \\     *";//14
-        sticman[15]  = "*                        /   \\/   \\    *";//15
-        sticman[16]  = "*                            /\\        *";
-        sticman[17]  = "*                            ||        *";
-        sticman[18]  = "*                           _||_       *";
-        print(sticman);    
-        sleep();
-        sticman[7]   = "*                            /\\        *";//7
-        sticman[8]   = "*                           |oo|       *";//8
-        sticman[9]   = "*                          (|..|)      *";//9
-        sticman[10]  = "*                           |--|       *";//10
-        sticman[11]  = "*                           \\__/       *";//11
-        sticman[12]  = "*                            ||        *";//12
-        sticman[13]  = "*                          -| *|-      *";//13
-        sticman[14]  = "*                         / |  | \\     *";//14
-        sticman[15]  = "*                        /   \\/   \\    *";//15
-        sticman[16]  = "*                            /\\        *";
-        sticman[17]  = "*                           / |        *";
-        sticman[18]  = "*                         _/  |_       *";
-        print(sticman);
-        //27
-        sleep();
-        sticman[7]   = "*                           /\\         *";//7
-        sticman[8]   = "*                          |oo|        *";//8
-        sticman[9]   = "*                         (|..|)       *";//9
-        sticman[10]  = "*                          |--|        *";//10
-        sticman[11]  = "*                          \\__/        *";//11
-        sticman[12]  = "*                           ||         *";//12
-        sticman[13]  = "*                         -| *|-       *";//13
-        sticman[14]  = "*                        / |  | \\      *";//14
-        sticman[15]  = "*                       /   \\/   \\     *";//15
-        sticman[16]  = "*                           /\\         *";
-        sticman[17]  = "*                           | \\        *";
-        sticman[18]  = "*                          _|  \\_      *";
-        print(sticman);      
-        sleep(); 
-        sticman[7]   = "*                           /\\         *";//7
-        sticman[8]   = "*                          |oo|        *";//8
-        sticman[9]   = "*                         (|..|)       *";//9
-        sticman[10]  = "*                          |--|        *";//10
-        sticman[11]  = "*                          \\__/        *";//11
-        sticman[12]  = "*                           ||         *";//12
-        sticman[13]  = "*                         -| *|-       *";//13
-        sticman[14]  = "*                        / |  | \\      *";//14
-        sticman[15]  = "*                       /   \\/   \\     *";//15
-        sticman[16]  = "*                           /\\         *";
-        sticman[17]  = "*                           ||         *";
-        sticman[18]  = "*                          _||_        *";
-        print(sticman);
-        sleep();                                                   
-        sticman[7]   = "*                           /\\         *";//7
-        sticman[8]   = "*                          |oo|        *";//8
-        sticman[9]   = "*                         (|..|)       *";//9
-        sticman[10]  = "*                          |--|        *";//10
-        sticman[11]  = "*                          \\__/        *";//11
-        sticman[12]  = "*                           ||         *";//12
-        sticman[13]  = "*                         -| *|-       *";//13
-        sticman[14]  = "*                        / |  | \\      *";//14
-        sticman[15]  = "*                       /   \\/   \\     *";//15
-        sticman[16]  = "*                           /\\         *";
-        sticman[17]  = "*                          / |         *";
-        sticman[18]  = "*                        _/  |_        *";
-        print(sticman); 
-        //28 
-        sleep();
-        sticman[7]   = "*                          /\\          *";//7
-        sticman[8]   = "*                         |oo|         *";//8
-        sticman[9]   = "*                        (|..|)        *";//9
-        sticman[10]  = "*                         |--|         *";//10
-        sticman[11]  = "*                         \\__/         *";//11
-        sticman[12]  = "*                          ||          *";//12
-        sticman[13]  = "*                        -| *|-        *";//13
-        sticman[14]  = "*                       / |  | \\       *";//14
-        sticman[15]  = "*                      /   \\/   \\      *";//15
-        sticman[16]  = "*                          /\\          *";
-        sticman[17]  = "*                          | \\         *";
-        sticman[18]  = "*                         _|  \\_       *";      
-        print(sticman);  
-        sleep();                                                         
-        sticman[7]   = "*                          /\\          *";//7
-        sticman[8]   = "*                         |oo|         *";//8
-        sticman[9]   = "*                        (|..|)        *";//9
-        sticman[10]  = "*                         |--|         *";//10
-        sticman[11]  = "*                         \\__/         *";//11
-        sticman[12]  = "*                          ||          *";//12
-        sticman[13]  = "*                        -| *|-        *";//13
-        sticman[14]  = "*                       / |  | \\       *";//14
-        sticman[15]  = "*                      /   \\/   \\      *";//15
-        sticman[16]  = "*                          /\\          *";
-        sticman[17]  = "*                          ||          *";
-        sticman[18]  = "*                         _||_         *";
-        print(sticman);
-        sleep();                                                   
-        sticman[7]   = "*                          /\\          *";//7
-        sticman[8]   = "*                         |oo|         *";//8
-        sticman[9]   = "*                        (|..|)        *";//9
-        sticman[10]  = "*                         |--|         *";//10
-        sticman[11]  = "*                         \\__/         *";//11
-        sticman[12]  = "*                          ||          *";//12
-        sticman[13]  = "*                        -| *|-        *";//13
-        sticman[14]  = "*                       / |  | \\       *";//14
-        sticman[15]  = "*                      /   \\/   \\      *";//15
-        sticman[16]  = "*                          /\\          *";
-        sticman[17]  = "*                         / |          *";
-        sticman[18]  = "*                       _/  |_         *";
-        print(sticman);
-        sleep();
-        sticman[7]   = "*                         /\\           *";//7
-        sticman[8]   = "*                        |oo|          *";//8
-        sticman[9]   = "*                       (|..|)         *";//9
-        sticman[10]  = "*                        |--|          *";//10
-        sticman[11]  = "*                        \\__/          *";//11
-        sticman[12]  = "*                         ||           *";//12
-        sticman[13]  = "*                       -| *|-         *";//13
-        sticman[14]  = "*                      / |  | \\        *";//14
-        sticman[15]  = "*                     /   \\/   \\       *";//15
-        sticman[16]  = "*                         /\\           *";
-        sticman[17]  = "*                         | \\          *";
-        sticman[18]  = "*                        _|  \\_        *";      
-        print(sticman);
-        sleep();                                                         
-        sticman[7]   = "*                         /\\           *";//7
-        sticman[8]   = "*                        |oo|          *";//8
-        sticman[9]   = "*                       (|..|)         *";//9
-        sticman[10]  = "*                        |--|          *";//10
-        sticman[11]  = "*                        \\__/          *";//11
-        sticman[12]  = "*                         ||           *";//12
-        sticman[13]  = "*                       -| *|-         *";//13
-        sticman[14]  = "*                      / |  | \\        *";//14
-        sticman[15]  = "*                     /   \\/   \\       *";//15
-        sticman[16]  = "*                         /\\           *";
-        sticman[17]  = "*                         ||           *";
-        sticman[18]  = "*                        _||_          *";
-        print(sticman);
-        sleep();                                                   
-        sticman[7]   = "*                         /\\           *";//7
-        sticman[8]   = "*                        |oo|          *";//8
-        sticman[9]   = "*                       (|..|)         *";//9
-        sticman[10]  = "*                        |--|          *";//10
-        sticman[11]  = "*                        \\__/          *";//11
-        sticman[12]  = "*                         ||           *";//12
-        sticman[13]  = "*                       -| *|-         *";//13
-        sticman[14]  = "*                      / |  | \\        *";//14
-        sticman[15]  = "*                     /   \\/   \\       *";//15
-        sticman[16]  = "*                         /\\           *";
-        sticman[17]  = "*                        / |           *";
-        sticman[18]  = "*                      _/  |_          *";
-        print(sticman);
-        sleep();
-        sticman[7]   = "*                        /\\            *";//7
-        sticman[8]   = "*                       |oo|           *";//8
-        sticman[9]   = "*                      (|..|)          *";//9
-        sticman[10]  = "*                       |--|           *";//10
-        sticman[11]  = "*                       \\__/           *";//11
-        sticman[12]  = "*                        ||            *";//12
-        sticman[13]  = "*                      -| *|-          *";//13
-        sticman[14]  = "*                     / |  | \\         *";//14
-        sticman[15]  = "*                    /   \\/   \\        *";//15
-        sticman[16]  = "*                        /\\            *";
-        sticman[17]  = "*                        | \\           *";
-        sticman[18]  = "*                       _|  \\_         *";      
-        print(sticman);
-        sleep();                                                         
-        sticman[7]   = "*                        /\\            *";//7
-        sticman[8]   = "*                       |oo|           *";//8
-        sticman[9]   = "*                      (|..|)          *";//9
-        sticman[10]  = "*                       |--|           *";//10
-        sticman[11]  = "*                       \\__/           *";//11
-        sticman[12]  = "*                        ||            *";//12
-        sticman[13]  = "*                      -| *|-          *";//13
-        sticman[14]  = "*                     / |  | \\         *";//14
-        sticman[15]  = "*                    /   \\/   \\        *";//15
-        sticman[16]  = "*                        /\\            *";
-        sticman[17]  = "*                        ||            *";
-        sticman[18]  = "*                       _||_           *";
-        print(sticman);
-        sleep();                                                   
-        sticman[7]   = "*                        /\\            *";//7
-        sticman[8]   = "*                       |oo|           *";//8
-        sticman[9]   = "*                      (|..|)          *";//9
-        sticman[10]  = "*                       |--|           *";//10
-        sticman[11]  = "*                       \\__/           *";//11
-        sticman[12]  = "*                        ||            *";//12
-        sticman[13]  = "*                      -| *|-          *";//13
-        sticman[14]  = "*                     / |  | \\         *";//14
-        sticman[15]  = "*                    /   \\/   \\        *";//15
-        sticman[16]  = "*                        /\\            *";
-        sticman[17]  = "*                       / |            *";
-        sticman[18]  = "*                     _/  |_           *";
-        print(sticman);
-        sleep();
-        sticman[7]   = "*                       /\\             *";//7
-        sticman[8]   = "*                      |oo|            *";//8
-        sticman[9]   = "*                     (|..|)           *";//9
-        sticman[10]  = "*                      |--|            *";//10
-        sticman[11]  = "*                      \\__/            *";//11
-        sticman[12]  = "*                       ||             *";//12
-        sticman[13]  = "*                     -| *|-           *";//13
-        sticman[14]  = "*                    / |  | \\          *";//14
-        sticman[15]  = "*                   /   \\/   \\         *";//15
-        sticman[16]  = "*                       /\\             *";
-        sticman[17]  = "*                       | \\            *";
-        sticman[18]  = "*                      _|  \\_          *";      
-        print(sticman);
-        sleep();                                                         
-        sticman[7]   = "*                       /\\             *";//7
-        sticman[8]   = "*                      |oo|            *";//8
-        sticman[9]   = "*                     (|..|)           *";//9
-        sticman[10]  = "*                      |--|            *";//10
-        sticman[11]  = "*                      \\__/            *";//11
-        sticman[12]  = "*                       ||             *";//12
-        sticman[13]  = "*                     -| *|-           *";//13
-        sticman[14]  = "*                    / |  | \\          *";//14
-        sticman[15]  = "*                   /   \\/   \\         *";//15
-        sticman[16]  = "*                       /\\             *";
-        sticman[17]  = "*                       ||             *";
-        sticman[18]  = "*                      _||_            *";
-        print(sticman);
-        sleep();                                                   
-        sticman[7]   = "*                       /\\             *";//7
-        sticman[8]   = "*                      |oo|            *";//8
-        sticman[9]   = "*                     (|..|)           *";//9
-        sticman[10]  = "*                      |--|            *";//10
-        sticman[11]  = "*                      \\__/            *";//11
-        sticman[12]  = "*                       ||             *";//12
-        sticman[13]  = "*                     -| *|-           *";//13
-        sticman[14]  = "*                    / |  | \\          *";//14
-        sticman[15]  = "*                   /   \\/   \\         *";//15
-        sticman[16]  = "*                       /\\             *";
-        sticman[17]  = "*                      / |             *";
-        sticman[18]  = "*                    _/  |_            *";
-        print(sticman);
-        sleep();
-        sticman[7]   = "*                      /\\              *";//7
-        sticman[8]   = "*                     |oo|             *";//8
-        sticman[9]   = "*                    (|..|)            *";//9
-        sticman[10]  = "*                     |--|             *";//10
-        sticman[11]  = "*                     \\__/             *";//11
-        sticman[12]  = "*                      ||              *";//12
-        sticman[13]  = "*                    -| *|-            *";//13
-        sticman[14]  = "*                   / |  | \\           *";//14
-        sticman[15]  = "*                  /   \\/   \\          *";//15
-        sticman[16]  = "*                      /\\              *";
-        sticman[17]  = "*                      | \\             *";
-        sticman[18]  = "*                     _|  \\_           *";      
-        print(sticman);
-        sleep();                                                         
-        sticman[7]   = "*                      /\\              *";//7
-        sticman[8]   = "*                     |oo|             *";//8
-        sticman[9]   = "*                    (|..|)            *";//9
-        sticman[10]  = "*                     |--|             *";//10
-        sticman[11]  = "*                     \\__/             *";//11
-        sticman[12]  = "*                      ||              *";//12
-        sticman[13]  = "*                    -| *|-            *";//13
-        sticman[14]  = "*                   / |  | \\           *";//14
-        sticman[15]  = "*                  /   \\/   \\          *";//15
-        sticman[16]  = "*                      /\\              *";
-        sticman[17]  = "*                      ||              *";
-        sticman[18]  = "*                     _||_             *";
-        print(sticman);
-        sleep();                                                   
-        sticman[7]   = "*                      /\\              *";//7
-        sticman[8]   = "*                     |oo|             *";//8
-        sticman[9]   = "*                    (|..|)            *";//9
-        sticman[10]  = "*                     |--|             *";//10
-        sticman[11]  = "*                     \\__/             *";//11
-        sticman[12]  = "*                      ||              *";//12
-        sticman[13]  = "*                    -| *|-            *";//13
-        sticman[14]  = "*                   / |  | \\           *";//14
-        sticman[15]  = "*                  /   \\/   \\          *";//15
-        sticman[16]  = "*                      /\\              *";
-        sticman[17]  = "*                     / |              *";
-        sticman[18]  = "*                   _/  |_             *";
-        print(sticman);
-        sleep();
-        sticman[7]   = "*                     /\\               *";//7
-        sticman[8]   = "*                    |oo|              *";//8
-        sticman[9]   = "*                   (|..|)             *";//9
-        sticman[10]  = "*                    |--|              *";//10
-        sticman[11]  = "*                    \\__/              *";//11
-        sticman[12]  = "*                     ||               *";//12
-        sticman[13]  = "*                   -| *|-             *";//13
-        sticman[14]  = "*                  / |  | \\            *";//14
-        sticman[15]  = "*                 /   \\/   \\           *";//15
-        sticman[16]  = "*                     /\\               *";
-        sticman[17]  = "*                     | \\              *";
-        sticman[18]  = "*                    _|  \\_            *";      
-        print(sticman);
-        sleep();                                                         
-        sticman[7]   = "*                     /\\               *";//7
-        sticman[8]   = "*                    |oo|              *";//8
-        sticman[9]   = "*                   (|..|)             *";//9
-        sticman[10]  = "*                    |--|              *";//10
-        sticman[11]  = "*                    \\__/              *";//11
-        sticman[12]  = "*                     ||               *";//12
-        sticman[13]  = "*                   -| *|-             *";//13
-        sticman[14]  = "*                  / |  | \\            *";//14
-        sticman[15]  = "*                 /   \\/   \\           *";//15
-        sticman[16]  = "*                     /\\               *";
-        sticman[17]  = "*                     ||               *";
-        sticman[18]  = "*                    _||_              *";
-
-        print(sticman);
-        sleep();                                                   
-        sticman[7]   = "*                     /\\               *";//7
-        sticman[8]   = "*                    |oo|              *";//8
-        sticman[9]   = "*                   (|..|)             *";//9
-        sticman[10]  = "*                    |--|              *";//10
-        sticman[11]  = "*                    \\__/              *";//11
-        sticman[12]  = "*                     ||               *";//12
-        sticman[13]  = "*                   -| *|-             *";//13
-        sticman[14]  = "*                  / |  | \\            *";//14
-        sticman[15]  = "*                 /   \\/   \\           *";//15
-        sticman[16]  = "*                     /\\               *";
-        sticman[17]  = "*                    / |               *";
-        sticman[18]  = "*                  _/  |_              *";
-        print(sticman);
-        sleep();
-        sticman[7]   = "*                    /\\                *";//7
-        sticman[8]   = "*                   |oo|               *";//8
-        sticman[9]   = "*                  (|..|)              *";//9
-        sticman[10]  = "*                   |--|               *";//10
-        sticman[11]  = "*                   \\__/               *";//11
-        sticman[12]  = "*                    ||                *";//12
-        sticman[13]  = "*                  -| *|-              *";//13
-        sticman[14]  = "*                 / |  | \\             *";//14
-        sticman[15]  = "*                /   \\/   \\            *";//15
-        sticman[16]  = "*                    /\\                *";
-        sticman[17]  = "*                    | \\               *";
-        sticman[18]  = "*                   _|  \\_             *";      
-        print(sticman);
-        sleep();                                                         
-        sticman[7]   = "*                    /\\                *";//7
-        sticman[8]   = "*                   |oo|               *";//8
-        sticman[9]   = "*                  (|..|)              *";//9
-        sticman[10]  = "*                   |--|               *";//10
-        sticman[11]  = "*                   \\__/               *";//11
-        sticman[12]  = "*                    ||                *";//12
-        sticman[13]  = "*                  -| *|-              *";//13
-        sticman[14]  = "*                 / |  | \\             *";//14
-        sticman[15]  = "*                /   \\/   \\            *";//15
-        sticman[16]  = "*                    /\\                *";
-        sticman[17]  = "*                    ||                *";
-        sticman[18]  = "*                   _||_               *";
-        print(sticman);
-        sleep();                                                   
-        sticman[7]   = "*                    /\\                *";//7
-        sticman[8]   = "*                   |oo|               *";//8
-        sticman[9]   = "*                  (|..|)              *";//9
-        sticman[10]  = "*                   |--|               *";//10
-        sticman[11]  = "*                   \\__/               *";//11
-        sticman[12]  = "*                    ||                *";//12
-        sticman[13]  = "*                  -| *|-              *";//13
-        sticman[14]  = "*                 / |  | \\             *";//14
-        sticman[15]  = "*                /   \\/   \\            *";//15
-        sticman[16]  = "*                    /\\                *";
-        sticman[17]  = "*                   / |                *";
-        sticman[18]  = "*                 _/  |_               *";
-        print(sticman);
-        sleep();
-        sticman[7]   = "*                   /\\                 *";//7
-        sticman[8]   = "*                  |oo|                *";//8
-        sticman[9]   = "*                 (|..|)               *";//9
-        sticman[10]  = "*                  |--|                *";//10
-        sticman[11]  = "*                  \\__/                *";//11
-        sticman[12]  = "*                   ||                 *";//12
-        sticman[13]  = "*                 -| *|-               *";//13
-        sticman[14]  = "*                / |  | \\              *";//14
-        sticman[15]  = "*               /   \\/   \\             *";//15
-        sticman[16]  = "*                   /\\                 *";
-        sticman[17]  = "*                   | \\                *";
-        sticman[18]  = "*                  _|  \\_              *";      
-        print(sticman);
-        sleep();                                                         
-        sticman[7]   = "*                   /\\                 *";//7
-        sticman[8]   = "*                  |oo|                *";//8
-        sticman[9]   = "*                 (|..|)               *";//9
-        sticman[10]  = "*                  |--|                *";//10
-        sticman[11]  = "*                  \\__/                *";//11
-        sticman[12]  = "*                   ||                 *";//12
-        sticman[13]  = "*                 -| *|-               *";//13
-        sticman[14]  = "*                / |  | \\              *";//14
-        sticman[15]  = "*               /   \\/   \\             *";//15
-        sticman[16]  = "*                   /\\                 *";
-        sticman[17]  = "*                   ||                 *";
-        sticman[18]  = "*                  _||_                *";
-        print(sticman);
-        sleep();                                                   
-        sticman[7]   = "*                   /\\                 *";//7
-        sticman[8]   = "*                  |oo|                *";//8
-        sticman[9]   = "*                 (|..|)               *";//9
-        sticman[10]  = "*                  |--|                *";//10
-        sticman[11]  = "*                  \\__/                *";//11
-        sticman[12]  = "*                   ||                 *";//12
-        sticman[13]  = "*                 -| *|-               *";//13
-        sticman[14]  = "*                / |  | \\              *";//14
-        sticman[15]  = "*               /   \\/   \\             *";//15
-        sticman[16]  = "*                   /\\                 *";
-        sticman[17]  = "*                  / |                 *";
-        sticman[18]  = "*                _/  |_                *";
-        print(sticman);
-        sleep();
-        sticman[7]   = "*                  /\\                  *";//7
-        sticman[8]   = "*                 |oo|                 *";//8
-        sticman[9]   = "*                (|..|)                *";//9
-        sticman[10]  = "*                 |--|                 *";//10
-        sticman[11]  = "*                 \\__/                 *";//11
-        sticman[12]  = "*                  ||                  *";//12
-        sticman[13]  = "*                -| *|-                *";//13
-        sticman[14]  = "*               / |  | \\               *";//14
-        sticman[15]  = "*              /   \\/   \\              *";//15
-        sticman[16]  = "*                  /\\                  *";
-        sticman[17]  = "*                  | \\                 *";
-        sticman[18]  = "*                 _|  \\_               *";      
-        print(sticman);
-        sleep();                                                         
-        sticman[7]   = "*                  /\\                  *";//7
-        sticman[8]   = "*                 |oo|                 *";//8
-        sticman[9]   = "*                (|..|)                *";//9
-        sticman[10]  = "*                 |--|                 *";//10
-        sticman[11]  = "*                 \\__/                 *";//11
-        sticman[12]  = "*                  ||                  *";//12
-        sticman[13]  = "*                -| *|-                *";//13
-        sticman[14]  = "*               / |  | \\               *";//14
-        sticman[15]  = "*              /   \\/   \\              *";//15
-        sticman[16]  = "*                  /\\                  *";
-        sticman[17]  = "*                  ||                  *";
-        sticman[18]  = "*                 _||_                 *";
-        print(sticman);
-        sleep();                                                   
-        sticman[7]   = "*                  /\\                  *";//7
-        sticman[8]   = "*                 |oo|                 *";//8
-        sticman[9]   = "*                (|..|)                *";//9
-        sticman[10]  = "*                 |--|                 *";//10
-        sticman[11]  = "*                 \\__/                 *";//11
-        sticman[12]  = "*                  ||                  *";//12
-        sticman[13]  = "*                -| *|-                *";//13
-        sticman[14]  = "*               / |  | \\               *";//14
-        sticman[15]  = "*              /   \\/   \\              *";//15
-        sticman[16]  = "*                  /\\                  *";
-        sticman[17]  = "*                 / |                  *";
-        sticman[18]  = "*               _/  |_                 *";
-        print(sticman);
-        sleep();
-        sticman[7]   = "*                 /\\                   *";//7
-        sticman[8]   = "*                |oo|                  *";//8
-        sticman[9]   = "*               (|..|)                 *";//9
-        sticman[10]  = "*                |--|                  *";//10
-        sticman[11]  = "*                \\__/                  *";//11
-        sticman[12]  = "*                 ||                   *";//12
-        sticman[13]  = "*               -| *|-                 *";//13
-        sticman[14]  = "*              / |  | \\                *";//14
-        sticman[15]  = "*             /   \\/   \\               *";//15
-        sticman[16]  = "*                 /\\                   *";
-        sticman[17]  = "*                 | \\                  *";
-        sticman[18]  = "*                _|  \\_                *";      
-        print(sticman);
-        sleep();                                                         
-        sticman[7]   = "*                 /\\                   *";//7
-        sticman[8]   = "*                |oo|                  *";//8
-        sticman[9]   = "*               (|..|)                 *";//9
-        sticman[10]  = "*                |--|                  *";//10
-        sticman[11]  = "*                \\__/                  *";//11
-        sticman[12]  = "*                 ||                   *";//12
-        sticman[13]  = "*               -| *|-                 *";//13
-        sticman[14]  = "*              / |  | \\                *";//14
-        sticman[15]  = "*             /   \\/   \\               *";//15
-        sticman[16]  = "*                 /\\                   *";
-        sticman[17]  = "*                 ||                   *";
-        sticman[18]  = "*                _||_                  *";
-        print(sticman);
-        sleep();                                                   
-        sticman[7]   = "*                 /\\                   *";//7
-        sticman[8]   = "*                |oo|                  *";//8
-        sticman[9]   = "*               (|..|)                 *";//9
-        sticman[10]  = "*                |--|                  *";//10
-        sticman[11]  = "*                \\__/                  *";//11
-        sticman[12]  = "*                 ||                   *";//12
-        sticman[13]  = "*               -| *|-                 *";//13
-        sticman[14]  = "*              / |  | \\                *";//14
-        sticman[15]  = "*             /   \\/   \\               *";//15
-        sticman[16]  = "*                 /\\                   *";
-        sticman[17]  = "*                / |                   *";
-        sticman[18]  = "*              _/  |_                  *";
-        print(sticman);
-        sleep();
-        sticman[7]   = "*                /\\                    *";//7
-        sticman[8]   = "*               |oo|                   *";//8
-        sticman[9]   = "*              (|..|)                  *";//9
-        sticman[10]  = "*               |--|                   *";//10
-        sticman[11]  = "*               \\__/                   *";//11
-        sticman[12]  = "*                ||                    *";//12
-        sticman[13]  = "*              -| *|-                  *";//13
-        sticman[14]  = "*             / |  | \\                 *";//14
-        sticman[15]  = "*            /   \\/   \\                *";//15
-        sticman[16]  = "*                /\\                    *";
-        sticman[17]  = "*                | \\                   *";
-        sticman[18]  = "*               _|  \\_                 *";      
-        print(sticman);
-        sleep();                                                         
-        sticman[7]   = "*                /\\                    *";//7
-        sticman[8]   = "*               |oo|                   *";//8
-        sticman[9]   = "*              (|..|)                  *";//9
-        sticman[10]  = "*               |--|                   *";//10
-        sticman[11]  = "*               \\__/                   *";//11
-        sticman[12]  = "*                ||                    *";//12
-        sticman[13]  = "*              -| *|-                  *";//13
-        sticman[14]  = "*             / |  | \\                 *";//14
-        sticman[15]  = "*            /   \\/   \\                *";//15
-        sticman[16]  = "*                /\\                    *";
-        sticman[17]  = "*                ||                    *";
-        sticman[18]  = "*               _||_                   *";
-        print(sticman);
-        sleep();                                                   
-        sticman[7]   = "*                /\\                    *";//7
-        sticman[8]   = "*               |oo|                   *";//8
-        sticman[9]   = "*              (|..|)                  *";//9
-        sticman[10]  = "*               |--|                   *";//10
-        sticman[11]  = "*               \\__/                   *";//11
-        sticman[12]  = "*                ||                    *";//12
-        sticman[13]  = "*              -| *|-                  *";//13
-        sticman[14]  = "*             / |  | \\                 *";//14
-        sticman[15]  = "*            /   \\/   \\                *";//15
-        sticman[16]  = "*                /\\                    *";
-        sticman[17]  = "*               / |                    *";
-        sticman[18]  = "*             _/  |_                   *";
-        print(sticman);
-        sleep();
-        sticman[7]   = "*               /\\                     *";//7
-        sticman[8]   = "*              |oo|                    *";//8
-        sticman[9]   = "*             (|..|)                   *";//9
-        sticman[10]  = "*              |--|                    *";//10
-        sticman[11]  = "*              \\__/                    *";//11
-        sticman[12]  = "*               ||                     *";//12
-        sticman[13]  = "*             -| *|-                   *";//13
-        sticman[14]  = "*            / |  | \\                  *";//14
-        sticman[15]  = "*           /   \\/   \\                 *";//15
-        sticman[16]  = "*               /\\                     *";
-        sticman[17]  = "*               | \\                    *";
-        sticman[18]  = "*              _|  \\_                  *";      
-        print(sticman);
-        sleep();                                                         
-        sticman[7]   = "*               /\\                     *";//7
-        sticman[8]   = "*              |oo|                    *";//8
-        sticman[9]   = "*             (|..|)                   *";//9
-        sticman[10]  = "*              |--|                    *";//10
-        sticman[11]  = "*              \\__/                    *";//11
-        sticman[12]  = "*               ||                     *";//12
-        sticman[13]  = "*             -| *|-                   *";//13
-        sticman[14]  = "*            / |  | \\                  *";//14
-        sticman[15]  = "*           /   \\/   \\                 *";//15
-        sticman[16]  = "*               /\\                     *";
-        sticman[17]  = "*               ||                     *";
-        sticman[18]  = "*              _||_                    *";
-        print(sticman);
-        sleep();                                                   
-        sticman[7]   = "*               /\\                     *";//7
-        sticman[8]   = "*              |oo|                    *";//8
-        sticman[9]   = "*             (|..|)                   *";//9
-        sticman[10]  = "*              |--|                    *";//10
-        sticman[11]  = "*              \\__/                    *";//11
-        sticman[12]  = "*               ||                     *";//12
-        sticman[13]  = "*             -| *|-                   *";//13
-        sticman[14]  = "*            / |  | \\                  *";//14
-        sticman[15]  = "*           /   \\/   \\                 *";//15
-        sticman[16]  = "*               /\\                     *";
-        sticman[17]  = "*              / |                     *";
-        sticman[18]  = "*            _/  |_                    *";
-        print(sticman);
-        sleep();
-        sticman[7]   = "*              /\\                      *";//7
-        sticman[8]   = "*             |oo|                     *";//8
-        sticman[9]   = "*            (|..|)                    *";//9
-        sticman[10]  = "*             |--|                     *";//10
-        sticman[11]  = "*             \\__/                     *";//11
-        sticman[12]  = "*              ||                      *";//12
-        sticman[13]  = "*            -| *|-                    *";//13
-        sticman[14]  = "*           / |  | \\                   *";//14
-        sticman[15]  = "*          /   \\/   \\                  *";//15
-        sticman[16]  = "*              /\\                      *";
-        sticman[17]  = "*              | \\                     *";
-        sticman[18]  = "*             _|  \\_                   *";      
-        print(sticman);
-        sleep();                                                
-        sticman[7]   = "*              /\\                      *";//7
-        sticman[8]   = "*             |oo|                     *";//8
-        sticman[9]   = "*            (|..|)                    *";//9
-        sticman[10]  = "*             |--|                     *";//10
-        sticman[11]  = "*             \\__/                     *";//11
-        sticman[12]  = "*              ||                      *";//12
-        sticman[13]  = "*            -| *|-                    *";//13
-        sticman[14]  = "*           / |  | \\                   *";//14
-        sticman[15]  = "*          /   \\/   \\                  *";//15
-        sticman[16]  = "*              /\\                      *";
-        sticman[17]  = "*              ||                      *";
-        sticman[18]  = "*             _||_                     *";
-
-        print(sticman);
-        sleep();                                                 
-        sticman[7]   = "*              /\\                      *";//7
-        sticman[8]   = "*             |oo|                     *";//8
-        sticman[9]   = "*            (|..|)                    *";//9
-        sticman[10]  = "*             |--|                     *";//10
-        sticman[11]  = "*             \\__/                     *";//11
-        sticman[12]  = "*              ||                      *";//12
-        sticman[13]  = "*            -| *|-                    *";//13
-        sticman[14]  = "*           / |  | \\                   *";//14
-        sticman[15]  = "*          /   \\/   \\                  *";//15
-        sticman[16]  = "*              /\\                      *";
-        sticman[17]  = "*             / |                      *";
-        sticman[18]  = "*           _/  |_                     *";
-        print(sticman);
-        sleep();
-        sticman[7]   = "*             /\\                       *";//7
-        sticman[8]   = "*            |oo|                      *";//8
-        sticman[9]   = "*           (|..|)                     *";//9
-        sticman[10]  = "*            |--|                      *";//10
-        sticman[11]  = "*            \\__/                      *";//11
-        sticman[12]  = "*             ||                       *";//12
-        sticman[13]  = "*           -| *|-                     *";//13
-        sticman[14]  = "*          / |  | \\                    *";//14
-        sticman[15]  = "*         /   \\/   \\                   *";//15
-        sticman[16]  = "*             /\\                       *";
-        sticman[17]  = "*             | \\                      *";
-        sticman[18]  = "*            _|  \\_                    *";      
-        print(sticman);
-        sleep();
-        sticman[7]   = "*             /\\                       *";//7
-        sticman[8]   = "*            |oo|                      *";//8
-        sticman[9]   = "*           (|..|)                     *";//9
-        sticman[10]  = "*            |--|                      *";//10
-        sticman[11]  = "*            \\__/                      *";//11
-        sticman[12]  = "*             ||                       *";//12
-        sticman[13]  = "*           -| *|-                     *";//13
-        sticman[14]  = "*          / |  | \\                    *";//14
-        sticman[15]  = "*         /   \\/   \\                   *";//15
-        sticman[16]  = "*             /\\                       *";
-        sticman[17]  = "*             ||                       *";
-        sticman[18]  = "*            _||_                      *";
-
-        print(sticman);
-        sleep();
-        sticman[7]   = "*             /\\                       *";//7
-        sticman[8]   = "*            |oo|                      *";//8
-        sticman[9]   = "*           (|..|)                     *";//9
-        sticman[10]  = "*            |--|                      *";//10
-        sticman[11]  = "*            \\__/                      *";//11
-        sticman[12]  = "*             ||                       *";//12
-        sticman[13]  = "*           -| *|-                     *";//13
-        sticman[14]  = "*          / |  | \\                    *";//14
-        sticman[15]  = "*         /   \\/   \\                   *";//15
-        sticman[16]  = "*             /\\                       *";
-        sticman[17]  = "*            / |                       *";
-        sticman[18]  = "*          _/  |_                      *";
-        
-        print(sticman);
-        sleep();
-        sticman[7]   = "*            /\\                        *";//7
-        sticman[8]   = "*           |oo|                       *";//8
-        sticman[9]   = "*          (|..|)                      *";//9
-        sticman[10]  = "*           |--|                       *";//10
-        sticman[11]  = "*           \\__/                       *";//11
-        sticman[12]  = "*            ||                        *";//12
-        sticman[13]  = "*          -| *|-                      *";//13
-        sticman[14]  = "*         / |  | \\                     *";//14
-        sticman[15]  = "*        /   \\/   \\                    *";//15
-        sticman[16]  = "*            /\\                        *";
-        sticman[17]  = "*            | \\                       *";
-        sticman[18]  = "*           _|  \\_                     *";      
-        print(sticman);
-        sleep();
-        sticman[7]   = "*            /\\                        *";//7
-        sticman[8]   = "*           |oo|                       *";//8
-        sticman[9]   = "*          (|..|)                      *";//9
-        sticman[10]  = "*           |--|                       *";//10
-        sticman[11]  = "*           \\__/                       *";//11
-        sticman[12]  = "*            ||                        *";//12
-        sticman[13]  = "*          -| *|-                      *";//13
-        sticman[14]  = "*         / |  | \\                     *";//14
-        sticman[15]  = "*        /   \\/   \\                    *";//15
-        sticman[16]  = "*            /\\                        *";
-        sticman[17]  = "*            ||                        *";
-        sticman[18]  = "*           _||_                       *";
-
-        print(sticman);
-        sleep();
-        sticman[7]   = "*            /\\                        *";//7
-        sticman[8]   = "*           |oo|                       *";//8
-        sticman[9]   = "*          (|..|)                      *";//9
-        sticman[10]  = "*           |--|                       *";//10
-        sticman[11]  = "*           \\__/                       *";//11
-        sticman[12]  = "*            ||                        *";//12
-        sticman[13]  = "*          -| *|-                      *";//13
-        sticman[14]  = "*         / |  | \\                     *";//14
-        sticman[15]  = "*        /   \\/   \\                    *";//15
-        sticman[16]  = "*            /\\                        *";
-        sticman[17]  = "*           / |                        *";
-        sticman[18]  = "*         _/  |_                       *";
-        
-        print(sticman);
-        sleep();
-        sticman[7]   = "*           /\\                         *";//7
-        sticman[8]   = "*          |oo|                        *";//8
-        sticman[9]   = "*         (|..|)                       *";//9
-        sticman[10]  = "*          |--|                        *";//10
-        sticman[11]  = "*          \\__/                        *";//11
-        sticman[12]  = "*           ||                         *";//12
-        sticman[13]  = "*         -| *|-                       *";//13
-        sticman[14]  = "*        / |  | \\                      *";//14
-        sticman[15]  = "*       /   \\/   \\                     *";//15
-        sticman[16]  = "*           /\\                         *";
-        sticman[17]  = "*           | \\                        *";
-        sticman[18]  = "*          _|  \\_                      *";      
-
-        print(sticman);
-        sleep();
-        sticman[7]   = "*           /\\                         *";//7
-        sticman[8]   = "*          |oo|                        *";//8
-        sticman[9]   = "*         (|..|)                       *";//9
-        sticman[10]  = "*          |--|                        *";//10
-        sticman[11]  = "*          \\__/                        *";//11
-        sticman[12]  = "*           ||                         *";//12
-        sticman[13]  = "*         -| *|-                       *";//13
-        sticman[14]  = "*        / |  | \\                      *";//14
-        sticman[15]  = "*       /   \\/   \\                     *";//15
-        sticman[16]  = "*           /\\                         *";
-        sticman[17]  = "*           ||                         *";
-        sticman[18]  = "*          _||_                        *";
-
-        print(sticman);
-        sleep();
-        sticman[7]   = "*           /\\                         *";//7
-        sticman[8]   = "*          |oo|                        *";//8
-        sticman[9]   = "*         (|..|)                       *";//9
-        sticman[10]  = "*          |--|                        *";//10
-        sticman[11]  = "*          \\__/                        *";//11
-        sticman[12]  = "*           ||                         *";//12
-        sticman[13]  = "*         -| *|-                       *";//13
-        sticman[14]  = "*        / |  | \\                      *";//14
-        sticman[15]  = "*       /   \\/   \\                     *";//15
-        sticman[16]  = "*           /\\                         *";
-        sticman[17]  = "*          / |                         *";
-        sticman[18]  = "*        _/  |_                        *";
-        
-        print(sticman);
-        sleep();
-        sticman[7]   = "*          /\\                          *";//7
-        sticman[8]   = "*         |oo|                         *";//8
-        sticman[9]   = "*        (|..|)                        *";//9
-        sticman[10]  = "*         |--|                         *";//10
-        sticman[11]  = "*         \\__/                         *";//11
-        sticman[12]  = "*          ||                          *";//12
-        sticman[13]  = "*        -| *|-                        *";//13
-        sticman[14]  = "*       / |  | \\                       *";//14
-        sticman[15]  = "*      /   \\/   \\                      *";//15
-        sticman[16]  = "*          /\\                          *";
-        sticman[17]  = "*          | \\                         *";
-        sticman[18]  = "*         _|  \\_                       *";      
-
-        print(sticman);
-        sleep();
-        sticman[7]   = "*          /\\                          *";//7
-        sticman[8]   = "*         |oo|                         *";//8
-        sticman[9]   = "*        (|..|)                        *";//9
-        sticman[10]  = "*         |--|                         *";//10
-        sticman[11]  = "*         \\__/                         *";//11
-        sticman[12]  = "*          ||                          *";//12
-        sticman[13]  = "*        -| *|-                        *";//13
-        sticman[14]  = "*       / |  | \\                       *";//14
-        sticman[15]  = "*      /   \\/   \\                      *";//15
-        sticman[16]  = "*          /\\                          *";
-        sticman[17]  = "*          ||                          *";
-        sticman[18]  = "*         _||_                         *";
-
-        print(sticman);
-        sleep();
-        sticman[7]   = "*          /\\                          *";//7
-        sticman[8]   = "*         |oo|                         *";//8
-        sticman[9]   = "*        (|..|)                        *";//9
-        sticman[10]  = "*         |--|                         *";//10
-        sticman[11]  = "*         \\__/                         *";//11
-        sticman[12]  = "*          ||                          *";//12
-        sticman[13]  = "*        -| *|-                        *";//13
-        sticman[14]  = "*       / |  | \\                       *";//14
-        sticman[15]  = "*      /   \\/   \\                      *";//15
-        sticman[16]  = "*          /\\                          *";
-        sticman[17]  = "*         / |                          *";
-        sticman[18]  = "*       _/  |_                         *";
-        
-        print(sticman);
-        sleep();
-        sticman[7]   = "*         /\\                           *";//7
-        sticman[8]   = "*        |oo|                          *";//8
-        sticman[9]   = "*       (|..|)                         *";//9
-        sticman[10]  = "*        |--|                          *";//10
-        sticman[11]  = "*        \\__/                          *";//11
-        sticman[12]  = "*         ||                           *";//12
-        sticman[13]  = "*       -| *|-                         *";//13
-        sticman[14]  = "*      / |  | \\                        *";//14
-        sticman[15]  = "*     /   \\/   \\                       *";//15
-        sticman[16]  = "*         /\\                           *";
-        sticman[17]  = "*         | \\                          *";
-        sticman[18]  = "*        _|  \\_                        *";      
-
-        print(sticman);
-        sleep();
-        sticman[7]   = "*         /\\                           *";//7
-        sticman[8]   = "*        |oo|                          *";//8
-        sticman[9]   = "*       (|..|)                         *";//9
-        sticman[10]  = "*        |--|                          *";//10
-        sticman[11]  = "*        \\__/                          *";//11
-        sticman[12]  = "*         ||                           *";//12
-        sticman[13]  = "*       -| *|-                         *";//13
-        sticman[14]  = "*      / |  | \\                        *";//14
-        sticman[15]  = "*     /   \\/   \\                       *";//15
-        sticman[16]  = "*         /\\                           *";
-        sticman[17]  = "*         ||                           *";
-        sticman[18]  = "*        _||_                          *";
-
-        print(sticman);
-        sleep();
-        sticman[7]   = "*         /\\                           *";//7
-        sticman[8]   = "*        |oo|                          *";//8
-        sticman[9]   = "*       (|..|)                         *";//9
-        sticman[10]  = "*        |--|                          *";//10
-        sticman[11]  = "*        \\__/                          *";//11
-        sticman[12]  = "*         ||                           *";//12
-        sticman[13]  = "*       -| *|-                         *";//13
-        sticman[14]  = "*      / |  | \\                        *";//14
-        sticman[15]  = "*     /   \\/   \\                       *";//15
-        sticman[16]  = "*         /\\                           *";
-        sticman[17]  = "*        / |                           *";
-        sticman[18]  = "*      _/  |_                          *";
-        
-        print(sticman);
-        sleep();
-        sticman[7]   = "*        /\\                            *";//7
-        sticman[8]   = "*       |oo|                           *";//8
-        sticman[9]   = "*      (|..|)                          *";//9
-        sticman[10]  = "*       |--|                           *";//10
-        sticman[11]  = "*       \\__/                           *";//11
-        sticman[12]  = "*        ||                            *";//12
-        sticman[13]  = "*      -| *|-                          *";//13
-        sticman[14]  = "*     / |  | \\                         *";//14
-        sticman[15]  = "*    /   \\/   \\                        *";//15
-        sticman[16]  = "*        /\\                            *";
-        sticman[17]  = "*        | \\                           *";
-        sticman[18]  = "*       _|  \\_                         *";      
-
-        print(sticman);
-        sleep();
-        sticman[7]   = "*        /\\                            *";//7
-        sticman[8]   = "*       |oo|                           *";//8
-        sticman[9]   = "*      (|..|)                          *";//9
-        sticman[10]  = "*       |--|                           *";//10
-        sticman[11]  = "*       \\__/                           *";//11
-        sticman[12]  = "*        ||                            *";//12
-        sticman[13]  = "*      -| *|-                          *";//13
-        sticman[14]  = "*     / |  | \\                         *";//14
-        sticman[15]  = "*    /   \\/   \\                        *";//15
-        sticman[16]  = "*        /\\                            *";
-        sticman[17]  = "*        ||                            *";
-        sticman[18]  = "*       _||_                           *";
-        
-        print(sticman);
-        sleep();
-        sticman[7]   = "*        /\\                            *";//7
-        sticman[8]   = "*       |oo|                           *";//8
-        sticman[9]   = "*      (|..|)                          *";//9
-        sticman[10]  = "*       |--|                           *";//10
-        sticman[11]  = "*       \\__/                           *";//11
-        sticman[12]  = "*        ||                            *";//12
-        sticman[13]  = "*      -| *|-                          *";//13
-        sticman[14]  = "*     / |  | \\                         *";//14
-        sticman[15]  = "*    /   \\/   \\                        *";//15
-        sticman[16]  = "*        /\\                            *";
-        sticman[17]  = "*       / |                            *";
-        sticman[18]  = "*     _/  |_                           *";
-        
-        print(sticman);
-        sleep();
-        sticman[7]   = "*       /\\                             *";//7
-        sticman[8]   = "*      |oo|                            *";//8
-        sticman[9]   = "*     (|..|)                           *";//9
-        sticman[10]  = "*      |--|                            *";//10
-        sticman[11]  = "*      \\__/                            *";//11
-        sticman[12]  = "*       ||                             *";//12
-        sticman[13]  = "*     -| *|-                           *";//13
-        sticman[14]  = "*    / |  | \\                          *";//14
-        sticman[15]  = "*   /   \\/   \\                         *";//15
-        sticman[16]  = "*       /\\                             *";
-        sticman[17]  = "*       | \\                            *";
-        sticman[18]  = "*      _|  \\_                          *";      
-
-        print(sticman);
-        sleep();
-        sticman[7]   = "*       /\\                             *";//7  
-        sticman[8]   = "*      |oo|                            *";//8   
-        sticman[9]   = "*     (|..|)                           *";//9   
-        sticman[10]  = "*      |--|                            *";//10  
-        sticman[11]  = "*      \\__/                            *";//11 
-        sticman[12]  = "*       ||                             *";//12  
-        sticman[13]  = "*     -| *|-                           *";//13  
-        sticman[14]  = "*    / |  | \\                          *";//14 
-        sticman[15]  = "*   /   \\/   \\                         *";//15    
-        sticman[16]  = "*       /\\                             *"; 
-        sticman[17]  = "*       ||                             *";  
-        sticman[18]  = "*      _||_                            *";
-
-        print(sticman);
-        sleep();
-        sticman[7]   = "*       /\\                             *"; 
-        sticman[8]   = "*      |oo|                            *";  
-        sticman[9]   = "*     (|..|)                           *";  
-        sticman[10]  = "*      |--|                            *";  
-        sticman[11]  = "*      \\__/                            *"; 
-        sticman[12]  = "*       ||                             *";  
-        sticman[13]  = "*     -| *|-                           *";  
-        sticman[14]  = "*    / |  | \\                          *"; 
-        sticman[15]  = "*   /   \\/   \\                         *";    
-        sticman[16]  = "*       /\\                             *"; 
-        sticman[17]  = "*      / |                             *";  
-        sticman[18]  = "*    _/  |_                            *";  
-    
-        print(sticman);
-        sleep();
-        sticman[7]   = "*     /\\                               *";//7
-        sticman[8]   = "*    |oo|                              *";//8
-        sticman[9]   = "*   (|..|)                             *";//9
-        sticman[10]  = "*    |--|                              *";//10
-        sticman[11]  = "*    \\__/                              *";//11
-        sticman[12]  = "*     ||                               *";//12
-        sticman[13]  = "*   -| *|-                             *";//13
-        sticman[14]  = "*  / |  | \\                            *";//14
-        sticman[15]  = "* /   \\/   \\                           *";//15
-        sticman[16]  = "*     /\\                               *";
-        sticman[17]  = "*     | \\                              *";
-        sticman[18]  = "*    _|  \\_                            *";
-        print(sticman);
-        sleep();
-        sticman[7]   = "*     /\\                               *";//7
-        sticman[8]   = "*    |oo|                              *";//8
-        sticman[9]   = "*   (|..|)                             *";//9
-        sticman[10]  = "*    |--|                              *";//10
-        sticman[11]  = "*    \\__/                              *";//11
-        sticman[12]  = "*     ||                               *";//12
-        sticman[13]  = "*   -| *|-                             *";//13
-        sticman[14]  = "*  / |  | \\                            *";//14
-        sticman[15]  = "* /   \\/   \\                           *";//15
-        sticman[16]  = "*     /\\                               *";
-        sticman[17]  = "*     ||                               *";
-        sticman[18]  = "*    _||_                              *";
-
-        print(sticman);
-        sleep();
-        sticman[7]   = "*     /\\                               *";//7
-        sticman[8]   = "*    |oo|                              *";//8
-        sticman[9]   = "*   (|..|)                             *";//9
-        sticman[10]  = "*    |--|                              *";//10
-        sticman[11]  = "*    \\__/                              *";//11
-        sticman[12]  = "*     ||                               *";//12
-        sticman[13]  = "*   -| *|-                             *";//13
-        sticman[14]  = "*  / |  | \\                            *";//14
-        sticman[15]  = "* /   \\/   \\                           *";//15
-        sticman[16]  = "*     /\\                               *";
-        sticman[17]  = "*    / |                               *";
-        sticman[18]  = "*  _/  |_                              *";
-        print(sticman);
-        sleep();
-        sticman[7]   = "*    /\\                                *";//7
-        sticman[8]   = "*   |oo|                               *";//8
-        sticman[9]   = "*  (|..|)                              *";//9
-        sticman[10]  = "*   |--|                               *";//10
-        sticman[11]  = "*   \\__/                               *";//11
-        sticman[12]  = "*    ||                                *";//12
-        sticman[13]  = "*  -| *|-                              *";//13
-        sticman[14]  = "* / |  | \\                             *";//14
-        sticman[15]  = "*/   \\/   \\                            *";//15
-        sticman[16]  = "*    /\\                                *";
-        sticman[17]  = "*    | \\                               *";
-        sticman[18]  = "*   _|  \\_                             *";
-        print(sticman);
-        start_state(sticman);
+void print(vector<string> person)
+{
+    for (auto c : person)
+        cout << c << endl;
 }
