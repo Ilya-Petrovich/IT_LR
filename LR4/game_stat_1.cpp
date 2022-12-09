@@ -19,7 +19,7 @@ int main() {
 	cout << "Speed: " << V << endl;
 	cout << "Maximum speed: 110" << "\n";
 	cout << "\n";
-	cout << "Route info " << endl;
+	cout << "Route info" << endl;
 	cout << "Distance: " << S << " km" << endl;
 	cout << "----------------------------------------" << endl;
 	cout << "You have to drive a route 360 km long." << endl;
