@@ -73,7 +73,7 @@ void start()
 	}
 
 	else{
-		cout << "\nInvalid data.\n";
+		cout << "\nInvalid data.";
 		exit(0);
 	}
 }
@@ -81,7 +81,7 @@ void start()
 void speed_n()
 {
 	if (speed < 0) {
-		cout << "\nInvalid data.\n";
+		cout << "\nInvalid data.";
 		exit(0);
 	}
 	
