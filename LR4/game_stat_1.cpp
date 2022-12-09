@@ -18,7 +18,6 @@ int main()
 		cout << "\nRoute info";
 		cout << "\nDistance: 360 km";
 		cout << "\n----------------------------------------";
-
 		cout << "\nYou have to drive a route 360 km long.";
 		cout << "\nBut first you need to check if you have enough fuel.";
 
@@ -66,7 +65,7 @@ int main()
 
 			if (distance_traveled < 360) {
 				distance_left = distance - distance_traveled;
-				cout << "\nYou haven't reached destination point. " << distance_left << " km left.";
+				cout << "\nYou haven't reached destination point. " << distance_left << " km left." << endl;
 			}
 		}
 		else if (speed == 0) {
@@ -84,10 +83,10 @@ int main()
 			cout << "\nFuel remained: " << fuel_remained << " litres";
 			cout << "\n----------------------------------------";
 			distance_left = distance - distance_traveled;
-			cout << "\nYou haven't reached destination point. " << distance_left << " km left.";
+			cout << "\nYou haven't reached destination point. " << distance_left << " km left." << endl;
 		}
 		else {
-			cout << "\nInvalid data.";
+			cout << "\nInvalid data." << endl;
 		}
 	}
 	else {
