@@ -5,7 +5,6 @@ int main() {
 	double fuel, fuel_capacity = 50, fuel_consumption = 0, distance = 360;
 	cout << "How much fuel do you have at start? ";
 	cin >> fuel;
-	cout << endl;
 
 	if (fuel >= 0 and fuel <= 50) {
 		cout << "Car stats" << endl;
@@ -14,14 +13,14 @@ int main() {
 		cout << "Fuel consumption: " << fuel_consumption << endl;
 		cout << "Speed: " << speed << endl;
 		cout << "Maximum speed: " << maximum_speed << endl;
-		cout << endl;
+		cout << endl << endl;
 		cout << "Route info" << endl;
 		cout << "Distance: " << distance << " km" << endl;
 		cout << endl;
 		cout << "----------------------------------------" << endl;
 	}
 	else {
-		cout << "Invalid data.";
+		cout << "\nInvalid data." << endl;
 		exit(0);
 	}
 
@@ -36,7 +35,7 @@ int main() {
 	cin >> speed;
 
 	if (speed < 0) {
-		cout << "Invalid data.";
+		cout << "\nInvalid data." << endl;
 		exit(0);
 	}
 
