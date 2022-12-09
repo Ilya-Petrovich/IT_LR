@@ -4,7 +4,7 @@
 #include <string>
 using namespace std;
 
-int count = 0;
+
 
 void print(vector<string> sticman);
 void dance(vector<string> sticman)
@@ -41,7 +41,6 @@ void dance(vector<string> sticman)
 
 		
 		sticman[4] = "   \\__/  *";
-		sticman[5] = "    ||  / ";
 		sticman[6] = " --| *|-  ";
 		sticman[7] = "/  |  |   ";
 		sticman[8] = "    \\/    ";
@@ -49,63 +48,47 @@ void dance(vector<string> sticman)
 
 		
 		sticman[4] = "   \\__/  /";
-		sticman[5] = "    ||  / ";
 		sticman[6] = "---| *|-  ";
 		sticman[7] = "   |  |   ";
-		sticman[8] = "    \\/    ";
 		print(sticman);
 
 		
 		sticman[4] = "   \\__/  *";
 		sticman[5] = "\\   ||  / ";
 		sticman[6] = " --| *|-  ";
-		sticman[7] = "   |  |   ";
-		sticman[8] = "    \\/    ";
 		print(sticman);
 
 		
 		sticman[4] = "\\  \\__/  /";
 		sticman[5] = " \\  ||  / ";
 		sticman[6] = "  -| *|- ";
-		sticman[7] = "   |  |  ";
-		sticman[8] = "    \\/   ";
 		print(sticman);
 
 		
 		sticman[4] = "*  \\__/  *";
-		sticman[5] = " \\  ||  / ";
-		sticman[6] = "  -| *|-  ";
-		sticman[7] = "   |  |   ";
-		sticman[8] = "    \\/    ";
 		print(sticman);
 
 		
 		sticman[4] = "   \\__/   ";
 		sticman[5] = "*   ||   *";
 		sticman[6] = " --| *|-- ";
-		sticman[7] = "   |  |   ";
-		sticman[8] = "    \\/    ";
 		print(sticman);
 
 		
-		sticman[4] = "   \\__/   ";
+
 		sticman[5] = "    ||    ";
 		sticman[6] = "*--| *|--*";
-		sticman[7] = "   |  |   ";
-		sticman[8] = "    \\/    ";
 		print(sticman);
 
 		
-		sticman[4] = "   \\__/   ";
-		sticman[5] = "    ||    ";
+
 		sticman[6] = " --| *|-- ";
 		sticman[7] = "*  |  |  *";
-		sticman[8] = "    \\/    ";
+
 		print(sticman);
 
 		
-		sticman[4] = "   \\__/   ";
-		sticman[5] = "    ||    ";
+
 		sticman[6] = "  -| *|-  ";
 		sticman[7] = " / |  | \\ ";
 		sticman[8] = "*   \\/   *";
@@ -136,13 +119,11 @@ int main()
 	};
 	
 	dance(sticman);
-
 	return 0;
 }
 void print(vector<string> person)
 {
 	for (auto c : person)
 		cout << c << endl;
-	count+= 1;
 }
 
