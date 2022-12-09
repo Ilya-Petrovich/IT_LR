@@ -17,7 +17,7 @@ int main() {
 	cout << "Fuel capacity: " << Fuelcapacity << endl;
 	cout << "Fuel consumption: " << 0 << endl;
 	cout << "Speed: " << V << endl;
-	cout << "Maximum speed: " << maxV << endl;
+	cout << "Maximum speed: 110" << "\n";
 	cout << "\n";
 	cout << "Route info " << endl;
 	cout << "Distance: " << S << " km" << endl;
