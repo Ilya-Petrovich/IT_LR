@@ -28,7 +28,7 @@ int main() {
 
 	if (K > 0 && K < 25) {
 		K += 25;
-		cout << "Your speed before start: " << K << endl;
+		cout << "Your fuel before start: " << K << endl;
 		cout << "\n";
 	}
 
