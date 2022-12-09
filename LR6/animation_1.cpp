@@ -2,7 +2,9 @@
 #include <string>
 #include "unistd.h"
 
-void dancing(string* firstNum, const int amount, int t);
+using namespace std;
+
+void dancing(string* firstNum, int t);
 
 int main() {
 	string character[12] = {
@@ -19,24 +21,24 @@ int main() {
 		"    ||    ",
 		"   _||_   ",
 	};
-	string* pers0 = pers;
-	dancing(character, 12, 1000);
+	string* character0 = character;
+	dancing(character0, 1000);
 	return 0;
 }
 
-void dancing(string* firstNum, int amount, int t) {
-	string character[amount]
-	string* ptpers = pers;;
-	for (int i = 0; i < amount; i++, firstNum++) character[i] = *firstNum;
-	for (int i = 0; i < amount; i++) cout << character[i] << endl;
+void dancing(string* firstNum, int t) {
+	string character[12];
+	string* ptcharacter = character;;
+	for (int i = 0; i < 12; i++, firstNum++) character[i] = *firstNum;
+	for (int i = 0; i < 12; i++) cout << character[i] << endl;
 
 	for (int q = 0; q < 2; q++) {
 		//1
 		character[6] = " ---\\/--- ";
 		character[7] = "/   ||   \\";
 		character[8] = "    ||    ";
-	usleep(t);
-	//	system("cls");
+		//usleep(t);
+		//	system("cls");
 
 		for (int i = 0; i < 12; i++) {
 			cout << character[i] << endl;
@@ -45,8 +47,8 @@ void dancing(string* firstNum, int amount, int t) {
 		character[6] = "  --\\/---- ";
 		character[7] = " /  ||    ";
 		character[8] = "/   ||    ";
-	usleep(t);
-	//	system("cls");
+		//usleep(t);
+		//	system("cls");
 
 		for (int i = 0; i < 12; i++) {
 			cout << character[i] << endl;
@@ -55,8 +57,8 @@ void dancing(string* firstNum, int amount, int t) {
 		character[6] = " ---\\/---  ";
 		character[7] = "/   ||    ";
 		character[8] = "    ||    ";
-	usleep(t);
-	//	system("cls");
+		//usleep(t);
+		//	system("cls");
 
 		for (int i = 0; i < 12; i++) {
 			cout << character[i] << endl;
@@ -66,9 +68,9 @@ void dancing(string* firstNum, int amount, int t) {
 		character[5] = "  /|UU|\\/   ";
 		character[6] = "  --\\/--   ";
 		character[7] = " /  ||    ";
-		character[8] = "/   ||    " ;
-	usleep(t);
-	//	system("cls");
+		character[8] = "/   ||    ";
+		//usleep(t);
+		//	system("cls");
 
 		for (int i = 0; i < 12; i++) {
 			cout << character[i] << endl;
@@ -79,8 +81,8 @@ void dancing(string* firstNum, int amount, int t) {
 		character[6] = " ---\\/--  ";
 		character[7] = "/   ||    ";
 		character[8] = "    ||    ";
-	usleep(t);
-	//	system("cls");
+		//usleep(t);
+		//	system("cls");
 
 		for (int i = 0; i < 12; i++) {
 			cout << character[i] << endl;
@@ -91,8 +93,8 @@ void dancing(string* firstNum, int amount, int t) {
 		character[6] = "----\\/--  ";
 		character[7] = "    ||    ";
 		character[8] = "    ||    ";
-	usleep(t);
-	//	system("cls");
+		//usleep(t);
+		//	system("cls");
 
 		for (int i = 0; i < 12; i++) {
 			cout << character[i] << endl;
@@ -103,8 +105,8 @@ void dancing(string* firstNum, int amount, int t) {
 		character[6] = " ---\\/--  ";
 		character[7] = "    ||    ";
 		character[8] = "    ||    ";
-	usleep(t);
-	//	system("cls");
+		//usleep(t);
+		//	system("cls");
 
 		for (int i = 0; i < 12; i++) {
 			cout << character[i] << endl;
@@ -115,8 +117,8 @@ void dancing(string* firstNum, int amount, int t) {
 		character[6] = "  --\\/--  ";
 		character[7] = "    ||    ";
 		character[8] = "    ||    ";
-	usleep(t);
-	//	system("cls");
+		//usleep(t);
+		//	system("cls");
 
 		for (int i = 0; i < 12; i++) {
 			cout << character[i] << endl;
@@ -126,8 +128,8 @@ void dancing(string* firstNum, int amount, int t) {
 		character[5] = " \\/|UU|\\/  ";
 		character[6] = "  --\\/--  ";
 		character[7] = "    ||    ";
-	usleep(t);
-	//	system("cls");
+		//usleep(t);
+		//	system("cls");
 
 		for (int i = 0; i < 12; i++) {
 			cout << character[i] << endl;
@@ -135,11 +137,11 @@ void dancing(string* firstNum, int amount, int t) {
 		//10
 		character[4] = "  \\|  |/  ";
 		character[5] = "* /|UU|\\ *  ";
-		character[6] = " ---\\/--- " ;
+		character[6] = " ---\\/--- ";
 		character[7] = "    ||    ";
-		character[8] = "    ||    " ;
-	usleep(t);
-	//	system("cls");
+		character[8] = "    ||    ";
+		//usleep(t);
+		//	system("cls");
 
 		for (int i = 0; i < 12; i++) {
 			cout << character[i] << endl;
@@ -149,8 +151,8 @@ void dancing(string* firstNum, int amount, int t) {
 		character[5] = "  /|UU|\\  ";
 		character[6] = "*---\\/---* ";
 		character[7] = "    ||    ";
-	usleep(t);
-	//	system("cls");
+		//usleep(t);
+		//	system("cls");
 
 		for (int i = 0; i < 12; i++) {
 			cout << character[i] << endl;
@@ -159,8 +161,8 @@ void dancing(string* firstNum, int amount, int t) {
 		character[6] = " ---\\/--- ";
 		character[7] = "*   ||   * ";
 		character[8] = "    ||    ";
-	usleep(t);
-	//	system("cls");
+		//usleep(t);
+		//	system("cls");
 
 		for (int i = 0; i < 12; i++) {
 			cout << character[i] << endl;
@@ -169,8 +171,8 @@ void dancing(string* firstNum, int amount, int t) {
 		character[6] = "  --\\/--  ";
 		character[7] = " /  ||  \\  ";
 		character[8] = "*   ||   *  ";
-	usleep(t);
-	//	system("cls");
+		//usleep(t);
+		//	system("cls");
 
 		for (int i = 0; i < 12; i++) {
 			cout << character[i] << endl;
@@ -178,8 +180,8 @@ void dancing(string* firstNum, int amount, int t) {
 		//14
 		character[7] = " /  ||  \\   ";
 		character[8] = "/   ||   \\ ";
-	usleep(t);
-	//	system("cls");
+		//usleep(t);
+		//	system("cls");
 
 		for (int i = 0; i < 12; i++) {
 			cout << character[i] << endl;

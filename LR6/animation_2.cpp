@@ -546,7 +546,7 @@ void jump(string* firstEl, int col, int t) {
 		//Sleep(t);
 	}
 	//system("cls");
-	for (int q = 13; q <= 16; q++) {
+	for (int q = 13; q <= 17; q++) {
 		character[q - 11] = emptyStr;
 		for (int i = 0; i < 20; i++) cout << character[i] << endl;
 		character[q - 9] = a;
@@ -564,19 +564,19 @@ void jump(string* firstEl, int col, int t) {
 		//Sleep(t);
 		//system("cls");
 	}
-	character[6] = emptyStr;
 	character[7] = emptyStr;
 	character[8] = emptyStr;
 	character[9] = emptyStr;
-	character[10] = a;
-	character[11] = b;
-	character[12] = c;
-	character[13] = d;
-	character[14] = e;
-	character[15] = f;
-	character[16] = g;
-	character[17] = h;
-	character[18] = "*   _\\/_   " + space;
+	character[10] = emptyStr;
+	character[11] = a;
+	character[12] = b;
+	character[13] = c;
+	character[14] = d;
+	character[15] = e;
+	character[16] = f;
+	character[17] = g;
+	character[18] = h;
+	character[19] = "*   _\\/_   " + space;
 	show(ptcharacter, 20, t);
 	for (int i = 0; i < 20; i++, firstEl++) ((i >= 0 && i < 7) || (i == 19)) ?
 		character[i] = *firstEl : character[i] = "*" + *firstEl + space;
