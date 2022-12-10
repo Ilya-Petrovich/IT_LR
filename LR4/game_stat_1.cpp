@@ -20,7 +20,7 @@ int main() {
 		cout << "\n";
 		cout << "Route info\n";
 		cout << "Distance: 360 km\n";
-		cout << "---------------------------------------\n";
+		cout << "----------------------------------------\n";
 		cout << "You have to drive a route 360 km long.\n";
 		cout << "But first you need to check if you have enough fuel.\n";
 		cout << "\n";
@@ -47,7 +47,7 @@ int main() {
 			cout << "Time spent: 0 sec\n";
 			cout << "Fuel consumed: 0 litres\n";
 			cout << "Fuel remained: " << x << " litres\n";
-			cout << "---------------------------------------\n";
+			cout << "----------------------------------------\n";
 			cout << "You haven't reached destination point. 360 km left." << endl;
 		}
 		else if (v > 0) {
@@ -87,7 +87,7 @@ int main() {
 				cout << "Fuel remained: 0 litres\n";
 			}
 
-			cout << "---------------------------------------\n";
+			cout << "----------------------------------------\n";
 
 			if (w == 360) {
 				cout << "Congratulations! You have reached destination point!" << endl;
