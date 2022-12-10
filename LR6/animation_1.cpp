@@ -1,5 +1,6 @@
 #include <iostream>
-#include "unistd.h"
+#include "windows.h"
+#include <fstream>
 
 using namespace std;
 
@@ -17,7 +18,7 @@ public:
 	{
 		for (int i = 0; i < 12; i++)
 		{
-			for (int j = 0; j < 11; j++)
+			for (int j = 0; j < 12; j++)
 			{
 				if (j != 0)
 					cout << BaseState[i][j];
@@ -37,7 +38,7 @@ public:
 			BaseState[7][10] = " ";
 			BaseState[7][9].swap(BaseState[7][10]);
 			BaseState[8][1] = " ";
-			BaseState[8][10] = "";
+			BaseState[8][10] = " ";
 
 			AnimNum++;
 			break;
@@ -170,7 +171,7 @@ int main()
 	Person person;
 
 	for (int i = 0; i < 12; i++)
-		person.BaseState[i] = new string[11];
+		person.BaseState[i] = new string[12];
 
 	string strs[12];
 
@@ -189,24 +190,11 @@ int main()
 
 	for (size_t i = 0; i < 12; i++)
 	{
-		for (size_t j = 0; j < 10; j++)
+		for (size_t j = 0; j < 11; j++)
 		{
 			person.BaseState[i][j] = strs[i][j];
 		}
 	}
-
-	person.BaseState[8][10] = "\\";
-	person.BaseState[9][10] = " ";
-	person.BaseState[10][10] = " ";
-	person.BaseState[11][10] = " ";
-	person.BaseState[0][10] = " ";
-	person.BaseState[1][10] = " ";
-	person.BaseState[2][10] = " ";
-	person.BaseState[3][10] = " ";
-	person.BaseState[4][10] = " ";
-	person.BaseState[5][10] = " ";
-	person.BaseState[6][10] = " ";
-	person.BaseState[7][10] = " ";
 
 	person.Print();
 
