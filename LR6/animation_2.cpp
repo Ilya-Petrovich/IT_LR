@@ -9,7 +9,7 @@ void ShowArray(char pers[][11], int height, int width);
 void ShowArray(char pers[][11], int height, int width, int l);
 void Dance(char pers[][11], int time);
 void SSS(char pers[][11], int time);
-void Menu(char pers[][11], int time);
+void Menu();
 void sweep(string r, string l);
 void run();
 void down(int time, int l);
@@ -19,7 +19,7 @@ void monetka(int time);
 #ifdef OPEN
 int main() {
 	const int h = 12, w = 11, time = 500;
-	char ram[h][w] {
+	char pers[h][w] {
 		{"   _[]_   "},
 		{"   |~~|   "},
 		{"   |oq|   "},
@@ -34,9 +34,41 @@ int main() {
 		{"   _||_   "}
 	};
 
-	Menu(ram, time);
-
+	Menu();
+	int a = 0;
+	while (a != 5) {
+		cin >> a;
+		switch (a) {
+		case 1:
+			//system("cls");
+			Dance(pers, time);
+			Menu();
+			break;
+		case 2:
+			//system("cls");
+			run();
+			Menu();
+			break;
+		case 3:
+			//system("cls");
+			down(time, 1);
+			fly(1);
+			fly(2);
+			down(time, 2);
+			Menu();
+			break;
+		case 4:
+			//system("cls");
+			monetka(750);
+			Menu();
+			break;
+		case 5:
+			break;
+		}
+	}
 }
+
+
 
 void ShowArray(char pers[][11], int height, int width) {
 	cout << string(40, '*') << endl;
@@ -180,71 +212,51 @@ void SSS(char pers[][11], int time) {
 	//system("cls");
 }
 
-void Menu(char pers[][11], int time) {
-	cout << "Choose animation:";
-	cout << "\nDance:\t\t\t1";
-	cout << "\nRun:\t\t\t2";
-	cout << "\nSit down and jump:\t3";
-	cout << "\nThrow a ball:\t\t4";
-	int a;
-	cout << "\n\nEnter 5 for exit.\n";
-	cin >> a;
-	switch (a) {
-	case 1:
-		system("cls");
-		Dance(pers, time);
-		Menu(pers, time);
-		break;
-	case 2:
-		system("cls");
-		run();
-		Menu(pers, time);
-		break;
-	case 3:
-		system("cls");
-		down(time, 1);
-		fly(1);
-		fly(2);
-		down(time, 2);
-		Menu(pers, time);
-		break;
-	case 4:
-		system("cls");
-		monetka(750);
-		Menu(pers, time);
-		break;
-	case 5:
-		break;
-	default:
-		cout << "Are you stupid?\n";
-	}
+void Menu() {
+	cout << "Choose animation:" << endl;
+	cout << "Dance: \t\t\t1" << endl;
+	cout << "Run: \t\t\t2" << endl;
+	cout << "Sit down and jump: \t3" << endl;
+	cout << "Throw a ball: \t\t4" << endl << endl;
+	cout << "Enter 5 for exit." << endl;
 }
 
-int c = 0;
+//int c = 0;
 
 void run() {
 	for (int i = 0, j = 28; i <= 28; i++, j--) {
 		string right = string(i, ' ');
 		string left = string(j, ' ');
+		int k = 0;
 
-		for (int k = 0; k < 3; k++) {
+		if (i == 0) {
+			k = 1;
+		}
+
+
+
+		for (; k < 3; k++) {
+			if (i == 28 and k == 2) {
+				break;
+			}
+
 			sweep(right, left);
-			//c++;
+
 			switch (k) {
-			case 2:
+			case 0:
 				cout << "*" << right << "   / |    " << left << "*\n";
 				cout << "*" << right << " _/  |_   " << left << "*\n";
 				cout << string(40, '*') << endl;
 				//Sleep(100); system("cls");
 				break;
 
-			case 0:
+			case 1:
 				cout << "*" << right << "    ||    " << left << "*\n";
 				cout << "*" << right << "   _||_   " << left << "*\n";
 				cout << string(40, '*') << endl;
 				//Sleep(100); system("cls");
 				break;
-			case 1:
+			case 2:
 				cout << "*" << right << "    | \\   " << left << "*\n";
 				cout << "*" << right << "   _|  \\_ " << left << "*\n";
 				cout << string(40, '*') << endl;
@@ -254,13 +266,23 @@ void run() {
 		}
 	}
 
-	for (int i = 28, j = 0; j < 28; j++, i--) {
+	for (int i = 28, j = 0; j <= 28; j++, i--) {
 		string right = string(i, ' ');
 		string left = string(j, ' ');
 
+
+
 		for (int k = 0; k < 3; k++) {
-			sweep(right, left);
 			//c++;
+			if (j == 0 and !(k == 2)) {
+				continue;
+			}
+
+			if (j==28 and k == 2) {
+				break;
+			}
+
+			sweep(right, left);
 
 			switch (k) {
 			case 2:
@@ -270,13 +292,13 @@ void run() {
 				//Sleep(100); system("cls");
 				break;
 
-			case 0:
+			case 1:
 				cout << "*" << right << "    ||    " << left << "*\n";
 				cout << "*" << right << "   _||_   " << left << "*\n";
 				cout << string(40, '*') << endl;
 				//Sleep(100); system("cls");
 				break;
-			case 1:
+			case 0:
 				cout << "*" << right << "    | \\   " << left << "*\n";
 				cout << "*" << right << "   _|  \\_ " << left << "*\n";
 				cout << string(40, '*') << endl;
@@ -284,13 +306,13 @@ void run() {
 				break;
 			}
 		}
-	}
-	sweep(string(0, ' '), string(28, ' '));
-	cout << "*"  << "    ||    " << string(28, ' ') << "*\n";
-	cout << "*"  << "   _||_   " << string(28, ' ') << "*\n";
-	cout << string(40, '*') << endl;
-	//cout << c + 1 << endl;
 
+		/*sweep(string(0, ' '), string(28, ' '));
+		cout << "*" << "    ||    " << string(28, ' ') << "*\n";
+		cout << "*" << "   _||_   " << string(28, ' ') << "*\n";
+		cout << string(40, '*') << endl;*/
+		//cout << c + 1 << endl;
+	}
 }
 
 void sweep(string r, string l) {
@@ -444,7 +466,7 @@ void fly(int p) {
 		}
 	} else {
 		int l = 3, ll = 3;
-		for (int i = 0; i < 5; i++) {
+		for (int i = 0; i < 4; i++) {
 			cout << string(40, '*') << endl;
 
 			for (int j = 0; j < l; j++) {
