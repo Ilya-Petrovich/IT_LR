@@ -1,28 +1,8 @@
 #include <iostream>
 #include <unistd.h>
-char a1[41] = "****************************************";
-char a2[41] = "*                                      *";
-char a3[41] = "*                                      *";
-char a4[41] = "*                                      *";
-char a5[41] = "*                                      *";
-char a6[41] = "*                                      *";
-char a7[41] = "*                                      *";
-char a8[41] = "*   _[]_                               *";
-char a9[41] = "*   |~~|                               *";
-char a10[41] = "*   |oq|                               *";
-char a11[41] = "*  (|<>|)                              *";
-char a12[41] = "*   \\--/                               *";
-char a13[41] = "*   _><_                               *";
-char a14[41] = "*  -\\. /-                              *";
-char a15[41] = "* / |. | \\                             *";
-char a16[41] = "*/  |. |  \\                            *";
-char a17[41] = "*   |__|                               *";
-char a18[41] = "*    ||                                *";
-char a19[41] = "*   _||_                               *";
-char a20[41] = "****************************************";
 unsigned short menu(unsigned short& a) {
-    std::cout << "Choose animation:\nDance:              1\nRun:                2\n";
-    std::cout << "Sit down and jump:  3\nThrow a ball:       4\n\nEnter 5 for exit.\n"; std::cin >> a;
+    std::cout << "Choose animation:\nDance:                 1\nRun:                   2\n";
+    std::cout << "Sit down and jump:     3\nThrow a ball:          4\n\nEnter 5 for exit.\n"; std::cin >> a;
     return a;
 }
 void clear() { /*system("cls");*/ }
