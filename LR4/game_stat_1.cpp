@@ -7,7 +7,7 @@ int main() {
     float fuel_consumption = 0, distance = 360, distC, speed = 0;
     int time;
     int max_speed = 110;
-    cout << "How much fuel do you have at start? "; 
+    cout << "How much fuel do you have at start? ";
     cin >> fuel;
     if (fuel >= 0 and fuel <= 50) {
         cout << "\nCar stats" << endl;
@@ -71,10 +71,10 @@ int main() {
             cout << "\nInvalid data." << endl;
             return 0;
         }
-            cout << "\nDistination result" << endl;
-            cout << "Distance traveled: " << dist_t << " km" << endl;
-            cout << "Time spent: " << time << " sec" << endl;
-            cout << "Fuel consumed: " << f_consumed << " litres" << endl;
+        cout << "\nDestination result" << endl;
+        cout << "Distance traveled: " << dist_t << " km" << endl;
+        cout << "Time spent: " << time << " sec" << endl;
+        cout << "Fuel consumed: " << f_consumed << " litres" << endl;
         if (dist_t >= distance) {
             cout << "Fuel remained: " << fuel - f_consumed << " litres" << endl;
             cout << "----------------------------------------" << endl;
@@ -90,8 +90,8 @@ int main() {
             cout << "----------------------------------------" << endl;
             cout << "You haven't reached destination point. " << distance - dist_t << " km left." << endl;
         }
-            
-            
+
+
     }
 
 }
