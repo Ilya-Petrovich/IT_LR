@@ -37,7 +37,7 @@ void body() {
     std::cout << "*" << "   |__|                               *" << std::endl;
 }
 void dance() {
-    for (int k = 0; k < 28; k++) {
+    for (int k = 0; k <= 28; k++) {
         clear();
         std::cout << std::string(40, '*') << std::endl;
         head();
