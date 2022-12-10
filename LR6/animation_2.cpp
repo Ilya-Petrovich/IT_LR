@@ -459,7 +459,7 @@ void Throw_a_ball() {
     std::cout << "*" << "   \\--/                               *" << std::endl;
     std::cout << "*" << "   _><_                               *" << std::endl;
     std::cout << "*" << "  -\\. /--                             *" << std::endl;
-    std::cout << "*" << " / |. |   \\                           *" << std::endl;
+    std::cout << "*" << " / |. |  \\                            *" << std::endl;
     std::cout << "*" << "/  |. |                               *" << std::endl;
     legs();
     std::cout << std::string(40, '*') << '\n'; /*Sleep(100)*/; clear();
