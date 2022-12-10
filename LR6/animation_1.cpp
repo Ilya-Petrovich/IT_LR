@@ -1,11 +1,11 @@
 ﻿#include <iostream>
-//#include <unistd.h>
+#include <unistd.h>
 
 using namespace std;
 
 //void sleep() {
 //	Sleep(1000);
-//	system("cls");
+	//system("cls");
 //}
 
 void print(string character[12]) {
@@ -28,7 +28,7 @@ void change_character(string character[12], int state) {
 		break;
 	case 3:
 		character[5] = "   _><_  /",//5
-			character[6] = R"(  -\. /-- )";//6
+			character[6] = R"( --\. /-- )";//6
 		character[7] = R"(/  |. |   )";//7
 		character[8] = R"(   |. |   )";//8
 		break;
@@ -129,6 +129,7 @@ int main() {
 		"   |__|   ",//9
 		"    ||    ",//10
 		"   _||_   " };//11
+	string s;
 	for (int i = 0; i < 2; i++) {
 		for (int j = 1; j <= 14; j++) {
 			print(character);
