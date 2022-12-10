@@ -27,7 +27,7 @@ int main() {
 		}
 		else if (speed == 0) {
 			cout << "Your speed before start: 0 km/h\n\nFuel consumption with chosen speed: 0 litres per 100 km";
-			cout << "\n\nDestination result\nDistance traveled: 0\nTime spent: 0 sec\nFuel consumed: 0 litres";
+			cout << "\n\nDestination result\nDistance traveled: 0 km\nTime spent: 0 sec\nFuel consumed: 0 litres";
 			cout << "\nFuel remained: " << fuel << " litres";
 			cout << "\n----------------------------------------\n";
 			cout << "You haven't reached destination point. 360 km left.\n";
