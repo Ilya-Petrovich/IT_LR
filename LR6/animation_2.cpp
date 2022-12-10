@@ -112,7 +112,7 @@ void dance() {
             std::cout << "*   \\--/                               *\n";
             std::cout << "*   _><_                               *\n";
             std::cout << "**--\\. /--*                            *\n";
-            std::cout << "*   |  |                               *\n";
+            std::cout << "*   |. |                               *\n";
             std::cout << "*   |. |                               *\n"; break; }
         case 12: {
             std::cout << "*   \\--/                               *\n";
