@@ -183,10 +183,11 @@ void run() {
             magic(pravo, levo);
             switch (k) {
             case 0: {
-                std::cout << "*" << pravo << "   / |   " << levo << " *\n";
-                std::cout << "*" << pravo << " _/  |_   " << levo << "*\n";
-                std::cout << std::string(40, '*') << '\n'; /*Sleep(100)*/; clear(); break;
-            }
+                if (i != 28) {
+                    std::cout << "*" << pravo << "   / |   " << levo << " *\n";
+                    std::cout << "*" << pravo << " _/  |_   " << levo << "*\n";
+                    std::cout << std::string(40, '*') << '\n'; /*Sleep(100)*/; clear(); break;
+                }}
             case 1: {
                 std::cout << "*" << pravo << "    ||    " << levo << "*\n";
                 std::cout << "*" << pravo << "   _||_   " << levo << "*\n";
