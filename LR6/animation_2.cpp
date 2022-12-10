@@ -328,10 +328,10 @@ public:
 			BaseState[Width - 2][6] = "";
 			BaseState[Width - 2][4] = "_";
 			BaseState[Width - 2][7] = "_";
-			BaseState[Width - 3][5] = "\\";
-			BaseState[Width - 3][6] = "/";
-			BaseState[Width - 3][4] = "_";
-			BaseState[Width - 3][7] = "_";
+			BaseState[Width - 2][5] = "\\";
+			BaseState[Width - 2][6] = "/";
+			// BaseState[Width - 3][4] = "_";
+			// BaseState[Width - 3][7] = "_";
 
 			AnimNum++;
 			break;
@@ -504,7 +504,7 @@ void PersonSit(Location location, Person person)
 	{
 		person.SitAnimation();
 		location.Reload();
-		location.Load(person.BaseState, person.Width - 2 + i * 2, person.Height, 1, 9 - i * 2);
+		location.Load(person.BaseState, person.Width - 1 + i, person.Height, 0, 8 - i);
 		// CursorToStart();
 		location.Print();
 		// Sleep(Speed);
@@ -517,7 +517,7 @@ void PersonJump(Location location, Person person)
 	{
 		person.JumpAnimation();
 		location.Reload();
-		PrintLocation(location, person, 1, 7 - i);
+		PrintLocation(location, person, 0, 7 - i);
 		// Sleep(Speed);
 	}
 
@@ -525,7 +525,7 @@ void PersonJump(Location location, Person person)
 	{
 		person.FallAnimation();
 		location.Reload();
-		PrintLocation(location, person, 1, 3 + i);
+		PrintLocation(location, person, 0, 3 + i);
 		// Sleep(Speed);
 	}
 }
@@ -677,7 +677,7 @@ int main()
 			{
 				person.SitAnimation();
 				location.Reload();
-				location.Load(person.BaseState, person.Width - 2 + i * 2, person.Height, 1, 9 - i * 2);
+				location.Load(person.BaseState, person.Width - 1 + i, person.Height, 0, 8 - i);
 				// Sleep(Speed);
 				// CursorToStart();
 				if (i == 0)
