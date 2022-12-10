@@ -29,7 +29,8 @@ int main() {
 			x = x + 25;
 			cout << "Your fuel before start: " << x << "\n";
 			cout << "\n";
-		} else {
+		}
+		else {
 			x = x;
 		}
 
@@ -37,7 +38,7 @@ int main() {
 		cin >> v;
 
 		if (v == 0) {
-			cout << "Your speed before start: 0 km/h";
+			cout << "Your speed before start: 0 km/h\n";
 			cout << "\n";
 			cout << "Fuel consumption with chosen speed: 0 litres per 100 km\n";
 			cout << "\n";
@@ -48,11 +49,13 @@ int main() {
 			cout << "Fuel remained: " << x << " litres\n";
 			cout << "---------------------------------------\n";
 			cout << "You haven't reached destination point. 360 km left." << endl;
-		} else if (v > 0) {
+		}
+		else if (v > 0) {
 			if (v <= 110 && x > 0) {
 				cout << "Your speed before start: " << v << " km/h";
 				v = v;
-			} else {
+			}
+			else {
 				cout << "Your speed before start: 110 km/h";
 				v = 110;
 			}
@@ -74,7 +77,8 @@ int main() {
 				cout << "Fuel consumed: " << z << " litres\n";
 				q = x - z;
 				cout << "Fuel remained: " << q << " litres\n";
-			} else {
+			}
+			else {
 				w = x / fuelConsumption * 100;
 				cout << "Distance traveled: " << w << " km\n";
 				t = w / v * 3600;
@@ -87,16 +91,19 @@ int main() {
 
 			if (w == 360) {
 				cout << "Congratulations! You have reached destination point!" << endl;
-			} else {
-				cout << "You haven't reached destination point. " << 360 - w << "km left." << endl;
 			}
-		} else {
-			cout << "\n";
-			cout << "Invalid data" << endl;
+			else {
+				cout << "You haven't reached destination point. " << 360 - w << " km left." << endl;
+			}
 		}
-	} else {
-		cout << "Invalid data" << endl;
+		else {
+			cout << "\n";
+			cout << "Invalid data." << endl;
+		}
 	}
-	
+	else {
+		cout << "Invalid data." << endl;
+	}
+
 	return 0;
 }
