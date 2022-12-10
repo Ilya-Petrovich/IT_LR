@@ -1,18 +1,16 @@
 #include <iostream>
-#include<clocale>
 #include <cmath>
 using namespace std;
 
 int main()
 {
-	setlocale(LC_ALL, "rus");
 	int num_1, num_2, num_3;
 
-	cout << "¬ведите первое число: ";
+	cout << "Type the first number: ";
 	cin >> num_1;
-	cout << "¬ведите второе число: ";
+	cout << "Type the second number: ";
 	cin >> num_2;
-	cout << "¬ведите третье число: ";
+	cout << "Type the third number: ";
 	cin >> num_3;
 
 	if (num_1 > num_2)
@@ -30,5 +28,6 @@ int main()
 	else
 	{
 		cout << "Invalid data" << endl;
+		return 0;
 	}
 }
