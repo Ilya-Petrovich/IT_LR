@@ -4,7 +4,8 @@ void ReadText(char* buff, long fSize);
 int main() {
 	FILE* file;
 	char filename[100];
-	file = fopen("image.bmp", "rb");
+	std::cin >> filename;
+	file = fopen(filename, "rb");
 	long fSize;
 	fseek(file, 0, SEEK_END);
 	fSize = ftell(file);
