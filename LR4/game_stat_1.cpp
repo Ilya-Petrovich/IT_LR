@@ -79,7 +79,7 @@ int main()
 			cout << "\nTime spent: " << time << " sec";
 			fuel_consumed = 0;
 			cout << "\nFuel consumed: " << fuel_consumed << " litres";
-			fuel_remained = 0;
+			fuel_remained = fuel;
 			cout << "\nFuel remained: " << fuel_remained << " litres";
 			cout << "\n----------------------------------------";
 			distance_left = distance - distance_traveled;
