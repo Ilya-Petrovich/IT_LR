@@ -1,8 +1,13 @@
 #include <iostream>
 #include <unistd.h>
 unsigned short menu(unsigned short& a) {
-    std::cout << "Choose animation:\nDance:                 1\nRun:                   2\n";
-    std::cout << "Sit down and jump:     3\nThrow a ball:          4\n\nEnter 5 for exit.\n"; std::cin >> a;
+    std::cout << "Choose animation:" << std::endl;
+    std::cout << "Dance: \t\t\t1" << std::endl;
+    std::cout << "Run: \t\t\t2" << std::endl;
+    std::cout << "Sit down and jump: \t3" << std::endl;
+    std::cout << "Throw a ball: \t\t4" << std::endl << std::endl;
+    std::cout << "Enter 5 for exit." << std::endl;
+    std::cin >> a;
     return a;
 }
 void clear() { /*system("cls");*/ }
