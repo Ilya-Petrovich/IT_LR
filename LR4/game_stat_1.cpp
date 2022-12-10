@@ -8,13 +8,13 @@ int main() {// :{  :}
 
 	int  speed, time = 0, fuel, fuel1, maxs = 110, fc = 50, fconsumtion = 0, sbs = 0, fue;
 	float distance = 360, fc1, dt = 0, fr, kmleft, speed1, s, fconsumed;
-	std::cout << "How much fuel do you have at start? "; std::cin >> fuel; std::cout << std::endl;
+	std::cout << "How much fuel do you have at start? "; std::cin >> fuel; std::cout << std::endl;std::cout<<std::endl;
 	fuel1 = fuel;
 	fue = fuel;
 
 	if (fuel < (1. / 2 * fc)) {
 		fuel += fc * 1. / 2;
-		std::cout << "Car stats " << std::endl;
+		std::cout << "Car stats" << std::endl;
 		std::cout << "Fuel: " << fuel << std::endl;
 		std::cout << "Fuel capacity: " << fc << std::endl;
 		std::cout << "Fuel consumption: " << fconsumtion << std::endl;
