@@ -1,12 +1,12 @@
 ﻿#include <iostream>
-#include <unistd.h>
+//#include <unistd.h>
 
 using namespace std;
 
-void sleep() {
-	Sleep(1000);
-	system("cls");
-}
+//void sleep() {
+//	Sleep(1000);
+//	system("cls");
+//}
 
 void print(string character[12]) {
 	for (int i = 0; i < 12; i++) {
@@ -133,9 +133,7 @@ int main() {
 		for (int j = 1; j <= 14; j++) {
 			print(character);
 			change_character(character, j);
-			cout << c << endl;
-			c++;
-			sleep();
+			//sleep();
 		}
 	}
 	change_character(character, 14);
