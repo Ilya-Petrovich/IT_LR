@@ -23,7 +23,7 @@ int main() {
 		cin >> speed;
 
 		if (speed < 0) {
-			cout << "\nInvalid data\n";
+			cout << "\nInvalid data.\n";
 		}
 		else if (speed == 0) {
 			cout << "Your speed before start: 0 km/h\n\nFuel consumption with chosen speed: 0 litres per 100 km";
@@ -57,7 +57,15 @@ int main() {
 
 			int time = distance * 3600 / speed;
 			cout << "\nTime spent: " << time << " sec" << "\nFuel consumed: " << distance * fuelConsumption / 100 << " litres";
-			cout << "\nFuel remained: " << fuel - distance * fuelConsumption / 100 << " litres";
+			cout << "\nFuel remained: ";
+
+			if (fuel <= distance * fuelConsumption / 100) {
+				cout << " 0 litres";
+			}
+			else {
+				cout << fuel - distance * fuelConsumption / 100 << " litres";
+			}
+
 			cout << "\n----------------------------------------\n";
 
 			if (distance == 360) {
