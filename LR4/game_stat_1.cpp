@@ -8,9 +8,16 @@ int main() {// :{  :}
 
 	int  speed, time = 0, fuel, fuel1, maxs = 110, fc = 50, fconsumtion = 0, sbs = 0, fue;
 	float distance = 360, fc1, dt = 0, fr, kmleft, speed1, s, fconsumed;
-	std::cout << "How much fuel do you have at start? "; std::cin >> fuel; std::cout << std::endl;std::cout<<std::endl;
+	std::cout << "How much fuel do you have at start? "; std::cin >> fuel; std::cout << std::endl;
 	fuel1 = fuel;
 	fue = fuel;
+	if (fuel < 0) {
+		std::cout << "Invalid data.";
+		exit;
+		return 0;
+	}
+
+
 
 	if (fuel < (1. / 2 * fc)) {
 		fuel += fc * 1. / 2;
@@ -31,6 +38,12 @@ int main() {// :{  :}
 		std::cout << std::endl;
 		std::cout << "What speed will you choose? "; std::cin >> speed; std::cout << std::endl;
 		speed1 = speed;
+		if (speed < 0) {
+			std::cout << std::endl;
+			std::cout << "Invalid data.";
+			exit;
+			return 0;
+		}
 
 		if (speed > maxs) {
 			speed = maxs;
@@ -41,7 +54,7 @@ int main() {// :{  :}
 		s = speed1 / 10;
 		fc1 = (s * s / 4) - (4.5 * s) + 30;
 
-		if (speed <= 0) {
+		if (speed = 0) {
 			fc1 = 0; dt = 0; time = 0;
 		}
 
@@ -59,7 +72,7 @@ int main() {// :{  :}
 			fconsumed = ((dt * fc1) / 100);
 			fr = fuel - fconsumed;
 		}
-		else if (speed <= 0) {
+		else if (speed = 0) {
 			fr = fue; fconsumed = 0; time = 0; dt = 0;
 		}
 		std::cout << "Distance traveled: " << dt << " km" << std::endl;
@@ -100,7 +113,12 @@ int main() {// :{  :}
 		std::cout << std::endl;
 		std::cout << "What speed will you choose? "; std::cin >> speed;
 		speed1 = speed;
-
+		if (speed < 0) {
+			std::cout << std::endl;
+			std::cout << "Invalid data.";
+			exit;
+			return 0;
+		}
 		if (speed > maxs) {
 			speed = maxs;
 			speed1 = speed;
@@ -109,7 +127,7 @@ int main() {// :{  :}
 		std::cout << "Your speed before start: " << speed << " km/h" << std::endl; std::cout << std::endl;
 		s = speed1 / 10;
 		fc1 = (s * s / 4) - (4.5 * s) + 30;
-		if (speed <= 0) {
+		if (speed = 0) {
 			fc1 = 0; dt = 0; time = 0; fr = fue;
 		}
 		std::cout << "Fuel consumption with chosen speed: " << fc1 << " liters per 100 km" << std::endl;
@@ -120,6 +138,8 @@ int main() {// :{  :}
 		if (dt > distance) {
 			dt = distance;
 		}
+
+
 		if (speed > 0) {
 			time = dt / speed * 3600;
 			fconsumed = ((dt * fc1) / 100);
@@ -139,7 +159,10 @@ int main() {// :{  :}
 			std::cout << "Condratulations! You have reached destination point!";
 		}
 		else {
-			if (speed <= 0) {
+			if (speed < 0) {
+				exit;
+			}
+			if (speed = 0) {
 				fr = fue;
 			}
 			else { fr = 0; }
@@ -150,4 +173,5 @@ int main() {// :{  :}
 			std::cout << "You haven't reached destination point. " << kmleft << " km left.";
 		}
 	}
+	return 0;
 }
