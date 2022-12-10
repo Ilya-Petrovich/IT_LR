@@ -63,7 +63,7 @@ int main() {
 			}
 		}
 	} else {
-		cout << "\nInvalid data\n";
+		cout << "\nInvalid data.\n";
 	}
 
 	return 0;
