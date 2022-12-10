@@ -14,7 +14,7 @@ int main()
 		std::cout << num_1 << " - " << num_2 << " = " << num_1 - num_2 << std::endl;
 		std::cout << num_1 << " * " << num_2 << " = " << num_1 * num_2 << std::endl;
 		std::cout << num_1 << " / " << num_2 << " = " << int(num_1) / int(num_2) << std::endl;
-		std::cout << num_1 << ".0 " << " / " << num_2 << ".0 " << " = " << num_1 / num_2 << std::endl;
+		std::cout << num_1 << ".0" << " / " << num_2 << ".0" << " = " << num_1 / num_2 << std::endl;
 		std::cout << num_1 << " % " << num_2 << " = " << int(num_1) % int(num_2) << std::endl;
 		std::cout << num_1 << " + " << num_2 << " * " << num_3 << " = " << num_1 + num_2 * num_3 << std::endl;
 		std::cout << "(" << num_1 << " + " << num_2 << ")" << " * " << num_3 << " = " << (num_1 + num_2) * num_3 << std::endl;
@@ -22,4 +22,4 @@ int main()
 	else {
 		std::cout << "Invalid data" << std::endl;
 	}
-}
+} 
