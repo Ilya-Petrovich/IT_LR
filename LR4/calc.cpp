@@ -3,7 +3,7 @@ using namespace std;
 int main()
 {
 	int num_1, num_2, num_3;
-	cout << "Type the first number ";
+	cout << "Type the first number: ";
 	cin >> num_1;
 	cout << "Type the second number: ";
 	cin >> num_2;
