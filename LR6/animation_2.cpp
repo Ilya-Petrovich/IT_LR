@@ -176,12 +176,12 @@ void run() {
             case 0: {
                 std::cout << "*" << pravo << "   / |   " << levo << " *\n";
                 std::cout << "*" << pravo << " _/  |_   " << levo << "*\n";
-                std::cout << std::string(40, '*') << '\n'; Sleep(100); clear(); break;
+                std::cout << std::string(40, '*') << '\n';/*Sleep(100)*/; clear(); break;
             }
             case 1: {
                 std::cout << "*" << pravo << "    ||    " << levo << "*\n";
                 std::cout << "*" << pravo << "   _||_   " << levo << "*\n";
-                std::cout << std::string(40, '*') << '\n'; Sleep(100); clear(); break;
+                std::cout << std::string(40, '*') << '\n'; /*Sleep(100)*/; clear(); break;
             }
             case 2: {
                 std::cout << "*" << pravo << "    | \\   " << levo << "*\n";
@@ -356,7 +356,7 @@ void jump() {
     body();
     std::cout << "*    ||                                *" << std::endl;
     std::cout << "*    ||                                *" << std::endl;
-    std::cout << std::string(40, '*') << '\n'; Sleep(1000); clear();
+    std::cout << std::string(40, '*') << '\n'; /*Sleep(100)*/; clear();
     polet1();
     polet2();
     polet3();
@@ -369,7 +369,7 @@ void jump() {
     body();
     std::cout << "*    ||                                *" << std::endl;
     std::cout << "*    ||                                *" << std::endl;
-    std::cout << std::string(40, '*') << '\n'; Sleep(1000); clear();
+    std::cout << std::string(40, '*') << '\n'; /*Sleep(100)*/; clear();
     sel();
     std::cout << std::string(40, '*') << '\n';
     std::cout << "*                                      *" << std::endl;
@@ -390,7 +390,7 @@ void jump() {
     std::cout << "*   |__|                               *" << std::endl;
     std::cout << "*    ||                                *" << std::endl;
     std::cout << "*   _||_                               *" << std::endl;
-    std::cout << std::string(40, '*') << '\n'; Sleep(1000);
+    std::cout << std::string(40, '*') << '\n'; /*Sleep(100)*/;
 }
 void Throw_a_ball() {
     clear();
