@@ -12,9 +12,9 @@ int main() {
 
 	if (x >= 0 && x <= 50) {
 		cout << "Car stats\n";
-		cout << "Flue: " << x << "\n";
-		cout << "Flue capacity: 50\n";
-		cout << "Flue consumption: 0\n";
+		cout << "Fuel: " << x << "\n";
+		cout << "Fuel capacity: 50\n";
+		cout << "Fuel consumption: 0\n";
 		cout << "Speed: 0\n";
 		cout << "Maximum speed: 110\n";
 		cout << "\n";
