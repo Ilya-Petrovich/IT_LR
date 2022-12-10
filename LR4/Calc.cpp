@@ -3,8 +3,8 @@
 
 using namespace std;
 
-int main() { // :) :(
- 
+int main() { // :) 
+
 
     int num_1, num_2, num_3;
 
@@ -17,7 +17,7 @@ int main() { // :) :(
 
     float div = (float)num_1 / num_2;
 
-    if (num_1 > num_2 && num_1 >= 0 && num_2 >= 0 && num_3 >= 0)
+    if (num_1 > num_2&& num_1 >= 0 && num_2 >= 0 && num_3 >= 0)
     {
         cout << num_1 << " + " << num_2 << " = " << num_1 + num_2 << endl;
         cout << num_1 << " - " << num_2 << " = " << num_1 - num_2 << endl;
