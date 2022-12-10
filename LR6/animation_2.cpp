@@ -30,26 +30,26 @@ public:
 
 		string strs[20];
 
-		strs[0] = new char[40]{"***************************************"};
-		strs[1] = new char[40]{"*                                     *"};
-		strs[2] = new char[40]{"*                                     *"};
-		strs[3] = new char[40]{"*                                     *"};
-		strs[4] = new char[40]{"*                                     *"};
-		strs[5] = new char[40]{"*                                     *"};
-		strs[6] = new char[40]{"*                                     *"};
-		strs[7] = new char[40]{"*                                     *"};
-		strs[8] = new char[40]{"*                                     *"};
-		strs[9] = new char[40]{"*                                     *"};
-		strs[10] = new char[40]{"*                                     *"};
-		strs[11] = new char[40]{"*                                     *"};
-		strs[12] = new char[40]{"*                                     *"};
-		strs[13] = new char[40]{"*                                     *"};
-		strs[14] = new char[40]{"*                                     *"};
-		strs[15] = new char[40]{"*                                     *"};
-		strs[16] = new char[40]{"*                                     *"};
-		strs[17] = new char[40]{"*                                     *"};
-		strs[18] = new char[40]{"*                                     *"};
-		strs[19] = new char[40]{"***************************************"};
+		strs[0] = new char[41]{"****************************************"};
+		strs[1] = new char[41]{"*                                      *"};
+		strs[2] = new char[41]{"*                                      *"};
+		strs[3] = new char[41]{"*                                      *"};
+		strs[4] = new char[41]{"*                                      *"};
+		strs[5] = new char[41]{"*                                      *"};
+		strs[6] = new char[41]{"*                                      *"};
+		strs[7] = new char[41]{"*                                      *"};
+		strs[8] = new char[41]{"*                                      *"};
+		strs[9] = new char[41]{"*                                      *"};
+		strs[10] = new char[41]{"*                                      *"};
+		strs[11] = new char[41]{"*                                      *"};
+		strs[12] = new char[41]{"*                                      *"};
+		strs[13] = new char[41]{"*                                      *"};
+		strs[14] = new char[41]{"*                                      *"};
+		strs[15] = new char[41]{"*                                      *"};
+		strs[16] = new char[41]{"*                                      *"};
+		strs[17] = new char[41]{"*                                      *"};
+		strs[18] = new char[41]{"*                                      *"};
+		strs[19] = new char[41]{"****************************************"};
 
 		for (size_t i = 0; i < 20; i++)
 		{
