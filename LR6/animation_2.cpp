@@ -666,7 +666,7 @@ void sit(int t) {
 	zeroing_console();
 	//Sleep(t);
 	//system("cls");
-	for (int i = 7; i < hc; i++) {
+	for (int i = 7; i < hc-1; i++) {
 		for (int j = 1; j < w; j++) {
 			cons[i][j] = person[i - 7][j - 1];
 
@@ -680,6 +680,8 @@ void sit(int t) {
 		}
 		cout << endl;
 	}
+
+	
 
 	person[11][3] = '_';
 	person[11][4] = '\\';
