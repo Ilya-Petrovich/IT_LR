@@ -8,6 +8,9 @@ const unsigned int width = 40;
 
 void print_person(char person[height][width]); // print_person возвращает массив person
 void dance();
+void run();
+void sit_down_and_jump();
+void throw_a_ball();
 
 int main() {
     int choice;
@@ -15,19 +18,32 @@ int main() {
     do {
         cout << "Choose animation:" << endl;
         cout << "Dance: \t\t\t1" << endl;
-
+        cout << "Run: \t\t\t2" << endl;
+        cout << "Sit down and jump: \t3" << endl;
+        cout << "Throw a ball: \t\t4" << endl << endl;
+        cout << "Enter 5 for exit." << endl;
         cin >> choice;
 
         switch (choice)
         {
         case 1:
             dance();
-
+            break;
         case 2:
+            run();
+            break;
+        case 3:
+            sit_down_and_jump();
+            break;
+        case 4:
+            throw_a_ball();
+            break;
+        case 5:
             exit(0);
         }
-    } while ((choice > 0) && (choice < 3));
+    } while ((choice > 0) && (choice < 6));
 }
+
 
 void print_person(char person[height][width]) {
     for (int i = 0; i < height; i++) {
