@@ -1,100 +1,108 @@
 #include <iostream>
-
 using namespace std;
 
 int main() {
+	float s, speed, fuel, fuel_remained, fuel_capacity, fuel_consumed, fuel_consumption, distance, distance_traveled;
+	int time_spent, max_speed;
 
-	int fuel, speed;
-	float fConsumption, s, time_sec, fConsumed, fRemained, travel_dist;
+	fuel_capacity = 50;
+	max_speed = 110;
+	distance = 360;
+	fuel_remained = 0;
+	fuel_consumed = 0;
 
-	cout << "How much fuel do you have at start? "; cin >> fuel;
-	cout << "\n";
-	
-	if (fuel >= 0 && fuel <= 50) {
-		cout << "Car stats" << endl;
-		printf("Fuel: %d", fuel); cout << "\n";
-		printf("Fuel capacity: 50"); cout << "\n";
-		printf("Fuel consumption: 0"); cout << "\n";
-		printf("Speed: 0"); cout << "\n";
-		printf("Maximum speed: 110"); cout << "\n";
-		cout << "\n";
-		
-		cout << "Route info" << "\n";
-		printf("Distance: %d km", 360); cout << "\n";
-		
-		cout << "----------------------------------------" << "\n";
-		
-		cout << "You have to drive a route 360 km long." << endl;
-		cout << "But first you need to check if you have enough fuel." << endl;
-		cout << "\n";
+	cout << "How much fuel do you have at start? ";
+	cin >> fuel;
 
-		if (fuel < 25) {
-			fuel += 25;
-		}
-		printf("Your fuel before start: %d", fuel); cout << "\n";
-		cout << "\n";
-		
-		cout << "What speed wil you choose? "; cin >> speed;
-		if (speed > 110) {
-			printf("Your speed before start: 110 km/h"); cout << "\n";
-			speed = 110;
-		} else if (speed >= 0 && speed <= 110) {
-			printf("Your speed before start: %d km/h", speed); cout << "\n";
-		} else {
-			cout << "Invalid data.";
-			return 0;
+	if (fuel >= 0 && fuel <= fuel_capacity) {
+		cout << "\nCar stats" << endl;
+		cout << "Fuel: " << fuel << endl;
+		cout << "Fuel capacity: " << fuel_capacity << endl;
+
+		fuel_consumption = 0;
+
+		cout << "Fuel consumption: " << fuel_consumption << endl;
+
+		speed = 0;
+
+		cout << "Speed: " << speed << endl;
+		cout << "Maximum speed: " << max_speed << "\n" << endl;
+
+		cout << "Route info\nDistance: " << distance << " km" << endl;
+		cout << "----------------------------------------" << endl;
+		cout << "You have to drive a route " << distance << " km long.\nBut first you need to check if you have enough fuel." << endl;
+
+		if (fuel < fuel_capacity / 2) {
+			fuel = fuel + fuel_capacity / 2;
+			cout << "\nYour fuel before start: " << fuel << endl;
 		}
 
-		s = (float)speed / 10;
-		fConsumption = s * s / 4 - 4.5 * s + 30;
-		if (speed == 0) {
-			fConsumption = 0;
-		}
-		cout << "Fuel consumption with chosen speed: " << fConsumption << " litres per 100 km";
-		cout << "\n";
-		cout << "\n";
+		cout << "\nWhat speed will you choose? ";
+		cin >> speed;
 
-		cout << "Destination result" << endl;
-		if (speed != 0) {
-			travel_dist = (float)fuel / (fConsumption / 100 * speed) * speed;
-		} else {
-			travel_dist = 0;
-		}
-		
-		if (travel_dist > 360) {
-			cout << "Distance traveled: 360 km" << "\n";
-			travel_dist = 360;
-		} else
-			cout << "Distance traveled: " << travel_dist << " km" << "\n";
-		
-		fConsumed = ((float)fConsumption / 100) * travel_dist;
-		fRemained = fuel - fConsumed;
-		
-		if (speed != 0) {
-			time_sec = (float)travel_dist / speed * 3600;
-		} else {
-			time_sec = 0;
-		}
-		printf("Time spent: %0.0f sec", time_sec); cout << "\n";
-		if (fConsumed > fuel) {
-			cout << "Fuel consumed: " << fuel << " litres" << endl;
-		} else
-			cout << "Fuel consumed: " << fConsumed << " litres" << endl;
-		
-		if (fRemained < 0) {
-			cout << "Fuel remained: 0 litres" << endl;
-		} else
-			cout << "Fuel remained: " << fRemained << " litres" << "\n";
+		if (speed >= 0) {
 
-		cout << "----------------------------------------" << "\n";
+			if (speed > max_speed) {
+				speed = max_speed;
+			}
 
-		if (travel_dist == 360) {
-			cout << "Congratulations! You have reached destination point!";
-		} else {
-			cout << "You haven't reached destination point. " << 360 - travel_dist << " km left.";
+			cout << "Your speed before start: " << speed << " km/h" << endl;
+
+			s = speed / 10.;
+
+			if (speed == 0) {
+				fuel_consumption = 0;
+			}
+			else {
+				fuel_consumption = s * s / 4 - 4.5 * s + 30;
+			}
+
+			cout << "\nFuel consumption with chosen speed: " << fuel_consumption << " litres per 100 km\n" << endl;
+
+			distance_traveled = fuel / (0.01 * fuel_consumption);
+
+			if (fuel_consumption == 0) {
+				distance_traveled = 0;
+			}
+
+			fuel_consumed = fuel;
+
+			if (speed == 0) {
+				fuel_consumed = 0;
+				fuel_remained = fuel;
+			}
+
+			if (distance_traveled > distance) {
+				fuel_consumed = distance * fuel_consumption * 0.01;
+				fuel_remained = fuel - fuel_consumed;
+				distance_traveled = distance;
+			}
+
+			time_spent = distance_traveled / speed * 3600;
+			if (speed == 0) {
+				time_spent = 0;
+			}
+
+			cout << "Destination result\nDistance traveled: " << distance_traveled << " km" << endl;
+			cout << "Time spent: " << time_spent << " sec" << endl;
+			cout << "Fuel consumed: " << fuel_consumed << " litres" << endl;
+			cout << "Fuel remained: " << fuel_remained << " litres" << endl;
+			cout << "----------------------------------------" << endl;
+
+			if (distance_traveled == distance) {
+				cout << "Congratulations! You have reached destination point!" << endl;
+			}
+			else {
+				cout << "You haven't reached destination point. " << distance - distance_traveled << " km left." << endl;
+			}
 		}
-		
-	} else
+		else {
+			cout << endl;
+			cout << "Invalid data." << endl;
+		}
+	}
+	else {
+		cout << endl;
 		cout << "Invalid data." << endl;
-	return 0;
+	}
 }
