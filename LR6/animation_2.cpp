@@ -1,6 +1,5 @@
-#include <iostream>
-#include <string>
-#include <unistd.h>
+#include<iostream>
+#include<string>
 using namespace std;
 string aprobel(int n) {
 	if (n == 28) {
@@ -92,6 +91,8 @@ int main()
 			for (int i = 0; i < 30; i++) {
 				if (i == 1) {
 					cout << G + M + A + B + C + G;
+
+
 				}
 				else if (i == 2) {
 					B = "*   \\__/                               *\n";
@@ -307,6 +308,7 @@ int main()
 				else if (i == 29) {
 					cout << G + M + A + D + C + G;
 				}
+
 			}
 		}
 		else if (a == 2) {
@@ -324,6 +326,7 @@ int main()
 			A += "*   _||_   " + aprobel(28) + "*\n";
 			cout << G + bprobel(6) + A + G;
 
+
 			for (int i = 1; i <= 28; i++) {
 
 				A = "*" + aprobel(i - 1) + "    /\\    " + aprobel(29 - i) + "*\n";
@@ -339,6 +342,7 @@ int main()
 				A += "*" + aprobel(i - 1) + "    |\\    " + aprobel(29 - i) + "*\n";
 				A += "*" + aprobel(i - 1) + "   _| \\_  " + aprobel(29 - i) + "*\n";
 				cout << G + bprobel(6) + A + G;
+
 
 				A = "*" + aprobel(i) + "    /\\    " + aprobel(28 - i) + "*\n";
 				A += "*" + aprobel(i) + "   |oo|   " + aprobel(28 - i) + "*\n";
@@ -367,9 +371,11 @@ int main()
 				A += "*" + aprobel(i) + "    ||    " + aprobel(28 - i) + "*\n";
 				A += "*" + aprobel(i) + "   _||_   " + aprobel(28 - i) + "*\n";
 				cout << G + bprobel(6) + A + G;
+
 			}
 
 			for (int i = 1; i <= 28; i++) {
+
 				A = "*" + aprobel(29 - i) + "    /\\    " + aprobel(i - 1) + "*\n";
 				A += "*" + aprobel(29 - i) + "   |oo|   " + aprobel(i - 1) + "*\n";
 				A += "*" + aprobel(29 - i) + "  (|..|)  " + aprobel(i - 1) + "*\n";
@@ -384,6 +390,7 @@ int main()
 				A += "*" + aprobel(29 - i) + "   _| \\_  " + aprobel(i - 1) + "*\n";
 				cout << G + bprobel(6) + A + G;
 				if (i != 28) {
+
 					A = "*" + aprobel(28 - i) + "    /\\    " + aprobel(i) + "*\n";
 					A += "*" + aprobel(28 - i) + "   |oo|   " + aprobel(i) + "*\n";
 					A += "*" + aprobel(28 - i) + "  (|..|)  " + aprobel(i) + "*\n";
@@ -411,6 +418,7 @@ int main()
 				A += "*" + aprobel(28 - i) + "    ||    " + aprobel(i) + "*\n";
 				A += "*" + aprobel(28 - i) + "   _||_   " + aprobel(i) + "*\n";
 				cout << G + bprobel(6) + A + G;
+
 			}
 		}
 		else if (a == 3) {
@@ -433,8 +441,8 @@ int main()
 			C = "*    /\\                                *\n";
 			C += "*    ||                                *\n";
 			C += "*   _||_                               *\n";
-			H = "****************************************\n";
 
+			H = "****************************************\n";
 			T = "****************************************\n";
 			T += "*                                      *\n";
 			T += "*                                      *\n";
@@ -458,12 +466,13 @@ int main()
 			O += "*    ||                                *\n";
 			O += "*    ||                                *\n";
 
+
 			for (int i = 0; i <= 12; i++) {
-				if (i == 0) {
-					cout << A + B + C + H;
-				}
-				else if (i == 1 || i == 11) {
+				if (i == 1 || i == 11) {
 					cout << T + H;
+				}
+				else if (i == 0) {
+					cout << A + B + C + H;
 				}
 				else if (i == 2) {
 					cout << A + B + O + H;
@@ -495,6 +504,7 @@ int main()
 				else if (i == 12) {
 					cout << A + B + C + H;
 				}
+
 			}
 		}
 		else if (a == 4) {
@@ -623,6 +633,7 @@ int main()
 					B[288] = ' '; B[329] = '/'; B[289] = '/';
 					cout << A + B + C;
 				}
+
 			}
 		}
 	}
