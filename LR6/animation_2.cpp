@@ -148,7 +148,7 @@ void magic(std::string levo, std::string pravo) {
     std::cout << "*" << levo << "   |__|   " << pravo << "*\n";
 }
 void run() {
-    for (int i = 0, j = 28; i <= 27; i++, j--) {
+    for (int i = 0, j = 28; i <= 28; i++, j--) {
         std::string pravo = std::string(i, ' ');
         std::string levo = std::string(j, ' ');
         int k = 0;
@@ -156,6 +156,9 @@ void run() {
             k = 1; 
         }
         for (; k < 3; k++) {
+            if (i == 28 and k == 2) {
+                break;
+            }
             magic(pravo, levo);
             switch (k) {
             case 0: {
@@ -175,14 +178,21 @@ void run() {
             }
         }
     }
-    for (int i = 0, j = 28; i < 28; i++, j--) {
-        std::string pravo = std::string(j, ' ');
-        std::string levo = std::string(i, ' ');
-        int k = 0;
-        for (; k < 3; k++) {
+    for (int i = 28, j = 0; j <= 28; j++, i--) {
+        std::string pravo = std::string(i, ' ');
+        std::string levo = std::string(j, ' ');
+        for (int k = 0; k < 3; k++) {
+
+            if (j == 0 and !(k == 2)) {
+                continue;
+            }
+
+            if (j == 28 and k == 2) {
+                break;
+            }
             magic(pravo, levo);
             switch (k) {
-            case 0: {
+            case 2: {
                 if (i != 28) {
                     std::cout << "*" << pravo << "   / |   " << levo << " *\n";
                     std::cout << "*" << pravo << " _/  |_   " << levo << "*\n";
@@ -193,7 +203,7 @@ void run() {
                 std::cout << "*" << pravo << "   _||_   " << levo << "*\n";
                 std::cout << std::string(40, '*') << '\n'; /*Sleep(100)*/; clear(); break;
             }
-            case 2: {
+            case 0: {
                 if (i != 28) {
                     std::cout << "*" << pravo << "    | \\   " << levo << "*\n";
                     std::cout << "*" << pravo << "   _|  \\_ " << levo << "*\n";
