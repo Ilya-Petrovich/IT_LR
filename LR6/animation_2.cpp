@@ -360,12 +360,17 @@ public:
 		switch (AnimNum)
 		{
 		case 0:
+			BaseState[8][Height] = "-";
+			AnimNum++;
+			break;
+
+		case 1:
 			BaseState[7][Height] = "-";
 			BaseState[8][Height] = " ";
 			AnimNum++;
 			break;
 
-		case 1:
+		case 2:
 			BaseState[6][Height] = "-";
 			BaseState[6][Height - 1] = "-";
 			BaseState[7][Height - 1] = " ";
@@ -373,23 +378,23 @@ public:
 			AnimNum++;
 			break;
 
-		case 2:
+		case 3:
 			BaseState[6][Height] = "/";
 			AnimNum++;
 			break;
 
-		case 3:
+		case 4:
 			BaseState[6][Height] = "-";
 			AnimNum++;
 			break;
 
-		case 4:
+		case 5:
 			BaseState[6][Height] = " ";
 			BaseState[7][Height] = "\\";
 			AnimNum++;
 			break;
 
-		case 5:
+		case 6:
 			BaseState[6][Height - 1] = " ";
 			BaseState[7][Height - 1] = "\\";
 			BaseState[7][Height] = " ";
@@ -397,7 +402,7 @@ public:
 			AnimNum++;
 			break;
 
-		case 6:
+		case 7:
 			AnimNum = 0;
 			break;
 		}
@@ -441,6 +446,12 @@ public:
 			break;
 
 		case 7:
+			BaseState[8][1] = "-";
+			BaseState[7][1] = " ";
+			AnimNum++;
+			break;
+
+		case 8:
 			BaseState[8][1] = "/";
 			BaseState[7][1] = " ";
 			AnimNum = 0;
@@ -489,7 +500,7 @@ void PrintLocation(Location location, Person person, T object, TT object2, int i
 	// CursorToStart();
 	location.Reload();
 	location.Load(person.BaseState, person.Width, person.Height, 0, 7);
-	if (j != 14)
+	if (j != 15)
 		location.Load(object.BaseState, object.Width, object.Height, i, j);
 	location.Print();
 	// Sleep(Speed / 2);
@@ -695,10 +706,10 @@ int main()
 			// startAction(location, person);
 			PrintLocation(location, person, 0, 7); /////added
 
-			for (int i = 0; i < 7; i++)
+			for (int i = 0; i < 8; i++)
 			{
 				person.ThrowAnimation();
-				PrintLocation(location, person, ball, delBall, person.Height - 1, 13 - i);
+				PrintLocation(location, person, ball, delBall, person.Height - 1, 14 - i);
 			}
 			for (int i = 0; i < 5; i++)
 			{
@@ -709,7 +720,7 @@ int main()
 			{
 				PrintLocation(location, person, ball, delBall, person.Height - 6 - i, 2 + i);
 			}
-			for (int i = 0; i < 8; i++)
+			for (int i = 0; i < 9; i++)
 			{
 				person.CatchAnimation();
 				PrintLocation(location, person, ball, delBall, person.Height - 10, 7 + i);
