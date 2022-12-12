@@ -8,9 +8,9 @@ const unsigned int width = 40;
 
 void print_person(char person[height][width]); // print_person возвращает массив person
 void dance();
-void run();
-void sit_down_and_jump();
-void throw_a_ball();
+//void run();
+//void sit_down_and_jump();
+//void throw_a_ball();
 
 int main() {
     int choice;
