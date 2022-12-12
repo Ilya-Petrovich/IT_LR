@@ -50,13 +50,13 @@ void dance() {
                 std::cout << "  \\|  |/  \n";
                 std::cout << "  /|UU|\\ /\n";
                 std::cout << " ---\\/--- \n";
-                std::cout << "/   ||   \n";
+                std::cout << "/   ||    \n";
                 std::cout << "    ||    \n"; break;}
             case 4: { 
-                std::cout << "  \\|  |/ / \n";
-                std::cout << "  /|UU|\\/  \n";
+                std::cout << "  \\|  |/ /\n";
+                std::cout << "  /|UU|\\/ \n";
                 std::cout << "  --\\/--  \n";
-                std::cout << " /  ||   \n";
+                std::cout << " /  ||    \n";
                 std::cout << "/   ||    \n"; break;}
             case 5: { 
                 std::cout << "  \\|  |/ *\n";
@@ -84,7 +84,7 @@ void dance() {
                 std::cout << "    ||    \n"; break;}
             case 9: { 
                 std::cout << "* \\|  |/ *\n";
-                std::cout << " \\/|UU|\\/\n";
+                std::cout << " \\/|UU|\\/ \n";
                 std::cout << "  --\\/--  \n";
                 std::cout << "    ||    \n";
                 std::cout << "    ||    \n"; break;}
@@ -109,8 +109,8 @@ void dance() {
             case 13: { 
                 std::cout << "  \\|  |/  \n";
                 std::cout << "  /|UU|\\  \n";
-                std::cout << "  --\\/-- \n";
-                std::cout << " /  ||  \\\n";
+                std::cout << "  --\\/--  \n";
+                std::cout << " /  ||  \\ \n";
                 std::cout << "*   ||   *\n"; break;}
         }
         legs();
