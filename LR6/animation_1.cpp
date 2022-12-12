@@ -1,4 +1,5 @@
 #include<iostream>
+#include<windows.h>
 #include<unistd.h>
 #include<string>
 
@@ -12,7 +13,7 @@ void dance(string chel[],int x) {
 	int i = 0;
 	while (i < 2) {
 		nnn(chel, x);
-		chel[6] = "  --| *|--     ";
+		chel[6] = "  --| *|--";
 		chel[7] = " /  |  |  \\";
 		chel[8] = "     \\/";
 		nnn(chel, x);
@@ -89,7 +90,7 @@ void dance(string chel[],int x) {
 }
 int main() {
 	const int x = 12;
-	string chel[x] = {"     /\\     ","    |oo|      ","   (|..|)        ","    |--|      ","    \\__/               ","     ||         ","   -| *|-        ","  / |  | \\        "," /   \\/   \\        ","     /\\        ","     ||","    _||_"};
+	string chel[x] = {"     /\\","    |oo|","   (|..|)","    |--|","    \\__/","     ||","   -| *|-","  / |  | \\"," /   \\/   \\","     /\\","     ||","    _||_"};
 	dance(chel,x);
 	return 0;
 }
