@@ -18,10 +18,10 @@ int main() {
     std::cout << "Fuel: " << fuel << "\n";
     std::cout << "Fuel capacity: 50\n" << "Fuel consumption: 0\n";
     std::cout << "Speed: 0\n" << "Maximum speed: 110\n";
-    std::cout << "\nRoute info\n" << "Distance: 360km\n";
+    std::cout << "\nRoute info\n" << "Distance: 360 km\n";
     std::cout << "----------------------------------------\n";
-    std::cout << "You have to drive a route 360km long.\n";
-    std::cout << "But first you need to check if you have enough fuel.\n\n";
+    std::cout << "You have to drive a route 360 km long.\n";
+    std::cout << "But first you need to check if you have enough fuel.\n";
 
     if (fuel < 25) {
         fuel += 25;
@@ -62,7 +62,7 @@ int main() {
       fuelRemained = fuel;
     }
     std::cout << "Your speed before start: " << speed << " km/h\n";
-    std::cout << "Fuel consumption with chosen speed: " << fuelConsumption << " litres per 100 km\n";
+    std::cout << "\nFuel consumption with chosen speed: " << fuelConsumption << " litres per 100 km\n";
 
     std::cout << std::endl << "Destination result\n";
     if (destinationPoint) std::cout << "Distance traveled: 360 km\n";
@@ -72,7 +72,7 @@ int main() {
     std::cout << "Fuel remained: " << fuelRemained << " litres\n";
     std::cout << "----------------------------------------\n";
 
-    if (destinationPoint) std::cout << "\nCongratulations! You have reached destination point!";
+    if (destinationPoint) std::cout << "Congratulations! You have reached destination point!\n";
     else std::cout << "You haven't reached destination point. " << distance - distanceTraveled << " km left.";
 
 }
