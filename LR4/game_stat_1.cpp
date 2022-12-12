@@ -2,7 +2,7 @@
 
 int main() {
 
-	float fuel;
+	double fuel;
 
 	std::cout << "How much fuel do you have at start? ";
 	std::cin >> fuel;
@@ -46,7 +46,7 @@ int main() {
 
 	std::cout << "Your speed before start: " << speed << " km/h" << std::endl;
 
-	s = speed / 10;
+	s = speed / 10.;
 
 	double fuelConsumption;
 
@@ -86,8 +86,7 @@ int main() {
 
 	std::cout << "Time spent: " << time << " sek" << std::endl;
 
-	double consumed_fuel;
-	consumed_fuel = fuelConsumption / 100 * distance;
+	float consumed_fuel = fuelConsumption / 100 * distance;
 
 	std::cout << "Fuel consumed: " << consumed_fuel << " litres" << std::endl;
 	std::cout << "Fuel remained: " << fuel - consumed_fuel << " litres" << std::endl;
