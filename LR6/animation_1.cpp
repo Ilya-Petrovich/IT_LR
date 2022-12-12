@@ -1,5 +1,4 @@
 #include<iostream>
-#include<windows.h>
 #include<unistd.h>
 #include<string>
 
