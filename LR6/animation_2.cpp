@@ -504,6 +504,7 @@ void sit(int t) {
 	person[11][5] = '/';
 
 	//system("cls");
+	
 
 	for (int i = 7; i < hc - 1; i++) {
 		for (int j = 1; j < w; j++) {
@@ -516,6 +517,10 @@ void sit(int t) {
 		}
 		cout << endl;
 	}
+
+
+	zeroing_pers();
+	zeroing_console();
 	person[11][3] = ' ';
 	person[11][4] = '|';
 	person[11][5] = '|';
@@ -681,7 +686,20 @@ void sit(int t) {
 		cout << endl;
 	}
 
-	
+	for (int i = 10; i >= 0; i--)
+	{
+		for (int j = 0; j < w; j++)
+		{
+			if (i == 0) {
+				person[i][j] = ' ';
+			}
+			else { person[i][j] = person[i - 1][j]; }
+
+
+
+		}
+
+	}
 
 	person[11][3] = '_';
 	person[11][4] = '\\';

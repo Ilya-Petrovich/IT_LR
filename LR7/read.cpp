@@ -1,0 +1,80 @@
+#include <iostream>
+#include <stdio.h>
+
+using namespace std;
+void readText(char* buff, long fileSize);
+void changeColor(char* buff, long fileSize);
+void writeText(char* buff, long fileSize);
+
+int main() {
+
+	FILE* file;
+
+	char filename[10];
+	cin >> filename;
+	file = fopen(filename, "rb");
+
+	long fileSize;
+	fseek(file, 0, SEEK_END);
+	fileSize = ftell(file);
+	rewind(file);
+
+	char* buff = new char[fileSize]();
+	fread(buff, sizeof(char), fileSize, file);
+    
+	readText(buff, fileSize);
+
+	fclose(file);
+	cin >> filename;
+	file = fopen(filename, "wb");
+	changeColor(buff, fileSize);
+	writeText(buff, fileSize);
+	fwrite(buff, sizeof(char), fileSize, file);
+	fclose(file);
+	delete[] buff;
+	return 0;
+}
+void readText(char* buff, long fileSize) {
+	char firstByte, secondByte, thirdByte, fourthByte, symbol;
+	int mask = 0x03;
+
+	for (int i = 138; i < fileSize; i += 4) {
+		firstByte = (buff[i] & mask) << 6;
+		secondByte = (buff[i + 1] & mask) << 4;
+		thirdByte = (buff[i + 2] & mask) << 2;
+		fourthByte = buff[i + 3] & mask;
+		symbol = firstByte | secondByte | thirdByte | fourthByte;
+		cout << symbol;
+	}
+	cout << endl;
+}
+void changeColor(char* buff, long fileSize) {
+
+	for (int i = 138; i < fileSize; i += 3) {
+		buff[i] = 180;	
+		buff[i + 1] = 130;
+		buff[i + 2] = 70;
+	}
+}
+void writeText(char* buff, long fileSize) {
+
+	char text[12] = {"TRIS-1-22-5"};
+	int count = 0;
+
+	for (int i = 138; i < fileSize; i += 4) {
+
+		if (count < 12) {
+			buff[i] = (buff[i] & 0xfc) | ((text[count] >> 6) & 0x3);
+			buff[i + 1] = (buff[i + 1] & 0xfc) | ((text[count] >> 4) & 0x3);
+			buff[i + 2] = (buff[i + 2] & 0xfc) | ((text[count] >> 2) & 0x3);
+			buff[i + 3] = (buff[i + 3] & 0xfc) | (text[count] & 0x3);
+		}
+		else {
+			buff[i] = buff[i] & 0xfc;
+			buff[i + 1] = buff[i + 1] & 0xfc;
+			buff[i + 2] = buff[i + 2] & 0xfc;
+			buff[i + 3] = buff[i + 3] & 0xfc;
+		}
+		count++;
+	}
+}
