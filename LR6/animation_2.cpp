@@ -718,7 +718,7 @@ int main()
 			PrintLocation(location, person, ball, delBall, person.Height - 6, 3);
 			for (int i = 1; i < 4; i++)
 			{
-				PrintLocation(location, person, ball, delBall, person.Height - 7 - i, 3 + i);
+				PrintLocation(location, person, ball, delBall, person.Height - 6 - i, 3 + i);
 			}
 			for (int i = 0; i < 9; i++)
 			{
