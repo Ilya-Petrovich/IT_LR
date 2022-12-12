@@ -10,7 +10,7 @@ int main() {
 
     // Initialize fuel
     if (fuel < 0 || fuel >= 50) {
-        std::cout << "Invalid data.";
+        std::cout << "\nInvalid data.\n";
         return 0;
     }
 
@@ -51,7 +51,7 @@ int main() {
         // остаток топлива. Вывести в консоль.
         fuelRemained = (fuel - fuelConsumed < 0) ? 0 : fuel - fuelConsumed;
     } else if (speed < 0) {
-      std::cout << "Invalid data.";
+      std::cout << "\nInvalid data.\n";
       return 0;
     } else {
       fuelConsumption = 0;
