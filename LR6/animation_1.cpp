@@ -1,174 +1,247 @@
-﻿// Анимация 6.1.cpp 
-
-#include <iostream>
+﻿#include <iostream>
+#include <string>
 #include <unistd.h>
 using namespace std;
-
-void dans(string persan[]);
 int main()
 {
-    string persan[12];
-    persan[0] = "    /\\    ";
-    persan[1] = "   |oo|   ";
-    persan[2] = "  (|..|)  ";
-    persan[3] = "   |--|   ";
-    persan[4] = "   \\__/   ";
-    persan[5] = "    ||    ";
-    persan[6] = "  -| *|-  ";
-    persan[7] = " / |  | \\ ";
-    persan[8] = "/   \\/   \\";
-    persan[9] = "    /\\    ";
-    persan[10] = "    ||    ";
-    persan[11] = "   _||_   ";
-    dans(persan);
-    return 0;
-}
-void dans(string persan[])
-{
-    for (int i = 0; i < 12; i++)
-    {
-        cout << persan[i] << endl;
-    }
+	string A, B, C, D;
+	A = "    /\\    \n";
+	A += "   |oo|   \n";
+	A += "  (|..|)  \n";
+	A += "   |--|   \n";
+	B = "   \\__/   \n";
+	B += "    ||    \n";
+	B += "  -| *|-  \n";
+	B += " / |  | \\ \n";
+	B += "/   \\/   \\\n";
+	C = "    /\\    \n";
+	C += "    ||    \n";
+	C += "   _||_   \n";
+	D = "   \\__/   \n";
+	D += "    ||    \n";
+	D += "  -| *|-  \n";
+	D += " / |  | \\ \n";
+	D += "/   \\/   \\\n";
 
-    //Sleep(700);
-    //system("cls");
-
-    for (int s = 0; s < 2; s++) {
-        persan[6] = " --| *|-- ";
-        persan[7] = "/  |  |  \\";
-        persan[8] = "    \\/    ";
-
-        for (int i = 0; i < 12; i++)
-        {
-            cout << persan[i] << endl;
-        }
-        //Sleep(700);
-        //system("cls");
-        //3
-        persan[6] = "  -| *|---";
-        persan[7] = " / |  |   ";
-        persan[8] = "/   \\/   ";
-
-        for (int i = 0; i < 12; i++)
-        {
-            cout << persan[i] << endl;
-        }
-        //Sleep(700);
-        //system("cls");
-
-        //4
-        persan[5] = "    ||   /";
-        persan[6] = " --| *|-- ";
-        persan[7] = "/  |  |   ";
-        persan[8] = "    \\/   ";
-        for (int i = 0; i < 12; i++)
-        {
-            cout << persan[i] << endl;
-        }
-        //Sleep(700);
-        //system("cls");
-        persan[4] = "   \\__/  /";
-        persan[5] = "    ||  / ";
-        persan[6] = "  -| *|-  ";
-        persan[7] = " / |  |   ";
-        persan[8] = "/   \\/   ";
-        for (int i = 0; i < 12; i++)
-        {
-            cout << persan[i] << endl;
-        }
-        //Sleep(700);
-        //system("cls");
-        persan[4] = "   \\__/  *";
-        persan[7] = "/  |  |   ";
-        persan[8] = "    \\/   ";
-        for (int i = 0; i < 12; i++)
-        {
-            cout << persan[i] << endl;
-        }
-        //Sleep(700);
-        //system("cls");
-        persan[4] = "   \\__/  /";
-        persan[6] = "---| *|-  ";
-        persan[7] = "   |  |   ";
-        for (int i = 0; i < 12; i++)
-        {
-            cout << persan[i] << endl;
-        }
-        //Sleep(700);
-        //system("cls");
-        //8
-        persan[4] = "   \\__/  *";
-        persan[5] = "\\   ||  / ";
-        persan[6] = " --| *|-  ";
-        for (int i = 0; i < 12; i++)
-        {
-            cout << persan[i] << endl;
-        }
-        //Sleep(700);
-        //system("cls");
-        //9
-        persan[4] = "\\  \\__/  /";
-        persan[5] = " \\  ||  / ";
-        persan[6] = "  -| *|-  ";
-        for (int i = 0; i < 12; i++)
-        {
-            cout << persan[i] << endl;
-        }
-        //Sleep(700);
-        //system("cls");
-        //10
-        persan[4] = "*  \\__/  *";
-        for (int i = 0; i < 12; i++)
-        {
-            cout << persan[i] << endl;
-        }
-        //Sleep(700);
-        //system("cls");
-        //11
-        persan[4] = "   \\__/   ";
-        persan[5] = " *  ||  * ";
-        persan[6] = " --| *|-- ";
-        for (int i = 0; i < 12; i++)
-        {
-            cout << persan[i] << endl;
-        }
-        //Sleep(700);
-        //system("cls");
-        //12
-        persan[5] = "    ||    ";
-        persan[6] = "*--| *|--*";
-        for (int i = 0; i < 12; i++)
-        {
-            cout << persan[i] << endl;
-        }
-        //Sleep(700);
-        //system("cls");
-        //13
-        persan[6] = " --| *|-- ";
-        persan[7] = "*  |  |  *";
-        for (int i = 0; i < 12; i++)
-        {
-            cout << persan[i] << endl;
-        }
-        //Sleep(700);
-        //system("cls");
-        //14
-        persan[6] = "  -| *|-  ";
-        persan[7] = " / |  | \\ ";
-        persan[8] = "*   \\/  *";
-        for (int i = 0; i < 12; i++)
-        {
-            cout << persan[i] << endl;
-        }
-        //Sleep(700);
-        //system("cls");
-
-        persan[8] = "/   \\/   \\";
-        for (int i = 0; i < 12; i++)
-        {
-            cout << persan[i] << endl;
-        }
-        //Sleep(700);
-        //system("cls");
-    }
+	for (int i = 0; i < 30; i++) {
+		if (i == 1) {
+			cout << A + B + C;
+		}
+		else if (i == 2) {
+			B = "   \\__/   \n";
+			B += "    ||    \n";
+			B += " --| *|-- \n";
+			B += "/  |  |  \\\n";
+			B += "    \\/    \n";
+			cout << A + B + C;
+		}
+		else if (i == 3) {
+			B = "   \\__/   \n";
+			B += "    ||    \n";
+			B += "  -| *|---\n";
+			B += " / |  |   \n";
+			B += "/   \\/    \n";
+			cout << A + B + C;
+		}
+		else if (i == 4) {
+			B = "   \\__/   \n";
+			B += "    ||   /\n";
+			B += " --| *|-- \n";
+			B += "/  |  |   \n";
+			B += "    \\/    \n";
+			cout << A + B + C;
+		}
+		else if (i == 5) {
+			B = "   \\__/  /\n";
+			B += "    ||  / \n";
+			B += "  -| *|-  \n";
+			B += " / |  |   \n";
+			B += "/   \\/    \n";
+			cout << A + B + C;
+		}
+		else if (i == 6) {
+			B = "   \\__/  *\n";
+			B += "    ||  / \n";
+			B += " --| *|-  \n";
+			B += "/  |  |   \n";
+			B += "    \\/    \n";
+			cout << A + B + C;
+		}
+		else if (i == 7) {
+			B = "   \\__/  /\n";
+			B += "    ||  / \n";
+			B += "---| *|-  \n";
+			B += "   |  |   \n";
+			B += "    \\/    \n";
+			cout << A + B + C;
+		}
+		else if (i == 8) {
+			B = "   \\__/  *\n";
+			B += "\\   ||  / \n";
+			B += " --| *|-  \n";
+			B += "   |  |   \n";
+			B += "    \\/    \n";
+			cout << A + B + C;
+		}
+		else if (i == 9) {
+			B = "\\  \\__/  /\n";
+			B += " \\  ||  / \n";
+			B += "  -| *|-  \n";
+			B += "   |  |   \n";
+			B += "    \\/    \n";
+			cout << A + B + C;
+		}
+		else if (i == 10) {
+			B = "*  \\__/  *\n";
+			B += " \\  ||  / \n";
+			B += "  -| *|-  \n";
+			B += "   |  |   \n";
+			B += "    \\/    \n";
+			cout << A + B + C;
+		}
+		else if (i == 11) {
+			B = "   \\__/   \n";
+			B += "*   ||   *\n";
+			B += " --| *|-- \n";
+			B += "   |  |   \n";
+			B += "    \\/    \n";
+			cout << A + B + C;
+		}
+		else if (i == 12) {
+			B = "   \\__/   \n";
+			B += "    ||    \n";
+			B += "*--| *|--*\n";
+			B += "   |  |   \n";
+			B += "    \\/    \n";
+			cout << A + B + C;
+		}
+		else if (i == 13) {
+			B = "   \\__/   \n";
+			B += "    ||    \n";
+			B += " --| *|-- \n";
+			B += "*  |  |  *\n";
+			B += "    \\/    \n";
+			cout << A + B + C;
+		}
+		else if (i == 14) {
+			B = "   \\__/   \n";
+			B += "    ||    \n";
+			B += "  -| *|-  \n";
+			B += " / |  | \\ \n";
+			B += "*   \\/   *\n";
+			cout << A + B + C;
+		}
+		else if (i == 15) {
+			cout << A + D + C;
+		}
+		else if (i == 16) {
+			B = "   \\__/   \n";
+			B += "    ||    \n";
+			B += " --| *|-- \n";
+			B += "/  |  |  \\\n";
+			B += "    \\/    \n";
+			cout << A + B + C;
+		}
+		else if (i == 17) {
+			B = "   \\__/   \n";
+			B += "    ||    \n";
+			B += "  -| *|---\n";
+			B += " / |  |   \n";
+			B += "/   \\/    \n";
+			cout << A + B + C;
+		}
+		else if (i == 18) {
+			B = "   \\__/   \n";
+			B += "    ||   /\n";
+			B += " --| *|-- \n";
+			B += "/  |  |   \n";
+			B += "    \\/    \n";
+			cout << A + B + C;
+		}
+		else if (i == 19) {
+			B = "   \\__/  /\n";
+			B += "    ||  / \n";
+			B += "  -| *|-  \n";
+			B += " / |  |   \n";
+			B += "/   \\/    \n";
+			cout << A + B + C;
+		}
+		else if (i == 20) {
+			B = "   \\__/  *\n";
+			B += "    ||  / \n";
+			B += " --| *|-  \n";
+			B += "/  |  |   \n";
+			B += "    \\/    \n";
+			cout << A + B + C;
+		}
+		else if (i == 21) {
+			B = "   \\__/  /\n";
+			B += "    ||  / \n";
+			B += "---| *|-  \n";
+			B += "   |  |   \n";
+			B += "    \\/    \n";
+			cout << A + B + C;
+		}
+		else if (i == 22) {
+			B = "   \\__/  *\n";
+			B += "\\   ||  / \n";
+			B += " --| *|-  \n";
+			B += "   |  |   \n";
+			B += "    \\/    \n";
+			cout << A + B + C;
+		}
+		else if (i == 23) {
+			B = "\\  \\__/  /\n";
+			B += " \\  ||  / \n";
+			B += "  -| *|-  \n";
+			B += "   |  |   \n";
+			B += "    \\/    \n";
+			cout << A + B + C;
+		}
+		else if (i == 24) {
+			B = "*  \\__/  *\n";
+			B += " \\  ||  / \n";
+			B += "  -| *|-  \n";
+			B += "   |  |   \n";
+			B += "    \\/    \n";
+			cout << A + B + C;
+		}
+		else if (i == 25) {
+			B = "   \\__/   \n";
+			B += "*   ||   *\n";
+			B += " --| *|-- \n";
+			B += "   |  |   \n";
+			B += "    \\/    \n";
+			cout << A + B + C;
+		}
+		else if (i == 26) {
+			B = "   \\__/   \n";
+			B += "    ||    \n";
+			B += "*--| *|--*\n";
+			B += "   |  |   \n";
+			B += "    \\/    \n";
+			cout << A + B + C;
+		}
+		else if (i == 27) {
+			B = "   \\__/   \n";
+			B += "    ||    \n";
+			B += " --| *|-- \n";
+			B += "*  |  |  *\n";
+			B += "    \\/    \n";
+			cout << A + B + C;
+		}
+		else if (i == 28) {
+			B = "   \\__/   \n";
+			B += "    ||    \n";
+			B += "  -| *|-  \n";
+			B += " / |  | \\ \n";
+			B += "*   \\/   *\n";
+			cout << A + B + C;
+		}
+		else if (i == 29) {
+			cout << A + D + C;
+		}
+		//Sleep(1000);
+		//system("cls");
+	}
 }
