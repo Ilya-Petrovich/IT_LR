@@ -11,8 +11,8 @@ int main()
 	cin >> num_2;
 	cout << "Type the third number: ";
 	cin >> num_3;
-	if ((num_1 >= 0) and ((0 <= num_2) and (num_2 < num_1)) and (0 <= num_3)) {
-		cout << num_1 << " + " << num_2 << " = " << num_1 + num_2 << endl;
+	if ((num_1 > num_2) and (num_1 >= 0) and (num_2 > 0) and (num_3 >= 0)) {
+		cout << num_1 << " - " << num_2 << " = " << num_1 + num_2 << endl;
 		cout << num_1 << " - " << num_2 << " = " << num_1 - num_2 << endl;
 		cout << num_1 << " * " << num_2 << " = " << num_1 * num_2 << endl;
 		cout << num_1 << " / " << num_2 << " = " << num_1 / num_2 << endl;
@@ -22,6 +22,9 @@ int main()
 		cout << "(" << num_1 << " + " << num_2 << ")" << " * " << num_3 << " = " << (num_1 + num_2) * num_3 << endl;
 	}
 	else cout << "Invalid data";
+
+	system("pause");
+	return 0;
 }
 
 
