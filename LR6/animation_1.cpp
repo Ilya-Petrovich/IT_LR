@@ -84,7 +84,7 @@ void dance() {
                 std::cout << "    ||    \n"; break;}
             case 9: { 
                 std::cout << "* \\|  |/ *\n";
-                std::cout << "\\ /|UU|\\/ \n";
+                std::cout << " \\/|UU|\\/\n";
                 std::cout << "  --\\/--  \n";
                 std::cout << "    ||    \n";
                 std::cout << "    ||    \n"; break;}
