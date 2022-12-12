@@ -175,7 +175,7 @@ void run() {
             }
         }
     }
-    for (int i = 0, j = 28; i <= 28; i++, j--) {
+    for (int i = 0, j = 28; i < 28; i++, j--) {
         std::string pravo = std::string(j, ' ');
         std::string levo = std::string(i, ' ');
         int k = 0;
