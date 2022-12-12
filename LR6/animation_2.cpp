@@ -1,6 +1,6 @@
 #include <iostream>
 #include <string>
-#include <unistd.h>
+
 
 using namespace std;
 
@@ -504,7 +504,7 @@ void sit(int t) {
 	person[11][5] = '/';
 
 	//system("cls");
-	
+
 
 	for (int i = 7; i < hc - 1; i++) {
 		for (int j = 1; j < w; j++) {
@@ -671,7 +671,7 @@ void sit(int t) {
 	zeroing_console();
 	//Sleep(t);
 	//system("cls");
-	for (int i = 7; i < hc-1; i++) {
+	for (int i = 7; i < hc - 1; i++) {
 		for (int j = 1; j < w; j++) {
 			cons[i][j] = person[i - 7][j - 1];
 
@@ -743,7 +743,7 @@ void sit(int t) {
 
 }
 
-void throwBall(int t){
+void throwBall(int t) {
 	zeroing_console();
 	zeroing_pers();
 	//system("cls");
@@ -762,7 +762,7 @@ void throwBall(int t){
 
 	person[8][9] = '-';
 	person[7][8] = '\\';
-    person[7][9] = 'o';
+	person[7][9] = 'o';
 	//system("cls");
 	for (int i = 7; i < hc - 1; i++) {
 		for (int j = 1; j < w; j++) {
@@ -779,7 +779,7 @@ void throwBall(int t){
 
 	zeroing_pers();
 	person[6][9] = 'o';
-	
+
 	person[7][9] = ' ';
 	person[7][9] = '-';
 	person[8][9] = ' ';
@@ -815,7 +815,7 @@ void throwBall(int t){
 		cout << endl;
 	}
 	//Sleep(t);
-	
+
 	person[4][9] = 'o';
 	person[5][9] = ' ';
 	person[6][9] = '/';
@@ -850,8 +850,8 @@ void throwBall(int t){
 	}
 	//Sleep(t);
 
-	
-	
+
+
 
 	person[2][9] = 'o';
 	person[3][9] = ' ';
@@ -911,13 +911,14 @@ void throwBall(int t){
 
 	person[0][9] = ' ';
 
+
 	//system("cls");
 	for (int i = 7; i < hc - 1; i++) {
 		for (int j = 1; j < w; j++) {
 			cons[i][j] = person[i - 7][j - 1];
 		}
 	}
-	cons[6][8] = 'o';
+	cons[6][9] = 'o';
 	for (int i = 0; i < hc; i++) {
 		for (int j = 0; j < wc; j++) {
 			cout << cons[i][j];
@@ -933,7 +934,7 @@ void throwBall(int t){
 			cons[i][j] = person[i - 7][j - 1];
 		}
 	}
-	cons[5][7] = 'o';
+	cons[5][8] = 'o';
 	for (int i = 0; i < hc; i++) {
 		for (int j = 0; j < wc; j++) {
 			cout << cons[i][j];
@@ -949,7 +950,7 @@ void throwBall(int t){
 			cons[i][j] = person[i - 7][j - 1];
 		}
 	}
-	cons[4][6] = 'o';
+	cons[4][7] = 'o';
 	for (int i = 0; i < hc; i++) {
 		for (int j = 0; j < wc; j++) {
 			cout << cons[i][j];
@@ -965,7 +966,7 @@ void throwBall(int t){
 			cons[i][j] = person[i - 7][j - 1];
 		}
 	}
-	cons[4][5] = 'o';
+	cons[3][6] = 'o';
 	for (int i = 0; i < hc; i++) {
 		for (int j = 0; j < wc; j++) {
 			cout << cons[i][j];
@@ -981,7 +982,7 @@ void throwBall(int t){
 			cons[i][j] = person[i - 7][j - 1];
 		}
 	}
-	cons[5][4] = 'o';
+	cons[3][5] = 'o';
 	for (int i = 0; i < hc; i++) {
 		for (int j = 0; j < wc; j++) {
 			cout << cons[i][j];
@@ -997,7 +998,7 @@ void throwBall(int t){
 			cons[i][j] = person[i - 7][j - 1];
 		}
 	}
-	cons[6][3] = 'o';
+	cons[4][4] = 'o';
 	for (int i = 0; i < hc; i++) {
 		for (int j = 0; j < wc; j++) {
 			cout << cons[i][j];
@@ -1013,7 +1014,7 @@ void throwBall(int t){
 			cons[i][j] = person[i - 7][j - 1];
 		}
 	}
-	cons[7][2] = 'o';
+	cons[5][3] = 'o';
 	for (int i = 0; i < hc; i++) {
 		for (int j = 0; j < wc; j++) {
 			cout << cons[i][j];
@@ -1024,6 +1025,44 @@ void throwBall(int t){
 
 	zeroing_console();
 	//system("cls");
+	for (int i = 7; i < hc - 1; i++) {
+		for (int j = 1; j < w; j++) {
+			cons[i][j] = person[i - 7][j - 1];
+		}
+	}
+	cons[6][2] = 'o';
+	for (int i = 0; i < hc; i++) {
+		for (int j = 0; j < wc; j++) {
+			cout << cons[i][j];
+		}
+		cout << endl;
+	}
+	//Sleep(t);
+
+	zeroing_console();
+	//system("cls");
+
+	
+
+	for (int i = 7; i < hc - 1; i++) {
+		for (int j = 1; j < w; j++) {
+			cons[i][j] = person[i - 7][j - 1];
+		}
+	}
+	cons[7][1] = 'o';
+	for (int i = 0; i < hc; i++) {
+		for (int j = 0; j < wc; j++) {
+			cout << cons[i][j];
+		}
+		cout << endl;
+	}
+	//Sleep(t);
+
+	zeroing_console();
+	//system("cls");
+
+	
+
 	for (int i = 7; i < hc - 1; i++) {
 		for (int j = 1; j < w; j++) {
 			cons[i][j] = person[i - 7][j - 1];
@@ -1045,6 +1084,8 @@ void throwBall(int t){
 	person[7][0] = '/';
 	person[8][0] = ' ';
 	person[7][1] = ' ';
+
+	//person[6][0] = '\\';
 
 	for (int i = 7; i < hc - 1; i++) {
 		for (int j = 1; j < w; j++) {
@@ -1084,6 +1125,7 @@ void throwBall(int t){
 	//system("cls");
 
 	person[6][0] = '\\';
+	
 
 	for (int i = 7; i < hc - 1; i++) {
 		for (int j = 1; j < w; j++) {
@@ -1120,10 +1162,9 @@ void throwBall(int t){
 
 	zeroing_console();
 	//system("cls");
-
-	person[6][0] = ' ';
 	person[6][1] = ' ';
-	person[7][1] ='/';
+	person[6][0] = ' ';
+	person[7][1] = '/';
 	person[7][0] = '-';
 
 	for (int i = 7; i < hc - 1; i++) {
@@ -1138,14 +1179,9 @@ void throwBall(int t){
 		}
 		cout << endl;
 	}
-	//Sleep(t);
 
+	
 	zeroing_console();
-	//system("cls");
-
-	person[6][0] = ' ';
-	person[6][1] = ' ';
-	person[7][1] = '/';
 	person[7][0] = ' ';
 	person[8][0] = '-';
 
@@ -1161,18 +1197,16 @@ void throwBall(int t){
 		}
 		cout << endl;
 	}
-	//Sleep(t);
 
 	zeroing_console();
 	zeroing_pers();
-	//system("cls");
 
 	for (int i = 7; i < hc - 1; i++) {
 		for (int j = 1; j < w; j++) {
 			cons[i][j] = person[i - 7][j - 1];
 		}
 	}
-	
+
 	for (int i = 0; i < hc; i++) {
 		for (int j = 0; j < wc; j++) {
 			cout << cons[i][j];
