@@ -1,722 +1,819 @@
 #include <iostream>
 #include <unistd.h>
-
-using namespace std;
-
-const int h = 12, w = 11, sleeptime = 500 * 1000, hc = 20, wc = 40;
-
-char cons[hc][wc]
-{
-    {'*','*','*','*','*','*','*','*','*','*','*','*','*','*','*','*','*','*','*','*','*','*','*','*','*','*','*','*','*','*','*','*','*','*','*','*','*','*','*','*'},
-    {'*',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ','*'},
-    {'*',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ','*'},
-    {'*',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ','*'},
-    {'*',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ','*'},
-    {'*',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ','*'},
-    {'*',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ','*'},
-    {'*',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ','*'},
-    {'*',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ','*'},
-    {'*',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ','*'},
-    {'*',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ','*'},
-    {'*',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ','*'},
-    {'*',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ','*'},
-    {'*',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ','*'},
-    {'*',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ','*'},
-    {'*',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ','*'},
-    {'*',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ','*'},
-    {'*',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ','*'},
-    {'*',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ','*'},
-    {'*','*','*','*','*','*','*','*','*','*','*','*','*','*','*','*','*','*','*','*','*','*','*','*','*','*','*','*','*','*','*','*','*','*','*','*','*','*','*','*'},
-};
-char person[h][w]
-{
-    {' ',' ',' ','_','[',']','_',' ',' ',' '},
-    {' ',' ',' ','|','~','~','|',' ',' ',' '},
-    {' ',' ',' ','|','o','q','|',' ',' ',' '},
-    {' ',' ','(','|','<','>','|',')',' ',' '},
-    {' ',' ',' ','\\','-','-','/',' ',' ',' '},
-    {' ',' ',' ','_','>','<','_',' ',' ',' '},
-    {' ',' ','-','\\','.',' ','/','-',' ',' '},
-    {' ','/',' ','|','.',' ','|',' ','\\',' '},
-    {'/',' ',' ','|','.',' ','|',' ',' ','\\'},
-    {' ',' ',' ','|','_','_','|',' ',' ',' '},
-    {' ',' ',' ',' ','|','|',' ',' ',' ',' '},
-    {' ',' ',' ','_','|','|','_',' ',' ',' '},
-};
-
-void console_dance();
-void zeroing_console();
-
-void output_dance() {
-    console_dance();
-    // usleep(sleeptime);
-    // system("cls");
+unsigned short menu(unsigned short& a) {
+    std::cout << "Choose animation:" << std::endl;
+    std::cout << "Dance: \t\t\t1" << std::endl;
+    std::cout << "Run: \t\t\t2" << std::endl;
+    std::cout << "Sit down and jump: \t3" << std::endl;
+    std::cout << "Throw a ball: \t\t4" << std::endl << std::endl;
+    std::cout << "Enter 5 for exit." << std::endl;
+    std::cin >> a;
+    return a;
 }
-
-void pos2(char person[h][w]) {
-    person[6][1] = '-';
-    person[6][8] = '-';
-    person[7][1] = ' ';
-    person[7][8] = ' ';
-    person[7][0] = '/';
-    person[7][9] = '\\';
-    person[8][0] = ' ';
-    person[8][9] = ' ';
+void clear() { /*system("cls");*/ }
+void head() {
+    std::cout << "*                                      *" << std::endl;
+    std::cout << "*                                      *" << std::endl;
+    std::cout << "*                                      *" << std::endl;
+    std::cout << "*                                      *" << std::endl;
+    std::cout << "*                                      *" << std::endl;
+    std::cout << "*                                      *" << std::endl;
+    std::cout << "*   _[]_                               *" << std::endl;
+    std::cout << "*   |~~|                               *" << std::endl;
+    std::cout << "*   |oq|                               *" << std::endl;
+    std::cout << "*  (|<>|)                              *" << std::endl;
 }
-
-void pos3(char person[h][w]) {
-    person[6][1] = ' ';
-    person[6][9] = '-';
-    person[7][1] = '/';
-    person[7][0] = ' ';
-    person[7][9] = ' ';
-    person[8][0] = '/';
+void legs() {
+    std::cout << "*   |__|                               *" << std::endl;
+    std::cout << "*    ||                                *" << std::endl;
+    std::cout << "*   _||_                               *" << std::endl;
 }
-
-void pos4(char person[h][w]) {
-    person[6][1] = '-';
-    person[6][9] = ' ';
-    person[5][9] = '/';
-    person[7][0] = '/';
-    person[7][1] = ' ';
-    person[8][0] = ' ';
+void body() {
+    std::cout << "*" << "   \\--/                               *" << std::endl;
+    std::cout << "*" << "   _><_                               *" << std::endl;
+    std::cout << "*" << "  -\\. /-                              *" << std::endl;
+    std::cout << "*" << " / |. | \\                             *" << std::endl;
+    std::cout << "*" << "/  |. |  \\                            *" << std::endl;
+    std::cout << "*" << "   |__|                               *" << std::endl;
 }
-
-void pos5(char person[h][w]) {
-    person[4][9] = '/';
-    person[5][9] = ' ';
-    person[5][8] = '/';
-    person[6][1] = ' ';
-    person[6][8] = ' ';
-    person[7][0] = ' ';
-    person[7][1] = '/';
-    person[8][0] = '/';
-}
-void pos6(char person[h][w]) {
-    person[6][1] = '-';
-    person[4][9] = '*';
-    person[7][0] = '/';
-    person[7][1] = ' ';
-    person[8][0] = ' ';
-}
-
-void pos7(char person[h][w]) {
-    person[4][9] = '/';
-    person[6][0] = '-';
-    person[7][0] = ' ';
-}
-
-void pos8(char person[h][w]) {
-    person[4][9] = '*';
-    person[5][0] = '\\';
-    person[6][0] = ' ';
-}
-
-void pos9(char person[h][w]) {
-    person[4][0] = '\\';
-    person[4][9] = '/';
-    person[5][1] = '\\';
-    person[5][0] = ' ';
-    person[6][1] = ' ';
-}
-
-void pos10(char person[h][w]) {
-    person[4][0] = '*';
-    person[4][9] = '*';
-}
-
-void pos11(char person[h][w]) {
-    person[4][0] = ' ';
-    person[4][9] = ' ';
-    person[5][0] = '*';
-    person[5][9] = '*';
-    person[5][1] = ' ';
-    person[5][8] = ' ';
-    person[6][1] = '-';
-    person[6][8] = '-';
-}
-
-void pos12(char person[h][w]) {
-    person[5][0] = ' ';
-    person[5][9] = ' ';
-    person[6][0] = '*';
-    person[6][9] = '*';
-}
-
-void pos13(char person[h][w]) {
-    person[6][0] = ' ';
-    person[6][9] = ' ';
-    person[7][0] = '*';
-    person[7][9] = '*';
-}
-
-void pos14(char person[h][w]) {
-    person[6][1] = ' ';
-    person[6][8] = ' ';
-    person[7][1] = '/';
-    person[7][8] = '\\';
-    person[7][0] = ' ';
-    person[7][9] = ' ';
-    person[8][0] = '*';
-    person[8][9] = '*';
-}
-
-void pos15(char person[h][w]) {
-    person[8][0] = '/';
-    person[8][9] = '\\';
-}
-
 void dance() {
-    for (int i = 0; i < 2; i++) {
-        output_dance();
-        pos2(person);
-        output_dance();
-        pos3(person);
-        output_dance();
-        pos4(person);
-        output_dance();
-        pos5(person);
-        output_dance();
-        pos6(person);
-        output_dance();
-        pos7(person);
-        output_dance();
-        pos8(person);
-        output_dance();
-        pos9(person);
-        output_dance();
-        pos10(person);
-        output_dance();
-        pos11(person);
-        output_dance();
-        pos12(person);
-        output_dance();
-        pos13(person);
-        output_dance();
-        pos14(person);
-        output_dance();
-        pos15(person);
+    for (int k = 0; k <= 28; k++) {
+        clear();
+        std::cout << std::string(40, '*') << std::endl;
+        head();
+        switch (k % 14) {
+        case 0: {
+            std::cout << "*   \\--/                               *\n";
+            std::cout << "*   _><_                               *\n";
+            std::cout << "*  -\\. /-                              *\n";
+            std::cout << "* / |. | \\                             *\n";
+            std::cout << "*/  |. |  \\                            *\n"; break; }
+        case 1: {
+            std::cout << "*   \\--/                               *\n";
+            std::cout << "*   _><_                               *\n";
+            std::cout << "* --\\. /--                             *\n";
+            std::cout << "*/  |. |  \\                            *\n";
+            std::cout << "*   |. |                               *\n"; break; }
+        case 2: {
+            std::cout << "*   \\--/                               *\n";
+            std::cout << "*   _><_                               *\n";
+            std::cout << "*  -\\. /---                            *\n";
+            std::cout << "* / |. |                               *\n";
+            std::cout << "*/  |. |                               *\n"; break; }
+        case 3: {
+            std::cout << "*   \\--/                               *\n";
+            std::cout << "*   _><_  /                            *\n";
+            std::cout << "* --\\. /--                             *\n";
+            std::cout << "*/  |. |                               *\n";
+            std::cout << "*   |. |                               *\n"; break; }
+        case 4: {
+            std::cout << "*   \\--/  /                            *\n";
+            std::cout << "*   _><_ /                             *\n";
+            std::cout << "*  -\\. /-                              *\n";
+            std::cout << "* / |. |                               *\n";
+            std::cout << "*/  |. |                               *\n"; break; }
+        case 5: {
+            std::cout << "*   \\--/  *                            *\n";
+            std::cout << "*   _><_ /                             *\n";
+            std::cout << "* --\\. /-                              *\n";
+            std::cout << "*/  |. |                               *\n";
+            std::cout << "*   |. |                               *\n"; break; }
+        case 6: {
+            std::cout << "*   \\--/  /                            *\n";
+            std::cout << "*   _><_ /                             *\n";
+            std::cout << "*---\\. /-                              *\n";
+            std::cout << "*   |. |                               *\n";
+            std::cout << "*   |. |                               *\n"; break; }
+        case 7: {
+            std::cout << "*   \\--/  *                            *\n";
+            std::cout << "*\\  _><_ /                             *\n";
+            std::cout << "* --\\. /-                              *\n";
+            std::cout << "*   |. |                               *\n";
+            std::cout << "*   |. |                               *\n"; break; }
+        case 8: {
+            std::cout << "*\\  \\--/  /                            *\n";
+            std::cout << "* \\ _><_ /                             *\n";
+            std::cout << "*  -\\. /-                              *\n";
+            std::cout << "*   |. |                               *\n";
+            std::cout << "*   |. |                               *\n"; break; }
+        case 9: {
+            std::cout << "**  \\--/  *                            *\n";
+            std::cout << "* \\ _><_ /                             *\n";
+            std::cout << "*  -\\. /-                              *\n";
+            std::cout << "*   |. |                               *\n";
+            std::cout << "*   |. |                               *\n"; break; }
+        case 10: {
+            std::cout << "*   \\--/                               *\n";
+            std::cout << "**  _><_  *                            *\n";
+            std::cout << "* --\\. /--                             *\n";
+            std::cout << "*   |. |                               *\n";
+            std::cout << "*   |. |                               *\n"; break; }
+        case 11: {
+            std::cout << "*   \\--/                               *\n";
+            std::cout << "*   _><_                               *\n";
+            std::cout << "**--\\. /--*                            *\n";
+            std::cout << "*   |. |                               *\n";
+            std::cout << "*   |. |                               *\n"; break; }
+        case 12: {
+            std::cout << "*   \\--/                               *\n";
+            std::cout << "*   _><_                               *\n";
+            std::cout << "* --\\. /--                             *\n";
+            std::cout << "**  |. |  *                            *\n";
+            std::cout << "*   |. |                               *\n"; break; }
+        case 13: {
+            std::cout << "*   \\--/                               *\n";
+            std::cout << "*   _><_                               *\n";
+            std::cout << "*  -\\. /-                              *\n";
+            std::cout << "* / |. | \\                             *\n";
+            std::cout << "**  |. |  *                            *\n"; break; }
+        }
+        legs();
+        std::cout << std::string(40, '*') << std::endl;
+        //Sleep(1000);
+        clear();
     }
-    output_dance();
-
 }
-
-void run_pos2() {
-    person[10][5] = ' ';
-    person[10][6] = '\\';
-    person[11][5] = ' ';
-    person[11][6] = ' ';
-    person[11][7] = '\\';
-    person[11][8] = '_';
+void magic(std::string levo, std::string pravo) {
+    std::cout << std::string(40, '*') << '\n';
+    for (int i = 0; i < 6; i++) { std::cout << "*                                      *\n"; }
+    std::cout << "*" << levo << "   _[]_   " << pravo << "*\n";
+    std::cout << "*" << levo << "   |~~|   " << pravo << "*\n";
+    std::cout << "*" << levo << "   |oq|   " << pravo << "*\n";
+    std::cout << "*" << levo << "  (|<>|)  " << pravo << "*\n";
+    std::cout << "*" << levo << "   \\--/   " << pravo << "*\n";
+    std::cout << "*" << levo << "   _><_   " << pravo << "*\n";
+    std::cout << "*" << levo << "  -\\. /-  " << pravo << "*\n";
+    std::cout << "*" << levo << " / |. | \\ " << pravo << "*\n";
+    std::cout << "*" << levo << "/  |. |  \\" << pravo << "*\n";
+    std::cout << "*" << levo << "   |__|   " << pravo << "*\n";
 }
-
-void run_pos3() {
-    person[10][3] = '/';
-    person[10][4] = ' ';
-    person[10][5] = '|';
-    person[10][6] = ' ';
-    person[11][1] = '_';
-    person[11][2] = '/';
-    person[11][3] = ' ';
-    person[11][4] = ' ';
-    person[11][5] = '|';
-    person[11][6] = '_';
-    person[11][7] = ' ';
-    person[11][8] = ' ';
-}
-
-void run_pos1() {
-    person[10][3] = ' ';
-    person[10][4] = '|';
-    person[10][5] = '|';
-    person[10][6] = ' ';
-    person[11][1] = ' ';
-    person[11][2] = ' ';
-    person[11][3] = '_';
-    person[11][4] = '|';
-    person[11][5] = '|';
-    person[11][6] = '_';
-    person[11][7] = ' ';
-    person[11][8] = ' ';
-}
-
 void run() {
-    for (int k = 0; k < wc - w - 1; k++) {
-        run_pos1();
-        for (int i = 7; i < hc - 1; i++) {
-            for (int j = 1 + k; j < w + k; j++) {
-                cons[i][j] = person[i - 7][j - 1 - k];
-            }
+    for (int i = 0, j = 28; i <= 28; i++, j--) {
+        std::string pravo = std::string(i, ' ');
+        std::string levo = std::string(j, ' ');
+        int k = 0;
+        if (i == 0) {
+            k = 1;
         }
-
-        for (int i = 0; i < hc; i++) {
-            for (int j = 0; j < wc; j++) {
-                cout << cons[i][j];
+        for (; k < 3; k++) {
+            if (i == 28 and k == 2) {
+                break;
             }
-            cout << endl;
-        }
-
-        // usleep(sleeptime);
-        // system("cls");
-        zeroing_console();
-
-        run_pos2();
-
-        for (int i = 7; i < hc - 1; i++) {
-            for (int j = 1 + k; j < w + k; j++) {
-                cons[i][j] = person[i - 7][j - 1 - k];
+            magic(pravo, levo);
+            switch (k) {
+            case 0: {
+                std::cout << "*" << pravo << "   / |   " << levo << " *\n";
+                std::cout << "*" << pravo << " _/  |_   " << levo << "*\n";
+                std::cout << std::string(40, '*') << '\n';/*Sleep(100)*/; clear(); break;
             }
-        }
-
-        for (int i = 0; i < hc; i++) {
-            for (int j = 0; j < wc; j++) {
-                cout << cons[i][j];
+            case 1: {
+                std::cout << "*" << pravo << "    ||    " << levo << "*\n";
+                std::cout << "*" << pravo << "   _||_   " << levo << "*\n";
+                std::cout << std::string(40, '*') << '\n'; /*Sleep(100)*/; clear(); break;
             }
-            cout << endl;
-        }
-
-        // usleep(sleeptime);
-        // system("cls");
-        zeroing_console();
-
-        run_pos3();
-
-        for (int i = 7; i < hc - 1; i++) {
-            for (int j = 2 + k; j < w + k + 1; j++) {
-                cons[i][j] = person[i - 7][j - 2 - k];
+            case 2: {
+                std::cout << "*" << pravo << "    | \\   " << levo << "*\n";
+                std::cout << "*" << pravo << "   _|  \\_   " << levo << "\b\b*\n";
+                std::cout << std::string(40, '*') << '\n'; /*Sleep(100)*/; clear(); break; }
             }
-        }
-
-        for (int i = 0; i < hc; i++) {
-            for (int j = 0; j < wc; j++) {
-                cout << cons[i][j];
-            }
-            cout << endl;
-        }
-
-        // usleep(sleeptime);
-        // system("cls");
-        zeroing_console();
-
-    }
-
-    for (int k = wc - w - 1; k > 0; k--) {
-        run_pos1();
-        for (int i = 7; i < hc - 1; i++) {
-            for (int j = 1 + k; j < w + k; j++) {
-                cons[i][j] = person[i - 7][j - 1 - k];
-            }
-        }
-
-        for (int i = 0; i < hc; i++) {
-            for (int j = 0; j < wc; j++) {
-                cout << cons[i][j];
-            }
-            cout << endl;
-        }
-
-        // usleep(sleeptime);
-        // system("cls");
-        zeroing_console();
-
-        run_pos3();
-
-        for (int i = 7; i < hc - 1; i++) {
-            for (int j = 1 + k; j < w + k; j++) {
-                cons[i][j] = person[i - 7][j - 1 - k];
-            }
-        }
-
-        for (int i = 0; i < hc; i++) {
-            for (int j = 0; j < wc; j++) {
-                cout << cons[i][j];
-            }
-            cout << endl;
-        }
-
-        // usleep(sleeptime);
-        // system("cls");
-        zeroing_console();
-
-        run_pos1();
-        run_pos2();
-
-        for (int i = 7; i < hc - 1; i++) {
-            for (int j = k; j < w + k - 1; j++) {
-                cons[i][j] = person[i - 7][j - k];
-            }
-        }
-
-        for (int i = 0; i < hc; i++) {
-            for (int j = 0; j < wc; j++) {
-                cout << cons[i][j];
-            }
-            cout << endl;
-        }
-
-        // usleep(sleeptime);
-        // system("cls");
-        zeroing_console();
-
-    }
-
-    run_pos1();
-    for (int i = 7; i < hc - 1; i++) {
-        for (int j = 1; j < w; j++) {
-            cons[i][j] = person[i - 7][j - 1];
         }
     }
+    for (int i = 28, j = 0; j <= 28; j++, i--) {
+        std::string pravo = std::string(i, ' ');
+        std::string levo = std::string(j, ' ');
+        for (int k = 0; k < 3; k++) {
 
-    for (int i = 0; i < hc; i++) {
-        for (int j = 0; j < wc; j++) {
-            cout << cons[i][j];
+            if (j == 0 and (k == 2)) {
+                continue;
+            }
+
+            if (j == 28 and k == 2) {
+                break;
+            }
+            magic(pravo, levo);
+            switch (k) {
+            case 2: {
+                std::cout << "*" << pravo << "   / |   " << levo << " *\n";
+                std::cout << "*" << pravo << " _/  |_   " << levo << "*\n";
+                std::cout << std::string(40, '*') << '\n'; /*Sleep(100)*/; clear(); break;
+            }
+            }
+        case 1: {
+            std::cout << "*" << pravo << "    ||    " << levo << "*\n";
+            std::cout << "*" << pravo << "   _||_   " << levo << "*\n";
+            std::cout << std::string(40, '*') << '\n'; /*Sleep(100)*/; clear(); break;
         }
-        cout << endl;
-    }
-
-    // usleep(sleeptime);
-    // system("cls");
-    zeroing_console();
-}
-
-void console_dance() {
-    for (int i = 7; i < hc - 1; i++) {
-        for (int j = 1; j < w; j++) {
-            cons[i][j] = person[i - 7][j - 1];
+        case 0: {
+            std::cout << "*" << pravo << "    | \\   " << levo << "*\n";
+            std::cout << "*" << pravo << "   _|  \\_ " << levo << "*\n";
+            std::cout << std::string(40, '*') << '\n'; /*Sleep(100)*/; clear(); break;
         }
-    }
-    for (int i = 0; i < hc; i++) {
-        for (int j = 0; j < wc; j++) {
-            cout << cons[i][j];
-        }
-        cout << endl;
-    }
-}
-
-void zeroing_console() {
-    char cons_zero[hc][wc] =
-    {
-        {'*','*','*','*','*','*','*','*','*','*','*','*','*','*','*','*','*','*','*','*','*','*','*','*','*','*','*','*','*','*','*','*','*','*','*','*','*','*','*','*'},
-        {'*',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ','*'},
-        {'*',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ','*'},
-        {'*',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ','*'},
-        {'*',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ','*'},
-        {'*',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ','*'},
-        {'*',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ','*'},
-        {'*',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ','*'},
-        {'*',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ','*'},
-        {'*',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ','*'},
-        {'*',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ','*'},
-        {'*',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ','*'},
-        {'*',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ','*'},
-        {'*',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ','*'},
-        {'*',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ','*'},
-        {'*',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ','*'},
-        {'*',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ','*'},
-        {'*',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ','*'},
-        {'*',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ','*'},
-        {'*','*','*','*','*','*','*','*','*','*','*','*','*','*','*','*','*','*','*','*','*','*','*','*','*','*','*','*','*','*','*','*','*','*','*','*','*','*','*','*'},
-    };
-    for (int i = 0; i < hc; i++) {
-        for (int j = 0; j < wc; j++) {
-            cons[i][j] = cons_zero[i][j];
         }
     }
 }
-
-void console_output() {
-    for (int i = 0; i < hc; i++) {
-        for (int j = 0; j < wc; j++) {
-            cout << cons[i][j];
-        }
-        cout << endl;
     }
-
-    // usleep(sleeptime);
-    // system("cls");
-    zeroing_console();
 }
-
-void jump_pos1() {
-    person[10][4] = '\\';
-    person[10][5] = '/';
-    person[10][3] = '_';
-    person[10][6] = '_';
-    person[11][3] = ' ';
-    person[11][4] = ' ';
-    person[11][5] = ' ';
-    person[11][6] = ' ';
+void sel() {
+    std::cout << std::string(40, '*') << '\n';
+    std::cout << "*                                      *" << std::endl;
+    std::cout << "*                                      *" << std::endl;
+    std::cout << "*                                      *" << std::endl;
+    std::cout << "*                                      *" << std::endl;
+    std::cout << "*                                      *" << std::endl;
+    std::cout << "*                                      *" << std::endl;
+    std::cout << "*                                      *" << std::endl;
+    std::cout << "*   _[]_                               *" << std::endl;
+    std::cout << "*   |~~|                               *" << std::endl;
+    std::cout << "*   |oq|                               *" << std::endl;
+    std::cout << "*  (|<>|)                              *" << std::endl;
+    std::cout << "*" << "   \\--/                               *" << std::endl;
+    std::cout << "*" << "   _><_                               *" << std::endl;
+    std::cout << "*" << "  -\\. /-                              *" << std::endl;
+    std::cout << "*" << " / |. | \\                             *" << std::endl;
+    std::cout << "*" << "/  |. |  \\                            *" << std::endl;
+    std::cout << "*   |__|                               *" << std::endl;
+    std::cout << "*   _\\/_                               *" << std::endl;
+    std::cout << std::string(40, '*') << '\n'; /*Sleep(100)*/; clear();
 }
-
-void jump_pos2() {
-    person[10][3] = ' ';
-    person[10][6] = ' ';
-    person[10][4] = '|';
-    person[10][5] = '|';
-    person[11][3] = ' ';
-    person[11][6] = ' ';
-    person[11][4] = '|';
-    person[11][5] = '|';
+void polet1() {
+    std::cout << std::string(40, '*') << '\n';
+    std::cout << "*                                      *" << std::endl;
+    std::cout << "*                                      *" << std::endl;
+    std::cout << "*                                      *" << std::endl;
+    std::cout << "*                                      *" << std::endl;
+    std::cout << "*                                      *" << std::endl;
+    std::cout << "*   _[]_                               *" << std::endl;
+    std::cout << "*   |~~|                               *" << std::endl;
+    std::cout << "*   |oq|                               *" << std::endl;
+    std::cout << "*  (|<>|)                              *" << std::endl;
+    std::cout << "*" << "   \\--/                               *" << std::endl;
+    std::cout << "*" << "   _><_                               *" << std::endl;
+    std::cout << "*" << "  -\\. /-                              *" << std::endl;
+    std::cout << "*" << " / |. | \\                             *" << std::endl;
+    std::cout << "*" << "/  |. |  \\                            *" << std::endl;
+    std::cout << "*   |__|                               *" << std::endl;
+    std::cout << "*    ||                                *" << std::endl;
+    std::cout << "*    ||                                *" << std::endl;
+    std::cout << "*                                      *" << std::endl;
+    std::cout << std::string(40, '*') << '\n'; /*Sleep(100)*/; clear();
 }
-
-void jump_pos3() {
-    person[10][3] = ' ';
-    person[10][6] = ' ';
-    person[10][4] = '|';
-    person[10][5] = '|';
-    person[11][3] = '_';
-    person[11][6] = '_';
-    person[11][4] = '|';
-    person[11][5] = '|';
+void polet2() {
+    std::cout << std::string(40, '*') << '\n';
+    std::cout << "*                                      *" << std::endl;
+    std::cout << "*                                      *" << std::endl;
+    std::cout << "*                                      *" << std::endl;
+    std::cout << "*                                      *" << std::endl;
+    std::cout << "*   _[]_                               *" << std::endl;
+    std::cout << "*   |~~|                               *" << std::endl;
+    std::cout << "*   |oq|                               *" << std::endl;
+    std::cout << "*  (|<>|)                              *" << std::endl;
+    std::cout << "*" << "   \\--/                               *" << std::endl;
+    std::cout << "*" << "   _><_                               *" << std::endl;
+    std::cout << "*" << "  -\\. /-                              *" << std::endl;
+    std::cout << "*" << " / |. | \\                             *" << std::endl;
+    std::cout << "*" << "/  |. |  \\                            *" << std::endl;
+    std::cout << "*   |__|                               *" << std::endl;
+    std::cout << "*    ||                                *" << std::endl;
+    std::cout << "*    ||                                *" << std::endl;
+    std::cout << "*                                      *" << std::endl;
+    std::cout << "*                                      *" << std::endl;
+    std::cout << std::string(40, '*') << '\n'; /*Sleep(100)*/; clear();
 }
-
+void polet3() {
+    std::cout << std::string(40, '*') << '\n';
+    std::cout << "*                                      *" << std::endl;
+    std::cout << "*                                      *" << std::endl;
+    std::cout << "*                                      *" << std::endl;
+    std::cout << "*   _[]_                               *" << std::endl;
+    std::cout << "*   |~~|                               *" << std::endl;
+    std::cout << "*   |oq|                               *" << std::endl;
+    std::cout << "*  (|<>|)                              *" << std::endl;
+    std::cout << "*" << "   \\--/                               *" << std::endl;
+    std::cout << "*" << "   _><_                               *" << std::endl;
+    std::cout << "*" << "  -\\. /-                              *" << std::endl;
+    std::cout << "*" << " / |. | \\                             *" << std::endl;
+    std::cout << "*" << "/  |. |  \\                            *" << std::endl;
+    std::cout << "*   |__|                               *" << std::endl;
+    std::cout << "*    ||                                *" << std::endl;
+    std::cout << "*    ||                                *" << std::endl;
+    std::cout << "*                                      *" << std::endl;
+    std::cout << "*                                      *" << std::endl;
+    std::cout << "*                                      *" << std::endl;
+    std::cout << std::string(40, '*') << '\n';/*Sleep(100)*/; clear();
+}
+void polet4() {
+    std::cout << std::string(40, '*') << '\n';
+    std::cout << "*                                      *" << std::endl;
+    std::cout << "*                                      *" << std::endl;
+    std::cout << "*   _[]_                               *" << std::endl;
+    std::cout << "*   |~~|                               *" << std::endl;
+    std::cout << "*   |oq|                               *" << std::endl;
+    std::cout << "*  (|<>|)                              *" << std::endl;
+    std::cout << "*" << "   \\--/                               *" << std::endl;
+    std::cout << "*" << "   _><_                               *" << std::endl;
+    std::cout << "*" << "  -\\. /-                              *" << std::endl;
+    std::cout << "*" << " / |. | \\                             *" << std::endl;
+    std::cout << "*" << "/  |. |  \\                            *" << std::endl;
+    std::cout << "*   |__|                               *" << std::endl;
+    std::cout << "*    ||                                *" << std::endl;
+    std::cout << "*    ||                                *" << std::endl;
+    std::cout << "*                                      *" << std::endl;
+    std::cout << "*                                      *" << std::endl;
+    std::cout << "*                                      *" << std::endl;
+    std::cout << "*                                      *" << std::endl;
+    std::cout << std::string(40, '*') << '\n'; /*Sleep(100)*/; clear();
+}
 void jump() {
-    jump_pos3();
-    for (int i = 7; i < hc - 1; i++) {
-        for (int j = 1; j < w; j++) {
-            cons[i][j] = person[i - 7][j - 1];
-        }
-    }
-    console_output();
+    clear();
+    std::cout << std::string(40, '*') << '\n';
+    std::cout << "*                                      *" << std::endl;
+    std::cout << "*                                      *" << std::endl;
+    std::cout << "*                                      *" << std::endl;
+    std::cout << "*                                      *" << std::endl;
+    std::cout << "*                                      *" << std::endl;
+    std::cout << "*                                      *" << std::endl;
+    std::cout << "*   _[]_                               *" << std::endl;
+    std::cout << "*   |~~|                               *" << std::endl;
+    std::cout << "*   |oq|                               *" << std::endl;
+    std::cout << "*  (|<>|)                              *" << std::endl;
+    std::cout << "*" << "   \\--/                               *" << std::endl;
+    std::cout << "*" << "   _><_                               *" << std::endl;
+    std::cout << "*" << "  -\\. /-                              *" << std::endl;
+    std::cout << "*" << " / |. | \\                             *" << std::endl;
+    std::cout << "*" << "/  |. |  \\                            *" << std::endl;
+    std::cout << "*   |__|                               *" << std::endl;
+    std::cout << "*    ||                                *" << std::endl;
+    std::cout << "*   _||_                               *" << std::endl;
+    std::cout << std::string(40, '*') << '\n'; /*Sleep(100)*/; clear();
+    sel();
+    std::cout << std::string(40, '*') << '\n';
+    head();
+    body();
+    std::cout << "*    ||                                *" << std::endl;
+    std::cout << "*    ||                                *" << std::endl;
+    std::cout << std::string(40, '*') << '\n'; /*Sleep(100)*/; clear();
+    polet1();
+    polet2();
+    polet3();
+    polet4();
+    polet3();
+    polet2();
+    polet1();
+    std::cout << std::string(40, '*') << '\n';
+    head();
+    body();
+    std::cout << "*    ||                                *" << std::endl;
+    std::cout << "*    ||                                *" << std::endl;
+    std::cout << std::string(40, '*') << '\n'; /*Sleep(100)*/; clear();
+    sel();
+    std::cout << std::string(40, '*') << '\n';
+    std::cout << "*                                      *" << std::endl;
+    std::cout << "*                                      *" << std::endl;
+    std::cout << "*                                      *" << std::endl;
+    std::cout << "*                                      *" << std::endl;
+    std::cout << "*                                      *" << std::endl;
+    std::cout << "*                                      *" << std::endl;
+    std::cout << "*   _[]_                               *" << std::endl;
+    std::cout << "*   |~~|                               *" << std::endl;
+    std::cout << "*   |oq|                               *" << std::endl;
+    std::cout << "*  (|<>|)                              *" << std::endl;
+    std::cout << "*" << "   \\--/                               *" << std::endl;
+    std::cout << "*" << "   _><_                               *" << std::endl;
+    std::cout << "*" << "  -\\. /-                              *" << std::endl;
+    std::cout << "*" << " / |. | \\                             *" << std::endl;
+    std::cout << "*" << "/  |. |  \\                            *" << std::endl;
+    std::cout << "*   |__|                               *" << std::endl;
+    std::cout << "*    ||                                *" << std::endl;
+    std::cout << "*   _||_                               *" << std::endl;
+    std::cout << std::string(40, '*') << '\n'; /*Sleep(100)*/;
+}
+void Throw_a_ball() {
+    clear();
+    std::cout << std::string(40, '*') << '\n';
+    head();
+    body();
+    std::cout << "*    ||                                *" << std::endl;
+    std::cout << "*   _||_                               *" << std::endl;
+    std::cout << std::string(40, '*') << '\n'; /*Sleep(100)*/; clear();
 
-    jump_pos1();
-    for (int i = 8; i < hc - 1; i++) {
-        for (int j = 1; j < w; j++) {
-            cons[i][j] = person[i - 8][j - 1];
-        }
-    }
-    console_output();
+    std::cout << std::string(40, '*') << '\n';
+    head();
+    std::cout << "*" << "   \\--/                               *" << std::endl;
+    std::cout << "*" << "   _><_                               *" << std::endl;
+    std::cout << "*" << "  -\\. /-                              *" << std::endl;
+    std::cout << "*" << " / |. | \\o                            *" << std::endl;
+    std::cout << "*" << "/  |. |  -                            *" << std::endl;
+    legs();
+    std::cout << std::string(40, '*') << '\n'; /*Sleep(100)*/; clear();
 
-    jump_pos2();
-    for (int k = 0; k < 5; k++) {
-        for (int i = 7 - k; i < 7 - k + h; i++) {
-            for (int j = 1; j < w; j++) {
-                cons[i][j] = person[i - 7 + k][j - 1];
-            }
-        }
-        console_output();
-    }
+    std::cout << std::string(40, '*') << '\n';
+    head();
+    std::cout << "*" << "   \\--/                               *" << std::endl;
+    std::cout << "*" << "   _><_                               *" << std::endl;
+    std::cout << "*" << "  -\\. /- o                            *" << std::endl;
+    std::cout << "*" << " / |. | \\-                            *" << std::endl;
+    std::cout << "*" << "/  |. |                               *" << std::endl;
+    legs();
+    std::cout << std::string(40, '*') << '\n'; /*Sleep(100)*/; clear();
 
-    for (int k = 3; k >= 0; k--) {
-        for (int i = 7 - k; i < 7 - k + h; i++) {
-            for (int j = 1; j < w; j++) {
-                cons[i][j] = person[i - 7 + k][j - 1];
-            }
-        }
-        console_output();
-    }
+    std::cout << std::string(40, '*') << '\n';
+    head();
+    std::cout << "*" << "   \\--/                               *" << std::endl;
+    std::cout << "*" << "   _><_  o                            *" << std::endl;
+    std::cout << "*" << "  -\\. /---                            *" << std::endl;
+    std::cout << "*" << " / |. |                               *" << std::endl;
+    std::cout << "*" << "/  |. |                               *" << std::endl;
+    legs();
+    std::cout << std::string(40, '*') << '\n'; /*Sleep(100)*/; clear();
 
-    jump_pos1();
-    for (int i = 8; i < hc - 1; i++) {
-        for (int j = 1; j < w; j++) {
-            cons[i][j] = person[i - 8][j - 1];
-        }
-    }
-    console_output();
+    std::cout << std::string(40, '*') << '\n';
+    head();
+    std::cout << "*" << "   \\--/  o                            *" << std::endl;
+    std::cout << "*" << "   _><_                               *" << std::endl;
+    std::cout << "*" << "  -\\. /--/                            *" << std::endl;
+    std::cout << "*" << " / |. |                               *" << std::endl;
+    std::cout << "*" << "/  |. |                               *" << std::endl;
+    legs();
+    std::cout << std::string(40, '*') << '\n'; /*Sleep(100)*/; clear();
 
-    jump_pos3();
-    for (int i = 7; i < hc - 1; i++) {
-        for (int j = 1; j < w; j++) {
-            cons[i][j] = person[i - 7][j - 1];
-        }
-    }
-    console_output();
-}
+    std::cout << std::string(40, '*') << '\n';
+    std::cout << "*                                      *" << std::endl;
+    std::cout << "*                                      *" << std::endl;
+    std::cout << "*                                      *" << std::endl;
+    std::cout << "*                                      *" << std::endl;
+    std::cout << "*                                      *" << std::endl;
+    std::cout << "*                                      *" << std::endl;
+    std::cout << "*   _[]_                               *" << std::endl;
+    std::cout << "*   |~~|                               *" << std::endl;
+    std::cout << "*   |oq|                               *" << std::endl;
+    std::cout << "*  (|<>|) o                            *" << std::endl;
+    std::cout << "*" << "   \\--/                               *" << std::endl;
+    std::cout << "*" << "   _><_                               *" << std::endl;
+    std::cout << "*" << "  -\\. /---                            *" << std::endl;
+    std::cout << "*" << " / |. |                               *" << std::endl;
+    std::cout << "*" << "/  |. |                               *" << std::endl;
+    legs();
+    std::cout << std::string(40, '*') << '\n';/*Sleep(100)*/; clear();
 
-void ball_pos1() {
-    person[8][9] = '-';
-}
-void ball_pos2() {
-    person[8][9] = ' ';
-    person[7][9] = '-';
-}
-void ball_pos3() { //once again
-    person[7][8] = ' ';
-    person[7][9] = ' ';
-    person[6][8] = '-';
-    person[6][9] = '-';
-}
-void ball_pos4() {
-    person[6][9] = '/';
-}
-void ball_pos5() {
-    person[6][9] = ' ';
-    person[7][9] = '\\';
-}
-void ball_pos6() {
-    person[6][8] = ' ';
-    person[7][8] = '\\';
-    person[7][9] = ' ';
-    person[8][9] = '\\';
-}
-void ball_pos7() {
-    person[6][1] = '-';
-    person[7][0] = '/';
-    person[7][1] = ' ';
-    person[8][0] = ' ';
-}
-void ball_pos8() { //once again
-    person[6][0] = '-';
-    person[7][0] = ' ';
-}
-void ball_pos9() {
-    person[6][0] = '\\';
-}
-void ball_pos10() {
-    person[6][0] = ' ';
-    person[6][1] = ' ';
-    person[7][0] = '-';
-    person[7][1] = '/';
-}
-void ball_pos11() {
-    person[7][0] = ' ';
-    person[8][0] = '-';
-}
-void ball_pos12() {
-    person[8][0] = '/';
-}
-void part_of_output() {
-    for (int i = 7; i < hc - 1; i++) {
-        for (int j = 1; j < w; j++) {
-            cons[i][j] = person[i - 7][j - 1];
-        }
-    }
-}
-void ball() {
-    part_of_output();
-    console_output();
-    ball_pos1();
-    part_of_output();
-    cons[14][10] = 'o';
-    console_output();
-    ball_pos2();
-    part_of_output();
-    cons[13][10] = 'o';
-    console_output();
-    ball_pos3();
-    part_of_output();
-    cons[12][10] = 'o';
-    console_output();
-    ball_pos4();
-    part_of_output();
-    cons[11][10] = 'o';
-    console_output();
-    ball_pos3();
-    part_of_output();
-    cons[10][10] = 'o';
-    console_output();
-    ball_pos5();
-    part_of_output();
-    cons[9][10] = 'o';
-    console_output();
-    ball_pos6();
-    part_of_output();
-    cons[8][10] = 'o';
-    console_output();
-    part_of_output();
-    cons[7][10] = 'o';
-    console_output();
-    part_of_output();
-    cons[6][9] = 'o';
-    console_output();
-    part_of_output();
-    cons[5][8] = 'o';
-    console_output();
-    part_of_output();
-    cons[4][7] = 'o';
-    console_output();
-    part_of_output();
-    cons[3][6] = 'o';
-    console_output();
-    part_of_output();
-    cons[3][5] = 'o';
-    console_output();
-    part_of_output();
-    cons[4][4] = 'o';
-    console_output();
-    part_of_output();
-    cons[5][3] = 'o';
-    console_output();
-    part_of_output();
-    cons[6][2] = 'o';
-    console_output();
-    part_of_output();
-    cons[7][1] = 'o';
-    console_output();
-    part_of_output();
-    cons[8][1] = 'o';
-    console_output();
-    ball_pos7();
-    part_of_output();
-    cons[9][1] = 'o';
-    console_output();
-    ball_pos8();
-    part_of_output();
-    cons[10][1] = 'o';
-    console_output();
-    ball_pos9();
-    part_of_output();
-    cons[11][1] = 'o';
-    console_output();
-    ball_pos8();
-    part_of_output();
-    cons[12][1] = 'o';
-    console_output();
-    ball_pos10();
-    part_of_output();
-    cons[13][1] = 'o';
-    console_output();
-    ball_pos11();
-    part_of_output();
-    cons[14][1] = 'o';
-    console_output();
-    ball_pos12();
-    part_of_output();
-    console_output();
-}
+    std::cout << std::string(40, '*') << '\n';
+    std::cout << "*                                      *" << std::endl;
+    std::cout << "*                                      *" << std::endl;
+    std::cout << "*                                      *" << std::endl;
+    std::cout << "*                                      *" << std::endl;
+    std::cout << "*                                      *" << std::endl;
+    std::cout << "*                                      *" << std::endl;
+    std::cout << "*   _[]_                               *" << std::endl;
+    std::cout << "*   |~~|                               *" << std::endl;
+    std::cout << "*   |oq|  o                            *" << std::endl;
+    std::cout << "*  (|<>|)                              *" << std::endl;
+    std::cout << "*" << "   \\--/                               *" << std::endl;
+    std::cout << "*" << "   _><_                               *" << std::endl;
+    std::cout << "*" << "  -\\. /--                             *" << std::endl;
+    std::cout << "*" << " / |. |  \\                            *" << std::endl;
+    std::cout << "*" << "/  |. |                               *" << std::endl;
+    legs();
+    std::cout << std::string(40, '*') << '\n'; /*Sleep(100)*/; clear();
 
-void menu()
-{
+    std::cout << std::string(40, '*') << '\n';
+    std::cout << "*                                      *" << std::endl;
+    std::cout << "*                                      *" << std::endl;
+    std::cout << "*                                      *" << std::endl;
+    std::cout << "*                                      *" << std::endl;
+    std::cout << "*                                      *" << std::endl;
+    std::cout << "*                                      *" << std::endl;
+    std::cout << "*   _[]_                               *" << std::endl;
+    std::cout << "*   |~~|  o                            *" << std::endl;
+    std::cout << "*   |oq|                               *" << std::endl;
+    std::cout << "*  (|<>|)                              *" << std::endl;
+    std::cout << "*" << "   \\--/                               *" << std::endl;
+    std::cout << "*" << "   _><_                               *" << std::endl;
+    std::cout << "*" << "  -\\. /-                              *" << std::endl;
+    std::cout << "*" << " / |. | \\                             *" << std::endl;
+    std::cout << "*" << "/  |. |  \\                            *" << std::endl;
+    legs();
+    std::cout << std::string(40, '*') << '\n';/*Sleep(100)*/; clear();
 
-    // int n;
-    cout << "Choose animation:" << endl;
-    cout << "Dance: \t\t\t1" << endl;
-    cout << "Run: \t\t\t2" << endl;
-    cout << "Sit down and jump: \t3" << endl;
-    cout << "Throw a ball: \t\t4" << endl << endl;
+    std::cout << std::string(40, '*') << '\n';
+    std::cout << "*                                      *" << std::endl;
+    std::cout << "*                                      *" << std::endl;
+    std::cout << "*                                      *" << std::endl;
+    std::cout << "*                                      *" << std::endl;
+    std::cout << "*                                      *" << std::endl;
+    std::cout << "*                                      *" << std::endl;
+    std::cout << "*   _[]_  o                            *" << std::endl;
+    std::cout << "*   |~~|                               *" << std::endl;
+    std::cout << "*   |oq|                               *" << std::endl;
+    std::cout << "*  (|<>|)                              *" << std::endl;
+    body();
+    std::cout << "*    ||                                *" << std::endl;
+    std::cout << "*   _||_                               *" << std::endl;
+    std::cout << std::string(40, '*') << '\n'; /*Sleep(100)*/; clear();
 
-    cout << "Enter 5 for exit." << endl;
-    // cin >> n;
-    // system("cls");
+    std::cout << std::string(40, '*') << '\n';
+    std::cout << "*                                      *" << std::endl;
+    std::cout << "*                                      *" << std::endl;
+    std::cout << "*                                      *" << std::endl;
+    std::cout << "*                                      *" << std::endl;
+    std::cout << "*                                      *" << std::endl;
+    std::cout << "*        o                             *" << std::endl;
+    std::cout << "*   _[]_                               *" << std::endl;
+    std::cout << "*   |~~|                               *" << std::endl;
+    std::cout << "*   |oq|                               *" << std::endl;
+    std::cout << "*  (|<>|)                              *" << std::endl;
+    body();
+    std::cout << "*    ||                                *" << std::endl;
+    std::cout << "*   _||_                               *" << std::endl;
+    std::cout << std::string(40, '*') << '\n'; /*Sleep(100)*/; clear();
 
-    // switch(n) {
-    //     case 1: dance(); menu();
-    //     case 2: run(); menu();
-    //     case 3: jump(); menu();
-    //     case 4: ball(); menu();
-    //     case 5: break;
-    // }
+    std::cout << std::string(40, '*') << '\n';
+    std::cout << "*                                      *" << std::endl;
+    std::cout << "*                                      *" << std::endl;
+    std::cout << "*                                      *" << std::endl;
+    std::cout << "*                                      *" << std::endl;
+    std::cout << "*       o                              *" << std::endl;
+    std::cout << "*                                      *" << std::endl;
+    std::cout << "*   _[]_                               *" << std::endl;
+    std::cout << "*   |~~|                               *" << std::endl;
+    std::cout << "*   |oq|                               *" << std::endl;
+    std::cout << "*  (|<>|)                              *" << std::endl;
+    body();
+    std::cout << "*    ||                                *" << std::endl;
+    std::cout << "*   _||_                               *" << std::endl;
+    std::cout << std::string(40, '*') << '\n';/*Sleep(100)*/; clear();
+
+    std::cout << std::string(40, '*') << '\n';
+    std::cout << "*                                      *" << std::endl;
+    std::cout << "*                                      *" << std::endl;
+    std::cout << "*                                      *" << std::endl;
+    std::cout << "*      o                               *" << std::endl;
+    std::cout << "*                                      *" << std::endl;
+    std::cout << "*                                      *" << std::endl;
+    std::cout << "*   _[]_                               *" << std::endl;
+    std::cout << "*   |~~|                               *" << std::endl;
+    std::cout << "*   |oq|                               *" << std::endl;
+    std::cout << "*  (|<>|)                              *" << std::endl;
+    body();
+    std::cout << "*    ||                                *" << std::endl;
+    std::cout << "*   _||_                               *" << std::endl;
+    std::cout << std::string(40, '*') << '\n';/*Sleep(100)*/; clear();
+
+    std::cout << std::string(40, '*') << '\n';
+    std::cout << "*                                      *" << std::endl;
+    std::cout << "*                                      *" << std::endl;
+    std::cout << "*     o                                *" << std::endl;
+    std::cout << "*                                      *" << std::endl;
+    std::cout << "*                                      *" << std::endl;
+    std::cout << "*                                      *" << std::endl;
+    std::cout << "*   _[]_                               *" << std::endl;
+    std::cout << "*   |~~|                               *" << std::endl;
+    std::cout << "*   |oq|                               *" << std::endl;
+    std::cout << "*  (|<>|)                              *" << std::endl;
+    body();
+    std::cout << "*    ||                                *" << std::endl;
+    std::cout << "*   _||_                               *" << std::endl;
+    std::cout << std::string(40, '*') << '\n';/*Sleep(100)*/; clear();
+
+    std::cout << std::string(40, '*') << '\n';
+    std::cout << "*                                      *" << std::endl;
+    std::cout << "*                                      *" << std::endl;
+    std::cout << "*    o                                 *" << std::endl;
+    std::cout << "*                                      *" << std::endl;
+    std::cout << "*                                      *" << std::endl;
+    std::cout << "*                                      *" << std::endl;
+    std::cout << "*   _[]_                               *" << std::endl;
+    std::cout << "*   |~~|                               *" << std::endl;
+    std::cout << "*   |oq|                               *" << std::endl;
+    std::cout << "*  (|<>|)                              *" << std::endl;
+    body();
+    std::cout << "*    ||                                *" << std::endl;
+    std::cout << "*   _||_                               *" << std::endl;
+    std::cout << std::string(40, '*') << '\n'; /*Sleep(100)*/; clear();
+
+    std::cout << std::string(40, '*') << '\n';
+    std::cout << "*                                      *" << std::endl;
+    std::cout << "*                                      *" << std::endl;
+    std::cout << "*                                      *" << std::endl;
+    std::cout << "*   o                                  *" << std::endl;
+    std::cout << "*                                      *" << std::endl;
+    std::cout << "*                                      *" << std::endl;
+    std::cout << "*   _[]_                               *" << std::endl;
+    std::cout << "*   |~~|                               *" << std::endl;
+    std::cout << "*   |oq|                               *" << std::endl;
+    std::cout << "*  (|<>|)                              *" << std::endl;
+    body();
+    std::cout << "*    ||                                *" << std::endl;
+    std::cout << "*   _||_                               *" << std::endl;
+    std::cout << std::string(40, '*') << '\n';/*Sleep(100)*/; clear();
+
+    std::cout << std::string(40, '*') << '\n';
+    std::cout << "*                                      *" << std::endl;
+    std::cout << "*                                      *" << std::endl;
+    std::cout << "*                                      *" << std::endl;
+    std::cout << "*                                      *" << std::endl;
+    std::cout << "*  o                                   *" << std::endl;
+    std::cout << "*                                      *" << std::endl;
+    std::cout << "*   _[]_                               *" << std::endl;
+    std::cout << "*   |~~|                               *" << std::endl;
+    std::cout << "*   |oq|                               *" << std::endl;
+    std::cout << "*  (|<>|)                              *" << std::endl;
+    body();
+    std::cout << "*    ||                                *" << std::endl;
+    std::cout << "*   _||_                               *" << std::endl;
+    std::cout << std::string(40, '*') << '\n'; /*Sleep(100)*/; clear();
+
+    std::cout << std::string(40, '*') << '\n';
+    std::cout << "*                                      *" << std::endl;
+    std::cout << "*                                      *" << std::endl;
+    std::cout << "*                                      *" << std::endl;
+    std::cout << "*                                      *" << std::endl;
+    std::cout << "*                                      *" << std::endl;
+    std::cout << "* o                                    *" << std::endl;
+    std::cout << "*   _[]_                               *" << std::endl;
+    std::cout << "*   |~~|                               *" << std::endl;
+    std::cout << "*   |oq|                               *" << std::endl;
+    std::cout << "*  (|<>|)                              *" << std::endl;
+    body();
+    std::cout << "*    ||                                *" << std::endl;
+    std::cout << "*   _||_                               *" << std::endl;
+    std::cout << std::string(40, '*') << '\n';/*Sleep(100)*/; clear();
+
+    std::cout << std::string(40, '*') << '\n';
+    std::cout << "*                                      *" << std::endl;
+    std::cout << "*                                      *" << std::endl;
+    std::cout << "*                                      *" << std::endl;
+    std::cout << "*                                      *" << std::endl;
+    std::cout << "*                                      *" << std::endl;
+    std::cout << "*                                      *" << std::endl;
+    std::cout << "*o  _[]_                               *" << std::endl;
+    std::cout << "*   |~~|                               *" << std::endl;
+    std::cout << "*   |oq|                               *" << std::endl;
+    std::cout << "*  (|<>|)                              *" << std::endl;
+    body();
+    std::cout << "*    ||                                *" << std::endl;
+    std::cout << "*   _||_                               *" << std::endl;
+    std::cout << std::string(40, '*') << '\n';/*Sleep(100)*/; clear();
+
+    std::cout << std::string(40, '*') << '\n';
+    std::cout << "*                                      *" << std::endl;
+    std::cout << "*                                      *" << std::endl;
+    std::cout << "*                                      *" << std::endl;
+    std::cout << "*                                      *" << std::endl;
+    std::cout << "*                                      *" << std::endl;
+    std::cout << "*                                      *" << std::endl;
+    std::cout << "*   _[]_                               *" << std::endl;
+    std::cout << "*o  |~~|                               *" << std::endl;
+    std::cout << "*   |oq|                               *" << std::endl;
+    std::cout << "*  (|<>|)                              *" << std::endl;
+    body();
+    std::cout << "*    ||                                *" << std::endl;
+    std::cout << "*   _||_                               *" << std::endl;
+    std::cout << std::string(40, '*') << '\n'; /*Sleep(100)*/; clear();
+
+    std::cout << std::string(40, '*') << '\n';
+    std::cout << "*                                      *" << std::endl;
+    std::cout << "*                                      *" << std::endl;
+    std::cout << "*                                      *" << std::endl;
+    std::cout << "*                                      *" << std::endl;
+    std::cout << "*                                      *" << std::endl;
+    std::cout << "*                                      *" << std::endl;
+    std::cout << "*   _[]_                               *" << std::endl;
+    std::cout << "*   |~~|                               *" << std::endl;
+    std::cout << "*o  |oq|                               *" << std::endl;
+    std::cout << "*  (|<>|)                              *" << std::endl;
+    std::cout << "*" << "   \\--/                               *" << std::endl;
+    std::cout << "*" << "   _><_                               *" << std::endl;
+    std::cout << "*" << " --\\. /-                              *" << std::endl;
+    std::cout << "*" << "/  |. | \\                             *" << std::endl;
+    std::cout << "*" << "   |. |  \\                            *" << std::endl;
+    legs();
+    std::cout << std::string(40, '*') << '\n'; /*Sleep(100)*/; clear();
+
+    std::cout << std::string(40, '*') << '\n';
+    std::cout << "*                                      *" << std::endl;
+    std::cout << "*                                      *" << std::endl;
+    std::cout << "*                                      *" << std::endl;
+    std::cout << "*                                      *" << std::endl;
+    std::cout << "*                                      *" << std::endl;
+    std::cout << "*                                      *" << std::endl;
+    std::cout << "*   _[]_                               *" << std::endl;
+    std::cout << "*   |~~|                               *" << std::endl;
+    std::cout << "*   |oq|                               *" << std::endl;
+    std::cout << "*o (|<>|)                              *" << std::endl;
+    std::cout << "*" << "   \\--/                               *" << std::endl;
+    std::cout << "*" << "   _><_                               *" << std::endl;
+    std::cout << "*" << "---\\. /-                              *" << std::endl;
+    std::cout << "*" << "   |. | \\                             *" << std::endl;
+    std::cout << "*" << "   |. |  \\                            *" << std::endl;
+    legs();
+    std::cout << std::string(40, '*') << '\n';/*Sleep(100)*/; clear();
+
+    std::cout << std::string(40, '*') << '\n';
+    std::cout << "*                                      *" << std::endl;
+    std::cout << "*                                      *" << std::endl;
+    std::cout << "*                                      *" << std::endl;
+    std::cout << "*                                      *" << std::endl;
+    std::cout << "*                                      *" << std::endl;
+    std::cout << "*                                      *" << std::endl;
+    std::cout << "*   _[]_                               *" << std::endl;
+    std::cout << "*   |~~|                               *" << std::endl;
+    std::cout << "*   |oq|                               *" << std::endl;
+    std::cout << "*  (|<>|)                              *" << std::endl;
+    std::cout << "*" << "o  \\--/                               *" << std::endl;
+    std::cout << "*" << "   _><_                               *" << std::endl;
+    std::cout << "*" << "\\--\\. /-                              *" << std::endl;
+    std::cout << "*" << "   |. | \\                             *" << std::endl;
+    std::cout << "*" << "   |. |  \\                            *" << std::endl;
+    legs();
+    std::cout << std::string(40, '*') << '\n';/*Sleep(100)*/; clear();
+
+    std::cout << std::string(40, '*') << '\n';
+    std::cout << "*                                      *" << std::endl;
+    std::cout << "*                                      *" << std::endl;
+    std::cout << "*                                      *" << std::endl;
+    std::cout << "*                                      *" << std::endl;
+    std::cout << "*                                      *" << std::endl;
+    std::cout << "*                                      *" << std::endl;
+    std::cout << "*   _[]_                               *" << std::endl;
+    std::cout << "*   |~~|                               *" << std::endl;
+    std::cout << "*   |oq|                               *" << std::endl;
+    std::cout << "*  (|<>|)                              *" << std::endl;
+    std::cout << "*" << "   \\--/                               *" << std::endl;
+    std::cout << "*" << "o  _><_                               *" << std::endl;
+    std::cout << "*" << "---\\. /-                              *" << std::endl;
+    std::cout << "*" << "   |. | \\                             *" << std::endl;
+    std::cout << "*" << "   |. |  \\                            *" << std::endl;
+    legs();
+    std::cout << std::string(40, '*') << '\n';/*Sleep(100)*/; clear();
+
+    std::cout << std::string(40, '*') << '\n';
+    std::cout << "*                                      *" << std::endl;
+    std::cout << "*                                      *" << std::endl;
+    std::cout << "*                                      *" << std::endl;
+    std::cout << "*                                      *" << std::endl;
+    std::cout << "*                                      *" << std::endl;
+    std::cout << "*                                      *" << std::endl;
+    std::cout << "*   _[]_                               *" << std::endl;
+    std::cout << "*   |~~|                               *" << std::endl;
+    std::cout << "*   |oq|                               *" << std::endl;
+    std::cout << "*  (|<>|)                              *" << std::endl;
+    std::cout << "*" << "   \\--/                               *" << std::endl;
+    std::cout << "*" << "   _><_                               *" << std::endl;
+    std::cout << "*" << "o -\\. /-                              *" << std::endl;
+    std::cout << "*" << "-/ |. | \\                             *" << std::endl;
+    std::cout << "*" << "   |. |  \\                            *" << std::endl;
+    legs();
+    std::cout << std::string(40, '*') << '\n';/*Sleep(100)*/; clear();
+
+    std::cout << std::string(40, '*') << '\n';
+    std::cout << "*                                      *" << std::endl;
+    std::cout << "*                                      *" << std::endl;
+    std::cout << "*                                      *" << std::endl;
+    std::cout << "*                                      *" << std::endl;
+    std::cout << "*                                      *" << std::endl;
+    std::cout << "*                                      *" << std::endl;
+    std::cout << "*   _[]_                               *" << std::endl;
+    std::cout << "*   |~~|                               *" << std::endl;
+    std::cout << "*   |oq|                               *" << std::endl;
+    std::cout << "*  (|<>|)                              *" << std::endl;
+    std::cout << "*" << "   \\--/                               *" << std::endl;
+    std::cout << "*" << "   _><_                               *" << std::endl;
+    std::cout << "*" << "  -\\. /-                              *" << std::endl;
+    std::cout << "*" << "o/ |. | \\                             *" << std::endl;
+    std::cout << "*" << "-  |. |  \\                            *" << std::endl;
+    legs();
+    std::cout << std::string(40, '*') << '\n';/*Sleep(100)*/; clear();
+
+    std::cout << std::string(40, '*') << '\n';
+    std::cout << "*                                      *" << std::endl;
+    std::cout << "*                                      *" << std::endl;
+    std::cout << "*                                      *" << std::endl;
+    std::cout << "*                                      *" << std::endl;
+    std::cout << "*                                      *" << std::endl;
+    std::cout << "*                                      *" << std::endl;
+    std::cout << "*   _[]_                               *" << std::endl;
+    std::cout << "*   |~~|                               *" << std::endl;
+    std::cout << "*   |oq|                               *" << std::endl;
+    std::cout << "*  (|<>|)                              *" << std::endl;
+    std::cout << "*" << "   \\--/                               *" << std::endl;
+    std::cout << "*" << "   _><_                               *" << std::endl;
+    std::cout << "*" << "  -\\. /-                              *" << std::endl;
+    std::cout << "*" << " / |. | \\                             *" << std::endl;
+    std::cout << "*" << "/  |. |  \\                            *" << std::endl;
+    legs();
+    std::cout << std::string(40, '*') << '\n';/*Sleep(100)*/; clear();
 }
-
 int main() {
-    int n;
-    while (n != 5) {
-        menu();
-        cin >> n;
-        switch (n) {
-        case 1: dance(); break;
-        case 2: run(); break;
-        case 3: jump(); break;
-        case 4: ball(); break;
-        case 5: break;
+    unsigned short a = 0;
+    clear();
+    menu(a);
+    while (a != 5) {
+        switch (a) {
+        case 1: { dance(); clear(); break; }
+        case 2: { run(); clear(); break; }
+        case 3: { jump(); clear(); break; }
+        case 4: { Throw_a_ball(); clear(); break; }
         }
+        menu(a);
     }
-    // cin >> n;
-    // switch(n) {
-    //     case 1: dance(); menu();
-    //     case 2: run(); menu();
-    //     case 3: jump(); menu();
-    //     case 4: ball(); menu();
-    //     case 5: break;
-    // }
     return 0;
+}
