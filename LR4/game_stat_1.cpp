@@ -35,6 +35,9 @@ int main() {
 		std::cout << "\n";
 		std::cout << "Invalid data.\n";
 		return 0;
+	} else if (speed == 0){
+		std::cout << "Your speed before start: 0 km/h" << std::endl;
+		std::cout << "\n";
 	}
 	
 	s = speed / 10;
