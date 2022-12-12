@@ -761,8 +761,8 @@ void throwBall(int t){
 	//Sleep(t);
 
 	person[8][9] = '-';
-	person[7][9] = '\\';
-    person[7][10] = 'o';
+	person[7][8] = '\\';
+    person[7][9] = 'o';
 	//system("cls");
 	for (int i = 7; i < hc - 1; i++) {
 		for (int j = 1; j < w; j++) {
