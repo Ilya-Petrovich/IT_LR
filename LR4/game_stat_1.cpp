@@ -10,7 +10,7 @@ int main() {
 	int distance = 360;
 
 	int fuel;
-	cout << "How much fuel do you have at start? ";
+	cout << "How much fuel do you have at start? " << endl;
 	cin >> fuel;
 
 	if (fuel < 0 || fuel > 50) {
