@@ -2,7 +2,6 @@
 #include <string>
 #include <unistd.h>
 
-
 using namespace std;
 
 void dancing(string* firstEl, int t);
@@ -760,8 +759,8 @@ void throwBall(int t) {
 		cout << endl;
 	}
 	//Sleep(t);
-
-	person[8][9] = '-';
+	
+	person[8][9] = ' '; //!!!!!!!!!!!!!!!!!!!!!!! '-'
 	person[7][8] = '\\';
 	person[7][9] = 'o';
 	//system("cls");
@@ -1043,7 +1042,7 @@ void throwBall(int t) {
 	zeroing_console();
 	//system("cls");
 
-	
+
 
 	for (int i = 7; i < hc - 1; i++) {
 		for (int j = 1; j < w; j++) {
@@ -1062,7 +1061,7 @@ void throwBall(int t) {
 	zeroing_console();
 	//system("cls");
 
-	
+
 
 	for (int i = 7; i < hc - 1; i++) {
 		for (int j = 1; j < w; j++) {
@@ -1126,7 +1125,7 @@ void throwBall(int t) {
 	//system("cls");
 
 	person[6][0] = '\\';
-	
+
 
 	for (int i = 7; i < hc - 1; i++) {
 		for (int j = 1; j < w; j++) {
@@ -1181,7 +1180,7 @@ void throwBall(int t) {
 		cout << endl;
 	}
 
-	
+
 	zeroing_console();
 	person[7][0] = ' ';
 	person[8][0] = '-';
