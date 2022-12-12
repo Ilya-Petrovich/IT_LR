@@ -10,15 +10,15 @@ int main() {
 	int distance = 360;
 
 	int fuel;
-	cout << "How much fuel do you have at start? " << endl;
+	cout << "How much fuel do you have at start? ";
 	cin >> fuel;
 
 	if (fuel < 0 || fuel > 50) {
-		cout << "\nInvalid data";
+		cout << "Invalid data";
 		exit(0);
 	}
 
-	cout << "\nCar stats";
+	cout << "Car stats" << endl;;
 	cout << "\nFuel: " << fuel;
 	cout << "\nFuel capacity: " << fuelCapacity;
 	cout << "\nFuel consumption: " << fuelConsumption;
