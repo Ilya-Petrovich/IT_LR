@@ -711,14 +711,14 @@ int main()
 				person.ThrowAnimation();
 				PrintLocation(location, person, ball, delBall, person.Height - 1, 14 - i);
 			}
-			for (int i = 0; i < 5; i++)
+			for (int i = 0; i < 4; i++)
 			{
-				PrintLocation(location, person, ball, delBall, person.Height - 1 - i, 6 - i);
+				PrintLocation(location, person, ball, delBall, person.Height - 2 - i, 6 - i);
 			}
-			PrintLocation(location, person, ball, delBall, person.Height - 6, 2);
-			for (int i = 1; i < 5; i++)
+			PrintLocation(location, person, ball, delBall, person.Height - 6, 3);
+			for (int i = 1; i < 4; i++)
 			{
-				PrintLocation(location, person, ball, delBall, person.Height - 6 - i, 2 + i);
+				PrintLocation(location, person, ball, delBall, person.Height - 7 - i, 3 + i);
 			}
 			for (int i = 0; i < 9; i++)
 			{
