@@ -2,7 +2,6 @@
 
 #include <iostream>
 #include <cstdio>
-#include <conio.h>
 
 FILE* image;
 
@@ -19,7 +18,6 @@ int main() {
 	readText(buff, fileSize);
 
 	delete[] buff;
-	_getch();
 	return 0;
 }
 
