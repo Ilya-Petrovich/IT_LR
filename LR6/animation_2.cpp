@@ -183,7 +183,7 @@ void run() {
         std::string levo = std::string(j, ' ');
         for (int k = 0; k < 3; k++) {
 
-            if (j == 0 and !(k == 2)) {
+            if (j == 0 and (k == 2)) {
                 continue;
             }
 
@@ -193,7 +193,6 @@ void run() {
             magic(pravo, levo);
             switch (k) {
             case 2: {
-                if (i != 28) {
                     std::cout << "*" << pravo << "   / |   " << levo << " *\n";
                     std::cout << "*" << pravo << " _/  |_   " << levo << "*\n";
                     std::cout << std::string(40, '*') << '\n'; /*Sleep(100)*/; clear(); break;
@@ -204,7 +203,6 @@ void run() {
                 std::cout << std::string(40, '*') << '\n'; /*Sleep(100)*/; clear(); break;
             }
             case 0: {
-                if (i != 28) {
                     std::cout << "*" << pravo << "    | \\   " << levo << "*\n";
                     std::cout << "*" << pravo << "   _|  \\_ " << levo << "*\n";
                     std::cout << std::string(40, '*') << '\n'; /*Sleep(100)*/; clear(); break;
