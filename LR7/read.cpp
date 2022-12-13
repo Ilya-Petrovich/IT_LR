@@ -1,50 +1,32 @@
 #include <iostream>
 #include <stdio.h>
-
-using namespace std;
-void readText(char* buff, long fileSize);
-void changeColor(char* buff, long fileSize);
-void writeText(char* buff, long fileSize);
-
+void ReadText(char* buff, long fSize);
 int main() {
 	FILE* file;
-
-	char filename[10];
-	cin >> filename;
+	char filename[100];
+	std::cin >> filename;
 	file = fopen(filename, "rb");
-
-	long fileSize;
+	long fSize;
 	fseek(file, 0, SEEK_END);
-	fileSize = ftell(file);
+	fSize = ftell(file);
 	rewind(file);
-
-	char* buff = new char[fileSize]();
-	fread(buff, sizeof(char), fileSize, file);
-
-	readText(buff, fileSize);
-
+	char* buff = new char[fSize]();
+	fread(buff, 1, fSize, file);
+	ReadText(buff, fSize);
 	fclose(file);
-	cin >> filename;
-	file = fopen(filename, "wb");
-	changeColor(buff, fileSize);
-	writeText(buff, fileSize);
-	fwrite(buff, sizeof(char), fileSize, file);
-	fclose(file);
-	delete[] buff;
-	return 0;
+	free(buff);
 }
 
-void readText(char* buff, long fileSize) {
-	char firstByte, secondByte, thirdByte, fourthByte, symbol;
-	int mask = 0x03;
-
-	for (int i = 138; i < fileSize; i += 4) {
-		firstByte = (buff[i] & mask) << 6;
-		secondByte = (buff[i + 1] & mask) << 4;
-		thirdByte = (buff[i + 2] & mask) << 2;
-		fourthByte = buff[i + 3] & mask;
-		symbol = firstByte | secondByte | thirdByte | fourthByte;
-		cout << symbol;
+void ReadText(char* buff, long fSize)
+{
+	int start_of_byte = fSize - 1200;
+	while (start_of_byte < fSize)
+	{
+		int first_byte = buff[start_of_byte] & 3;
+		int second_byte = buff[start_of_byte + 1] & 3;
+		int third_byte = buff[start_of_byte + 2] & 3;
+		int fourth_byte = buff[start_of_byte + 3] & 3;
+		std::cout << (char)((first_byte << 6) | (second_byte << 4) | (third_byte << 2) | fourth_byte);
+		start_of_byte += 4;
 	}
-	cout << endl;
 }
