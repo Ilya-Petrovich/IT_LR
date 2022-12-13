@@ -1,21 +1,25 @@
 #include <iostream>
-using namespace std;
-int main() {
-	int num_1, num_2, num_3;
-	cout << "Type the first number: "; cin >> num_1;
-	cout << "Type the second nubmer: "; cin >> num_2;
-	cout << "Type the third number: "; cin >> num_3;
-	if (num_1 > num_2 && num_2 != 0) {
-		cout << num_1 << " + " << num_2 << " = " << num_1 + num_2 << endl;
-		cout << num_1 << " - " << num_2 << " = " << num_1 - num_2 << endl;
-		cout << num_1 << " * " << num_2 << " = " << num_1 * num_2 << endl;
-		cout << num_1 << " / " << num_2 << " = " << num_1 / num_2 << endl;
-		cout << num_1 << ".0 / " << num_2 << ".0  = " << (float)num_1 / num_2 << endl;
-		cout << num_1 << " % " << num_2 << " = " << num_1 % num_2 << endl;
-		cout << num_1 << " + " << num_2 << " * " << num_3 << num_1 + num_2 * num_3 << endl;
-		cout << "(" << num_1 << " + " << num_2 << ") * " << num_3 << " = " << (num_1 + num_2) * num_3 << endl;
+
+int main()
+{
+	int num1, num2, num3;
+	setlocale(LC_ALL, "russian");
+	std::cout << "¬ведите первое число: "; 
+	std::cin >> num1;
+	std::cout << "¬ведите второе число: ";
+	std::cin >> num2;
+	std::cout << "¬ведите третье число: ";
+	std::cin >> num3;
+	if (num1 > num2 && num1 > 0 && num2 > 0 && num3 > 0) {
+		std::cout << num1 << " + " << num2 << " = " << num1 + num2 << std::endl;
+		std::cout << num1 << " - " << num2 << " = " << num1 - num2 << std::endl;
+		std::cout << num1 << " * " << num2 << " = " << num1 * num2 << std::endl;
+		std::cout << (double)num1 << " / " << double(num2) << " = " << (float)num1 / num2 << std::endl;
+		std::cout << num1 << " % " << num2 << " = " << num1 % num2 << std::endl;
+		std::cout << num1 << " + " << num2 << " * " << num3 << " = " << num1 + num2 * num3 << std::endl;
+		std::cout << "(" << num1 << " + " << num2 << ")" << " * " << num3 << " = " << (num1 + num2) * num3<< std::endl;
 	}
 	else {
-		cout << "Invalid data" << endl;
+		std::cout << "Invalid data" << std::endl;
 	}
 }
