@@ -45,14 +45,15 @@ int main() {
 }
 
 
-/*void print_person(char person[height][width]) {
+void print_person(char person[height][width]) {
     for (int i = 0; i < height; i++) {
         for (int j = 0; j < width; j++) {
             cout << person[i][j];
         }
         cout << endl;
     }
-}*/
+}
+
 void run() {}
 void sit_down_and_jump(){}
 void throw_a_ball() {}
