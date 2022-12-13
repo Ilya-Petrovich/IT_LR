@@ -41,5 +41,4 @@ int main()
 		//system("clear");
 		//system("cls");
 	}
-	cin.get();
 }
