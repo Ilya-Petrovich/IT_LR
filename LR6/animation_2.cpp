@@ -289,17 +289,21 @@ public:
 		{
 		case 100: // right leg "\"
 
-			BaseState[10][6] = "\\";
+			BaseState[10][6] = " ";
+			BaseState[10][7] = "\\";
 			BaseState[11][6] = " ";
-			BaseState[11][7] = "\\";
-			BaseState[11][8] = "_";
+			BaseState[11][7] = " ";
+			BaseState[11][8] = "\\";
+			BaseState[11][9] = "_";
 			break;
 
 		case 102: // right leg "|"
-			BaseState[10][5] = "/";
+			BaseState[10][5] = " ";
+			BaseState[10][4] = "/";
+			BaseState[11][4] = " ";
 			BaseState[11][5] = " ";
-			BaseState[11][4] = "/";
-			BaseState[11][3] = "_";
+			BaseState[11][3] = "/";
+			BaseState[11][2] = "_";
 			break;
 
 		case 101: // left leg "/"
@@ -308,14 +312,18 @@ public:
 			BaseState[11][6] = "|";
 			BaseState[11][7] = "_";
 			BaseState[11][8] = " ";
+			BaseState[10][7] = " ";
+			BaseState[11][9] = " ";
 			break;
 
 		case 103: // left leg "|"
 
 			BaseState[10][5] = "|";
+			BaseState[10][4] = " ";
 			BaseState[11][5] = "|";
 			BaseState[11][4] = "_";
 			BaseState[11][3] = " ";
+			BaseState[11][2] = " ";
 			break;
 		}
 	}
