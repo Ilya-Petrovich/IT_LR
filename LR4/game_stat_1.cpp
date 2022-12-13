@@ -9,7 +9,7 @@ int main() {
 
 	if (fuel < 0 || fuel > 50) {
 		std::cout << "Invalid data" << std::endl;
-		exit(1);
+		return 0;
 	}
 
 	std::cout << std::endl;
