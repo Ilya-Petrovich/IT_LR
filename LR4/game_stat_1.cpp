@@ -49,7 +49,7 @@ int main() {
         else fuelConsumed = fuelConsumption * distanceTraveled / 100;
 
         // остаток топлива. Вывести в консоль.
-        fuelRemained = (fuel - fuelConsumed < 0) ? 0 : fuel - fuelConsumed;
+        fuelRemained = fuel - fuelConsumed > 0 ? fuel - fuelConsumed : 0;
     } else if (speed < 0) {
       std::cout << "\nInvalid data.\n";
       return 0;
