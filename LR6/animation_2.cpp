@@ -4,7 +4,7 @@
 #include <vector>
 
 void menu(int &a);
-void rmFrame();
+// void rmFrame();
 void head(); void legs(); void body();
 void dance(); void run(); void jump(); void up(); void down(); void start_jump();
 void moveLR(std::string move_left, std::string move_right);
@@ -61,7 +61,6 @@ void body() {
     std::cout << "*" << "  --\\/--                              *\n"; 
     std::cout << "*" << " /  ||  \\                             *\n"; 
     std::cout << "*" << "/   ||   \\                            *\n"; 
-    // std::cout << "*" << "    /\\                                *\n";
 } 
 
 void dance() {
@@ -258,7 +257,7 @@ void moveLR(std::string move_left, std::string move_right) {
 void jump() { start_jump(); up(); down(); start_jump();}
 void up() {
     for (int i = 6, k = 0; i >= 2; i--, k++) {
-        rmFrame();
+        // rmFrame();
         std::cout << std::string(40, '*') << '\n';
         for (int l = i; l > 0; l--) {std::cout << '*' << std::string(38, ' ') << "*\n";}
         body();
