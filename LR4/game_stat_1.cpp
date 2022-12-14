@@ -4,7 +4,7 @@ int main()
 	int fuel, time;
 	float speed, s, fuelConsumption, distance, fuelConsumed, fuelRemained; 
 
-	std::cout << "How much fuel do you have at stats? ";
+	std::cout << "How much fuel do you have at start? ";
 	std::cin >> fuel;
 
 	if (fuel>50 || fuel<0) {
@@ -12,7 +12,7 @@ int main()
 		return 0;
 	}
 
-	std::cout << "\nCar start" << "\nFuel: " << fuel << "\nFuel capacity: 50\nFuel consumption: 0\n";
+	std::cout << "\nCar stats" << "\nFuel: " << fuel << "\nFuel capacity: 50\nFuel consumption: 0\n";
 	std::cout << "\nSpeed: 0\nMaximum speed: 110\n";
 	std::cout << "\nRoute info\nDistance: 360 km\n----------------------------------------";
 	std::cout << "\nYou have to drive a route 360 km long.\nBut first you need to check if you have enough fuel.\n";
