@@ -6,7 +6,7 @@ using namespace std;
 int main()
 {
 	int i = 0;
-	for (i; i < 2; i++)
+	for (i; i < 3; i++)
 	{
 		cout << R"(   _[]_   )" << endl;
 		cout << R"(   |~~|   )" << endl;
