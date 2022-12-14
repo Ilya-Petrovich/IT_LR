@@ -14,11 +14,11 @@ int main() {
 	cin >> fuel;
 
 	if (fuel < 0 || fuel > 50) {
-		cout << "Invalid data";
+		cout << "\nInvalid data";
 		exit(0);
 	}
 
-	cout << "Car stats" << endl;;
+	cout << "\nCar stats:";
 	cout << "\nFuel: " << fuel;
 	cout << "\nFuel capacity: " << fuelCapacity;
 	cout << "\nFuel consumption: " << fuelConsumption;
