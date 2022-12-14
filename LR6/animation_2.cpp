@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string>
 #include "unistd.h"
-#include "windows.h"
+//#include "windows.h"
 
 using namespace std;
 
@@ -414,12 +414,9 @@ void dancing (string *firstEl, int col, int t) {
 void show_run_right (string *arr, int col, string spacesRight, string spacesLeft, int t) {
 	for (int i = 0; i < col; i ++) {
 		if ( (i<7) || (i == 19) ) cout << arr[i] << endl;
-		else {
-			cout << spacesLeft << arr[i] << spacesRight;
-		}
+		else cout << spacesLeft << arr[i] << spacesRight;
 	}
 	usleep(t);
-	//system("cls");
 	return;
 }
 void rightLeft (string *firstEl, int col, int t) {
