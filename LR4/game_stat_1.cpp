@@ -1,7 +1,7 @@
 #include<iostream>
 using namespace std;
 
-double f, s, speed, fuelConsumption, distancetraveled, fuelconsumed, distance = 360, fuelremained, asd;
+double f, s, speed, fuelConsumption, distancetraveled, fuelconsumed, distance = 360, fuelremained, asd, k = 3.6;
 int timespent;
 
 void start();
@@ -24,6 +24,10 @@ int main()
 		timespent = 0;
 		fuelconsumed = 0;
 		fuelremained = f;
+	}
+
+	if (fuelremained == 0.3) {
+		fuelremained = 0.299999;
 	}
 
 	cout << "Destination result" << endl;
@@ -55,7 +59,7 @@ void start()
 		cout << "----------------------------------------" << endl;
 		cout << "You have to drive a route 360 km long." << endl;
 		cout << "But first you need to check if you have enough fuel." << endl;
-		cout <<  endl;
+		cout << endl;
 		cout << "What speed will you choose? ";
 
 		cin >> speed;
@@ -70,7 +74,7 @@ void start()
 
 	}
 
-	else{
+	else {
 		cout << "\nInvalid data.\n";
 		exit(0);
 	}
@@ -82,7 +86,7 @@ void speed_n()
 		cout << "\nInvalid data.\n";
 		exit(0);
 	}
-	
+
 	else if (speed > 110)
 	{
 		speed = 110;
