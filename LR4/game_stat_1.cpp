@@ -4,8 +4,8 @@ using namespace std;
 
 int main()
 {
-    int fuel, speed, time;
-    float s, fuelConsumption, fuel_consumed, ostalos, g, nedoexal;
+    int speed, time;
+    float s, fuelConsumption, fuel_consumed, ostalos, g, nedoexal, fuel;
 
     cout << "How much fuel do you have at start? ";
     cin >> fuel;
