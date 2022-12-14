@@ -47,13 +47,13 @@ int main() {
 		cin >> uChoice;
 		if (uChoice == '1') {
 			//system("cls");
-			dancing(pers0, size_list, 2000);
+			dancing(pers0, size_list, 1000);
 		} else if (uChoice == '2') {
 			//system("cls");
-			rightLeft(pers0, size_list, 300);
+			rightLeft(pers0, size_list, 1000);
 		} else if (uChoice == '3') {
 			//system("cls");
-			jump(pers0, size_list, 5000);
+			jump(pers0, size_list, 1000);
 		} else if (uChoice == '4') {
 			//system("cls");
 			ball(pers0, size_list, 5000);
@@ -66,6 +66,7 @@ int main() {
 void show(string *firstEl, int col, int t) {
 	for (int i = 0; i < col; i ++, firstEl ++) cout << *firstEl << endl;
 	usleep(t);
+	//Sleep(t);
 	//system("cls");
 	return;
 }
@@ -177,7 +178,8 @@ void jump (string *firstEl, int col, int t) {
 	for (int i = 0; i < col; i ++, firstEl++) ( (i >= 0 && i < 7) || (i == 19) ) ?
 		pers[i] = *firstEl : pers[i] = "*" + *firstEl + spacesRight;
 	firstEl -= 20;
-	for (int i = 0; i < col; i++) cout << pers[i] << endl;
+
+	show (ptpers, col, t);
 	string emptyStr = pers[1];
 	string a = pers[7], b = pers[8], c = pers[9], d = pers[10], e = pers[11], f = pers[12], 
 		g = pers[13], h = pers[14], ii = pers[15], k = pers[16], l = pers[17], m = pers[18];
@@ -194,11 +196,8 @@ void jump (string *firstEl, int col, int t) {
 	pers[16] = g;
 	pers[17] = h;
 	pers[18] = "*   _\\/_   " + spacesRight;
-	usleep(t);
-	//Sleep(2000);
 	for (int q = 18; q >= 14; q --) {
-		//system("cls");
-		for (int i = 0; i < col; i++) cout << pers[i] << endl;
+		show (ptpers, col, t);
 		pers[q-11] = a;
 		pers[q-10] = b;
 		pers[q-9] = c;
@@ -212,13 +211,10 @@ void jump (string *firstEl, int col, int t) {
 		pers[q-1] = l;
 		pers[q] = "*    ||    " + spacesRight;
 		if (q != 18) pers[q+1] = emptyStr;
-		//Sleep(2000);
-		usleep(t);
 	}
-	//system("cls");
 	for (int q = 13; q <= 16; q ++) {
 		pers[q-11] = emptyStr;
-		for (int i = 0; i < col; i++) cout << pers[i] << endl;
+		show (ptpers, col, t);
 		pers[q-9] = a;
 		pers[q-8] = b;
 		pers[q-7] = c;
@@ -231,10 +227,21 @@ void jump (string *firstEl, int col, int t) {
 		pers[q] = k;
 		pers[q+1] = l;
 		pers[q+2] = "*    ||    " + spacesRight;
-		usleep(t);
-		//Sleep(2000);
-		//system("cls");
 	}
+	//
+	pers[7] = a;
+	pers[8] = b;
+	pers[9] = c;
+	pers[10] = d;
+	pers[11] = e;
+	pers[12] = f;
+	pers[13] = g;
+	pers[14] = h;
+	pers[15] = ii;
+	pers[16] = k;
+	pers[17] = l;
+	pers[18] = "*    ||    " + spacesRight;
+	show (ptpers, col, t);
 	pers[6] = emptyStr;
 	pers[7] = emptyStr;
 	pers[8] = emptyStr;
@@ -251,9 +258,7 @@ void jump (string *firstEl, int col, int t) {
 	show(ptpers, col, t);
 	for (int i = 0; i < col; i ++, firstEl++) ( (i >= 0 && i < 7) || (i == 19) ) ?
 		pers[i] = *firstEl : pers[i] = "*" + *firstEl + spacesRight;
-	//system("cls");
 	show(ptpers, col, t);
-	//system("cls");
 	return;
 }
 
