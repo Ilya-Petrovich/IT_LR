@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string>
 #include "unistd.h"
-#include "windows.h"
+//#include "windows.h"
 
 using namespace std;
 
@@ -65,9 +65,9 @@ int main() {
 
 void show(string *firstEl, int col, int t) {
 	for (int i = 0; i < col; i ++, firstEl ++) cout << *firstEl << endl;
-	//usleep(t);
-	Sleep(t);
-	system("cls");
+	usleep(t);
+	//Sleep(t);
+	//system("cls");
 	return;
 }
 
