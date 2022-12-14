@@ -8,7 +8,7 @@ int main()
 	std::cin >> fuel;
 
 	if (fuel>50 || fuel<0) {
-		std::cout << "\nInvalid data\n";
+		std::cout << "\nInvalid data.\n";
 		return 0;
 	}
 
