@@ -11,19 +11,19 @@ void moveLR(std::string move_left, std::string move_right);
 void throw_ball();
 
 int main() {
-    int choice = 0;
+    int choice = 3;
     // rmFrame();
-    while (choice != 5) {
+    // while (choice != 5) {
         switch (choice) {
             case 1: { dance(); break;}
             case 2: { run(); break;}
             case 3: { jump(); break;}
             case 4: { throw_ball(); break;}
         }
-        menu(choice);
+        // menu(choice);
     }
-    return 0;
-}
+    // return 0;
+// }
 
 void menu(int &a){
     std::cout << "Choose animation:" << std::endl;
@@ -260,7 +260,7 @@ void up() {
     for (int i = 7, k = 0; i >= 2; i--, k++) {
         // rmFrame();
         std::cout << std::string(40, '*') << '\n';
-        for (int l = i; l > 0; l--) {std::cout << '*' << std::string(38, ' ') << "*\n";}
+        for (int l = i - 1; l > 0; l--) {std::cout << '*' << std::string(38, ' ') << "*\n";}
         body();
         std::cout << "*" << "    /\\                                *\n";
         if (i == 7) {
