@@ -1,5 +1,6 @@
 #include<bits/stdc++.h>
 
+
 const int distance = 360, max_fuel = 50, min_fuel = 0, max_speed = 110;
 
 std::vector<float> check_optimal_speed(float a, float b, float c, float not_optimal_need_fuel, float not_optimal_fuel_consumption)
