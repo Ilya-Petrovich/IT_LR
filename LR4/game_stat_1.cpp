@@ -73,6 +73,6 @@ int main() {
     std::cout << "----------------------------------------\n";
 
     if (destinationPoint) std::cout << "Congratulations! You have reached destination point!\n";
-    else std::cout << "You haven't reached destination point. " << distance - distanceTraveled << " km left.";
+    else std::cout << "You haven't reached destination point. " << distance - distanceTraveled << " km left.\n";
 
 }
