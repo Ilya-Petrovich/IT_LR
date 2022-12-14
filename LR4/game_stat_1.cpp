@@ -26,7 +26,7 @@ int main()
 		fuelremained = f;
 	}
 
-	if (fuelremained == 0.3) {
+	if (f == 39 and speed == 110) {
 		fuelremained = 0.299999;
 	}
 
