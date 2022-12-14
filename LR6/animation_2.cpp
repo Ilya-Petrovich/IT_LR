@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string>
 #include "unistd.h"
-//#include "windows.h"
+#include "windows.h"
 
 using namespace std;
 
@@ -65,9 +65,9 @@ int main() {
 
 void show(string *firstEl, int col, int t) {
 	for (int i = 0; i < col; i ++, firstEl ++) cout << *firstEl << endl;
-	usleep(t);
-	//Sleep(t);
-	//system("cls");
+	//usleep(t);
+	Sleep(t);
+	system("cls");
 	return;
 }
 
@@ -213,6 +213,7 @@ void jump (string *firstEl, int col, int t) {
 		pers[q] = "*    ||    " + spacesRight;
 		if (q != 18) pers[q+1] = emptyStr;
 	}
+	show(ptpers, col, t);
 	for (int q = 13; q <= 16; q ++) {
 		pers[q-11] = emptyStr;
 		show (ptpers, col, t);
