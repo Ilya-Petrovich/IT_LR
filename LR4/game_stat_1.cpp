@@ -57,8 +57,8 @@ int main() {
 				frem = fuel - fcon;
 				std::cout << "Fuel consumed: " << fcon << " litres\n";
 				std::cout << "Fuel remained: " << frem << " litres\n";
-				std::cout << "-----------------------------------------\n";
-				std::cout << "Congratulations! You have reached destrination point!\n";
+				std::cout << "----------------------------------------\n";
+				std::cout << "Congratulations! You have reached destination point!\n";
 			}
 			else {
 				disne = ((fc * 3.6 - fuel) * 360) / (fuel + (fc * 3.6 - fuel));
