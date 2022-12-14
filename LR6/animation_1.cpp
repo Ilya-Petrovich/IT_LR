@@ -14,9 +14,9 @@ void showAnimation(string body[11]) {
   // sleep(1);
 }
 
-int main()
-{
-    int h = 11;
+int main() {
+
+    int h = 12;
     string body[h] = {
       "    /\\    ", // 0
       "   |oo|   ", // 1
