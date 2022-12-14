@@ -184,17 +184,18 @@ void jump (string *firstEl, int col, int t) {
 	string a = pers[7], b = pers[8], c = pers[9], d = pers[10], e = pers[11], f = pers[12], 
 		g = pers[13], h = pers[14], ii = pers[15], k = pers[16], l = pers[17], m = pers[18];
 	
+	pers[6] = emptyStr;
 	pers[7] = emptyStr;
 	pers[8] = emptyStr;
-	pers[9] = emptyStr;
-	pers[10] = a;
-	pers[11] = b;
-	pers[12] = c;
-	pers[13] = d;
-	pers[14] = e;
-	pers[15] = f;
-	pers[16] = g;
-	pers[17] = h;
+	pers[9] = a;
+	pers[10] = b;
+	pers[11] = c;
+	pers[12] = d;
+	pers[13] = e;
+	pers[14] = f;
+	pers[15] = g;
+	pers[16] = h;
+	pers[17] = "*    /\\    " + spacesRight;
 	pers[18] = "*   _\\/_   " + spacesRight;
 	for (int q = 18; q >= 14; q --) {
 		show (ptpers, col, t);
@@ -229,6 +230,7 @@ void jump (string *firstEl, int col, int t) {
 		pers[q+2] = "*    ||    " + spacesRight;
 	}
 	//
+	pers[6] = emptyStr;
 	pers[7] = a;
 	pers[8] = b;
 	pers[9] = c;
@@ -245,15 +247,15 @@ void jump (string *firstEl, int col, int t) {
 	pers[6] = emptyStr;
 	pers[7] = emptyStr;
 	pers[8] = emptyStr;
-	pers[9] = emptyStr;
-	pers[10] = a;
-	pers[11] = b;
-	pers[12] = c;
-	pers[13] = d;
-	pers[14] = e;
-	pers[15] = f;
-	pers[16] = g;
-	pers[17] = h;
+	pers[9] = a;
+	pers[10] = b;
+	pers[11] = c;
+	pers[12] = d;
+	pers[13] = e;
+	pers[14] = f;
+	pers[15] = g;
+	pers[16] = h;
+	pers[17] = "*    /\\    " + spacesRight;
 	pers[18] = "*   _\\/_   " + spacesRight;
 	show(ptpers, col, t);
 	for (int i = 0; i < col; i ++, firstEl++) ( (i >= 0 && i < 7) || (i == 19) ) ?
