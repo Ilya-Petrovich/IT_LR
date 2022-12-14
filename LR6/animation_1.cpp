@@ -192,3 +192,7 @@ int main()
         output(person);
         pos15(person);
     }
+    output(person);
+
+    return 0;
+}
