@@ -16,7 +16,7 @@ int main()
 		cout << R"(  -\. /-  )" << endl;
 		cout << R"( / |. | \ )" << endl;
 		cout << R"(/  |. |  \)" << endl;
-		cout << R"(   |--|   )" << endl;
+		cout << R"(   |__|   )" << endl;
 		cout << R"(    ||    )" << endl;
 		cout << R"(   _||_   )" << endl;
 		//////Sleep(100);
@@ -30,7 +30,7 @@ int main()
 		cout << R"( --\. /-- )" << endl;
 		cout << R"(/  |. |  \)" << endl;
 		cout << R"(   |. |   )" << endl;
-		cout << R"(   |--|   )" << endl;
+		cout << R"(   |__|   )" << endl;
 		cout << R"(    ||    )" << endl;
 		cout << R"(   _||_   )" << endl;
 		//////Sleep(100);
@@ -44,7 +44,7 @@ int main()
 		cout << R"(  -\. /---)" << endl;
 		cout << R"( / |. |   )" << endl;
 		cout << R"(/  |. |   )" << endl;
-		cout << R"(   |--|   )" << endl;
+		cout << R"(   |__|   )" << endl;
 		cout << R"(    ||    )" << endl;
 		cout << R"(   _||_   )" << endl;
 		//////Sleep(100);
@@ -58,7 +58,7 @@ int main()
 		cout << R"( --\. /-- )" << endl;
 		cout << R"(/  |. |   )" << endl;
 		cout << R"(   |. |   )" << endl;
-		cout << R"(   |--|   )" << endl;
+		cout << R"(   |__|   )" << endl;
 		cout << R"(    ||    )" << endl;
 		cout << R"(   _||_   )" << endl;
 		////Sleep(100);
@@ -72,7 +72,7 @@ int main()
 		cout << R"(  -\. /-  )" << endl;
 		cout << R"( / |. |   )" << endl;
 		cout << R"(/  |. |   )" << endl;
-		cout << R"(   |--|   )" << endl;
+		cout << R"(   |__|   )" << endl;
 		cout << R"(    ||    )" << endl;
 		cout << R"(   _||_   )" << endl;
 		////Sleep(100);
@@ -86,7 +86,7 @@ int main()
 		cout << R"( --\. /-  )" << endl;
 		cout << R"(/  |. |   )" << endl;
 		cout << R"(   |. |   )" << endl;
-		cout << R"(   |--|   )" << endl;
+		cout << R"(   |__|   )" << endl;
 		cout << R"(    ||    )" << endl;
 		cout << R"(   _||_   )" << endl;
 		////Sleep(100);
@@ -100,7 +100,7 @@ int main()
 		cout << R"(---\. /-  )" << endl;
 		cout << R"(   |. |   )" << endl;
 		cout << R"(   |. |   )" << endl;
-		cout << R"(   |--|   )" << endl;
+		cout << R"(   |__|   )" << endl;
 		cout << R"(    ||    )" << endl;
 		cout << R"(   _||_   )" << endl;
 		////Sleep(100);
@@ -114,7 +114,7 @@ int main()
 		cout << R"( --\. /-  )" << endl;
 		cout << R"(   |. |   )" << endl;
 		cout << R"(   |. |   )" << endl;
-		cout << R"(   |--|   )" << endl;
+		cout << R"(   |__|   )" << endl;
 		cout << R"(    ||    )" << endl;
 		cout << R"(   _||_   )" << endl;
 		////Sleep(100);
@@ -128,7 +128,7 @@ int main()
 		cout << R"(  -\. /-  )" << endl;
 		cout << R"(   |. |   )" << endl;
 		cout << R"(   |. |   )" << endl;
-		cout << R"(   |--|   )" << endl;
+		cout << R"(   |__|   )" << endl;
 		cout << R"(    ||    )" << endl;
 		cout << R"(   _||_   )" << endl;
 		////Sleep(100);
@@ -142,7 +142,7 @@ int main()
 		cout << R"(  -\. /-  )" << endl;
 		cout << R"(   |. |   )" << endl;
 		cout << R"(   |. |   )" << endl;
-		cout << R"(   |--|   )" << endl;
+		cout << R"(   |__|   )" << endl;
 		cout << R"(    ||    )" << endl;
 		cout << R"(   _||_   )" << endl;
 		////Sleep(100);
@@ -156,7 +156,7 @@ int main()
 		cout << R"( --\. /-- )" << endl;
 		cout << R"(   |. |   )" << endl;
 		cout << R"(   |. |   )" << endl;
-		cout << R"(   |--|   )" << endl;
+		cout << R"(   |__|   )" << endl;
 		cout << R"(    ||    )" << endl;
 		cout << R"(   _||_   )" << endl;
 		////Sleep(100);
@@ -170,7 +170,7 @@ int main()
 		cout << R"(*--\. /--*)" << endl;
 		cout << R"(   |. |   )" << endl;
 		cout << R"(   |. |   )" << endl;
-		cout << R"(   |--|   )" << endl;
+		cout << R"(   |__|   )" << endl;
 		cout << R"(    ||    )" << endl;
 		cout << R"(   _||_   )" << endl;
 		////Sleep(100);
@@ -184,7 +184,7 @@ int main()
 		cout << R"( --\. /-- )" << endl;
 		cout << R"(*  |. |  *)" << endl;
 		cout << R"(   |. |   )" << endl;
-		cout << R"(   |--|   )" << endl;
+		cout << R"(   |__|   )" << endl;
 		cout << R"(    ||    )" << endl;
 		cout << R"(   _||_   )" << endl;
 		////Sleep(100);
@@ -198,7 +198,7 @@ int main()
 		cout << R"(  -\. /-  )" << endl;
 		cout << R"( / |. | \ )" << endl;
 		cout << R"(*  |. |  *)" << endl;
-		cout << R"(   |--|   )" << endl;
+		cout << R"(   |__|   )" << endl;
 		cout << R"(    ||    )" << endl;
 		cout << R"(   _||_   )" << endl;
 		////Sleep(100);
@@ -212,7 +212,7 @@ int main()
 		cout << R"(  -\. /-  )" << endl;
 		cout << R"( / |. | \ )" << endl;
 		cout << R"(/  |. |  \)" << endl;
-		cout << R"(   |--|   )" << endl;
+		cout << R"(   |__|   )" << endl;
 		cout << R"(    ||    )" << endl;
 		cout << R"(   _||_   )" << endl;
 		//////Sleep(100);
