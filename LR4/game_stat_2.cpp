@@ -16,7 +16,7 @@ bool fuel_consumption_possible_values(float fuel_consumption, float fuel) {
         return true;
     } else {
         return false; 
-    }
+    } 
 }
 
 float optimal_speed(float a, float b, float c) {
