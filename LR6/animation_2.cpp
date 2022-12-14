@@ -52,6 +52,7 @@ void legs() {
 }
 
 void body() {
+    std::cout << "*" << "                                      *\n";
     std::cout << "*" << "   ()()                               *\n";
     std::cout << "*" << "   ()()                               *\n";
     std::cout << "*" << "   ()()                               *\n";
