@@ -256,13 +256,13 @@ void moveLR(std::string move_left, std::string move_right) {
 
 void jump() { start_jump(); up(); down(); start_jump();}
 void up() {
-    for (int i = 6, k = 0; i >= 2; i--, k++) {
+    for (int i = 8, k = 0; i >= 2; i--, k++) {
         // rmFrame();
         std::cout << std::string(40, '*') << '\n';
         for (int l = i; l > 0; l--) {std::cout << '*' << std::string(38, ' ') << "*\n";}
         body();
         std::cout << "*" << "    /\\                                *\n";
-        if (i == 6) {
+        if (i == 8) {
             std::cout << "*   _\\/_                               *\n";
             std::cout << std::string(40, '*') << '\n';
         } else {
