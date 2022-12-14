@@ -25,13 +25,13 @@ void dance(string chel[],int x) {
 		chel[7] = "/  |  |   ";
 		chel[8] = "    \\/    ";
 		nnn(chel, x);
-		chel[4] = "  \\__/   /";
+		chel[4] = "   \\__/   /";
 		chel[5] = "    ||   /";
 		chel[6] = "  -| *|-- ";
 		chel[7] = " / |  |   ";
 		chel[8] = "/   \\/    ";
 		nnn(chel, x);
-		chel[4] = "  \\__/   *";
+		chel[4] = "   \\__/   *";
 		chel[5] = "    ||   /";
 		chel[6] = " --| *|-  ";
 		chel[7] = "/  |  |   ";
