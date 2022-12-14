@@ -3,13 +3,13 @@
 // #include <unistd.h>
 using namespace std;
 
-void showCharacter(string body[11]) {
+void showCharacter(string body[12]) {
   for (int i = 0; i < 12; i++) {
       cout << body[i] << endl;
   }
 }
 
-void showAnimation(string body[11]) {
+void showAnimation(string body[12]) {
   showCharacter(body);
   // sleep(1);
 }
