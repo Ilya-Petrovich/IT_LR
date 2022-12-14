@@ -26,7 +26,7 @@ int main()
 	std::cin >> speed;
 	
 	if (speed < 0) {
-		std::cout << "\nInvalid data.";
+		std::cout << "\nInvalid data.\n";
 		return 0;
 	}
 	if (speed > 110) {
