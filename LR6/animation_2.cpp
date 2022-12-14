@@ -640,7 +640,7 @@ int main()
 			person.Reload();
 			// startAction(location, person);
 			PrintLocation(location, person, 0, 7); /////added
-			for (int i = 3; i < location.Width * 4 + 4; i++)
+			for (int i = 3; i < location.Width * 4 + 7; i++)
 			{
 				location.Reload();
 				switch (i % 3)
@@ -662,7 +662,7 @@ int main()
 				// Sleep(Speed);
 				// CursorToStart();
 			}
-			for (int i = location.Width * 4 + 1; i > 0; i--)
+			for (int i = location.Width * 4 + 4; i > 0; i--)
 			{
 				location.Reload();
 				switch (i % 3)
