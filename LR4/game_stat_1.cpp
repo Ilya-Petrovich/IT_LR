@@ -21,6 +21,7 @@ int main()
 
 	if (speed == 0) {
 		distancetraveled = 0;
+		fuelConsumption = 0;
 		timespent = 0;
 		fuelconsumed = 0;
 		fuelremained = f;
@@ -69,6 +70,14 @@ void start()
 
 		s = speed / 10;
 		fuelConsumption = s * s / 4 - 4.5 * s + 30;
+
+		if (speed == 0) {
+			distancetraveled = 0;
+			fuelConsumption = 0;
+			timespent = 0;
+			fuelconsumed = 0;
+			fuelremained = f;
+		}
 
 		cout << "Fuel consumption with chosen speed: " << fuelConsumption << " litres per 100 km\n" << endl;
 
