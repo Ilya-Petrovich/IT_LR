@@ -6,7 +6,8 @@ using namespace std;
 int main()
 {
 	int i = 0;
-	for (i; i < 2; i++) {
+	for (i; i < 2; i++)
+	{
 		cout << R"(   _[]_   )" << endl;
 		cout << R"(   |~~|   )" << endl;
 		cout << R"(   |oq|   )" << endl;
@@ -21,6 +22,9 @@ int main()
 		cout << R"(   _||_   )" << endl;
 		//////Sleep(100);
 		//system("clr");
+		if (i == 2) {
+			break;
+		}
 		cout << R"(   _[]_   )" << endl;
 		cout << R"(   |~~|   )" << endl;
 		cout << R"(   |oq|   )" << endl;
@@ -204,5 +208,4 @@ int main()
 		////Sleep(100);
 		//system("clr");
 	}
-	return 0;
 }
