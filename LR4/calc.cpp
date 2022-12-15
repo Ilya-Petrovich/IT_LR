@@ -7,8 +7,8 @@ using namespace std;
 
 int main() {
 
-    int num_1, num_2, num_3;
-
+    int num_1, num_2, num_3,s;
+    s = 0;
     cout << "Type the first number: ";
     cin >> num_1;
     cout << "Type the second number: ";
