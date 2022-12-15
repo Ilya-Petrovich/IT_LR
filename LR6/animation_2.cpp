@@ -11,19 +11,19 @@ void moveLR(std::string move_left, std::string move_right);
 void throw_ball();
 
 int main() {
-    int choice = 3;
+    int choice = 0;
     // rmFrame();
-    // while (choice != 5) {
+    while (choice != 5) {
         switch (choice) {
             case 1: { dance(); break;}
             case 2: { run(); break;}
             case 3: { jump(); break;}
             case 4: { throw_ball(); break;}
         }
-        // menu(choice);
+        menu(choice);
     }
-    // return 0;
-// }
+    return 0;
+}
 
 void menu(int &a){
     std::cout << "Choose animation:" << std::endl;
