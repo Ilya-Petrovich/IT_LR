@@ -118,7 +118,7 @@ int main()
         cout << "   |oq|    " << endl;
         cout << "  (|<>|)   " << endl;
         cout << "   \\--/    " << endl;
-        cout << "   _><_   \\" << endl;
+        cout << "_  _><_   \\" << endl;
         cout << " \\-\\. /-/  " << endl;
         cout << "   |. |    " << endl;
         cout << "   |. |    " << endl;
