@@ -1,475 +1,143 @@
 #include <iostream>
 #include <unistd.h>
-
 using namespace std;
 
-int main() {
-	
-		int choice, t = 700, k = 0;
-		string filled = "***************************************";
-		string bordered = "*                                     *";
-		string m[20] = { filled,bordered,bordered,bordered,bordered,bordered,bordered,bordered,bordered,bordered,bordered,bordered,
-		bordered,bordered,bordered,bordered,bordered,bordered,bordered,filled, }, p[12] = {
-			"    /\\    ",
-			"   |00|   ",
-			"  (|..|)  ",
-			"   |__|   ",
-			"   \\__/   ",
-			"    ||    ",
-			"  -| *|-  ",
-			" / |  | \\ ",
-			"/   \\/   \\",
-			"    /\\    ",
-			"    ||    ",
-			"   _||_   " }
-			, o[20] = { filled,bordered,bordered,bordered,bordered,bordered,bordered,bordered,bordered,bordered,bordered,bordered,
-			bordered,bordered,bordered,bordered,bordered,bordered,bordered,filled };
+const int b = 12;
 
-		
+int main()
+{
+	string p[b] = {
+		"    /\\    ",  
+		"   |oo|   ",  
+		"  (|..|)  ",  
+		"   |--|   ",  
+		"   \\__/   ", 
+		"    ||    ",  
+		"  -| *|-  ", 
+		" / |  | \\ ", 
+		"/   \\/   \\", 
+		"    /\\    ",  
+		"    ||    ",  
+		"   _||_   "   
+	};
 
-		
-				cout << "    /\\    " << endl;
-				cout << "   |00|    " << endl;
-				cout << "  (|..|)   " << endl;
-				cout << "   |--|    " << endl;
-				cout << "   \\__/   " << endl;
-				cout << "    ||     " << endl;
-				cout << "  -| *|-   " << endl;
-				cout << " / |  | \\ " << endl;
-				cout << "/   /\\   \\" << endl;
-				cout << "    \\/     " << endl;
-				cout << "    ||     " << endl;
-				cout << "   _||_    " << endl;
-				//Sleep(t);
-				//system("cls");
-			
-				cout << "    /\\     " << endl;
-				cout << "   |00|    " << endl;
-				cout << "  (|..|)   " << endl;
-				cout << "   |--|    " << endl;
-				cout << "   \\__/    " << endl;
-				cout << "    ||     " << endl;
-				cout << " --| *|--  " << endl;
-				cout << "/  |  |  \\" << endl;
-				cout << "    /\\     " << endl;
-				cout << "    \\/     " << endl;
-				cout << "    ||     " << endl;
-				cout << "   _||_    " << endl;
-				//Sleep(t);
-				//system("cls");
-			
-				cout << "    /\\     " << endl;
-				cout << "   |00|    " << endl;
-				cout << "  (|..|)   " << endl;
-				cout << "   |--|    " << endl;
-				cout << "   \\__/    " << endl;
-				cout << "    ||     " << endl;
-				cout << "  -| *|--- " << endl;
-				cout << " / |  |    " << endl;
-				cout << "/   /\\     " << endl;
-				cout << "    \\/     " << endl;
-				cout << "    ||     " << endl;
-				cout << "   _||_    " << endl;
-				//Sleep(t);
-				//system("cls");
-		
-				cout << "    /\\     " << endl;
-				cout << "   |00|    " << endl;
-				cout << "  (|..|)   " << endl;
-				cout << "   |--|    " << endl;
-				cout << "   \\__/    " << endl;
-				cout << "    ||   / " << endl;
-				cout << " --| *|--  " << endl;
-				cout << "/  |  |    " << endl;
-				cout << "    /\\     " << endl;
-				cout << "    \\/     " << endl;
-				cout << "    ||     " << endl;
-				cout << "   _||_    " << endl;
-				//Sleep(t);
-				//system("cls");
-			
-				cout << "    /\\     " << endl;
-				cout << "   |00|    " << endl;
-				cout << "  (|..|)   " << endl;
-				cout << "   |--|    " << endl;
-				cout << "   \\__/  / " << endl;
-				cout << "    ||  /  " << endl;
-				cout << "  -| *|-   " << endl;
-				cout << " / |  |    " << endl;
-				cout << "/   /\\     " << endl;
-				cout << "    \\/     " << endl;
-				cout << "    ||     " << endl;
-				cout << "   _||_    " << endl;
-				//Sleep(t);
-				//system("cls");
-			
-				cout << "    /\\     " << endl;
-				cout << "   |00|    " << endl;
-				cout << "  (|..|)   " << endl;
-				cout << "   |--|    " << endl;
-				cout << "   \\__/  * " << endl;
-				cout << "    ||  /  " << endl;
-				cout << " --| *|-   " << endl;
-				cout << "/  |  |    " << endl;
-				cout << "    /\\     " << endl;
-				cout << "    \\/     " << endl;
-				cout << "    ||     " << endl;
-				cout << "   _||_    " << endl;
-				//Sleep(t);
-				//system("cls");
-			
-				cout << "    /\\     " << endl;
-				cout << "   |00|    " << endl;
-				cout << "  (|..|)   " << endl;
-				cout << "   |--|    " << endl;
-				cout << "   \\__/  / " << endl;
-				cout << "    ||  /  " << endl;
-				cout << "---| *|-   " << endl;
-				cout << "   |  |    " << endl;
-				cout << "    /\\	    " << endl;
-				cout << "    \\/     " << endl;
-				cout << "    ||     " << endl;
-				cout << "   _||_    " << endl;
-				//Sleep(t);
-				//system("cls");
-			
-				cout << "    /\\     " << endl;
-				cout << "   |00|    " << endl;
-				cout << "  (|..|)   " << endl;
-				cout << "   |--|    " << endl;
-				cout << "   \\__/  * " << endl;
-				cout << "\\   ||  /  " << endl;
-				cout << " --| *|-   " << endl;
-				cout << "   |  |    " << endl;
-				cout << "    /\\     " << endl;
-				cout << "    \\/     " << endl;
-				cout << "    ||     " << endl;
-				cout << "   _||_    " << endl;
-				//Sleep(t);
-				//system("cls");
-		
-				cout << "    /\\     " << endl;
-				cout << "   |00|    " << endl;
-				cout << "  (|..|)   " << endl;
-				cout << "   |--|    " << endl;
-				cout << "\\  \\__/  / " << endl;
-				cout << " \\  ||  /  " << endl;
-				cout << "  -| *|-   " << endl;
-				cout << "   |  |    " << endl;
-				cout << "    /\\     " << endl;
-				cout << "    \\/     " << endl;
-				cout << "    ||     " << endl;
-				cout << "   _||_    " << endl;
-				//Sleep(t);
-				//system("cls");
-			
-				cout << "    /\\     " << endl;
-				cout << "   |00|    " << endl;
-				cout << "  (|..|)   " << endl;
-				cout << "   |--|    " << endl;
-				cout << "*  \\__/  * " << endl;
-				cout << " \\  ||  /  " << endl;
-				cout << "  -| *|-   " << endl;
-				cout << "   |  |    " << endl;
-				cout << "    /\\     " << endl;
-				cout << "    \\/     " << endl;
-				cout << "    ||     " << endl;
-				cout << "   _||_    " << endl;
-				//Sleep(t);
-				//system("cls");
-			
-			
-				cout << "    /\\     " << endl;
-				cout << "   |00|    " << endl;
-				cout << "  (|..|)   " << endl;
-				cout << "   |--|    " << endl;
-				cout << "   \\__/    " << endl;
-				cout << "*   ||   * " << endl;
-				cout << " --| *|--  " << endl;
-				cout << "   |  |    " << endl;
-				cout << "    /\\     " << endl;
-				cout << "    \\/     " << endl;
-				cout << "    ||     " << endl;
-				cout << "   _||_    " << endl;
-				//Sleep(t);
-				//system("cls");
-			
-				cout << "    /\\     " << endl;
-				cout << "   |00|    " << endl;
-				cout << "  (|..|)   " << endl;
-				cout << "   |--|    " << endl;
-				cout << "   \\__/    " << endl;
-				cout << "    ||     " << endl;
-				cout << "*--| *|--* " << endl;
-				cout << "   |  |    " << endl;
-				cout << "    /\\     " << endl;
-				cout << "    \\/     " << endl;
-				cout << "    ||     " << endl;
-				cout << "   _||_    " << endl;
-				//Sleep(t);
-				//system("cls");
-		
-				cout << "    /\\     " << endl;
-				cout << "   |00|    " << endl;
-				cout << "  (|..|)   " << endl;
-				cout << "   |--|    " << endl;
-				cout << "   \\__/    " << endl;
-				cout << "    ||     " << endl;
-				cout << " --| *|--  " << endl;
-				cout << "*  |  |  * " << endl;
-				cout << "    /\\     " << endl;
-				cout << "    \\/     " << endl;
-				cout << "    ||     " << endl;
-				cout << "   _||_    " << endl;
-				//Sleep(t);
-				//system("cls");
-		
-				cout << "    /\\     " << endl;
-				cout << "   |00|    " << endl;
-				cout << "  (|..|)   " << endl;
-				cout << "   |--|    " << endl;
-				cout << "   \\__/    " << endl;
-				cout << "    ||     " << endl;
-				cout << "  -| *|-   " << endl;
-				cout << " / |  | \\  " << endl;
-				cout << "*   /\\   * " << endl;
-				cout << "    \\/     " << endl;
-				cout << "    ||     " << endl;
-				cout << "   _||_    " << endl;
-				//Sleep(t);
-				//system("cls");
-			
-
-		
-		cout << "    /\\     " << endl;
-		cout << "   |00|    " << endl;
-		cout << "  (|..|)   " << endl;
-		cout << "   |--|    " << endl;
-		cout << "   \\__/    " << endl;
-		cout << "    ||     " << endl;
-		cout << "  -| *|-   " << endl;
-		cout << " / |  | \\  " << endl;
-		cout << "/   /\\   \\ " << endl;
-		cout << "    \\/     " << endl;
-		cout << "    ||     " << endl;
-		cout << "   _||_    " << endl;
-		//Sleep(t);
+	for (int i = 0; i < 2; i++)
+	{
+		for (int i = 0; i < b; i++) cout << p[i] << "\n"; 
+		//Sleep(1000);
 		//system("cls");
 
-		
-				cout << "    /\\     " << endl;
-				cout << "   |00|    " << endl;
-				cout << "  (|..|)   " << endl;
-				cout << "   |--|    " << endl;
-				cout << "   \\__/    " << endl;
-				cout << "    ||     " << endl;
-				cout << " --| *|--  " << endl;
-				cout << "/  |  |  \\ " << endl;
-				cout << "    /\\     " << endl;
-				cout << "    \\/     " << endl;
-				cout << "    ||     " << endl;
-				cout << "   _||_    " << endl;
-				//Sleep(t);
-				//system("cls");
-		
-				cout << "    /\\     " << endl;
-				cout << "   |00|    " << endl;
-				cout << "  (|..|)   " << endl;
-				cout << "   |--|    " << endl;
-				cout << "   \\__/    " << endl;
-				cout << "    ||     " << endl;
-				cout << "  -| *|--- " << endl;
-				cout << " / |  |    " << endl;
-				cout << "/   /\\     " << endl;
-				cout << "    \\/     " << endl;
-				cout << "    ||     " << endl;
-				cout << "   _||_    " << endl;
-				//Sleep(t);
-				//system("cls");
-		
-				cout << "    /\\     " << endl;
-				cout << "   |00|    " << endl;
-				cout << "  (|..|)   " << endl;
-				cout << "   |--|    " << endl;
-				cout << "   \\__/    " << endl;
-				cout << "    ||   / " << endl;
-				cout << " --| *|--  " << endl;
-				cout << "/  |  |    " << endl;
-				cout << "    /\\     " << endl;
-				cout << "    \\/     " << endl;
-				cout << "    ||     " << endl;
-				cout << "   _||_    " << endl;
-				//Sleep(t);
-				//system("cls");
-			
-				cout << "    /\\     " << endl;
-				cout << "   |00|    " << endl;
-				cout << "  (|..|)   " << endl;
-				cout << "   |--|    " << endl;
-				cout << "   \\__/  / " << endl;
-				cout << "    ||  /  " << endl;
-				cout << "  -| *|-   " << endl;
-				cout << " / |  |    " << endl;
-				cout << "/   /\\     " << endl;
-				cout << "    \\/     " << endl;
-				cout << "    ||     " << endl;
-				cout << "   _||_    " << endl;
-				//Sleep(t);
-				//system("cls");
-			
-				cout << "    /\\     " << endl;
-				cout << "   |00|    " << endl;
-				cout << "  (|..|)   " << endl;
-				cout << "   |--|    " << endl;
-				cout << "   \\__/  * " << endl;
-				cout << "    ||  /  " << endl;
-				cout << " --| *|-   " << endl;
-				cout << "/  |  |    " << endl;
-				cout << "    /\\     " << endl;
-				cout << "    \\/     " << endl;
-				cout << "    ||     " << endl;
-				cout << "   _||_    " << endl;
-				//Sleep(t);
-				//system("cls");
-		
-				cout << "    /\\     " << endl;
-				cout << "   |00|    " << endl;
-				cout << "  (|..|)   " << endl;
-				cout << "   |--|    " << endl;
-				cout << "   \\__/  / " << endl;
-				cout << "    ||  /  " << endl;
-				cout << "---| *|-   " << endl;
-				cout << "   |  |    " << endl;
-				cout << "    /\\     " << endl;
-				cout << "    \\/     " << endl;
-				cout << "    ||     " << endl;
-				cout << "   _||_    " << endl;
-				//Sleep(t);
-				//system("cls");
-	
-				cout << "    /\\     " << endl;
-				cout << "   |00|    " << endl;
-				cout << "  (|..|)   " << endl;
-				cout << "   |--|    " << endl;
-				cout << "   \\__/  * " << endl;
-				cout << "\\   ||  /  " << endl;
-				cout << " --| *|-   " << endl;
-				cout << "   |  |    " << endl;
-				cout << "    /\\     " << endl;
-				cout << "    \\/     " << endl;
-				cout << "    ||     " << endl;
-				cout << "   _||_    " << endl;
-				//Sleep(t);
-				//system("cls");
-		
-				cout << "    /\\     " << endl;
-				cout << "   |00|    " << endl;
-				cout << "  (|..|)   " << endl;
-				cout << "   |--|    " << endl;
-				cout << "\\  \\__/  / " << endl;
-				cout << " \\  ||  /  " << endl;
-				cout << "  -| *|-   " << endl;
-				cout << "   |  |    " << endl;
-				cout << "    /\\     " << endl;
-				cout << "    \\/     " << endl;
-				cout << "    ||     " << endl;
-				cout << "   _||_    " << endl;
-				//Sleep(t);
-				//system("cls");
-		
-				cout << "    /\\     " << endl;
-				cout << "   |00|    " << endl;
-				cout << "  (|..|)   " << endl;
-				cout << "   |--|    " << endl;
-				cout << "*  \\__/  * " << endl;
-				cout << " \\  ||  /  " << endl;
-				cout << "  -| *|-   " << endl;
-				cout << "   |  |    " << endl;
-				cout << "    /\\     " << endl;
-				cout << "    \\/     " << endl;
-				cout << "    ||     " << endl;
-				cout << "   _||_    " << endl;
-				//Sleep(t);
-				//system("cls");
+		p[6] = " --| *|-- ";
+		p[7] = "/  |  |  \\";
+		p[8]= "    \\/    ";
 
-				cout << "    /\\     " << endl;
-				cout << "   |00|    " << endl;
-				cout << "  (|..|)   " << endl;
-				cout << "   |--|    " << endl;
-				cout << "   \\__/    " << endl;
-				cout << "*   ||   * " << endl;
-				cout << " --| *|--  " << endl;
-				cout << "   |  |    " << endl;
-				cout << "    /\\     " << endl;
-				cout << "    \\/     " << endl;
-				cout << "    ||     " << endl;
-				cout << "   _||_    " << endl;
-				//Sleep(t);
-				//system("cls");
+		for (int i = 0; i < b; i++) cout << p[i] << "\n"; 
+		//Sleep(1000);
+		//system("cls");
+
+		p[6] = "  -| *|---";
+		p[7] = " / |  |   ";
+		p[8] = "/   \\/    ";
+
+		for (int i = 0; i < b; i++) cout << p[i] << "\n"; 
+		//Sleep(1000);
+		//system("cls");
+
+		p[5] = "    ||   /";
+		p[6] = " --| *|-- ";
+		p[7] = "/  |  |   ";
+		p[8] = "    \\/    ";
+
+		for (int i = 0; i < b; i++) cout << p[i] << "\n"; 
+		//Sleep(1000);
+		//system("cls");
+
+		p[4] = "   \\__/  /";
+		p[5] = "    ||  / ";
+		p[6] = "  -| *|-  ";
+		p[7] = " / |  |   ";
+		p[8] = "/   \\/    ";
+
+		for (int i = 0; i < b; i++) cout << p[i] << "\n"; 
+		//Sleep(1000);
+		//system("cls");
+
+		p[4] = "   \\__/  *";
+		p[5] = "    ||  / ";
+		p[6] = " --| *|-  ";
+		p[7] = "/  |  |   ";
+		p[8] = "    \\/    ";
+ 
+
+		for (int i = 0; i < b; i++) cout << p[i] << "\n"; 
+		//Sleep(1000);
+		//system("cls");
+
+		p[4] = "   \\__/  /";
+		p[5] = "    ||  / ";
+		p[6] = "---| *|-  ";
+		p[7] = "   |  |   ";
+
+		for (int i = 0; i < b; i++) cout << p[i] << "\n"; 
+		//Sleep(1000);
+		//system("cls");
+
+		p[4] = "   \\__/  *";
+		p[5] = "\\   ||  / ";
+		p[6] = " --| *|-  ";
+
+		for (int i = 0; i < b; i++) cout << p[i] << "\n"; 
+		//Sleep(1000);
+		//system("cls");
+
+		p[4] = "\\  \\__/  /";
+		p[5] = " \\  ||  / ";
+		p[6] = "  -| *|-  ";
+
+		for (int i = 0; i < b; i++) cout << p[i] << "\n"; 
+		//Sleep(1000);
+		//system("cls");
+
+		p[4] = "*  \\__/  *";
+		p[5] = " \\  ||  / ";
+		p[6] = "  -| *|-  ";
+
+		for (int i = 0; i < b; i++) cout << p[i] << "\n"; 
+		//Sleep(1000);
+		//system("cls");
+
+		p[4] = "   \\__/   ";
+		p[5] = "*   ||   *";
+		p[6] = " --| *|-- ";
+
+		for (int i = 0; i < b; i++) cout << p[i] << "\n"; 
+		//Sleep(1000);
+		//system("cls");
+
+		p[5] = "    ||    ";
+		p[6] = "*--| *|--*";
+
+		for (int i = 0; i < b; i++) cout << p[i] << "\n"; 
+		//Sleep(1000);
+		//system("cls");
+ 
+		p[6] = " --| *|-- ";
+		p[7] = "*  |  |  *";
+
+		for (int i = 0; i < b; i++) cout << p[i] << "\n"; 
+		//Sleep(1000);
+		//system("cls");
+
+		p[6] = "  -| *|-  ";
+		p[7] = " / |  | \\ ";
+		p[8] = "*   \\/   *";
 		
-				cout << "    /\\     " << endl;
-				cout << "   |00|    " << endl;
-				cout << "  (|..|)   " << endl;
-				cout << "   |--|    " << endl;
-				cout << "   \\__/    " << endl;
-				cout << "    ||     " << endl;
-				cout << "*--| *|--* " << endl;
-				cout << "   |  |    " << endl;
-				cout << "    /\\     " << endl;
-				cout << "    \\/     " << endl;
-				cout << "    ||     " << endl;
-				cout << "   _||_    " << endl;
-				//Sleep(t);
-				//system("cls");
-		
-				cout << "    /\\    " << endl;
-				cout << "   |00|    " << endl;
-				cout << "  (|..|)   " << endl;
-				cout << "   |--|    " << endl;
-				cout << "   \\__/   " << endl;
-				cout << "    ||     " << endl;
-				cout << " --| *|--  " << endl;
-				cout << "*  |  |  * " << endl;
-				cout << "    /\\    " << endl;
-				cout << "    \\/    " << endl;
-				cout << "    ||     " << endl;
-				cout << "   _||_    " << endl;
-				//Sleep(t);
-				//system("cls");
-			
-			
-				cout << "    /\\    " << endl;
-				cout << "   |00|    " << endl;
-				cout << "  (|..|)   " << endl;
-				cout << "   |--|    " << endl;
-				cout << "   \\__/   " << endl;
-				cout << "    ||     " << endl;
-				cout << "  -| *|-   " << endl;
-				cout << " / |  | \\ " << endl;
-				cout << "*   /\\   *" << endl;
-				cout << "    \\/    " << endl;
-				cout << "    ||     " << endl;
-				cout << "   _||_    " << endl;
-				//Sleep(t);
-				//system("cls");
-			
-			
-				cout << "    /\\    " << endl;
-				cout << "   |00|    " << endl;
-				cout << "  (|..|)   " << endl;
-				cout << "   |--|    " << endl;
-				cout << "   \\__/   " << endl;
-				cout << "    ||     " << endl;
-				cout << "  -| *|-   " << endl;
-				cout << " / |  | \\ " << endl;
-				cout << "/   /\\   \\" << endl;
-				cout << "    \\/     " << endl;
-				cout << "    ||     " << endl;
-				cout << "   _||_    " << endl;
-				//Sleep(t);
-				//system("cls");
-			
-		
-		
-	
+		for (int i = 0; i < b; i++) cout << p[i] << "\n"; 
+		//Sleep(1000);
+		//system("cls");
+		p[7] = " / |  | \\ ";
+		p[8] = "/   \\/   \\";
+	}
+	for (int i = 0; i < b; i++) cout << s[i] << "\n"; 
+	return 0;
 }
