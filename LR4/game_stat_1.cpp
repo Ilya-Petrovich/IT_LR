@@ -58,13 +58,13 @@ int main() {
 		cout << "\nDestination result" << endl;
 		if (kolvo / fuelConsumption >= 3.6)
 		{
-			cout << "Distance traveled: 360" << endl;
+			cout << "Distance traveled: 360 km" << endl;
 			dist = 360;
 		}
 		else
 		{
 			dist = kolvo / fuelConsumption * 100;
-			cout << "Distance traveled: " << dist << endl;
+			cout << "Distance traveled: " << dist << " km" << endl;
 		}
 		t = dist / sp * 3600;
 		cout << "Time spent: " << t << " sec" << endl;
