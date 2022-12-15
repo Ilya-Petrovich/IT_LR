@@ -68,9 +68,9 @@ void dance(string chel[],int x) {
 		chel[8] = "    \\/    ";
 		nnn(chel, x);
 		chel[5] = "    ||    ";
-		chel[6] = "*--| *|--* ";
+		chel[6] = "*--| *|--*";
 		chel[7] = "   |  |   ";
-		chel[8] = "    \\/     ";
+		chel[8] = "    \\/    ";
 		nnn(chel, x);
 		chel[6] = " --| *|-- ";
 		chel[7] = "*  |  |  *";
