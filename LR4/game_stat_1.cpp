@@ -7,11 +7,11 @@ int main(){
 	std::cout<<"How much fuel do you have at start? ";std::cin>>Fuel; std::cout<<endl;
 
 	if (Fuel<0||Fuel>50){
-		std::cout<<"\nInvalid data.";
+		std::cout<<"Invalid data.\n";
 		return 0;
 	}
 
-	std::cout<<"\nCar stats\nFuel: "<<Fuel;
+	std::cout<<"Car stats\nFuel: "<<Fuel;
 	std::cout<<"\nFuel copacity: 50\nFuel consumption: 0\nSpeed: 0\nMaximum speed: 110\n";
 	std::cout<<"\nRoute info\nDistance: 360 km\n";
 	std::cout<<"----------------------------------------\n";
@@ -22,10 +22,10 @@ int main(){
 		std::cout<<"\nYour fuel before start: "<<Fuel<<"\n";
 	}
 
-	std::cout<<"\nWhat speed will you choose? "; std::cin>>Speed;
+	std::cout<<"\nWhat speed will you choose? "; std::cin>>Speed; std::cout<<endl;
 
 	if(Speed<0){
-		std::cout<<"\nInvalid data";
+		std::cout<<"Invalid data\n";
 		return 0;
 	}
 
