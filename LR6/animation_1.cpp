@@ -10,8 +10,8 @@ void nnn(string chel[],int x) {
 }
 void dance(string chel[],int x) {
 	int i = 0;
+	nnn(chel, x);
 	while (i < 2) {
-		nnn(chel, x);
 		chel[6] = " --| *|-- ";
 		chel[7] = "/  |  |  \\";
 		chel[8] = "    \\/    ";
@@ -25,14 +25,14 @@ void dance(string chel[],int x) {
 		chel[7] = "/  |  |   ";
 		chel[8] = "    \\/    ";
 		nnn(chel, x);
-		chel[4] = "   \\__/   /";
-		chel[5] = "    ||   /";
-		chel[6] = "  -| *|-- ";
+		chel[4] = "   \\__/  /";
+		chel[5] = "    ||  / ";
+		chel[6] = "  -| *|-  ";
 		chel[7] = " / |  |   ";
 		chel[8] = "/   \\/    ";
 		nnn(chel, x);
-		chel[4] = "   \\__/   *";
-		chel[5] = "    ||   /";
+		chel[4] = "   \\__/  *";
+		chel[5] = "    ||  / ";
 		chel[6] = " --| *|-  ";
 		chel[7] = "/  |  |   ";
 		chel[8] = "    \\/    ";
@@ -67,7 +67,7 @@ void dance(string chel[],int x) {
 		chel[7] = "   |  |   ";
 		chel[8] = "    \\/    ";
 		nnn(chel, x);
-		chel[5] = "    ||     ";
+		chel[5] = "    ||    ";
 		chel[6] = "*--| *|--* ";
 		chel[7] = "   |  |   ";
 		chel[8] = "    \\/     ";
