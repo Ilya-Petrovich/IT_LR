@@ -3,8 +3,7 @@ int main() {
 
 	double fuel;
 
-	std::cout << "How much fuel do you have at start? ";
-	std::cin >> fuel;
+	std::cout << "How much fuel do you have at start? "; std::cin >> fuel;
 
 	if (fuel < 0 || fuel > 50) {
 		std::cout << "Invalid data" << std::endl;
