@@ -1,132 +1,158 @@
 #include <iostream>
-//#include <windows.h>
+#include <bits/stdc++.h>
 #include <unistd.h>
-
 using namespace std;
 
-void vivod(string a[]);
-void an(string a[]);
+const int a = 10, b = 12;
 
 int main()
 {
-	string a[12] = {
-		"   ()()   ",
-		"   ()()   ",
-		"   ()()   ",
-		"   |..|   ",
-		"  \\|  |/  ",
-		"  /|UU|\\  ",
-		"  --\\/--  ",
-		" /  ||  \\ ",
-		"/   ||   \\",
-		"    /\\    ",
-		"    ||    ",
-		"   _||_   ",
-	};
+    string anim[b] = {
+        "   ()()   ",
+        "   ()()   ",
+        "   ()()   ",
+        "   |..|   ",
+        "  \\|  |/  ",
+        "  /|UU|\\  ",
+        "  --\\/--  ",
+        " /  ||  \\ ",
+        "/   ||   \\",
+        "    /\\    ",
+        "    ||    ",
+        "   _||_   ",
+    };
 
-	an(a);
+    for (int i = 0; i < 2; i++)
+    {
+        for (int i = 0; i < b; i++) cout << anim[i] << "\n";
 
-	an(a);
+        //Sleep(300);
+        //system("cls");
+        anim[6] = " ---\\/--- ";
+        anim[7] = "/   ||   \\";
+        anim[8] = "    ||    ";
+        for (int i = 0; i < b; i++) cout << anim[i] << "\n";
 
-	return 0;
+        //Sleep(300);
+        //system("cls");
+        anim[6] = "  --\\/----";
+        anim[7] = " /  ||    ";
+        anim[8] = "/   ||    ";
+        for (int i = 0; i < b; i++) cout << anim[i] << "\n";
+
+        //Sleep(300);
+        //system("cls");
+
+        anim[5] = "  /|UU|\\ /";
+        anim[6] = " ---\\/--- ";
+        anim[7] = "/   ||    ";
+        anim[8] = "    ||    ";
+
+        for (int i = 0; i < b; i++) cout << anim[i] << "\n";
+        //Sleep(300);
+        //system("cls");
+
+        anim[4] = "  \\|  |/ /";
+        anim[5] = "  /|UU|\\/ ";
+        anim[6] = "  --\\/--  ";
+        anim[7] = " /  ||    ";
+        anim[8] = "/   ||    ";
+
+        for (int i = 0; i < b; i++) cout << anim[i] << "\n";
+        //Sleep(300);
+        //system("cls");
+
+        anim[4] = "  \\|  |/ *";
+        anim[5] = "  /|UU|\\/ ";
+        anim[6] = " ---\\/--  ";
+        anim[7] = "/   ||    ";
+        anim[8] = "    ||    ";
+
+        for (int i = 0; i < b; i++) cout << anim[i] << "\n";
+        //Sleep(300);
+        //system("cls");
+
+        anim[4] = "  \\|  |/ /";
+        anim[5] = "  /|UU|\\/ ";
+        anim[6] = "----\\/--  ";
+        anim[7] = "    ||    ";
+
+
+        for (int i = 0; i < b; i++) cout << anim[i] << "\n";
+        //Sleep(300);
+        //system("cls");
+
+        anim[4] = "  \\|  |/ *";
+        anim[5] = "\\ /|UU|\\/ ";
+        anim[6] = " ---\\/--  ";
+        anim[7] = "    ||    ";
+
+
+        for (int i = 0; i < b; i++) cout << anim[i] << "\n";
+        //Sleep(300);
+        //system("cls");
+
+        anim[4] = "\\ \\|  |/ /";
+        anim[5] = " \\/|UU|\\/ ";
+        anim[6] = "  --\\/--  ";
+        anim[7] = "    ||    ";
+
+
+        for (int i = 0; i < b; i++) cout << anim[i] << "\n";
+        //Sleep(300);
+        //system("cls");
+
+        anim[4] = "* \\|  |/ *";
+        anim[5] = " \\/|UU|\\/ ";
+        anim[7] = "    ||    ";
+
+
+        for (int i = 0; i < b; i++) cout << anim[i] << "\n";
+        //Sleep(300);
+        //system("cls");
+
+        anim[4] = "  \\|  |/  ";
+        anim[5] = "* /|UU|\\ *";
+        anim[6] = " ---\\/--- ";
+        anim[7] = "    ||    ";
+
+
+        for (int i = 0; i < b; i++) cout << anim[i] << "\n";
+        //Sleep(300);
+        //system("cls");
+
+        anim[5] = "  /|UU|\\  ";
+        anim[6] = "*---\\/---*";
+        anim[7] = "    ||    ";
+
+        for (int i = 0; i < b; i++) cout << anim[i] << "\n";
+        //Sleep(300);
+        //system("cls");
+
+        anim[6] = " ---\\/--- ";
+        anim[7] = "*   ||   *";
+
+
+        for (int i = 0; i < b; i++) cout << anim[i] << "\n";
+        //Sleep(300);
+        //system("cls");
+
+        anim[6] = "  --\\/--  ";
+        anim[7] = " /  ||  \\ ";
+        anim[8] = "*   ||   *";
+
+        for (int i = 0; i < b; i++) cout << anim[i] << "\n";
+        //Sleep(300);
+        //system("cls");
+
+        anim[7] = " /  ||  \\ ";
+        anim[8] = "/   ||   \\";
+
+
+    }
+    for (int i = 0; i < b; i++) cout << anim[i] << "\n";
+
+    return 0;
 }
 
-void vivod(string a[]) {
-	//system("cls");
-	for (int i = 0; i < 12; i++) {
-		cout << a[i] << '\n';
-	}
-	//Sleep(200);
-}
 
-void an(string a[]) {
-
-	vivod(a);
-
-	a[6] = " ---\\/--- ";
-	a[7] = "/   ||   \\";
-	a[8] = "    ||    ";
-
-	vivod(a);
-
-	a[6] = "  --\\/----";
-	a[7] = " /  ||    ";
-	a[8] = "/   ||    ";
-
-	vivod(a);
-
-	a[5] = "  /|UU|\\ /";
-	a[6] = " ---\\/--- ";
-	a[7] = "/   ||    ";
-	a[8] = "    ||    ";
-
-	vivod(a);
-
-	a[4] = "  \\|  |/ /";
-	a[5] = "  /|UU|\\/ ";
-	a[6] = "  --\\/--  ";
-	a[7] = " /  ||    ";
-	a[8] = "/   ||    ";
-
-	vivod(a);
-
-	a[4] = "  \\|  |/ *";
-	a[5] = "  /|UU|\\/ ";
-	a[6] = " ---\\/--  ";
-	a[7] = "/   ||    ";
-	a[8] = "    ||    ";
-
-	vivod(a);
-
-	a[4] = "  \\|  |/ /";
-	a[5] = "  /|UU|\\/ ";
-	a[6] = "----\\/--  ";
-	a[7] = "    ||    ";
-
-	vivod(a);
-
-	a[4] = "  \\|  |/ *";
-	a[5] = "\\ /|UU|\\/ ";
-	a[6] = " ---\\/--  ";
-	a[7] = "    ||    ";
-
-	vivod(a);
-
-	a[4] = "\\ \\|  |/ /";
-	a[5] = " \\/|UU|\\/ ";
-	a[6] = "  --\\/--  ";
-	a[7] = "    ||    ";
-
-	vivod(a);
-
-	a[4] = "* \\|  |/ *";
-
-	vivod(a);
-
-	a[4] = "  \\|  |/  ";
-	a[5] = "* /|UU|\\ *";
-	a[6] = " ---\\/--- ";
-
-	vivod(a);
-
-	a[5] = "  /|UU|\\  ";
-	a[6] = "*---\\/---*";
-
-	vivod(a);
-
-	a[6] = " ---\\/--- ";
-	a[7] = "*   ||   *";
-
-	vivod(a);
-
-	a[6] = "  --\\/--  ";
-	a[7] = " /  ||  \\ ";
-	a[8] = "*   ||   *";
-
-	vivod(a);
-
-	a[6] = "  --\\/--  ";
-	a[7] = " /  ||  \\ ";
-	a[8] = "/   ||   \\";
-
-}
