@@ -16,7 +16,7 @@ void head() {
     std::cout << "   ()()   \n";
     std::cout << "   ()()   \n";
     std::cout << "   ()()   \n";
-    std::cout << "   |..|   \n";
+    std::cout << "   |  |   \n";
 }
 void legs() {
     std::cout << "    /\\    \n";
