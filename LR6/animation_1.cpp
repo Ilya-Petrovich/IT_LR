@@ -41,4 +41,5 @@ int main()
 		//system("clear");
 		//system("cls");
 	}
+	return 0;
 }
