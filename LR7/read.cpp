@@ -1,12 +1,13 @@
 #include <stdio.h>
 #include <iostream>
 
-void ReadText(char* buff, long fSize);
+void ChangeColor(char* buff, long fSize);
+void WriteText(char* buff, long fSize);
 
 int main() {
     FILE* file;
     char filename[100];
-    std::cout << "Input file for read: "; std::cin >> filename;
+    std::cout << "Input filename for read: "; std::cin >> filename;
     file = fopen(filename, "rb");
 
     long fSize;
@@ -16,21 +17,43 @@ int main() {
 
     char* buff = new char[fSize]();
     fread(buff, 1, fSize, file);
-    ReadText(buff, fSize);
+    fclose(file);
+
+    std::cout << "Input filename for write: "; std::cin >> filename;
+    file = fopen(filename, "wb");
+
+    ChangeColor(buff, fSize);
+
+    fwrite(buff, fSize, 1, file);
 
     fclose(file);
     free(buff);
 }
 
-void ReadText(char* buff, long fSize) {
+void ChangeColor(char* buff, long fSize) {
+    std::cout << std::endl << std::endl << std::endl;
+    for (int i = 138; i < fSize;) {
+        buff[i] = 238 & 0xfc;
+        buff[i + 1] = 130 & 0xfc;
+        buff[i + 2] = 238 & 0xfc;
+        i += 3;
+    }
+}
+
+void WriteText(char* buff, long fSize) {
+    std::string text = "TRIS-2-22-84";
     int start_of_byte = fSize - 1200;
-    
-    while (start_of_byte < fSize) {
-        int first_byte = buff[start_of_byte] & 3;	
-        int second_byte = buff[start_of_byte + 1] & 3;
-        int third_byte = buff[start_of_byte + 2] & 3;	
-        int fourth_byte = buff[start_of_byte + 3] & 3;
-        std::cout <<(char) ((first_byte << 6) | (second_byte << 4) | (third_byte << 2) | fourth_byte);
+    std::string::iterator it = text.begin();
+    for (std::string::iterator it = text.begin(); it != text.end(); ++it) {
+        char symbol = *it;
+        int first_byte_of_symbol = (int)((symbol & (3 << 6)) >> 6);
+        int second_byte_of_symbol = (int)((symbol & (3 << 4)) >> 4);
+        int third_byte_of_symbol = (int)((symbol & (3 << 2)) >> 2);
+        int fourth_byte_of_symbol = (int)(symbol & 3);
+        buff[start_of_byte] = (buff[start_of_byte] & 0xfc) | first_byte_of_symbol;
+        buff[start_of_byte + 1] = (buff[start_of_byte + 1] & 0xfc) | second_byte_of_symbol;
+        buff[start_of_byte + 2] = (buff[start_of_byte + 2] & 0xfc) | third_byte_of_symbol;
+        buff[start_of_byte + 3] = (buff[start_of_byte + 3] & 0xfc) | fourth_byte_of_symbol;
         start_of_byte += 4;
     }
 }
