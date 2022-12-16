@@ -1,29 +1,249 @@
-#include <stdio.h>
 #include <iostream>
-void readText(char* buff, long fileSize);
-FILE* file;
+#include <unistd.h>
+using namespace std;
+
+void print(char p1[], char p2[], char p3[], char p4[], char p5[], char p6[], char p7[], char p8[], char p9[], char p10[], char p11[], char p12[]);
+
 int main()
 {
-	file = fopen("image.bmp", "rb");
-	long fileSize;
-	fseek(file, 0, SEEK_END);
-	fileSize = ftell(file);
-	rewind(file);
-	char* buff = new char[fileSize]();
-	fread(buff, sizeof(char), fileSize, file);
-
-	unsigned int firstByte, secondByte, thirdByte, fourthByte;
-	firstByte = buff[138];	// first byte - 01001101
-	secondByte = buff[139];	// second byte - 01001100
-	thirdByte = buff[140];	// third byte - 11011110
-	fourthByte = buff[141];	// fourth byte - 01001101
-	readText(buff, fileSize);
-	std::cout << file << std::endl;
-	system("pause");
-	return 0;
+	char p1[11] = { ' ', ' ', ' ', '_', '[', ']', '_', ' ', ' ', ' ', '\n' };
+	char p2[11] = { ' ', ' ', ' ', '|', '~', '~', '|', ' ', ' ', ' ', '\n' };
+	char p3[11] = { ' ', ' ', ' ', '|', 'o', 'q', '|', ' ', ' ', ' ', '\n' };
+	char p4[11] = { ' ', ' ', '(', '|', '<', '>', '|', ')', ' ', ' ', '\n' };
+	char p5[11] = { ' ', ' ', ' ', '\\', '-', '-', '/', ' ', ' ', ' ', '\n' };
+	char p6[11] = { ' ', ' ', ' ', '_', '>', '<', '_', ' ', ' ', ' ', '\n' };
+	char p7[11] = { ' ', ' ', '-', '\\', '.', ' ', '/', '-', ' ', ' ', '\n' };
+	char p8[11] = { ' ', '/', ' ', '|', '.', ' ', '|', ' ', '\\', ' ', '\n' };
+	char p9[11] = { '/', ' ', ' ', '|', '.', ' ', '|', ' ', ' ', '\\', '\n' };
+	char p10[11] = { ' ', ' ', ' ', '|', '_', '_', '|', ' ', ' ', ' ', '\n' };
+	char p11[11] = { ' ', ' ', ' ', ' ', '|', '|', ' ', ' ', ' ', ' ', '\n' };
+	char p12[11] = { ' ', ' ', ' ', '_', '|', '|', '_', ' ', ' ', ' ', '\n' };
+	print(p1, p2, p3, p4, p5, p6, p7, p8, p9, p10, p11, p12);
+	p7[1] = '-';
+	p7[8] = '-';
+	p9[0] = ' ';
+	p9[9] = ' ';
+	p8[0] = '/';
+	p8[1] = ' ';
+	p8[8] = ' ';
+	p8[9] = '\\';
+	print(p1, p2, p3, p4, p5, p6, p7, p8, p9, p10, p11, p12);
+	p7[9] = '-';
+	p8[9] = ' ';
+	p9[0] = '/';
+	p8[0] = ' ';
+	p8[1] = '/';
+	p7[1] = ' ';
+	print(p1, p2, p3, p4, p5, p6, p7, p8, p9, p10, p11, p12);
+	p7[1] = '-';
+	p9[0] = ' ';
+	p9[8] = ' ';
+	p7[9] = ' ';
+	p6[9] = '/';
+	p8[1] = ' ';
+	p8[0] = '/';
+	print(p1, p2, p3, p4, p5, p6, p7, p8, p9, p10, p11, p12);
+	p7[1] = ' ';
+	p8[0] = ' ';
+	p8[1] = '/';
+	p9[0] = '/';
+	p6[9] = ' ';
+	p7[8] = ' ';
+	p6[8] = '/';
+	p5[9] = '/';
+	print(p1, p2, p3, p4, p5, p6, p7, p8, p9, p10, p11, p12);
+	p7[1] = '-';
+	p8[1] = ' ';
+	p8[0] = '/';
+	p9[0] = ' ';
+	p5[9] = '*';
+	print(p1, p2, p3, p4, p5, p6, p7, p8, p9, p10, p11, p12);
+	p5[9] = '/';
+	p8[0] = ' ';
+	p7[0] = '-';
+	print(p1, p2, p3, p4, p5, p6, p7, p8, p9, p10, p11, p12);
+	p5[9] = '*';
+	p7[0] = ' ';
+	p6[0] = '\\';
+	print(p1, p2, p3, p4, p5, p6, p7, p8, p9, p10, p11, p12);
+	p6[0] = ' ';
+	p5[0] = '\\';
+	p7[1] = ' ';
+	p5[9] = '/';
+	p6[1] = '\\';
+	print(p1, p2, p3, p4, p5, p6, p7, p8, p9, p10, p11, p12);
+	p5[0] = '*';
+	p5[9] = '*';
+	print(p1, p2, p3, p4, p5, p6, p7, p8, p9, p10, p11, p12);
+	p5[0] = ' ';
+	p5[9] = ' ';
+	p6[0] = '*';
+	p6[9] = '*';
+	p7[1] = '-';
+	p7[8] = '-';
+	p6[1] = ' ';
+	p6[8] = ' ';
+	print(p1, p2, p3, p4, p5, p6, p7, p8, p9, p10, p11, p12);
+	p7[0] = '*';
+	p7[9] = '*';
+	p6[0] = ' ';
+	p6[9] = ' ';
+	print(p1, p2, p3, p4, p5, p6, p7, p8, p9, p10, p11, p12);
+	p8[0] = '*';
+	p8[9] = '*';
+	p7[0] = ' ';
+	p7[9] = ' ';
+	print(p1, p2, p3, p4, p5, p6, p7, p8, p9, p10, p11, p12);
+	p9[0] = '*';
+	p9[9] = '*';
+	p8[0] = ' ';
+	p8[9] = ' ';
+	p7[1] = ' ';
+	p7[8] = ' ';
+	p8[1] = '/';
+	p8[8] = '\\';
+	print(p1, p2, p3, p4, p5, p6, p7, p8, p9, p10, p11, p12);
+	p9[0] = '/';
+	p9[9] = '\\';
+	print(p1, p2, p3, p4, p5, p6, p7, p8, p9, p10, p11, p12);
+	p7[1] = '-';
+	p7[8] = '-';
+	p8[1] = ' ';
+	p8[8] = ' ';
+	p8[0] = '/';
+	p8[9] = '\\';
+	p9[0] = ' ';
+	p9[9] = ' ';
+	print(p1, p2, p3, p4, p5, p6, p7, p8, p9, p10, p11, p12);
+	p7[1] = ' ';
+	p8[0] = ' ';
+	p8[1] = '/';
+	p9[0] = '/';
+	p8[9] = ' ';
+	p7[9] = '-';
+	print(p1, p2, p3, p4, p5, p6, p7, p8, p9, p10, p11, p12);
+	p7[1] = '-';
+	p8[1] = ' ';
+	p9[0] = ' ';
+	p8[0] = '/';
+	p7[9] = ' ';
+	p6[9] = '/';
+	print(p1, p2, p3, p4, p5, p6, p7, p8, p9, p10, p11, p12);
+	p7[1] = ' ';
+	p8[0] = ' ';
+	p8[1] = '/';
+	p9[0] = '/';
+	p7[8] = ' ';
+	p6[9] = ' ';
+	p6[8] = '/';
+	p5[9] = '/';
+	print(p1, p2, p3, p4, p5, p6, p7, p8, p9, p10, p11, p12);
+	p5[9] = '*';
+	p7[1] = '-';
+	p8[1] = ' ';
+	p8[0] = '/';
+	p9[0] = ' ';
+	print(p1, p2, p3, p4, p5, p6, p7, p8, p9, p10, p11, p12);
+	p7[0] = '-';
+	p8[0] = ' ';
+	p5[9] = '/';
+	print(p1, p2, p3, p4, p5, p6, p7, p8, p9, p10, p11, p12);
+	p5[9] = '*';
+	p7[0] = ' ';
+	p6[0] = '\\';
+	print(p1, p2, p3, p4, p5, p6, p7, p8, p9, p10, p11, p12);
+	p6[0] = ' ';
+	p5[0] = '\\';
+	p7[1] = ' ';
+	p5[9] = '/';
+	p6[1] = '\\';
+	print(p1, p2, p3, p4, p5, p6, p7, p8, p9, p10, p11, p12);
+	p5[0] = '*';
+	p5[9] = '*';
+	print(p1, p2, p3, p4, p5, p6, p7, p8, p9, p10, p11, p12);
+	p5[0] = ' ';
+	p5[9] = ' ';
+	p6[0] = '*';
+	p6[9] = '*';
+	p7[1] = '-';
+	p7[8] = '-';
+	p6[1] = ' ';
+	p6[8] = ' ';
+	print(p1, p2, p3, p4, p5, p6, p7, p8, p9, p10, p11, p12);
+	p7[0] = '*';
+	p7[9] = '*';
+	p6[0] = ' ';
+	p6[9] = ' ';
+	print(p1, p2, p3, p4, p5, p6, p7, p8, p9, p10, p11, p12);
+	p8[0] = '*';
+	p8[9] = '*';
+	p7[0] = ' ';
+	p7[9] = ' ';
+	print(p1, p2, p3, p4, p5, p6, p7, p8, p9, p10, p11, p12);
+	p9[0] = '*';
+	p9[9] = '*';
+	p8[0] = ' ';
+	p8[9] = ' ';
+	p7[1] = ' ';
+	p7[8] = ' ';
+	p8[1] = '/';
+	p8[8] = '\\';
+	print(p1, p2, p3, p4, p5, p6, p7, p8, p9, p10, p11, p12);
+	p9[0] = '/';
+	p9[9] = '\\';
+	print(p1, p2, p3, p4, p5, p6, p7, p8, p9, p10, p11, p12);
 }
-void readText(char* buff, long fileSize)
+
+void print(char p1[], char p2[], char p3[], char p4[], char p5[], char p6[], char p7[], char p8[], char p9[], char p10[], char p11[], char p12[])
 {
-	for (int i = 0; i <= fileSize; i++)
-		std::cout << buff[i];
+	//system("cls");
+	for (int i = 0; i <= 10; i++)
+	{
+		cout << p1[i];
+	}
+	for (int i = 0; i <= 10; i++)
+	{
+		cout << p2[i];
+	}
+	for (int i = 0; i <= 10; i++)
+	{
+		cout << p3[i];
+	}
+	for (int i = 0; i <= 10; i++)
+	{
+		cout << p4[i];
+	}
+	for (int i = 0; i <= 10; i++)
+	{
+		cout << p5[i];
+	}
+	for (int i = 0; i <= 10; i++)
+	{
+		cout << p6[i];
+	}
+	for (int i = 0; i <= 10; i++)
+	{
+		cout << p7[i];
+	}
+	for (int i = 0; i <= 10; i++)
+	{
+		cout << p8[i];
+	}
+	for (int i = 0; i <= 10; i++)
+	{
+		cout << p9[i];
+	}
+	for (int i = 0; i <= 10; i++)
+	{
+		cout << p10[i];
+	}
+	for (int i = 0; i <= 10; i++)
+	{
+		cout << p11[i];
+	}
+	for (int i = 0; i <= 9; i++)
+	{
+		cout << p12[i];
+	}
+	//Sleep(500);
 }
