@@ -5,7 +5,7 @@ int main()
 	int fuel, speed = 0, maxspeed = 110, time = 0, fuelcap = 50;
 	double dist = 360, fuelcons = 0, dtraveled = 0, s, cfuel = 0;
 
-	std::cout << "How much fuel do you have at start? "; cin >> fuel;
+	std::cout << "How much fuel do you have at start? "; std::cin >> fuel;
 	
 	if (fuel < 0 or fuel > 50)
 	{
@@ -32,7 +32,7 @@ int main()
 		std::cout << "Your fuel before start: " << fuel << " litres" << std::endl << std::endl;
 	}
 
-	std::cout << "What speed will you choose? "; cin >> speed;
+	std::cout << "What speed will you choose? "; std::cin >> speed;
 
 	if (speed < 0)
 	{
