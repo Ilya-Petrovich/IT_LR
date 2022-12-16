@@ -645,7 +645,6 @@ L1:int t;
 	cout << "Sit down and jump: \t3" << endl;
 	cout << "Throw a ball: \t\t4" << endl << endl;
 	cout << "Enter 5 for exit." << endl;
-	
 	cin >> t;
 	switch (t)
 	{
