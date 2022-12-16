@@ -4,6 +4,7 @@
 #include <stdlib.h>
 #include <string>
 using namespace std;
+
 int main()
 {
 	string an[29] = { "   _[]_   \n   |~~|   \n   |oq|   \n  (|<>|)  \n   \\--/   \n   _><_   \n  -\\. /-  \n / |. | \\ \n/  |. |  \\\n   |__|   \n    ||    \n    ||    \n   _||_   \n",
