@@ -118,9 +118,9 @@ int main() {
 		pers[8][0] = a;
 		pers[8][9] = c;
 		concl(pers, H, W);
-		Sleep(500);
+		//Sleep(500);
 		//system("cls");
-		//cnt++;
+		cnt++;
 	}
 
 	return 0;
