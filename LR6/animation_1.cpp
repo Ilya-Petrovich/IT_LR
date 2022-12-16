@@ -1,4 +1,5 @@
 #include <iostream>
+//#include <windows.h>
 #include <unistd.h>
 
 using namespace std;
@@ -22,8 +23,7 @@ int main()
 	a[10] = "    ||    ";
 	a[11] = "   _||_   ";
 	
-	vivod(a);
-
+	
 	an(a);
 
 	an(a);
@@ -41,6 +41,7 @@ void vivod(string a[]) {
 
 void an(string a[]) {
 
+	vivod(a);
 
 	a[6] = " ---\\/--- ";
 	a[7] = "/   ||   \\";
@@ -128,5 +129,4 @@ void an(string a[]) {
 	a[7] = " /  ||  \\ ";
 	a[8] = "/   ||   \\";
 
-	vivod(a);
 }
