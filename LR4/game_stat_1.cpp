@@ -5,7 +5,9 @@ int main()
 {
 	int Fuel_Capacity = 50, Maximum_Speed = 110, Distance = 360, Time_Spent, Speed = 0;
 	float Fuel, Fuel_Consumption = 0, s, Fuel_Consumed, Fuel_Remained, Distance_Traveled;
-	cout << "How much fuel do you have at start? "; cin >> Fuel; cout << endl;
+	cout << "How much fuel do you have at start? ";
+	cin >> Fuel;
+	cout << endl;
 	if (Fuel < 0 or Fuel > 50) { // Проверка на корректность ввода количества бензина
 		cout << "Invalid data";
 		return 0;
@@ -25,7 +27,8 @@ int main()
 		Fuel += 25;
 		cout << "Your fuel before start: " << Fuel << endl << endl;
 	}
-	cout << "What speed will you choose? "; cin >> Speed;
+	cout << "What speed will you choose? ";
+	cin >> Speed;
 	if (Speed >= 110) { // Проверка на превышение максимальной скорости
 		Speed = 110;
 	}
@@ -33,7 +36,8 @@ int main()
 		cout << "Invalid data";
 		return 0;
 	}
-	cout << "Your speed before start: " << Speed << " km/h" << endl;
+	cout << "Your speed before start: " << Speed << " km/h";
+	cout << endl;
 	s = (float)Speed / 10;
 	Speed != 0 ? Fuel_Consumption = s * s / 4 - 4.5 * s + 30 : Fuel_Consumption = 0; // При скорости 0, значение расхода должно быть 0
 	cout << "Fuel consumption with chosen speed: " << Fuel_Consumption << " litres per 100 km" << endl << endl;
@@ -63,5 +67,5 @@ int main()
 	else {
 		cout << "You haven't reached destination point. " << (float)Distance - Distance_Traveled << " km left.";
 	}
-	
+
 }
