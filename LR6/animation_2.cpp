@@ -456,8 +456,8 @@ void run()
 		a[14] = "*" + string(k, ' ') + " /  ||  \\ " + string(28 - k, ' ') + "*";
 		a[15] = "*" + string(k, ' ') + "/   ||   \\" + string(28 - k, ' ') + "*";
 		a[16] = "*" + string(k, ' ') + "    /\\    " + string(28 - k, ' ') + "*";
-		a[17] = "*" + string(k, ' ') + "    |\\    " + string(28 - k, ' ') + "*";
-		a[18] = "*" + string(k, ' ') + "   _| \\_  " + string(28 - k, ' ') + "*";
+		a[17] = "*" + string(k, ' ') + "    | \\   " + string(28 - k, ' ') + "*";
+		a[18] = "*" + string(k, ' ') + "   _|  \\_ " + string(28 - k, ' ') + "*";
 		print(a);
 		
 		k += 1;
@@ -471,8 +471,8 @@ void run()
 		a[14] = "*" + string(k, ' ') + " /  ||  \\ " + string(28 - k, ' ') + "*";
 		a[15] = "*" + string(k, ' ') + "/   ||   \\" + string(28 - k, ' ') + "*";
 		a[16] = "*" + string(k, ' ') + "    /\\    " + string(28 - k, ' ') + "*";
-		a[17] = "*" + string(k, ' ') + "    /|    " + string(28 - k, ' ') + "*";
-		a[18] = "*" + string(k, ' ') + "  _/ |_   " + string(28 - k, ' ') + "*";
+		a[17] = "*" + string(k, ' ') + "   / |    " + string(28 - k, ' ') + "*";
+		a[18] = "*" + string(k, ' ') + " _/  |_   " + string(28 - k, ' ') + "*";
 		print(a);
 		
 		a[7] = "*" + string(k, ' ') + "   ()()   " + string(28 - k, ' ') + "*";
@@ -502,8 +502,8 @@ void run()
 		a[14] = "*" + string(k, ' ') + " /  ||  \\ " + string(28 - k, ' ') + "*";
 		a[15] = "*" + string(k, ' ') + "/   ||   \\" + string(28 - k, ' ') + "*";
 		a[16] = "*" + string(k, ' ') + "    /\\    " + string(28 - k, ' ') + "*";
-		a[17] = "*" + string(k, ' ') + "    /|    " + string(28 - k, ' ') + "*";
-		a[18] = "*" + string(k, ' ') + "  _/ |_   " + string(28 - k, ' ') + "*";
+		a[17] = "*" + string(k, ' ') + "   / |    " + string(28 - k, ' ') + "*";
+		a[18] = "*" + string(k, ' ') + " _/  |_   " + string(28 - k, ' ') + "*";
 		print(a);
 		k -= 1;
 		a[7] = "*" + string(k, ' ') + "   ()()   " + string(28 - k, ' ') + "*";
@@ -516,8 +516,8 @@ void run()
 		a[14] = "*" + string(k, ' ') + " /  ||  \\ " + string(28 - k, ' ') + "*";
 		a[15] = "*" + string(k, ' ') + "/   ||   \\" + string(28 - k, ' ') + "*";
 		a[16] = "*" + string(k, ' ') + "    /\\    " + string(28 - k, ' ') + "*";
-		a[17] = "*" + string(k, ' ') + "    |\\    " + string(28 - k, ' ') + "*";
-		a[18] = "*" + string(k, ' ') + "   _| \\_  " + string(28 - k, ' ') + "*";
+		a[17] = "*" + string(k, ' ') + "    | \\   " + string(28 - k, ' ') + "*";
+		a[18] = "*" + string(k, ' ') + "   _|  \\_ " + string(28 - k, ' ') + "*";
 		print(a);
 		
 		a[7] = "*" + string(k, ' ') + "   ()()   " + string(28 - k, ' ') + "*";
