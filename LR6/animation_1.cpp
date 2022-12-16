@@ -134,6 +134,4 @@ void concl(char pers[12][11], int h, int w) {
 
 		cout << endl;
 	}
-
-	cout << endl;
 }
