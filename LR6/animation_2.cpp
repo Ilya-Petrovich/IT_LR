@@ -189,7 +189,7 @@ void run() {
                 }
                 case 2: {
                     std::cout << "*" << move_right << "    | \\   " << move_left << "*\n";
-                    std::cout << "*" << move_right << "   _|  \\_   " << move_left << "\b\b*\n";
+                    std::cout << "*" << move_right << "   _|  \\_ " << move_left << "*\n";
                     std::cout << std::string(40, '*') << '\n'; 
                     // Sleep(150); rmFrame(); 
                     break;
@@ -229,7 +229,7 @@ void run() {
                 }
                 case 2: {
                     std::cout << "*" << move_right << "    | \\   " << move_left << "*\n";
-                    std::cout << "*" << move_right << "   _|  \\_   " << move_left << "\b\b*\n";
+                    std::cout << "*" << move_right << "   _|  \\_ " << move_left << "*\n";
                     std::cout << std::string(40, '*') << '\n';
                     //Sleep(150);
                     //rmFrame();
@@ -325,7 +325,7 @@ void throw_ball() {
 /*13*/                    "*  --\\/--                              *\n",
 /*14*/                    "* /  ||  \\                             *\n",
 /*15*/                    "*/   ||   \\                            *\n",
-/*16*/                    "*    \\/                                *\n",
+/*16*/                    "*    /\\                                *\n",
 /*17*/                    "*    ||                                *\n",
 /*18*/                    "*   _||_                               *\n",
 /*19*/                    std::string(40, '*') + '\n'
