@@ -1,6 +1,6 @@
 #include <iostream>
-//#include<windows.h>
 #include<unistd.h>
+
 int main() {
 	using namespace std;
 	for (int i = 0; i < 2; i++) {
@@ -8,7 +8,7 @@ int main() {
 		cout << "   |~~|   " << endl;
 		cout << "   |oq|   " << endl;
 		cout << "  (|<>|)  " << endl;
-		cout << "   \\==/   " << endl;
+		cout << "   \\--/   " << endl;
 		cout << "   _><_   " << endl;
 		cout << "  -\\. /-  " << endl;
 		cout << " / |. | \\ " << endl;
@@ -24,7 +24,7 @@ int main() {
 		cout << "   |~~|   " << endl;
 		cout << "   |oq|   " << endl;
 		cout << "  (|<>|)  " << endl;
-		cout << "   \\==/   " << endl;
+		cout << "   \\--/   " << endl;
 		cout << "   _><_   " << endl;
 		cout << " --\\. /-- " << endl;
 		cout << "/  |. |  \\" << endl;
@@ -32,13 +32,13 @@ int main() {
 		cout << "   |__|   " << endl;
 		cout << "    ||    " << endl;
 		cout << "   _||_   " << endl;
-		//Sleep(1000);
+		////Sleep(1000);
 		//system("cls");
 		cout << "   _[]_   " << endl;
 		cout << "   |~~|   " << endl;
 		cout << "   |oq|   " << endl;
 		cout << "  (|<>|)  " << endl;
-		cout << "   \\==/   " << endl;
+		cout << "   \\--/   " << endl;
 		cout << "   _><_   " << endl;
 		cout << "  -\\. /---" << endl;
 		cout << " / |. |  " << endl;
@@ -52,7 +52,7 @@ int main() {
 		cout << "   |~~|   " << endl;
 		cout << "   |oq|   " << endl;
 		cout << "  (|<>|)  " << endl;
-		cout << "   \\==/   " << endl;
+		cout << "   \\--/   " << endl;
 		cout << "   _><_  /" << endl;
 		cout << " --\\. /-- " << endl;
 		cout << "/  |. |   " << endl;
@@ -66,7 +66,7 @@ int main() {
 		cout << "   |~~|   " << endl;
 		cout << "   |oq|   " << endl;
 		cout << "  (|<>|)  " << endl;
-		cout << "   \\==/  /" << endl;
+		cout << "   \\--/  /" << endl;
 		cout << "   _><_ / " << endl;
 		cout << "  -\\. /-  " << endl;
 		cout << " / |. |   " << endl;
@@ -80,7 +80,7 @@ int main() {
 		cout << "   |~~|   " << endl;
 		cout << "   |oq|   " << endl;
 		cout << "  (|<>|)  " << endl;
-		cout << "   \\==/  *" << endl;
+		cout << "   \\--/  *" << endl;
 		cout << "   _><_ / " << endl;
 		cout << " --\\. /-  " << endl;
 		cout << "/  |. |   " << endl;
@@ -94,7 +94,7 @@ int main() {
 		cout << "   |~~|   " << endl;
 		cout << "   |oq|   " << endl;
 		cout << "  (|<>|)  " << endl;
-		cout << "   \\==/  /" << endl;
+		cout << "   \\--/  /" << endl;
 		cout << "   _><_ / " << endl;
 		cout << "---\\. /-  " << endl;
 		cout << "   |. |   " << endl;
@@ -108,7 +108,7 @@ int main() {
 		cout << "   |~~|   " << endl;
 		cout << "   |oq|   " << endl;
 		cout << "  (|<>|)  " << endl;
-		cout << "   \\==/  *" << endl;
+		cout << "   \\--/  *" << endl;
 		cout << "\\  _><_ / " << endl;
 		cout << " --\\. /-  " << endl;
 		cout << "   |. |   " << endl;
@@ -122,7 +122,7 @@ int main() {
 		cout << "   |~~|   " << endl;
 		cout << "   |oq|   " << endl;
 		cout << "  (|<>|)  " << endl;
-		cout << "*  \\==/  *" << endl;
+		cout << "\\  \\--/  /" << endl;
 		cout << " \\ _><_ / " << endl;
 		cout << "  -\\. /-  " << endl;
 		cout << "   |. |   " << endl;
@@ -136,7 +136,21 @@ int main() {
 		cout << "   |~~|   " << endl;
 		cout << "   |oq|   " << endl;
 		cout << "  (|<>|)  " << endl;
-		cout << "   \\==/   " << endl;
+		cout << "*  \\--/  *" << endl;
+		cout << " \\ _><_ / " << endl;
+		cout << "  -\\. /-  " << endl;
+		cout << "   |. |   " << endl;
+		cout << "   |. |   " << endl;
+		cout << "   |__|   " << endl;
+		cout << "    ||    " << endl;
+		cout << "   _||_   " << endl;
+		//Sleep(1000);
+		//system("cls");
+		cout << "   _[]_   " << endl;
+		cout << "   |~~|   " << endl;
+		cout << "   |oq|   " << endl;
+		cout << "  (|<>|)  " << endl;
+		cout << "   \\--/   " << endl;
 		cout << " * _><_ * " << endl;
 		cout << " --\\. /-- " << endl;
 		cout << "   |. |   " << endl;
@@ -150,7 +164,7 @@ int main() {
 		cout << "   |~~|   " << endl;
 		cout << "   |oq|   " << endl;
 		cout << "  (|<>|)  " << endl;
-		cout << "   \\==/   " << endl;
+		cout << "   \\--/   " << endl;
 		cout << "   _><_   " << endl;
 		cout << "*--\\. /--*" << endl;
 		cout << "   |. |   " << endl;
@@ -164,7 +178,7 @@ int main() {
 		cout << "   |~~|   " << endl;
 		cout << "   |oq|   " << endl;
 		cout << "  (|<>|)  " << endl;
-		cout << "   \\==/   " << endl;
+		cout << "   \\--/   " << endl;
 		cout << "   _><_   " << endl;
 		cout << " --\\. /-- " << endl;
 		cout << "*  |. |  *" << endl;
@@ -178,7 +192,7 @@ int main() {
 		cout << "   |~~|   " << endl;
 		cout << "   |oq|   " << endl;
 		cout << "  (|<>|)  " << endl;
-		cout << "   \\==/   " << endl;
+		cout << "   \\--/   " << endl;
 		cout << "   _><_   " << endl;
 		cout << "  -\\. /-  " << endl;
 		cout << " / |. | \\ " << endl;
@@ -192,7 +206,7 @@ int main() {
 		cout << "   |~~|   " << endl;
 		cout << "   |oq|   " << endl;
 		cout << "  (|<>|)  " << endl;
-		cout << "   \\==/   " << endl;
+		cout << "   \\--/   " << endl;
 		cout << "   _><_   " << endl;
 		cout << "  -\\. /-  " << endl;
 		cout << " / |. | \\ " << endl;
