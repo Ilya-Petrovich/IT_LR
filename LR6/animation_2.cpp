@@ -199,7 +199,9 @@ void run() {
             magic(move_right, move_left);
             std::cout << "*" << move_right << "    ||    " << move_left << "*\n";
             std::cout << "*" << move_right << "   _||_   " << move_left << "*\n";
-            std::cout << std::string(40, '*') << '\n'; Sleep(150); del_one_frame(); break;
+            std::cout << std::string(40, '*') << '\n'; 
+			//Sleep(150); 
+			//del_one_frame(); break;
         }
         for (; k < 3; k++) {
             magic(move_right, move_left);
