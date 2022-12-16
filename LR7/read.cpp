@@ -2,7 +2,6 @@
 #include <iostream>
 
 void ChangeColor(char* buff, long fSize);
-void WriteText(char* buff, long fSize);
 
 int main() {
     FILE* file;
@@ -30,30 +29,30 @@ int main() {
     free(buff);
 }
 
-void ChangeColor(char* buff, long fSize) {
-    std::cout << std::endl << std::endl << std::endl;
-    for (int i = 138; i < fSize;) {
-        buff[i] = 238 & 0xfc;
-        buff[i + 1] = 130 & 0xfc;
-        buff[i + 2] = 238 & 0xfc;
-        i += 3;
-    }
-}
-
 void WriteText(char* buff, long fSize) {
-    std::string text = "TRIS-2-22-84";
+    std::string text = "TRIS-2-22-10";
     int start_of_byte = fSize - 1200;
     std::string::iterator it = text.begin();
     for (std::string::iterator it = text.begin(); it != text.end(); ++it) {
         char symbol = *it;
-        int first_byte_of_symbol = (int)((symbol & (3 << 6)) >> 6);
-        int second_byte_of_symbol = (int)((symbol & (3 << 4)) >> 4);
-        int third_byte_of_symbol = (int)((symbol & (3 << 2)) >> 2);
-        int fourth_byte_of_symbol = (int)(symbol & 3);
+        int first_byte_of_symbol = (int) ((symbol & (3 << 6)) >> 6);
+        int second_byte_of_symbol = (int) ((symbol & (3 << 4)) >> 4);
+        int third_byte_of_symbol = (int) ((symbol & (3 << 2)) >> 2);
+        int fourth_byte_of_symbol = (int) (symbol & 3);
         buff[start_of_byte] = (buff[start_of_byte] & 0xfc) | first_byte_of_symbol;
-        buff[start_of_byte + 1] = (buff[start_of_byte + 1] & 0xfc) | second_byte_of_symbol;
-        buff[start_of_byte + 2] = (buff[start_of_byte + 2] & 0xfc) | third_byte_of_symbol;
-        buff[start_of_byte + 3] = (buff[start_of_byte + 3] & 0xfc) | fourth_byte_of_symbol;
+        buff[start_of_byte+1] = (buff[start_of_byte+1] & 0xfc) | second_byte_of_symbol;
+        buff[start_of_byte+2] = (buff[start_of_byte+2] & 0xfc) | third_byte_of_symbol;
+        buff[start_of_byte+3] = (buff[start_of_byte+3] & 0xfc) | fourth_byte_of_symbol;
         start_of_byte += 4;
+    }
+}
+
+void ChangeColor(char* buff, long fSize) {
+    std::cout << std::endl << std::endl << std::endl;
+    for (int i = 138; i < fSize;) {
+        buff[i] = 238 & 0xfc;
+        buff[i+1] = 130 & 0xfc;
+        buff[i+2] = 238 & 0xfc;
+        i += 3;
     }
 }
