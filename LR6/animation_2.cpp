@@ -533,7 +533,6 @@ void run()
 		a[17] = "*" + string(k, ' ') + "    ||    " + string(28 - k, ' ') + "*";
 		a[18] = "*" + string(k, ' ') + "   _||_   " + string(28 - k, ' ') + "*";
 		print(a);
-		
 	}
 }
 void dance()
