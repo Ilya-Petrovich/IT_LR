@@ -241,9 +241,9 @@ void print(char p1[], char p2[], char p3[], char p4[], char p5[], char p6[], cha
 	{
 		cout << p11[i];
 	}
-	for (int i = 0; i <= 9; i++)
+	for (int i = 0; i <= 10; i++)
 	{
 		cout << p12[i];
 	}
-	//Sleep(500);
+	//Sleep(1000);
 }
