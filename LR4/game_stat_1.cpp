@@ -4,7 +4,7 @@ using namespace std;
 int main() {
 	int fuel, speed, time;
 	float fuelConsumption, s, consumed, remained, distance, left;
-	cout << "How much fuel do you have at start? "; cin >> fuel;
+	std::cout << "How much fuel do you have at start? "; cin >> fuel; cout << endl;
 	if (fuel > 50) {
 		cout << endl;
 		cout << "Invalid data" << std::endl;
@@ -30,7 +30,7 @@ int main() {
 		cout << "Your fuel before start: " << fuel << endl;
 		cout << endl;
 	}
-	cout << "What speed will you choose? "; cin >> speed;
+	cout << "What speed will you choose? "; cin >> speed; cout << endl;
 	if (speed < 0) {
 		cout << endl;
 		cout << "Invalid data";
