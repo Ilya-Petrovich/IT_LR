@@ -35,7 +35,7 @@ void menu(unsigned short& a) {
     std::cout << "Enter 5 for exit." << std::endl;
     std::cin >> a;
 }
-void del_one_frame() { system("cls");
+void del_one_frame() { //system("cls");
 }
 void head() {
     std::cout << "*    /\\                                *\n";
@@ -50,7 +50,7 @@ void leg() {
 }
 void dance() {
     for (int k = 0; k <= 28; k++) {
-        del_one_frame();
+        //del_one_frame();
         std::cout << std::string(40, '*') << '\n';
         for (int i = 0; i < 6; i++) { std::cout << "*                                      *\n"; }
         head();
@@ -142,8 +142,8 @@ void dance() {
         }
         leg();
         std::cout << std::string(40, '*') << '\n';
-        Sleep(300);
-        del_one_frame();
+        //Sleep(300);
+        //del_one_frame();
     }
 }
 void run() {
@@ -159,21 +159,21 @@ void run() {
                 std::cout << "*" << move_right << "   / |   " << move_left << " *\n";
                 std::cout << "*" << move_right << " _/  |_   " << move_left << "*\n";
                 std::cout << std::string(40, '*') << '\n';
-                Sleep(150); del_one_frame(); 
+                //Sleep(150); del_one_frame(); 
                 break;
             }
             case 1: {
                 std::cout << "*" << move_right << "    ||    " << move_left << "*\n";
                 std::cout << "*" << move_right << "   _||_   " << move_left << "*\n";
                 std::cout << std::string(40, '*') << '\n';
-                Sleep(150); del_one_frame(); 
+                //Sleep(150); del_one_frame(); 
                 break;
             }
             case 2: {
                 std::cout << "*" << move_right << "    | \\   " << move_left << "*\n";
                 std::cout << "*" << move_right << "   _|  \\_   " << move_left << "\b\b*\n";
                 std::cout << std::string(40, '*') << '\n';
-                Sleep(150); del_one_frame(); 
+                //Sleep(150); del_one_frame(); 
                 break;
             }
             }
@@ -189,8 +189,8 @@ void run() {
             std::cout << "*" << move_right << "    ||    " << move_left << "*\n";
             std::cout << "*" << move_right << "   _||_   " << move_left << "*\n";
             std::cout << std::string(40, '*') << '\n';
-            Sleep(150); 
-            del_one_frame(); break;
+           // Sleep(150); 
+           // del_one_frame(); break;
         }
         for (; k < 3; k++) {
             magic(move_right, move_left);
@@ -199,24 +199,24 @@ void run() {
                 std::cout << "*" << move_right << "   / |   " << move_left << " *\n";
                 std::cout << "*" << move_right << " _/  |_   " << move_left << "*\n";
                 std::cout << std::string(40, '*') << '\n';
-                Sleep(150);
-                del_one_frame();
+               // Sleep(150);
+               // del_one_frame();
                 break;
             }
             case 1: {
                 std::cout << "*" << move_right << "    ||    " << move_left << "*\n";
                 std::cout << "*" << move_right << "   _||_   " << move_left << "*\n";
                 std::cout << std::string(40, '*') << '\n';
-                Sleep(150);
-                del_one_frame();
+                //Sleep(150);
+                //del_one_frame();
                 break;
             }
             case 2: {
                 std::cout << "*" << move_right << "    | \\   " << move_left << "*\n";
                 std::cout << "*" << move_right << "   _|  \\_   " << move_left << "\b\b*\n";
                 std::cout << std::string(40, '*') << '\n';
-                Sleep(150);
-                del_one_frame();
+               // Sleep(150);
+                //del_one_frame();
                 break;
             }
             }
@@ -294,8 +294,8 @@ void jump() {
                 }
             }
             for (int i = 0; i < 20; i++) cout << o[i] << endl;
-            Sleep(t);
-            system("cls");
+            //Sleep(1000);
+            //system("cls");
         }
         if (r == 1 or r == 4) {
             for (int i = 0; i < 20; i++) {
@@ -310,8 +310,8 @@ void jump() {
             for (int i = 0; i < 20; i++) {
                 cout << o[i] << endl;
             }
-            Sleep(t);
-            system("cls");
+            //Sleep(1000);
+            //system("cls");
         }
         if (r == 2) {
             for (int u = 0; u < 5; u++) {
@@ -326,8 +326,8 @@ void jump() {
                 for (int i = 0; i < 20; i++) {
                     cout << o[i] << endl;
                 }
-                Sleep(t);
-                system("cls");
+                //Sleep(1000);
+                //system("cls");
             }
         }
         if (r == 3) {
@@ -347,8 +347,8 @@ void jump() {
                 for (int i = 0; i < 20; i++) {
                     cout << o[i] << endl;
                 }
-                Sleep(t);
-                system("cls");
+                //Sleep(1000);
+                //system("cls");
             }
         }
     }
