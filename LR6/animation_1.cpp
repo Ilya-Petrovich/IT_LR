@@ -1,6 +1,6 @@
 #include <iostream>
-#include <unistd.h>
-
+//#include<windows.h>
+//#include<unistd.h>
 int main() {
 	using namespace std;
 	for (int i = 0; i < 2; i++) {
