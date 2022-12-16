@@ -247,8 +247,8 @@ void moveLR(std::string move_left, std::string move_right) {
     std::cout << "*" << move_left << "   ()()   " << move_right << "*\n";
     std::cout << "*" << move_left << "   ()()   " << move_right << "*\n";
     std::cout << "*" << move_left << "   |..|   " << move_right << "*\n";
-    std::cout << "*" << move_left << "   |  |   " << move_right << "*\n"; 
-    std::cout << "*" << move_left << "   |UU|   " << move_right << "*\n";
+    std::cout << "*" << move_left << "  \\|  |/  " << move_right << "*\n"; 
+    std::cout << "*" << move_left << "  /|UU|\\  " << move_right << "*\n";
     std::cout << "*" << move_left << "  --\\/--  " << move_right << "*\n"; 
     std::cout << "*" << move_left << " /  ||  \\ " << move_right << "*\n"; 
     std::cout << "*" << move_left << "/   ||   \\" << move_right << "*\n";
