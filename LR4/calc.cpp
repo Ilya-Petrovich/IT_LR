@@ -1,26 +1,33 @@
+#include <stdio.h> 
 #include <iostream>
+#include <windows.h>
 
-int main()
-{
-	int num1, num2, num3;
-	setlocale(LC_ALL, "russian");
-	std::cout << "Type the first number: ";
-	std::cin >> num1;
-	std::cout << "Type the second number: ";
-	std::cin >> num2;
-	std::cout << "Type the third number: ";
-	std::cin >> num3;
-	if (num1 > num2&& num1 > 0 && num2 > 0 && num3 > 0) {
-		std::cout << num1 << " + " << num2 << " = " << num1 + num2 << std::endl;
-		std::cout << num1 << " - " << num2 << " = " << num1 - num2 << std::endl;
-		std::cout << num1 << " * " << num2 << " = " << num1 * num2 << std::endl;
-		std::cout << (double)num1 << " / " << double(num2) << " = " << (float)num1 / num2 << std::endl;
-		std::cout << num1 << " % " << num2 << " = " << num1 % num2 << std::endl;
-		std::cout << num1 << " + " << num2 << " * " << num3 << " = " << num1 + num2 * num3 << std::endl;
-		std::cout << "(" << num1 << " + " << num2 << ")" << " * " << num3 << " = " << (num1 + num2) * num3 << std::endl;
-	}
-	else {
-		std::cout << "Invalid data" << std::endl;
-	}
+using namespace std;
+
+
+int main() {
+
+    int num_1, num_2, num_3, s;
+ 
+    cout << "Type the first number: ";
+    cin >> num_1;
+    cout << "Type the second number: ";
+    cin >> num_2;
+    cout << "Type the third number: ";
+    cin >> num_3;
+
+    if (num_2 > 0 and num_1 > -1 and num_3 > -1 and (num_1 > num_2)) {
+
+        cout << num_1 << " + " << num_2 << " = " << num_1 + num_2 << endl;
+        cout << num_1 << " - " << num_2 << " = " << num_1 - num_2 << endl;
+        cout << num_1 << " * " << num_2 << " = " << num_1 * num_2 << endl;
+        cout << num_1 << " / " << num_2 << " = " << num_1 / num_2 << endl;
+        cout << num_1 << ".0" << " / " << num_2 << ".0" << " = " << float(num_1) / float(num_2) << endl;
+        cout << num_1 << " % " << num_2 << " = " << num_1 % num_2 << endl;
+        cout << num_1 << " + " << num_2 << " * " << num_3 << " = " << num_1 + num_2 * num_3 << endl;
+        cout << "(" << num_1 << " + " << num_2 << ")" << " * " << num_3 << " = " << (num_1 + num_2) * num_3 << endl;
+
+    }
+
+    else cout << "Invalid data" << endl;
 }
-
