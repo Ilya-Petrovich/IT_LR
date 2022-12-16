@@ -23,7 +23,7 @@ int main()
 	}
 	else
 	{
-		cout << "Invalid data";
+		cout << "Invalid data" << endl;
 	}
 	return 0;
 }
