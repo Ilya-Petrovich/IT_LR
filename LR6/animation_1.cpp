@@ -1,114 +1,120 @@
-#include <iostream>
 #include <unistd.h>
+#include <iostream>
 
-void output(char chel[12][10], const int str, const int col); //вывод человечка
+// void rmFrame();
+void head(); void legs();
+void dance();
 
-int main () 
-{	
-	const int str=12;
-	const int col=10;
-	int x=800;
-	char chel[str][col]            //начальное состояние
-	{
-		{' ',' ',' ','(',')','(',')',' ',' ',' '},
-		{' ',' ',' ','(',')','(',')',' ',' ',' '},
-		{' ',' ','(','(',')','(',')',' ',' ',' '},
-		{' ',' ',' ','|',' ',' ','|',' ',' ',' '},
-		{' ',' ','\','|',' ',' ','|','/',' ',' '},
-		{' ',' ','/','|','U','U','|','\',' ',' '},
-		{' ',' ','-','-','\','/','-','-',' ',' '},
-		{' ','/',' ',' ','|','|',' ',' ','\',' '},
-		{'/',' ',' ',' ','|','|',' ',' ',' ','\'},
-		{' ',' ',' ',' ','/','\',' ',' ',' ',' '},
-		{' ',' ',' ',' ','|','|',' ',' ',' ',' '},
-		{' ',' ',' ',' ','|','|',' ',' ',' ',' '},
-	};
-	//system("cls");
-	for (int i=0; i<2; i++) {
-		//Sleep(x);
-		//system("cls");
-		chel[8][9]='\ ';  //правая рука  
-		chel[8][0]='/';  //левая рука
-		output(chel, str, col); 								//1 состояние
-		//Sleep(x);
-		//system("cls");
-		chel[8][9]=' '; chel[7][8]=' '; chel[6][8]='-'; chel[7][9]='\ '; //правая рука
-		chel[7][1]=' '; chel[8][0]=' '; chel[6][1]='-'; chel[7][0]='/'; //левая рука
-		output(chel, str, col);									 //2 состояние
-		//Sleep(x);
-		//system("cls");
-		chel[7][9]=' '; chel[6][9]='-'; //правая рука  
-		chel[6][1]=' '; chel[7][0]=' '; chel[8][0]='/'; chel[7][1]='/'; //левая рука
-		output(chel, str, col); 								 //3 состояние
-		//Sleep(x);
-		//system("cls");
-		chel[6][9]=' '; chel[5][9]='/'; //правая рука  
-		chel[7][1]=' '; chel[8][0]=' '; chel[6][1]='-'; chel[7][0]='/'; //левая рука
-		output(chel, str, col);									 //4 состояние
-		//Sleep(x);
-		//system("cls");
-		chel[6][8]=' '; chel[5][9]=' '; chel[5][8]='/'; chel[4][9]='/'; //правая рука  
-		chel[6][1]=' '; chel[7][0]=' '; chel[8][0]='/'; chel[7][1]='/'; //левая рука
-		output(chel, str, col);									 //5 состояние
-		//Sleep(x);
-		//system("cls");
-		chel[4][9]='*'; //правая рука  
-		chel[7][1]=' '; chel[8][0]=' '; chel[6][1]='-'; chel[7][0]='/'; //левая рука
-		output(chel, str, col);									 //6 состояние
-		//Sleep(x);
-		//system("cls");
-		chel[4][9]='/'; //правая рука  
-		chel[7][0]=' '; chel[6][0]='-'; //левая рука
-		output(chel, str, col);									 //7 состояние
-		//Sleep(x);
-		//system("cls");
-		chel[4][9]='*'; //правая рука  
-		chel[6][0]=' '; chel[5][0]='\ '; //левая рука
-		output(chel, str, col);									 //8 состояние
-		//Sleep(x);
-		//system("cls");
-		chel[4][9]='/'; //правая рука  
-		chel[6][1]=' '; chel[5][0]=' '; chel[4][0]='\'; chel[5][1]='\'; //левая рука
-		output(chel, str, col);									 //9 состояние
-		//Sleep(x);
-		//system("cls");
-		chel[4][9]='*';  //правая рука  
-		chel[4][0]='*';  //левая рука
-		output(chel, str, col);									 //10 состояние
-		//Sleep(x);
-		//system("cls");
-		chel[4][9]=' '; chel[5][8]=' '; chel[5][9]='*'; chel[6][8]='-'; //правая рука  
-		chel[5][1]=' '; chel[4][0]=' '; chel[5][0]='*'; chel[6][1]='-'; //левая рука
-		output(chel, str, col);									 //11 состояние
-		//Sleep(x);
-		//system("cls");
-		chel[5][9]=' '; chel[6][9]='*'; //правая рука  
-		chel[5][0]=' '; chel[6][0]='*'; //левая рука
-		output(chel, str, col);									 //12 состояние
-		//Sleep(x);
-		//system("cls");
-		chel[6][9]=' '; chel[7][9]='*'; //правая рука  
-		chel[6][0]=' '; chel[7][0]='*'; //левая рука
-		output(chel, str, col);									 //13 состояние
-		//Sleep(x);
-		//system("cls");
-		chel[6][8]=' '; chel[7][9]=' '; chel[7][8]='\'; chel[8][9]='*'; //правая рука  
-		chel[6][1]=' '; chel[7][0]=' '; chel[8][0]='*'; chel[7][1]='/'; //левая рука
-		output(chel, str, col);									 //14 состояние
-	}
-	//Sleep(x);
-	//system("cls");
-	chel[8][9]='\';  //правая рука  
-	chel[8][0]='/';  //левая рука
-	output(chel, str, col);	
-	return 0;	
+int main() {
+    // rmFrame();
+    dance();
+    return 0;
 }
 
-void output(char chel[12][10], const int str, const int col) {
-	for (int i=0; i<str; i++) {                     
-		for (int j=0; j<col; j++) {
-			std::cout << chel[i][j];
-		}
-		std::cout << "\n";	
-	}
+// void rmFrame() {system("cls");}
+void head() {
+    std::cout << "   ()()   \n";
+    std::cout << "   ()()   \n";
+    std::cout << "   ()()   \n";
+    std::cout << "   |  |   \n";
+}
+void legs() {
+    std::cout << "    /\\    \n";
+    std::cout << "    ||    \n";
+    std::cout << "   _||_   \n";
+}
+void dance() {
+    for (int i = 0; i <= 28; i++) {
+        // rmFrame();
+        head();
+        switch (i % 14) {
+            case 0: { 
+                std::cout << "  \\|  |/  \n";
+                std::cout << "  /|UU|\\  \n";
+                std::cout << "  --\\/--  \n";
+                std::cout << " /  ||  \\ \n";
+                std::cout << "/   ||   \\\n";break;}
+            case 1: {
+                std::cout << "  \\|  |/  \n";
+                std::cout << "  /|UU|\\  \n";
+                std::cout << " ---\\/--- \n";
+                std::cout << "/   ||   \\\n";
+                std::cout << "    ||    \n";break;}
+            case 2: { 
+                std::cout << "  \\|  |/  \n";
+                std::cout << "  /|UU|\\  \n";
+                std::cout << "  --\\/----\n";
+                std::cout << " /  ||    \n";
+                std::cout << "/   ||    \n"; break;}
+            case 3: { 
+                std::cout << "  \\|  |/  \n";
+                std::cout << "  /|UU|\\ /\n";
+                std::cout << " ---\\/--- \n";
+                std::cout << "/   ||    \n";
+                std::cout << "    ||    \n"; break;}
+            case 4: { 
+                std::cout << "  \\|  |/ /\n";
+                std::cout << "  /|UU|\\/ \n";
+                std::cout << "  --\\/--  \n";
+                std::cout << " /  ||    \n";
+                std::cout << "/   ||    \n"; break;}
+            case 5: { 
+                std::cout << "  \\|  |/ *\n";
+                std::cout << "  /|UU|\\/ \n";
+                std::cout << " ---\\/--  \n";
+                std::cout << "/   ||    \n";
+                std::cout << "    ||    \n"; break;}
+            case 6: { 
+                std::cout << "  \\|  |/ /\n";
+                std::cout << "  /|UU|\\/ \n";
+                std::cout << "----\\/--  \n";
+                std::cout << "    ||    \n";
+                std::cout << "    ||    \n"; break;}
+            case 7: { 
+                std::cout << "  \\|  |/ *\n";
+                std::cout << "\\ /|UU|\\/ \n";
+                std::cout << " ---\\/--  \n";
+                std::cout << "    ||    \n";
+                std::cout << "    ||    \n"; break;}
+            case 8: { 
+                std::cout << "\\ \\|  |/ /\n";
+                std::cout << " \\/|UU|\\/ \n";
+                std::cout << "  --\\/--  \n";
+                std::cout << "    ||    \n";
+                std::cout << "    ||    \n"; break;}
+            case 9: { 
+                std::cout << "* \\|  |/ *\n";
+                std::cout << " \\/|UU|\\/ \n";
+                std::cout << "  --\\/--  \n";
+                std::cout << "    ||    \n";
+                std::cout << "    ||    \n"; break;}
+            case 10: { 
+                std::cout << "  \\|  |/  \n";
+                std::cout << "* /|UU|\\ *\n";
+                std::cout << " ---\\/--- \n";
+                std::cout << "    ||    \n";
+                std::cout << "    ||    \n"; break;}
+            case 11: { 
+                std::cout << "  \\|  |/  \n";
+                std::cout << "  /|UU|\\  \n";
+                std::cout << "*---\\/---*\n";
+                std::cout << "    ||    \n";
+                std::cout << "    ||    \n"; break;}
+            case 12: { 
+                std::cout << "  \\|  |/  \n";
+                std::cout << "  /|UU|\\  \n";
+                std::cout << " ---\\/--- \n";
+                std::cout << "*   ||   *\n";
+                std::cout << "    ||    \n"; break;}
+            case 13: { 
+                std::cout << "  \\|  |/  \n";
+                std::cout << "  /|UU|\\  \n";
+                std::cout << "  --\\/--  \n";
+                std::cout << " /  ||  \\ \n";
+                std::cout << "*   ||   *\n"; break;}
+        }
+        legs();
+        // Sleep(500);
+        // rmFrame();
+    }
 }
