@@ -1,5 +1,5 @@
 #include<iostream>
-#include<windows.h>
+#include<unistd.h>
 using namespace std;
 void concl(char pers[12][11], int h, int w);
 
