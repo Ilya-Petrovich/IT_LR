@@ -22,7 +22,7 @@ int main()
 
 		std::cout << num_1 << " * " << num_2 << " = " << num_1 * num_2 << std::endl;
 		std::cout << num_1 << " / " << num_2 << " = " << num_1 / num_2 << std::endl;
-		std::cout << (double)num_1 << " / " << (double)num_2 << " = " << (double)num_1 / num_2 << std::endl;
+		std::cout << (float)num_1 << " / " << (float)num_2 << " = " << (float)num_1 / (float)num_2 << std::endl;
 
 		std::cout << num_1 << " % " << num_2 << " = " << num_1 % num_2 << std::endl;
 
