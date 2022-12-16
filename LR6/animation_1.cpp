@@ -1,5 +1,5 @@
 #include<iostream>
-#include<unistd.h>
+#include<windows.h>
 using namespace std;
 void concl(char pers[12][11], int h, int w);
 
@@ -128,7 +128,7 @@ int main() {
 
 void concl(char pers[12][11], int h, int w) {
 	for (int i = 0; i < h; i++) {
-		for (int j = 0; j < w; j++) {
+		for (int j = 0; j < w - 1; j++) {
 			cout << pers[i][j];
 		}
 
