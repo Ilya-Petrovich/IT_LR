@@ -6,13 +6,12 @@ int main() {
 	std::cout << "How much fuel do you have at start? "; std::cin >> fuel;
 
 	if (fuel < 0 || fuel > 50) {
-		std::cout << "Invalid data" << std::endl;
+		std::cout << '\n' << "Invalid data";
 		return 0;
 	}
 
-	std::cout << std::endl;
-	std::cout << "Car stats" << std::endl;
-	std::cout << "Fuel: " << fuel << std::endl;
+	std::cout << '\n' << "Car stats" << '\n';
+	std::cout << "Fuel: " << fuel << '\n';
 	std::cout << "Fuel capacity: 50" << std::endl;
 	std::cout << "Fuel consuption: 0" << std::endl;
 	std::cout << "Speed: 0" << std::endl;
