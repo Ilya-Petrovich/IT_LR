@@ -55,7 +55,7 @@ void vivod(string a[]) {
 	for (int i = 0; i < 20; i++) {
 		cout << a[i] << '\n';
 	}
-	//Sleep(500);
+	//Sleep(100);
 	//system("cls");
 }
 
@@ -237,6 +237,8 @@ void dance(string a[]) {
 	a[14] = "* /  ||  \\                             *";
 	a[15] = "*/   ||   \\                            *";
 
+	vivod(a);
+
 }
 
 void run(string a[]) {
@@ -346,7 +348,7 @@ void run(string a[]) {
 
 	vivod(a);
 
-	for (int i = 26; i > 0; i--) {
+	for (int i = 27; i > 0; i--) {
 
 		k = probel(i);
 		k1 = probel(28 - i);
