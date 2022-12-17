@@ -1,6 +1,6 @@
 #include <iostream>
-//#include <windows.h>
-#include <unistd.h>
+#include <windows.h>
+//#include <unistd.h>
 
 using namespace std;
 
@@ -502,14 +502,18 @@ void rocket(string a[]) {
 
 void ball(string a[]) {
 
+	vivod(a);
+
+	char myach = 'o';
+
 	a[15][10] = '-';
-	a[14][10] = 'o';
+	a[14][10] = myach;
 
 	vivod(a);
 
 	a[15][10] = ' ';
 	a[14][10] = '-';
-	a[13][10] = 'o';
+	a[13][10] = myach;
 
 	vivod(a);
 
@@ -517,26 +521,26 @@ void ball(string a[]) {
 	a[14][9] = ' ';
 	a[13][10] = '-';
 	a[13][9] = '-';
-	a[12][10] = 'o';
+	a[12][10] = myach;
 
 	vivod(a);
 
 	a[13][10] = '/';
 	a[12][10] = ' ';
-	a[11][10] = 'o';
+	a[11][10] = myach;
 
 	vivod(a);
 
 	a[13][10] = '-';
 	a[11][10] = ' ';
-	a[10][10] = 'o';
+	a[10][10] = myach;
 
 	vivod(a);
 
 	a[14][10] = '\\';
 	a[13][10] = ' ';
 	a[10][10] = ' ';
-	a[9][10] = 'o';
+	a[9][10] = myach;
 
 	vivod(a);
 
@@ -544,68 +548,68 @@ void ball(string a[]) {
 	a[14][9] = ' ';
 	a[9][10] = ' ';
 	a[13][9] = ' ';
-	a[8][10] = 'o';
+	a[8][10] = myach;
 	a[15][10] = '\\';
 	a[14][9] = '\\';
 
 	vivod(a);
 
 	a[8][10] = ' ';
-	a[7][10] = 'o';
+	a[7][10] = myach;
 
 	vivod(a);
 
-	a[6][9] = 'o';
+	a[6][9] = myach;
 	a[7][10] = ' ';
 
 	vivod(a);
 
-	a[5][8] = 'o';
+	a[5][8] = myach;
 	a[6][9] = ' ';
 
 	vivod(a);
 
 	a[5][8] = ' ';
-	a[4][7] = 'o';
+	a[4][7] = myach;
 
 	vivod(a);
 
 	a[4][7] = ' ';
-	a[3][6] = 'o';
+	a[3][6] = myach;
 
 	vivod(a);
 
-	a[3][5] = 'o';
+	a[3][5] = myach;
 	a[3][6] = ' ';
 
 	vivod(a);
 
 	a[3][5] = ' ';
-	a[4][4] = 'o';
+	a[4][4] = myach;
 
 	vivod(a);
 
-	a[5][3] = 'o';
+	a[5][3] = myach;
 	a[4][4] = ' ';
 
 	vivod(a);
 
-	a[6][2] = 'o';
+	a[6][2] = myach;
 	a[5][3] = ' ';
 
 	vivod(a);
 
-	a[7][1] = 'o';
+	a[7][1] = myach;
 	a[6][2] = ' ';
 
 	vivod(a);
 
-	a[8][1] = 'o';
+	a[8][1] = myach;
 	a[7][1] = ' ';
 
 	vivod(a);
 
-	a[9][1] = 'o';
+	a[9][1] = myach;
 	a[8][1] = ' ';
 	a[15][1] = ' ';
 	a[14][2] = ' ';
@@ -614,26 +618,26 @@ void ball(string a[]) {
 
 	vivod(a);
 
-	a[10][1] = 'o';
+	a[10][1] = myach;
 	a[9][1] = ' ';
 	a[14][1] = ' ';
 	a[13][1] = '-';
 
 	vivod(a);
 
-	a[11][1] = 'o';
+	a[11][1] = myach;
 	a[10][1] = ' ';
 	a[13][1] = '\\';
 
 	vivod(a);
 
-	a[12][1] = 'o';
+	a[12][1] = myach;
 	a[11][1] = ' ';
 	a[13][1] = '-';
 
 	vivod(a);
 
-	a[13][1] = 'o';
+	a[13][1] = myach;
 	a[12][1] = ' ';
 	a[13][2] = ' ';
 	a[14][1] = '-';
@@ -641,7 +645,7 @@ void ball(string a[]) {
 
 	vivod(a);
 
-	a[14][1] = 'o';
+	a[14][1] = myach;
 	a[13][1] = ' ';
 	a[15][1] = '-';
 
