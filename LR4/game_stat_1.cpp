@@ -1,13 +1,14 @@
-#include <iostream>
+#include<iostream>
 
 using namespace std;
+
 int main() {
 	int speed, time;
 	float fuel, s, distance = 0, fuelConsumed = 0, fuelConsumption, fuelRemained;
 	cout << " How much fuel do you have at start? ";
 	cin >> fuel;
 	if ((fuel < 0) || (fuel > 50)) {
-		cout << " Invalid data " << endl;
+		cout << " Invalid data ";
 		return 0;
 	} 
 	// начальная информация об автомобиле и маршруте
