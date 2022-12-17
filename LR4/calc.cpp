@@ -1,0 +1,30 @@
+#include <iostream>
+
+int main()
+{
+	int num_1, num_2, num_3;
+	std::cin >> num_1 >> num_2 >> num_3;
+	std::cout << "Type the first number: " << num_1 << std::endl;
+	std::cout << "Type the second number: " << num_2 << std::endl;
+	std::cout << "Type the third number: " << num_3 << std::endl;
+	if (num_1 > num_2) {
+		if (num_1 >= 0 and num_2 > 0) {
+			std::cout << num_1 << " + " << num_2 << " = " << num_1 + num_2 << std::endl;
+			std::cout << num_1 << " - " << num_2 << " = " << num_1 - num_2 << std::endl;
+			std::cout << num_1 << " * " << num_2 << " = " << num_1 * num_2 << std::endl;
+			std::cout << num_1 << " / " << num_2 << " = " << num_1 / num_2 << std::endl;
+			std::cout << float(num_1) << " / " << float(num_2) << " = " << float(num_1) / float(num_2) << std::endl;
+			std::cout << num_1 << " % " << num_2 << " = " << num_1 % num_2 << std::endl;
+			std::cout << num_1 << " + " << num_2 << " * " << num_3 << " = " << num_1 + num_2 * num_3 << std::endl;
+			std::cout << "(" << num_1 << " + " << num_2 << ")" << " * " << num_3 << " = " << (num_1 + num_2) * num_3 << std::endl;
+		}
+		else {
+			std::cout << "Invalid data" << std::endl;
+		}
+
+	}
+	else {
+		std::cout << "Invalid data" << std::endl;
+	}
+	return 0;
+}
