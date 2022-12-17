@@ -1,12 +1,14 @@
 #include <iostream>
 
-using namespace std;
+using  std::cout;
+using  std::cin;
+using  std::endl;
 
 int main() {
 	int num_1, num_2, num_3;
 
-	cout << "Type the first number: ";
-	cin >> num_1;
+    cout << "Type the first number: ";
+    cin >> num_1;
 	cout << "Type the second number: ";
 	cin >> num_2;
 	cout << "Type the third number: ";
