@@ -12,6 +12,7 @@ int main()
 	rewind(file);
 	char* buff = new char[fileSize]();
 	readText(buff, fileSize);
+	fclose(file);
 	return 0;
 }
 void readText(char* buff, long fileSize)
