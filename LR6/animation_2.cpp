@@ -1,14 +1,13 @@
 #include <iostream>
 #include <string>
-#include <windows.h>
+
 using namespace std;
 
 void show(string person1[], const int size){
     for (int i = 0; i < size; i++) {
         cout << person1[i];
     }
-    Sleep(50);
-    system("cls");
+
 }
 void dance(string person1[], const int size) {
     //frame 1
@@ -224,24 +223,23 @@ int main(){
         menu();
         cin >> ans;
         if (ans == 1){
-            system("cls");
+
             dance(person1,size);
         }
         else if (ans == 2){
-            system("cls");
+
             run(person1,size);
         }
         else if (ans == 3){
-            system("cls");
+
             sit_jump(person1, size);
         }
         else if (ans == 4){
-            system("cls");
             throw_a_ball(person1, size);
             //throw_a_ball(person1,size);
         }
         else if (ans == 5) exit(0);
-        else system("cls");
+
     }
     return 0;
 }
