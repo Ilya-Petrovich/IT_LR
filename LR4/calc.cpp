@@ -1,6 +1,8 @@
  #include<iostream>
 using namespace std;
-int main() {
+
+int main()
+{
 	int num_1, num_2, num_3;
 	cout << "Type the first number: ";
 	cin >> num_1;
