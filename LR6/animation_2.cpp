@@ -238,8 +238,8 @@ void magic(std::string move_left, std::string move_right) {
     std::cout << "*" << move_left << "    /\\    " << move_right << "*\n";
 }
 void jump() { 
-    string filled = "***************************************";
-    string bordered = "*                                     *";
+    string filled = "****************************************";
+    string bordered = "*                                      *";
     string m[20] = { filled,bordered,bordered,bordered,bordered,bordered,bordered,bordered,bordered,bordered,bordered,bordered,
     bordered,bordered,bordered,bordered,bordered,bordered,bordered,filled, },
         p[12] = {
