@@ -39,7 +39,7 @@ int main()
 
     std::cout << "Route info" << endl;
     std::cout << "Distance:360\n" << endl;
-    std::cout << "-------------------------------------------------\n" << endl;
+    std::cout << "-----------------------------------------------\n" << endl;
 
     std::cout << "You have to drive a route 360 km long." << endl;
 

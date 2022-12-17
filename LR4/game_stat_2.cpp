@@ -94,7 +94,7 @@ int main()
  cout << "Time spent: " << int(time_spent / 3600) << " h " << int((time_spent - (int(time_spent / 3600) * 3600)) / 60) << " min " << int(time_spent - int(time_spent / 3600) * 3600 - int((time_spent - (int(time_spent / 3600) * 3600)) / 60) * 60) << " sec. "<< endl;
  cout << "Fuel consumed: " << FuelConsumed << " litres" << endl;
  cout << "Fuel remained: " << fuel - ((fuelConsumption / 100) * distance_traveled) << " litres" << endl;
- cout << "----------------------------------------" << endl;
+ cout << "---------------------------------------" << endl;
  if (distance_traveled == 360)
   cout << "Congratulations! You have reached destination point!";
  else

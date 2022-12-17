@@ -30,7 +30,7 @@ int main()
  
     } 
     else { 
-        std::cout << "Invalid data" << std::endl; 
+        std::cout << "Недоступное значение" << std::endl; 
     } 
  
     return 0; 
