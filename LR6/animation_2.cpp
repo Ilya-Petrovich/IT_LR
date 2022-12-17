@@ -149,64 +149,74 @@ void magic(std::string levo, std::string pravo) {
 }
 void run() {
     for (int i = 0, j = 28; i <= 28; i++, j--) {
-        std::string pravo = std::string(i, ' ');
-        std::string levo = std::string(j, ' ');
+        std::string move_right = std::string(i, ' ');
+        std::string move_left = std::string(j, ' ');
         int k = 0;
-        if (i == 0) { 
-            k = 1; 
-        }
+        if (i == 0) { k = 1; }
         for (; k < 3; k++) {
-            if (i == 28 and k == 2) {
-                break;
-            }
-            magic(pravo, levo);
+            magic(move_right, move_left);
             switch (k) {
             case 0: {
-                std::cout << "*" << pravo << "   / |   " << levo << " *\n";
-                std::cout << "*" << pravo << " _/  |_   " << levo << "*\n";
-                std::cout << std::string(40, '*') << '\n';/*Sleep(100)*/; clear(); break;
+                std::cout << "*" << move_right << "   / |   " << move_left << " *\n";
+                std::cout << "*" << move_right << " _/  |_   " << move_left << "*\n";
+                std::cout << std::string(40, '*') << '\n';
+                // Sleep(150); clear(); 
+                break;
             }
             case 1: {
-                std::cout << "*" << pravo << "    ||    " << levo << "*\n";
-                std::cout << "*" << pravo << "   _||_   " << levo << "*\n";
-                std::cout << std::string(40, '*') << '\n'; /*Sleep(100)*/; clear(); break;
+                std::cout << "*" << move_right << "    ||    " << move_left << "*\n";
+                std::cout << "*" << move_right << "   _||_   " << move_left << "*\n";
+                std::cout << std::string(40, '*') << '\n';
+                // Sleep(150); clear(); 
+                break;
             }
             case 2: {
-                std::cout << "*" << pravo << "    | \\   " << levo << "*\n";
-                std::cout << "*" << pravo << "   _|  \\_   " << levo << "\b\b*\n";
-                std::cout << std::string(40, '*') << '\n'; /*Sleep(100)*/; clear(); break; }
+                std::cout << "*" << move_right << "    | \\   " << move_left << "*\n";
+                std::cout << "*" << move_right << "   _|  \\_ " << move_left << "*\n";
+                std::cout << std::string(40, '*') << '\n';
+                // Sleep(150); clear(); 
+                break;
+            }
             }
         }
     }
-    for (int i = 28, j = 0; j <= 28; j++, i--) {
-        std::string pravo = std::string(i, ' ');
-        std::string levo = std::string(j, ' ');
-        for (int k = 0; k < 3; k++) {
 
-            if (j == 0 and (k == 2)) {
-                continue;
-            }
-
-            if (j == 28 and k == 2) {
+    for (int i = 1, j = 27; i <= 28; i++, j--) {
+        std::string move_right = std::string(j, ' ');
+        std::string move_left = std::string(i, ' ');
+        int k = 0;
+        if (j == 0) {
+            magic(move_right, move_left);
+            std::cout << "*" << move_right << "    ||    " << move_left << "*\n";
+            std::cout << "*" << move_right << "   _||_   " << move_left << "*\n";
+            std::cout << std::string(40, '*') << '\n'; /*Sleep(150); clear();*/ break;
+        }
+        for (; k < 3; k++) {
+            magic(move_right, move_left);
+            switch (k) {
+            case 0: {
+                std::cout << "*" << move_right << "   / |   " << move_left << " *\n";
+                std::cout << "*" << move_right << " _/  |_   " << move_left << "*\n";
+                std::cout << std::string(40, '*') << '\n';
+                // Sleep(150);
+                 //clear();
                 break;
             }
-            magic(pravo, levo);
-            switch (k) {
-            case 2: {
-                    std::cout << "*" << pravo << "   / |   " << levo << " *\n";
-                    std::cout << "*" << pravo << " _/  |_   " << levo << "*\n";
-                    std::cout << std::string(40, '*') << '\n'; /*Sleep(100)*/; clear(); break;
-                }}
             case 1: {
-                std::cout << "*" << pravo << "    ||    " << levo << "*\n";
-                std::cout << "*" << pravo << "   _||_   " << levo << "*\n";
-                std::cout << std::string(40, '*') << '\n'; /*Sleep(100)*/; clear(); break;
+                std::cout << "*" << move_right << "    ||    " << move_left << "*\n";
+                std::cout << "*" << move_right << "   _||_   " << move_left << "*\n";
+                std::cout << std::string(40, '*') << '\n';
+                //Sleep(150);
+                //clear();
+                break;
             }
-            case 0: {
-                    std::cout << "*" << pravo << "    | \\   " << levo << "*\n";
-                    std::cout << "*" << pravo << "   _|  \\_ " << levo << "*\n";
-                    std::cout << std::string(40, '*') << '\n'; /*Sleep(100)*/; clear(); break;
-                }
+            case 2: {
+                std::cout << "*" << move_right << "    | \\   " << move_left << "*\n";
+                std::cout << "*" << move_right << "   _|  \\_ " << move_left << "*\n";
+                std::cout << std::string(40, '*') << '\n';
+                //Sleep(150);
+                //clear();
+                break;
             }
             }
         }
