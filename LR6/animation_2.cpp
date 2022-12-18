@@ -2,8 +2,9 @@
 #include <string>
 
 using namespace std;
-
+int k = 0;
 void show(string person1[], const int size){
+
     for (int i = 0; i < size; i++) {
         cout << person1[i];
     }
@@ -326,7 +327,7 @@ void sit_jump(string person1[], const int size){
     person1[18] = "*   _||_                               *\n";
 
     show(person1,size);
-    
+
     person1[7] = "*                                      *\n";
     person1[8] = "*   _[]_                               *\n";
     person1[9] = "*   |~~|                               *\n";
