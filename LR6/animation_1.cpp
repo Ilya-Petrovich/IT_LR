@@ -77,6 +77,7 @@ void change(int i){
 			a[7][0]=' '; a[7][9]=' '; a[7][1]='/'; a[7][8]='\\';
 			break;
 		default:
+			clear();
 			a[0][3]='_'; a[0][4]='['; a[0][5]=']'; a[0][6]='_';
 			a[1][3]='|'; a[1][4]='~'; a[1][5]='~'; a[1][6]='|';
 			a[2][3]='|'; a[2][4]='o'; a[2][5]='q'; a[2][6]='|';
@@ -94,14 +95,12 @@ void change(int i){
 }
 
 int main(){
-	clear();
 	for (int i = 0; i<14; i++){
 		//system("cls");
 		change(i);
 		show();
 	//	Sleep(50);
 	}
-	clear();
 	for (int i = 0; i<14; i++){
 	//	system("cls");
 		change(i);
@@ -109,8 +108,6 @@ int main(){
 	//	Sleep(50);
 	}
 //	system("cls");
-//	clear();
 	change(0);
 	show();
 }
-//
