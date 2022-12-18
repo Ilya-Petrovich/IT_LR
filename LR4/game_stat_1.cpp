@@ -2,13 +2,13 @@
 using namespace std;
 
 int main() {
-	float fuel;
-	int speed, length;
+    float fuel;
+    int speed, length;
     cout << "How much fuel do you have at start? ";
     cin >> fuel;
     cout << "/n";
 
-	if (fuel >= 0 && fuel <= 50) {
+    if (fuel >= 0 && fuel <= 50) {
         cout << "Car stats\n";
         cout << "Fuel: " << fuel << "\n";
         cout << "Fuel capacity: 50\n";
@@ -89,25 +89,25 @@ int main() {
                 cout << "0 litres";
             }
             else {
-                cout << fuel - length * fuelConsumption / 100 << " litres";
+                cout << fuel - length * fuelConsumption / 100 << " litres\n";
             }
 
-        cout << "----------------------------------------\n";
+            cout << "----------------------------------------\n";
 
-        if (length == 360) {
-            cout << "Congratulations! You have reached destination point!" << endl;
+            if (length == 360) {
+                cout << "Congratulations! You have reached destination point!" << endl;
+            }
+            else {
+                cout << "You haven't reached destination point. " << 360 - length << " km left." << endl;
+            }
         }
         else {
-            cout << "You haven't reached destination point. " << 360 - length << " km left." << endl;
+            cout << "\n";
+            cout << "Invalid data." << endl;
         }
     }
     else {
-        cout << "\n";
         cout << "Invalid data." << endl;
-    }
-}
-    else {
-    cout << "Invalid data." << endl;
     }
 
     return 0;
