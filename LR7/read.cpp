@@ -55,14 +55,17 @@ void changeColor(char* buff, long filesize) {
 void writeText(char* buff, long filesize) {
     file = fopen("changed_image.bmp", "rb");
     fread(buff, sizeof(char), filesize, file);
-    string a = "TRP-2-22-6\0";
+    string a = "TRP-2-22-6";
     int j = 0;
+    bool flag = false;
     for (int i=138;i<filesize;i+=4){
-        if (a[j] == '\0'){ cout << "end of message" << endl;  break;}
-        int firstpart = a[j] >> 6;
-        int secondpart = a[j] << 2 >> 6;
-        int thirdpart = a[j] << 4 >> 6;
-        int fourthpart = a[j] << 6 >> 6;
+        if (a[j] == '\0') flag = true;
+        char symb = a[j];
+        if (flag) symb = ' ';
+        int firstpart = symb >> 6;
+        int secondpart = symb << 2 >> 6;
+        int thirdpart = symb << 4 >> 6;
+        int fourthpart = symb << 6 >> 6;
 
         buff[i] = buff[i] >> 2 << 2 |  firstpart;
         buff[i+1] = buff[i+1] >> 2 << 2 |  secondpart;
