@@ -1,173 +1,141 @@
 ﻿#include <iostream>
-#include <windows.h.>
+#include <vector>
+#include <string>
+#include <unistd.h>
 using namespace std;
 
-void dans(string persan[]);
-int main()
+void print(vector<string>a)
 {
-    string persan[12];
-    persan[0] = "   _[]_   ";
-    persan[1] = "   |~~|   ";
-    persan[2] = "   |oq|   ";
-    persan[3] = "  (|<>|)  ";
-    persan[4] = "   \\--/   ";
-    persan[5] = "   _><_   ";
-    persan[6] = "  -\\. /-  ";
-    persan[7] = " / |. | \\ ";
-    persan[8] = "/  |. |  \\";
-    persan[9] = "   |__|   ";
-    persan[10] = "    ||    ";
-    persan[11] = "   _||_   ";
-    dans(persan);
-    return 0;
+	for (auto c : a)
+		cout << c << endl;
 }
 
-void dans(string persan[])
+int main()
 {
-    for (int i = 0; i < 12; i++)
-    {
-        cout << persan[i] << endl;
-    }
-
-    Sleep(700);
-    system("cls");
-
-    for (int s = 0; s < 2; s++) {
-        persan[6] = " --\\. /-- ";
-        persan[7] = "/  |. |  \\";
-        persan[8] = "   |. |   ";
-
-        for (int i = 0; i < 12; i++)
-        {
-            cout << persan[i] << endl;
-        }
-        Sleep(700);
-        system("cls");
-        //3
-        persan[6] = "  -\\. /---";
-        persan[7] = " / |. |   ";
-        persan[8] = "/  |. |   ";
-
-        for (int i = 0; i < 12; i++)
-        {
-            cout << persan[i] << endl;
-        }
-        Sleep(700);
-        system("cls");
-
-        //4
-        persan[5] = "   _><_  /";
-        persan[6] = " --\\. /-- ";
-        persan[7] = "/  |. |   ";
-        persan[8] = "   |. |   ";
-        for (int i = 0; i < 12; i++)
-        {
-            cout << persan[i] << endl;
-        }
-        Sleep(700);
-        system("cls");
-        persan[4] = "   \\--/  /";
-        persan[5] = "   _><_ / ";
-        persan[6] = "  -\\. /-  ";
-        persan[7] = " / |. |   ";
-        persan[8] = "/  |. |   ";
-        for (int i = 0; i < 12; i++)
-        {
-            cout << persan[i] << endl;
-        }
-        Sleep(700);
-        system("cls");
-        persan[4] = "   \\--/  *";
-        persan[6] = " --\\. /-  ";
-        persan[7] = "/  |. |   ";
-        persan[8] = "   |. |   ";
-        for (int i = 0; i < 12; i++)
-        {
-            cout << persan[i] << endl;
-        }
-        Sleep(700);
-        system("cls");
-        persan[4] = "   \\--/  /";
-        persan[6] = "---\\. /-  ";
-        persan[7] = "   |. |   ";
-        for (int i = 0; i < 12; i++)
-        {
-            cout << persan[i] << endl;
-        }
-        Sleep(700);
-        system("cls");
-        //8
-        persan[4] = "   \\--/  *";
-        persan[5] = "\\  _><_ / ";
-        persan[6] = " --\\. /-  ";
-        for (int i = 0; i < 12; i++)
-        {
-            cout << persan[i] << endl;
-        }
-        Sleep(700);
-        system("cls");
-        persan[4] = "\\  \\--/  /";
-        persan[5] = " \\ _><_ / ";
-        persan[6] = "  -\\. /-  ";
-        for (int i = 0; i < 12; i++)
-        {
-            cout << persan[i] << endl;
-        }
-        Sleep(700);
-        system("cls");
-        //10
-        persan[4] = "*  \\--/  *";
-        for (int i = 0; i < 12; i++)
-        {
-            cout << persan[i] << endl;
-        }
-        Sleep(700);
-        system("cls");
-        //11
-        persan[4] = "   \\--/   ";
-        persan[5] = " * _><_ * ";
-        persan[6] = " --\\. /-- ";
-        for (int i = 0; i < 12; i++)
-        {
-            cout << persan[i] << endl;
-        }
-        Sleep(700);
-        system("cls");
-        //12
-        persan[5] = "   _><_   ";
-        persan[6] = "*--\\. /--*";
-        for (int i = 0; i < 12; i++)
-        {
-            cout << persan[i] << endl;
-        }
-        Sleep(700);
-        system("cls");
-        //13
-        persan[6] = " --\\. /-- ";
-        persan[7] = "*  |. |  *";
-        for (int i = 0; i < 12; i++)
-        {
-            cout << persan[i] << endl;
-        }
-        Sleep(700);
-        system("cls");
-        //14
-        persan[6] = "  -\\. /-  ";
-        persan[7] = " / |. | \\ ";
-        persan[8] = "*  |. |  *";
-        for (int i = 0; i < 12; i++)
-        {
-            cout << persan[i] << endl;
-        }
-        Sleep(700);
-        system("cls");
-
-        persan[8] = "/  |. |  \\";
-        for (int i = 0; i < 12; i++)
-        {
-            cout << persan[i] << endl;
-        }
-        Sleep(700);
-        system("cls");
-    }
+	vector <string> a = { "   _[]_   ",
+						"   |~~|   ",
+						"   |oq|   ",
+						"  (|<>|)  ",
+						"   \\--/   ",
+						"   _><_   ",
+						"  -\\. /-  ",
+						" / |. | \\ ",
+						"/  |. |  \\",
+						"   |__|   ",
+						"    ||    ",
+						"   _||_   "
+	};
+	print(a);
+	//sleep(1);
+	int i = 0;
+	while (i < 2)
+	{
+		//system("clear");
+		a[6] = " --\\. /-- ";
+		a[7] = "/  |. |  \\";
+		a[8] = "   |. |   ";
+		print(a);
+		//sleep(1);
+		//system("clear");
+		a[6] = "  -\\. /---";
+		a[7] = " / |. |   ";
+		a[8] = "/  |. |   ";
+		print(a);
+		//sleep(1);
+		//system("clear");
+		a[5] = "   _><_  /";
+		a[6] = " --\\. /-- ";
+		a[7] = "/  |. |   ";
+		a[8] = "   |. |   ";
+		print(a);
+		//sleep(1);
+		//system("clear");
+		a[4] = "   \\--/  /";
+		a[5] = "   _><_ / ";
+		a[6] = "  -\\. /-  ";
+		a[7] = " / |. |   ";
+		a[8] = "/  |. |   ";
+		print(a);
+		//sleep(1);
+		//system("clear");
+		a[4] = "   \\--/  *";
+		a[6] = " --\\. /-  ";
+		a[7] = "/  |. |   ";
+		a[8] = "   |. |   ";
+		print(a);
+		//sleep(1);
+		//system("clear");
+		a[4] = "   \\--/  /";
+		a[6] = "---\\. /-  ";
+		a[7] = "   |. |   ";
+		a[8] = "   |. |   ";
+		print(a);
+		//sleep(1);
+		//system("clear");
+		a[4] = "   \\--/  *";
+		a[5] = "\\  _><_ / ";
+		a[6] = " --\\. /-  ";
+		a[7] = "   |. |   ";
+		a[8] = "   |. |   ";
+		print(a);
+		//sleep(1);
+		//system("clear");
+		a[4] = "\\  \\--/  /";
+		a[5] = " \\ _><_ / ";
+		a[6] = "  -\\. /-  ";
+		a[7] = "   |. |   ";
+		a[8] = "   |. |   ";
+		print(a);
+		//sleep(1);
+		//system("clear");
+		a[4] = "*  \\--/  *";
+		a[5] = " \\ _><_ / ";
+		a[6] = "  -\\. /-  ";
+		a[7] = "   |. |   ";
+		a[8] = "   |. |   ";
+		print(a);
+		//sleep(1);
+		//system("clear");
+		a[4] = "   \\--/   ";
+		a[5] = "*  _><_  *";
+		a[6] = " --\\. /-- ";
+		a[7] = "   |. |   ";
+		a[8] = "   |. |   ";
+		print(a);
+		//sleep(1);
+		//system("clear");
+		a[4] = "   \\--/   ";
+		a[5] = "   _><_   ";
+		a[6] = "*--\\. /--*";
+		a[7] = "   |. |   ";
+		a[8] = "   |. |   ";
+		print(a);
+		//sleep(1);
+		//system("clear");
+		a[4] = "   \\--/   ";
+		a[5] = "   _><_   ";
+		a[6] = " --\\. /-- ";
+		a[7] = "*  |. |  *";
+		a[8] = "   |. |   ";
+		print(a);
+		//sleep(1);
+		//system("clear");
+		a[4] = "   \\--/   ";
+		a[5] = "   _><_   ";
+		a[6] = "  -\\. /-  ";
+		a[7] = " / |. | \\ ";
+		a[8] = "*  |. |  *";
+		print(a);
+		//sleep(1);
+		//system("clear");
+		a[4] = "   \\--/   ";
+		a[5] = "   _><_   ";
+		a[6] = "  -\\. /-  ";
+		a[7] = " / |. | \\ ";
+		a[8] = "/  |. |  \\";
+		print(a);
+		//sleep(1);
+		i = i + 1;
+	}
+	return 0;
 }
