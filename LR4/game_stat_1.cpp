@@ -12,7 +12,7 @@ int main(){
 	}
 
 	std::cout<<"Car stats\nFuel: "<<Fuel;
-	std::cout<<"\nFuel copacity: 50\nFuel consumption: 0\nSpeed: 0\nMaximum speed: 110\n";
+	std::cout<<"\nFuel capacity: 50\nFuel consumption: 0\nSpeed: 0\nMaximum speed: 110\n";
 	std::cout<<"\nRoute info\nDistance: 360 km\n";
 	std::cout<<"----------------------------------------\n";
 	std::cout<<"You have to drive a route 360 km long.\nBut first you need to check if you have enough fuel.\n";
