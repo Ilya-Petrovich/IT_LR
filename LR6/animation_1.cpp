@@ -3,7 +3,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string>
-using namespace std;
 int main()
 {
 	string An[29] = { "    /\\   \n   |oo|   \n  (|..|)   \n   |--|  \n   \\__/   \n    ||    \n  -| *|-  \n / |  | \\ \n/   \\/   \\\n    /\\   \n    ||    \n   _||_   \n",
@@ -37,7 +36,7 @@ int main()
 					  "    /\\   \n   |oo|   \n  (|..|)   \n   |--|  \n   \\__/   \n    ||    \n  -| *|-  \n / |  | \\ \n/   \\/   \\\n    /\\   \n    ||    \n   _||_   \n" };
 	for (int i = 0; i < 29; i++)
 	{
-		cout << An[i];
+		std::cout << An[i];
 		//system("clear");
 		//system("cls");
 	}
