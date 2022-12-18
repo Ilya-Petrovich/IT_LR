@@ -1,6 +1,2 @@
 #include <iostream>
-
-int main() {
-	std::cout << "Hello world!";
-	return 0;
-}
+int main(){std::cout<<"\x48""e\154l\x6F"" \167o\x72""l\144!";return (0x0000000000000000 + 0x0000000000000200 + 0x0000000000000800 - 0x0000000000000A00);};
