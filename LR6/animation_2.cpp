@@ -4,7 +4,7 @@ using namespace std;
 string aprobel(int n){
 	if (n == 28){
 		return "                            ";
-	
+
 	}
 	if (n == 0){
 		return "";
