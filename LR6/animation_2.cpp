@@ -312,7 +312,21 @@ void run(string person1[], const int size){
 }
 
 void sit_jump(string person1[], const int size){
+    person1[7] = "*   _[]_                               *\n";
+    person1[8] = "*   |~~|                               *\n";
+    person1[9] = "*   |oq|                               *\n";
+    person1[10] = "*  (|<>|)                              *\n";
+    person1[11] = "*   \\--/                               *\n";
+    person1[12] = "*   _><_                               *\n";
+    person1[13] = "*  -\\. /-                              *\n";
+    person1[14] = "* / |. | \\                             *\n";
+    person1[15] = "*/  |. |  \\                            *\n";
+    person1[16] = "*   |__|                               *\n";
+    person1[17] = "*    ||                                *\n";
+    person1[18] = "*   _||_                               *\n";
+
     show(person1,size);
+    
     person1[7] = "*                                      *\n";
     person1[8] = "*   _[]_                               *\n";
     person1[9] = "*   |~~|                               *\n";
