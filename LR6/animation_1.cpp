@@ -139,7 +139,7 @@ int main() {
 		};
 		Sleep(1000);
 		system("cls");
-		character[4][9] ='*';
+		character[4][9] = '*';
 		character[4][0] = '*';
 		for (int i = 0; i < n; i++)
 		{
