@@ -19,7 +19,7 @@ int main(){
 	}
 
 	else{
-		cout << "Invalid data";
+		cout << "Invalid data\n";
 	}
 
 }
