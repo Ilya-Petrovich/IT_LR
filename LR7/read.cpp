@@ -1,6 +1,6 @@
 #include <iostream>
 #include <stdio.h>
-#include <string>
+#include <cstring>
 
 using namespace std;
 
@@ -9,7 +9,7 @@ FILE* file;
 void readText(char* buff, long filesize);
 void changeColor(char* buff, long filesize);
 void writeText(char* buff, long filesize);
-
+void writeTextMask(char* buff, long filesize);
 
 int main(){
     setlocale(LC_ALL, "Russian");
@@ -26,17 +26,18 @@ int main(){
     readText(buff,filesize);
     changeColor(buff,filesize);
     writeText(buff,filesize);
+    writeTextMask(buff,filesize);
     free(buff);
     return 0;
 }
 
 void readText(char* buff, long filesize){
     fread(buff, sizeof(char), filesize, file);
-    for (int i = 138; i < filesize; i+=4){
+    for (int i = 138; i < filesize; i+=8){
         int firstbyte = buff[i] & 3;
         int secondbyte = buff[i+1] & 3;
         int thirdbyte = buff[i+2]  & 3;
-        int fourthbyte = buff[i+3]  & 3;
+        int fourthbyte = buff[i+4]  & 3;
         int unitedbyte = firstbyte<<6 | secondbyte<<4 | thirdbyte<<2 | fourthbyte;
         cout << (char)unitedbyte;
     }
@@ -55,11 +56,10 @@ void changeColor(char* buff, long filesize) {
 void writeText(char* buff, long filesize) {
     file = fopen("changed_image.bmp", "rb");
     fread(buff, sizeof(char), filesize, file);
-    string a = "TRP-2-22-6";
+    char a[] = "TRP-2-22-6";
     int j = 0;
     bool flag = false;
-    for (int i=138;i<filesize;i+=4){
-        if (a[j] == '\0') flag = true;
+    for (int i=138;i<strlen(a)*4;i+=4){
         char symb = a[j];
         if (flag) symb = ' ';
         int firstpart = symb >> 6;
@@ -75,6 +75,33 @@ void writeText(char* buff, long filesize) {
     }
     fclose(file);
     file = fopen("changed_image.bmp", "wb");
+    fwrite(buff,sizeof(char),filesize,file);
+    fclose(file);
+}
+void writeTextMask(char* buff, long filesize){
+    // 104 = 11101000
+    file = fopen("masked_image.bmp", "rb");
+    fread(buff, sizeof(char), filesize, file);
+    char a[] = "It is better to laugh at your folly than to cry from your intelligence.";
+    int j = 0;
+    bool flag = false;
+
+    for (int i=138;i<filesize;i+=8){
+        char symb = a[j];
+        int firstpart = symb >> 6;
+        int secondpart = symb << 2 >> 6;
+        int thirdpart = symb << 4 >> 6;
+        int fourthpart = symb << 6 >> 6;
+
+        buff[i] = buff[i] >> 2 << 2 |  firstpart;
+        buff[i+1] = buff[i+1] >> 2 << 2 |  secondpart;
+        buff[i+2] = buff[i+2] >> 2 << 2 |  thirdpart;
+        buff[i+4] = buff[i+4] >> 2 << 2 |  fourthpart;
+        j++;
+        if (j > strlen(a)) break;
+    }
+    fclose(file);
+    file = fopen("masked_image.bmp", "wb");
     fwrite(buff,sizeof(char),filesize,file);
     fclose(file);
 }
