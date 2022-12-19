@@ -45,7 +45,7 @@ int main()
 			current(S);
 			func[j](S);
 			//system("clear");
-			
+			if(i == 1 && j == 13) current(S);	
 		}
 	}
 	return 0;
