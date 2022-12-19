@@ -267,8 +267,8 @@ void run(string a[]) {
 
 		vivod(a);
 
-		k = probel(i+1);
-		k1 = probel(28 - i-1);
+		k = probel(i + 1);
+		k1 = probel(28 - i - 1);
 
 		a[7] = "*" + k + "   ()()   " + k1 + "*";
 		a[8] = "*" + k + "   ()()   " + k1 + "*";
