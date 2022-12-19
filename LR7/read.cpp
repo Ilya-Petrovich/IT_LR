@@ -1,12 +1,13 @@
-#include <iostream>
+﻿#include <iostream>
 #include <stdio.h>
-
+#define _CRT_SECURE_NO_WARNINGS
 
 // Прототипы функций
-void readText(char* buff, long fileSize, FILE*file);
+void readText(char* buff, long fileSize, FILE* file);
 
 
 int main() {
+	setlocale(LC_ALL, "Russian");
 	FILE* file;
 	char filename[100];
 	std::cin >> filename; // Нужно ввести image.bmp
@@ -24,9 +25,6 @@ int main() {
 	// Вызываем функцию и выводим тот текст на экран
 	readText(buff, fileSize, file);
 
-
-
-
 }
 
 
@@ -40,7 +38,7 @@ void readText(char* buff, long fileSize, FILE* file) {
 	int secondByte;	// second byte - 01001100
 	int thirdByte;	// third byte - 11011110
 	int fourthByte;
-	char unbyte;
+	char unitbyte;
 
 
 	for (int i = 138; i < fileSize; i += 4) {
@@ -54,8 +52,8 @@ void readText(char* buff, long fileSize, FILE* file) {
 		thirdByte = buff[i + 2] & 0x3;
 		fourthByte = buff[i + 3] & 0x3;
 
-		unbyte = (firstByte << 6) | (secondByte << 4) | (thirdByte << 2) | (fourthByte);
+		unitbyte = (firstByte << 6) | (secondByte << 4) | (thirdByte << 2) | (fourthByte);
 
-		std::cout << unbyte;
+		std::cout << unitbyte;
 	}
 }
