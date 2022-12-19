@@ -57,12 +57,12 @@ void changeColor(char* buff, long fileSize) {
 }
 void writeText(char* buff, long fileSize) {
 
-	char text[54]; cin >> text;
+	char text[13] = "TRIS-1-22-1";
 	int count = 0;
 
 	for (int i = 138; i < fileSize; i += 4) {
 
-		if (count < 54) {
+		if (count < 12) {
 			buff[i] = (buff[i] & 0xfc) | ((text[count] >> 6) & 0x3);
 			buff[i + 1] = (buff[i + 1] & 0xfc) | ((text[count] >> 4) & 0x3);
 			buff[i + 2] = (buff[i + 2] & 0xfc) | ((text[count] >> 2) & 0x3);
