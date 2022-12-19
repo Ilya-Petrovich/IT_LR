@@ -299,11 +299,7 @@ void run(string a[]) {
 		a[18] = "*" + k + "   _||_   " + k1 + "*";
 
 		vivod(a);
-
-
 	}
-
-	
 
 	for (int i = 28; i > 0; i--) {
 
