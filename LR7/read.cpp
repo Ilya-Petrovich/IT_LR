@@ -18,14 +18,18 @@ void ReadText(char* buff, long fileSize)
     std::cout << result << std::endl;
 }
 
-void changeColor(char* buff, long fSize) {
-    std::cout << std::endl << std::endl << std::endl;
-    for (int i = 138; i < fSize;) {
-        buff[i] = 140 & 0xfc;
-        buff[i+1] = 230 & 0xfc; 
-        buff[i+2] = 240 & 0xfc; 
-        i += 3;
+void changeColor(char* buff, long fileSize)
+{
+    FILE* file_changeColor;
+    file_changeColor = fopen("changed_image.bmp", "wb");
+
+    for (int i = fileSize - 1200; i < fileSize; i += 3) {
+        buff[i] = 140;
+        buff[i + 1] = 230;
+        buff[i + 2] = 240;
     }
+    fwrite(buff, sizeof(char), fileSize, file_changeColor);
+    fclose(file_changeColor);
 }
 
 void writeText(char* buff, long fileSize)
@@ -38,12 +42,10 @@ void writeText(char* buff, long fileSize)
 
     fread(buff, sizeof(char), fileSize, file_write);
 
-    //cleaning
     for (int i = fileSize - 1200; i < fileSize; i ++) {
         buff[i] &= 252;
     }
 
-    //writing
     for (unsigned int i = 0; i < text.size(); i++) {
         first_part = (text[i] & 192) >> 6;
         second_part = (text[i] & 48) >> 4;
