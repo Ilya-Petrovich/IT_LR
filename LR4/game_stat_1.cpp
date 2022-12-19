@@ -9,11 +9,11 @@ int main()
 	
 	if (fuel < 0 or fuel > 50)
 	{
-		std::cout << "\nInvalid data";
+		std::cout << "Invalid data";
 		return 0;
 	}
 
-	std::cout << "\nCar stats\n";
+	std::cout << "Car stats\n";
 	std::cout << "Fuel: " << fuel << "\n";
 	std::cout << "Fuel capacity: " << fuelcap << "\n";
 	std::cout << "Fuel consumption: " << fuelcons << "\n";
