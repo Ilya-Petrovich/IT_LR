@@ -68,13 +68,14 @@ int Dance()
 
 int Run()
 {
-	int a[3] = {0, 1, 2};
+	int cnt = 0;
 	int i = 0;
 	int begin_prob = 0;
 	while (i != 28)
 	{
 		for (int ii = 0; ii < 3; ii++)
 		{
+			cnt++;
 			for (int j = 0; j < 20; j++)
 			{
 				int probel = 0;
@@ -93,10 +94,11 @@ int Run()
 	{
 		for (int ii = 0; ii < 3; ii++)
 		{
+			cnt++;
 			for (int j = 0; j < 20; j++)
 			{
 				int probel = 0;
-				string line_anim = AnimRun(j, probel, a[ii]);
+				string line_anim = AnimRun(j, probel, ii);
 				if (j == 0 || j == 19)
 					cout << "****************************************\n";
 				else
