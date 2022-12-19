@@ -360,7 +360,8 @@ while(1){
 		
 		
 			
-			
+		if (i != 28){
+		
 			A  = "*" + aprobel(28 - i) + "    /\\    " + aprobel(i) + "*\n";
 			A += "*" + aprobel(28 - i) + "   |oo|   " + aprobel(i) + "*\n";
 			A += "*" + aprobel(28 - i) + "  (|..|)  " + aprobel(i) + "*\n";
@@ -374,7 +375,7 @@ while(1){
 			A += "*" + aprobel(28 - i) + "    | \\   " + aprobel(i) + "*\n";
 			A += "*" + aprobel(28 - i) + "   _|  \\_ " + aprobel(i) + "*\n";
 			cout << G + bprobel(6) + A + G;
-			
+		}
 			A  = "*" + aprobel(28 - i) + "    /\\    " + aprobel( i) + "*\n";
 			A += "*" + aprobel(28 - i) + "   |oo|   " + aprobel( i) + "*\n";
 			A += "*" + aprobel(28 - i) + "  (|..|)  " + aprobel( i) + "*\n";
