@@ -760,7 +760,7 @@ void throwBall(int t) {
 	}
 	//Sleep(t);
 	
-	person[8][9] = ' '; //!!!!!!!!!!!!!!!!!!!!!!! '-'
+	person[8][9] = '-';
 	person[7][8] = '\\';
 	person[7][9] = 'o';
 	//system("cls");
