@@ -10,7 +10,7 @@ int main()
 		std::cout << "\nInvalid data.\n";
 		return 1;
 	}
-	std::cout << "\nCar stats" << "\nFuel: " << fuel << "\nFuel capacity: 50" << "\nFuel consumption: 0" << "\nSpeed:0 " "\nMaximum speed: 110";
+	std::cout << "\nCar stats" << "\nFuel: " << fuel << "\nFuel capacity: 50" << "\nFuel consumption: 0" << "\nSpeed: 0" "\nMaximum speed: 110";
 	std::cout << "\n\nRoute info\nDistance: 360 km";
 	std::cout << "\n----------------------------------------";
 	std::cout << "\nYou have to drive a route 360 km long.";
@@ -28,7 +28,7 @@ int main()
 		std::cout << "Your speed before start: " << speed << " km/h";
 		std::cout << "\n\nFuel consumption with chosen speed: 0 litres per 100 km";
 		std::cout << "\n\nDestination result";
-		std::cout << "\nDestination result\nDistance traveled: 0 km";
+		std::cout << "\nDistance traveled: 0 km";
 		std::cout << "\nTime spent: 0 sec";
 		std::cout << "\nFuel consumed: 0 litres";
 		std::cout << "\nFuel remained: " << fuel << " litres";
@@ -47,7 +47,7 @@ int main()
 	if (distance > 360) distance = 360;
 	fuelConsumed = fuelConsumption * 3.6;
 	if(fuelConsumed > fuel) fuelConsumed = fuel;
-	std::cout << "\nDestination result\nDistance traveled: " << distance << " km";
+	std::cout << "\nDistance traveled: " << distance << " km";
 	std::cout << "\nTime spent: " << int(distance / speed * 3600) << " sec";
 	std::cout << "\nFuel consumed: " << fuelConsumed << " litres";
 	std::cout << "\nFuel remained: " << fuel - fuelConsumed << " litres";
