@@ -1,0 +1,30 @@
+.positions {
+    margin-top: 10%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    }
+    .positions__block {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+        .positions__img {
+            width: 200px;
+        }
+        .positions__text {
+            width: 40%;
+        }
+        .text1 {
+            text-align: left;
+        }
+        .text2 {
+            text-align: center;
+        }
+        .text3 {
+            text-align: right;
+        }
+        
+    // .positions1__text {
+    //     font: 700 17px/24px 'Open Sans';
+    // }
