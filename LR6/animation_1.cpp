@@ -1,5 +1,5 @@
 #include <iostream>
-#include <windows.h>
+#include <unistd.h>
 using namespace std;
 
 const int a = 10, b = 12;
