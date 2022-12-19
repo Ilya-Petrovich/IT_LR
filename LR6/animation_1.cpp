@@ -11,7 +11,7 @@ int main() {
 		"   |--|   " ,
 		"   \\__/   " ,
 		"    ||    " ,
-		"  -|  |-   " ,
+		"  -| *|-   " ,
 		" / |  | \\ " ,
 		"/   \\/   \\",
 		"    /\\    ",
@@ -24,7 +24,7 @@ int main() {
 	for (int i = 0; i < 2; i++) {
 		//Sleep(300);
 		//system("cls");
-		mas[6] = " --|  |-- ";
+		mas[6] = " --| *|-- ";
 		for (int i = 0; i < n; i++) {
 			cout << mas[i] << endl;
 		}
@@ -36,7 +36,7 @@ int main() {
 		}
 		//Sleep(300);
 		//system("cls");
-		mas[6] = "  -|  |---";
+		mas[6] = "  -| *|---";
 		mas[7] = " / |  |   ";
 		mas[8] = "/   \\/    ";
 		for (int i = 0; i < n; i++) {
@@ -45,7 +45,7 @@ int main() {
 		//Sleep(300);
 		//system("cls");
 		mas[5] = "    ||   /";
-		mas[6] = " --|  |-- ";
+		mas[6] = " --| *|-- ";
 		mas[7] = "/  |  |   ";
 		mas[8] = "    \\/    ";
 		for (int i = 0; i < n; i++) {
@@ -55,7 +55,7 @@ int main() {
 		//system("cls");
 		mas[4] = "   \\__/  /";
 		mas[5] = "    ||  / ";
-		mas[6] = "  -|  |-  ";
+		mas[6] = "  -| *|-  ";
 		mas[7] = " / |  |   ";
 		mas[8] = "/   \\/    ";
 		for (int i = 0; i < n; i++) {
@@ -64,7 +64,7 @@ int main() {
 		//Sleep(300);
 		//system("cls");
 		mas[4] = "   \\__/  *";
-		mas[6] = " --|  |-  ";
+		mas[6] = " --| *|-  ";
 		mas[7] = "/  |  |   ";
 		mas[8] = "    \\/    ";
 		for (int i = 0; i < n; i++) {
@@ -73,7 +73,7 @@ int main() {
 		//Sleep(300);
 		//system("cls");
 		mas[4] = "   \\__/  /";
-		mas[6] = "---|  |-  ";
+		mas[6] = "---| *|-  ";
 		mas[7] = "   |  |   ";
 		for (int i = 0; i < n; i++) {
 			cout << mas[i] << endl;
@@ -82,7 +82,7 @@ int main() {
 		//system("cls");
 		mas[4] = "   \\__/  *";
 		mas[5] = "\\   ||  / ";
-		mas[6] = " --|  |-  ";
+		mas[6] = " --| *|-  ";
 		for (int i = 0; i < n; i++) {
 			cout << mas[i] << endl;
 		}
@@ -90,7 +90,7 @@ int main() {
 		//system("cls");
 		mas[4] = "\\  \\__/  /";
 		mas[5] = " \\  ||  / ";
-		mas[6] = "  -|  |-  ";
+		mas[6] = "  -| *|-  ";
 		for (int i = 0; i < n; i++) {
 			cout << mas[i] << endl;
 		}
@@ -104,27 +104,27 @@ int main() {
 		//system("cls");
 		mas[4] = "   \\__/   ";
 		mas[5] = "*   ||   *";
-		mas[6] = " --|  |-- ";
+		mas[6] = " --| *|-- ";
 		for (int i = 0; i < n; i++) {
 			cout << mas[i] << endl;
 		}
 		//Sleep(400);
 		//system("cls");
 		mas[5] = "    ||    ";
-		mas[6] = "*--|  |--*";
+		mas[6] = "*--| *|--*";
 		for (int i = 0; i < n; i++) {
 			cout << mas[i] << endl;
 		}
 		//Sleep(300);
 		//system("cls");
-		mas[6] = " --|  |-- ";
+		mas[6] = " --| *|-- ";
 		mas[7] = "*  |  |  *";
 		for (int i = 0; i < n; i++) {
 			cout << mas[i] << endl;
 		}
 		//Sleep(300);
 		//system("cls");
-		mas[6] = "  -|  |-  ";
+		mas[6] = "  -| *|-  ";
 		mas[7] = " / |  | \\ ";
 		mas[8] = "*   \\/   *";
 		for (int i = 0; i < n; i++) {
