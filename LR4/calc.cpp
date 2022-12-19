@@ -15,7 +15,7 @@ int main(){
         cout << a << " - " << b << " = " << a - b << endl;
         cout << a << " * " << b << " = " << a * b << endl;
         cout << a << " / " << b << " = " << a / b << endl;
-        cout << (double)a << " / " << (double)b << " = " << (double)a / (double)b << endl;
+        cout << a << ".0 / " << b << ".0 = " << (double)a / (double)b << endl;
         cout << a << " % " << b << " = " << a % b << endl;
         cout << a << " + " << b << " * " << c << " = " << a + b * c << endl;
         cout << "(" << a << " + " << b << ")" << " * " << c << " = " << (a + b) * c << endl;
