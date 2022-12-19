@@ -50,7 +50,7 @@ void leg() {
 }
 void dance() {
     for (int k = 0; k <= 28; k++) {
-        del_one_frame();
+        //del_one_frame();
         std::cout << std::string(40, '*') << '\n';
         for (int i = 0; i < 6; i++) { std::cout << "*                                      *\n"; }
         head();
@@ -142,8 +142,8 @@ void dance() {
         }
         leg();
         std::cout << std::string(40, '*') << '\n';
-        Sleep(300);
-        del_one_frame();
+        //Sleep(300);
+        //del_one_frame();
     }
 }
 void run() {
