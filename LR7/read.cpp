@@ -24,12 +24,12 @@ int main() {
 	fread(buff, sizeof(char), fileSize, file);
 	readText(buff, fileSize);
 
-	fclose(file);
+	/*fclose(file);
 	cin >> filename;
 	file = fopen(filename, "wb");
 	changeColor(buff, fileSize);
 	writeText(buff, fileSize);
-	fwrite(buff, sizeof(char), fileSize, file);
+	fwrite(buff, sizeof(char), fileSize, file);*/
 	fclose(file);
 	delete[] buff;
 	return 0;
