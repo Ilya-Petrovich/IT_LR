@@ -24,7 +24,7 @@ int main()
 	
 	char* buff = new char[fileSize]();
 
-	readText(buff, fileSize);
+	fread(buff, sizeof(char), fileSize, file);
 
 	for (int i = 138; i < fileSize; i+=4)
 	{
