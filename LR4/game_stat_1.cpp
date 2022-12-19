@@ -33,7 +33,7 @@ int main(){
 
 	if (Speed == 0) {
 		std::printf("Your speed before start: 0 km/h\n");
-		std::cout << "\nFuel consumption with choosen speed: 0 litres per 100 km\n";
+		std::cout << "\nFuel consumption with chosen speed: 0 litres per 100 km\n";
 		std::cout << "\nDestination result\nDistance traveled: 0 km\n";
 		std::cout << "Time spent: 0 sec\n";
 		std::cout << "Fuel consumed: 0 litres\nFuel remained: " << Fuel << " litres\n";
@@ -45,7 +45,7 @@ int main(){
 		FuelConsumption = s * s / 4 - 4.5 * s + 30;
 
 		std::printf("Your speed before start: %d km/h\n", Speed);
-		std::cout << "\nFuel consumption with choosen speed: " << FuelConsumption << " litres per 100 km\n";
+		std::cout << "\nFuel consumption with chosen speed: " << FuelConsumption << " litres per 100 km\n";
 
 		Distance = Fuel / FuelConsumption * 100;
 
