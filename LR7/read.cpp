@@ -14,6 +14,7 @@ void readText(char *buff, int fileSize) {
 		for(int j = 0; j < 4; j++) s = (s << 2) | (buff[i+j] & 3);
 		cout << s;
 	}
+	cout << "\n";
 }
 
 int main()
