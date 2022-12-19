@@ -1,29 +1,25 @@
 #include <iostream>
-int main()
+using namespace std;
+int main() {
+int n1,n2,n3;
+setlocale(LC_ALL, "rus");
+std::cout<<"Введите первое число:";
+std::cin>>n1;
+std::cout<<"Введите второе число:";
+std::cin>>n2;
+std::cout<<"Введите третье число:";
+std::cin>>n3;
+if(n1>n2&&n1>=0&&n2>=0&&n3>=0)
 {
-	int num_1,num_2,num_3;
-	std::cout << "Input the first number: ";
-	std::cin >> num_1;
-	std::cout << "Input the second number: ";
-	std::cin >> num_2;
-	std::cout << "Input the third number: ";
-	std::cin >> num_3;
-	if(num_1 > num_2 && num_1>=0 && num_2>0 && num_3>=0)
-	{
-		std::cout <<num_1<< " + " << num_2 << " = " << num_1 + num_2<< std::endl;
-		std::cout <<num_1<< " - " << num_2 << " = " << num_1 - num_2<< std::endl;
-		std::cout <<num_1<< " * " << num_2 << " = " << num_1 * num_2<< std::endl;
-		std::cout <<num_1<< " / " << num_2 << " = " << num_1 / num_2<< std::endl;
-		std::cout <<num_1<< ".0 / " << num_2 << ".0 = " << (double)num_1 / num_2<< std::endl;
-		std::cout <<num_1<< " % " << num_2 << " = " << num_1 % num_2<< std::endl;
-		std::cout <<num_1<< " + " << num_2 << " * " << num_3 << " = " << num_1 + num_2 * num_3 << std::endl;
-		std::cout << "(" << num_1<< " + " << num_2 << ") *"<< num_3 << " = " << (num_1 + num_2)*num_3<< std::endl;
-	} 
-	else
-	{
-		std::cout << "Invalid data" << std::endl;
-	}
-	return 0;
+std::cout<<n1<<"+"<<n2<<"="<<n1+n2<<std::endl;
+std::cout<<n1<<"-"<<n2<<"="<<n1-n2<<std::endl;
+std::cout<<n1<<"*"<<n2<<"="<<n1*n2<<std::endl;
+std::cout<<n1<<"/"<<n2<<"="<<n1/n2<<std::endl;
+std::cout<<n1<<".0/"<<n2<<".0="<<double(n1)/double(n2)<<std::endl;
+std::cout<<n1<<"%"<<n2<<"="<<n1%n2<<std::endl;
+std::cout<<n1<<"+"<<n2<<"*"<<n3<<"="<<n1+n2*n3<<std::endl;
+std::cout<<"("<<n1<<"+"<<n2<<")"<<"*"<<n3<<"="<<(n1+n2)*n3<<std::endl;
+}else{
+std::cout<<"Invalid data"<<std::endl;
+}return 0;
 }
-		
-
