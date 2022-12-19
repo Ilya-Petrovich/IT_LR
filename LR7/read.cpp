@@ -40,7 +40,7 @@ void readText(char* buff, long fileSize, FILE* file) {
 	int secondByte;	// second byte - 01001100
 	int thirdByte;	// third byte - 11011110
 	int fourthByte;
-	char unitedbyte;
+	char unbyte;
 
 
 	for (int i = 138; i < fileSize; i += 4) {
@@ -54,8 +54,8 @@ void readText(char* buff, long fileSize, FILE* file) {
 		thirdByte = buff[i + 2] & 0x3;
 		fourthByte = buff[i + 3] & 0x3;
 
-		unitedbyte = (firstByte << 6) | (secondByte << 4) | (thirdByte << 2) | (fourthByte);
+		unbyte = (firstByte << 6) | (secondByte << 4) | (thirdByte << 2) | (fourthByte);
 
-		std::cout << unitedbyte;
+		std::cout << unbyte;
 	}
 }
