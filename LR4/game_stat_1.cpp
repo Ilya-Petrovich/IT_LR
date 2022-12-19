@@ -79,7 +79,7 @@ int main() {
 
 	double fuelConsumed = (fuelConsumption / 100) * dT;
 	double fuelRemained = fuel - fuelConsumed;
-	cout << "Distance travelled: " << dT << " km" << endl;
+	cout << "Distance traveled: " << dT << " km" << endl;
 	cout << "Time spent: " << time << " sec" << endl;
 	cout << "Fuel consumed: " << fuelConsumed << " litres" << endl;
 	cout << "Fuel remained: " << fuelRemained << " litres" << endl;
