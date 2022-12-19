@@ -22,17 +22,17 @@ int main(){
 		std::cout<<"\nYour fuel before start: "<<Fuel<<"\n";
 	}
 
-	std::cout<<"\nWhat speed will you choose? "; std::cin>>Speed; std::cout<<std::endl;
+	std::cout<<"\nWhat speed will you choose? "; std::cin>>Speed;
 
 	if(Speed<0){
-		std::cout<<"Invalid data.\n";
+		std::cout<<"\nInvalid data.\n";
 		return 0;
 	}
 
 	if(Speed>110) Speed=110;
 
 	if (Speed == 0) {
-		std::printf("Your spped before start: 0 km/h\n");
+		std::printf("Your speed before start: 0 km/h\n");
 		std::cout << "\nFuel consumption with choosen speed: 0 litres per 100 km\n";
 		std::cout << "\nDestination result\nDistance traveled: 0 km\n";
 		std::cout << "Time spent: 0 sec\n";
@@ -44,7 +44,7 @@ int main(){
 		float s = float(Speed) / 10;
 		FuelConsumption = s * s / 4 - 4.5 * s + 30;
 
-		std::printf("Your spped before start: %d km/h\n", Speed);
+		std::printf("Your speed before start: %d km/h\n", Speed);
 		std::cout << "\nFuel consumption with choosen speed: " << FuelConsumption << " litres per 100 km\n";
 
 		Distance = Fuel / FuelConsumption * 100;
