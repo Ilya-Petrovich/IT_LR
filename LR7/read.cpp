@@ -1,40 +1,78 @@
+#define _CRT_SECURE_NO_WARNINGS
 #include <iostream>
 #include <stdio.h>
-#include <string>
 using namespace std;
-void readText(char* buff, long fileSize);
+
+void readText(char buff[], long fileSize);
+void changeColor(char* buff, long fileSize);
+void writeText(char* buff, long fileSize);
 
 int main() {
-    FILE* file;
-    char filename[100];
-    cin >> filename;
-    file = fopen(filename, "rb");
+	FILE* file;
+	char filename[100] = "image.bmp";
+	file = fopen(filename, "rb");
+	long fileSize;
+	fseek(file, 0, SEEK_END);
+	fileSize = ftell(file);
+	rewind(file);
+	char* buff = new char[fileSize];
+	fread(buff, sizeof(char), fileSize, file);
+	readText(buff, fileSize);
+	fclose(file);
 
-    long fileSize;
-    fseek(file, 0, SEEK_END);
-    fileSize = ftell(file);
-    rewind(file);
+	file = fopen(filename, "wb");
+	changeColor(buff, fileSize);
+	writeText(buff, fileSize);
+	fwrite(buff, sizeof(char), fileSize, file);
+	fclose(file);
 
-    char* buff = new char[fileSize]();
-    fread(buff, sizeof(char), fileSize, file);
+	free(buff);
+	delete[] buff;
 
-    readText(buff, fileSize);
-
-    fclose(file);
-    free(buff);
+	return 0;
 }
 
-void readText(char* buff, long fileSize) {
+void readText(char buff[], long fileSize) {
+	char firstB, secondB, threeB, fourthB, all;
+	int mask = 0x03;
 
-    int b1, b2, b3, b4, united_byte;
-
-    for (int i = fileSize - 1200; i < fileSize; i += 4) {
-        b1 = buff[i]; b2 = buff[i + 1]; b3 = buff[i + 2]; b4 = buff[i + 3];
-        united_byte = ((b1 & 3) << 6) | ((b2 & 3) << 4) | ((b3 & 3) << 2) | (b4 & 3);
-        cout << (char)united_byte;
-    }
+	for (int i = 138; i < fileSize; i += 4) {
+		firstB = buff[i] & mask; firstB <<= 6;
+		secondB = buff[i + 1] & mask; secondB <<= 4;
+		threeB = buff[i + 2] & mask; threeB <<= 2;
+		fourthB = buff[i + 3] & mask;
+		all = firstB | secondB | threeB | fourthB;
+		printf("%c", all);
+	}
 }
 
+void changeColor(char* buff, long fileSize) {
+	for (int i = 138; i < fileSize; i += 3) {
+		buff[i] = 255;
+		buff[i + 1] = 0;
+		buff[i + 2] = 0;
+	}
+}
 
+void writeText(char* buff, long fileSize) {
 
+	char text[13] = "TRIS-1-22-16";
+	int count = 0;
 
+	for (int i = 138; i < fileSize; i += 4) {
+
+		if (count < 12) {
+			buff[i] = (buff[i] & 0xfc) | ((text[count] >> 6) & 0x3);
+			buff[i + 1] = (buff[i + 1] & 0xfc) | ((text[count] >> 4) & 0x3);
+			buff[i + 2] = (buff[i + 2] & 0xfc) | ((text[count] >> 2) & 0x3);
+			buff[i + 3] = (buff[i + 3] & 0xfc) | (text[count] & 0x3);
+		}
+		else {
+			buff[i] = buff[i] & 0xfc;
+			buff[i + 1] = (buff[i + 1] & 0xfc) | 0x2;
+			buff[i + 2] = buff[i + 2] & 0xfc;
+			buff[i + 3] = buff[i + 3] & 0xfc;
+		}
+		count++;
+	}
+}
