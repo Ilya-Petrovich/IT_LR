@@ -153,7 +153,7 @@ void dance() {
         }
         legs();
         std::cout << std::string(40, '*') << '\n';
-        //Sleep(300);
+        ////(300);
         //del_one_frame();
     }
 }
@@ -170,21 +170,21 @@ void run() {
                     std::cout << "*" << move_right << "   / |   " << move_left << " *\n";
                     std::cout << "*" << move_right << " _/  |_   " << move_left << "*\n";
                     std::cout << std::string(40, '*') << '\n'; 
-                    //Sleep(150); del_one_frame(); 
+                    ////(150); del_one_frame(); 
                     break;
                 }
                 case 1: {
                     std::cout << "*" << move_right << "    ||    " << move_left << "*\n";
                     std::cout << "*" << move_right << "   _||_   " << move_left << "*\n";
                     std::cout << std::string(40, '*') << '\n'; 
-                    //Sleep(150); del_one_frame(); 
+                    ////(150); del_one_frame(); 
                     break;
                 }
                 case 2: {
                     std::cout << "*" << move_right << "    | \\   " << move_left << "*\n";
                     std::cout << "*" << move_right << "   _|  \\_   " << move_left << "\b\b*\n";
                     std::cout << std::string(40, '*') << '\n'; 
-                    //Sleep(150); del_one_frame(); 
+                    ////(150); del_one_frame(); 
                     break;
                 }
             }
@@ -199,7 +199,7 @@ void run() {
             magic(move_right, move_left);
             std::cout << "*" << move_right << "    ||    " << move_left << "*\n";
             std::cout << "*" << move_right << "   _||_   " << move_left << "*\n";
-            std::cout << std::string(40, '*') << '\n'; Sleep(150); del_one_frame(); break;
+            std::cout << std::string(40, '*') << '\n'; //(150); del_one_frame(); break;
         }
         for (; k < 3; k++) {
             magic(move_right, move_left);
@@ -208,7 +208,7 @@ void run() {
                     std::cout << "*" << move_right << "   / |   " << move_left << " *\n";
                     std::cout << "*" << move_right << " _/  |_   " << move_left << "*\n";
                     std::cout << std::string(40, '*') << '\n'; 
-                    //Sleep(150);
+                    ////(150);
                     //del_one_frame();
                     break;
                 }
@@ -216,7 +216,7 @@ void run() {
                     std::cout << "*" << move_right << "    ||    " << move_left << "*\n";
                     std::cout << "*" << move_right << "   _||_   " << move_left << "*\n";
                     std::cout << std::string(40, '*') << '\n'; 
-                    //Sleep(150);
+                    ////(150);
                     //del_one_frame();
                     break;
                 }
@@ -224,7 +224,7 @@ void run() {
                     std::cout << "*" << move_right << "    | \\   " << move_left << "*\n";
                     std::cout << "*" << move_right << "   _|  \\_   " << move_left << "\b\b*\n";
                     std::cout << std::string(40, '*') << '\n';
-                    //Sleep(150);
+                    ////(150);
                     //del_one_frame();
                     break;
                 }
@@ -263,7 +263,7 @@ void up() {
             for (int j = k - 1; j > 0; j--) {std::cout << '*' << std::string(38, ' ') << "*\n";}
             std::cout << std::string(40, '*') << '\n'; 
         }
-        //Sleep(1000); if (i == 2) { Sleep(200); }
+        ////(1000); if (i == 2) { //(200); }
     }
     //del_one_frame();
 }
@@ -282,7 +282,7 @@ void down() {
             for (int j = k; j > 0; j--) {std::cout << '*' << std::string(38, ' ') << "*\n";}
             std::cout << std::string(40, '*') << '\n'; 
         }
-        //Sleep(1000);
+        ////(1000);
     }
     //del_one_frame();
 }
@@ -294,7 +294,7 @@ void start_jump() {
     legs();
     std::cout << std::string(40, '*') << '\n';
     
-    //Sleep(1000);
+    ////(1000);
     //del_one_frame();
 }
 
