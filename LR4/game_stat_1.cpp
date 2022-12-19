@@ -25,7 +25,7 @@ int main(){
 	std::cout<<"\nWhat speed will you choose? "; std::cin>>Speed; std::cout<<std::endl;
 
 	if(Speed<0){
-		std::cout<<"Invalid data\n";
+		std::cout<<"Invalid data.\n";
 		return 0;
 	}
 
