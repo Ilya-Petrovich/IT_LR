@@ -1,7 +1,5 @@
 #include <iostream>
-
 using namespace std;
-
 int main(){
 	int num_1,num_2,num_3;
 
@@ -9,11 +7,7 @@ int main(){
 	cout << "Type the second number: "; cin >> num_2;
 	cout << "Type the third number: "; cin >> num_3;
 
-	if (num_1 < num_2 || num_2 <= 0 || num_3 < 0){
-		cout << "Invalid data";
-	}
-
-	else{
+	if (num_1 > num_2 && num_2 > 0 && num_3 >= 0){
 		printf("%d + %d = %d\n", num_1, num_2, num_1+num_2);
 		printf("%d - %d = %d\n", num_1, num_2, num_1-num_2);
 		printf("%d * %d = %d\n", num_1, num_2, num_1*num_2);
@@ -22,6 +16,10 @@ int main(){
 		printf("%d %% %d = %d\n", num_1, num_2, num_1%num_2);
 		printf("%d + %d * %d = %d\n", num_1, num_2, num_3, num_1+num_2*num_3);
 		printf("(%d + %d) * %d = %d\n", num_1, num_2, num_3, (num_1+num_2)*num_3);
+	}
+
+	else{
+		cout << "Invalid data";
 	}
 
 }
