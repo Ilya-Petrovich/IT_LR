@@ -1,532 +1,549 @@
-﻿#include <unistd.h>
-#include <iostream>
-#include <cstring>
-#include <vector>
+﻿#include<bits/stdc++.h>
+#include <unistd.h>
 using namespace std;
 
-void menu(unsigned short& a);
-void del_one_frame();
-void head(); void leg();
-void dance(); void run(); void jump();
-void magic(std::string move_left, std::string move_right);
-void throw_ball();
+const int w = 40, h = 20;
+const int sleep_time = 75;
 
-int main() {
-    unsigned short choice = 0;
-    del_one_frame();
-    while (choice != 5) {
-        switch (choice) {
-        case 1: { dance(); break; }
-        case 2: { run(); break; }
-        case 3: { jump(); break; }
-        case 4: { throw_ball(); break; }
-        }
-        menu(choice);
-    }
-    return 0;
+void dance(string* firstEl);
+void run(string* firstEl);
+void jump(string* firstEl);
+void throww(string* firstEl);
+void solve(string* firstEl);
+
+int main()
+{
+	string p[h] = {
+		"****************************************",  //  0
+		"*                                      *",  //  1
+		"*                                      *",  //  2
+		"*                                      *",  //  3
+		"*                                      *",  //  4
+		"*                                      *",  //  5
+		"*                                      *",  //  6
+		"*   _[]_                               *",  //  7
+		"*   |~~|                               *",  //  8
+		"*   |oq|                               *",  //  9
+		"*  (|<>|)                              *",  //  10
+		"*   \\--/                               *", //  11
+		"*   _><_                               *",  //  12
+		"*  -\\. /-                              *", //  13
+		"* / |. | \\                             *", //  14
+		"*/  |. |  \\                            *", //  15
+		"*   |__|                               *",  //  16
+		"*    ||                                *",  //  17
+		"*   _||_                               *",  //  18
+		"****************************************"   //  19
+	};
+
+	string* p0 = p;
+	solve(p0);
+
+	return 0;
 }
 
-void menu(unsigned short& a) {
-    std::cout << "Choose animation:" << std::endl;
-    std::cout << "Dance: \t\t\t1" << std::endl;
-    std::cout << "Run: \t\t\t2" << std::endl;
-    std::cout << "Sit down and jump: \t3" << std::endl;
-    std::cout << "Throw a ball: \t\t4" << std::endl << std::endl;
-    std::cout << "Enter 5 for exit." << std::endl;
-    std::cin >> a;
-}
-void del_one_frame() { //system("cls");
-}
-void head() {
-    std::cout << "*    /\\                                *\n";
-    std::cout << "*   |oo|                               *\n";
-    std::cout << "*  (|..|)                              *\n";
-    std::cout << "*   |--|                               *\n";
-}
-void leg() {
-    std::cout << "*    /\\                                *\n";
-    std::cout << "*    ||                                *\n";
-    std::cout << "*   _||_                               *\n";
-}
-void dance() {
-    for (int k = 0; k <= 28; k++) {
-        //del_one_frame();
-        std::cout << std::string(40, '*') << '\n';
-        for (int i = 0; i < 6; i++) { std::cout << "*                                      *\n"; }
-        head();
-        switch (k % 14) {
-        case 0: {
-            std::cout << "*   \\__/                               *\n";
-            std::cout << "*    ||                                *\n";
-            std::cout << "*  -| *|-                              *\n";
-            std::cout << "* / |  | \\                             *\n";
-            std::cout << "*/   \\/   \\                            *\n"; break; }
-        case 1: {
-            std::cout << "*   \\__/                               *\n";
-            std::cout << "*    ||                                *\n";
-            std::cout << "* --| *|--                             *\n";
-            std::cout << "*/  |  |  \\                            *\n";
-            std::cout << "*    \\/                                *\n"; break; }
-        case 2: {
-            std::cout << "*   \\__/                               *\n";
-            std::cout << "*    ||                                *\n";
-            std::cout << "*  -| *|---                            *\n";
-            std::cout << "* / |  |                               *\n";
-            std::cout << "*/   \\/                                *\n"; break; }
-        case 3: {
-            std::cout << "*   \\__/                               *\n";
-            std::cout << "*    ||   /                            *\n";
-            std::cout << "* --| *|--                             *\n";
-            std::cout << "*/  |  |                               *\n";
-            std::cout << "*    \\/                                *\n"; break; }
-        case 4: {
-            std::cout << "*   \\__/  /                            *\n";
-            std::cout << "*    ||  /                             *\n";
-            std::cout << "*  -| *|-                              *\n";
-            std::cout << "* / |  |                               *\n";
-            std::cout << "*/   \\/                                *\n"; break; }
-        case 5: {
-            std::cout << "*   \\__/  *                            *\n";
-            std::cout << "*    ||  /                             *\n";
-            std::cout << "* --| *|-                              *\n";
-            std::cout << "*/  |  |                               *\n";
-            std::cout << "*    \\/                                *\n"; break; }
-        case 6: {
-            std::cout << "*   \\__/  /                            *\n";
-            std::cout << "*    ||  /                             *\n";
-            std::cout << "*---| *|-                              *\n";
-            std::cout << "*   |  |                               *\n";
-            std::cout << "*    \\/                                *\n"; break; }
-        case 7: {
-            std::cout << "*   \\__/  *                            *\n";
-            std::cout << "*\\   ||  /                             *\n";
-            std::cout << "* --| *|-                              *\n";
-            std::cout << "*   |  |                               *\n";
-            std::cout << "*    \\/                                *\n"; break; }
-        case 8: {
-            std::cout << "*\\  \\__/  /                            *\n";
-            std::cout << "* \\  ||  /                             *\n";
-            std::cout << "*  -| *|-                              *\n";
-            std::cout << "*   |  |                               *\n";
-            std::cout << "*    \\/                                *\n"; break; }
-        case 9: {
-            std::cout << "**  \\__/  *                            *\n";
-            std::cout << "* \\  ||  /                             *\n";
-            std::cout << "*  -| *|-                              *\n";
-            std::cout << "*   |  |                               *\n";
-            std::cout << "*    \\/                                *\n"; break; }
-        case 10: {
-            std::cout << "*   \\__/                               *\n";
-            std::cout << "**   ||   *                            *\n";
-            std::cout << "* --| *|--                             *\n";
-            std::cout << "*   |  |                               *\n";
-            std::cout << "*    \\/                                *\n"; break; }
-        case 11: {
-            std::cout << "*   \\__/                               *\n";
-            std::cout << "*    ||                                *\n";
-            std::cout << "**--| *|--*                            *\n";
-            std::cout << "*   |  |                               *\n";
-            std::cout << "*    \\/                                *\n"; break; }
-        case 12: {
-            std::cout << "*   \\__/                               *\n";
-            std::cout << "*    ||                                *\n";
-            std::cout << "* --| *|--                             *\n";
-            std::cout << "**  |  |  *                            *\n";
-            std::cout << "*    \\/                                *\n"; break; }
-        case 13: {
-            std::cout << "*   \\__/                               *\n";
-            std::cout << "*    ||                                *\n";
-            std::cout << "*  -| *|-                              *\n";
-            std::cout << "* / |  | \\                             *\n";
-            std::cout << "**   \\/   *                            *\n"; break; }
-        }
-        leg();
-        std::cout << std::string(40, '*') << '\n';
-        //Sleep(300);
-        //del_one_frame();
-    }
-}
-void run() {
-    for (int i = 0, j = 28; i <= 28; i++, j--) {
-        std::string move_right = std::string(i, ' ');
-        std::string move_left = std::string(j, ' ');
-        int k = 0;
-        if (i == 0) { k = 1; }
-        for (; k < 3; k++) {
-            magic(move_right, move_left);
-            switch (k) {
-            case 0: {
-                std::cout << "*" << move_right << "   / |   " << move_left << " *\n";
-                std::cout << "*" << move_right << " _/  |_   " << move_left << "*\n";
-                std::cout << std::string(40, '*') << '\n';
-                //Sleep(150); del_one_frame(); 
-                break;
-            }
-            case 1: {
-                std::cout << "*" << move_right << "    ||    " << move_left << "*\n";
-                std::cout << "*" << move_right << "   _||_   " << move_left << "*\n";
-                std::cout << std::string(40, '*') << '\n';
-                //Sleep(150); del_one_frame(); 
-                break;
-            }
-            case 2: {
-                std::cout << "*" << move_right << "    | \\   " << move_left << "*\n";
-                std::cout << "*" << move_right << "   _|  \\_   " << move_left << "\b\b*\n";
-                std::cout << std::string(40, '*') << '\n';
-                //Sleep(150); del_one_frame(); 
-                break;
-            }
-            }
-        }
-    }
+void dance(string* firstEl)
+{
+	string* p = new string[h];
+	for (int i = 0; i < h; i++) p[i] = *(firstEl + i);
+	//system("cls");
 
-    for (int i = 1, j = 27; i <= 28; i++, j--) {
-        std::string move_right = std::string(j, ' ');
-        std::string move_left = std::string(i, ' ');
-        int k = 0;
-        if (j == 0) {
-            magic(move_right, move_left);
-            std::cout << "*" << move_right << "    ||    " << move_left << "*\n";
-            std::cout << "*" << move_right << "   _||_   " << move_left << "*\n";
-            std::cout << std::string(40, '*') << '\n';
-            // Sleep(150); 
-            // del_one_frame(); break;
-        }
-        for (; k < 3; k++) {
-            magic(move_right, move_left);
-            switch (k) {
-            case 0: {
-                std::cout << "*" << move_right << "   / |   " << move_left << " *\n";
-                std::cout << "*" << move_right << " _/  |_   " << move_left << "*\n";
-                std::cout << std::string(40, '*') << '\n';
-                // Sleep(150);
-                // del_one_frame();
-                break;
-            }
-            case 1: {
-                std::cout << "*" << move_right << "    ||    " << move_left << "*\n";
-                std::cout << "*" << move_right << "   _||_   " << move_left << "*\n";
-                std::cout << std::string(40, '*') << '\n';
-                //Sleep(150);
-                //del_one_frame();
-                break;
-            }
-            case 2: {
-                std::cout << "*" << move_right << "    | \\   " << move_left << "*\n";
-                std::cout << "*" << move_right << "   _|  \\_   " << move_left << "\b\b*\n";
-                std::cout << std::string(40, '*') << '\n';
-                // Sleep(150);
-                 //del_one_frame();
-                break;
-            }
-            }
-        }
-    }
-}
-void magic(std::string move_left, std::string move_right) {
-    std::cout << std::string(40, '*') << '\n';
-    for (int i = 0; i < 6; i++) { std::cout << "*                                      *\n"; }
-    std::cout << "*" << move_left << "    /\\    " << move_right << "*\n";
-    std::cout << "*" << move_left << "   |oo|   " << move_right << "*\n";
-    std::cout << "*" << move_left << "  (|..|)  " << move_right << "*\n";
-    std::cout << "*" << move_left << "   |--|   " << move_right << "*\n";
-    std::cout << "*" << move_left << "   \\__/   " << move_right << "*\n";
-    std::cout << "*" << move_left << "    ||    " << move_right << "*\n";
-    std::cout << "*" << move_left << "  -| *|-  " << move_right << "*\n";
-    std::cout << "*" << move_left << " / |  | \\ " << move_right << "*\n";
-    std::cout << "*" << move_left << "/   \\/   \\" << move_right << "*\n";
-    std::cout << "*" << move_left << "    /\\    " << move_right << "*\n";
-}
-void jump() {
-    string filled = "****************************************";
-    string bordered = "*                                      *";
-    string m[20] = { filled,bordered,bordered,bordered,bordered,bordered,bordered,bordered,bordered,bordered,bordered,bordered,
-    bordered,bordered,bordered,bordered,bordered,bordered,bordered,filled, },
-        p[12] = {
-            "    /\\    ",
-            "   |oo|   ",
-            "  (|..|)  ",
-            "   |__|   ",
-            "   \\__/   ",
-            "    ||    ",
-            "  -| *|-  ",
-            " / |  | \\ ",
-            "/   \\/   \\",
-            "    /\\    ",
-            "    ||    ",
-            "   _||_   " },
-            o[20] = { filled,bordered,bordered,bordered,bordered,bordered,bordered,bordered,bordered,bordered,bordered,bordered,
-            bordered,bordered,bordered,bordered,bordered,bordered,bordered,filled },
-            j1[12] = {
-                "          ",
-                "    /\\    ",
-                "   |oo|   ",
-                "  (|..|)  ",
-                "   |__|   ",
-                "   \\__/   ",
-                "    ||    ",
-                "  -| *|-  ",
-                " / |  | \\ ",
-                "/   \\/   \\",
-                "    /\\    ",
-                "   _\\/_   ", },
-                f[12] = {
-                    "    /\\    ",
-                    "   |oo|   ",
-                    "  (|..|)  ",
-                    "   |__|   ",
-                    "   \\__/   ",
-                    "    ||    ",
-                    "  -| *|-  ",
-                    " / |  | \\ ",
-                    "/   \\/   \\",
-                    "    /\\    ",
-                    "    ||    ",
-                    "    ||    " };
-    for (int r = 0; r < 6; r++) {
-        if (r == 0 or r == 5) {
-            for (int i = 0; i < 20; i++) {
-                if (o[i] != m[i]) o[i] = m[i];
-            }
-            for (int i = 0; i < 12; i++) {
-                for (int j = 0; j < 10; j++) {
-                    if (p[i][j] != ' ') o[i + 7][j + 1] = p[i][j];
-                }
-            }
-            for (int i = 0; i < 20; i++) cout << o[i] << endl;
-            //Sleep(1000);
-            //system("cls");
-        }
-        if (r == 1 or r == 4) {
-            for (int i = 0; i < 20; i++) {
-                if (o[i] != m[i]) o[i] = m[i];
+	for (int i = 0; i < h; i++) cout << p[i] << "\n"; // 1
+	//usleep(sleep_time * 1000);
+	//system("cls");
 
-            }
-            for (int i = 0; i < 12; i++) {
-                for (int j = 0; j < 10; j++) {
-                    if (j1[i][j] != ' ') o[i + 7][j + 1] = j1[i][j];
-                }
-            }
-            for (int i = 0; i < 20; i++) {
-                cout << o[i] << endl;
-            }
-            //Sleep(1000);
-            //system("cls");
-        }
-        if (r == 2) {
-            for (int u = 0; u < 5; u++) {
-                for (int i = 0; i < 20; i++) {
-                    if (o[i] != m[i]) o[i] = m[i];
-                }
-                for (int i = 0; i < 12; i++) {
-                    for (int j = 0; j < 10; j++) {
-                        if (f[i][j] != ' ') o[i + 7 - u][j + 1] = f[i][j];
-                    }
-                }
-                for (int i = 0; i < 20; i++) {
-                    cout << o[i] << endl;
-                }
-                //Sleep(1000);
-                //system("cls");
-            }
-        }
-        if (r == 3) {
-            for (int u = 3; u > -1; u--) {
-                for (int i = 0; i < 20; i++) {
-                    if (o[i] != m[i]) {
-                        o[i] = m[i];
-                    }
-                }
-                for (int i = 0; i < 12; i++) {
-                    for (int j = 0; j < 10; j++) {
-                        if (f[i][j] != ' ') {
-                            o[i + 7 - u][j + 1] = f[i][j];
-                        }
-                    }
-                }
-                for (int i = 0; i < 20; i++) {
-                    cout << o[i] << endl;
-                }
-                //Sleep(1000);
-                //system("cls");
-            }
-        }
-    }
+	for (int i = 0; i < 2; i++)
+	{
+		p[13] = "* --\\. /--                             *";
+		p[14] = "*/  |. |  \\                            *";
+		p[15] = "*   |. |                               *";
+		for (int i = 0; i < h; i++) cout << p[i] << "\n"; // 2
+		//usleep(sleep_time * 1000);
+		//system("cls");
 
+		p[13] = "*  -\\. /---                            *";
+		p[14] = "* / |. |                               *";
+		p[15] = "*/  |. |                               *";
+		for (int i = 0; i < h; i++) cout << p[i] << "\n"; // 3
+		//usleep(sleep_time * 1000);
+		//system("cls");
+
+		p[12] = "*   _><_  /                            *";
+		p[13] = "* --\\. /--                             *";
+		p[14] = "*/  |. |                               *";
+		p[15] = "*   |. |                               *";
+		for (int i = 0; i < h; i++) cout << p[i] << "\n"; // 4
+		//usleep(sleep_time * 1000);
+		//system("cls");
+
+		p[11] = "*   \\--/  /                            *";
+		p[12] = "*   _><_ /                             *";
+		p[13] = "*  -\\. /-                              *";
+		p[14] = "* / |. |                               *";
+		p[15] = "*/  |. |                               *";
+		for (int i = 0; i < h; i++) cout << p[i] << "\n"; // 5
+		//usleep(sleep_time * 1000);
+		//system("cls");
+
+		p[11] = "*   \\--/  *                            *";
+		p[12] = "*   _><_ /                             *";
+		p[13] = "* --\\. /-                              *";
+		p[14] = "*/  |. |                               *";
+		p[15] = "*   |. |                               *";
+		for (int i = 0; i < h; i++) cout << p[i] << "\n"; // 7
+		//usleep(sleep_time * 1000);
+		//system("cls");
+
+		p[11] = "*   \\--/  /                            *";
+		p[12] = "*   _><_ /                             *";
+		p[13] = "*---\\. /-                              *";
+		p[14] = "*   |. |                               *";
+		for (int i = 0; i < h; i++) cout << p[i] << "\n"; // 8
+		//usleep(sleep_time * 1000);
+		//system("cls");
+
+		p[11] = "*   \\--/  *                            *";
+		p[12] = "*\\  _><_ /                             *";
+		p[13] = "* --\\. /-                              *";
+		for (int i = 0; i < h; i++) cout << p[i] << "\n"; // 9
+		//usleep(sleep_time * 1000);
+		//system("cls");
+
+		p[11] = "*\\  \\--/  /                            *";
+		p[12] = "* \\ _><_ /                             *";
+		p[13] = "*  -\\. /-                              *";
+		for (int i = 0; i < h; i++) cout << p[i] << "\n"; // 10
+		//usleep(sleep_time * 1000);
+		//system("cls");
+
+		p[11] = "**  \\--/  *                            *";
+		for (int i = 0; i < h; i++) cout << p[i] << "\n"; // 11
+		//usleep(sleep_time * 1000);
+		//system("cls");
+
+		p[11] = "*   \\--/                               *";
+		p[12] = "**  _><_  *                            *";
+		p[13] = "* --\\. /--                             *";
+		for (int i = 0; i < h; i++) cout << p[i] << "\n"; // 12
+		//usleep(sleep_time * 1000);
+		//system("cls");
+
+		p[12] = "*   _><_                               *";
+		p[13] = "**--\\. /--*                            *";
+		for (int i = 0; i < h; i++) cout << p[i] << "\n"; // 13
+		//usleep(sleep_time * 1000);
+		//system("cls");
+
+		p[13] = "* --\\. /--                             *";
+		p[14] = "**  |. |  *                            *";
+		for (int i = 0; i < h; i++) cout << p[i] << "\n"; // 14
+		//usleep(sleep_time * 1000);
+		//system("cls");
+
+		p[13] = "*  -\\. /-                              *";
+		p[14] = "* / |. | \\                             *";
+		p[15] = "**  |. |  *                            *";
+		for (int i = 0; i < h; i++) cout << p[i] << "\n"; // 15
+		//usleep(sleep_time * 1000);
+		//system("cls");
+
+		p[15] = "*/  |. |  \\                            *";
+		for (int i = 0; i < h; i++) cout << p[i] << "\n"; // 16
+		//usleep(sleep_time * 1000);
+		//system("cls");
+	}
+
+	delete[] p;
 }
-void throw_ball() {
-    std::string mass[] = {
-        /*0*/                    std::string(40, '*') + '\n',
-        /*1*/                    '*' + std::string(38, ' ') + "*\n",
-        /*2*/                    '*' + std::string(38, ' ') + "*\n",
-        /*3*/                    '*' + std::string(38, ' ') + "*\n",
-        /*4*/                    '*' + std::string(38, ' ') + "*\n",
-        /*5*/                    '*' + std::string(38, ' ') + "*\n",
-        /*6*/                    '*' + std::string(38, ' ') + "*\n",
-        /*7*/                     "*    /\\                                *\n",
-        /*8*/                     "*   |oo|                               *\n",
-        /*9*/                     "*  (|..|)                              *\n",
-        /*10*/                    "*   |--|                               *\n",
-        /*11*/                    "*   \\__/                               *\n",
-        /*12*/                    "*    ||                                *\n",
-        /*13*/                    "*  -| *|-                              *\n",
-        /*14*/                    "* / |  | \\                             *\n",
-        /*15*/                    "*/  |  |  \\                            *\n",
-        /*16*/                    "*    \\/                                *\n",
-        /*17*/                    "*    ||                                *\n",
-        /*18*/                    "*   _||_                               *\n",
-        /*19*/                    std::string(40, '*') + '\n'
-    };
-    for (int k = 0; k < 26; k++) {
-        switch (k % 26) {
-        case 0: { break; }
-        case 1: {
-            mass[14] = "* / |  | \\o                            *\n";
-            mass[15] = "*/  |  |  -                            *\n";
-            break;
-        }
-        case 2: {
-            mass[13] = "*  -| *|- o                            *\n";
-            mass[14] = "* / |  | \\-                            *\n";
-            mass[15] = "*/  |  |                               *\n";
-            break;
-        }
-        case 3: {
-            mass[12] = "*    ||   o                            *\n";
-            mass[13] = "*  -| *|---                            *\n";
-            mass[14] = "* / |  |                               *\n";
-            break;
-        }
-        case 4: {
-            mass[11] = "*   \\__/  o                            *\n";
-            mass[12] = "*    ||                                *\n";
-            mass[13] = "*  -| *|--/                            *\n";
-            break;
-        }
-        case 5: {
-            mass[10] = "*   |--|  o                            *\n";
-            mass[11] = "*   \\__/                               *\n";
-            mass[13] = "*  -| *|---                            *\n";
-            break;
-        }
-        case 6: {
-            mass[9] = "*  (|..|) o                            *\n";
-            mass[10] = "*   |--|                               *\n";
-            mass[13] = "*  -| *|--                             *\n";
-            mass[14] = "* / |  |  \\                            *\n";
-            break;
-        }
-        case 7: {
-            mass[8] = "*   |oo|  o                            *\n";
-            mass[9] = "*  (|..|)                              *\n";
-            mass[13] = "*  -| *|-                              *\n";
-            mass[14] = "* / |  | \\                             *\n";
-            mass[15] = "*/  |  |  \\                            *\n";
-            break;
-        }
-        case 8: {
-            mass[7] = "*    /\\   o                            *\n";
-            mass[8] = "*   |oo|                               *\n";
-            break;
-        }
-        case 9: {
-            mass[6] = "*        o                             *\n";
-            mass[7] = "*    /\\                                *\n";
-            break;
-        }
-        case 10: {
-            mass[5] = "*       o                              *\n";
-            mass[6] = '*' + std::string(38, ' ') + "*\n";
-            break;
-        }
-        case 11: {
-            mass[4] = "*      o                               *\n";
-            mass[5] = '*' + std::string(38, ' ') + "*\n";
-            break;
-        }
-        case 12: {
-            mass[3] = "*     o                                *\n";
-            mass[4] = '*' + std::string(38, ' ') + "*\n";
-            break;
-        }
-        case 13: {
-            mass[3] = "*    o                                 *\n";
-            break;
-        }
-        case 14: {
-            mass[3] = '*' + std::string(38, ' ') + "*\n";
-            mass[4] = "*   o                                  *\n";
-            break;
-        }
-        case 15: {
-            mass[4] = '*' + std::string(38, ' ') + "*\n";
-            mass[5] = "*  o                                   *\n";
-            break;
-        }
-        case 16: {
-            mass[5] = '*' + std::string(38, ' ') + "*\n";
-            mass[6] = "* o                                    *\n";
-            break;
-        }
-        case 17: {
-            mass[6] = '*' + std::string(38, ' ') + "*\n";
-            mass[7] = "*o   /\\                                *\n";
-            break;
-        }
-        case 18: {
-            mass[7] = "*    /\\                                *\n";
-            mass[8] = "*o  |oo|                               *\n";
-            break;
-        }
-        case 19: {
-            mass[8] = "*   |oo|                               *\n";
-            mass[9] = "*o (|..|)                              *\n";
-            mass[13] = "* --| *|-                              *\n";
-            mass[14] = "*/  |  | \\                             *\n";
-            mass[15] = "*   |  |  \\                            *\n";
-            break;
-        }
-        case 20: {
-            mass[9] = "*  (|..|)                              *\n";
-            mass[10] = "*o  |--|                               *\n";
-            mass[13] = "*---| *|-                              *\n";
-            mass[14] = "*   |  | \\                             *\n";
-            mass[15] = "*   |  |  \\                            *\n";
-            break;
-        }
-        case 21: {
-            mass[10] = "*   |--|                               *\n";
-            mass[11] = "*o  \\__/                               *\n";
-            mass[13] = "*\\--| *|-                              *\n";
-            break;
-        }
-        case 22: {
-            mass[11] = "*   \\__/                               *\n";
-            mass[12] = "*o   ||                                *\n";
-            mass[13] = "*---| *|-                              *\n";
-            break;
-        }
-        case 23: {
-            mass[12] = "*    ||                                *\n";
-            mass[13] = "*o -| *|-                              *\n";
-            mass[14] = "*-/ |  | \\                             *\n";
-            break;
-        }
-        case 24: {
-            mass[13] = "*  -| *|-                              *\n";
-            mass[14] = "*o/ |  | \\                             *\n";
-            mass[15] = "*-  |  |  \\                            *\n";
-            break;
-        }
-        case 25: {
-            mass[13] = "*  -| *|-                              *\n";
-            mass[14] = "* / |  | \\                             *\n";
-            mass[15] = "*/  |  |  \\                            *\n";
-            break;
-        }
-        }
-        for (int i = 0; i < 20; i++) {
-            std::cout << mass[i];
-        }
-    }
+
+void run(string* firstEl)
+{
+	string* p = new string[h];
+	for (int i = 0; i < h; i++) p[i] = *(firstEl + i);
+
+	//system("cls");
+	//for(int i = 0; i < h; i++) cout << p[i] << "\n";
+	int cnt = 0, step = 0;
+
+	while (cnt + 10 != 40 - 2)
+	{
+		string f, s;
+		if (step % 3 == 0)
+		{
+			f = "    ||    ";
+			s = "   _||_   ";
+		}
+
+		else if (step % 3 == 1)
+		{
+			f = "    | \\   ";
+			s = "   _|  \\_ ";
+		}
+		else if (step % 3 == 2)
+		{
+			f = "   / |    ";
+			s = " _/  |_   ";
+			cnt++;
+		}
+
+		cout << p[0] << "\n" << p[1] << "\n" << p[2] << "\n" << p[3] << "\n" << p[4] << "\n" << p[5] << "\n" << p[6] << "\n";
+		string s1, s2;
+		s1 = ""; s2 = "";
+		for (int i = 0; i < cnt; i++) s1 += " ";
+		for (int j = 0; j < 28 - cnt; j++) s2 += " ";
+		cout << "*" << s1 << "   _[]_   " << s2 << "*\n";
+		cout << "*" << s1 << "   |~~|   " << s2 << "*\n";
+		cout << "*" << s1 << "   |oq|   " << s2 << "*\n";
+		cout << "*" << s1 << "  (|<>|)  " << s2 << "*\n";
+		cout << "*" << s1 << "   \\--/   " << s2 << "*\n";
+		cout << "*" << s1 << "   _><_   " << s2 << "*\n";
+		cout << "*" << s1 << "  -\\. /-  " << s2 << "*\n";
+		cout << "*" << s1 << " / |. | \\ " << s2 << "*\n";
+		cout << "*" << s1 << "/  |. |  \\" << s2 << "*\n";
+		cout << "*" << s1 << "   |__|   " << s2 << "*\n";
+		cout << "*" << s1 << f << s2 << "*\n";
+		cout << "*" << s1 << s << s2 << "*\n";
+		cout << p[19] << "\n";
+
+		step++;
+
+		//usleep(sleep_time * 1000);
+		//system("cls");
+	}
+
+	while (cnt != 0)
+	{
+		//cout << step << " " << cnt << "\n";
+		//if (cnt == 1 && step == 1) break;
+		string f, s;
+		if (step % 3 == 0)
+		{
+			f = "    ||    ";
+			s = "   _||_   ";
+		}
+		else if (step % 3 == 1)
+		{
+			f = "    | \\   ";
+			s = "   _|  \\_ ";
+			cnt--;
+		}
+		else if (step % 3 == 2)
+		{
+			f = "   / |    ";
+			s = " _/  |_   ";
+		}
+
+		cout << p[0] << "\n" << p[1] << "\n" << p[2] << "\n" << p[3] << "\n" << p[4] << "\n" << p[5] << "\n" << p[6] << "\n";
+		string s1, s2;
+		s1 = ""; s2 = "";
+		for (int i = 0; i < cnt; i++) s1 += " ";
+		for (int j = 0; j < 28 - cnt; j++) s2 += " ";
+		cout << "*" << s1 << "   _[]_   " << s2 << "*\n";
+		cout << "*" << s1 << "   |~~|   " << s2 << "*\n";
+		cout << "*" << s1 << "   |oq|   " << s2 << "*\n";
+		cout << "*" << s1 << "  (|<>|)  " << s2 << "*\n";
+		cout << "*" << s1 << "   \\--/   " << s2 << "*\n";
+		cout << "*" << s1 << "   _><_   " << s2 << "*\n";
+		cout << "*" << s1 << "  -\\. /-  " << s2 << "*\n";
+		cout << "*" << s1 << " / |. | \\ " << s2 << "*\n";
+		cout << "*" << s1 << "/  |. |  \\" << s2 << "*\n";
+		cout << "*" << s1 << "   |__|   " << s2 << "*\n";
+		cout << "*" << s1 << f << s2 << "*\n";
+		cout << "*" << s1 << s << s2 << "*\n";
+		cout << p[19] << "\n";
+
+		step--;
+
+		//usleep(sleep_time * 1000);
+		//system("cls");
+	}
+
+	for (int i = 0; i < h; i++) cout << p[i] << "\n";
+	//usleep(sleep_time * 1000);
+	//system("cls");
+
+	delete[] p;
+}
+
+void jump(string* firstEl)
+{
+	string* p = new string[h];
+	for (int i = 0; i < h; i++) p[i] = *(firstEl + i);
+
+	//system("cls");
+	for (int i = 0; i < h; i++) cout << p[i] << "\n";   // 1
+	//usleep(sleep_time * 1000);
+	//system("cls");
+
+	for (int i = 0; i < 7; i++) cout << p[i] << "\n";    // 2
+	cout << p[6] << "\n";
+	for (int i = 7; i < 17; i++) cout << p[i] << "\n";
+	cout << "*   _\\/_                               *\n";
+	cout << p[19] << "\n";
+	//usleep(sleep_time * 1000);
+	//system("cls");
+
+	p[18] = "*    ||                                *";
+	for (int i = 0; i < h; i++) cout << p[i] << "\n";    // 3
+	//usleep(sleep_time * 1000);
+	//system("cls");
+
+	for (int i = 0; i < 3; i++)
+	{
+		for (int j = 0; j < 6 - i; j++) cout << p[j] << "\n";
+		for (int j = 7; j < 19; j++) cout << p[j] << "\n";
+		for (int j = 0; j <= i; j++) cout << p[1] << "\n";
+		cout << p[19] << "\n";
+		//usleep(sleep_time * 1000);
+		//system("cls");
+	}
+
+	for (int i = 3; i > -2; i--)
+	{
+		for (int j = 0; j < 6 - i; j++) cout << p[j] << "\n";
+		for (int j = 7; j < 19; j++) cout << p[j] << "\n";
+		for (int j = 0; j <= i; j++) cout << p[1] << "\n";
+		cout << p[19] << "\n";
+		//usleep(sleep_time * 1000);
+		//system("cls");
+	}
+
+	for (int i = 0; i < 7; i++) cout << p[i] << "\n";
+	cout << p[6] << "\n";
+	for (int i = 7; i < 17; i++) cout << p[i] << "\n";
+	cout << "*   _\\/_                               *\n";
+	cout << p[19] << "\n";
+	//usleep(sleep_time * 1000);
+	//system("cls");
+
+	p[18] = "*   _||_                               *";
+	for (int i = 0; i < h; i++) cout << p[i] << "\n";   // 1
+	//usleep(sleep_time * 1000);
+	//system("cls");
+
+	delete[] p;
+}
+
+void throww(string* firstEl)
+{
+	string* p = new string[h];
+	for (int i = 0; i < h; i++) p[i] = *(firstEl + i);
+
+	//system("cls");
+	for (int i = 0; i < h; i++) cout << p[i] << "\n";
+	//usleep(sleep_time * 1000);
+	//system("cls");
+
+	p[14] = "* / |. | \\o                            *";
+	p[15] = "*/  |. |  -                            *";
+	for (int i = 0; i < h; i++) cout << p[i] << "\n";
+	//usleep(sleep_time * 1000);
+	//system("cls");
+
+	p[13] = "*  -\\. /- o                            *";
+	p[14] = "* / |. | \\-                            *";
+	p[15] = "*/  |. |                               *";
+	for (int i = 0; i < h; i++) cout << p[i] << "\n";
+	//usleep(sleep_time * 1000);
+	//system("cls");
+
+	p[12] = "*   _><_  o                            *";
+	p[13] = "*  -\\. /---                            *";
+	p[14] = "* / |. |                               *";
+	for (int i = 0; i < h; i++) cout << p[i] << "\n";
+	//usleep(sleep_time * 1000);
+	//system("cls");
+
+	p[11] = "*   \\--/  o                            *";
+	p[12] = "*   _><_                               *";
+	p[13] = "*  -\\. /--/                            *";
+	for (int i = 0; i < h; i++) cout << p[i] << "\n";
+	//usleep(sleep_time * 1000);
+	//system("cls");
+
+	p[10] = "*  (|<>|) o                            *";
+	p[11] = "*   \\--/                               *";
+	p[13] = "*  -\\. /---                            *";
+	for (int i = 0; i < h; i++) cout << p[i] << "\n";
+	//usleep(sleep_time * 1000);
+	//system("cls");
+
+	p[9] = "*   |oq|  o                            *";
+	p[10] = "*  (|<>|)                              *";
+	p[13] = "*  -\\. /--                             *";
+	p[14] = "* / |. |  \\                            *";
+	for (int i = 0; i < h; i++) cout << p[i] << "\n";
+	//usleep(sleep_time * 1000);
+	//system("cls");
+
+	p[8] = "*   |~~|  o                            *";
+	p[9] = "*   |oq|                               *";
+	p[13] = "*  -\\. /-                              *";
+	p[14] = "* / |. | \\                             *";
+	p[15] = "*/  |. |  \\                            *";
+	for (int i = 0; i < h; i++) cout << p[i] << "\n";
+	//usleep(sleep_time * 1000);
+	//system("cls");
+
+	p[7] = "*   _[]_  o                            *";
+	p[8] = "*   |~~|                               *";
+	for (int i = 0; i < h; i++) cout << p[i] << "\n";
+	//usleep(sleep_time * 1000);
+	//system("cls");
+
+	p[6] = "*        o                             *";
+	p[7] = "*   _[]_                               *";
+	for (int i = 0; i < h; i++) cout << p[i] << "\n";
+	//usleep(sleep_time * 1000);
+	//system("cls");
+
+	p[5] = "*       o                              *";
+	p[6] = "*                                      *";
+	for (int i = 0; i < h; i++) cout << p[i] << "\n";
+	//usleep(sleep_time * 1000);
+	//system("cls");
+
+	p[4] = "*      o                               *";
+	p[5] = "*                                      *";
+	for (int i = 0; i < h; i++) cout << p[i] << "\n";
+	//usleep(sleep_time * 1000);
+	//system("cls");
+
+	p[3] = "*     o                                *"; // pik
+	p[4] = "*                                      *";
+	for (int i = 0; i < h; i++) cout << p[i] << "\n";
+	//usleep(sleep_time * 1000);
+	//system("cls");
+
+	p[3] = "*    o                                 *"; // pik
+	for (int i = 0; i < h; i++) cout << p[i] << "\n";
+	//usleep(sleep_time * 1000);
+	//system("cls");
+
+	p[3] = "*                                      *";
+	p[4] = "*   o                                  *";
+	for (int i = 0; i < h; i++) cout << p[i] << "\n";
+	//usleep(sleep_time * 1000);
+	//system("cls");
+
+	p[4] = "*                                      *";
+	p[5] = "*  o                                   *";
+	for (int i = 0; i < h; i++) cout << p[i] << "\n";
+	//usleep(sleep_time * 1000);
+	//system("cls");
+
+	p[5] = "*                                      *";
+	p[6] = "* o                                    *";
+	for (int i = 0; i < h; i++) cout << p[i] << "\n";
+	//usleep(sleep_time * 1000);
+	//system("cls");
+
+	p[6] = "*                                      *";
+	p[7] = "*o  _[]_                               *";
+	for (int i = 0; i < h; i++) cout << p[i] << "\n";
+	//usleep(sleep_time * 1000);
+	//system("cls");
+
+	p[7] = "*   _[]_                               *";
+	p[8] = "*o  |~~|                               *";
+	for (int i = 0; i < h; i++) cout << p[i] << "\n";
+	//usleep(sleep_time * 1000);
+	//system("cls");
+
+	p[8] = "*   |~~|                               *";
+	p[9] = "*o  |oq|                               *";
+	p[13] = "* --\\. /-                              *";
+	p[14] = "*/  |. | \\                             *";
+	p[15] = "*   |. |  \\                            *";
+	for (int i = 0; i < h; i++) cout << p[i] << "\n";
+	//usleep(sleep_time * 1000);
+	//system("cls");
+
+	p[9] = "*   |oq|                               *";
+	p[10] = "*o (|<>|)                              *";
+	p[13] = "*---\\. /-                              *";
+	p[14] = "*   |. | \\                             *";
+	for (int i = 0; i < h; i++) cout << p[i] << "\n";
+	//usleep(sleep_time * 1000);
+	//system("cls");
+
+	p[9] = "*   |oq|                               *";
+	p[10] = "*  (|<>|)                              *";
+	p[11] = "*o  \\--/                               *";
+	p[13] = "*\\--\\. /-                              *";
+	for (int i = 0; i < h; i++) cout << p[i] << "\n";
+	//usleep(sleep_time * 1000);
+	//system("cls");
+
+	p[11] = "*   \\--/                               *";
+	p[12] = "*o  _><_                               *";
+	p[13] = "*---\\. /-                              *";
+	for (int i = 0; i < h; i++) cout << p[i] << "\n";
+	//usleep(sleep_time * 1000);
+	//system("cls");
+
+	p[12] = "*   _><_                               *";
+	p[13] = "*o -\\. /-                              *";
+	p[14] = "*-/ |. | \\                             *";
+	for (int i = 0; i < h; i++) cout << p[i] << "\n";
+	//usleep(sleep_time * 1000);
+	//system("cls");
+
+	p[13] = "*  -\\. /-                              *";
+	p[14] = "*o/ |. | \\                             *";
+	p[15] = "*-  |. |  \\                            *";
+	for (int i = 0; i < h; i++) cout << p[i] << "\n";
+	//usleep(sleep_time * 1000);
+	//system("cls");
+
+	p[14] = "* / |. | \\                             *";
+	p[15] = "*/  |. |  \\                            *";
+	for (int i = 0; i < h; i++) cout << p[i] << "\n";
+	//usleep(sleep_time * 1000);
+	//system("cls");
+
+	delete[] p;
+}
+
+void solve(string* firstEl)
+{
+	string* p = new string[h];
+	for (int i = 0; i < h; i++) p[i] = *(firstEl + i);
+	int n = 0;
+	string* p0 = p;
+	while (n != 5)
+	{
+		cout << "Choose animation:" << endl;
+		cout << "Dance: \t\t\t1" << endl;
+		cout << "Run: \t\t\t2" << endl;
+		cout << "Sit down and jump: \t3" << endl;
+		cout << "Throw a ball: \t\t4" << endl << endl;
+		cout << "Enter 5 for exit." << endl;
+
+		cin >> n;
+		switch (n)
+		{
+		case 1:
+			dance(p0);
+			break;
+		case 2:
+			run(p0);
+			break;
+		case 3:
+			jump(p0);
+			break;
+		case 4:
+			throww(p0);
+			break;
+		case 5:
+			break;
+		default:
+			cout << "Invalid input.\n";
+			break;
+		}
+	}
+
+
+	delete[] p;
+	return;
 }
