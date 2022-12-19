@@ -1,11 +1,7 @@
-#include<bits/stdc++.h>
+#include <iostream>
+#include <stdio.h>
+#include <fstream>
 using namespace std;
-
-typedef long long ll;
-typedef unsigned long long ull;
-const int inf = 1e9 + 7;
-const float pi = acos(-1);
-unsigned int seed = time(0);
 
 void readText(char *buff, int fileSize) {
 	for(int i = 138; i < fileSize; i += 4)
