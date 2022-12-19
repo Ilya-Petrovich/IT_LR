@@ -1,145 +1,192 @@
 #include <iostream>
 #include <string>
-#include <unistd.h>
+#include <windows.h>
+
 using namespace std;
 
-const int w = 10, h = 12;
+void dancing(string* firstNum, int t);
 
-int main()
-{
-	//setlocale(LC_ALL, "rus");
-	string p[h] = {
-		"   _[]_   ",  //  0
-		"   |~~|   ",  //  1
-		"   |oq|   ",  //  2
-		"  (|<>|)  ",  //  3
-		"   \\--/   ", //  4
-		"   _><_   ",  //  5
-		"  -\\. /-  ", //  6
-		" / |. | \\ ", //  7
-		"/  |. |  \\", //  8
-		"   |__|   ",  //  9
-		"    ||    ",  //  10
-		"   _||_   "   //  11
+int main() {
+	string character[12] = {
+		"   ()()   ",
+		"   ()()   ",
+		"   ()()   ",
+		"   |..|   ",
+		"  \\|  |/  ",
+		"  /|UU|\\  ",
+		"  --\\/--  ",
+		" /  ||  \\ ",
+		"/   ||   \\",
+		"    /\\    ",
+		"    ||    ",
+		"   _||_   ",
 	};
-
-	for (int i = 0; i < 2; i++)
-	{
-		for (int i = 0; i < h; i++) cout << p[i] << "\n"; // 1
-		//Sleep(1000);
-		//system("cls");
-
-		p[6] = " --\\. /-- ";
-		p[7] = "/  |. |  \\";
-		p[8] = "   |. |   ";
-
-		for (int i = 0; i < h; i++) cout << p[i] << "\n"; // 2
-		//Sleep(1000);
-		//system("cls");
-
-		p[6] = "  -\\. /---";
-		p[7] = " / |. |   ";
-		p[8] = "/  |. |   ";
-
-		for (int i = 0; i < h; i++) cout << p[i] << "\n"; // 3
-		//Sleep(1000);
-		//system("cls");
-
-		p[5] = "   _><_  /";
-		p[6] = " --\\. /-- ";
-		p[7] = "/  |. |   ";
-		p[8] = "   |. |   ";
-
-		for (int i = 0; i < h; i++) cout << p[i] << "\n"; // 4
-		//Sleep(1000);
-		//system("cls");
-
-		p[4] = "   \\--/  /";
-		p[5] = "   _><_ / ";
-		p[6] = "  -\\. /-  ";
-		p[7] = " / |. |   ";
-		p[8] = "/  |. |   ";
-
-		for (int i = 0; i < h; i++) cout << p[i] << "\n"; // 5
-		//Sleep(1000);
-		//system("cls");
-
-		p[4] = "   \\--/  *";
-		p[5] = "   _><_ / ";
-		p[6] = " --\\. /-  ";
-		p[7] = "/  |. |   ";
-		p[8] = "   |. |   ";
-
-		for (int i = 0; i < h; i++) cout << p[i] << "\n"; // 7
-		//Sleep(1000);
-		//system("cls");
-
-		p[4] = "   \\--/  /";
-		p[5] = "   _><_ / ";
-		p[6] = "---\\. /-  ";
-		p[7] = "   |. |   ";
-
-		for (int i = 0; i < h; i++) cout << p[i] << "\n"; // 8
-		//Sleep(1000);
-		//system("cls");
-
-		p[4] = "   \\--/  *";
-		p[5] = "\\  _><_ / ";
-		p[6] = " --\\. /-  ";
-		p[7] = "   |. |   ";
-
-		for (int i = 0; i < h; i++) cout << p[i] << "\n"; // 9
-		//Sleep(1000);
-		//system("cls");
-
-		p[4] = "\\  \\--/  /";
-		p[5] = " \\ _><_ / ";
-		p[6] = "  -\\. /-  ";
-		p[7] = "   |. |   ";
-
-		for (int i = 0; i < h; i++) cout << p[i] << "\n"; // 10
-		//Sleep(1000);
-		//system("cls");
-
-		p[4] = "*  \\--/  *";
-
-		for (int i = 0; i < h; i++) cout << p[i] << "\n"; // 11
-		//Sleep(1000);
-		//system("cls");
-
-		p[4] = "   \\--/   ";
-		p[5] = "*  _><_  *";
-		p[6] = " --\\. /-- ";
-
-		for (int i = 0; i < h; i++) cout << p[i] << "\n"; // 12
-		//Sleep(1000);
-		//system("cls");
-
-		p[5] = "   _><_   ";
-		p[6] = "*--\\. /--*";
-
-		for (int i = 0; i < h; i++) cout << p[i] << "\n"; // 13
-		//Sleep(1000);
-		//system("cls");
-
-		p[6] = " --\\. /-- ";
-		p[7] = "*  |. |  *";
-
-		for (int i = 0; i < h; i++) cout << p[i] << "\n"; // 14
-		//Sleep(1000);
-		//system("cls");
-
-		p[6] = "  -\\. /-  ";
-		p[7] = " / |. | \\ ";
-		p[8] = "*  |. |  *";
-
-		for (int i = 0; i < h; i++) cout << p[i] << "\n"; // 15
-		//Sleep(1000);
-		//system("cls");
-
-		p[8] = "/  |. |  \\";
-	}
-
-	for (int i = 0; i < h; i++) cout << p[i] << "\n";
+	string* character0 = character;
+	dancing(character0, 1000);
 	return 0;
+}
+
+void dancing(string* firstNum, int t) {
+	string character[12];
+	string* ptcharacter = character;;
+	for (int i = 0; i < 12; i++, firstNum++) character[i] = *firstNum;
+	for (int i = 0; i < 12; i++) cout << character[i] << endl;
+
+	for (int q = 0; q < 2; q++) {
+		//1
+		character[6] = " ---\\/--- ";
+		character[7] = "/   ||   \\";
+		character[8] = "    ||    ";
+		//usleep(t);
+		//	system("cls");
+
+		for (int i = 0; i < 12; i++) {
+			cout << character[i] << endl;
+		}
+		//2
+		character[6] = "  --\\/----";
+		character[7] = " /  ||    ";
+		character[8] = "/   ||    ";
+		//usleep(t);
+		//	system("cls");
+
+		for (int i = 0; i < 12; i++) {
+			cout << character[i] << endl;
+		}//3
+		character[5] = "  /|UU|\\ /";
+		character[6] = " ---\\/--- ";
+		character[7] = "/   ||    ";
+		character[8] = "    ||    ";
+		//usleep(t);
+		//	system("cls");
+
+		for (int i = 0; i < 12; i++) {
+			cout << character[i] << endl;
+		}
+		//4
+		character[4] = "  \\|  |/ /";
+		character[5] = "  /|UU|\\/ ";
+		character[6] = "  --\\/--  ";
+		character[7] = " /  ||    ";
+		character[8] = "/   ||    ";
+		//usleep(t);
+		//	system("cls");
+
+		for (int i = 0; i < 12; i++) {
+			cout << character[i] << endl;
+		}
+		//5
+		character[4] = "  \\|  |/ *";
+		character[5] = "  /|UU|\\/ ";
+		character[6] = " ---\\/--  ";
+		character[7] = "/   ||    ";
+		character[8] = "    ||    ";
+		//usleep(t);
+		//	system("cls");
+
+		for (int i = 0; i < 12; i++) {
+			cout << character[i] << endl;
+		}
+		//6
+		character[4] = "  \\|  |/ /";
+		character[5] = "  /|UU|\\/ ";
+		character[6] = "----\\/--  ";
+		character[7] = "    ||    ";
+		character[8] = "    ||    ";
+		//usleep(t);
+		//	system("cls");
+
+		for (int i = 0; i < 12; i++) {
+			cout << character[i] << endl;
+		}
+		//7
+		character[4] = "  \\|  |/ *";
+		character[5] = "\\ /|UU|\\/ ";
+		character[6] = " ---\\/--  ";
+		character[7] = "    ||    ";
+		character[8] = "    ||    ";
+		//usleep(t);
+		//	system("cls");
+
+		for (int i = 0; i < 12; i++) {
+			cout << character[i] << endl;
+		}
+		//8
+		character[4] = "\\ \\|  |/ /";
+		character[5] = " \\/|UU|\\/ ";
+		character[6] = "  --\\/--  ";
+		character[7] = "    ||    ";
+		character[8] = "    ||    ";
+		//usleep(t);
+		//	system("cls");
+
+		for (int i = 0; i < 12; i++) {
+			cout << character[i] << endl;
+		}
+		//9
+		character[4] = "* \\|  |/ *";
+		character[5] = " \\/|UU|\\/ ";
+		character[6] = "  --\\/--  ";
+		character[7] = "    ||    ";
+		//usleep(t);
+		//	system("cls");
+
+		for (int i = 0; i < 12; i++) {
+			cout << character[i] << endl;
+		}
+		//10
+		character[4] = "  \\|  |/  ";
+		character[5] = "* /|UU|\\ *";
+		character[6] = " ---\\/--- ";
+		character[7] = "    ||    ";
+		character[8] = "    ||    ";
+		//usleep(t);
+		//	system("cls");
+
+		for (int i = 0; i < 12; i++) {
+			cout << character[i] << endl;
+		}
+		//11
+		character[4] = "  \\|  |/  ";
+		character[5] = "  /|UU|\\  ";
+		character[6] = "*---\\/---*";
+		character[7] = "    ||    ";
+		//usleep(t);
+		//	system("cls");
+
+		for (int i = 0; i < 12; i++) {
+			cout << character[i] << endl;
+		}
+		//12
+		character[6] = " ---\\/--- ";
+		character[7] = "*   ||   *";
+		character[8] = "    ||    ";
+		//usleep(t);
+		//	system("cls");
+
+		for (int i = 0; i < 12; i++) {
+			cout << character[i] << endl;
+		}
+		//13
+		character[6] = "  --\\/--  ";
+		character[7] = " /  ||  \\ ";
+		character[8] = "*   ||   *";
+		//usleep(t);
+		//	system("cls");
+
+		for (int i = 0; i < 12; i++) {
+			cout << character[i] << endl;
+		}
+		//14
+		character[7] = " /  ||  \\ ";
+		character[8] = "/   ||   \\";
+		//usleep(t);
+		//	system("cls");
+
+		for (int i = 0; i < 12; i++) {
+			cout << character[i] << endl;
+		}
+	}
+	//system("cls");
+	return;
 }
