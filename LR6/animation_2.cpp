@@ -68,32 +68,54 @@ int Dance()
 
 int Run()
 {
+	int a[3] = {0, 1, 2};
 	int i = 0;
-	int begin_prob = 1;
-	while (begin_prob != 0 || i < 85){
-		if (i % 3 == 2 && i < 85)
-			begin_prob++;
-		if (i % 3 == 2 && i > 85 || i == 0)
-			begin_prob--;
-		for (int j = 0; j < 20; j++)
+	int begin_prob = 0;
+	while (i != 28)
+	{
+		for (int ii = 0; ii < 3; ii++)
 		{
-			string line_anim;
-			int probel = 0;
-			if (begin_prob == 0)
-				line_anim = AnimRun(j, probel, 0);
-			else
-				line_anim = AnimRun(j, probel, i);
-			if (j == 0 || j == 19)
-				cout << "****************************************\n";
-			else
+			for (int j = 0; j < 20; j++)
 			{
-				cout << "*" << Probels(begin_prob) + line_anim + Probels(38 - probel - begin_prob) << "*" << "\n";
+				int probel = 0;
+				string line_anim = AnimRun(j, probel, ii);
+				if (j == 0 || j == 19)
+					cout << "****************************************\n";
+				else
+					cout << "*" << Probels(begin_prob) << line_anim << Probels(38-begin_prob-probel) << "*\n"; 
 			}
+			if (ii == 1)
+				begin_prob++;
 		}
-		//Sleep(300);
-		//system("cls");
 		i++;
 	}
+	while (i != 0)
+	{
+		for (int ii = 0; ii < 3; ii++)
+		{
+			for (int j = 0; j < 20; j++)
+			{
+				int probel = 0;
+				string line_anim = AnimRun(j, probel, a[ii]);
+				if (j == 0 || j == 19)
+					cout << "****************************************\n";
+				else
+					cout << "*" << Probels(begin_prob) << line_anim << Probels(38-begin_prob-probel) << "*\n"; 
+			}
+			if (ii == 1)
+				begin_prob--;
+		}
+		i--;
+	}
+	for (int j = 0; j < 20; j++)
+			{
+				int probel = 0;
+				string line_anim = AnimRun(j, probel, 0);
+				if (j == 0 || j == 19)
+					cout << "****************************************\n";
+				else
+					cout << "*" << Probels(begin_prob) << line_anim << Probels(38-begin_prob-probel) << "*\n"; 
+			}
 	return 0;
 }
 
@@ -122,7 +144,7 @@ int Jump()
 			}
 		}
 		if (probel_up > 2 && i < 6 && i > 1)
-			probel_up--;
+			probel_up--; 
 		if (probel_up < 6 && i >= 6)
 			probel_up++;
 		//Sleep(1000);
@@ -294,18 +316,15 @@ string AnimRun(int n, int &nn, int i)
 		"    ||",
 		"   _||_",
 	};
-	if (i % 3 == 2)
+	if (i == 2)
 	{
 		A[17] = "   / |";
 		A[18] = " _/  |_";
 	}
-	else
+	if (i == 1)
 	{
-		if (i % 3 != 0)
-		{
-			A[17] = "    | \\";
-			A[18] = "   _|  \\_";
-		}
+		A[17] = "    | \\";
+		A[18] = "   _|  \\_";
 	}
 	
 	nn = A[n].size();
