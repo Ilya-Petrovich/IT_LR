@@ -1,143 +1,120 @@
+#include <unistd.h>
 #include <iostream>
-#include <string>
-// #include <unistd.h>
-using namespace std;
 
-void showCharacter(string body[12]) {
-  for (int i = 0; i < 12; i++) {
-      cout << body[i] << endl;
-  }
-}
-
-void showAnimation(string body[12]) {
-  showCharacter(body);
-  // sleep(1);
-}
+// void rmFrame();
+void head(); void legs();
+void dance();
 
 int main() {
+    // rmFrame();
+    dance();
+    return 0;
+}
 
-    int h = 12;
-    string body[h] = {
-      "    /\\    ", // 0
-      "   |oo|   ", // 1
-      "  (|..|)  ", // 2
-      "   |--|   ", // 3
-      "   \\__/   ", // 4
-      "    ||    ", // 5
-      "  -| *|-  ", // 6
-      " / |  | \\ ", // 7
-      "/   \\/   \\", // 8
-      "    /\\    ", // 9
-      "    ||    ", // 10
-      "   _||_   ", // 11
-    };
-
-    for (int i = 0; i < 2; i++) {
-      // system("cls");
-
-      // 2_1
-      body[8] = "/   \\/   \\"; // 8
-      showAnimation(body);
-      // system("cls");
-
-      // 1
-      body[6] = " --| *|-- "; // 6
-      body[7] = "/  |  |  \\"; // 7
-      body[8] = "    \\/    "; // 8
-      showAnimation(body);
-      // system("cls");
-
-      // 2
-      body[6] = "  -| *|---"; // 6
-      body[7] = " / |  |   "; // 7
-      body[8] = "/   \\/    "; // 8
-      showAnimation(body);
-      // system("cls");
-
-      // 3
-      body[5] = "    ||   /"; // 5
-      body[6] = " --| *|-- "; // 6
-      body[7] = "/  |  |   "; // 7
-      body[8] = "    \\/    "; // 8
-      showAnimation(body);
-      // system("cls");
-
-      // 4
-      body[4] = "   \\__/  /"; // 4
-      body[5] = "    ||  / "; // 5
-      body[6] = "  -| *|-  "; // 6
-      body[7] = " / |  |   "; // 7
-      body[8] = "/   \\/    "; // 8
-      showAnimation(body);
-      // system("cls");
-
-      // 5
-      body[4] = "   \\__/  *"; // 4
-      body[6] = " --| *|-  "; // 6
-      body[7] = "/  |  |   "; // 7
-      body[8] = "    \\/    "; // 8
-      showAnimation(body);
-      // system("cls");
-
-      // 6
-      body[4] = "   \\__/  /"; // 4
-      body[5] = "    ||  / "; // 5
-      body[6] = "---| *|-  "; // 6
-      body[7] = "   |  |   "; // 7
-      showAnimation(body);
-      // system("cls");
-
-      // 7
-      body[4] = "   \\__/  *"; // 4
-      body[5] = "\\   ||  / "; // 5
-      body[6] = " --| *|-  "; // 6
-      showAnimation(body);
-      // system("cls");
-
-      // 8
-      body[4] = "\\  \\__/  /"; // 4
-      body[5] = " \\  ||  / "; // 5
-      body[6] = "  -| *|-  "; // 6
-      showAnimation(body);
-      // system("cls");
-
-      // 9
-      body[4] = "*  \\__/  *"; // 4
-      showAnimation(body);
-      // system("cls");
-
-      // 10
-      body[4] = "   \\__/   "; // 4
-      body[5] = "*   ||   *"; // 5
-      body[6] = " --| *|-- "; // 6
-      showAnimation(body);
-      // system("cls");
-
-      // 11
-      body[5] = "    ||    "; // 5
-      body[6] = "*--| *|--*"; // 6
-      showAnimation(body);
-      // system("cls");
-
-      // 12
-      body[6] = " --| *|-- "; // 6
-      body[7] = "*  |  |  *"; // 7
-      showAnimation(body);
-      // system("cls");
-
-      // 13
-      body[6] = "  -| *|-  "; // 6
-      body[7] = " / |  | \\ "; // 7
-      body[8] = "*   \\/   *"; // 8
-      showAnimation(body);
-      // system("cls");
-
-      if (i == 1) {
-        // 2_1
-        body[8] = "/   \\/   \\"; // 8
-        showAnimation(body);
-        // system("cls");
-      }
-
+// void rmFrame() {system("cls");}
+void head() {
+    std::cout << "   ()()   \n";
+    std::cout << "   ()()   \n";
+    std::cout << "   ()()   \n";
+    std::cout << "   |..|   \n";
+}
+void legs() {
+    std::cout << "    /\\    \n";
+    std::cout << "    ||    \n";
+    std::cout << "   _||_   \n";
+}
+void dance() {
+    for (int i = 0; i <= 28; i++) {
+        // rmFrame();
+        head();
+        switch (i % 14) {
+            case 0: { 
+                std::cout << "  \\|  |/  \n";
+                std::cout << "  /|UU|\\  \n";
+                std::cout << "  --\\/--  \n";
+                std::cout << " /  ||  \\ \n";
+                std::cout << "/   ||   \\\n";break;}
+            case 1: {
+                std::cout << "  \\|  |/  \n";
+                std::cout << "  /|UU|\\  \n";
+                std::cout << " ---\\/--- \n";
+                std::cout << "/   ||   \\\n";
+                std::cout << "    ||    \n";break;}
+            case 2: { 
+                std::cout << "  \\|  |/  \n";
+                std::cout << "  /|UU|\\  \n";
+                std::cout << "  --\\/----\n";
+                std::cout << " /  ||    \n";
+                std::cout << "/   ||    \n"; break;}
+            case 3: { 
+                std::cout << "  \\|  |/  \n";
+                std::cout << "  /|UU|\\ /\n";
+                std::cout << " ---\\/--- \n";
+                std::cout << "/   ||    \n";
+                std::cout << "    ||    \n"; break;}
+            case 4: { 
+                std::cout << "  \\|  |/ /\n";
+                std::cout << "  /|UU|\\/ \n";
+                std::cout << "  --\\/--  \n";
+                std::cout << " /  ||    \n";
+                std::cout << "/   ||    \n"; break;}
+            case 5: { 
+                std::cout << "  \\|  |/ *\n";
+                std::cout << "  /|UU|\\/ \n";
+                std::cout << " ---\\/--  \n";
+                std::cout << "/   ||    \n";
+                std::cout << "    ||    \n"; break;}
+            case 6: { 
+                std::cout << "  \\|  |/ /\n";
+                std::cout << "  /|UU|\\/ \n";
+                std::cout << "----\\/--  \n";
+                std::cout << "    ||    \n";
+                std::cout << "    ||    \n"; break;}
+            case 7: { 
+                std::cout << "  \\|  |/ *\n";
+                std::cout << "\\ /|UU|\\/ \n";
+                std::cout << " ---\\/--  \n";
+                std::cout << "    ||    \n";
+                std::cout << "    ||    \n"; break;}
+            case 8: { 
+                std::cout << "\\ \\|  |/ /\n";
+                std::cout << " \\/|UU|\\/ \n";
+                std::cout << "  --\\/--  \n";
+                std::cout << "    ||    \n";
+                std::cout << "    ||    \n"; break;}
+            case 9: { 
+                std::cout << "* \\|  |/ *\n";
+                std::cout << " \\/|UU|\\/ \n";
+                std::cout << "  --\\/--  \n";
+                std::cout << "    ||    \n";
+                std::cout << "    ||    \n"; break;}
+            case 10: { 
+                std::cout << "  \\|  |/  \n";
+                std::cout << "* /|UU|\\ *\n";
+                std::cout << " ---\\/--- \n";
+                std::cout << "    ||    \n";
+                std::cout << "    ||    \n"; break;}
+            case 11: { 
+                std::cout << "  \\|  |/  \n";
+                std::cout << "  /|UU|\\  \n";
+                std::cout << "*---\\/---*\n";
+                std::cout << "    ||    \n";
+                std::cout << "    ||    \n"; break;}
+            case 12: { 
+                std::cout << "  \\|  |/  \n";
+                std::cout << "  /|UU|\\  \n";
+                std::cout << " ---\\/--- \n";
+                std::cout << "*   ||   *\n";
+                std::cout << "    ||    \n"; break;}
+            case 13: { 
+                std::cout << "  \\|  |/  \n";
+                std::cout << "  /|UU|\\  \n";
+                std::cout << "  --\\/--  \n";
+                std::cout << " /  ||  \\ \n";
+                std::cout << "*   ||   *\n"; break;}
+        }
+        legs();
+        // Sleep(500);
+        // rmFrame();
     }
 }
