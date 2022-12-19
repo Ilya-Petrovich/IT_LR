@@ -57,7 +57,7 @@ void changeColor(char* buff, long fileSize) {
 }
 void writeText(char* buff, long fileSize) {
 
-	char text[12]; cin >> text;
+	char text[13] = "TRIS-1-22-18";
 	int count = 0;
 
 	for (int i = 138; i < fileSize; i += 4) {
