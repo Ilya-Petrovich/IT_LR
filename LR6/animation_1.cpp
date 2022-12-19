@@ -1,5 +1,6 @@
 ﻿#include <iostream>
 #include <unistd.h>
+
 using namespace std;
 
 void current(string arr[]);
@@ -23,18 +24,18 @@ int main()
 	//system("clear");	
 	string S[]
 	{ 
-        	"   ()()",     //0
-        	"   ()()",     //1
-        	"   ()()",     //2
-        	"   |..|",     //3
-        	"  \\|  |/",    //4
-        	"  /|UU|\\",    //5
-        	"  --\\/--",    //6
-        	" /  ||  \\",    //7
+        	"   ()()   ",     //0
+        	"   ()()   ",     //1
+        	"   ()()   ",     //2
+        	"   |..|   ",     //3
+        	"  \\|  |/  ",    //4
+        	"  /|UU|\\  ",    //5
+        	"  --\\/--  ",    //6
+        	" /  ||  \\ ",    //7
         	"/   ||   \\",    //8
-        	"    /\\",    //9
-        	"    ||",     //10
-        	"   _||_",     //11
+        	"    /\\    ",    //9
+        	"    ||    ",     //10
+        	"   _||_   ",     //11
 	};
 	void (*func[14])(string[]) = { firstStage, secondStage, thirdStage, fourthStage, fifthStage, sixthStage, seventhStage, eightStage, nineStage, tenStage, elevenStage, twelveStage, thirteenStage, finalStage};
 	for(int i = 0; i < 2; i++){
@@ -56,56 +57,56 @@ void current(string arr[]) {
 }
 
 void firstStage(string arr[]) {
-	arr[6] = " ---\\/---";
+	arr[6] = " ---\\/--- ";
 	arr[7] = "/   ||   \\";
-	arr[8] = "    ||";
+	arr[8] = "    ||     ";
 }
 
 void secondStage(string arr[]) {
-	arr[6] = "  --\\/---- ";
-	arr[7] = " /  ||";
-	arr[8] = "/   ||";
+	arr[6] = "  --\\/----";
+	arr[7] = " /  ||    ";
+	arr[8] = "/   ||    ";
 }
 
 void thirdStage(string arr[]) {
 	arr[5] = "  /|UU|\\ /";
 	arr[6] = " ---\\/--- ";
-	arr[7] = "/   ||";
-	arr[8] = "    ||";
+	arr[7] = "/   ||    ";
+	arr[8] = "    ||    ";
 }
 
 void fourthStage(string arr[]) {
 	arr[4] = "  \\|  |/ /";
-	arr[5] = "  /|UU|\\/";
-	arr[6] = "  --\\/--";
-	arr[7] = " /  ||";
-	arr[8] = "/   ||";
+	arr[5] = "  /|UU|\\/ ";
+	arr[6] = "  --\\/--  ";
+	arr[7] = " /  ||    ";
+	arr[8] = "/   ||    ";
 }
 
 void fifthStage(string arr[]) {
 	arr[4] = "  \\|  |/ *";
-	arr[5] = "  /|UU|\\/";
-	arr[6] = " ---\\/--";
-	arr[7] = "/   ||";
-	arr[8] = "    ||";
+	arr[5] = "  /|UU|\\/ ";
+	arr[6] = " ---\\/--  ";
+	arr[7] = "/   ||    ";
+	arr[8] = "    ||    ";
 }
 
 void sixthStage(string arr[]) {
 	arr[4] = "  \\|  |/ /";
-	arr[6] = "----\\/--";
-	arr[7] = "    ||";
+	arr[6] = "----\\/--  ";
+	arr[7] = "    ||    ";
 }
 
 void seventhStage(string arr[]) {
 	arr[4] = "  \\|  |/ *";
-	arr[5] = "\\ /|UU|\\/";
-	arr[6] = " ---\\/--";
+	arr[5] = "\\ /|UU|\\/ ";
+	arr[6] = " ---\\/--  ";
 }
 
 void eightStage(string arr[]) {
 	arr[4] = "\\ \\|  |/ /";
-	arr[5] = " \\/|UU|\\/";
-	arr[6] = "  --\\/--";
+	arr[5] = " \\/|UU|\\/ ";
+	arr[6] = "  --\\/--  ";
 }
 
 void nineStage(string arr[]) {
@@ -113,24 +114,24 @@ void nineStage(string arr[]) {
 }
 
 void tenStage(string arr[]) {
-	arr[4] = "  \\|  |/";
+	arr[4] = "  \\|  |/  ";
 	arr[5] = "* /|UU|\\ *";
-	arr[6] = " ---\\/---";
+	arr[6] = " ---\\/--- ";
 }
 
 void elevenStage(string arr[]) {
-	arr[5] = "  /|UU|\\";
+	arr[5] = "  /|UU|\\  ";
 	arr[6] = "*---\\/---*";
 }
 
 void twelveStage(string arr[]) {
-	arr[6] = " ---\\/---";
+	arr[6] = " ---\\/--- ";
 	arr[7] = "*   ||   *";
 }
 
 void thirteenStage(string arr[]) {
-	arr[6] = "  --\\/--";
-	arr[7] = " /  ||  \\";
+	arr[6] = "  --\\/--  ";
+	arr[7] = " /  ||  \\ ";
 	arr[8] = "*   ||   *";
 }
 
