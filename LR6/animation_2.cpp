@@ -344,7 +344,8 @@ while(1){
 	    }
 	   
 	    for (int i = 1; i <= 28; i++){
-	    	A  = "*" + aprobel(29 - i) + "    /\\    " + aprobel(i - 1) + "*\n";
+	    	
+			A  = "*" + aprobel(29 - i) + "    /\\    " + aprobel(i - 1) + "*\n";
 			A += "*" + aprobel(29 - i) + "   |oo|   " + aprobel(i - 1) + "*\n";
 			A += "*" + aprobel(29 - i) + "  (|..|)  " + aprobel(i - 1) + "*\n";
 			A += "*" + aprobel(29 - i) + "   |--|   " + aprobel(i - 1) + "*\n";
@@ -354,15 +355,14 @@ while(1){
 			A += "*" + aprobel(29 - i) + " / |  | \\ " + aprobel(i - 1) + "*\n";
 			A += "*" + aprobel(29 - i) + "/   \\/   \\" + aprobel(i - 1) + "*\n";
 			A += "*" + aprobel(29 - i) + "    /\\    " + aprobel(i - 1) + "*\n";
-			A += "*" + aprobel(29 - i) + "   / |    " + aprobel(i - 1) + "*\n";
-			A += "*" + aprobel(29 - i) + " _/  |_   " + aprobel(i - 1) + "*\n";
+			A += "*" + aprobel(29 - i) + "    | \\   " + aprobel(i - 1) + "*\n";
+			A += "*" + aprobel(29 - i) + "   _|  \\_ " + aprobel(i - 1) + "*\n";
 			cout << G + bprobel(6) + A + G;
-		
 		
 			
 		if (i != 28){
 		
-			A  = "*" + aprobel(28 - i) + "    /\\    " + aprobel(i) + "*\n";
+		A  = "*" + aprobel(28 - i) + "    /\\    " + aprobel(i) + "*\n";
 			A += "*" + aprobel(28 - i) + "   |oo|   " + aprobel(i) + "*\n";
 			A += "*" + aprobel(28 - i) + "  (|..|)  " + aprobel(i) + "*\n";
 			A += "*" + aprobel(28 - i) + "   |--|   " + aprobel(i) + "*\n";
@@ -372,8 +372,8 @@ while(1){
 			A += "*" + aprobel(28 - i) + " / |  | \\ " + aprobel(i) + "*\n";
 			A += "*" + aprobel(28 - i) + "/   \\/   \\" + aprobel(i) + "*\n";
 			A += "*" + aprobel(28 - i) + "    /\\    " + aprobel(i) + "*\n";
-			A += "*" + aprobel(28 - i) + "    | \\   " + aprobel(i) + "*\n";
-			A += "*" + aprobel(28 - i) + "   _|  \\_ " + aprobel(i) + "*\n";
+			A += "*" + aprobel(28 - i) + "   / |    " + aprobel(i) + "*\n";
+			A += "*" + aprobel(28 - i) + " _/  |_   " + aprobel(i) + "*\n";
 			cout << G + bprobel(6) + A + G;
 		}
 			A  = "*" + aprobel(28 - i) + "    /\\    " + aprobel( i) + "*\n";
