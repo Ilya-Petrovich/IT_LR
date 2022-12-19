@@ -10,7 +10,7 @@ int main()
 	std::cout << "Type the third number: ";
 	std::cin >> num_3;
 	if (num_1 < num_2 || num_2 <= 0 || num_1 < 0 || num_3 < 0) {
-		std::cout << "Invalid data";
+		std::cout << "Invalid data\n";
 		return 1;
 	} else {
 		std::cout << num_1 << " + " << num_2 << " = " << num_1 + num_2 << std::endl;
