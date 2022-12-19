@@ -24,7 +24,7 @@ int main()
 		std::cout << "Choose animation:" << std::endl;
 		std::cout << "Dance: \t\t\t1" << std::endl;
 		std::cout << "Run: \t\t\t2" << std::endl;
-		std::cout << "Sit down and jump: \t3\n";
+		std::cout << "Sit down and jump: \t3" << std::endl;
 		std::cout << "Throw a ball: \t\t4" << std::endl << std::endl;
 		std::cout << "Enter 5 for exit." << std::endl;
 		cin >> n;
