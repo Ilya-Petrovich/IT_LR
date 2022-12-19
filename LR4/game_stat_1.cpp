@@ -1,10 +1,9 @@
 #include <iostream>
-
 using namespace std;
 
 int main() {
 	int speed, fuel;
-	cout << "How much fuel do you have at start? "; cin >> fuel; cout << endl;
+	cout << "How much fuel do you have at start? "; cin >> fuel; putchar('\n');
 	int fuelCapacity = 50;
 	if (fuel >= 0 && fuel <= fuelCapacity) {
 		if (fuel < 25) {
