@@ -19,56 +19,35 @@ void tenStage(string arr[]);
 void elevenStage(string arr[]);
 void twelveStage(string arr[]);
 void thirteenStage(string arr[]);
+void finalStage(string arr[]);
 
 int main()
 {
-    string S[]
-    { 
-        "   ()()   ",     //0
-        "   ()()   ",     //1
-        "   ()()   ",     //2
-        "   |..|   ",     //3
-        "  \\|  |/  ",    //4
-        "  /|UU|\\  ",    //5
-        "  --\\/--  ",    //6
-        " /  ||  \\ ",    //7
-        "/   ||   \\",    //8
-        "    /\\    ",    //9
-        "    ||    ",     //10
-        "   _||_   ",     //11
-    };
-    //void (*func[6]) = { firstStage, secondStage, thirdStage, fourthStage, fifthStage, sixthStage};
-	for (int i = 0; i < 2; i++) {
-		current(S);
-		firstStage(S);
-		current(S);
-		secondStage(S);
-		current(S);
-		thirdStage(S);
-		current(S);
-		fourthStage(S);
-		current(S);
-		fifthStage(S);
-		current(S);
-		sixthStage(S);
-		current(S);
-		seventhStage(S);
-		current(S);
-		eightStage(S);
-		current(S);
-		nineStage(S);
-		current(S);
-		tenStage(S);
-		current(S);
-		elevenStage(S);
-		current(S);
-		twelveStage(S);
-		current(S);
-		thirteenStage(S);
+	//system("clear");	
+	string S[]
+	{ 
+        	"   ()()   ",     //0
+        	"   ()()   ",     //1
+        	"   ()()   ",     //2
+        	"   |..|   ",     //3
+        	"  \\|  |/  ",    //4
+        	"  /|UU|\\  ",    //5
+        	"  --\\/--  ",    //6
+        	" /  ||  \\ ",    //7
+        	"/   ||   \\",    //8
+        	"    /\\    ",    //9
+        	"    ||    ",     //10
+        	"   _||_   ",     //11
+	};
+	void (*func[14])(string[]) = { firstStage, secondStage, thirdStage, fourthStage, fifthStage, sixthStage, seventhStage, eightStage, nineStage, tenStage, elevenStage, twelveStage, thirteenStage, finalStage};
+	for(int i = 0; i < 2; i++){
+		for(int j = 0; j < 14; j ++){
+			current(S);
+			func[j](S);
+			//system("clear");
+			
+		}
 	}
-	current(S);
-	firstStage(S);
-	current(S);
 	return 0;
 }
 
@@ -76,8 +55,7 @@ void current(string arr[]) {
 	for (int i = 0; i < 12; i++) {
 		cout << arr[i] << endl;
 	}
-	//Sleep(1000);
-	//system("cls");
+	//sleep(1);
 }
 
 void firstStage(string arr[]) {
@@ -139,12 +117,12 @@ void nineStage(string arr[]) {
 
 void tenStage(string arr[]) {
 	arr[4] = "  \\|  |/  ";
-	arr[5] = "*\\/|UU|\\ *";
+	arr[5] = "* /|UU|\\ *";
 	arr[6] = " ---\\/--- ";
 }
 
 void elevenStage(string arr[]) {
-	arr[5] = " \\/|UU|\\  ";
+	arr[5] = "  /|UU|\\  ";
 	arr[6] = "*---\\/---*";
 }
 
@@ -155,6 +133,10 @@ void twelveStage(string arr[]) {
 
 void thirteenStage(string arr[]) {
 	arr[6] = "  --\\/--  ";
-	arr[7] = " /  ||   \\ ";
-	arr[8] = "*   ||    *";
+	arr[7] = " /  ||  \\ ";
+	arr[8] = "*   ||   *";
+}
+
+void finalStage(string arr[]) {
+	arr[8] = "/   ||   \\";
 }
