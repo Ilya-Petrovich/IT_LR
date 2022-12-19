@@ -1,6 +1,6 @@
 #include <iostream>
 //#include <Windows.h>
-include <unistd.h>
+//include <unistd.h>
 using namespace std;
 void ShowAnim(char anim[12][11], int height, int width) {
 	for (int i = 0; i < height; i++) {
