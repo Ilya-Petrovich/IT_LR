@@ -6,7 +6,7 @@ int main() {
 	float fuelConsumption, s, dis, dis1, lit, l2;
 	int fuel, speed, h=0;
 
-	cout << "How much fuel do you have at start?";
+	cout << "How much fuel do you have at start? ";
 	cin >> fuel;
 
 	if (fuel < 50 and fuel > 0) {
