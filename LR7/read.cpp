@@ -1,4 +1,4 @@
-#define _CRT_SECURE_NO_WARNINGS
+//#define _CRT_SECURE_NO_WARNINGS
 #include <iostream>
 #include <stdio.h>
 
@@ -11,8 +11,9 @@ void writeText(char* buff, long fileSize);
 int main() {
 
 	FILE * file;
-	char filename[100] = "image.bmp";
 
+	char filename[100];
+	cin >> filename;
 	file = fopen(filename, "rb");
 
 	long fileSize;
@@ -23,12 +24,14 @@ int main() {
 	char* buff = new char[fileSize];
 	fread(buff, sizeof(char), fileSize, file);
 	readText(buff, fileSize);
-	fclose(file);
+
+	/*fclose(file);
 
 	file = fopen(filename, "wb");
 	changeColor(buff, fileSize);
 	writeText(buff, fileSize);
-	fwrite(buff, sizeof(char), fileSize, file);
+	fwrite(buff, sizeof(char), fileSize, file);*/
+
 	fclose(file);
 
 	delete[] buff;
