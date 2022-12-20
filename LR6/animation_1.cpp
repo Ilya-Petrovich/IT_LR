@@ -81,7 +81,6 @@ int main() {
 
 	for (int i = 0; i < 12; i++)
 	{
-		cout << " ";
 		for (int j = 0; j < 10; j++)
 		{
 			cout << chars[i][j];
@@ -97,7 +96,7 @@ int main() {
 
 	for (int i = 0; i < 12; i++)
 	{
-		cout << " ";
+		
 		for (int j = 0; j < 10; j++)
 		{
 			cout << chars[i][j];
@@ -113,7 +112,7 @@ int main() {
 
 	for (int i = 0; i < 12; i++)
 	{
-		cout << " ";
+		
 		for (int j = 0; j < 10; j++)
 		{
 			cout << chars[i][j];
@@ -129,7 +128,7 @@ int main() {
 
 	for (int i = 0; i < 12; i++)
 	{
-		cout << " ";
+		
 		for (int j = 0; j < 10; j++)
 		{
 			cout << chars[i][j];
@@ -145,7 +144,7 @@ int main() {
 
 	for (int i = 0; i < 12; i++)
 	{
-		cout << " ";
+		
 		for (int j = 0; j < 10; j++)
 		{
 			cout << chars[i][j];
@@ -160,7 +159,7 @@ int main() {
 
 	for (int i = 0; i < 12; i++)
 	{
-		cout << " ";
+		
 		for (int j = 0; j < 10; j++)
 		{
 			cout << chars[i][j];
@@ -176,7 +175,7 @@ int main() {
 
 	for (int i = 0; i < 12; i++)
 	{
-		cout << " ";
+		
 		for (int j = 0; j < 10; j++)
 		{
 			cout << chars[i][j];
@@ -192,7 +191,7 @@ int main() {
 
 	for (int i = 0; i < 12; i++)
 	{
-		cout << " ";
+		
 		for (int j = 0; j < 10; j++)
 		{
 			cout << chars[i][j];
@@ -207,7 +206,7 @@ int main() {
 
 	for (int i = 0; i < 12; i++)
 	{
-		cout << " ";
+	
 		for (int j = 0; j < 10; j++)
 		{
 			cout << chars[i][j];
@@ -223,7 +222,7 @@ int main() {
 
 	for (int i = 0; i < 12; i++)
 	{
-		cout << " ";
+	
 		for (int j = 0; j < 10; j++)
 		{
 			cout << chars[i][j];
@@ -237,7 +236,7 @@ int main() {
 	chars[8][0] = '/', chars[8][9] = '\\';
 	for (int i = 0; i < 12; i++)
 	{
-		cout << " ";
+		
 		for (int j = 0; j < 10; j++)
 		{
 			cout << chars[i][j];
@@ -253,7 +252,7 @@ int main() {
 
 	for (int i = 0; i < 12; i++)
 	{
-		cout << " ";
+		
 		for (int j = 0; j < 10; j++)
 		{
 			cout << chars[i][j];
@@ -269,7 +268,7 @@ int main() {
 
 	for (int i = 0; i < 12; i++)
 	{
-		cout << " ";
+	
 		for (int j = 0; j < 10; j++)
 		{
 			cout << chars[i][j];
@@ -286,7 +285,7 @@ int main() {
 
 	for (int i = 0; i < 12; i++)
 	{
-		cout << " ";
+		
 		for (int j = 0; j < 10; j++)
 		{
 			cout << chars[i][j];
@@ -301,7 +300,7 @@ int main() {
 
 	for (int i = 0; i < 12; i++)
 	{
-		cout << " ";
+		
 		for (int j = 0; j < 10; j++)
 		{
 			cout << chars[i][j];
@@ -316,7 +315,6 @@ int main() {
 
 	for (int i = 0; i < 12; i++)
 	{
-		cout << " ";
 		for (int j = 0; j < 10; j++)
 		{
 			cout << chars[i][j];
@@ -331,7 +329,6 @@ int main() {
 
 	for (int i = 0; i < 12; i++)
 	{
-		cout << " ";
 		for (int j = 0; j < 10; j++)
 		{
 			cout << chars[i][j];
@@ -346,7 +343,7 @@ int main() {
 
 	for (int i = 0; i < 12; i++)
 	{
-		cout << " ";
+		
 		for (int j = 0; j < 10; j++)
 		{
 			cout << chars[i][j];
@@ -361,7 +358,8 @@ int main() {
 
 	for (int i = 0; i < 12; i++)
 	{
-		cout << " ";
+		
+
 		for (int j = 0; j < 10; j++)
 		{
 			cout << chars[i][j];
@@ -375,7 +373,8 @@ int main() {
 
 	for (int i = 0; i < 12; i++)
 	{
-		cout << " ";
+	
+
 		for (int j = 0; j < 10; j++)
 		{
 			cout << chars[i][j];
@@ -390,7 +389,6 @@ int main() {
 
 	for (int i = 0; i < 12; i++)
 	{
-		cout << " ";
 		for (int j = 0; j < 10; j++)
 		{
 			cout << chars[i][j];
@@ -405,7 +403,7 @@ int main() {
 
 	for (int i = 0; i < 12; i++)
 	{
-		cout << " ";
+
 		for (int j = 0; j < 10; j++)
 		{
 			cout << chars[i][j];
@@ -419,7 +417,7 @@ int main() {
 
 	for (int i = 0; i < 12; i++)
 	{
-		cout << " ";
+		
 		for (int j = 0; j < 10; j++)
 		{
 			cout << chars[i][j];
@@ -434,7 +432,7 @@ int main() {
 
 	for (int i = 0; i < 12; i++)
 	{
-		cout << " ";
+	
 		for (int j = 0; j < 10; j++)
 		{
 			cout << chars[i][j];
@@ -447,7 +445,7 @@ int main() {
 	chars[8][0] = '/', chars[8][9] = '\\';
 	for (int i = 0; i < 12; i++)
 	{
-		cout << " ";
+	
 		for (int j = 0; j < 10; j++)
 		{
 			cout << chars[i][j];
