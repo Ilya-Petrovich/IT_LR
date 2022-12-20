@@ -3,7 +3,7 @@
 using namespace std;
 
 int main() {
-	int i, j,s;
+	int i, j, s;
 	s = 0;
 	char chars[12][10] = {
 	{' ',' ',' ','_','[',']','_',' ',' ',' '},
@@ -19,10 +19,8 @@ int main() {
 	{' ',' ',' ',' ','|','|',' ',' ',' ',' '},
 	{' ',' ',' ','_','|','|','_',' ',' ',' '}
 	};
-
 	for (int i = 0; i < 12; i++)
 	{
-		cout << " ";
 		for (int j = 0; j < 10; j++)
 		{
 			cout << chars[i][j];
@@ -31,13 +29,10 @@ int main() {
 	}
 	//первая
 
-
-	system("cls");
 	chars[7][0] = '/', chars[7][9] = '\\', chars[6][1] = '-', chars[6][8] = '-',
 		chars[8][0] = ' ', chars[7][8] = ' ', chars[8][9] = ' ', chars[7][1] = ' ';
 	for (int i = 0; i < 12; i++)
 	{
-		cout << " ";
 		for (int j = 0; j < 10; j++)
 		{
 			cout << chars[i][j];
@@ -46,7 +41,7 @@ int main() {
 	}
 	//вторая
 
-	system("cls");
+	//system("cls");
 
 
 	chars[7][1] = '/', chars[8][0] = '/', chars[6][9] = '-',
@@ -54,7 +49,6 @@ int main() {
 
 	for (int i = 0; i < 12; i++)
 	{
-		cout << " ";
 		for (int j = 0; j < 10; j++)
 		{
 			cout << chars[i][j];
@@ -63,7 +57,7 @@ int main() {
 	}
 	//третья
 
-	system("cls");
+	//system("cls");
 
 
 	chars[7][0] = '/', chars[6][1] = '-', chars[5][9] = '/',
@@ -71,7 +65,7 @@ int main() {
 
 	for (int i = 0; i < 12; i++)
 	{
-		cout << " ";
+
 		for (int j = 0; j < 10; j++)
 		{
 			cout << chars[i][j];
@@ -80,7 +74,7 @@ int main() {
 	}
 	//четвертая
 
-	system("cls");
+	//system("cls");
 
 	chars[8][0] = '/', chars[7][1] = '/', chars[5][8] = '/', chars[4][9] = '/',
 		chars[7][0] = ' ', chars[6][1] = ' ', chars[6][8] = ' ', chars[5][9] = ' ';
@@ -96,7 +90,7 @@ int main() {
 	}
 	//пятая
 
-	system("cls");
+	//system("cls");
 
 	chars[7][0] = '/', chars[6][1] = '-', chars[4][9] = '*',
 		chars[8][0] = ' ', chars[7][1] = ' ';
@@ -112,7 +106,7 @@ int main() {
 	}
 	//шестая
 
-	system("cls");
+	//system("cls");
 
 	chars[6][0] = '-', chars[4][9] = '/',
 		chars[7][0] = ' ';
@@ -128,7 +122,7 @@ int main() {
 	}
 	//седьмая
 
-	system("cls");
+	//system("cls");
 
 	chars[5][0] = '\\', chars[4][9] = '*',
 		chars[6][0] = ' ';
@@ -144,7 +138,7 @@ int main() {
 	}
 	//восьмая
 
-	system("cls");
+	//system("cls");
 
 	chars[4][0] = '\\', chars[5][1] = '\\', chars[4][9] = '/',
 		chars[6][1] = ' ', chars[5][0] = ' ';
@@ -160,7 +154,7 @@ int main() {
 	}
 	//девятая
 
-	system("cls");
+	//system("cls");
 
 	chars[4][0] = '*', chars[5][1] = '\\', chars[4][9] = '*';
 
@@ -175,7 +169,7 @@ int main() {
 	}
 	//десятая
 
-	system("cls");
+	//system("cls");
 
 	chars[5][0] = '*', chars[6][1] = '-', chars[5][9] = '*', chars[6][8] = '-',
 		chars[4][0] = ' ', chars[4][9] = ' ', chars[5][1] = ' ', chars[5][8] = ' ';
@@ -191,7 +185,7 @@ int main() {
 	}
 	//одиннадцатая
 
-	system("cls");
+	//system("cls");
 
 	chars[6][0] = '*', chars[6][9] = '*',
 		chars[5][0] = ' ', chars[5][9] = ' ';
@@ -206,7 +200,7 @@ int main() {
 		cout << endl;
 	}
 	//двенадцатая
-	system("cls");
+	//system("cls");
 
 	chars[7][0] = '*', chars[7][9] = '*',
 		chars[6][0] = ' ', chars[6][9] = ' ';
@@ -222,7 +216,7 @@ int main() {
 	}
 	//тринадцатая
 
-	system("cls");
+	//system("cls");
 
 	chars[8][0] = '*', chars[8][9] = '*', chars[7][1] = '/', chars[7][8] = '\\',
 		chars[7][0] = ' ', chars[7][9] = ' ', chars[6][1] = ' ', chars[6][8] = ' ';
@@ -238,7 +232,7 @@ int main() {
 	}
 	//четырнадцатая
 
-	system("cls");
+	//system("cls");
 
 	chars[8][0] = '/', chars[8][9] = '\\';
 	for (int i = 0; i < 12; i++)
@@ -253,7 +247,7 @@ int main() {
 	//первая
 
 
-	system("cls");
+	//system("cls");
 	chars[7][0] = '/', chars[7][9] = '\\', chars[6][1] = '-', chars[6][8] = '-',
 		chars[8][0] = ' ', chars[7][8] = ' ', chars[8][9] = ' ', chars[7][1] = ' ';
 
@@ -267,7 +261,7 @@ int main() {
 		cout << endl;
 	}
 	//вторая
-	system("cls");
+	//system("cls");
 
 
 	chars[7][1] = '/', chars[8][0] = '/', chars[6][9] = '-',
@@ -284,7 +278,7 @@ int main() {
 	}
 	//третья
 
-	system("cls");
+	//system("cls");
 
 
 	chars[7][0] = '/', chars[6][1] = '-', chars[5][9] = '/',
@@ -300,7 +294,7 @@ int main() {
 		cout << endl;
 	}
 	//четвертая
-	system("cls");
+	//system("cls");
 
 	chars[8][0] = '/', chars[7][1] = '/', chars[5][8] = '/', chars[4][9] = '/',
 		chars[7][0] = ' ', chars[6][1] = ' ', chars[6][8] = ' ', chars[5][9] = ' ';
@@ -315,7 +309,7 @@ int main() {
 		cout << endl;
 	}
 	//пятая
-	system("cls");
+	//system("cls");
 
 	chars[7][0] = '/', chars[6][1] = '-', chars[4][9] = '*',
 		chars[8][0] = ' ', chars[7][1] = ' ';
@@ -330,7 +324,7 @@ int main() {
 		cout << endl;
 	}
 	//шестая
-	system("cls");
+	//system("cls");
 
 	chars[6][0] = '-', chars[4][9] = '/',
 		chars[7][0] = ' ';
@@ -345,7 +339,7 @@ int main() {
 		cout << endl;
 	}
 	//седьмая
-	system("cls");
+	//system("cls");
 
 	chars[5][0] = '\\', chars[4][9] = '*',
 		chars[6][0] = ' ';
@@ -360,7 +354,7 @@ int main() {
 		cout << endl;
 	}
 	//восьмая
-	system("cls");
+	//system("cls");
 
 	chars[4][0] = '\\', chars[5][1] = '\\', chars[4][9] = '/',
 		chars[6][1] = ' ', chars[5][0] = ' ';
@@ -375,7 +369,7 @@ int main() {
 		cout << endl;
 	}
 	//девятая
-	system("cls");
+	//system("cls");
 
 	chars[4][0] = '*', chars[5][1] = '\\', chars[4][9] = '*';
 
@@ -389,7 +383,7 @@ int main() {
 		cout << endl;
 	}
 	//десятая
-	system("cls");
+	//system("cls");
 
 	chars[5][0] = '*', chars[6][1] = '-', chars[5][9] = '*', chars[6][8] = '-',
 		chars[4][0] = ' ', chars[4][9] = ' ', chars[5][1] = ' ', chars[5][8] = ' ';
@@ -404,7 +398,7 @@ int main() {
 		cout << endl;
 	}
 	//одиннадцатая
-	system("cls");
+	//system("cls");
 
 	chars[6][0] = '*', chars[6][9] = '*',
 		chars[5][0] = ' ', chars[5][9] = ' ';
@@ -419,7 +413,7 @@ int main() {
 		cout << endl;
 	}
 	//двенадцатая
-	system("cls");
+	//system("cls");
 	chars[7][0] = '*', chars[7][9] = '*',
 		chars[6][0] = ' ', chars[6][9] = ' ';
 
@@ -433,7 +427,7 @@ int main() {
 		cout << endl;
 	}
 	//тринадцатая
-	system("cls");
+	//system("cls");
 
 	chars[8][0] = '*', chars[8][9] = '*', chars[7][1] = '/', chars[7][8] = '\\',
 		chars[7][0] = ' ', chars[7][9] = ' ', chars[6][1] = ' ', chars[6][8] = ' ';
@@ -448,7 +442,7 @@ int main() {
 		cout << endl;
 	}
 	//четырнадцатая
-	system("cls");
+	//system("cls");
 
 	chars[8][0] = '/', chars[8][9] = '\\';
 	for (int i = 0; i < 12; i++)
