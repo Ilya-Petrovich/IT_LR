@@ -31,7 +31,6 @@ int main() {
 	fwrite(buff, sizeof(char), fileSize, file);
 	fclose(file);
 
-	free(buff);
 	delete[] buff;
 
 	return 0;
