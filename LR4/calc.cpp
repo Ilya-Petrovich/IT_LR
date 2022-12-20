@@ -11,7 +11,7 @@ int main()
 	cin >> num2;
 	cout << "Type the third number: ";
 	cin >> num3;
-	if ((num1 > num2) and (num 1>=0) and (num2 > 0) and (num3 >=0)) {
+	if ((num1 > num2) and (num1 >= 0) and (num2 > 0) and (num3 >= 0)) {
 		std::cout << num1 << " + " << num2 << " = " << num1 + num2 << std::endl;
 		std::cout << num1 << " - " << num2 << " = " << num1 - num2 << std::endl;
 		std::cout << num1 << " * " << num2 << " = " << num1 * num2 << std::endl;
