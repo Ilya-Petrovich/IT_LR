@@ -1,79 +1,38 @@
-#include <iostream>
-#include <stdio.h>
-
-using namespace std;
-void readText(char* buff, long fileSize);
-void changeColor(char* buff, long fileSize);
-void writeText(char* buff, long fileSize);
-
-int main() {
-
-	FILE* file;
-
-	char filename[10];
-	cin >> filename;
-	file = fopen(filename, "rb");
-
-	long fileSize;
-	fseek(file, 0, SEEK_END);
-	fileSize = ftell(file);
-	rewind(file);
-
-	char* buff = new char[fileSize]();
-	fread(buff, sizeof(char), fileSize, file);
-	readText(buff, fileSize);
-
-	fclose(file);
-	cin >> filename;
-	file = fopen(filename, "wb");
-	changeColor(buff, fileSize);
-	writeText(buff, fileSize);
-	fwrite(buff, sizeof(char), fileSize, file);
-	fclose(file);
-	delete[] buff;
-	return 0;
-}
-void readText(char* buff, long fileSize) {
-	char firstByte, secondByte, thirdByte, fourthByte, sign;
-	int mask = 0x03;
-
-	for (int i = 138; i < fileSize; i += 4) {
-		firstByte = (buff[i] & mask) << 6;	// first byte - 01001101
-		secondByte = (buff[i + 1] & mask) << 4;	// second byte - 01001100
-		thirdByte = (buff[i + 2] & mask) << 2;	// third byte - 11011110
-		fourthByte = buff[i + 3] & mask;
-		sign = firstByte | secondByte | thirdByte | fourthByte;
-		printf("%c", sign);
-	}
-	cout << endl;
-}
-void changeColor(char* buff, long fileSize) {
-
-	for (int i = 138; i < fileSize; i += 3) {
-		buff[i] = 0;	// first byte - 01001101
-		buff[i + 1] = 0;	// second byte - 01001100
-		buff[i + 2] = 139;	// third byte - 11011110
-	}
-}
-void writeText(char* buff, long fileSize) {
-
-	char text[12]; cin >> text;
-	int count = 0;
-
-	for (int i = 138; i < fileSize; i += 4) {
-
-		if (count < 12) {
-			buff[i] = (buff[i] & 0xfc) | ((text[count] >> 6) & 0x3);
-			buff[i + 1] = (buff[i + 1] & 0xfc) | ((text[count] >> 4) & 0x3);
-			buff[i + 2] = (buff[i + 2] & 0xfc) | ((text[count] >> 2) & 0x3);
-			buff[i + 3] = (buff[i + 3] & 0xfc) | (text[count] & 0x3);
-		}
-		else {
-			buff[i] = buff[i] & 0xfc;
-			buff[i + 1] = (buff[i + 1] & 0xfc) | 0x2;
-			buff[i + 2] = buff[i + 2] & 0xfc;
-			buff[i + 3] = buff[i + 3] & 0xfc;
-		}
-		count++;
-	}
+#include <stdio.h> 
+#include <iostream> 
+ 
+using namespace std; 
+ 
+void ReadText(char* buff, long fSize); 
+ 
+int main() { 
+    FILE* file; 
+    char filename[100]; 
+    cout << "Input file name"; cin >> filename; 
+    file = fopen(filename, "rb"); 
+ 
+    long fSize; 
+    fseek(file, 0, SEEK_END); 
+    fSize = ftell(file); 
+    rewind(file); 
+ 
+    char* buff = new char[fSize](); 
+    fread(buff, 1, fSize, file); 
+    ReadText(buff, fSize); 
+ 
+    fclose(file); 
+    free(buff); 
+} 
+ 
+void ReadText(char* buff, long fSize) { 
+    int i = fSize - 1200; 
+ 
+    while (i < fSize) { 
+        int first_byte = buff[i] & 3; 
+        int second_byte = buff[i + 1] & 3; 
+        int third_byte = buff[i + 2] & 3; 
+        int fourth_byte = buff[i + 3] & 3; 
+        cout << (char)((first_byte << 6) | (second_byte << 4) | (third_byte << 2) | fourth_byte); 
+        i += 4; 
+    } 
 }
