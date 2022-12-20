@@ -46,7 +46,7 @@ int main() {
 	cout << "Your speed before start: " << speed << " km/h" << endl;
 
 	if (speed == 0) {
-		fuelConsuption = 0, s = 0, time = 0, fuel2 = fuel, fuel = 0;
+		fuelConsuption = 0, s = 0, time = 0, fuel_0 = fuel, fuel = 0;
 	}
 	else {
 		fuelConsuption = (speed / 10.0) * (speed / 10.0) / 4.0 - 4.5 * (speed / 10.0) + 30.0;
