@@ -3,11 +3,11 @@
 using namespace std;
 int main() {
 	int num1, num2, num3;
-	std::cout << "enter  1st number ";
+	std::cout << "Type the first number: ";
 	std::cin >> num1;
-	std::cout << "enter  2nd number ";
+	std::cout << "Type the second number: ";
 	std::cin >> num2;
-	std::cout << "enter  3rd number ";
+	std::cout << "Type the third number: ";
 	std::cin >> num3;
 	if (num1 > num2) {
 		std::cout << num1 << " + " << num2 << " = " << num1 + num2 << std::endl;
