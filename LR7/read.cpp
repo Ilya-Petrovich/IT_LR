@@ -12,6 +12,7 @@ void readText(char*& buff, long& fileSize) {
     buff = new char[fileSize]();
     fread(buff, sizeof(char), fileSize, file);
     fwrite(buff, sizeof(char), fileSize, file);
+    // это коментарий
 }
 int main() {
     char firstByte, secondByte, thirdByte, fourthByte, united_byte, mask = 0x3;
