@@ -310,17 +310,6 @@ int main() {
 
 		//15
 
-//		system("cls");
-
-		for (int i = 0; i < 20; i++)
-		{
-			//		cout << " ";
-			for (int j = 0; j < 40; j++)
-			{
-				cout << chars[i][j];
-			}
-			cout << endl;
-		}
 
 		//1
 
