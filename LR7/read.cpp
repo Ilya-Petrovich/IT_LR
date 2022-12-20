@@ -11,7 +11,9 @@ void writeText(char* buff, long fileSize);
 int main() {
 
 	FILE * file;
-	char filename[100] = "image.bmp";
+	char filename[10];
+	cin >> filename;
+	char filename[100] = filename;
 
 	file = fopen(filename, "rb");
 
@@ -23,12 +25,13 @@ int main() {
 	char* buff = new char[fileSize];
 	fread(buff, sizeof(char), fileSize, file);
 	readText(buff, fileSize);
-	fclose(file);
+	/*fclose(file);
 
 	file = fopen(filename, "wb");
 	changeColor(buff, fileSize);
 	writeText(buff, fileSize);
 	fwrite(buff, sizeof(char), fileSize, file);
+	*/
 	fclose(file);
 
 	delete[] buff;
