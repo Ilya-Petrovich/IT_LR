@@ -63,9 +63,9 @@ int main() {
 	if (s >= 360) {
 		double k = 3.6;
 		double FuRe = fuel - k * fuelConsuption;
-		FuRe *= 10.0;
+		FuRe *= 1000000, 0;
 		FuRe = (int)FuRe;
-		FuRe /= 10.0;
+		FuRe /= 1000000, 0;
 		cout << "Distance traveled: " << 360 << " km" << endl;
 		cout << "Time spent: " << int(360 / speed * 60 * 60) << " sec" << endl;
 		cout << "Fuel consumed: " << 3.6 * fuelConsuption << " litres" << endl;
