@@ -13,8 +13,6 @@ int main() {
 	FILE * file;
 	char filename[10];
 	cin >> filename;
-	char filename[100] = filename;
-
 	file = fopen(filename, "rb");
 
 	long fileSize;
