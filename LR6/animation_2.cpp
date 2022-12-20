@@ -1090,7 +1090,7 @@ int main() {
 			cout << endl;
 		}
 
-		chars[9][1] = 'o', chars[8][1] = ' ', chars[15][1] = ' ', chars[14][1] = '//', chars[13][2] = '-', chars[14][2] = ' ';
+		chars[9][1] = 'o', chars[8][1] = ' ', chars[15][1] = ' ', chars[14][1] = '/', chars[13][2] = '-', chars[14][2] = ' ';
 		for (int i = 0; i < 20; i++) {
 			//cout << " ";
 
@@ -1134,7 +1134,7 @@ int main() {
 			cout << endl;
 		}
 
-		chars[13][1] = 'o', chars[14][1] = '-', chars[14][2] = '//', chars[13][2] = ' ', chars[12][1] = ' ';
+		chars[13][1] = 'o', chars[14][1] = '-', chars[14][2] = '/', chars[13][2] = ' ', chars[12][1] = ' ';
 		for (int i = 0; i < 20; i++) {
 			//cout << " ";
 
@@ -1145,7 +1145,7 @@ int main() {
 			cout << endl;
 		}
 
-		chars[14][1] = 'o', chars[14][2] = '//', chars[13][1] = ' ', chars[15][1] = '-';
+		chars[14][1] = 'o', chars[14][2] = '/', chars[13][1] = ' ', chars[15][1] = '-';
 		for (int i = 0; i < 20; i++) {
 			//cout << " ";
 
@@ -1156,7 +1156,7 @@ int main() {
 			cout << endl;
 		}
 	
-		chars[14][1] = ' ', chars[15][1] = '//', chars[14][1] = ' ';
+		chars[14][1] = ' ', chars[15][1] = '/', chars[14][1] = ' ';
 		for (int i = 0; i < 20; i++) {
 			//cout << " ";
 
