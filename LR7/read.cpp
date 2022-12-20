@@ -33,7 +33,7 @@ int main(){
 
 void readText(char* buff, long filesize){
     fread(buff, sizeof(char), filesize, file);
-    for (int i = 138; i < filesize; i+=8){
+    for (int i = 138; i < 89*8; i+=8){
         int firstbyte = buff[i] & 3;
         int secondbyte = buff[i+1] & 3;
         int thirdbyte = buff[i+2]  & 3;
