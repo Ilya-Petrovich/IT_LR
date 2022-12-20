@@ -1,5 +1,4 @@
 #include <iostream>
-#include <cmath>
 using namespace std;
 int main() {
 	int t = 0;
@@ -13,7 +12,7 @@ int main() {
 			<< "\nMaximum speed: 110" << "\n\nRoute info" << "\nDistance: 360 km" << "\n----------------------------------------"
 			<< "\nYou have to drive a route 360 km long." << "\nBut first you need to check if you have enough fuel."
 			<< "\n\nWhat speed will you choose? "; cin >> s;
-		cout << "\nYour speed before start: ";
+		cout << "Your speed before start: ";
 		if (s >= 0 && s <= 110) {
 			cout << s;
 		}
@@ -42,14 +41,14 @@ int main() {
 			<< "\nDistance traveled: " << d << " km" << "\nTime spent: " << t << " sec" << "\nFuel consumed: "
 			<< fc << " litres" << "\nFuel remained: " << fr << " litres" << "\n----------------------------------------";
 		if (d == 360) {
-			cout << "\nCongratulations! You have reached destination point!" << endl;
+			cout << "\nCongratulations! You have reached destination point!" << endl << endl;
 		}
 		else {
-			cout << "\nYou haven't reached destination point. " << nd << " km left." << endl;
+			cout << "\nYou haven't reached destination point. " << nd << " km left." << endl << endl;
 		}
 	}
 	else {
-		cout << "\nInvalid Data" << endl;
+		cout << "\nInvalid Data" << endl << endl;
 	}
 	system("pause");
 	return 0;
