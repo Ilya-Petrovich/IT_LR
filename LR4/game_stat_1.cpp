@@ -105,11 +105,10 @@ int main() {
 			else {
 				if (speed != 0) {
 					cout << endl;
-					cout << "Invalid data" << endl;
+					cout << "Invalid data." << endl;
 				}
 			}
 	}
-	else cout << "Invalid data" << endl;
+	else cout << "Invalid data." << endl;
 
-	return 0;
 }
