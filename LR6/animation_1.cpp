@@ -1,10 +1,10 @@
 #include <iostream>
-#include <string>
-#include "unistd.h"
+//#include <string>
+//#include "windows.h"
 
 using namespace std;
 
-void dance (string* firstCond, int t);
+void dance(string* firstCond, int t);
 
 int main() {
 	string pers[12] = {
