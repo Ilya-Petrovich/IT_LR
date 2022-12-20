@@ -1011,7 +1011,7 @@ int main() {
 		//system("cls");
 		chars[7][10] = 'o', chars[8][10] = ' ';
 		for (int i = 0; i < 20; i++) {
-			cout << " ";
+			//cout << " ";
 
 			for (int j = 0; j < 40; j++) {
 
@@ -1025,7 +1025,7 @@ int main() {
 
 			chars[7 - l][10 - l] = ' ', chars[6 - l][9 - l] = 'o';
 			for (int i = 0; i < 20; i++) {
-				cout << " ";
+				//cout << " ";
 
 				for (int j = 0; j < 40; j++) {
 
