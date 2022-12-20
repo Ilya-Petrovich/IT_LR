@@ -109,6 +109,6 @@ int main() {
 				}
 			}
 	}
-	else cout << "Invalid data." << endl;
+	else cout << "/nInvalid data." << endl;
 
 }
