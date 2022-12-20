@@ -6,7 +6,7 @@ int main() {
 	float f, s, fct, d, fc = 0, fr = 0, nd;
 	cout << "How much fuel do you have at start? "; cin >> f;
 	if (f >= 0 && f <= 50) {
-		if (f < 25) {
+		if (f <= 25) {
 			f = f + 25;
 		}
 		cout << "\nCar stats" << "\nFuel: " << f << "\nFuel capacity: 50" << "\nFuel consumption: 0" << "\nSpeed: 0"
