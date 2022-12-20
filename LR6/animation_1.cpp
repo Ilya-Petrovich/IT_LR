@@ -59,7 +59,7 @@ void current(string arr[]) {
 void firstStage(string arr[]) {
 	arr[6] = " ---\\/--- ";
 	arr[7] = "/   ||   \\";
-	arr[8] = "    ||     ";
+	arr[8] = "    ||    ";
 }
 
 void secondStage(string arr[]) {
