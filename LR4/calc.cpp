@@ -1,37 +1,27 @@
-#include <iostream>  
-#include <cmath>  
- 
-using namespace std; 
-int main() 
-{ 
- 
-    setlocale(LC_ALL, "rus"); 
-    int num_1, num_2, num_3; 
-    std:cout << "Введите первое число:"; 
-    std::cin >> num_1; 
-    std::cout << "Введите второе число:"; 
-    std::cin >> num_2; 
-    std::cout << "Введите третье число:"; 
-    std::cin >> num_3; 
- 
-    std::cout << num_1 << " + " <<num_2 <<" = "<< num_1 + num_2 << std::endl; 
-    std::cout << num_1 << " - " << num_2 << " = " << num_1 - num_2 << std::endl; 
-    std::cout << num_1 << " * " << num_2 << " = " << num_1 * num_2 << std::endl;  
-    std::cout << num_1 << " / " << num_2 << " = " << num_1 / num_2 << std::endl; 
-    std::cout << num_1 << " % " << num_2 << " = " << num_1 % num_2 << std::endl; 
-    std::cout << num_1 << " + " << num_2 <<"* "<<num_3<<" = " << num_1 + num_2*num_3 << std::endl; 
-    std::cout <<"(" << num_1 << " + " << num_2 <<")"<< "* " << num_3 << " = " << (num_1 + num_2) * num_3 << std::endl; 
- 
-    if (num_1 > num_2) 
-    { 
-        std::cout << num_1 << "+" << num_2 << "=" << num_1 + num_2 << std::endl; 
- 
-        std::cout << num_1 << "-" << num_2 << "=" << num_1 - num_2 << std::endl; 
- 
-    } 
-    else { 
-        std::cout << "Недоступное значение" << std::endl; 
-    } 
- 
-    return 0; 
+#include <iostream>
+int main() {
+    int num_1, num_2, num_3;
+    std::cout << "Type the first number: ";
+    std::cin >> num_1;
+
+    std::cout << "Type the second number: ";
+    std::cin >> num_2;
+
+    std::cout << "Type the third number: ";
+    std::cin >> num_3;
+
+    if ((num_1 > num_2) && (num_2 > 0) && (num_1 >= 0) && (num_3 >= 0)) {
+        std::cout << num_1 << " + " << num_2 << " = " << num_1 + num_2 << std::endl;
+        std::cout << num_1 << " - " << num_2 << " = " << num_1 - num_2 << std::endl;
+        std::cout << num_1 << " * " << num_2 << " = " << num_1 * num_2 << std::endl;
+        std::cout << num_1 << " / " << num_2 << " = " << num_1 / num_2 << std::endl;
+        std::cout << num_1 << ".0" << " / " << num_2 << ".0" << " = " << double(num_1) / double(num_2) << std::endl;
+        std::cout << num_1 << " % " << num_2 << " = " << num_1 % num_2 << std::endl;
+        std::cout << num_1 << " + " << num_2 << " * " << num_3 << " = " << num_1 + num_2 * num_3 << std::endl;
+        std::cout << "(" << num_1 << " + " << num_2 << ")" << " * " << num_3 << " = " << (num_1 + num_2) * num_3 << std::endl;
+    }
+    else {
+        std::cout << "Invalid data" << std::endl;
+    }
+    return 0;
 }
