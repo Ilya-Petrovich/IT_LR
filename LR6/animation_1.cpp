@@ -1,5 +1,4 @@
 #include <iostream>
-//#include <string>
 //#include "windows.h"
 
 using namespace std;
@@ -111,7 +110,7 @@ void dance(string* firstCond, int t) {
 
 		pers[4] = "*  \\__/  *";
 		pers[5] = " \\  ||  / ";
-		pers[6] = "   | *|   ";
+		pers[6] = "  -| *|-  ";
 		//Sleep(t);
 		//system("cls");
 		for (int i = 0; i < 12; i++) cout << pers[i] << endl;
