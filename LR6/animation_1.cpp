@@ -1,10 +1,10 @@
 #include <iostream>
 #include <unistd.h>
 using namespace std;
-const int k = 12;
 int main()
 {
-	string s[k] = {
+	const int k = 12;
+	string anim[k] = {
 		"    /\\    ",
 		"   |oo|   ",
 		"  (|..|)  ",
@@ -20,66 +20,66 @@ int main()
 	};
 	for (int a = 0; a < 2; a++)
 	{
-		for (int a = 0; a < k; a++) cout << s[a] << "\n";
-		s[6] = " --| *|-- ";
-		s[7] = "/  |  |  \\";
-		s[8] = "    \\/    ";
-		for (int a = 0; a < k; a++) cout << s[a] << "\n";
-		s[6] = "  -| *|---";
-		s[7] = " / |  |   ";
-		s[8] = "/   \\/    ";
-		for (int a = 0; a < k; a++) cout << s[a] << "\n";
-		s[5] = "    ||   /";
-		s[6] = " --| *|-- ";
-		s[7] = "/  |  |   ";
-		s[8] = "    \\/    ";
-		for (int a = 0; a < k; a++) cout << s[a] << "\n";
-		s[4] = "   \\__/  /";
-		s[5] = "    ||  / ";
-		s[6] = "  -| *|-  ";
-		s[7] = " / |  |   ";
-		s[8] = "/   \\/    ";
-		for (int a = 0; a < k; a++) cout << s[a] << "\n";
-		s[4] = "   \\__/  *";
-		s[5] = "    ||  / ";
-		s[6] = " --| *|-  ";
-		s[7] = "/  |  |   ";
-		s[8] = "    \\/    ";
-		for (int a = 0; a < k; a++) cout << s[a] << "\n";
-		s[4] = "   \\__/  /";
-		s[5] = "    ||  / ";
-		s[6] = "---| *|-  ";
-		s[7] = "   |  |   ";
-		for (int a = 0; a < k; a++) cout << s[a] << "\n";
-		s[4] = "   \\__/  *";
-		s[5] = "\\   ||  / ";
-		s[6] = " --| *|-  ";
-		for (int a = 0; a < k; a++) cout << s[a] << "\n";
-		s[4] = "\\  \\__/  /";
-		s[5] = " \\  ||  / ";
-		s[6] = "  -| *|-  ";
-		for (int a = 0; a < k; a++) cout << s[a] << "\n";
-		s[4] = "*  \\__/  *";
-		s[5] = " \\  ||  / ";
-		s[6] = "  -| *|-  ";
-		for (int a = 0; a < k; a++) cout << s[a] << "\n";
-		s[4] = "   \\__/   ";
-		s[5] = "*   ||   *";
-		s[6] = " --| *|-- ";
-		for (int a = 0; a < k; a++) cout << s[a] << "\n";
-		s[5] = "    ||    ";
-		s[6] = "*--| *|--*";
-		for (int a = 0; a < k; a++) cout << s[a] << "\n";
-		s[6] = " --| *|-- ";
-		s[7] = "*  |  |  *";
-		for (int a = 0; a < k; a++) cout << s[a] << "\n";
-		s[6] = "  -| *|-  ";
-		s[7] = " / |  | \\ ";
-		s[8] = "*   \\/   *";
-		for (int a = 0; a < k; a++) cout << s[a] << "\n";
-		s[7] = " / |  | \\ ";
-		s[8] = "/   \\/   \\";
+		for (int a = 0; a < k; a++) cout << anim[a] << "\n";
+		anim[6] = " --| *|-- ";
+		anim[7] = "/  |  |  \\";
+		anim[8] = "    \\/    ";
+		for (int a = 0; a < k; a++) cout << anim[a] << "\n";
+		anim[6] = "  -| *|---";
+		anim[7] = " / |  |   ";
+		anim[8] = "/   \\/    ";
+		for (int a = 0; a < k; a++) cout << anim[a] << "\n";
+		anim[5] = "    ||   /";
+		anim[6] = " --| *|-- ";
+		anim[7] = "/  |  |   ";
+		anim[8] = "    \\/    ";
+		for (int a = 0; a < k; a++) cout << anim[a] << "\n";
+		anim[4] = "   \\__/  /";
+		anim[5] = "    ||  / ";
+		anim[6] = "  -| *|-  ";
+		anim[7] = " / |  |   ";
+		anim[8] = "/   \\/    ";
+		for (int a = 0; a < k; a++) cout << anim[a] << "\n";
+		anim[4] = "   \\__/  *";
+		anim[5] = "    ||  / ";
+		anim[6] = " --| *|-  ";
+		anim[7] = "/  |  |   ";
+		anim[8] = "    \\/    ";
+		for (int a = 0; a < k; a++) cout << anim[a] << "\n";
+		anim[4] = "   \\__/  /";
+		anim[5] = "    ||  / ";
+		anim[6] = "---| *|-  ";
+		anim[7] = "   |  |   ";
+		for (int a = 0; a < k; a++) cout << anim[a] << "\n";
+		anim[4] = "   \\__/  *";
+		anim[5] = "\\   ||  / ";
+		anim[6] = " --| *|-  ";
+		for (int a = 0; a < k; a++) cout << anim[a] << "\n";
+		anim[4] = "\\  \\__/  /";
+		anim[5] = " \\  ||  / ";
+		anim[6] = "  -| *|-  ";
+		for (int a = 0; a < k; a++) cout << anim[a] << "\n";
+		anim[4] = "*  \\__/  *";
+		anim[5] = " \\  ||  / ";
+		anim[6] = "  -| *|-  ";
+		for (int a = 0; a < k; a++) cout << anim[a] << "\n";
+		anim[4] = "   \\__/   ";
+		anim[5] = "*   ||   *";
+		anim[6] = " --| *|-- ";
+		for (int a = 0; a < k; a++) cout << anim[a] << "\n";
+		anim[5] = "    ||    ";
+		anim[6] = "*--| *|--*";
+		for (int a = 0; a < k; a++) cout << anim[a] << "\n";
+		anim[6] = " --| *|-- ";
+		anim[7] = "*  |  |  *";
+		for (int a = 0; a < k; a++) cout << anim[a] << "\n";
+		anim[6] = "  -| *|-  ";
+		anim[7] = " / |  | \\ ";
+		anim[8] = "*   \\/   *";
+		for (int a = 0; a < k; a++) cout << anim[a] << "\n";
+		anim[7] = " / |  | \\ ";
+		anim[8] = "/   \\/   \\";
 	}
-	for (int a = 0; a < k; a++) cout << s[a] << "\n";
+	for (int a = 0; a < k; a++) cout << anim[a] << "\n";
 	return 0;
 }
