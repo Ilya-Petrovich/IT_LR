@@ -24,7 +24,7 @@ void stAnim(string arrive[]) {
 	for (int i = 0; i < 12; i++) {
 		cout << arrive[i] << endl;
 	}
-	//Sleep(300);
+	//Sleep(333);
 	//system("cls");
 }
 void firstAnim(string arrive[]) {
@@ -118,7 +118,6 @@ void fourteenthAnim(string arrive[]) {
 	arrive[8] = "/   \\/   \\";
 }
 
-
 int main() {
 	string A[]
 	{
@@ -133,38 +132,63 @@ int main() {
 		"/   \\/   \\", // 8
 		"    /\\    ", // 9
 		"    ||    ", // 10
-		"   _||_   ", // 12
+		"   _||_   ", // 11
 	};
-	for (int i = 0; i < 2; i++) {
-		stAnim(A);
-		firstAnim(A);
-		stAnim(A);
-		secondAnim(A);
-		stAnim(A);
-		thirdAnim(A);
-		stAnim(A);
-		fourthAnim(A);
-		stAnim(A);
-		fifthAnim(A);
-		stAnim(A);
-		sixthAnim(A);
-		stAnim(A);
-		seventhAnim(A);
-		stAnim(A);
-		eighthAnim(A);
-		stAnim(A);
-		ninthAnim(A);
-		stAnim(A);
-		tenthAnim(A);
-		stAnim(A);
-		eleventhAnim(A);
-		stAnim(A);
-		twelfthAnim(A);
-		stAnim(A);
-		thirteenthAnim(A);
-		stAnim(A);
-		fourteenthAnim(A);
-		stAnim(A);
-	}
-	return 0;
+	stAnim(A);
+	firstAnim(A);
+	stAnim(A);
+	secondAnim(A);
+	stAnim(A);
+	thirdAnim(A);
+	stAnim(A);
+	fourthAnim(A);
+	stAnim(A);
+	fifthAnim(A);
+	stAnim(A);
+	sixthAnim(A);
+	stAnim(A);
+	seventhAnim(A);
+	stAnim(A);
+	eighthAnim(A);
+	stAnim(A);
+	ninthAnim(A);
+	stAnim(A);
+	tenthAnim(A);
+	stAnim(A);
+	eleventhAnim(A);
+	stAnim(A);
+	twelfthAnim(A);
+	stAnim(A);
+	thirteenthAnim(A);
+	stAnim(A);
+	fourteenthAnim(A);
+	stAnim(A);
+	firstAnim(A);
+	stAnim(A);
+	secondAnim(A);
+	stAnim(A);
+	thirdAnim(A);
+	stAnim(A);
+	fourthAnim(A);
+	stAnim(A);
+	fifthAnim(A);
+	stAnim(A);
+	sixthAnim(A);
+	stAnim(A);
+	seventhAnim(A);
+	stAnim(A);
+	eighthAnim(A);
+	stAnim(A);
+	ninthAnim(A);
+	stAnim(A);
+	tenthAnim(A);
+	stAnim(A);
+	eleventhAnim(A);
+	stAnim(A);
+	twelfthAnim(A);
+	stAnim(A);
+	thirteenthAnim(A);
+	stAnim(A);
+	fourteenthAnim(A);
+	stAnim(A);
 }
