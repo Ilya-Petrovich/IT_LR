@@ -24,9 +24,9 @@ void ChangeColor(char* buff, long fileSize)
 	cout << endl << endl << endl;
 	for (int i = 138; i < fileSize;i += 3)
 	{
-		buff[i] = 210;
-		buff[i + 1] = 250;
-		buff[i + 2] = 250;
+		buff[i] = 0;
+		buff[i + 1] = 0;
+		buff[i + 2] = 139;
 
 	}
 }
