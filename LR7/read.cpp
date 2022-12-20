@@ -22,6 +22,11 @@ void readText(char* buff, long fileSize)
 		cout << byte;
 	}
 }
+void changeColor(char* buff, long fileSize) {
+	fread(buff, sizeof(char), fileSize, file);
+	buff[138] = 192
+	cout << buff;
+}
 
 int main()
 {
@@ -35,10 +40,10 @@ int main()
 	fileSize = ftell(file);
 	rewind(file);
 	char* buff = new char[fileSize]();
-	//cout << readText(char *buff, long fileSize, file);
+	changeColor(buff, fileSize);
 
 	fread(buff, sizeof(char), fileSize, file);
 
-	readText(buff, fileSize);
+	//readText(buff, fileSize);
 	return 0;
 }
