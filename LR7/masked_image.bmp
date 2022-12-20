@@ -1,0 +1,94 @@
+#include <stdio.h>
+#include <iostream>
+#include <bitset>
+
+using namespace std;
+
+void writeText(char* buff, long fileSize, FILE* file, int* mask) {
+
+	fread(buff, sizeof(char), fileSize, file);
+
+	fclose(file);
+
+	fopen_s(&file, "masked_image.bmp", "wb");
+
+	string str = "It is better to laugh at your folly than to cry from your intelligence.";
+
+	int length = ((fileSize - 138) - (str.length() * 4)) / 4;
+
+	/*for (size_t i = 0; i < length; i++)
+	{
+		str += '\0';
+	}*/
+
+	int buffNum = 138;
+	int maskCounter = 0;
+
+	for (size_t j = 0; j < str.length(); j++)
+	{
+		
+		char firstByte = (str[j] & -64) >> 6;
+		char secondByte = (str[j] & 48) >> 4;
+		char thirdByte = (str[j] & 12) >> 2;
+		char fourthByte = str[j] & 3;
+
+		char bytes[]{ firstByte, secondByte, thirdByte, fourthByte };
+
+		for (size_t i = 0; i < 4;)
+		{
+			
+			if (mask[maskCounter] == 1)
+			{
+				buff[buffNum] = buff[buffNum] & -4 | bytes[i];
+				i++;
+			}
+			buffNum++;
+			maskCounter++;
+			if (maskCounter == 8)
+			{
+				maskCounter = 0;
+			}
+		}
+
+	}
+
+	for (size_t i = 138; i < fileSize; i++)
+	{
+		cout << bitset<8>(buff[i]) << " ";
+	}
+
+	fwrite(buff, sizeof(char), fileSize, file);
+
+	fclose(file);
+
+	free(buff);
+}
+
+int main()
+{
+	int* mask  = new int[8];
+
+	mask[0] = 1;
+	mask[1] = 0;
+	mask[2] = 0;
+	mask[3] = 0;
+	mask[4] = 0;
+	mask[5] = 0;
+	mask[6] = 1;
+	mask[7] = 0;
+
+	FILE* file;
+
+	long fileSize;
+
+	fopen_s(&file, "masked_image.bmp", "rb");
+
+	fseek(file, 0, SEEK_END);
+	fileSize = ftell(file);
+	rewind(file);
+
+	char* buff = new char[fileSize]();
+	buff = new char[fileSize]();
+
+	writeText(buff, fileSize, file, mask);
+}
