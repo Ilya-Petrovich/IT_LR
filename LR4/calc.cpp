@@ -1,25 +1,28 @@
 #include <iostream>
 using namespace std;
-int main() {
-int n1,n2,n3;
-setlocale(LC_ALL, "rus");
-std::cout<<"Введите первое число:";
-std::cin>>n1;
-std::cout<<"Введите второе число:";
-std::cin>>n2;
-std::cout<<"Введите третье число:";
-std::cin>>n3;
-if(n1>n2&&n1>=0&&n2>=0&&n3>=0)
+int main()
 {
-std::cout<<n1<<"+"<<n2<<"="<<n1+n2<<std::endl;
-std::cout<<n1<<"-"<<n2<<"="<<n1-n2<<std::endl;
-std::cout<<n1<<"*"<<n2<<"="<<n1*n2<<std::endl;
-std::cout<<n1<<"/"<<n2<<"="<<n1/n2<<std::endl;
-std::cout<<n1<<".0/"<<n2<<".0="<<double(n1)/double(n2)<<std::endl;
-std::cout<<n1<<"%"<<n2<<"="<<n1%n2<<std::endl;
-std::cout<<n1<<"+"<<n2<<"*"<<n3<<"="<<n1+n2*n3<<std::endl;
-std::cout<<"("<<n1<<"+"<<n2<<")"<<"*"<<n3<<"="<<(n1+n2)*n3<<std::endl;
-}else{
-std::cout<<"Invalid data"<<std::endl;
-}return 0;
+int num_1,num_2,num_3;
+cout << "Type the first number: ";
+cin >> num_1;
+cout << "Type the second number: ";
+cin >> num_2;
+cout << "Type the third number: ";
+cin >> num_3;
+if(num_1 > num_2 && num_1>=0 && num_2>0 && num_3>=0)
+{
+cout <<num_1<< " + " << num_2 << " = " << num_1 + num_2<< endl;
+cout <<num_1<< " - " << num_2 << " = " << num_1 - num_2<< endl;
+cout <<num_1<< " * " << num_2 << " = " << num_1 * num_2<< endl;
+cout <<num_1<< " / " << num_2 << " = " << num_1 / num_2<< endl;
+cout <<(double)num_1<< ".0"<<" / " << (double)num_2 << ".0"<<" = " << (double)num_1 / num_2<<endl;
+cout <<num_1<< " % " << num_2 << " = " << num_1 % num_2<< endl;
+cout <<num_1<< " + " << num_2 << " * " << num_3 << " = " << num_1 + num_2 * num_3 << endl;
+cout << "(" << num_1<< " + " << num_2 << ") * "<< num_3 << " = " << (num_1 + num_2)*num_3<< endl;
+} 
+else
+{
+cout << "Invalid data" << endl;
+}
+return 0;
 }
