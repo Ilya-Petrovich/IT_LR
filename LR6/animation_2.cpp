@@ -219,7 +219,7 @@ void jump(string* firstEl, int col, int t) {
 	show(ptpers, col, t);
 	for (int q = 13; q <= 16; q++) {
 		pers[q - 11] = emptyStr;
-		show(ptpers, col, t);
+
 		pers[q - 9] = a;
 		pers[q - 8] = b;
 		pers[q - 7] = c;
@@ -232,6 +232,7 @@ void jump(string* firstEl, int col, int t) {
 		pers[q] = k;
 		pers[q + 1] = l;
 		pers[q + 2] = "*    ||    " + spacesRight;
+		show(ptpers, col, t);
 	}
 	//
 	pers[6] = emptyStr;
