@@ -1,0 +1,349 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{27777670-91D3-3499-97E2-EDEDFA1AFA10}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.22000.0</WindowsTargetPlatformVersion>
+    <Platform>x64</Platform>
+    <ProjectName>olya</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">E:\IT\IT_LR\LR9\build\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">olya.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">olya</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">E:\IT\IT_LR\LR9\build\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">olya.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">olya</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">E:\IT\IT_LR\LR9\build\MinSizeRel\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">olya.dir\MinSizeRel\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">olya</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">E:\IT\IT_LR\LR9\build\RelWithDebInfo\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">olya.dir\RelWithDebInfo\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">olya</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</GenerateManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>E:\IT\IT_LR\LR9\SFML\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;SFML_STATIC;CMAKE_INTDIR="Debug"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;SFML_STATIC;CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>E:\IT\IT_LR\LR9\SFML\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>E:\IT\IT_LR\LR9\SFML\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>SFML\lib\Debug\sfml-system-s-d.lib;SFML\lib\Debug\sfml-window-s-d.lib;SFML\lib\Debug\sfml-graphics-s-d.lib;SFML\lib\Debug\sfml-audio-s-d.lib;SFML\lib\Debug\sfml-network-s-d.lib;SFML\lib\Debug\sfml-window-s-d.lib;opengl32.lib;gdi32.lib;legacy_stdio_definitions.lib;E:\IT\IT_LR\LR9\SFML\extlibs\libs-msvc-universal\x64\freetype.lib;E:\IT\IT_LR\LR9\SFML\extlibs\libs-msvc-universal\x64\openal32.lib;E:\IT\IT_LR\LR9\SFML\extlibs\libs-msvc-universal\x64\vorbisenc.lib;E:\IT\IT_LR\LR9\SFML\extlibs\libs-msvc-universal\x64\vorbisfile.lib;E:\IT\IT_LR\LR9\SFML\extlibs\libs-msvc-universal\x64\vorbis.lib;E:\IT\IT_LR\LR9\SFML\extlibs\libs-msvc-universal\x64\ogg.lib;E:\IT\IT_LR\LR9\SFML\extlibs\libs-msvc-universal\x64\flac.lib;SFML\lib\Debug\sfml-system-s-d.lib;winmm.lib;ws2_32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>E:/IT/IT_LR/LR9/build/SFML/lib;E:/IT/IT_LR/LR9/build/SFML/lib/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>E:/IT/IT_LR/LR9/build/Debug/olya.lib</ImportLibrary>
+      <ProgramDataBaseFile>E:/IT/IT_LR/LR9/build/Debug/olya.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>E:\IT\IT_LR\LR9\SFML\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;SFML_STATIC;CMAKE_INTDIR="Release"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;SFML_STATIC;CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>E:\IT\IT_LR\LR9\SFML\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>E:\IT\IT_LR\LR9\SFML\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>SFML\lib\Release\sfml-system-s.lib;SFML\lib\Release\sfml-window-s.lib;SFML\lib\Release\sfml-graphics-s.lib;SFML\lib\Release\sfml-audio-s.lib;SFML\lib\Release\sfml-network-s.lib;SFML\lib\Release\sfml-window-s.lib;opengl32.lib;gdi32.lib;legacy_stdio_definitions.lib;E:\IT\IT_LR\LR9\SFML\extlibs\libs-msvc-universal\x64\freetype.lib;E:\IT\IT_LR\LR9\SFML\extlibs\libs-msvc-universal\x64\openal32.lib;E:\IT\IT_LR\LR9\SFML\extlibs\libs-msvc-universal\x64\vorbisenc.lib;E:\IT\IT_LR\LR9\SFML\extlibs\libs-msvc-universal\x64\vorbisfile.lib;E:\IT\IT_LR\LR9\SFML\extlibs\libs-msvc-universal\x64\vorbis.lib;E:\IT\IT_LR\LR9\SFML\extlibs\libs-msvc-universal\x64\ogg.lib;E:\IT\IT_LR\LR9\SFML\extlibs\libs-msvc-universal\x64\flac.lib;SFML\lib\Release\sfml-system-s.lib;winmm.lib;ws2_32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>E:/IT/IT_LR/LR9/build/SFML/lib;E:/IT/IT_LR/LR9/build/SFML/lib/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>E:/IT/IT_LR/LR9/build/Release/olya.lib</ImportLibrary>
+      <ProgramDataBaseFile>E:/IT/IT_LR/LR9/build/Release/olya.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>E:\IT\IT_LR\LR9\SFML\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;SFML_STATIC;CMAKE_INTDIR="MinSizeRel"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;SFML_STATIC;CMAKE_INTDIR=\"MinSizeRel\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>E:\IT\IT_LR\LR9\SFML\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>E:\IT\IT_LR\LR9\SFML\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>SFML\lib\MinSizeRel\sfml-system-s.lib;SFML\lib\MinSizeRel\sfml-window-s.lib;SFML\lib\MinSizeRel\sfml-graphics-s.lib;SFML\lib\MinSizeRel\sfml-audio-s.lib;SFML\lib\MinSizeRel\sfml-network-s.lib;SFML\lib\MinSizeRel\sfml-window-s.lib;opengl32.lib;gdi32.lib;legacy_stdio_definitions.lib;E:\IT\IT_LR\LR9\SFML\extlibs\libs-msvc-universal\x64\freetype.lib;E:\IT\IT_LR\LR9\SFML\extlibs\libs-msvc-universal\x64\openal32.lib;E:\IT\IT_LR\LR9\SFML\extlibs\libs-msvc-universal\x64\vorbisenc.lib;E:\IT\IT_LR\LR9\SFML\extlibs\libs-msvc-universal\x64\vorbisfile.lib;E:\IT\IT_LR\LR9\SFML\extlibs\libs-msvc-universal\x64\vorbis.lib;E:\IT\IT_LR\LR9\SFML\extlibs\libs-msvc-universal\x64\ogg.lib;E:\IT\IT_LR\LR9\SFML\extlibs\libs-msvc-universal\x64\flac.lib;SFML\lib\MinSizeRel\sfml-system-s.lib;winmm.lib;ws2_32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>E:/IT/IT_LR/LR9/build/SFML/lib;E:/IT/IT_LR/LR9/build/SFML/lib/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>E:/IT/IT_LR/LR9/build/MinSizeRel/olya.lib</ImportLibrary>
+      <ProgramDataBaseFile>E:/IT/IT_LR/LR9/build/MinSizeRel/olya.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>E:\IT\IT_LR\LR9\SFML\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;SFML_STATIC;CMAKE_INTDIR="RelWithDebInfo"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;SFML_STATIC;CMAKE_INTDIR=\"RelWithDebInfo\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>E:\IT\IT_LR\LR9\SFML\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>E:\IT\IT_LR\LR9\SFML\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>SFML\lib\RelWithDebInfo\sfml-system-s.lib;SFML\lib\RelWithDebInfo\sfml-window-s.lib;SFML\lib\RelWithDebInfo\sfml-graphics-s.lib;SFML\lib\RelWithDebInfo\sfml-audio-s.lib;SFML\lib\RelWithDebInfo\sfml-network-s.lib;SFML\lib\RelWithDebInfo\sfml-window-s.lib;opengl32.lib;gdi32.lib;legacy_stdio_definitions.lib;E:\IT\IT_LR\LR9\SFML\extlibs\libs-msvc-universal\x64\freetype.lib;E:\IT\IT_LR\LR9\SFML\extlibs\libs-msvc-universal\x64\openal32.lib;E:\IT\IT_LR\LR9\SFML\extlibs\libs-msvc-universal\x64\vorbisenc.lib;E:\IT\IT_LR\LR9\SFML\extlibs\libs-msvc-universal\x64\vorbisfile.lib;E:\IT\IT_LR\LR9\SFML\extlibs\libs-msvc-universal\x64\vorbis.lib;E:\IT\IT_LR\LR9\SFML\extlibs\libs-msvc-universal\x64\ogg.lib;E:\IT\IT_LR\LR9\SFML\extlibs\libs-msvc-universal\x64\flac.lib;SFML\lib\RelWithDebInfo\sfml-system-s.lib;winmm.lib;ws2_32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>E:/IT/IT_LR/LR9/build/SFML/lib;E:/IT/IT_LR/LR9/build/SFML/lib/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>E:/IT/IT_LR/LR9/build/RelWithDebInfo/olya.lib</ImportLibrary>
+      <ProgramDataBaseFile>E:/IT/IT_LR/LR9/build/RelWithDebInfo/olya.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="E:\IT\IT_LR\LR9\CMakeLists.txt">
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule E:/IT/IT_LR/LR9/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+E:\IT\cmake\bin\cmake.exe -SE:/IT/IT_LR/LR9 -BE:/IT/IT_LR/LR9/build --check-stamp-file E:/IT/IT_LR/LR9/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">E:\IT\IT_LR\LR9\build\CMakeFiles\3.25.1\CMakeCXXCompiler.cmake;E:\IT\IT_LR\LR9\build\CMakeFiles\3.25.1\CMakeRCCompiler.cmake;E:\IT\IT_LR\LR9\build\CMakeFiles\3.25.1\CMakeSystem.cmake;E:\IT\cmake\share\cmake-3.25\Modules\CMakeCXXInformation.cmake;E:\IT\cmake\share\cmake-3.25\Modules\CMakeCommonLanguageInclude.cmake;E:\IT\cmake\share\cmake-3.25\Modules\CMakeGenericSystem.cmake;E:\IT\cmake\share\cmake-3.25\Modules\CMakeInitializeConfigs.cmake;E:\IT\cmake\share\cmake-3.25\Modules\CMakeLanguageInformation.cmake;E:\IT\cmake\share\cmake-3.25\Modules\CMakeRCInformation.cmake;E:\IT\cmake\share\cmake-3.25\Modules\CMakeSystemSpecificInformation.cmake;E:\IT\cmake\share\cmake-3.25\Modules\CMakeSystemSpecificInitialize.cmake;E:\IT\cmake\share\cmake-3.25\Modules\Compiler\CMakeCommonCompilerMacros.cmake;E:\IT\cmake\share\cmake-3.25\Modules\Compiler\MSVC-CXX.cmake;E:\IT\cmake\share\cmake-3.25\Modules\Compiler\MSVC.cmake;E:\IT\cmake\share\cmake-3.25\Modules\Platform\Windows-MSVC-CXX.cmake;E:\IT\cmake\share\cmake-3.25\Modules\Platform\Windows-MSVC.cmake;E:\IT\cmake\share\cmake-3.25\Modules\Platform\Windows.cmake;E:\IT\cmake\share\cmake-3.25\Modules\Platform\WindowsPaths.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">E:\IT\IT_LR\LR9\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule E:/IT/IT_LR/LR9/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+E:\IT\cmake\bin\cmake.exe -SE:/IT/IT_LR/LR9 -BE:/IT/IT_LR/LR9/build --check-stamp-file E:/IT/IT_LR/LR9/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">E:\IT\IT_LR\LR9\build\CMakeFiles\3.25.1\CMakeCXXCompiler.cmake;E:\IT\IT_LR\LR9\build\CMakeFiles\3.25.1\CMakeRCCompiler.cmake;E:\IT\IT_LR\LR9\build\CMakeFiles\3.25.1\CMakeSystem.cmake;E:\IT\cmake\share\cmake-3.25\Modules\CMakeCXXInformation.cmake;E:\IT\cmake\share\cmake-3.25\Modules\CMakeCommonLanguageInclude.cmake;E:\IT\cmake\share\cmake-3.25\Modules\CMakeGenericSystem.cmake;E:\IT\cmake\share\cmake-3.25\Modules\CMakeInitializeConfigs.cmake;E:\IT\cmake\share\cmake-3.25\Modules\CMakeLanguageInformation.cmake;E:\IT\cmake\share\cmake-3.25\Modules\CMakeRCInformation.cmake;E:\IT\cmake\share\cmake-3.25\Modules\CMakeSystemSpecificInformation.cmake;E:\IT\cmake\share\cmake-3.25\Modules\CMakeSystemSpecificInitialize.cmake;E:\IT\cmake\share\cmake-3.25\Modules\Compiler\CMakeCommonCompilerMacros.cmake;E:\IT\cmake\share\cmake-3.25\Modules\Compiler\MSVC-CXX.cmake;E:\IT\cmake\share\cmake-3.25\Modules\Compiler\MSVC.cmake;E:\IT\cmake\share\cmake-3.25\Modules\Platform\Windows-MSVC-CXX.cmake;E:\IT\cmake\share\cmake-3.25\Modules\Platform\Windows-MSVC.cmake;E:\IT\cmake\share\cmake-3.25\Modules\Platform\Windows.cmake;E:\IT\cmake\share\cmake-3.25\Modules\Platform\WindowsPaths.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">E:\IT\IT_LR\LR9\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule E:/IT/IT_LR/LR9/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+E:\IT\cmake\bin\cmake.exe -SE:/IT/IT_LR/LR9 -BE:/IT/IT_LR/LR9/build --check-stamp-file E:/IT/IT_LR/LR9/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">E:\IT\IT_LR\LR9\build\CMakeFiles\3.25.1\CMakeCXXCompiler.cmake;E:\IT\IT_LR\LR9\build\CMakeFiles\3.25.1\CMakeRCCompiler.cmake;E:\IT\IT_LR\LR9\build\CMakeFiles\3.25.1\CMakeSystem.cmake;E:\IT\cmake\share\cmake-3.25\Modules\CMakeCXXInformation.cmake;E:\IT\cmake\share\cmake-3.25\Modules\CMakeCommonLanguageInclude.cmake;E:\IT\cmake\share\cmake-3.25\Modules\CMakeGenericSystem.cmake;E:\IT\cmake\share\cmake-3.25\Modules\CMakeInitializeConfigs.cmake;E:\IT\cmake\share\cmake-3.25\Modules\CMakeLanguageInformation.cmake;E:\IT\cmake\share\cmake-3.25\Modules\CMakeRCInformation.cmake;E:\IT\cmake\share\cmake-3.25\Modules\CMakeSystemSpecificInformation.cmake;E:\IT\cmake\share\cmake-3.25\Modules\CMakeSystemSpecificInitialize.cmake;E:\IT\cmake\share\cmake-3.25\Modules\Compiler\CMakeCommonCompilerMacros.cmake;E:\IT\cmake\share\cmake-3.25\Modules\Compiler\MSVC-CXX.cmake;E:\IT\cmake\share\cmake-3.25\Modules\Compiler\MSVC.cmake;E:\IT\cmake\share\cmake-3.25\Modules\Platform\Windows-MSVC-CXX.cmake;E:\IT\cmake\share\cmake-3.25\Modules\Platform\Windows-MSVC.cmake;E:\IT\cmake\share\cmake-3.25\Modules\Platform\Windows.cmake;E:\IT\cmake\share\cmake-3.25\Modules\Platform\WindowsPaths.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">E:\IT\IT_LR\LR9\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule E:/IT/IT_LR/LR9/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+E:\IT\cmake\bin\cmake.exe -SE:/IT/IT_LR/LR9 -BE:/IT/IT_LR/LR9/build --check-stamp-file E:/IT/IT_LR/LR9/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">E:\IT\IT_LR\LR9\build\CMakeFiles\3.25.1\CMakeCXXCompiler.cmake;E:\IT\IT_LR\LR9\build\CMakeFiles\3.25.1\CMakeRCCompiler.cmake;E:\IT\IT_LR\LR9\build\CMakeFiles\3.25.1\CMakeSystem.cmake;E:\IT\cmake\share\cmake-3.25\Modules\CMakeCXXInformation.cmake;E:\IT\cmake\share\cmake-3.25\Modules\CMakeCommonLanguageInclude.cmake;E:\IT\cmake\share\cmake-3.25\Modules\CMakeGenericSystem.cmake;E:\IT\cmake\share\cmake-3.25\Modules\CMakeInitializeConfigs.cmake;E:\IT\cmake\share\cmake-3.25\Modules\CMakeLanguageInformation.cmake;E:\IT\cmake\share\cmake-3.25\Modules\CMakeRCInformation.cmake;E:\IT\cmake\share\cmake-3.25\Modules\CMakeSystemSpecificInformation.cmake;E:\IT\cmake\share\cmake-3.25\Modules\CMakeSystemSpecificInitialize.cmake;E:\IT\cmake\share\cmake-3.25\Modules\Compiler\CMakeCommonCompilerMacros.cmake;E:\IT\cmake\share\cmake-3.25\Modules\Compiler\MSVC-CXX.cmake;E:\IT\cmake\share\cmake-3.25\Modules\Compiler\MSVC.cmake;E:\IT\cmake\share\cmake-3.25\Modules\Platform\Windows-MSVC-CXX.cmake;E:\IT\cmake\share\cmake-3.25\Modules\Platform\Windows-MSVC.cmake;E:\IT\cmake\share\cmake-3.25\Modules\Platform\Windows.cmake;E:\IT\cmake\share\cmake-3.25\Modules\Platform\WindowsPaths.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">E:\IT\IT_LR\LR9\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="E:\IT\IT_LR\LR9\src\main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="E:\IT\IT_LR\LR9\build\ZERO_CHECK.vcxproj">
+      <Project>{3A8C5C7E-93A3-38F3-9C48-BE6EFCB5D22B}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="E:\IT\IT_LR\LR9\build\SFML\src\SFML\Audio\sfml-audio.vcxproj">
+      <Project>{15073EE4-362F-3487-910B-09B10D050462}</Project>
+      <Name>sfml-audio</Name>
+    </ProjectReference>
+    <ProjectReference Include="E:\IT\IT_LR\LR9\build\SFML\src\SFML\Graphics\sfml-graphics.vcxproj">
+      <Project>{31406F58-6D70-39E9-94DC-3E679A07AECA}</Project>
+      <Name>sfml-graphics</Name>
+    </ProjectReference>
+    <ProjectReference Include="E:\IT\IT_LR\LR9\build\SFML\src\SFML\Network\sfml-network.vcxproj">
+      <Project>{08061F8A-E1A3-3E2C-91EC-0BB210917C31}</Project>
+      <Name>sfml-network</Name>
+    </ProjectReference>
+    <ProjectReference Include="E:\IT\IT_LR\LR9\build\SFML\src\SFML\System\sfml-system.vcxproj">
+      <Project>{EB45A78D-90F3-3B3E-8EE9-9858A5A8D8CE}</Project>
+      <Name>sfml-system</Name>
+    </ProjectReference>
+    <ProjectReference Include="E:\IT\IT_LR\LR9\build\SFML\src\SFML\Window\sfml-window.vcxproj">
+      <Project>{0164AFEC-03AF-37DE-9FA7-A5EA3EABDFE2}</Project>
+      <Name>sfml-window</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
