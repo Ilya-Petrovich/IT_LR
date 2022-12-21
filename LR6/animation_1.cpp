@@ -1,5 +1,6 @@
 #include<iostream>
 #include<unistd.h>
+#include<conio.h>
 using namespace std;
 int main()
 {
@@ -44,7 +45,7 @@ int main()
         cout << "  (|<>|)   " << endl;
         cout << "   \\--/    " << endl;
         cout << "   _><_    " << endl;
-        cout << "\\_-\\. /-_/  " << endl;
+        cout << "\\_-\\. /-_/ " << endl;
         cout << "   |. |    " << endl;
         cout << "   |. |    " << endl;
         cout << "   |__|    " << endl;
@@ -58,7 +59,7 @@ int main()
         cout << "   |oq|    " << endl;
         cout << "  (|<>|)   " << endl;
         cout << "   \\--/    " << endl;
-        cout << "\\  _><_   / " << endl;
+        cout << "\\  _><_  / " << endl;
         cout << " \\-\\. /-/  " << endl;
         cout << "   |. |    " << endl;
         cout << "   |. |    " << endl;
@@ -73,7 +74,7 @@ int main()
         cout << "   |oq|    " << endl;
         cout << "  (|<>|)   " << endl;
         cout << "   \\--/    " << endl;
-        cout << "/  _><_  \\ " << endl;
+        cout << " / _><_ \\  " << endl;
         cout << " \\-\\. /-/  " << endl;
         cout << "   |. |    " << endl;
         cout << "   |. |    " << endl;
@@ -88,7 +89,7 @@ int main()
         cout << "   |oq|    " << endl;
         cout << "  (|<>|)   " << endl;
         cout << "   \\--/    " << endl;
-        cout << "/  _><_   \\" << endl;
+        cout << " / _><_ \\  " << endl;
         cout << " \\-\\. /-/  " << endl;
         cout << "   |. |    " << endl;
         cout << "   |. |    " << endl;
@@ -103,7 +104,7 @@ int main()
         cout << "   |oq|    " << endl;
         cout << "  (|<>|)   " << endl;
         cout << "   \\--/    " << endl;
-        cout << "_  _><_   \\" << endl;
+        cout << "_  _><_ \\  " << endl;
         cout << " \\-\\. /-/  " << endl;
         cout << "   |. |    " << endl;
         cout << "   |. |    " << endl;
@@ -118,7 +119,7 @@ int main()
         cout << "   |oq|    " << endl;
         cout << "  (|<>|)   " << endl;
         cout << "   \\--/    " << endl;
-        cout << "_  _><_   \\" << endl;
+        cout << "   _><_ \\  " << endl;
         cout << " \\-\\. /-/  " << endl;
         cout << "   |. |    " << endl;
         cout << "   |. |    " << endl;
@@ -133,7 +134,7 @@ int main()
         cout << "   |oq|    " << endl;
         cout << "  (|<>|)   " << endl;
         cout << "   \\--/    " << endl;
-        cout << "   _><_   \\" << endl;
+        cout << "   _><_ \\  " << endl;
         cout << "_/-\\. /-/  " << endl;
         cout << "   |. |    " << endl;
         cout << "   |. |    " << endl;
@@ -148,7 +149,7 @@ int main()
         cout << "   |oq|    " << endl;
         cout << "  (|<>|)   " << endl;
         cout << "   \\--/    " << endl;
-        cout << "   _><_   \\" << endl;
+        cout << "   _><_ \\  " << endl;
         cout << " /-\\. /-/  " << endl;
         cout << "/  |. |    " << endl;
         cout << "   |. |    " << endl;
@@ -164,7 +165,7 @@ int main()
         cout << "   |oq|    " << endl;
         cout << "  (|<>|)   " << endl;
         cout << "   \\--/    " << endl;
-        cout << "   _><_   /" << endl;
+        cout << "   _><_  / " << endl;
         cout << "  -\\. /-/  " << endl;
         cout << " / |. |    " << endl;
         cout << "/  |. |    " << endl;
@@ -196,7 +197,7 @@ int main()
         cout << "   \\--/    " << endl;
         cout << "   _><_   " << endl;
         cout << "  -\\. /-   " << endl;
-        cout << " / |. |  \\_ " << endl;
+        cout << " / |. | \\_  " << endl;
         cout << "/  |. |    " << endl;
         cout << "   |__|    " << endl;
         cout << "    ||     " << endl;
@@ -212,8 +213,8 @@ int main()
         cout << "   \\--/    " << endl;
         cout << "   _><_    " << endl;
         cout << "  -\\. /-   " << endl;
-        cout << " / |. |  \\ " << endl;
-        cout << "/  |. |    \\" << endl;
+        cout << " / |. | \\  " << endl;
+        cout << "/  |. |  \\  " << endl;
         cout << "   |__|    " << endl;
         cout << "    ||     " << endl;
         cout << "   _||_    " << endl;
