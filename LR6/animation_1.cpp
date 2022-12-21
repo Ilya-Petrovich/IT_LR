@@ -11,7 +11,7 @@ void position0(string &st1, string &st2, string &st3, string &st4, string &st5, 
     st4 = "  (|<>|)  ";
     st5 = "   \\--/  ";
     st6 = "   _><_   ";
-    st7 = "  -\\. /- ";
+    st7 = "  -\\. /- "; 
     st8 = " / |. | \\";
     st9 = "/  |. |  \\ ";
     st10 = "   |__|   ";

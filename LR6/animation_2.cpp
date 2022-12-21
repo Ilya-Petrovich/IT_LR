@@ -10,7 +10,7 @@ string symbols(int count, string symb)
 {
     string res = "";
     for(int i = 0; i < count; i++)
-        res += symb;
+        res += symb; 
     return res;
 }
 

@@ -17,7 +17,7 @@ int main() {
 	long fileSize;
 	fseek(file, 0, SEEK_END);
 	fileSize = ftell(file);
-	rewind(file);
+	rewind(file); 
 
 	char* buff = new char[fileSize]();
 	fread(buff, sizeof(char), fileSize, file);
