@@ -7,7 +7,7 @@ int main()
 	cout << "Type the first number : "; cin >> a;
 	cout << "Type the second number : "; cin >> b; 
 	cout << "Type the third number : "; cin >> c;
-	if ((a <= b) or (b <= 0) or (c < 0)) { cout << "Invalid data"; return; }
+	if ((a <= b) or (b <= 0) or (c < 0)) { cout << "Invalid data"; return 0; }
 	cout << a << " + " << b << " = " << a + b << endl;
 	cout << a << " - " << b << " = " << a - b << endl;
 	cout << a << " * " << b << " = " << a * b << endl;
