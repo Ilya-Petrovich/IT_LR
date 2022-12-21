@@ -1388,7 +1388,7 @@ void run(vector<string> person)
     person[15] = "*        /   \\/   \\                    *";
     person[16] = "*            /\\                        *";
     person[17] = "*           / |                        *";
-    person[18] = "*         _/  |_                       *";
+    person[18] = "*         _/  |_                      *"; ///////////////////////////////////////////////////////////////////////////////1
 
     print(person);//usleep(runDelay);//system("clear");
     person[17] = "*            ||                        *";
