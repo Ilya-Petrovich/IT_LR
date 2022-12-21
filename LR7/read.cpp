@@ -1,3 +1,4 @@
+#define _CRT_SECURE_NO_WARNINGS
 #include <iostream>
 #include <stdio.h>
 
@@ -10,8 +11,7 @@ void writeText(char* buff, long fileSize);
 int main() {
 
 	FILE * file;
-
-	char filename[100];
+	char filename[10];
 	cin >> filename;
 	file = fopen(filename, "rb");
 
@@ -23,13 +23,12 @@ int main() {
 	char* buff = new char[fileSize];
 	fread(buff, sizeof(char), fileSize, file);
 	readText(buff, fileSize);
-
 	/*fclose(file);
 	file = fopen(filename, "wb");
 	changeColor(buff, fileSize);
 	writeText(buff, fileSize);
-	fwrite(buff, sizeof(char), fileSize, file);*/
-
+	fwrite(buff, sizeof(char), fileSize, file);
+	*/
 	fclose(file);
 
 	delete[] buff;
@@ -54,15 +53,15 @@ void readText(char buff[], long fileSize) {
 
 void changeColor(char* buff, long fileSize) {
 	for (int i = 138; i < fileSize; i += 3) {
-		buff[i] = 255;
-		buff[i + 1] = 0;
-		buff[i + 2] = 255;
+		buff[i] = 220;
+		buff[i + 1] = 245;
+		buff[i + 2] = 245;
 	}
 }
 
 void writeText(char* buff, long fileSize) {
 
-	char text[13] = "TRIS-2-22-11";
+	char text[13] = "TRIS-2-22-20";
 	int count = 0;
 
 	for (int i = 138; i < fileSize; i += 4) {
