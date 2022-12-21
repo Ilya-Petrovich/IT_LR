@@ -1,16 +1,16 @@
 #include <iostream>
 
-// void rmFrame();
+// void deloneframe();
 void head(); void legs();
 void dance();
 
 int main() {
-    // rmFrame();
+    // deloneframe();
     dance();
     return 0;
 }
 
-// void rmFrame() {system("cls");}
+// void deloneframe() {system("cls");}
 void head() {
     std::cout << "   ()()   \n";
     std::cout << "   ()()   \n";
@@ -24,7 +24,7 @@ void legs() {
 }
 void dance() {
     for (int i = 0; i <= 28; i++) {
-        // rmFrame();
+        // deloneframe();
         head();
         switch (i % 14) {
             case 0: { 
@@ -114,5 +114,5 @@ void dance() {
         }
         legs();
         // Sleep(500);
-        // rmFrame();
+        // deloneframe();
     }
