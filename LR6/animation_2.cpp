@@ -1,5 +1,5 @@
 ﻿#include<iostream>
-//#include <windows.h>
+#include <unistd.h>
 #include<string>
 #define OPEN
 
@@ -203,13 +203,13 @@ void Dance(char pers[][11], int time) {
 void SSS(char pers[][11], int time, int l) {
 	ShowArray(pers, 16, 11, 1);
 	//Sleep(time);
-	system("cls");
+	//system("cls");
 }
 
 void SSS(char pers[][11], int time) {
 	ShowArray(pers, 12, 11);
 	//Sleep(time);
-	system("cls");
+	//system("cls");
 }
 
 void Menu() {
@@ -422,8 +422,8 @@ void sweep(string r, string l) {
 
 				cout << string(40, '*') << endl;
 
-				Sleep(time);
-				system("cls");
+				//Sleep(time);
+				//system("cls");
 			}
 		}
 	}
