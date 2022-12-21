@@ -234,7 +234,7 @@ void output(string st1, string st2, string st3, string st4, string st5, string s
 
 void dance(string st1, string st2, string st3, string st4, string st5, string st6, string st7, string st8, string st9, string st10, string st11, string st12)
 {
-    for (int i = 0; i <= 1; i++)
+    for (int i = 0; i < 2; i++)
     {
         position0(st1, st2, st3, st4, st5, st6, st7, st8, st9, st10, st11, st12);
         output(st1, st2, st3, st4, st5, st6, st7, st8, st9, st10, st11, st12);
@@ -278,11 +278,12 @@ void dance(string st1, string st2, string st3, string st4, string st5, string st
         position13(st1, st2, st3, st4, st5, st6, st7, st8, st9, st10, st11, st12);
         output(st1, st2, st3, st4, st5, st6, st7, st8, st9, st10, st11, st12);
     }
+    position0(st1, st2, st3, st4, st5, st6, st7, st8, st9, st10, st11, st12);
+    output(st1, st2, st3, st4, st5, st6, st7, st8, st9, st10, st11, st12);
 }
 
 int main()
 {
     string st1, st2, st3, st4, st5, st6, st7, st8, st9, st10, st11, st12;
-    for(int i = 0; i < 2; i++)
-        dance(st1, st2, st3, st4, st5, st6, st7, st8, st9, st10, st11, st12);
+    dance(st1, st2, st3, st4, st5, st6, st7, st8, st9, st10, st11, st12);
 }
