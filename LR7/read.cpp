@@ -70,7 +70,7 @@ void writeText(char* buff, long fileSize) {
 		}
 		else {
 			buff[i] = buff[i] & 0xfc;
-			buff[i + 1] = (buff[i + 1] & 0xfc) | 0x2;
+			buff[i + 1] = (buff[i + 1] & 0xfc) | 0x3;
 			buff[i + 2] = buff[i + 2] & 0xfc;
 			buff[i + 3] = buff[i + 3] & 0xfc; 
 		}
