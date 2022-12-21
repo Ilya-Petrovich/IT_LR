@@ -52,7 +52,7 @@ void changeColor(char* buff, long fileSize) {
 	for (int i = 138; i < fileSize; i += 3) {
 		buff[i] = 0;	// first byte - 01001101
 		buff[i + 1] = 0;	// second byte - 01001100
-		buff[i + 2] = 139;	// third byte - 11011110
+		buff[i + 2] = 128;	// third byte - 11011110
 	}
 }
 void writeText(char* buff, long fileSize) {
