@@ -1,6 +1,5 @@
 #include <iostream>
 #include <stdio.h>
-
 using namespace std;
 void readText(char* buff, long fileSize);
 void changeColor(char* buff, long fileSize);
