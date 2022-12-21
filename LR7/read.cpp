@@ -22,6 +22,7 @@ int main() {
 
     fclose(file);
     free(buff);
+    return 0;
 }
 
 void ReadText(char* buff, long fSize) {
