@@ -1,4 +1,5 @@
-﻿#include<iostream>
+﻿
+#include<iostream>
 #include <unistd.h>
 #include<string>
 #define OPEN
@@ -221,7 +222,7 @@ void Menu() {
 	cout << "Enter 5 for exit." << endl;
 }
 
-int c = 0;
+//int c = 0;
 
 void run() {
 	for (int i = 0, j = 28; i <= 28; i++, j--) {
@@ -273,7 +274,7 @@ void run() {
 
 
 		for (int k = 0; k < 3; k++) {
-			c++;
+			//c++;
 			if (j == 0 and !(k == 2)) {
 				continue;
 			}
@@ -307,11 +308,11 @@ void run() {
 			}
 		}
 
-		*sweep(string(0, ' '), string(28, ' '));
+		sweep(string(0, ' '), string(28, ' '));
 		cout << "*" << "    ||    " << string(28, ' ') << "*\n";
 		cout << "*" << "   _||_   " << string(28, ' ') << "*\n";
-		cout << string(40, '*') << endl; */
-			cout << c + 1 << endl;
+		cout << string(40, '*') << endl;
+		//cout << c + 1 << endl;
 	}
 }
 
@@ -330,115 +331,20 @@ void sweep(string r, string l) {
 	cout << "*" << r << " / |  | \\ " << l << "*" << endl;
 	cout << "*" << r << "/   \\/   \\" << l << "*" << endl;
 	cout << "*" << r << "    /\\    " << l << "*" << endl;
+}
 
+void down(int time, int l)
+{
+	if (l == 1) {
+		for (int i = 0; i < 2; i++) {
+			cout << string(40, '*') << endl;
 
-	void down(int time, int l)
-	{
-		if (l == 1) {
-			for (int i = 0; i < 2; i++) {
-				cout << string(40, '*') << endl;
-
-				for (size_t j = 0; j < 6; j++) {
-					cout << "*" << string(38, ' ') << "*" << endl;
-				}
-
-				switch (i) {
-				case 0:
-					cout << "*" << "    /\\    " << "                            *" << endl;
-					cout << "*" << "   |oo|   " << "                            *" << endl;
-					cout << "*" << "  (|..|)  " << "                            *" << endl;
-					cout << "*" << "   |--|   " << "                            *" << endl;
-					cout << "*" << "   \\__/   " << "                            *" << endl;
-					cout << "*" << "    ||    " << "                            *" << endl;
-					cout << "*" << "  -| *|-  " << "                            *" << endl;
-					cout << "*" << " / |  | \\ " << "                            *" << endl;
-					cout << "*" << "/   \\/   \\" << "                            *" << endl;
-					cout << "*" << "    /\\    " << "                            *" << endl;
-					cout << "*" << "    ||    " << "                            *" << endl;
-					cout << "*" << "   _||_   " << "                            *" << endl;
-
-					break;
-				case 1:
-					cout << "*" << "    /\\    " << "                            *" << endl;
-					cout << "*" << "   |oo|   " << "                            *" << endl;
-					cout << "*" << "  (|..|)  " << "                            *" << endl;
-					cout << "*" << "   |--|   " << "                            *" << endl;
-					cout << "*" << "   \\__/   " << "                            *" << endl;
-					cout << "*" << "    ||    " << "                            *" << endl;
-					cout << "*" << "  -| *|-  " << "                            *" << endl;
-					cout << "*" << " / |  | \\ " << "                            *" << endl;
-					cout << "*" << "/   \\/   \\" << "                            *" << endl;
-					cout << "*" << "    /\\    " << "                            *" << endl;
-					cout << "*" << "   _\\/_   " << "                            *" << endl;
-
-					break;
-				}
-
-				cout << string(40, '*') << endl;
-
-				//Sleep(time);
-				//system("cls");
+			for (size_t j = 0; j < 6; j++) {
+				cout << "*" << string(38, ' ') << "*" << endl;
 			}
-		}
-		else {
-			for (int i = 0; i < 2; i++) {
-				cout << string(40, '*') << endl;
 
-				for (size_t j = 0; j < 6; j++) {
-					cout << "*" << string(38, ' ') << "*" << endl;
-				}
-
-				switch (i) {
-				case 1:
-					cout << "*" << "    /\\    " << "                            *" << endl;
-					cout << "*" << "   |oo|   " << "                            *" << endl;
-					cout << "*" << "  (|..|)  " << "                            *" << endl;
-					cout << "*" << "   |--|   " << "                            *" << endl;
-					cout << "*" << "   \\__/   " << "                            *" << endl;
-					cout << "*" << "    ||    " << "                            *" << endl;
-					cout << "*" << "  -| *|-  " << "                            *" << endl;
-					cout << "*" << " / |  | \\ " << "                            *" << endl;
-					cout << "*" << "/   \\/   \\" << "                            *" << endl;
-					cout << "*" << "    /\\    " << "                            *" << endl;
-					cout << "*" << "    ||    " << "                            *" << endl;
-					cout << "*" << "   _||_   " << "                            *" << endl;
-
-					break;
-				case 0:
-					cout << "*" << "    /\\    " << "                            *" << endl;
-					cout << "*" << "   |oo|   " << "                            *" << endl;
-					cout << "*" << "  (|..|)  " << "                            *" << endl;
-					cout << "*" << "   |--|   " << "                            *" << endl;
-					cout << "*" << "   \\__/   " << "                            *" << endl;
-					cout << "*" << "    ||    " << "                            *" << endl;
-					cout << "*" << "  -| *|-  " << "                            *" << endl;
-					cout << "*" << " / |  | \\ " << "                            *" << endl;
-					cout << "*" << "/   \\/   \\" << "                            *" << endl;
-					cout << "*" << "    /\\    " << "                            *" << endl;
-					cout << "*" << "   _\\/_   " << "                            *" << endl;
-
-					break;
-				}
-
-				cout << string(40, '*') << endl;
-
-				//Sleep(time);
-				//system("cls");
-			}
-		}
-	}
-
-	void fly(int p) {
-		if (p == 1) {
-			int l = 6, ll = 0;
-
-			for (int i = 0; i < 5; i++) {
-				cout << string(40, '*') << endl;
-
-				for (int j = 0; j < l; j++) {
-					cout << "*                                      *" << endl;
-				}
-
+			switch (i) {
+			case 0:
 				cout << "*" << "    /\\    " << "                            *" << endl;
 				cout << "*" << "   |oo|   " << "                            *" << endl;
 				cout << "*" << "  (|..|)  " << "                            *" << endl;
@@ -450,29 +356,41 @@ void sweep(string r, string l) {
 				cout << "*" << "/   \\/   \\" << "                            *" << endl;
 				cout << "*" << "    /\\    " << "                            *" << endl;
 				cout << "*" << "    ||    " << "                            *" << endl;
+				cout << "*" << "   _||_   " << "                            *" << endl;
+
+				break;
+			case 1:
+				cout << "*" << "    /\\    " << "                            *" << endl;
+				cout << "*" << "   |oo|   " << "                            *" << endl;
+				cout << "*" << "  (|..|)  " << "                            *" << endl;
+				cout << "*" << "   |--|   " << "                            *" << endl;
+				cout << "*" << "   \\__/   " << "                            *" << endl;
 				cout << "*" << "    ||    " << "                            *" << endl;
+				cout << "*" << "  -| *|-  " << "                            *" << endl;
+				cout << "*" << " / |  | \\ " << "                            *" << endl;
+				cout << "*" << "/   \\/   \\" << "                            *" << endl;
+				cout << "*" << "    /\\    " << "                            *" << endl;
+				cout << "*" << "   _\\/_   " << "                            *" << endl;
 
-				for (int k = 0; k < ll; k++) {
-					cout << "*                                      *" << endl;
-				}
-
-				--l;
-				++ll;
-				cout << string(40, '*') << endl;
-
-				//Sleep(700);
-				//system("cls");
+				break;
 			}
+
+			cout << string(40, '*') << endl;
+
+			//Sleep(time);
+			//system("cls");
 		}
-		else {
-			int l = 3, ll = 3;
-			for (int i = 0; i < 4; i++) {
-				cout << string(40, '*') << endl;
+	}
+	else {
+		for (int i = 0; i < 2; i++) {
+			cout << string(40, '*') << endl;
 
-				for (int j = 0; j < l; j++) {
-					cout << "*                                      *" << endl;
-				}
+			for (size_t j = 0; j < 6; j++) {
+				cout << "*" << string(38, ' ') << "*" << endl;
+			}
 
+			switch (i) {
+			case 1:
 				cout << "*" << "    /\\    " << "                            *" << endl;
 				cout << "*" << "   |oo|   " << "                            *" << endl;
 				cout << "*" << "  (|..|)  " << "                            *" << endl;
@@ -484,154 +402,237 @@ void sweep(string r, string l) {
 				cout << "*" << "/   \\/   \\" << "                            *" << endl;
 				cout << "*" << "    /\\    " << "                            *" << endl;
 				cout << "*" << "    ||    " << "                            *" << endl;
+				cout << "*" << "   _||_   " << "                            *" << endl;
+
+				break;
+			case 0:
+				cout << "*" << "    /\\    " << "                            *" << endl;
+				cout << "*" << "   |oo|   " << "                            *" << endl;
+				cout << "*" << "  (|..|)  " << "                            *" << endl;
+				cout << "*" << "   |--|   " << "                            *" << endl;
+				cout << "*" << "   \\__/   " << "                            *" << endl;
 				cout << "*" << "    ||    " << "                            *" << endl;
+				cout << "*" << "  -| *|-  " << "                            *" << endl;
+				cout << "*" << " / |  | \\ " << "                            *" << endl;
+				cout << "*" << "/   \\/   \\" << "                            *" << endl;
+				cout << "*" << "    /\\    " << "                            *" << endl;
+				cout << "*" << "   _\\/_   " << "                            *" << endl;
 
-				for (int k = 0; k < ll; k++) {
-					cout << "*                                      *" << endl;
-				}
-
-				++l;
-				--ll;
-				cout << string(40, '*') << endl;
-
-				//Sleep(700);
-				//system("cls");
+				break;
 			}
+
+			cout << string(40, '*') << endl;
+
+			//Sleep(time);
+			//system("cls");
 		}
 	}
+}
 
-	void monetka(int time) {
-		const int h = 16, w = 11;
-		char ram1[h][w]{
-			{"          "},
-			{"          "},
-			{"          "},
-			{"          "},
-			{"    /\\    "},
-			{ "   |oo|   " },
-			{ "  (|..|)  " },
-			{ "   |--|   " },
-			{ "   \\__/   " },
-			{ "    ||    " },
-			{ "  -| *|-  " },
-			{ " / |  | \\ " },
-			{ "/   \\/   \\" },
-			{ "    /\\    " },
-			{ "    ||    " },
-			{ "   _||_   " }
-		};
+void fly(int p) {
+	if (p == 1) {
+		int l = 6, ll = 0;
 
-		SSS(ram1, time, 1);
+		for (int i = 0; i < 5; i++) {
+			cout << string(40, '*') << endl;
 
-		ram1[12][9] = '-'; ram1[11][9] = 'o';
+			for (int j = 0; j < l; j++) {
+				cout << "*                                      *" << endl;
+			}
 
-		SSS(ram1, time, 1);
+			cout << "*" << "    /\\    " << "                            *" << endl;
+			cout << "*" << "   |oo|   " << "                            *" << endl;
+			cout << "*" << "  (|..|)  " << "                            *" << endl;
+			cout << "*" << "   |--|   " << "                            *" << endl;
+			cout << "*" << "   \\__/   " << "                            *" << endl;
+			cout << "*" << "    ||    " << "                            *" << endl;
+			cout << "*" << "  -| *|-  " << "                            *" << endl;
+			cout << "*" << " / |  | \\ " << "                            *" << endl;
+			cout << "*" << "/   \\/   \\" << "                            *" << endl;
+			cout << "*" << "    /\\    " << "                            *" << endl;
+			cout << "*" << "    ||    " << "                            *" << endl;
+			cout << "*" << "    ||    " << "                            *" << endl;
 
-		ram1[12][9] = ' '; ram1[11][9] = '-'; ram1[10][9] = 'o';
+			for (int k = 0; k < ll; k++) {
+				cout << "*                                      *" << endl;
+			}
 
-		SSS(ram1, time, 1);
+			--l;
+			++ll;
+			cout << string(40, '*') << endl;
 
-		ram1[11][8] = ' ';	ram1[11][9] = ' ';  ram1[9][9] = 'o';
-		ram1[10][8] = '-';	ram1[10][9] = '-';
-
-		SSS(ram1, time, 1);
-
-		ram1[10][9] = '/'; ram1[9][9] = ' '; ram1[8][9] = 'o';
-
-		SSS(ram1, time, 1);
-
-		ram1[10][9] = '-'; ram1[8][9] = ' '; ram1[7][9] = 'o';
-
-		SSS(ram1, time, 1);
-
-		ram1[10][9] = ' '; ram1[7][9] = ' '; ram1[11][9] = '\\';
-		ram1[6][9] = 'o';
-
-		SSS(ram1, time, 1);
-
-		ram1[6][9] = ' ';  ram1[5][9] = 'o'; ram1[11][9] = ' ';
-		ram1[10][8] = ' '; ram1[11][8] = '\\'; ram1[12][9] = '\\';
-
-		SSS(ram1, time, 1);
-
-		ram1[5][9] = ' ';  ram1[4][9] = 'o';
-
-		SSS(ram1, time, 1);
-
-		ram1[4][9] = ' '; ram1[3][8] = 'o';
-
-		SSS(ram1, time, 1);
-
-		ram1[3][8] = ' '; ram1[2][7] = 'o';
-
-		SSS(ram1, time, 1);
-
-		ram1[2][7] = ' '; ram1[1][6] = 'o';
-
-		SSS(ram1, time, 1);
-
-		ram1[1][6] = ' '; ram1[0][5] = 'o';
-
-		SSS(ram1, time, 1);
-
-		ram1[0][5] = ' '; ram1[0][4] = 'o';
-
-		SSS(ram1, time, 1);
-
-		ram1[0][4] = ' '; ram1[1][3] = 'o';
-
-		SSS(ram1, time, 1);
-
-		ram1[1][3] = ' '; ram1[2][2] = 'o';
-
-		SSS(ram1, time, 1);
-
-		ram1[2][2] = ' '; ram1[3][1] = 'o';
-
-		SSS(ram1, time, 1);
-
-		ram1[3][1] = ' '; ram1[4][0] = 'o';
-
-		SSS(ram1, time, 1);
-
-		ram1[4][0] = ' '; ram1[5][0] = 'o';
-
-		SSS(ram1, time, 1);
-
-		ram1[5][0] = ' '; ram1[6][0] = 'o';
-		ram1[11][1] = ' '; ram1[12][0] = ' ';
-		ram1[10][1] = '-'; ram1[11][0] = '/';
-
-		SSS(ram1, time, 1);
-
-		ram1[6][0] = ' '; ram1[7][0] = 'o';
-		ram1[11][0] = ' '; ram1[10][0] = '-';
-
-		SSS(ram1, time, 1);
-
-		ram1[7][0] = ' '; ram1[8][0] = 'o';
-		ram1[10][0] = '\\';
-
-		SSS(ram1, time, 1);
-
-		ram1[8][0] = ' '; ram1[9][0] = 'o';
-		ram1[10][0] = '-';
-
-		SSS(ram1, time, 1);
-
-		ram1[9][0] = ' '; ram1[10][0] = 'o';
-		ram1[11][0] = '-'; ram1[11][1] = '/';
-		ram1[10][1] = ' ';
-
-		SSS(ram1, time, 1);
-
-		ram1[10][0] = ' '; ram1[11][0] = 'o';
-		ram1[12][0] = '-';
-
-		SSS(ram1, time, 1);
-
-		ram1[11][0] = ' '; ram1[12][0] = '/';
-
-		SSS(ram1, time, 1);
+			//Sleep(700);
+			//system("cls");
+		}
 	}
+	else {
+		int l = 3, ll = 3;
+		for (int i = 0; i < 4; i++) {
+			cout << string(40, '*') << endl;
+
+			for (int j = 0; j < l; j++) {
+				cout << "*                                      *" << endl;
+			}
+
+			cout << "*" << "    /\\    " << "                            *" << endl;
+			cout << "*" << "   |oo|   " << "                            *" << endl;
+			cout << "*" << "  (|..|)  " << "                            *" << endl;
+			cout << "*" << "   |--|   " << "                            *" << endl;
+			cout << "*" << "   \\__/   " << "                            *" << endl;
+			cout << "*" << "    ||    " << "                            *" << endl;
+			cout << "*" << "  -| *|-  " << "                            *" << endl;
+			cout << "*" << " / |  | \\ " << "                            *" << endl;
+			cout << "*" << "/   \\/   \\" << "                            *" << endl;
+			cout << "*" << "    /\\    " << "                            *" << endl;
+			cout << "*" << "    ||    " << "                            *" << endl;
+			cout << "*" << "    ||    " << "                            *" << endl;
+
+			for (int k = 0; k < ll; k++) {
+				cout << "*                                      *" << endl;
+			}
+
+			++l;
+			--ll;
+			cout << string(40, '*') << endl;
+
+			//Sleep(700);
+			//system("cls");
+		}
+	}
+}
+
+void monetka(int time) {
+	const int h = 16, w = 11;
+	char ram1[h][w]{
+		{"          "},
+		{"          "},
+		{"          "},
+		{"          "},
+		{"    /\\    "},
+		{ "   |oo|   " },
+		{ "  (|..|)  " },
+		{ "   |--|   " },
+		{ "   \\__/   " },
+		{ "    ||    " },
+		{ "  -| *|-  " },
+		{ " / |  | \\ " },
+		{ "/   \\/   \\" },
+		{ "    /\\    " },
+		{ "    ||    " },
+		{ "   _||_   " }
+	};
+
+	SSS(ram1, time, 1);
+
+	ram1[12][9] = '-'; ram1[11][9] = 'o';
+
+	SSS(ram1, time, 1);
+
+	ram1[12][9] = ' '; ram1[11][9] = '-'; ram1[10][9] = 'o';
+
+	SSS(ram1, time, 1);
+
+	ram1[11][8] = ' ';	ram1[11][9] = ' ';  ram1[9][9] = 'o';
+	ram1[10][8] = '-';	ram1[10][9] = '-';
+
+	SSS(ram1, time, 1);
+
+	ram1[10][9] = '/'; ram1[9][9] = ' '; ram1[8][9] = 'o';
+
+	SSS(ram1, time, 1);
+
+	ram1[10][9] = '-'; ram1[8][9] = ' '; ram1[7][9] = 'o';
+
+	SSS(ram1, time, 1);
+
+	ram1[10][9] = ' '; ram1[7][9] = ' '; ram1[11][9] = '\\';
+	ram1[6][9] = 'o';
+
+	SSS(ram1, time, 1);
+
+	ram1[6][9] = ' ';  ram1[5][9] = 'o'; ram1[11][9] = ' ';
+	ram1[10][8] = ' '; ram1[11][8] = '\\'; ram1[12][9] = '\\';
+
+	SSS(ram1, time, 1);
+
+	ram1[5][9] = ' ';  ram1[4][9] = 'o';
+
+	SSS(ram1, time, 1);
+
+	ram1[4][9] = ' '; ram1[3][8] = 'o';
+
+	SSS(ram1, time, 1);
+
+	ram1[3][8] = ' '; ram1[2][7] = 'o';
+
+	SSS(ram1, time, 1);
+
+	ram1[2][7] = ' '; ram1[1][6] = 'o';
+
+	SSS(ram1, time, 1);
+
+	ram1[1][6] = ' '; ram1[0][5] = 'o';
+
+	SSS(ram1, time, 1);
+
+	ram1[0][5] = ' '; ram1[0][4] = 'o';
+
+	SSS(ram1, time, 1);
+
+	ram1[0][4] = ' '; ram1[1][3] = 'o';
+
+	SSS(ram1, time, 1);
+
+	ram1[1][3] = ' '; ram1[2][2] = 'o';
+
+	SSS(ram1, time, 1);
+
+	ram1[2][2] = ' '; ram1[3][1] = 'o';
+
+	SSS(ram1, time, 1);
+
+	ram1[3][1] = ' '; ram1[4][0] = 'o';
+
+	SSS(ram1, time, 1);
+
+	ram1[4][0] = ' '; ram1[5][0] = 'o';
+
+	SSS(ram1, time, 1);
+
+	ram1[5][0] = ' '; ram1[6][0] = 'o';
+	ram1[11][1] = ' '; ram1[12][0] = ' ';
+	ram1[10][1] = '-'; ram1[11][0] = '/';
+
+	SSS(ram1, time, 1);
+
+	ram1[6][0] = ' '; ram1[7][0] = 'o';
+	ram1[11][0] = ' '; ram1[10][0] = '-';
+
+	SSS(ram1, time, 1);
+
+	ram1[7][0] = ' '; ram1[8][0] = 'o';
+	ram1[10][0] = '\\';
+
+	SSS(ram1, time, 1);
+
+	ram1[8][0] = ' '; ram1[9][0] = 'o';
+	ram1[10][0] = '-';
+
+	SSS(ram1, time, 1);
+
+	ram1[9][0] = ' '; ram1[10][0] = 'o';
+	ram1[11][0] = '-'; ram1[11][1] = '/';
+	ram1[10][1] = ' ';
+
+	SSS(ram1, time, 1);
+
+	ram1[10][0] = ' '; ram1[11][0] = 'o';
+	ram1[12][0] = '-';
+
+	SSS(ram1, time, 1);
+
+	ram1[11][0] = ' '; ram1[12][0] = '/';
+
+	SSS(ram1, time, 1);
+}
 #endif
