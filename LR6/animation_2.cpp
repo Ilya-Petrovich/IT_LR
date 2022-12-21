@@ -36,7 +36,7 @@ int main() {
 	cout << "Dance: \t\t\t1" << endl;
 	cout << "Run: \t\t\t2" << endl;
 	cout << "Sit down and jump: \t3" << endl;
-	cout << "th a ball: \t\t4" << endl;
+	cout << "Throw a ball: \t\t4" << endl;
 	cout << "Enter 5 for exit." << endl;
 	cin >> choice;
 
