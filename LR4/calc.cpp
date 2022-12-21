@@ -1,4 +1,4 @@
-#include <iostream>  
+ï»¿#include <iostream>  
 #include <cmath>  
 
 
@@ -8,11 +8,11 @@ int main()
 
     setlocale(LC_ALL, "rus");
     int num_1, num_2, num_3;
-std:cout << "Ââåäèòå ïåðâîå ÷èñëî:";
+std:cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð¿ÐµÑ€Ð²Ð¾Ðµ Ñ‡Ð¸ÑÐ»Ð¾: ";
     std::cin >> num_1;
-    std::cout << "Ââåäèòå âòîðîå ÷èñëî:";
+    std::cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð²Ñ‚Ð¾Ñ€Ð¾Ðµ Ñ‡Ð¸ÑÐ»Ð¾: ";
     std::cin >> num_2;
-    std::cout << "Ââåäèòå òðåòüå ÷èñëî:";
+    std::cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ‚Ñ€ÐµÑ‚ÑŒÐµ Ñ‡Ð¸ÑÐ»Ð¾: ";
     std::cin >> num_3;
 
     std::cout << num_1 << " + " << num_2 << " = " << num_1 + num_2 << std::endl;
