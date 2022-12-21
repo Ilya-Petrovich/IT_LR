@@ -2,11 +2,11 @@
 #include <unistd.h>
 using namespace std;
 
-const int ñ = 12;
+const int b = 12;
 
 int main()
 {
-	string s[ñ] = {
+	string s[b] = {
 		"    /\\    ",  
 		"   |oo|   ",  
 		"  (|..|)  ",  
@@ -23,7 +23,7 @@ int main()
 
 	for (int i = 0; i < 2; i++)
 	{
-		for (int i = 0; i < ñ; i++) cout << s[i] << "\n"; 
+		for (int i = 0; i < b; i++) cout << s[i] << "\n"; 
 		//Sleep(1000);
 		//system("cls");
 
@@ -31,7 +31,7 @@ int main()
 		s[7] = "/  |  |  \\";
 		s[8]= "    \\/    ";
 
-		for (int i = 0; i < ñ; i++) cout << s[i] << "\n"; 
+		for (int i = 0; i < b; i++) cout << s[i] << "\n"; 
 		//Sleep(1000);
 		//system("cls");
 
@@ -39,7 +39,7 @@ int main()
 		s[7] = " / |  |   ";
 		s[8] = "/   \\/    ";
 
-		for (int i = 0; i < ñ; i++) cout << s[i] << "\n"; 
+		for (int i = 0; i < b; i++) cout << s[i] << "\n"; 
 		//Sleep(1000);
 		//system("cls");
 
@@ -48,7 +48,7 @@ int main()
 		s[7] = "/  |  |   ";
 		s[8] = "    \\/    ";
 
-		for (int i = 0; i < ñ; i++) cout << s[i] << "\n"; 
+		for (int i = 0; i < b; i++) cout << s[i] << "\n"; 
 		//Sleep(1000);
 		//system("cls");
 
@@ -58,7 +58,7 @@ int main()
 		s[7] = " / |  |   ";
 		s[8] = "/   \\/    ";
 
-		for (int i = 0; i < ñ; i++) cout << s[i] << "\n"; 
+		for (int i = 0; i < b; i++) cout << s[i] << "\n"; 
 		//Sleep(1000);
 		//system("cls");
 
@@ -69,7 +69,7 @@ int main()
 		s[8] = "    \\/    ";
  
 
-		for (int i = 0; i < ñ; i++) cout << s[i] << "\n"; 
+		for (int i = 0; i < b; i++) cout << s[i] << "\n"; 
 		//Sleep(1000);
 		//system("cls");
 
@@ -78,7 +78,7 @@ int main()
 		s[6] = "---| *|-  ";
 		s[7] = "   |  |   ";
 
-		for (int i = 0; i < ñ; i++) cout << s[i] << "\n"; 
+		for (int i = 0; i < b; i++) cout << s[i] << "\n"; 
 		//Sleep(1000);
 		//system("cls");
 
@@ -86,7 +86,7 @@ int main()
 		s[5] = "\\   ||  / ";
 		s[6] = " --| *|-  ";
 
-		for (int i = 0; i < ñ; i++) cout << s[i] << "\n"; 
+		for (int i = 0; i < b; i++) cout << s[i] << "\n"; 
 		//Sleep(1000);
 		//system("cls");
 
@@ -94,7 +94,7 @@ int main()
 		s[5] = " \\  ||  / ";
 		s[6] = "  -| *|-  ";
 
-		for (int i = 0; i < ñ; i++) cout << s[i] << "\n"; 
+		for (int i = 0; i < b; i++) cout << s[i] << "\n"; 
 		//Sleep(1000);
 		//system("cls");
 
@@ -102,7 +102,7 @@ int main()
 		s[5] = " \\  ||  / ";
 		s[6] = "  -| *|-  ";
 
-		for (int i = 0; i < ñ; i++) cout << s[i] << "\n"; 
+		for (int i = 0; i < b; i++) cout << s[i] << "\n"; 
 		//Sleep(1000);
 		//system("cls");
 
@@ -110,21 +110,21 @@ int main()
 		s[5] = "*   ||   *";
 		s[6] = " --| *|-- ";
 
-		for (int i = 0; i < ñ; i++) cout << s[i] << "\n"; 
+		for (int i = 0; i < b; i++) cout << s[i] << "\n"; 
 		//Sleep(1000);
 		//system("cls");
 
 		s[5] = "    ||    ";
 		s[6] = "*--| *|--*";
 
-		for (int i = 0; i < ñ; i++) cout << s[i] << "\n"; 
+		for (int i = 0; i < b; i++) cout << s[i] << "\n"; 
 		//Sleep(1000);
 		//system("cls");
  
 		s[6] = " --| *|-- ";
 		s[7] = "*  |  |  *";
 
-		for (int i = 0; i < ñ; i++) cout << s[i] << "\n"; 
+		for (int i = 0; i < b; i++) cout << s[i] << "\n"; 
 		//Sleep(1000);
 		//system("cls");
 
@@ -132,12 +132,12 @@ int main()
 		s[7] = " / |  | \\ ";
 		s[8] = "*   \\/   *";
 		
-		for (int i = 0; i < ñ; i++) cout << s[i] << "\n"; 
+		for (int i = 0; i < b; i++) cout << s[i] << "\n"; 
 		//Sleep(1000);
 		//system("cls");
 		s[7] = " / |  | \\ ";
 		s[8] = "/   \\/   \\";
 	}
-	for (int i = 0; i < ñ; i++) cout << s[i] << "\n"; 
+	for (int i = 0; i < b; i++) cout << s[i] << "\n"; 
 	return 0;
 }
