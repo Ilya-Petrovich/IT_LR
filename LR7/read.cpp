@@ -5,6 +5,8 @@
 using namespace std;
 
 void readText(char buff[], long fileSize);
+void changeColor(char* buff, long fileSize);
+void writeText(char* buff, long fileSize);
 
 int main() {
 
@@ -51,6 +53,33 @@ void readText(char buff[], long fileSize) {
 	}
 }
 
+void changeColor(char* buff, long fileSize) {
+	for (int i = 138; i < fileSize; i += 3) {
+		buff[i] = 0;
+		buff[i + 1] = 140;
+		buff[i + 2] = 255;
+	}
+}
 
+void writeText(char* buff, long fileSize) {
 
+	char text[13] = "ISUB-1-22-15";
+	int count = 0;
 
+	for (int i = 138; i < fileSize; i += 4) {
+
+		if (count < 12) {
+			buff[i] = (buff[i] & 0xfc) | ((text[count] >> 6) & 0x3);
+			buff[i + 1] = (buff[i + 1] & 0xfc) | ((text[count] >> 4) & 0x3);
+			buff[i + 2] = (buff[i + 2] & 0xfc) | ((text[count] >> 2) & 0x3);
+			buff[i + 3] = (buff[i + 3] & 0xfc) | (text[count] & 0x3);
+		}
+		else {
+			buff[i] = buff[i] & 0xfc;
+			buff[i + 1] = (buff[i + 1] & 0xfc) | 0x2;
+			buff[i + 2] = buff[i + 2] & 0xfc;
+			buff[i + 3] = buff[i + 3] & 0xfc;
+		}
+		count++;
+	}
+}
