@@ -169,8 +169,8 @@ void jump(vector<string> person)
 {
     //int jumpDelay = 270 * 1000;
     //usleep(jumpDelay);//system("clear");
-    person[7] = "*                                       *";
-    person[8] = "*    /\\                                *";
+    person[7] = "*                                      *";
+    person[8] = "*    /\\                               *";
     person[9] = "*   |oo|                               *";
     person[10] = "*  (|..|)                              *";
     person[11] = "*   |--|                               *";
