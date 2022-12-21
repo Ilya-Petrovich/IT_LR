@@ -1,5 +1,5 @@
 #include<iostream>
-#include<unistd.h>
+#include<windows.h>
 #include<cstring>
 using namespace std;
 void world(int w, int h);
@@ -32,33 +32,33 @@ int main() {
 		{"   _||_   "},
 	};
 link:
-	cout << "Choose animation:" << endl;
-	cout << "Dance: \t\t\t1" << endl;
-	cout << "Run: \t\t\t2" << endl;
-	cout << "Sit down and jump: \t3" << endl;
-	cout << "Throw a ball: \t\t4" << endl;
-	cout << "Enter 5 for exit." << endl;
-	cin >> choice;
+	std::cout << "Choose animation:" << std::endl;
+	std::cout << "Dance: \t\t\t1" << std::endl;
+	std::cout << "Run: \t\t\t2" << std::endl;
+	std::cout << "Sit down and jump: \t3" << std::endl;
+	std::cout << "Throw a ball: \t\t4" << std::endl << std::endl;
+	std::cout << "Enter 5 for exit." << std::endl;
+	std::cin >> choice;
 
 	switch (choice) {
 	case 1:
 		dance(pers, H, W);
-		//system("cls");
+		system("cls");
 		goto link;
 		break;
 	case 2:
 		run(pers, H, W);
-		//system("cls");
+		system("cls");
 		goto link;
 		break;
 	case 3:
 		flying(pers, H, W);
-		////system("cls");
+		//system("cls");
 		//goto link;
 		break;
 	case 4:
 		ball();
-		//system("cls");
+		system("cls");
 		goto link;
 		break;
 	case 5:
@@ -71,92 +71,92 @@ link:
 void dance(char pers[12][11], int H, int W) {
 	int cnt = 0;
 	char a = '/', b = ' ', c = '\\', d = '-', e = '*';
-	//system("cls");
+	system("cls");
 	while (cnt != 2) {
 		output(pers, H, W);
-		//Sleep(500);
-		//system("cls");
+		Sleep(500);
+		system("cls");
 		pers[6][1] = pers[6][8] = d;
 		pers[7][0] = a;
 		pers[7][9] = c;
 		pers[7][8] = pers[8][0] = pers[8][9] = pers[7][1] = b;
 		output(pers, H, W);
-		//Sleep(500);
-		//system("cls");
+		Sleep(500);
+		system("cls");
 		pers[6][9] = d;
 		pers[7][1] = pers[8][0] = a;
 		pers[7][9] = pers[7][0] = pers[6][1] = b;
 		output(pers, H, W);
-		//Sleep(500);
-		//system("cls");
+		Sleep(500);
+		system("cls");
 		pers[6][9] = pers[8][0] = pers[7][1] = b;
 		pers[6][1] = d;
 		pers[5][9] = pers[7][0] = a;
 		output(pers, H, W);
-		//Sleep(500);
-		//system("cls");
+		Sleep(500);
+		system("cls");
 		pers[6][1] = pers[7][0] = pers[6][8] = pers[5][9] = b;
 		pers[4][9] = pers[7][1] = pers[8][0] = pers[5][8] = a;
 		output(pers, H, W);
-		//Sleep(500);
-		//system("cls");
+		Sleep(500);
+		system("cls");
 		pers[7][1] = pers[8][0] = b;
 		pers[6][1] = d;
 		pers[4][9] = e;
 		pers[7][0] = a;
 		output(pers, H, W);
-		//Sleep(500);
-		//system("cls");
+		Sleep(500);
+		system("cls");
 		pers[7][0] = b;
 		pers[6][0] = d;
 		pers[4][9] = a;
 		output(pers, H, W);
-		//Sleep(500);
-		//system("cls");
+		Sleep(500);
+		system("cls");
 		pers[6][0] = b;
 		pers[5][0] = c;
 		pers[4][9] = e;
 		output(pers, H, W);
-		//Sleep(500);
-		//system("cls");
+		Sleep(500);
+		system("cls");
 		pers[5][0] = pers[6][1] = b;
 		pers[4][9] = a;
 		pers[4][0] = pers[5][1] = c;
 		output(pers, H, W);
-		//Sleep(500);
-		//system("cls");
+		Sleep(500);
+		system("cls");
 		pers[4][9] = pers[4][0] = e;
 		output(pers, H, W);
-		//Sleep(500);
-		//system("cls");
+		Sleep(500);
+		system("cls");
 		pers[4][9] = pers[4][0] = pers[5][1] = pers[5][8] = b;
 		pers[6][1] = pers[6][8] = d;
 		pers[5][0] = pers[5][9] = e;
 		output(pers, H, W);
-		//Sleep(500);
-		//system("cls");
+		Sleep(500);
+		system("cls");
 		pers[5][0] = pers[5][9] = b;
 		pers[6][0] = pers[6][9] = e;
 		output(pers, H, W);
-		//Sleep(500);
-		//system("cls");
+		Sleep(500);
+		system("cls");
 		pers[6][0] = pers[6][9] = b;
 		pers[7][0] = pers[7][9] = e;
 		output(pers, H, W);
-		//Sleep(500);
-		//system("cls");
+		Sleep(500);
+		system("cls");
 		pers[7][0] = pers[7][9] = pers[6][1] = pers[6][8] = b;
 		pers[8][0] = pers[8][9] = e;
 		pers[7][1] = a;
 		pers[7][8] = c;
 		output(pers, H, W);
-		//Sleep(500);
-		//system("cls");
+		Sleep(500);
+		system("cls");
 		pers[8][0] = a;
 		pers[8][9] = c;
 		output(pers, H, W);
-		//Sleep(500);
-		//system("cls");
+		Sleep(500);
+		system("cls");
 		cnt++;
 	}
 }
@@ -183,8 +183,8 @@ void output(char pers[12][11], int h, int w) {
 
 void run(char pers[12][11], int h, int w) {
 	int ls = 40, rs = 12, cnt = 0;
-	//Sleep(500);
-	//system("cls");
+	Sleep(500);
+	system("cls");
 
 	while (cnt != 57) {
 		cout << string(40, '*') << endl;
@@ -196,16 +196,16 @@ void run(char pers[12][11], int h, int w) {
 			ls--;
 			cnt++;
 			cout << string(40, '*') << endl;
-			//Sleep(500);
-			//system("cls");
+			Sleep(500);
+			system("cls");
 		}
 		else {
 			rs--;
 			ls++;
 			cnt++;
 			cout << string(40, '*') << endl;
-			//Sleep(500);
-			//system("cls");
+			Sleep(500);
+			system("cls");
 		}
 	}
 	cout << string(40, '*') << endl;
@@ -263,8 +263,8 @@ void legs(int cnt, int ls, int rs) {
 
 void flying(char pers[12][11], int h, int w) {
 	int frame = 0, up = 6, down = 0;
-	//Sleep(500);
-	//system("cls");
+	Sleep(500);
+	system("cls");
 
 	while (frame != 12) {
 		cout << string(40, '*') << endl;
@@ -286,8 +286,8 @@ void flying(char pers[12][11], int h, int w) {
 			down--;
 		}
 
-		//Sleep(500);
-		//system("cls");
+		Sleep(500);
+		system("cls");
 		frame++;
 	}
 
@@ -381,146 +381,146 @@ void ball() {
 		{"*   _||_                               *"},
 		{"****************************************"},
 	};
-	//system("cls");
+	system("cls");
 	Tout(th, H, W);
 	th[15][10] = e;
 	th[14][10] = a;
-	//Sleep(500);
-	//system("cls");
+	Sleep(500);
+	system("cls");
 	Tout(th, H, W);
 	th[15][10] = b;
 	th[14][10] = e;
 	th[13][10] = a;
-	//Sleep(500);
-	//system("cls");
+	Sleep(500);
+	system("cls");
 	Tout(th, H, W);
 	th[14][9] = th[14][10] = b;
 	th[13][9] = th[13][10] = e;
 	th[12][10] = a;
-	//Sleep(500);
-	//system("cls");
+	Sleep(500);
+	system("cls");
 	Tout(th, H, W);
 	th[12][10] = b;
 	th[13][10] = c;
 	th[11][10] = a;
-	//Sleep(500);
-	//system("cls");
+	Sleep(500);
+	system("cls");
 	Tout(th, H, W);
 	th[11][10] = b;
 	th[13][10] = e;
 	th[10][10] = a;
-	//Sleep(500);
-	//system("cls");
+	Sleep(500);
+	system("cls");
 	Tout(th, H, W);
 	th[13][10] = th[10][10] = b;
 	th[14][10] = d;
 	th[9][10] = a;
-	//Sleep(500);
-	//system("cls");
+	Sleep(500);
+	system("cls");
 	Tout(th, H, W);
 	th[14][10] = th[9][10] = th[13][9] = b;
 	th[15][10] = th[14][9] = d;
 	th[8][10] = a;
-	//Sleep(500);
-	//system("cls");
+	Sleep(500);
+	system("cls");
 	Tout(th, H, W);
 	th[8][10] = b;
 	th[7][10] = a;
-	//Sleep(500);
-	//system("cls");
+	Sleep(500);
+	system("cls");
 	Tout(th, H, W);
 	th[7][10] = b;
 	th[6][9] = a;
-	//Sleep(500);
-	//system("cls");
+	Sleep(500);
+	system("cls");
 	Tout(th, H, W);
 	th[6][9] = b;
 	th[5][8] = a;
-	//Sleep(500);
-	//system("cls");
+	Sleep(500);
+	system("cls");
 	Tout(th, H, W);
 	th[5][8] = b;
 	th[4][7] = a;
-	//Sleep(500);
-	//system("cls");
+	Sleep(500);
+	system("cls");
 	Tout(th, H, W);
 	th[4][7] = b;
 	th[3][6] = a;
-	//Sleep(500);
-	//system("cls");
+	Sleep(500);
+	system("cls");
 	Tout(th, H, W);
 	th[3][6] = b;
 	th[3][5] = a;
-	//Sleep(500);
-	//system("cls");
+	Sleep(500);
+	system("cls");
 	Tout(th, H, W);
 	th[3][5] = b;
 	th[4][4] = a;
-	//Sleep(500);
-	//system("cls");
+	Sleep(500);
+	system("cls");
 	Tout(th, H, W);
 	th[4][4] = b;
 	th[5][3] = a;
-	//Sleep(500);
-	//system("cls");
+	Sleep(500);
+	system("cls");
 	Tout(th, H, W);
 	th[5][3] = b;
 	th[6][2] = a;
-	//Sleep(500);
-	//system("cls");
+	Sleep(500);
+	system("cls");
 	Tout(th, H, W);
 	th[6][2] = b;
 	th[7][1] = a;
-	//Sleep(500);
-	//system("cls");
+	Sleep(500);
+	system("cls");
 	Tout(th, H, W);
 	th[7][1] = b;
 	th[8][1] = a;
-	//Sleep(500);
-	//system("cls");
+	Sleep(500);
+	system("cls");
 	Tout(th, H, W);
 	th[8][1] = th[15][1] = th[14][2] = b;
 	th[9][1] = a;
 	th[13][2] = e;
 	th[14][1] = c;
-	//Sleep(500);
-	//system("cls");
+	Sleep(500);
+	system("cls");
 	Tout(th, H, W);
 	th[9][1] = th[14][1] = b;
 	th[13][1] = e;
 	th[10][1] = a;
-	//Sleep(500);
-	//system("cls");
+	Sleep(500);
+	system("cls");
 	Tout(th, H, W);
 	th[10][1] = b;
 	th[13][1] = d;
 	th[11][1] = a;
-	//Sleep(500);
-	//system("cls");
+	Sleep(500);
+	system("cls");
 	Tout(th, H, W);
 	th[11][1] = b;
 	th[13][1] = e;
 	th[12][1] = a;
-	//Sleep(500);
-	//system("cls");
+	Sleep(500);
+	system("cls");
 	Tout(th, H, W);
 	th[12][1] = th[13][2] = b;
 	th[13][1] = a;
 	th[14][1] = e;
 	th[14][2] = c;
-	//Sleep(500);
-	//system("cls");
+	Sleep(500);
+	system("cls");
 	Tout(th, H, W);
 	th[13][1] = b;
 	th[14][1] = a;
 	th[15][1] = e;
-	//Sleep(500);
-	//system("cls");
+	Sleep(500);
+	system("cls");
 	Tout(th, H, W);
 	th[14][1] = b;
 	th[15][1] = c;
-	//Sleep(500);
-	//system("cls");
+	Sleep(500);
+	system("cls");
 	Tout(th, H, W);
 }
 
