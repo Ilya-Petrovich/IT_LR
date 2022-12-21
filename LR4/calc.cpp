@@ -22,4 +22,4 @@ int main()
 	else {
 		std::cout << "Invalid data" << std::endl;
 	}
-} 
+}
