@@ -625,6 +625,6 @@ int menu(int &a) {
 	cout << "Throw a ball: \t\t4" << '\n' << '\n';
 	cout << "Enter 5 for exit." << '\n';
 	cin >> a;
-	system("cls");
+	//system("cls");
 	return a;
 }
