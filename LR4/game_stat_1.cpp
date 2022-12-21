@@ -1,85 +1,97 @@
-#include <iostream>
-#include <cmath>
+﻿#include <iostream>
 
 int main() {
-    double Fuel, Speed, fuelConsumption, s, passed, passed_if_360, t, fuelConsumed, fuelRemained;
-    std::cout << "How much fuel do you have at start? ";
-    std::cin >> Fuel;
-    std::cout << "" << std::endl;
-    if (Fuel < 0 || Fuel > 50) {
-        std::cout << "Invalid data." << std::endl;
-        return 0;
-    }
-    std::cout << "Car stats" << std::endl;
-    std::cout << "Fuel: " << Fuel << std::endl;
-    std::cout << "Fuel capacity: 50" << std::endl;
-    std::cout << "Fuel consumption: 0" << std::endl;
-    std::cout << "Speed: 0" << std::endl;
-    std::cout << "Maximum speed: 110" << std::endl;
-    std::cout << "" << std::endl;
-    std::cout << "Route info" << std::endl;
-    std::cout << "Distance: 360 km" << std::endl;
-    std::cout << "----------------------------------------" << std::endl;
-    std::cout << "You have to drive a route 360 km long." << std::endl;
-    std::cout << "But first you need to check if you have enough fuel." << std::endl;
-    std::cout << "" << std::endl;
-    if (Fuel < 25) {
-        Fuel += 25;
-        std::cout << "Your fuel before start:" << Fuel << std::endl;
-        std::cout << "" << std::endl;
-    }
-    std::cout << "What speed will you choose? ";
-    std::cin >> Speed;
-    if (Speed > 110) {
-        Speed = 110;
-    }
-    else if (Speed < 0) {
-        std::cout << "Invalid data." << std::endl;
-        return 0;
-    }
-    std::cout << "Your speed before start: " << Speed << " km/h" << std::endl;
-    s = Speed / 10;
-    fuelConsumption = s * s / 4 - 4.5 * s + 30;
-    if (Speed == 0) {
-        fuelConsumption = 0;
-    }
-    std::cout << "" << std::endl;
-    std::cout << "Fuel consumption with chosen speed: " << fuelConsumption << " litres per 100 km" << std::endl;
-    std::cout << "" << std::endl;
-    std::cout << "Destination result" << std::endl;
-    fuelConsumption = fuelConsumption / 100;
-    passed = Fuel / fuelConsumption;
-    if (Speed == 0) {
-        passed = 0;
-    }
-    if (passed >= 360) {
-        passed_if_360 = 360;
-        t = passed_if_360 / Speed * 3600;
-        fuelRemained = (passed - passed_if_360) * fuelConsumption;
-        fuelConsumed = Fuel - fuelRemained;
-        std::cout << "Distance traveled: " << passed_if_360 << " km" << std::endl;
-        std::cout << "Time spent: " << floor(t) << " sec" << std::endl;
-        std::cout << "Fuel consumed: " << fuelConsumed << " litres" << std::endl;
-        std::cout << "Fuel remained: " << fuelRemained << " litres" << std::endl;
-    }
-    else {
-        t = passed / Speed * 3600;
-        fuelRemained = 0;
-        fuelConsumed = Fuel;
-        if (Speed == 0) {
-            t = 0;
-            fuelRemained = Fuel;
-            fuelConsumed = 0;
-        }
-        std::cout << "Distance traveled: " << passed << " km" << std::endl;
-        std::cout << "Time spent: " << floor(t) << " sec" << std::endl;
-        std::cout << "Fuel consumed: " << fuelConsumed << " litres" << std::endl;
-        std::cout << "Fuel remained: " << fuelRemained << " litres" << std::endl;
-    }
-    std::cout << "----------------------------------------" << std::endl;
-    if (passed > 360) {
-        std::cout << "Congratulations! You have reached destination point!" << std::endl;
-    }
-    else {
-        std::cout << "You haven't reched destination point. " << ((360 - passed) * 100) / 100 << " km left." << std::endl;
-    }
+
+	int fuel, t;
+	float speed, speed_2, Fuel_consumed, Fuel_cosumption, Fuel_remained, Distance_traveled, km_left;
+
+	std::cout « "How much fuel do you have ay start?" «std::endl;
+	std::cin » fuel;
+
+	if (0 < fuel) {
+		std::cout « "Car stats" « std::endl;
+	}
+	else {
+		std::cout « "Invalide date." « std::endl;
+		return 0;
+	}
+	if (fuel < 50) {
+	}
+	else {
+		std::cout « "Invalide date." « std::endl;
+		return 0;
+	}
+	if (fuel == 25) {
+		std::cout « "Fuel: " « fuel + 25 « std::endl;
+	}
+	else {
+		std::cout « "Fuel: " « fuel « std::endl;
+	}
+	std::cout « "Fuel capacity: 50" « std::endl;
+	std::cout « "Fuel consumention: 0" « std::endl;
+	std::cout « "Speed: 0" « std::endl;
+	std::cout « "Maximum speed: 110" « std::endl «std::endl;
+	std::cout « "Route info" «std::endl;
+	std::cout « "Distance: 360 km" « std::endl;
+	std::cout « "------------------------------" « std::endl;
+	std::cout « "You have to drive a route 360 km long." « std::endl;
+	std::cout « "But first you need to check if you have enough fuel." « std::endl« std::endl;
+	std::cout « "What speed will you choose?" « std::endl;
+
+	std::cin » speed;
+
+	if (speed < 110) {
+		std::cout « "Your speed before start: " « speed « " km/h" « std::endl;
+	}
+	else {
+		std::cout « "Your speed before start: 110 km/h" « std::endl;
+	}
+	speed_2 = speed / 10;
+
+	Fuel_cosumption = speed_2 * speed_2 / 4 - 4.5 * speed_2 + 30;
+
+	std::cout « "Fuel consumption with chosen speed :" « Fuel_cosumption « " liters per 100 km" « std::endl « std::endl;
+	std::cout « "Destination result" « std::endl;
+
+	Distance_traveled = fuel / (Fuel_cosumption / 100);
+
+	if (Distance_traveled > 360) {
+		std::cout « "Distance traveled : 360 km" « std::endl;
+	}
+	else {
+		std::cout « "Distance traveled: " « Distance_traveled « " km" « std::endl;
+	}
+
+	Fuel_consumed = Fuel_cosumption / 100 * 360;
+	Fuel_remained = fuel - Fuel_consumed;
+
+	t = 360 / speed * 60 * 60;
+
+
+
+	std::cout « "Time spent: "« t « " sec" « std::endl;
+	std::cout « "Fuel consumed: "« Fuel_consumed « " liters" « std::endl;
+
+	if (Fuel_remained < 0) {
+		Fuel_remained = 0;
+	}
+
+
+	std::cout « "Fuel remained: " « Fuel_remained « " liters" « std::endl;
+	std::cout « "------------------------------" « std::endl;
+
+	km_left = 360 - Distance_traveled;
+
+	if (Fuel_remained == 0) {
+		std::cout « "You haven't reached destination point. " « km_left «" km left.";
+	}
+	else {
+		std::cout « "Congraturations! You have reached destionation point!" « std::endl;
+	}
+
+
+
+
+
+
+}
