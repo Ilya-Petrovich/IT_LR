@@ -1,79 +1,95 @@
 #include <iostream>
 #include <stdio.h>
 
-using namespace std;
-void readText(char* buff, long fileSize);
-void changeColor(char* buff, long fileSize);
-void writeText(char* buff, long fileSize);
+void ReadText(char* buff, long fileSize)
+{
+    int first_byte, second_byte, third_byte, fourth_byte, symbol;
+    std::string result = "";
 
-int main() {
+    for (int i = fileSize - 1200; i < fileSize; i += 4) {
+        first_byte = buff[i];
+        second_byte = buff[i + 1];
+        third_byte = buff[i + 2];
+        fourth_byte = buff[i + 3];
 
-	FILE* file;
-
-	char filename[10];
-	cin >> filename;
-	file = fopen(filename, "rb");
-
-	long fileSize;
-	fseek(file, 0, SEEK_END);
-	fileSize = ftell(file);
-	rewind(file);
-
-	char* buff = new char[fileSize]();
-	fread(buff, sizeof(char), fileSize, file);
-	readText(buff, fileSize);
-
-	fclose(file);
-	cin >> filename;
-	file = fopen(filename, "wb");
-	changeColor(buff, fileSize);
-	writeText(buff, fileSize);
-	fwrite(buff, sizeof(char), fileSize, file);
-	fclose(file);
-	delete[] buff;
-	return 0;
+        symbol = ((first_byte & 3) << 6) | ((second_byte & 3) << 4) | ((third_byte & 3) << 2) | (fourth_byte & 3);
+        result += char(symbol);
+    }
+    std::cout << result << std::endl;
 }
-void readText(char* buff, long fileSize) {
-	char firstByte, secondByte, thirdByte, fourthByte, sign;
-	int mask = 0x03;
 
-	for (int i = 138; i < fileSize; i += 4) {
-		firstByte = (buff[i] & mask) << 6;	// first byte - 01001101
-		secondByte = (buff[i + 1] & mask) << 4;	// second byte - 01001100
-		thirdByte = (buff[i + 2] & mask) << 2;	// third byte - 11011110
-		fourthByte = buff[i + 3] & mask;
-		sign = firstByte | secondByte | thirdByte | fourthByte;
-		printf("%c", sign);
-	}
-	cout << endl;
+void changeColor(char* buff, long fileSize)
+{
+    FILE* file_changeColor;
+    file_changeColor = fopen("changed_image.bmp", "wb");
+
+    for (int i = fileSize - 1200; i < fileSize; i += 3) {
+        buff[i] = 87; //&252 ???
+        buff[i + 1] = 139;
+        buff[i + 2] = 46;
+    }
+    fwrite(buff, sizeof(char), fileSize, file_changeColor);
+    fclose(file_changeColor);
 }
-void changeColor(char* buff, long fileSize) {
 
-	for (int i = 138; i < fileSize; i += 3) {
-		buff[i] = 60;	// first byte - 01001101
-		buff[i + 1] = 20;	// second byte - 01001100
-		buff[i + 2] = 220;	// third byte - 11011110
-	}
+void writeText(char* buff, long fileSize)
+{
+    int first_part, second_part, third_part, fourth_part;
+    std::string text = "TRP-3-22-26";
+
+    FILE* file_write;
+    file_write = fopen("changed_image.bmp", "rb");
+
+    fread(buff, sizeof(char), fileSize, file_write);
+
+    //cleaning
+    for (int i = fileSize - 1200; i < fileSize; i ++) {
+        buff[i] &= 252;
+    }
+
+    //writing
+    for (unsigned int i = 0; i < text.size(); i++) {
+        first_part = (text[i] & 192) >> 6;
+        second_part = (text[i] & 48) >> 4;
+        third_part = (text[i] & 12) >> 2;
+        fourth_part = text[i] & 3;
+
+        buff[fileSize - 1200 + i * 4] = (buff[fileSize - 1200 + i * 4] & 252) | first_part;
+        buff[fileSize - 1200 + i * 4 + 1] = (buff[fileSize - 1200 + i * 4 + 1] & 252) | second_part;
+        buff[fileSize - 1200 + i * 4 + 2] = (buff[fileSize - 1200 + i * 4 + 2] & 252) | third_part;
+        buff[fileSize - 1200 + i * 4 + 3] = (buff[fileSize - 1200 + i * 4 + 3] & 252) | fourth_part;
+    }
+
+    file_write = fopen("changed_image.bmp", "wb");
+
+    fwrite(buff, sizeof(char), fileSize, file_write);
+    fclose(file_write);
+
 }
-void writeText(char* buff, long fileSize) {
 
-	char text[12]; cin >> text;
-	int count = 0;
+int main()
+{
+    FILE* file;
+    char filename[100];
+    std::cin >> filename;
+    file = fopen(filename, "rb");
 
-	for (int i = 138; i < fileSize; i += 4) {
+    long fileSize;
+    fseek(file, 0, SEEK_END);
+    fileSize = ftell(file);
+    rewind(file);
 
-		if (count < 12) {
-			buff[i] = (buff[i] & 0xfc) | ((text[count] >> 6) & 0x3);
-			buff[i + 1] = (buff[i + 1] & 0xfc) | ((text[count] >> 4) & 0x3);
-			buff[i + 2] = (buff[i + 2] & 0xfc) | ((text[count] >> 2) & 0x3);
-			buff[i + 3] = (buff[i + 3] & 0xfc) | (text[count] & 0x3);
-		}
-		else {
-			buff[i] = buff[i] & 0xfc;
-			buff[i + 1] = (buff[i + 1] & 0xfc) | 0x2;
-			buff[i + 2] = buff[i + 2] & 0xfc;
-			buff[i + 3] = buff[i + 3] & 0xfc;
-		}
-		count++;
-	}
+    char* buff = new char[fileSize]();
+
+    fread(buff, sizeof(char), fileSize, file);
+
+    ReadText(buff, fileSize);
+    changeColor(buff, fileSize);
+
+    writeText(buff, fileSize);
+
+    fclose(file);
+    free(buff);
+
+    return 0;
 }
