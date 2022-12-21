@@ -167,7 +167,7 @@ void ballThrow(vector<string> person)
 
 void jump(vector<string> person)
 {
-    //int jumpDelay = 270 * 1000;
+    int jumpDelay = 270 * 1000;
     //usleep(jumpDelay);//system("clear");
     person[7] = "*                                      *";
     person[8] = "*    /\\                                *";
@@ -250,7 +250,7 @@ void jump(vector<string> person)
     person[13] = "*    ||                                *";
     person[14] = "*    ||                                *";
     person[15] = "*                                      *";
-    print(person);//usleep(jumpDelay);//system("clear");
+    print(person);print(person);//usleep(jumpDelay);//system("clear");
     person[3] = "*                                      *";
     person[4] = "*    /\\                                *";
     person[5] = "*   |oo|                               *";
@@ -955,8 +955,8 @@ void run(vector<string> person)
     person[18] = "*                               _||_   *";
 
     print(person);//usleep(runDelay);//system("clear");
-    person[17] = "*                               / |    *";
-    person[18] = "*                             _/  |_   *";
+    person[17] = "*                                | \\   *";
+    person[18] = "*                               _|  \\_ *";
 
     print(person);//usleep(runDelay);//system("clear");
     person[7] = "*                               /\\     *";
@@ -969,16 +969,16 @@ void run(vector<string> person)
     person[14] = "*                            / |  | \\  *";
     person[15] = "*                           /   \\/   \\ *";
     person[16] = "*                               /\\     *";
-    person[17] = "*                               | \\    *";
-    person[18] = "*                              _|  \\_  *";
+    person[17] = "*                              / |     *";
+    person[18] = "*                            _/  |_    *";
 
     print(person);//usleep(runDelay);//system("clear");
     person[17] = "*                               ||     *";
     person[18] = "*                              _||_    *";
-    
+
     print(person);//usleep(runDelay);//system("clear");
-    person[17] = "*                              / |     *";
-    person[18] = "*                            _/  |_    *";
+    person[17] = "*                               | \\    *";
+    person[18] = "*                              _|  \\_  *";
 
     print(person);//usleep(runDelay);//system("clear");
     person[7] = "*                              /\\      *";
@@ -991,16 +991,16 @@ void run(vector<string> person)
     person[14] = "*                           / |  | \\   *";
     person[15] = "*                          /   \\/   \\  *";
     person[16] = "*                              /\\      *";
-    person[17] = "*                              | \\     *";
-    person[18] = "*                             _|  \\_   *";
+    person[17] = "*                             / |      *";
+    person[18] = "*                           _/  |_     *";
 
     print(person);//usleep(runDelay);//system("clear");
     person[17] = "*                              ||      *";
     person[18] = "*                             _||_     *";
 
     print(person);//usleep(runDelay);//system("clear");
-    person[17] = "*                             / |      *";
-    person[18] = "*                           _/  |_     *";
+    person[17] = "*                              | \\     *";
+    person[18] = "*                             _|  \\_   *";
 
     print(person);//usleep(runDelay);//system("clear");
     person[7] = "*                             /\\       *";
@@ -1013,16 +1013,16 @@ void run(vector<string> person)
     person[14] = "*                          / |  | \\    *";
     person[15] = "*                         /   \\/   \\   *";
     person[16] = "*                             /\\       *";
-    person[17] = "*                             | \\      *";
-    person[18] = "*                            _|  \\_    *";
+    person[17] = "*                            / |       *";
+    person[18] = "*                          _/  |_      *";
 
     print(person);//usleep(runDelay);//system("clear");
     person[17] = "*                             ||       *";
     person[18] = "*                            _||_      *";
 
     print(person);//usleep(runDelay);//system("clear");
-    person[17] = "*                            / |       *";
-    person[18] = "*                          _/  |_      *";
+    person[17] = "*                             | \\      *";
+    person[18] = "*                            _|  \\_    *";
 
     print(person);//usleep(runDelay);//system("clear");
     person[7] = "*                            /\\        *";
@@ -1035,16 +1035,16 @@ void run(vector<string> person)
     person[14] = "*                         / |  | \\     *";
     person[15] = "*                        /   \\/   \\    *";
     person[16] = "*                            /\\        *";
-    person[17] = "*                            | \\       *";
-    person[18] = "*                           _|  \\_     *";
+    person[17] = "*                           / |        *";
+    person[18] = "*                         _/  |_       *";
 
     print(person);//usleep(runDelay);//system("clear");
     person[17] = "*                            ||        *";
     person[18] = "*                           _||_       *";
 
     print(person);//usleep(runDelay);//system("clear");
-    person[17] = "*                           / |        *";
-    person[18] = "*                         _/  |_       *";
+    person[17] = "*                            | \\       *";
+    person[18] = "*                           _|  \\_     *";
 
     print(person);//usleep(runDelay);//system("clear");
     person[7] = "*                           /\\         *";
@@ -1057,16 +1057,16 @@ void run(vector<string> person)
     person[14] = "*                        / |  | \\      *";
     person[15] = "*                       /   \\/   \\     *";
     person[16] = "*                           /\\         *";
-    person[17] = "*                           | \\        *";
-    person[18] = "*                          _|  \\_      *";
+    person[17] = "*                          / |         *";
+    person[18] = "*                        _/  |_        *";
 
     print(person);//usleep(runDelay);//system("clear");
     person[17] = "*                           ||         *";
     person[18] = "*                          _||_        *";
 
     print(person);//usleep(runDelay);//system("clear");
-    person[17] = "*                          / |         *";
-    person[18] = "*                        _/  |_        *";
+    person[17] = "*                           | \\        *";
+    person[18] = "*                          _|  \\_      *";
 
     print(person);//usleep(runDelay);//system("clear");
     person[7] = "*                          /\\          *";
@@ -1079,16 +1079,16 @@ void run(vector<string> person)
     person[14] = "*                       / |  | \\       *";
     person[15] = "*                      /   \\/   \\      *";
     person[16] = "*                          /\\          *";
-    person[17] = "*                          | \\         *";
-    person[18] = "*                         _|  \\_       *";
+    person[17] = "*                         / |          *";
+    person[18] = "*                       _/  |_         *";
 
     print(person);//usleep(runDelay);//system("clear");
     person[17] = "*                          ||          *";
     person[18] = "*                         _||_         *";
 
     print(person);//usleep(runDelay);//system("clear");
-    person[17] = "*                         / |          *";
-    person[18] = "*                       _/  |_         *";
+    person[17] = "*                          | \\         *";
+    person[18] = "*                         _|  \\_       *";
 
     print(person);//usleep(runDelay);//system("clear");
     person[7] = "*                         /\\           *";
@@ -1101,16 +1101,16 @@ void run(vector<string> person)
     person[14] = "*                      / |  | \\        *";
     person[15] = "*                     /   \\/   \\       *";
     person[16] = "*                         /\\           *";
-    person[17] = "*                         | \\          *";
-    person[18] = "*                        _|  \\_        *";
+    person[17] = "*                        / |           *";
+    person[18] = "*                      _/  |_          *";
 
     print(person);//usleep(runDelay);//system("clear");
     person[17] = "*                         ||           *";
     person[18] = "*                        _||_          *";
 
     print(person);//usleep(runDelay);//system("clear");
-    person[17] = "*                        / |           *";
-    person[18] = "*                      _/  |_          *";
+    person[17] = "*                         | \\          *";
+    person[18] = "*                        _|  \\_        *";
 
     print(person);//usleep(runDelay);//system("clear");
     person[7] = "*                        /\\            *";
@@ -1123,16 +1123,16 @@ void run(vector<string> person)
     person[14] = "*                     / |  | \\         *";
     person[15] = "*                    /   \\/   \\        *";
     person[16] = "*                        /\\            *";
-    person[17] = "*                        | \\           *";
-    person[18] = "*                       _|  \\_         *";
+    person[17] = "*                       / |            *";
+    person[18] = "*                     _/  |_           *";
 
     print(person);//usleep(runDelay);//system("clear");
     person[17] = "*                        ||            *";
     person[18] = "*                       _||_           *";
 
     print(person);//usleep(runDelay);//system("clear");
-    person[17] = "*                       / |            *";
-    person[18] = "*                     _/  |_           *";
+    person[17] = "*                        | \\           *";
+    person[18] = "*                       _|  \\_         *";
 
     print(person);//usleep(runDelay);//system("clear");
     person[7] = "*                       /\\             *";
@@ -1145,16 +1145,16 @@ void run(vector<string> person)
     person[14] = "*                    / |  | \\          *";
     person[15] = "*                   /   \\/   \\         *";
     person[16] = "*                       /\\             *";
-    person[17] = "*                       | \\            *";
-    person[18] = "*                      _|  \\_          *";
+    person[17] = "*                      / |             *";
+    person[18] = "*                    _/  |_            *";
 
     print(person);//usleep(runDelay);//system("clear");
     person[17] = "*                       ||             *";
     person[18] = "*                      _||_            *";
 
     print(person);//usleep(runDelay);//system("clear");
-    person[17] = "*                      / |             *";
-    person[18] = "*                    _/  |_            *";
+    person[17] = "*                       | \\            *";
+    person[18] = "*                      _|  \\_          *";
 
     print(person);//usleep(runDelay);//system("clear");
     person[7] = "*                      /\\              *";
@@ -1167,16 +1167,16 @@ void run(vector<string> person)
     person[14] = "*                   / |  | \\           *";
     person[15] = "*                  /   \\/   \\          *";
     person[16] = "*                      /\\              *";
-    person[17] = "*                      | \\             *";
-    person[18] = "*                     _|  \\_           *";
+    person[17] = "*                     / |              *";
+    person[18] = "*                   _/  |_             *";
 
     print(person);//usleep(runDelay);//system("clear");
     person[17] = "*                      ||              *";
     person[18] = "*                     _||_             *";
 
     print(person);//usleep(runDelay);//system("clear");
-    person[17] = "*                     / |              *";
-    person[18] = "*                   _/  |_             *";
+    person[17] = "*                      | \\             *";
+    person[18] = "*                     _|  \\_           *";
 
     print(person);//usleep(runDelay);//system("clear");
     person[7] = "*                     /\\               *";
@@ -1189,16 +1189,16 @@ void run(vector<string> person)
     person[14] = "*                  / |  | \\            *";
     person[15] = "*                 /   \\/   \\           *";
     person[16] = "*                     /\\               *";
-    person[17] = "*                     | \\              *";
-    person[18] = "*                    _|  \\_            *";
+    person[17] = "*                    / |               *";
+    person[18] = "*                  _/  |_              *";
 
     print(person);//usleep(runDelay);//system("clear");
     person[17] = "*                     ||               *";
     person[18] = "*                    _||_              *";
 
     print(person);//usleep(runDelay);//system("clear");
-    person[17] = "*                    / |               *";
-    person[18] = "*                  _/  |_              *";
+    person[17] = "*                     | \\              *";
+    person[18] = "*                    _|  \\_            *";
 
     print(person);//usleep(runDelay);//system("clear");
     person[7] = "*                    /\\                *";
@@ -1211,16 +1211,16 @@ void run(vector<string> person)
     person[14] = "*                 / |  | \\             *";
     person[15] = "*                /   \\/   \\            *";
     person[16] = "*                    /\\                *";
-    person[17] = "*                    | \\               *";
-    person[18] = "*                   _|  \\_             *";
+    person[17] = "*                   / |                *";
+    person[18] = "*                 _/  |_               *";
 
     print(person);//usleep(runDelay);//system("clear");
     person[17] = "*                    ||                *";
     person[18] = "*                   _||_               *";
 
     print(person);//usleep(runDelay);//system("clear");
-    person[17] = "*                   / |                *";
-    person[18] = "*                 _/  |_               *";
+    person[17] = "*                    | \\               *";
+    person[18] = "*                   _|  \\_             *";
 
     print(person);//usleep(runDelay);//system("clear");
     person[7] = "*                   /\\                 *";
@@ -1233,16 +1233,16 @@ void run(vector<string> person)
     person[14] = "*                / |  | \\              *";
     person[15] = "*               /   \\/   \\             *";
     person[16] = "*                   /\\                 *";
-    person[17] = "*                   | \\                *";
-    person[18] = "*                  _|  \\_              *";
+    person[17] = "*                  / |                 *";
+    person[18] = "*                _/  |_                *";
 
     print(person);//usleep(runDelay);//system("clear");
     person[17] = "*                   ||                 *";
     person[18] = "*                  _||_                *";
 
     print(person);//usleep(runDelay);//system("clear");
-    person[17] = "*                  / |                 *";
-    person[18] = "*                _/  |_                *";
+    person[17] = "*                   | \\                *";
+    person[18] = "*                  _|  \\_              *";
 
     print(person);//usleep(runDelay);//system("clear");
     person[7] = "*                  /\\                  *";
@@ -1255,16 +1255,16 @@ void run(vector<string> person)
     person[14] = "*               / |  | \\               *";
     person[15] = "*              /   \\/   \\              *";
     person[16] = "*                  /\\                  *";
-    person[17] = "*                  | \\                 *";
-    person[18] = "*                 _|  \\_               *";
+    person[17] = "*                 / |                  *";
+    person[18] = "*               _/  |_                 *";
 
     print(person);//usleep(runDelay);//system("clear");
     person[17] = "*                  ||                  *";
     person[18] = "*                 _||_                 *";
 
     print(person);//usleep(runDelay);//system("clear");
-    person[17] = "*                 / |                  *";
-    person[18] = "*               _/  |_                 *";
+    person[17] = "*                  | \\                 *";
+    person[18] = "*                 _|  \\_               *";
 
     print(person);//usleep(runDelay);//system("clear");
     person[7] = "*                 /\\                   *";
@@ -1277,16 +1277,16 @@ void run(vector<string> person)
     person[14] = "*              / |  | \\                *";
     person[15] = "*             /   \\/   \\               *";
     person[16] = "*                 /\\                   *";
-    person[17] = "*                 | \\                  *";
-    person[18] = "*                _|  \\_                *";
+    person[17] = "*                / |                   *";
+    person[18] = "*              _/  |_                  *";
 
     print(person);//usleep(runDelay);//system("clear");
     person[17] = "*                 ||                   *";
     person[18] = "*                _||_                  *";
 
     print(person);//usleep(runDelay);//system("clear");
-    person[17] = "*                / |                   *";
-    person[18] = "*              _/  |_                  *";
+    person[17] = "*                 | \\                  *";
+    person[18] = "*                _|  \\_                *";
 
     print(person);//usleep(runDelay);//system("clear");
     person[7] = "*                /\\                    *";
@@ -1299,16 +1299,16 @@ void run(vector<string> person)
     person[14] = "*             / |  | \\                 *";
     person[15] = "*            /   \\/   \\                *";
     person[16] = "*                /\\                    *";
-    person[17] = "*                | \\                   *";
-    person[18] = "*               _|  \\_                 *";
+    person[17] = "*               / |                    *";
+    person[18] = "*             _/  |_                   *";
 
     print(person);//usleep(runDelay);//system("clear");
     person[17] = "*                ||                    *";
     person[18] = "*               _||_                   *";
 
     print(person);//usleep(runDelay);//system("clear");
-    person[17] = "*               / |                    *";
-    person[18] = "*             _/  |_                   *";
+    person[17] = "*                | \\                   *";
+    person[18] = "*               _|  \\_                 *";
 
     print(person);//usleep(runDelay);//system("clear");
     person[7] = "*               /\\                     *";
@@ -1321,16 +1321,16 @@ void run(vector<string> person)
     person[14] = "*            / |  | \\                  *";
     person[15] = "*           /   \\/   \\                 *";
     person[16] = "*               /\\                     *";
-    person[17] = "*               | \\                    *";
-    person[18] = "*              _|  \\_                  *";
+    person[17] = "*              / |                     *";
+    person[18] = "*            _/  |_                    *";
 
     print(person);//usleep(runDelay);//system("clear");
     person[17] = "*               ||                     *";
     person[18] = "*              _||_                    *";
 
     print(person);//usleep(runDelay);//system("clear");
-    person[17] = "*              / |                     *";
-    person[18] = "*            _/  |_                    *";
+    person[17] = "*               | \\                    *";
+    person[18] = "*              _|  \\_                  *";
 
     print(person);//usleep(runDelay);//system("clear");
     person[7] = "*              /\\                      *";
@@ -1343,16 +1343,16 @@ void run(vector<string> person)
     person[14] = "*           / |  | \\                   *";
     person[15] = "*          /   \\/   \\                  *";
     person[16] = "*              /\\                      *";
-    person[17] = "*              | \\                     *";
-    person[18] = "*             _|  \\_                   *";
+    person[17] = "*             / |                      *";
+    person[18] = "*           _/  |_                     *";
 
     print(person);//usleep(runDelay);//system("clear");
     person[17] = "*              ||                      *";
     person[18] = "*             _||_                     *";
 
     print(person);//usleep(runDelay);//system("clear");
-    person[17] = "*             / |                      *";
-    person[18] = "*           _/  |_                     *";
+    person[17] = "*              | \\                     *";
+    person[18] = "*             _|  \\_                   *";
 
     print(person);//usleep(runDelay);//system("clear");
     person[7] = "*             /\\                       *";
@@ -1365,16 +1365,16 @@ void run(vector<string> person)
     person[14] = "*          / |  | \\                    *";
     person[15] = "*         /   \\/   \\                   *";
     person[16] = "*             /\\                       *";
-    person[17] = "*             | \\                      *";
-    person[18] = "*            _|  \\_                    *";
+    person[17] = "*            / |                       *";
+    person[18] = "*          _/  |_                      *";
 
     print(person);//usleep(runDelay);//system("clear");
     person[17] = "*             ||                       *";
     person[18] = "*            _||_                      *";
 
     print(person);//usleep(runDelay);//system("clear");
-    person[17] = "*            / |                       *";
-    person[18] = "*          _/  |_                      *";
+    person[17] = "*             | \\                      *";
+    person[18] = "*            _|  \\_                    *";
 
     print(person);//usleep(runDelay);//system("clear");
     person[7] = "*            /\\                        *";
@@ -1387,16 +1387,16 @@ void run(vector<string> person)
     person[14] = "*         / |  | \\                     *";
     person[15] = "*        /   \\/   \\                    *";
     person[16] = "*            /\\                        *";
-    person[17] = "*            | \\                       *";
-    person[18] = "*           _|  \\_                     *";
+    person[17] = "*           / |                        *";
+    person[18] = "*         _/  |_                       *";
 
     print(person);//usleep(runDelay);//system("clear");
     person[17] = "*            ||                        *";
     person[18] = "*           _||_                       *";
 
     print(person);//usleep(runDelay);//system("clear");
-    person[17] = "*           / |                        *";
-    person[18] = "*         _/  |_                       *";
+    person[17] = "*            | \\                       *";
+    person[18] = "*           _|  \\_                     *";
 
     print(person);//usleep(runDelay);//system("clear");
     person[7] = "*           /\\                         *";
@@ -1409,15 +1409,16 @@ void run(vector<string> person)
     person[14] = "*        / |  | \\                      *";
     person[15] = "*       /   \\/   \\                     *";
     person[16] = "*           /\\                         *";
-    person[17] = "*           | \\                        *";
-    person[18] = "*          _|  \\_                      *";
+    person[17] = "*          / |                         *";
+    person[18] = "*        _/  |_                        *";
 
     print(person);//usleep(runDelay);//system("clear");
     person[17] = "*           ||                         *";
     person[18] = "*          _||_                        *";
+
     print(person);//usleep(runDelay);//system("clear");
-    person[17] = "*          / |                         *";
-    person[18] = "*        _/  |_                        *";
+    person[17] = "*           | \\                        *";
+    person[18] = "*          _|  \\_                      *";
 
     print(person);//usleep(runDelay);//system("clear");
     person[7] = "*          /\\                          *";
@@ -1430,16 +1431,16 @@ void run(vector<string> person)
     person[14] = "*       / |  | \\                       *";
     person[15] = "*      /   \\/   \\                      *";
     person[16] = "*          /\\                          *";
-    person[17] = "*          | \\                         *";
-    person[18] = "*         _|  \\_                       *";
+    person[17] = "*         / |                          *";
+    person[18] = "*       _/  |_                         *";
 
     print(person);//usleep(runDelay);//system("clear");
     person[17] = "*          ||                          *";
     person[18] = "*         _||_                         *";
 
     print(person);//usleep(runDelay);//system("clear");
-    person[17] = "*         / |                          *";
-    person[18] = "*       _/  |_                         *";
+    person[17] = "*          | \\                         *";
+    person[18] = "*         _|  \\_                       *";
 
     print(person);//usleep(runDelay);//system("clear");
     person[7] = "*         /\\                           *";
@@ -1452,16 +1453,16 @@ void run(vector<string> person)
     person[14] = "*      / |  | \\                        *";
     person[15] = "*     /   \\/   \\                       *";
     person[16] = "*         /\\                           *";
-    person[17] = "*         | \\                          *";
-    person[18] = "*        _|  \\_                        *";
+    person[17] = "*        / |                           *";
+    person[18] = "*      _/  |_                          *";
 
     print(person);//usleep(runDelay);//system("clear");
     person[17] = "*         ||                           *";
     person[18] = "*        _||_                          *";
 
     print(person);//usleep(runDelay);//system("clear");
-    person[17] = "*        / |                           *";
-    person[18] = "*      _/  |_                          *";
+    person[17] = "*         | \\                          *";
+    person[18] = "*        _|  \\_                        *";
 
     print(person);//usleep(runDelay);//system("clear");
     person[7] = "*        /\\                            *";
@@ -1474,16 +1475,16 @@ void run(vector<string> person)
     person[14] = "*     / |  | \\                         *";
     person[15] = "*    /   \\/   \\                        *";
     person[16] = "*        /\\                            *";
-    person[17] = "*        | \\                           *";
-    person[18] = "*       _|  \\_                         *";
+    person[17] = "*       / |                            *";
+    person[18] = "*     _/  |_                           *";
 
     print(person);//usleep(runDelay);//system("clear");
     person[17] = "*        ||                            *";
     person[18] = "*       _||_                           *";
 
     print(person);//usleep(runDelay);//system("clear");
-    person[17] = "*       / |                            *";
-    person[18] = "*     _/  |_                           *";
+    person[17] = "*        | \\                           *";
+    person[18] = "*       _|  \\_                         *";
 
     print(person);//usleep(runDelay);//system("clear");
     person[7] = "*       /\\                             *";
@@ -1496,16 +1497,16 @@ void run(vector<string> person)
     person[14] = "*    / |  | \\                          *";
     person[15] = "*   /   \\/   \\                         *";
     person[16] = "*       /\\                             *";
-    person[17] = "*       | \\                            *";
-    person[18] = "*      _|  \\_                          *";
+    person[17] = "*      / |                             *";
+    person[18] = "*    _/  |_                            *";
 
     print(person);//usleep(runDelay);//system("clear");
     person[17] = "*       ||                             *";
     person[18] = "*      _||_                            *";
 
     print(person);//usleep(runDelay);//system("clear");
-    person[17] = "*      / |                             *";
-    person[18] = "*    _/  |_                            *";
+    person[17] = "*       | \\                            *";
+    person[18] = "*      _|  \\_                          *";
 
     print(person);//usleep(runDelay);//system("clear");
     person[7] = "*      /\\                              *";
@@ -1518,16 +1519,16 @@ void run(vector<string> person)
     person[14] = "*   / |  | \\                           *";
     person[15] = "*  /   \\/   \\                          *";
     person[16] = "*      /\\                              *";
-    person[17] = "*      | \\                             *";
-    person[18] = "*     _|  \\_                           *";
+    person[17] = "*     / |                              *";
+    person[18] = "*   _/  |_                             *";
 
     print(person);//usleep(runDelay);//system("clear");
     person[17] = "*      ||                              *";
     person[18] = "*     _||_                             *";
 
     print(person);//usleep(runDelay);//system("clear");
-    person[17] = "*     / |                              *";
-    person[18] = "*   _/  |_                             *";
+    person[17] = "*      | \\                             *";
+    person[18] = "*     _|  \\_                           *";
 
     print(person);//usleep(runDelay);//system("clear");
     person[7] = "*     /\\                               *";
@@ -1540,16 +1541,16 @@ void run(vector<string> person)
     person[14] = "*  / |  | \\                            *";
     person[15] = "* /   \\/   \\                           *";
     person[16] = "*     /\\                               *";
-    person[17] = "*     | \\                              *";
-    person[18] = "*    _|  \\_                            *";
+    person[17] = "*    / |                               *";
+    person[18] = "*  _/  |_                              *";
 
     print(person);//usleep(runDelay);//system("clear");
     person[17] = "*     ||                               *";
     person[18] = "*    _||_                              *";
 
     print(person);//usleep(runDelay);//system("clear");
-    person[17] = "*    / |                               *";
-    person[18] = "*  _/  |_                              *";
+    person[17] = "*     | \\                              *";
+    person[18] = "*    _|  \\_                            *";
 
     print(person);//usleep(runDelay);//system("clear");
     person[7] = "*    /\\                                *";
@@ -1562,13 +1563,10 @@ void run(vector<string> person)
     person[14] = "* / |  | \\                             *";
     person[15] = "*/   \\/   \\                            *";
     person[16] = "*    /\\                                *";
-    person[17] = "*    | \\                               *";
-    person[18] = "*   _|  \\_                             *";
-
-    print(person);//usleep(runDelay);//system("clear");
     person[17] = "*    ||                                *";
     person[18] = "*   _||_                               *";
-    print(person);
+
+    print(person);//usleep(runDelay);
 }
 void dance(vector<string> person)
 {
