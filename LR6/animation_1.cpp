@@ -2,10 +2,10 @@
 #include <string>
 //#include <unistd.h> 
 using namespace std;
-void animation(string *person)
+void animation(string *human0)
 {
 	for (int i = 0; i < 12; i++) {
-		cout << *person++ << endl;
+		cout << *human0++ << endl;
 	}
 }
 int main()
