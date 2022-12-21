@@ -31,6 +31,11 @@ int main() {
 			cout << mas[i] << endl;
 		}
 		//system("cls");
+		//mas[7] = "/  |  |  \\";
+		//mas[8] = "    \\/    ";
+		//for (int i = 0; i < n; i++) {
+		//	cout << mas[i] << endl;
+		//}
 		//Sleep(300);
 		//system("cls");
 		mas[6] = "  -| *|---";
@@ -127,15 +132,7 @@ int main() {
 		for (int i = 0; i < n; i++) {
 			cout << mas[i] << endl;
 		}
-		//Sleep(300);
-		//system("cls");
-		mas[8] = "/   \\/   \\";
-		for (int i = 0; i < n; i++) {
-			cout << mas[i] << endl;
-		}
 	}
 	return 0;
 }
-
-
 
