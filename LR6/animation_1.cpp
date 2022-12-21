@@ -1,156 +1,143 @@
 #include <iostream>
-#include <string>
 #include <unistd.h>
 using namespace std;
 
-const int a = 10, b = 12;
+const int b = 12;
 
 int main()
 {
-	string person[b] = {
-		"   ()()   ",
-		"   ()()   ",
-		"   ()()   ",
-		"   |..|   ",
-		"  \\|  |/  ",
-		"  /|UU|\\  ",
-		"  --\\/--  ",
-		" /  ||  \\ ",
-		"/   ||   \\",
+	string pers[b] = {
+		"    /\\    ",
+		"   |oo|   ",
+		"  (|..|)  ",
+		"   |--|   ",
+		"   \\__/   ",
+		"    ||    ",
+		"  -| *|-  ",
+		" / |  | \\ ",
+		"/   \\/   \\",
 		"    /\\    ",
 		"    ||    ",
-		"   _||_   ",
+		"   _||_   "
 	};
 
 	for (int i = 0; i < 2; i++)
 	{
-		for (int i = 0; i < b; i++) cout << person[i] << endl;
-
-		//Sleep(300);
-		//system("cls");
-		person[6] = " ---\\/--- ";
-		person[7] = "/   ||   \\";
-		person[8] = "    ||    ";
-		for (int i = 0; i < b; i++) cout << person[i] << endl;
-
-		//Sleep(300);
-		//system("cls");
-		person[6] = "  --\\/----";
-		person[7] = " /  ||    ";
-		person[8] = "/   ||    ";
-		for (int i = 0; i < b; i++) cout << person[i] << endl;
-
-		//Sleep(300);
+		for (int i = 0; i < b; i++) cout << pers[i] << "\n";
+		//Sleep(1000);
 		//system("cls");
 
-		person[5] = "  /|UU|\\ /";
-		person[6] = " ---\\/--- ";
-		person[7] = "/   ||    ";
-		person[8] = "    ||    ";
+		pers[6] = " --| *|-- ";
+		pers[7] = "/  |  |  \\";
+		pers[8] = "    \\/    ";
 
-		for (int i = 0; i < b; i++) cout << person[i] << endl;
-		//Sleep(300);
+		for (int i = 0; i < b; i++) cout << pers[i] << "\n";
+		//Sleep(1000);
 		//system("cls");
 
-		person[4] = "  \\|  |/ /";
-		person[5] = "  /|UU|\\/ ";
-		person[6] = "  --\\/--  ";
-		person[7] = " /  ||    ";
-		person[8] = "/   ||    ";
+		pers[6] = "  -| *|---";
+		pers[7] = " / |  |   ";
+		pers[8] = "/   \\/    ";
 
-		for (int i = 0; i < b; i++) cout << person[i] << endl;
-		//Sleep(300);
+		for (int i = 0; i < b; i++) cout << pers[i] << "\n";
+		//Sleep(1000);
 		//system("cls");
 
-		person[4] = "  \\|  |/ *";
-		person[5] = "  /|UU|\\/ ";
-		person[6] = " ---\\/--  ";
-		person[7] = "/   ||    ";
-		person[8] = "    ||    ";
+		pers[5] = "    ||   /";
+		pers[6] = " --| *|-- ";
+		pers[7] = "/  |  |   ";
+		pers[8] = "    \\/    ";
 
-		for (int i = 0; i < b; i++) cout << person[i] << endl;
-		//Sleep(300);
+		for (int i = 0; i < b; i++) cout << pers[i] << "\n";
+		//Sleep(1000);
 		//system("cls");
 
-		person[4] = "  \\|  |/ /";
-		person[5] = "  /|UU|\\/ ";
-		person[6] = "----\\/--  ";
-		person[7] = "    ||    ";
+		pers[4] = "   \\__/  /";
+		pers[5] = "    ||  / ";
+		pers[6] = "  -| *|-  ";
+		pers[7] = " / |  |   ";
+		pers[8] = "/   \\/    ";
 
-
-		for (int i = 0; i < b; i++) cout << person[i] << endl;
-		//Sleep(300);
+		for (int i = 0; i < b; i++) cout << pers[i] << "\n";
+		//Sleep(1000);
 		//system("cls");
 
-		person[4] = "  \\|  |/ *";
-		person[5] = "\\ /|UU|\\/ ";
-		person[6] = " ---\\/--  ";
-		person[7] = "    ||    ";
+		pers[4] = "   \\__/  *";
+		pers[5] = "    ||  / ";
+		pers[6] = " --| *|-  ";
+		pers[7] = "/  |  |   ";
+		pers[8] = "    \\/    ";
 
 
-		for (int i = 0; i < b; i++) cout << person[i] << endl;
-		//Sleep(300);
+		for (int i = 0; i < b; i++) cout << pers[i] << "\n";
+		//Sleep(1000);
 		//system("cls");
 
-		person[4] = "\\ \\|  |/ /";
-		person[5] = " \\/|UU|\\/ ";
-		person[6] = "  --\\/--  ";
-		person[7] = "    ||    ";
+		pers[4] = "   \\__/  /";
+		pers[5] = "    ||  / ";
+		pers[6] = "---| *|-  ";
+		pers[7] = "   |  |   ";
 
-
-		for (int i = 0; i < b; i++) cout << person[i] << endl;
-		//Sleep(300);
+		for (int i = 0; i < b; i++) cout << pers[i] << "\n";
+		//Sleep(1000);
 		//system("cls");
 
-		person[4] = "* \\|  |/ *";
-		person[5] = " \\/|UU|\\/ ";
-		person[7] = "    ||    ";
+		pers[4] = "   \\__/  *";
+		pers[5] = "\\   ||  / ";
+		pers[6] = " --| *|-  ";
 
-
-		for (int i = 0; i < b; i++) cout << person[i] << endl;
-		//Sleep(300);
+		for (int i = 0; i < b; i++) cout << pers[i] << "\n";
+		//Sleep(1000);
 		//system("cls");
 
-		person[4] = "  \\|  |/  ";
-		person[5] = "* /|UU|\\ *";
-		person[6] = " ---\\/--- ";
-		person[7] = "    ||    ";
+		pers[4] = "\\  \\__/  /";
+		pers[5] = " \\  ||  / ";
+		pers[6] = "  -| *|-  ";
 
-
-		for (int i = 0; i < b; i++) cout << person[i] << endl;
-		//Sleep(300);
+		for (int i = 0; i < b; i++) cout << pers[i] << "\n";
+		//Sleep(1000);
 		//system("cls");
 
-		person[5] = "  /|UU|\\  ";
-		person[6] = "*---\\/---*";
-		person[7] = "    ||    ";
+		pers[4] = "*  \\__/  *";
+		pers[5] = " \\  ||  / ";
+		pers[6] = "  -| *|-  ";
 
-		for (int i = 0; i < b; i++) cout << person[i] << endl;
-		//Sleep(300);
+		for (int i = 0; i < b; i++) cout << pers[i] << "\n";
+		//Sleep(1000);
 		//system("cls");
 
-		person[6] = " ---\\/--- ";
-		person[7] = "*   ||   *";
+		pers[4] = "   \\__/   ";
+		pers[5] = "*   ||   *";
+		pers[6] = " --| *|-- ";
 
-
-		for (int i = 0; i < b; i++) cout << person[i] << endl;
-		//Sleep(300);
+		for (int i = 0; i < b; i++) cout << pers[i] << "\n";
+		//Sleep(1000);
 		//system("cls");
 
-		person[6] = "  --\\/--  ";
-		person[7] = " /  ||  \\ ";
-		person[8] = "*   ||   *";
+		pers[5] = "    ||    ";
+		pers[6] = "*--| *|--*";
 
-		for (int i = 0; i < b; i++) cout << person[i] << endl;
-		//Sleep(300);
+		for (int i = 0; i < b; i++) cout << pers[i] << "\n";
+		//Sleep(1000);
 		//system("cls");
 
-		person[7] = " /  ||  \\ ";
-		person[8] = "/   ||   \\";
+		pers[6] = " --| *|-- ";
+		pers[7] = "*  |  |  *";
 
+		for (int i = 0; i < b; i++) cout << pers[i] << "\n";
+		//Sleep(1000);
+		//system("cls");
 
+		pers[6] = "  -| *|-  ";
+		pers[7] = " / |  | \\ ";
+		pers[8] = "*   \\/   *";
+
+		for (int i = 0; i < b; i++) cout << pers[i] << "\n";
+		//Sleep(1000);
+		//system("cls");
+		pers[7] = " / |  | \\ ";
+		pers[8] = "/   \\/   \\";
 	}
-	for (int i = 0; i < b; i++) cout << person[i] << endl;
-
+	for (int i = 0; i < b; i++) cout << pers[i] << "\n";
 	return 0;
 }
