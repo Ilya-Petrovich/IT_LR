@@ -1,262 +1,211 @@
-#include <iostream> 
-#include <unistd.h> 
-
-
+#include <unistd.h>
+#include <iostream>
+#include <stdio.h>
+#include <array>
 using namespace std;
 int main()
 {
-    for (int i = 1; i < 3; i++)
-    {
-
-
-        cout << "------------" << endl;
-        cout << "   _[]_   " << endl;
-        cout << "   |~~|   " << endl;
-        cout << "   |oq|   " << endl;
-        cout << "  (|<>|)  " << endl;
-        cout << "   \\__/   " << endl;
-        cout << "   _><_   " << endl;
-        cout << "  -\\. /-    " << endl;
-        cout << " / |. | \\  " << endl;
-        cout << "/  |. |  \\ " << endl;
-        cout << "   |__|      " << endl;
-        cout << "    ||       " << endl;
-        cout << "   _||_      " << endl;
-
-        //Sleep(300);
-        //system("cls");
-
-        cout << "------------" << endl;
-        cout << "   _[]_   " << endl;
-        cout << "   |~~|   " << endl;
-        cout << "   |oq|   " << endl;
-        cout << "  (|<>|)  " << endl;
-        cout << "   \\__/   " << endl;
-        cout << "   _><_   " << endl;
-        cout << " --\\. /--  " << endl;
-        cout << "/  |. |  \\ " << endl;
-        cout << "   |. |      " << endl;
-        cout << "   |__|      " << endl;
-        cout << "    ||       " << endl;
-        cout << "   _||_      " << endl;
-
-        //Sleep(300);
-        //system("cls");
-
-        cout << "------------" << endl;
-        cout << "   _[]_   " << endl;
-        cout << "   |~~|   " << endl;
-        cout << "   |oq|   " << endl;
-        cout << "  (|<>|)  " << endl;
-        cout << "   \\__/   " << endl;
-        cout << "   _><_   " << endl;
-        cout << "  -\\. /---" << endl;
-        cout << " / |. |   " << endl;
-        cout << "/  |. |   " << endl;
-        cout << "   |__|   " << endl;
-        cout << "    ||    " << endl;
-        cout << "   _||_   " << endl;
-
-        //Sleep(300);
-        //system("cls");
-
-        cout << "------------" << endl;
-        cout << "   _[]_   " << endl;
-        cout << "   |~~|   " << endl;
-        cout << "   |oq|   " << endl;
-        cout << "  (|<>|)  " << endl;
-        cout << "   \\__/   " << endl;
-        cout << "   _><_  / " << endl;
-        cout << " --\\. /--   " << endl;
-        cout << "/  |. |    " << endl;
-        cout << "   |. |     " << endl;
-        cout << "   |__|     " << endl;
-        cout << "    ||      " << endl;
-        cout << "   _||_     " << endl;
-
-        //Sleep(300);
-        //system("cls");
-
-        cout << "------------" << endl;
-        cout << "   _[]_    " << endl;
-        cout << "   |~~|    " << endl;
-        cout << "   |oq|    " << endl;
-        cout << "  (|<>|)   " << endl;
-        cout << "   \\__/  /" << endl;
-        cout << "   _><_ / " << endl;
-        cout << "  -\\. /-  " << endl;
-        cout << " / |. |   " << endl;
-        cout << "/  |. |   " << endl;
-        cout << "   |__|   " << endl;
-        cout << "    ||    " << endl;
-        cout << "   _||_   " << endl;
-
-        //Sleep(300);
-        //system("cls");
-
-        cout << "------------" << endl;
-        cout << "   _[]_    " << endl;
-        cout << "   |~~|    " << endl;
-        cout << "   |oq|    " << endl;
-        cout << "  (|<>|)   " << endl;
-        cout << "   \\__/  *" << endl;
-        cout << "   _><_ / " << endl;
-        cout << " --\\. /-  " << endl;
-        cout << "/  |. |    " << endl;
-        cout << "   |. |    " << endl;
-        cout << "   |__|    " << endl;
-        cout << "    ||     " << endl;
-        cout << "   _||_    " << endl;
-
-
-        //Sleep(300);
-        //system("cls");
-
-        cout << "------------" << endl;
-        cout << "   _[]_   " << endl;
-        cout << "   |~~|   " << endl;
-        cout << "   |oq|   " << endl;
-        cout << "  (|<>|)  " << endl;
-        cout << "   \\__/  /" << endl;
-        cout << "   _><_ / " << endl;
-        cout << "---\\. /-  " << endl;
-        cout << "   |. |   " << endl;
-        cout << "   |. |   " << endl;
-        cout << "   |__|   " << endl;
-        cout << "    ||    " << endl;
-        cout << "   _||_   " << endl;
-
-        //Sleep(300);
-        //system("cls");
-
-        cout << "------------" << endl;
-        cout << "   _[]_   " << endl;
-        cout << "   |~~|   " << endl;
-        cout << "   |oq|   " << endl;
-        cout << "  (|<>|)  " << endl;
-        cout << "   \\__/  *" << endl;
-        cout << "\\  _><_ / " << endl;
-        cout << " --\\. /-  " << endl;
-        cout << "   |. |   " << endl;
-        cout << "   |. |   " << endl;
-        cout << "   |__|   " << endl;
-        cout << "    ||    " << endl;
-        cout << "   _||_   " << endl;
-
-        //Sleep(300);
-        //system("cls"
-
-        cout << "------------" << endl;
-        cout << "   _[]_   " << endl;
-        cout << "   |~~|   " << endl;
-        cout << "   |oq|   " << endl;
-        cout << "  (|<>|)  " << endl;
-        cout << "\\  \\__/  /" << endl;
-        cout << " \\ _><_ / " << endl;
-        cout << "  -\\. /-  " << endl;
-        cout << "   |. |   " << endl;
-        cout << "   |. |   " << endl;
-        cout << "   |__|   " << endl;
-        cout << "    ||    " << endl;
-        cout << "   _||_   " << endl;
-
-        //Sleep(300);
-        //system("cls");
-
-        cout << "------------" << endl;
-        cout << "   _[]_   " << endl;
-        cout << "   |~~|   " << endl;
-        cout << "   |oq|   " << endl;
-        cout << "  (|<>|)  " << endl;
-        cout << "*  \\__/  *" << endl;
-        cout << " \\ _><_ / " << endl;
-        cout << "  -\\. /-  " << endl;
-        cout << "   |. |   " << endl;
-        cout << "   |. |   " << endl;
-        cout << "   |__|   " << endl;
-        cout << "    ||    " << endl;
-        cout << "   _||_   " << endl;
-
-        //Sleep(300);
-        //system("cls");
-
-        cout << "------------" << endl;
-        cout << "   _[]_   " << endl;
-        cout << "   |~~|   " << endl;
-        cout << "   |oq|   " << endl;
-        cout << "  (|<>|)  " << endl;
-        cout << "   \\__/   " << endl;
-        cout << "*  _><_  *" << endl;
-        cout << " --\\. /-- " << endl;
-        cout << "   |. |   " << endl;
-        cout << "   |. |   " << endl;
-        cout << "   |__|   " << endl;
-        cout << "    ||    " << endl;
-        cout << "   _||_   " << endl;
-
-        //Sleep(300);
-        //system("cls");
-
-        cout << "------------" << endl;
-        cout << "   _[]_   " << endl;
-        cout << "   |~~|   " << endl;
-        cout << "   |oq|   " << endl;
-        cout << "  (|<>|)  " << endl;
-        cout << "   \\__/   " << endl;
-        cout << "   _><_   " << endl;
-        cout << "*--\\. /--*" << endl;
-        cout << "   |. |   " << endl;
-        cout << "   |. |   " << endl;
-        cout << "   |__|   " << endl;
-        cout << "    ||    " << endl;
-        cout << "   _||_   " << endl;
-
-        //Sleep(300);
-        //system("cls");
-
-        cout << "------------" << endl;
-        cout << "   _[]_   " << endl;
-        cout << "   |~~|   " << endl;
-        cout << "   |oq|   " << endl;
-        cout << "  (|<>|)  " << endl;
-        cout << "   \\__/   " << endl;
-        cout << "   _><_   " << endl;
-        cout << " --\\. /-- " << endl;
-        cout << "*  |. |  *" << endl;
-        cout << "   |. |    " << endl;
-        cout << "   |__|    " << endl;
-        cout << "    ||     " << endl;
-        cout << "   _||_    " << endl;
-
-
-        //Sleep(300);
-        //system("cls");
-
-        cout << "------------" << endl;
-        cout << "   _[]_   " << endl;
-        cout << "   |~~|   " << endl;
-        cout << "   |oq|   " << endl;
-        cout << "  (|<>|)  " << endl;
-        cout << "   \\__/   " << endl;
-        cout << "   _><_   " << endl;
-        cout << "  -\\. /-  " << endl;
-        cout << " / |. | \\" << endl;
-        cout << "*  |. |  *" << endl;
-        cout << "   |__|   " << endl;
-        cout << "    ||    " << endl;
-        cout << "   _||_   " << endl;
-
-
-        //Sleep(300);
-        //system("cls");
-
-     
-
-    }
-
-    system("pause>>nul");
-    return 0;
-
+	int i = 0;
+	for (i; i < 3; i++)
+	{
+		cout << R"(   _[]_   )" << endl;
+		cout << R"(   |~~|   )" << endl;
+		cout << R"(   |oq|   )" << endl;
+		cout << R"(  (|<>|)  )" << endl;
+		cout << R"(   \--/   )" << endl;
+		cout << R"(   _><_   )" << endl;
+		cout << R"(  -\. /-  )" << endl;
+		cout << R"( / |. | \ )" << endl;
+		cout << R"(/  |. |  \)" << endl;
+		cout << R"(   |__|   )" << endl;
+		cout << R"(    ||    )" << endl;
+		cout << R"(   _||_   )" << endl;
+		//////Sleep(100);
+		//system("clr");
+		if (i == 2) {
+			break;
+		}
+		cout << R"(   _[]_   )" << endl;
+		cout << R"(   |~~|   )" << endl;
+		cout << R"(   |oq|   )" << endl;
+		cout << R"(  (|<>|)  )" << endl;
+		cout << R"(   \--/   )" << endl;
+		cout << R"(   _><_   )" << endl;
+		cout << R"( --\. /-- )" << endl;
+		cout << R"(/  |. |  \)" << endl;
+		cout << R"(   |. |   )" << endl;
+		cout << R"(   |__|   )" << endl;
+		cout << R"(    ||    )" << endl;
+		cout << R"(   _||_   )" << endl;
+		//////Sleep(100);
+		//system("clr");
+		cout << R"(   _[]_   )" << endl;
+		cout << R"(   |~~|   )" << endl;
+		cout << R"(   |oq|   )" << endl;
+		cout << R"(  (|<>|)  )" << endl;
+		cout << R"(   \--/   )" << endl;
+		cout << R"(   _><_   )" << endl;
+		cout << R"(  -\. /---)" << endl;
+		cout << R"( / |. |   )" << endl;
+		cout << R"(/  |. |   )" << endl;
+		cout << R"(   |__|   )" << endl;
+		cout << R"(    ||    )" << endl;
+		cout << R"(   _||_   )" << endl;
+		//////Sleep(100);
+		//system("clr");
+		cout << R"(   _[]_   )" << endl;
+		cout << R"(   |~~|   )" << endl;
+		cout << R"(   |oq|   )" << endl;
+		cout << R"(  (|<>|)  )" << endl;
+		cout << R"(   \--/   )" << endl;
+		cout << R"(   _><_  /)" << endl;
+		cout << R"( --\. /-- )" << endl;
+		cout << R"(/  |. |   )" << endl;
+		cout << R"(   |. |   )" << endl;
+		cout << R"(   |__|   )" << endl;
+		cout << R"(    ||    )" << endl;
+		cout << R"(   _||_   )" << endl;
+		////Sleep(100);
+		//system("clr");
+		cout << R"(   _[]_   )" << endl;
+		cout << R"(   |~~|   )" << endl;
+		cout << R"(   |oq|   )" << endl;
+		cout << R"(  (|<>|)  )" << endl;
+		cout << R"(   \--/  /)" << endl;
+		cout << R"(   _><_ / )" << endl;
+		cout << R"(  -\. /-  )" << endl;
+		cout << R"( / |. |   )" << endl;
+		cout << R"(/  |. |   )" << endl;
+		cout << R"(   |__|   )" << endl;
+		cout << R"(    ||    )" << endl;
+		cout << R"(   _||_   )" << endl;
+		////Sleep(100);
+		//system("clr");
+		cout << R"(   _[]_   )" << endl;
+		cout << R"(   |~~|   )" << endl;
+		cout << R"(   |oq|   )" << endl;
+		cout << R"(  (|<>|)  )" << endl;
+		cout << R"(   \--/  *)" << endl;
+		cout << R"(   _><_ / )" << endl;
+		cout << R"( --\. /-  )" << endl;
+		cout << R"(/  |. |   )" << endl;
+		cout << R"(   |. |   )" << endl;
+		cout << R"(   |__|   )" << endl;
+		cout << R"(    ||    )" << endl;
+		cout << R"(   _||_   )" << endl;
+		////Sleep(100);
+		//system("clr");
+		cout << R"(   _[]_   )" << endl;
+		cout << R"(   |~~|   )" << endl;
+		cout << R"(   |oq|   )" << endl;
+		cout << R"(  (|<>|)  )" << endl;
+		cout << R"(   \--/  /)" << endl;
+		cout << R"(   _><_ / )" << endl;
+		cout << R"(---\. /-  )" << endl;
+		cout << R"(   |. |   )" << endl;
+		cout << R"(   |. |   )" << endl;
+		cout << R"(   |__|   )" << endl;
+		cout << R"(    ||    )" << endl;
+		cout << R"(   _||_   )" << endl;
+		////Sleep(100);
+		//system("clr");
+		cout << R"(   _[]_   )" << endl;
+		cout << R"(   |~~|   )" << endl;
+		cout << R"(   |oq|   )" << endl;
+		cout << R"(  (|<>|)  )" << endl;
+		cout << R"(   \--/  *)" << endl;
+		cout << R"(\  _><_ / )" << endl;
+		cout << R"( --\. /-  )" << endl;
+		cout << R"(   |. |   )" << endl;
+		cout << R"(   |. |   )" << endl;
+		cout << R"(   |__|   )" << endl;
+		cout << R"(    ||    )" << endl;
+		cout << R"(   _||_   )" << endl;
+		////Sleep(100);
+		//system("clr");
+		cout << R"(   _[]_   )" << endl;
+		cout << R"(   |~~|   )" << endl;
+		cout << R"(   |oq|   )" << endl;
+		cout << R"(  (|<>|)  )" << endl;
+		cout << R"(\  \--/  /)" << endl;
+		cout << R"( \ _><_ / )" << endl;
+		cout << R"(  -\. /-  )" << endl;
+		cout << R"(   |. |   )" << endl;
+		cout << R"(   |. |   )" << endl;
+		cout << R"(   |__|   )" << endl;
+		cout << R"(    ||    )" << endl;
+		cout << R"(   _||_   )" << endl;
+		////Sleep(100);
+		//system("clr");
+		cout << R"(   _[]_   )" << endl;
+		cout << R"(   |~~|   )" << endl;
+		cout << R"(   |oq|   )" << endl;
+		cout << R"(  (|<>|)  )" << endl;
+		cout << R"(*  \--/  *)" << endl;
+		cout << R"( \ _><_ / )" << endl;
+		cout << R"(  -\. /-  )" << endl;
+		cout << R"(   |. |   )" << endl;
+		cout << R"(   |. |   )" << endl;
+		cout << R"(   |__|   )" << endl;
+		cout << R"(    ||    )" << endl;
+		cout << R"(   _||_   )" << endl;
+		////Sleep(100);
+		//system("clr");
+		cout << R"(   _[]_   )" << endl;
+		cout << R"(   |~~|   )" << endl;
+		cout << R"(   |oq|   )" << endl;
+		cout << R"(  (|<>|)  )" << endl;
+		cout << R"(   \--/   )" << endl;
+		cout << R"(*  _><_  *)" << endl;
+		cout << R"( --\. /-- )" << endl;
+		cout << R"(   |. |   )" << endl;
+		cout << R"(   |. |   )" << endl;
+		cout << R"(   |__|   )" << endl;
+		cout << R"(    ||    )" << endl;
+		cout << R"(   _||_   )" << endl;
+		////Sleep(100);
+		//system("clr");
+		cout << R"(   _[]_   )" << endl;
+		cout << R"(   |~~|   )" << endl;
+		cout << R"(   |oq|   )" << endl;
+		cout << R"(  (|<>|)  )" << endl;
+		cout << R"(   \--/   )" << endl;
+		cout << R"(   _><_   )" << endl;
+		cout << R"(*--\. /--*)" << endl;
+		cout << R"(   |. |   )" << endl;
+		cout << R"(   |. |   )" << endl;
+		cout << R"(   |__|   )" << endl;
+		cout << R"(    ||    )" << endl;
+		cout << R"(   _||_   )" << endl;
+		////Sleep(100);
+		//system("clr");
+		cout << R"(   _[]_   )" << endl;
+		cout << R"(   |~~|   )" << endl;
+		cout << R"(   |oq|   )" << endl;
+		cout << R"(  (|<>|)  )" << endl;
+		cout << R"(   \--/   )" << endl;
+		cout << R"(   _><_   )" << endl;
+		cout << R"( --\. /-- )" << endl;
+		cout << R"(*  |. |  *)" << endl;
+		cout << R"(   |. |   )" << endl;
+		cout << R"(   |__|   )" << endl;
+		cout << R"(    ||    )" << endl;
+		cout << R"(   _||_   )" << endl;
+		////Sleep(100);
+		//system("clr");
+		cout << R"(   _[]_   )" << endl;
+		cout << R"(   |~~|   )" << endl;
+		cout << R"(   |oq|   )" << endl;
+		cout << R"(  (|<>|)  )" << endl;
+		cout << R"(   \--/   )" << endl;
+		cout << R"(   _><_   )" << endl;
+		cout << R"(  -\. /-  )" << endl;
+		cout << R"( / |. | \ )" << endl;
+		cout << R"(*  |. |  *)" << endl;
+		cout << R"(   |__|   )" << endl;
+		cout << R"(    ||    )" << endl;
+		cout << R"(   _||_   )" << endl;
+		////Sleep(100);
+		//system("clr");
+	}
 }
-
-
