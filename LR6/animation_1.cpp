@@ -1,8 +1,9 @@
 #include <iostream>
-#include <windows.h>
+#include <unistd.h>
 #include <ctime>
-#include <cmath>
+
 using namespace std;
+
 void anim1();
 void anim2();
 void anim3();
