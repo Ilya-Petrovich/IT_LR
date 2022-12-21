@@ -1,60 +1,93 @@
-#include <stdio.h>
 #include <iostream>
+#include <stdio.h>
 
-void ChangeColor(char* buff, long fSize);
-void WriteText(char* buff, long fSize);
+void ReadText(char* buff, long fileSize)
+{
+    int first_byte, second_byte, third_byte, fourth_byte, symbol;
+    std::string result = "";
 
-int main() {
+    for (int i = fileSize - 1200; i < fileSize; i += 4) {
+        first_byte = buff[i];
+        second_byte = buff[i + 1];
+        third_byte = buff[i + 2];
+        fourth_byte = buff[i + 3];
+
+        symbol = ((first_byte & 3) << 6) | ((second_byte & 3) << 4) | ((third_byte & 3) << 2) | (fourth_byte & 3);
+        result += char(symbol);
+    }
+    std::cout << result << std::endl;
+}
+
+void changeColor(char* buff, long fileSize)
+{
+    FILE* file_changeColor;
+    file_changeColor = fopen("changed_image.bmp", "wb");
+
+    for (int i = fileSize - 1200; i < fileSize; i += 3) {
+        buff[i] = 130; 
+        buff[i + 1] = 240;
+        buff[i + 2] = 230;
+    }
+    fwrite(buff, sizeof(char), fileSize, file_changeColor);
+    fclose(file_changeColor);
+}
+
+void writeText(char* buff, long fileSize)
+{
+    int first_part, second_part, third_part, fourth_part;
+    std::string text = "TRP-3-22-2";
+
+    FILE* file_write;
+    file_write = fopen("changed_image.bmp", "rb");
+
+    fread(buff, sizeof(char), fileSize, file_write);
+
+    for (int i = fileSize - 1200; i < fileSize; i++) {
+        buff[i] &= 252;
+    }
+
+    for (unsigned int i = 0; i < text.size(); i++) {
+        first_part = (text[i] & 192) >> 6;
+        second_part = (text[i] & 48) >> 4;
+        third_part = (text[i] & 12) >> 2;
+        fourth_part = text[i] & 3;
+
+        buff[fileSize - 1200 + i * 4] = (buff[fileSize - 1200 + i * 4] & 252) | first_part;
+        buff[fileSize - 1200 + i * 4 + 1] = (buff[fileSize - 1200 + i * 4 + 1] & 252) | second_part;
+        buff[fileSize - 1200 + i * 4 + 2] = (buff[fileSize - 1200 + i * 4 + 2] & 252) | third_part;
+        buff[fileSize - 1200 + i * 4 + 3] = (buff[fileSize - 1200 + i * 4 + 3] & 252) | fourth_part;
+    }
+
+    file_write = fopen("changed_image.bmp", "wb");
+
+    fwrite(buff, sizeof(char), fileSize, file_write);
+    fclose(file_write);
+
+}
+
+int main()
+{
     FILE* file;
     char filename[100];
-    std::cout << "Input filename for read: "; std::cin >> filename;
+    std::cin >> filename;
     file = fopen(filename, "rb");
 
-    long fSize;
+    long fileSize;
     fseek(file, 0, SEEK_END);
-    fSize = ftell(file);
+    fileSize = ftell(file);
     rewind(file);
 
-    char* buff = new char[fSize]();
-    fread(buff, 1, fSize, file);
-    fclose(file);
+    char* buff = new char[fileSize]();
 
-    std::cout << "Input filename for write: "; std::cin >> filename;
-    file = fopen(filename, "wb");
+    fread(buff, sizeof(char), fileSize, file);
 
-    ChangeColor(buff, fSize);
-    WriteText(buff, fSize);
+    ReadText(buff, fileSize);
+    changeColor(buff, fileSize);
 
-    fwrite(buff, fSize, 1, file);
+    writeText(buff, fileSize);
 
     fclose(file);
-
     free(buff);
-}
 
-void ChangeColor(char* buff, long fSize) {
-    std::cout << std::endl << std::endl << std::endl;
-    for (int i = 138; i < fSize;) {
-        buff[i] = 140 & 0xfc;
-        buff[i + 1] = 230 & 0xfc;
-        buff[i + 2] = 240 & 0xfc;
-        i += 3;
-    }
-}
-void WriteText(char* buff, long fSize) {
-    std::string text = "TRP-3-22-2";
-    int start_of_byte = fSize - 1200;
-    std::string::iterator it = text.begin();
-    for (std::string::iterator it = text.begin(); it != text.end(); ++it) {
-        char symbol = *it;
-        int first_byte_of_symbol = (int)((symbol & (3 << 6)) >> 6);
-        int second_byte_of_symbol = (int)((symbol & (3 << 4)) >> 4);
-        int third_byte_of_symbol = (int)((symbol & (3 << 2)) >> 2);
-        int fourth_byte_of_symbol = (int)(symbol & 3);
-        buff[start_of_byte] = (buff[start_of_byte] & 0xfc) | first_byte_of_symbol;
-        buff[start_of_byte + 1] = (buff[start_of_byte + 1] & 0xfc) | second_byte_of_symbol;
-        buff[start_of_byte + 2] = (buff[start_of_byte + 2] & 0xfc) | third_byte_of_symbol;
-        buff[start_of_byte + 3] = (buff[start_of_byte + 3] & 0xfc) | fourth_byte_of_symbol;
-        start_of_byte += 4;
-    }
+    return 0;
 }
