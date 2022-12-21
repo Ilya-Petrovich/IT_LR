@@ -5,8 +5,10 @@ int main() {
 
 	std::cout << "Type the first number: ";
 	std::cin >> num_1;
+
 	std::cout << "Type the second number: ";
 	std::cin >> num_2;
+
 	std::cout << "Type the third number: ";
 	std::cin >> num_3;
 
