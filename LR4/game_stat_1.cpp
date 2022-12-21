@@ -9,11 +9,11 @@ int main()
 	
 	if (fuel < 0 or fuel > 50)
 	{
-		std::cout << "Invalid data";
+		std::cout << "\nInvalid data";
 		return 0;
 	}
 
-	std::cout << "Car stats\n";
+	std::cout << "\nCar stats\n";
 	std::cout << "Fuel: " << fuel << "\n";
 	std::cout << "Fuel capacity: " << fuelcap << "\n";
 	std::cout << "Fuel consumption: " << fuelcons << "\n";
@@ -80,8 +80,8 @@ int main()
 
 	if (dtraveled == dist)
 	{
-		std::cout << "Congratulations! You have reached destionation point!";
+		std::cout << "Congratulations! You have reached destionation point!" << std::endl;
 	}
-	else std::cout << "You haven't reached destination point. " << dist - dtraveled << " km left.";
+	else std::cout << "You haven't reached destination point. " << dist - dtraveled << " km left." << std::endl;
 	return 0;
 }
