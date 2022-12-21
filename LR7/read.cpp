@@ -1,79 +1,36 @@
-#include <iostream>
 #include <stdio.h>
+#include <iostream>
 
-using namespace std;
-void readText(char* buff, long fileSize);
-void changeColor(char* buff, long fileSize);
-void writeText(char* buff, long fileSize);
+void ReadText(char* buff, long fSize);
 
 int main() {
+    FILE* file;
+    char filename[100];
+    std::cout << "Input file for read: "; std::cin >> filename;
+    file = fopen(filename, "rb");
 
-	FILE* file;
+    long fSize;
+    fseek(file, 0, SEEK_END);
+    fSize = ftell(file);
+    rewind(file);
 
-	char filename[10];
-	cin >> filename;
-	file = fopen(filename, "rb");
+    char* buff = new char[fSize]();
+    fread(buff, 1, fSize, file);
+    ReadText(buff, fSize);
 
-	long fileSize;
-	fseek(file, 0, SEEK_END);
-	fileSize = ftell(file);
-	rewind(file);
-
-	char* buff = new char[fileSize]();
-	fread(buff, sizeof(char), fileSize, file);
-	readText(buff, fileSize);
-
-	fclose(file);
-	cin >> filename;
-	file = fopen(filename, "wb");
-	changeColor(buff, fileSize);
-	writeText(buff, fileSize);
-	fwrite(buff, sizeof(char), fileSize, file);
-	fclose(file);
-	delete[] buff;
-	return 0;
+    fclose(file);
+    free(buff);
 }
-void readText(char* buff, long fileSize) {
-	char firstByte, secondByte, thirdByte, fourthByte, sign;
-	int mask = 0x03;
 
-	for (int i = 138; i < fileSize; i += 4) {
-		firstByte = (buff[i] & mask) << 6;	// first byte - 01001101
-		secondByte = (buff[i + 1] & mask) << 4;	// second byte - 01001100
-		thirdByte = (buff[i + 2] & mask) << 2;	// third byte - 11011110
-		fourthByte = buff[i + 3] & mask;
-		sign = firstByte | secondByte | thirdByte | fourthByte;
-		printf("%c", sign);
-	}
-	cout << endl;
-}
-void changeColor(char* buff, long fileSize) {
-
-	for (int i = 138; i < fileSize; i += 3) {
-		buff[i] = 34;	// first byte - 01001101
-		buff[i + 1] = 34;	// second byte - 01001100
-		buff[i + 2] = 178;	// third byte - 11011110
-	}
-}
-void writeText(char* buff, long fileSize) {
-
-	char text[12]; cin >> text;
-	int count = 0;
-
-	for (int i = 138; i < fileSize; i += 4) {
-
-		if (count < 12) {
-			buff[i] = (buff[i] & 0xfc) | ((text[count] >> 6) & 0x3);
-			buff[i + 1] = (buff[i + 1] & 0xfc) | ((text[count] >> 4) & 0x3);
-			buff[i + 2] = (buff[i + 2] & 0xfc) | ((text[count] >> 2) & 0x3);
-			buff[i + 3] = (buff[i + 3] & 0xfc) | (text[count] & 0x3);
-		}
-		else {
-			buff[i] = buff[i] & 0xfc;
-			buff[i + 1] = (buff[i + 1] & 0xfc) | 0x2;
-			buff[i + 2] = buff[i + 2] & 0xfc;
-			buff[i + 3] = buff[i + 3] & 0xfc;
-		}
-		count++;
-	}
+void ReadText(char* buff, long fSize) {
+    int start_of_byte = fSize - 1200;
+    
+    while (start_of_byte < fSize) {
+        int first_byte = buff[start_of_byte] & 3;	
+        int second_byte = buff[start_of_byte + 1] & 3;
+        int third_byte = buff[start_of_byte + 2] & 3;	
+        int fourth_byte = buff[start_of_byte + 3] & 3;
+        std::cout <<(char) ((first_byte << 6) | (second_byte << 4) | (third_byte << 2) | fourth_byte);
+        start_of_byte += 4;
+    }
 }
