@@ -23,20 +23,37 @@ void fill_lower_position(string positions[][person_height], string position[pers
 void dance_output(string dance_positions[dance_pos][person_height]) //сделать функцию, определяющую длину элемента двумерного массива сост и вычитать всё введёное из ширины для пробелов
 {
     int y;
-    for(int i = 0; i < dance_pos; i++) //
-    {
-        y = height - 2;
-        cout << symbols(wide, "*") << endl;
-        while(y != person_height)
-        {
-            cout << "*" << symbols(wide - 2, " ") << "*" << endl;
-            y--;
-        }
 
-        for(int j = 0; j < person_height; j++)
-            cout << "*" << dance_positions[i][j] << symbols(wide - size(dance_positions[i][j]) - 2, " ") << "*" << endl;
-        cout << symbols(wide, "*") << endl;
+    for(int c = 0; c < 2; c++)
+    {
+        for(int i = 0; i < dance_pos; i++) //
+        {
+            y = height - 2;
+            cout << symbols(wide, "*") << endl;
+            while(y != person_height)
+            {
+                cout << "*" << symbols(wide - 2, " ") << "*" << endl;
+                y--;
+            }
+
+            for(int j = 0; j < person_height; j++)
+                cout << "*" << dance_positions[i][j] << symbols(wide - size(dance_positions[i][j]) - 2, " ") << "*" << endl;
+            cout << symbols(wide, "*") << endl;
+        }
     }
+    int i = 0;
+    y = height - 2;
+    cout << symbols(wide, "*") << endl;
+    while(y != person_height)
+    {
+        cout << "*" << symbols(wide - 2, " ") << "*" << endl;
+        y--;
+    }
+
+    for(int j = 0; j < person_height; j++)
+        cout << "*" << dance_positions[i][j] << symbols(wide - size(dance_positions[i][j]) - 2, " ") << "*" << endl;
+    cout << symbols(wide, "*") << endl;
+
 }
 
 void dance() 
@@ -334,4 +351,5 @@ int main()
             exit(1);
             break;
     }
+    system("pause");
 }
