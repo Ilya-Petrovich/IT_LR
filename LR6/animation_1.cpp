@@ -1,5 +1,5 @@
 #include<iostream>
-#include<unistd.h>
+#include <unistd.h>
 using namespace std;
 int main()
 {
@@ -11,7 +11,7 @@ int main()
     std::string s4("   |--|   ");
     std::string s5("   \\__/   ");
     std::string s6("    ||    ");
-    std::string s7("  -|  |-  ");
+    std::string s7("  -| *|-  ");
     std::string s8(" / |  | \\ ");
     std::string s9("/   \\/   \\");
     std::string s10("    /\\   ");
@@ -117,6 +117,7 @@ int main()
         s9[0] = '/'; s9[9] = '\\';
         std::cout << s1 << "\n" << s2 << "\n" << s3 << "\n" << s4 << "\n" << s5 << "\n" << s6 << "\n" << s7 << "\n" << s8 << "\n" << s9 << "\n" << s10 << "\n" << s11 << "\n" << s12 << "\n";
     }
+    cout << endl;
     system("pause");
     return 0;
 }
