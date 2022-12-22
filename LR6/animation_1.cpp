@@ -21,7 +21,7 @@ int main()
 		cout << R"(    ||    )" << endl;
 		cout << R"(   _||_   )" << endl;
 		//////Sleep(100);
-		//system("clr");
+		//system("clr");n
 		if (i == 2) {
 			break;
 		}
