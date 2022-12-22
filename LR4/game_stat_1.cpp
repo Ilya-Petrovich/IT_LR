@@ -83,3 +83,4 @@ int main() {
     else {
         std::cout << "You haven't reched destination point. " << ((360 - passed) * 100) / 100 << " km left." << std::endl;
     }
+}
