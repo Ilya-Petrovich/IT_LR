@@ -49,7 +49,7 @@ void thirdAnim(string arrive[]) {
 void fourthAnim(string arrive[]) {
 	arrive[4] = "   \\__/  /";
 	arrive[5] = "    ||  / ";
-	arrive[6] = "  -| *|-   ";
+	arrive[6] = " -| *|-   ";
 	arrive[7] = " / |  |   ";
 	arrive[8] = "/   \\/    ";
 }
@@ -71,7 +71,7 @@ void sixthAnim(string arrive[]) {
 
 void seventhAnim(string arrive[]) {
 	arrive[4] = "   \\__/  *";
-	arrive[5] = "\\   ||  /  ";
+	arrive[5] = "\\   ||  / ";
 	arrive[6] = " --| *|-  ";
 	arrive[7] = "   |  |   ";
 }
