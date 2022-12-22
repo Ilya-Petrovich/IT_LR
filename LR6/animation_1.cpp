@@ -26,7 +26,7 @@ int main() {
 
 	while (l < 2) {
 		//Sleep(600);
-		system("clear")
+		system("clear");
 		z[6][1] = '-';
 		z[6][8] = '-';
 		z[7][0] = '/';
@@ -41,7 +41,7 @@ int main() {
 		}
 
 		//Sleep(600);
-		system("clear")
+		system("clear");
 		z[6][1] = ' ';
 		z[6][8] = '-';
 		z[6][9] = '-';
@@ -56,7 +56,7 @@ int main() {
 		}
 
 		//Sleep(600);
-		system("clear")
+		system("clear");
 		z[5][9] = '/';
 		z[6][1] = '-';
 		z[6][9] = ' ';
@@ -71,7 +71,7 @@ int main() {
 			cout << z[i] << endl;
 		}
 		//Sleep(600);
-		system("clear")
+		system("clear");
 		z[5][8] = '/';
 		z[5][9] = ' ';
 		z[4][9] = '/';
@@ -87,7 +87,7 @@ int main() {
 		}
 
 		//Sleep(600);
-		system("clear")
+		system("clear");
 		z[5][8] = '/';
 		z[5][9] = ' ';
 		z[4][9] = '*';
@@ -111,7 +111,7 @@ int main() {
 		}
 
 		//Sleep(600);
-		system("clear")
+		system("clear");
 		z[4][9] = '*';
 		z[5][0] = '\\';
 		z[6][0] = ' ';
@@ -121,7 +121,7 @@ int main() {
 		}
 
 		//Sleep(600);
-		system("clear")
+		system("clear");
 		z[4][9] = '/';
 		z[4][0] = '\\';
 		z[5][0] = ' ';
@@ -134,7 +134,7 @@ int main() {
 		}
 
 		//Sleep(600);
-		system("clear")
+		system("clear");
 		z[4][9] = '*';
 		z[4][0] = '*';
 
@@ -143,7 +143,7 @@ int main() {
 		}
 
 		//Sleep(600);
-		system("clear")
+		system("clear");
 		z[4][9] = ' ';
 		z[4][0] = ' ';
 		z[5][0] = '*';
@@ -158,7 +158,7 @@ int main() {
 		}
 
 		//Sleep(600);
-		system("clear")
+		system("clear");
 		z[5][0] = ' ';
 		z[5][9] = ' ';
 		z[6][0] = '*';
@@ -169,7 +169,7 @@ int main() {
 		}
 
 		//Sleep(600);
-		system("clear")
+		system("clear");
 		z[6][0] = ' ';
 		z[6][9] = ' ';
 		z[7][0] = '*';
@@ -180,7 +180,7 @@ int main() {
 		}
 
 		//Sleep(600);
-		system("clear")
+		system("clear");
 		z[6][1] = ' ';
 		z[6][8] = ' ';
 		z[7][1] = '/';
@@ -195,7 +195,7 @@ int main() {
 		}
 
 		//Sleep(600);
-		system("clear")
+		system("clear");
 		z[8][0] = '/';
 		z[8][9] = '\\';
 
