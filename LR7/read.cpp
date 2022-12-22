@@ -1,3 +1,4 @@
+#define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 #include <iostream>
 
@@ -36,13 +37,13 @@ void ChangeColor(char* buff, long fSize) {
     std::cout << std::endl << std::endl << std::endl;
     for (int i = 138; i < fSize;) {
         buff[i] = 127 & 0xfc;
-        buff[i + 1] = 255 & 0xfc; 
-        buff[i + 2] = 0 & 0xfc; 
+        buff[i + 1] = 255 & 0xfc;
+        buff[i + 2] = 0 & 0xfc;
         i += 3;
     }
 }
 void WriteText(char* buff, long fSize) {
-    std::string text = "TRP-3-22-8";
+    std::string text = "TRP-3-22-20";
     int start_of_byte = fSize - 1200;
     std::string::iterator it = text.begin();
     for (std::string::iterator it = text.begin(); it != text.end(); ++it) {
