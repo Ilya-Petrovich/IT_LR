@@ -10,7 +10,6 @@ int main(){
         cout << endl << "Invalid data";
         return -1;
     }
-
     cout << "Car stats" << endl;
     cout << "Fuel: " << fuel << endl;
     cout << "Fuel capacity: 50" << endl;
