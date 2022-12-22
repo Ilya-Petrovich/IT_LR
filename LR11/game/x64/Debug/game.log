@@ -1,0 +1,41 @@
+﻿  main.cpp
+C:\Users\Yaroslav\Desktop\1234\game\main.cpp(46,28): warning C4244: =: преобразование "T" в "float", возможна потеря данных
+          with
+          [
+              T=unsigned int
+          ]
+C:\Users\Yaroslav\Desktop\1234\game\main.cpp(47,29): warning C4244: =: преобразование "T" в "float", возможна потеря данных
+          with
+          [
+              T=unsigned int
+          ]
+C:\Users\Yaroslav\Desktop\1234\game\main.cpp(96,1): warning C4305: =: усечение из "double" в "float"
+C:\Users\Yaroslav\Desktop\1234\game\main.cpp(106,39): warning C4244: =: преобразование "double" в "float", возможна потеря данных
+C:\Users\Yaroslav\Desktop\1234\game\main.cpp(110,1): warning C4305: +=: усечение из "double" в "float"
+C:\Users\Yaroslav\Desktop\1234\game\main.cpp(119,14): warning C4244: инициализация: преобразование "T" в "int", возможна потеря данных
+          with
+          [
+              T=float
+          ]
+C:\Users\Yaroslav\Desktop\1234\game\main.cpp(120,15): warning C4244: инициализация: преобразование "T" в "int", возможна потеря данных
+          with
+          [
+              T=float
+          ]
+C:\Users\Yaroslav\Desktop\1234\game\main.cpp(125,53): warning C4244: =: преобразование "int" в "T", возможна потеря данных
+          with
+          [
+              T=float
+          ]
+C:\Users\Yaroslav\Desktop\1234\game\main.cpp(127,54): warning C4244: =: преобразование "int" в "T", возможна потеря данных
+          with
+          [
+              T=float
+          ]
+C:\Users\Yaroslav\Desktop\1234\game\main.cpp(138,31): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+C:\Users\Yaroslav\Desktop\1234\game\main.cpp(153,14): warning C4244: инициализация: преобразование "sf::Int64" в "float", возможна потеря данных
+C:\Users\Yaroslav\Desktop\1234\game\main.cpp(168,15): warning C4305: =: усечение из "double" в "float"
+C:\Users\Yaroslav\Desktop\1234\game\main.cpp(172,14): warning C4305: =: усечение из "double" в "float"
+C:\Users\Yaroslav\Desktop\1234\game\main.cpp(212,37): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+C:\Users\Yaroslav\Desktop\1234\game\main.cpp(212,29): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+  game.vcxproj -> C:\Users\Yaroslav\Desktop\1234\game\x64\Debug\game.exe
