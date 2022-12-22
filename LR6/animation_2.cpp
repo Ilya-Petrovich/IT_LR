@@ -325,7 +325,7 @@ void sweep(string r, string l) {
 	cout << "*" << r << R"(   \__/   )" << l << "*" << endl;
 	cout << "*" << r << "    ||    " << l << "*" << endl;
 	cout << "*" << r << "  -| *|-  " << l << "*" << endl;
-	cout << "*" << r << R"( / |  | \  )" << l << "*" << endl;
+	cout << "*" << r << R"( / |  | \ )" << l << "*" << endl;
 	cout << "*" << r << R"(/   \/   \)" << l << "*" << endl;
 	cout << "*" << r << R"(    /\    )" << l << "*" << endl;
 }
