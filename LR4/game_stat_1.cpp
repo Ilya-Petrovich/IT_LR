@@ -5,13 +5,14 @@ int main() {
 	float f, s, fct, d, fc = 0, fr = 0, nd;
 	cout << "How much fuel do you have at start? "; cin >> f;
 	if (f >= 0 && f <= 50) {
-		if (f <= 25) {
-			f = f + 25;
-		}
 		cout << "\nCar stats" << "\nFuel: " << f << "\nFuel capacity: 50" << "\nFuel consumption: 0" << "\nSpeed: 0"
 			<< "\nMaximum speed: 110" << "\n\nRoute info" << "\nDistance: 360 km" << "\n----------------------------------------"
-			<< "\nYou have to drive a route 360 km long." << "\nBut first you need to check if you have enough fuel."
-			<< "\n\nWhat speed will you choose? "; cin >> s;
+			<< "\nYou have to drive a route 360 km long." << "\nBut first you need to check if you have enough fuel.";
+		if (f <= 25) {
+			f = f + 25;
+			cout << "\n\nYour speed before start: " << f;
+		}
+		cout << "\n\nWhat speed will you choose? "; cin >> s;
 		cout << "Your speed before start: ";
 		if (s >= 0 && s <= 110) {
 			cout << s;
