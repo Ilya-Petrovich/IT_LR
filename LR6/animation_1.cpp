@@ -1,5 +1,5 @@
 #include<iostream>
-#include<windows.h>
+#include<unistd.h>
 using namespace std;
 int main() {
 	int n = 12, m = 10, k = 0;
@@ -24,9 +24,9 @@ int main() {
 			cout << character[i][j] << " ";
 		cout << endl;
 	};
-	Sleep(1000);
+	//Sleep(1000);
 	while (k != 2) {
-		system("cls");
+		//system("cls");
 		character[7][1] = ' ';
 		character[6][1] = '-';
 		character[7][8] = ' ';
@@ -41,8 +41,8 @@ int main() {
 				cout << character[i][j] << " ";
 			cout << endl;
 		};
-		Sleep(1000);
-		system("cls");
+		//Sleep(1000);
+		//system("cls");
 		character[6][1] = ' ';
 		character[7][1] = '/';
 		character[8][0] = '/';
@@ -57,8 +57,8 @@ int main() {
 				cout << character[i][j] << " ";
 			cout << endl;
 		};
-		Sleep(1000);
-		system("cls");
+		//Sleep(1000);
+		//system("cls");
 		character[7][1] = ' ';
 		character[6][1] = '-';
 		character[8][0] = ' ';
@@ -71,8 +71,8 @@ int main() {
 				cout << character[i][j] << " ";
 			cout << endl;
 		};
-		Sleep(1000);
-		system("cls");
+		//Sleep(1000);
+		//system("cls");
 		character[5][9] = ' ';
 		character[4][9] = '/';
 		character[5][8] = '/';
@@ -89,8 +89,8 @@ int main() {
 				cout << character[i][j] << " ";
 			cout << endl;
 		};
-		Sleep(1000);
-		system("cls");
+		//Sleep(1000);
+		//system("cls");
 		character[6][1] = '-';
 		character[8][0] = ' ';
 		character[7][0] = '/';
@@ -102,8 +102,8 @@ int main() {
 				cout << character[i][j] << " ";
 			cout << endl;
 		};
-		Sleep(1000);
-		system("cls");
+		//Sleep(1000);
+		//system("cls");
 		character[4][9] = '/';
 		character[7][0] = ' ';
 		character[6][0] = '-';
@@ -113,8 +113,8 @@ int main() {
 				cout << character[i][j] << " ";
 			cout << endl;
 		};
-		Sleep(1000);
-		system("cls");
+		//Sleep(1000);
+		//system("cls");
 		character[6][0] = ' ';
 		character[5][0] = '\\';
 		character[4][9] = '*';
@@ -124,8 +124,8 @@ int main() {
 				cout << character[i][j] << " ";
 			cout << endl;
 		};
-		Sleep(1000);
-		system("cls");
+		//Sleep(1000);
+		//system("cls");
 		character[4][9] = '/';
 		character[5][0] = ' ';
 		character[4][0] = '\\';
@@ -137,8 +137,8 @@ int main() {
 				cout << character[i][j] << " ";
 			cout << endl;
 		};
-		Sleep(1000);
-		system("cls");
+		//Sleep(1000);
+		//system("cls");
 		character[4][9] = '*';
 		character[4][0] = '*';
 		for (int i = 0; i < n; i++)
@@ -147,8 +147,8 @@ int main() {
 				cout << character[i][j] << " ";
 			cout << endl;
 		};
-		Sleep(1000);
-		system("cls");
+		//Sleep(1000);
+		//system("cls");
 		character[4][9] = ' ';
 		character[4][0] = ' ';
 		character[5][1] = ' ';
@@ -163,8 +163,8 @@ int main() {
 				cout << character[i][j] << " ";
 			cout << endl;
 		};
-		Sleep(1000);
-		system("cls");
+		//Sleep(1000);
+		//system("cls");
 		character[5][0] = ' ';
 		character[5][9] = ' ';
 		character[6][0] = '*';
@@ -175,8 +175,8 @@ int main() {
 				cout << character[i][j] << " ";
 			cout << endl;
 		};
-		Sleep(1000);
-		system("cls");
+		//Sleep(1000);
+		//system("cls");
 		character[6][0] = ' ';
 		character[6][9] = ' ';
 		character[7][0] = '*';
@@ -187,8 +187,8 @@ int main() {
 				cout << character[i][j] << " ";
 			cout << endl;
 		};
-		Sleep(1000);
-		system("cls");
+		//Sleep(1000);
+		//system("cls");
 		character[7][1] = '/';
 		character[7][8] = '\\';
 		character[7][0] = ' ';
@@ -203,8 +203,8 @@ int main() {
 				cout << character[i][j] << " ";
 			cout << endl;
 		};
-		Sleep(1000);
-		system("cls");
+		//Sleep(1000);
+		//system("cls");
 		character[8][0] = '/';
 		character[8][9] = '\\';
 		for (int i = 0; i < n; i++)
@@ -213,7 +213,7 @@ int main() {
 				cout << character[i][j] << " ";
 			cout << endl;
 		};
-		Sleep(1000);
+		//Sleep(1000);
 		k++;
 	};
 	return 0;
