@@ -1,39 +1,32 @@
-﻿#include <iostream>
-#include <stdio.h>
-
-using namespace std;
-
-void readText(char* buff, long fileSize);
-
+﻿#include <stdio.h>
+#include <iostream>
+void ReadText(char* buff, long fSize);
 int main()
 {
     FILE* file;
-
     char filename[100];
-    cin >> filename;
+    std::cout << "Input file for read: "; std::cin >> filename;
     file = fopen(filename, "rb");
+    long fSize;
     fseek(file, 0, SEEK_END);
-    long fileSize = ftell(file);
+    fSize = ftell(file);
     rewind(file);
-
-    char* buff = new char[fileSize]();
-    fread(buff, sizeof(char), fileSize, file);
-    int size_f = fileSize - 20 * 20 * 3;
-
-    for (int i = size_f; i < fileSize - 3; i += 4) {
-        char res;
-        res = ((buff[i] & 0x3) << 6) | ((buff[i + 1] & 0x3) << 4) | ((buff[i + 2] & 0x3) << 2) | (buff[i + 3] & 0x3);
-        cout << res;
-    }
-
-
-
+    char* buff = new char[fSize]();
+    fread(buff, 1, fSize, file);
+    ReadText(buff, fSize);
     fclose(file);
     free(buff);
 }
-
-void readText(char* buff, long fileSize) {
-    for (int i = 0; i < fileSize; i++) {
-        cout << buff[i];
+void ReadText(char* buff, long fSize)
+{
+    int start_of_byte = fSize - 1200;
+    while (start_of_byte < fSize) {
+        int first_byte = buff[start_of_byte] & 3;   
+        int second_byte = buff[start_of_byte + 1] & 3;
+        int third_byte = buff[start_of_byte + 2] & 3;   
+        int fourth_byte = buff[start_of_byte + 3] & 3;
+        std::cout <<(char) ((first_byte << 6) | (second_byte << 4) | (third_byte << 2) | fourth_byte);
+        start_of_byte += 4;
     }
 }
+

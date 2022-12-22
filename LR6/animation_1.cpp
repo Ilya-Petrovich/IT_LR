@@ -1,4 +1,4 @@
-﻿#include <iostream>
+#include <iostream>
 #include <unistd.h>
 
 using namespace std;
