@@ -8,18 +8,184 @@ void clear();
 void head();
 void leg();
 void dance();
-void run();
+//void run();
 void jump();
 void moving(string move_left, string move_right);
 void throw_ball();
+string aprobel(int n) {
+    if (n == 28) {
+        return "                            ";
+
+    }
+    if (n == 0) {
+        return "";
+    }
+
+    if (n > 0) {
+
+        string sa = "";
+        while (n--) {
+            sa += " ";
+
+        }
+        return sa;
+    }
+    else return "";
+}
+string bprobel(int n) {
+    string sb = "";
+    while (n--) {
+        sb += "*                                      *\n";
+    }
+    return sb;
+}
 
 int main() {
     unsigned short choice = 0;
     //clear();
+    string B, A, C, D, G, F, O, M, T = "*", H = "*";
+    int a;
+    G = "****************************************\n";
+    M = "*                                      *\n";
+    M += "*                                      *\n";
+    M += "*                                      *\n";
+    M += "*                                      *\n";
+    M += "*                                      *\n";
+    M += "*                                      *\n";
+
+    A = "*    /\\                                *\n";
+    A += "*   |oo|                               *\n";
+    A += "*  (|..|)                              *\n";
+    A += "*   |--|                               *\n";
+    B = "*   \\__/                               *\n";
+    B += "*    ||                                *\n";
+    B += "*  -| *|-                              *\n";
+    B += "* / |  | \\                             *\n";
+    B += "*/   \\/   \\                            *\n";
+    C = "*    /\\                                *\n";
+    C += "*    ||                                *\n";
+    C += "*   _||_                               *\n";
+    D = "*   \\__/                               *\n";
+    D += "*    ||                                *\n";
+    D += "*  -| *|-                              *\n";
+    D += "* / |  | \\                             *\n";
+    D += "*/   \\/   \\                            *\n";
     while (choice != 5) {
         switch (choice) {
         case 1: { dance(); break; }
-        case 2: { run(); break; }
+        case 2: {
+            A = "*    /\\    " + aprobel(28) + "*\n";
+            A += "*   |oo|   " + aprobel(28) + "*\n";
+            A += "*  (|..|)  " + aprobel(28) + "*\n";
+            A += "*   |--|   " + aprobel(28) + "*\n";
+            A += "*   \\__/   " + aprobel(28) + "*\n";
+            A += "*    ||    " + aprobel(28) + "*\n";
+            A += "*  -| *|-  " + aprobel(28) + "*\n";
+            A += "* / |  | \\ " + aprobel(28) + "*\n";
+            A += "*/   \\/   \\" + aprobel(28) + "*\n";
+            A += "*    /\\    " + aprobel(28) + "*\n";
+            A += "*    ||    " + aprobel(28) + "*\n";
+            A += "*   _||_   " + aprobel(28) + "*\n";
+            cout << G + bprobel(6) + A + G;
+
+
+            for (int i = 1; i <= 28; i++) {
+
+                A = "*" + aprobel(i - 1) + "    /\\    " + aprobel(29 - i) + "*\n";
+                A += "*" + aprobel(i - 1) + "   |oo|   " + aprobel(29 - i) + "*\n";
+                A += "*" + aprobel(i - 1) + "  (|..|)  " + aprobel(29 - i) + "*\n";
+                A += "*" + aprobel(i - 1) + "   |--|   " + aprobel(29 - i) + "*\n";
+                A += "*" + aprobel(i - 1) + "   \\__/   " + aprobel(29 - i) + "*\n";
+                A += "*" + aprobel(i - 1) + "    ||    " + aprobel(29 - i) + "*\n";
+                A += "*" + aprobel(i - 1) + "  -| *|-  " + aprobel(29 - i) + "*\n";
+                A += "*" + aprobel(i - 1) + " / |  | \\ " + aprobel(29 - i) + "*\n";
+                A += "*" + aprobel(i - 1) + "/   \\/   \\" + aprobel(29 - i) + "*\n";
+                A += "*" + aprobel(i - 1) + "    /\\    " + aprobel(29 - i) + "*\n";
+                A += "*" + aprobel(i - 1) + "    | \\   " + aprobel(29 - i) + "*\n";
+                A += "*" + aprobel(i - 1) + "   _|  \\_ " + aprobel(29 - i) + "*\n";
+                cout << G + bprobel(6) + A + G;
+
+
+                A = "*" + aprobel(i) + "    /\\    " + aprobel(28 - i) + "*\n";
+                A += "*" + aprobel(i) + "   |oo|   " + aprobel(28 - i) + "*\n";
+                A += "*" + aprobel(i) + "  (|..|)  " + aprobel(28 - i) + "*\n";
+                A += "*" + aprobel(i) + "   |--|   " + aprobel(28 - i) + "*\n";
+                A += "*" + aprobel(i) + "   \\__/   " + aprobel(28 - i) + "*\n";
+                A += "*" + aprobel(i) + "    ||    " + aprobel(28 - i) + "*\n";
+                A += "*" + aprobel(i) + "  -| *|-  " + aprobel(28 - i) + "*\n";
+                A += "*" + aprobel(i) + " / |  | \\ " + aprobel(28 - i) + "*\n";
+                A += "*" + aprobel(i) + "/   \\/   \\" + aprobel(28 - i) + "*\n";
+                A += "*" + aprobel(i) + "    /\\    " + aprobel(28 - i) + "*\n";
+                A += "*" + aprobel(i) + "   / |    " + aprobel(28 - i) + "*\n";
+                A += "*" + aprobel(i) + " _/  |_   " + aprobel(28 - i) + "*\n";
+                cout << G + bprobel(6) + A + G;
+
+                A = "*" + aprobel(i) + "    /\\    " + aprobel(28 - i) + "*\n";
+                A += "*" + aprobel(i) + "   |oo|   " + aprobel(28 - i) + "*\n";
+                A += "*" + aprobel(i) + "  (|..|)  " + aprobel(28 - i) + "*\n";
+                A += "*" + aprobel(i) + "   |--|   " + aprobel(28 - i) + "*\n";
+                A += "*" + aprobel(i) + "   \\__/   " + aprobel(28 - i) + "*\n";
+                A += "*" + aprobel(i) + "    ||    " + aprobel(28 - i) + "*\n";
+                A += "*" + aprobel(i) + "  -| *|-  " + aprobel(28 - i) + "*\n";
+                A += "*" + aprobel(i) + " / |  | \\ " + aprobel(28 - i) + "*\n";
+                A += "*" + aprobel(i) + "/   \\/   \\" + aprobel(28 - i) + "*\n";
+                A += "*" + aprobel(i) + "    /\\    " + aprobel(28 - i) + "*\n";
+                A += "*" + aprobel(i) + "    ||    " + aprobel(28 - i) + "*\n";
+                A += "*" + aprobel(i) + "   _||_   " + aprobel(28 - i) + "*\n";
+                cout << G + bprobel(6) + A + G;
+
+            }
+
+            for (int i = 1; i <= 28; i++) {
+
+                A = "*" + aprobel(29 - i) + "    /\\    " + aprobel(i - 1) + "*\n";
+                A += "*" + aprobel(29 - i) + "   |oo|   " + aprobel(i - 1) + "*\n";
+                A += "*" + aprobel(29 - i) + "  (|..|)  " + aprobel(i - 1) + "*\n";
+                A += "*" + aprobel(29 - i) + "   |--|   " + aprobel(i - 1) + "*\n";
+                A += "*" + aprobel(29 - i) + "   \\__/   " + aprobel(i - 1) + "*\n";
+                A += "*" + aprobel(29 - i) + "    ||    " + aprobel(i - 1) + "*\n";
+                A += "*" + aprobel(29 - i) + "  -| *|-  " + aprobel(i - 1) + "*\n";
+                A += "*" + aprobel(29 - i) + " / |  | \\ " + aprobel(i - 1) + "*\n";
+                A += "*" + aprobel(29 - i) + "/   \\/   \\" + aprobel(i - 1) + "*\n";
+                A += "*" + aprobel(29 - i) + "    /\\    " + aprobel(i - 1) + "*\n";
+                A += "*" + aprobel(29 - i) + "    | \\   " + aprobel(i - 1) + "*\n";
+                A += "*" + aprobel(29 - i) + "   _|  \\_ " + aprobel(i - 1) + "*\n";
+                cout << G + bprobel(6) + A + G;
+
+
+                if (i != 28) {
+
+                    A = "*" + aprobel(28 - i) + "    /\\    " + aprobel(i) + "*\n";
+                    A += "*" + aprobel(28 - i) + "   |oo|   " + aprobel(i) + "*\n";
+                    A += "*" + aprobel(28 - i) + "  (|..|)  " + aprobel(i) + "*\n";
+                    A += "*" + aprobel(28 - i) + "   |--|   " + aprobel(i) + "*\n";
+                    A += "*" + aprobel(28 - i) + "   \\__/   " + aprobel(i) + "*\n";
+                    A += "*" + aprobel(28 - i) + "    ||    " + aprobel(i) + "*\n";
+                    A += "*" + aprobel(28 - i) + "  -| *|-  " + aprobel(i) + "*\n";
+                    A += "*" + aprobel(28 - i) + " / |  | \\ " + aprobel(i) + "*\n";
+                    A += "*" + aprobel(28 - i) + "/   \\/   \\" + aprobel(i) + "*\n";
+                    A += "*" + aprobel(28 - i) + "    /\\    " + aprobel(i) + "*\n";
+                    A += "*" + aprobel(28 - i) + "   / |    " + aprobel(i) + "*\n";
+                    A += "*" + aprobel(28 - i) + " _/  |_   " + aprobel(i) + "*\n";
+                    cout << G + bprobel(6) + A + G;
+                }
+                A = "*" + aprobel(28 - i) + "    /\\    " + aprobel(i) + "*\n";
+                A += "*" + aprobel(28 - i) + "   |oo|   " + aprobel(i) + "*\n";
+                A += "*" + aprobel(28 - i) + "  (|..|)  " + aprobel(i) + "*\n";
+                A += "*" + aprobel(28 - i) + "   |--|   " + aprobel(i) + "*\n";
+                A += "*" + aprobel(28 - i) + "   \\__/   " + aprobel(i) + "*\n";
+                A += "*" + aprobel(28 - i) + "    ||    " + aprobel(i) + "*\n";
+                A += "*" + aprobel(28 - i) + "  -| *|-  " + aprobel(i) + "*\n";
+                A += "*" + aprobel(28 - i) + " / |  | \\ " + aprobel(i) + "*\n";
+                A += "*" + aprobel(28 - i) + "/   \\/   \\" + aprobel(i) + "*\n";
+                A += "*" + aprobel(28 - i) + "    /\\    " + aprobel(i) + "*\n";
+                A += "*" + aprobel(28 - i) + "    ||    " + aprobel(i) + "*\n";
+                A += "*" + aprobel(28 - i) + "   _||_   " + aprobel(i) + "*\n";
+                cout << G + bprobel(6) + A + G;
+
+            }
+            break;
+        }
         case 3: { jump(); break; }
         case 4: { throw_ball(); break; }
         }
@@ -149,7 +315,7 @@ void dance() {
         //clear();
     }
 }
-void run() {
+/*void run() {
     for (int i = 0, j = 28; i <= 28; i++, j--) {
         string move_right = string(i, ' ');
         string move_left = string(j, ' ');
@@ -229,7 +395,7 @@ void run() {
             }
         }
     }
-}
+}*/
 void moving(string move_left, string move_right) {
     cout << string(40, '*') << '\n';
     for (int i = 0; i < 6; i++) { cout << "*                                      *\n"; }
