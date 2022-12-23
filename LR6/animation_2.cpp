@@ -28,12 +28,12 @@ void vvod(string ar[]) {
 	while (1) {
 		int choice;
 		cout << "Choose animation:" << endl;
-		cout << "Dance:\t\t\t1" << endl;
-		cout << "Run:\t\t\t2" << endl;
-		cout << "Sit down and jump: \t3" << endl;
-		cout << "Throw a ball: \t\t4" << endl << endl;
-		cout << "Enter 5 for exit." << endl;
-		cin >> choice;
+cout << "Dance: \t\t\t1" << endl;
+cout << "Run: \t\t\t2" << endl;
+cout << "Sit down and jump: \t3" << endl;
+cout << "Throw a ball: \t\t4" << endl << endl;
+cout << "Enter 5 for exit." << endl;
+cin >> choice;
 		//system("cls");
 		if (choice == 1) {
 			dance(ar);

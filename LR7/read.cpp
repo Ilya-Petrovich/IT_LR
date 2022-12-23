@@ -22,13 +22,11 @@ int main() {
 	return 0;
 }
 
-void ReadText(char* buff, long fileSize) {
-
-    for (int i = 138; i < fileSize; i += 4) {
-        int  united_byte = 0;
-        for (int j = i; j < i + 4; j++) {
-            united_byte |= (buff[j] & 3) << (2*(i+3-j));
-        }
-        cout << (char)united_byte;
-    }
+void changeColor(char* buff, long fileSize) {
+	int b = 179, g = 222, r = 245;
+	for (int i = 138; i < fileSize; i += 3) {
+		buff[i] = b;
+		buff[i + 1] = g;
+		buff[i + 2] = r;
+	}
 }
