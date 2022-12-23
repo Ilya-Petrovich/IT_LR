@@ -1,289 +1,250 @@
+
 #include <iostream>
 #include <unistd.h>
-
 using namespace std;
 
-void position0(string &st1, string &st2, string &st3, string &st4, string &st5, string &st6, string &st7, string &st8, string &st9, string &st10, string &st11, string &st12)
-{
-    st1 = "   _[]_   ";
-    st2 = "   |~~|   ";
-    st3 = "   |oq|   ";
-    st4 = "  (|<>|)  ";
-    st5 = "   \\--/  ";
-    st6 = "   _><_   ";
-    st7 = "  -\\. /- "; 
-    st8 = " / |. | \\";
-    st9 = "/  |. |  \\ ";
-    st10 = "   |__|   ";
-    st11 = "    ||    ";
-    st12 = "   _||_   ";
-}
-
-void position1(string &st1, string &st2, string &st3, string &st4, string &st5, string &st6, string &st7, string &st8, string &st9, string &st10, string &st11, string &st12)
-{
-    st1 = "   _[]_   ";
-    st2 = "   |~~|   ";
-    st3 = "   |oq|   ";
-    st4 = "  (|<>|)  ";
-    st5 = "   \\--/  ";
-    st6 = "   _><_   ";
-    st7 = " --\\. /-- ";
-    st8 = "/  |. |  \\";
-    st9 = "   |. |    ";
-    st10 = "   |__|   ";
-    st11 = "    ||    ";
-    st12 = "   _||_   ";
-}
-
-void position2(string &st1, string &st2, string &st3, string &st4, string &st5, string &st6, string &st7, string &st8, string &st9, string &st10, string &st11, string &st12)
-{
-    st1 = "   _[]_   ";
-    st2 = "   |~~|   ";
-    st3 = "   |oq|   ";
-    st4 = "  (|<>|)  ";
-    st5 = "   \\--/  ";
-    st6 = "   _><_   ";
-    st7 = "  -\\. /--- ";
-    st8 = " / |. |  ";
-    st9 = "/  |. |    ";
-    st10 = "   |__|   ";
-    st11 = "    ||    ";
-    st12 = "   _||_   ";
-}
-
-void position3(string &st1, string &st2, string &st3, string &st4, string &st5, string &st6, string &st7, string &st8, string &st9, string &st10, string &st11, string &st12)
-{
-    st1 = "   _[]_   ";
-    st2 = "   |~~|   ";
-    st3 = "   |oq|   ";
-    st4 = "  (|<>|)  ";
-    st5 = "   \\--/  ";
-    st6 = "   _><_  /";
-    st7 = " --\\. /-- ";
-    st8 = "/  |. |  ";
-    st9 = "   |. |    ";
-    st10 = "   |__|   ";
-    st11 = "    ||    ";
-    st12 = "   _||_   ";
-}
-
-void position4(string &st1, string &st2, string &st3, string &st4, string &st5, string &st6, string &st7, string &st8, string &st9, string &st10, string &st11, string &st12)
-{
-    st1 = "   _[]_   ";
-    st2 = "   |~~|   ";
-    st3 = "   |oq|   ";
-    st4 = "  (|<>|)  ";
-    st5 = "   \\--/  /";
-    st6 = "   _><_ /";
-    st7 = "  -\\. /-  ";
-    st8 = " / |. |  ";
-    st9 = "/  |. |    ";
-    st10 = "   |__|   ";
-    st11 = "    ||    ";
-    st12 = "   _||_   ";
-}
-
-void position5(string &st1, string &st2, string &st3, string &st4, string &st5, string &st6, string &st7, string &st8, string &st9, string &st10, string &st11, string &st12)
-{
-    st1 = "   _[]_   ";
-    st2 = "   |~~|   ";
-    st3 = "   |oq|   ";
-    st4 = "  (|<>|)  ";
-    st5 = "   \\--/  *";
-    st6 = "   _><_ /";
-    st7 = " --\\. /-  ";
-    st8 = "/  |. |  ";
-    st9 = "   |. |    ";
-    st10 = "   |__|   ";
-    st11 = "    ||    ";
-    st12 = "   _||_   ";
-}
-
-void position6(string &st1, string &st2, string &st3, string &st4, string &st5, string &st6, string &st7, string &st8, string &st9, string &st10, string &st11, string &st12)
-{
-    st1 = "   _[]_   ";
-    st2 = "   |~~|   ";
-    st3 = "   |oq|   ";
-    st4 = "  (|<>|)  ";
-    st5 = "   \\--/  /";
-    st6 = "   _><_ /";
-    st7 = "---\\. /-  ";
-    st8 = "   |. |  ";
-    st9 = "   |. |    ";
-    st10 = "   |__|   ";
-    st11 = "    ||    ";
-    st12 = "   _||_   ";
-}
-
-void position7(string &st1, string &st2, string &st3, string &st4, string &st5, string &st6, string &st7, string &st8, string &st9, string &st10, string &st11, string &st12)
-{
-    st1 = "   _[]_   ";
-    st2 = "   |~~|   ";
-    st3 = "   |oq|   ";
-    st4 = "  (|<>|)  ";
-    st5 = "   \\--/  *";
-    st6 = "\\  _><_ /";
-    st7 = " --\\. /-  ";
-    st8 = "   |. |  ";
-    st9 = "   |. |    ";
-    st10 = "   |__|   ";
-    st11 = "    ||    ";
-    st12 = "   _||_   ";
-}
-
-void position8(string &st1, string &st2, string &st3, string &st4, string &st5, string &st6, string &st7, string &st8, string &st9, string &st10, string &st11, string &st12)
-{
-    st1 = "   _[]_   ";
-    st2 = "   |~~|   ";
-    st3 = "   |oq|   ";
-    st4 = "  (|<>|)  ";
-    st5 = "\\  \\--/  /";
-    st6 = " \\ _><_ /";
-    st7 = "  -\\. /-  ";
-    st8 = "   |. |  ";
-    st9 = "   |. |    ";
-    st10 = "   |__|   ";
-    st11 = "    ||    ";
-    st12 = "   _||_   ";
-}
-
-void position9(string &st1, string &st2, string &st3, string &st4, string &st5, string &st6, string &st7, string &st8, string &st9, string &st10, string &st11, string &st12)
-{
-    st1 = "   _[]_   ";
-    st2 = "   |~~|   ";
-    st3 = "   |oq|   ";
-    st4 = "  (|<>|)  ";
-    st5 = "*  \\--/  *";
-    st6 = " \\ _><_ /";
-    st7 = "  -\\. /-  ";
-    st8 = "   |. |  ";
-    st9 = "   |. |    ";
-    st10 = "   |__|   ";
-    st11 = "    ||    ";
-    st12 = "   _||_   ";
-}
-
-void position10(string &st1, string &st2, string &st3, string &st4, string &st5, string &st6, string &st7, string &st8, string &st9, string &st10, string &st11, string &st12)
-{
-    st1 = "   _[]_   ";
-    st2 = "   |~~|   ";
-    st3 = "   |oq|   ";
-    st4 = "  (|<>|)  ";
-    st5 = "   \\--/  ";
-    st6 = "*  _><_  *";
-    st7 = " --\\. /-- ";
-    st8 = "   |. |  ";
-    st9 = "   |. |    ";
-    st10 = "   |__|   ";
-    st11 = "    ||    ";
-    st12 = "   _||_   ";
-}
-
-void position11(string &st1, string &st2, string &st3, string &st4, string &st5, string &st6, string &st7, string &st8, string &st9, string &st10, string &st11, string &st12)
-{
-    st1 = "   _[]_   ";
-    st2 = "   |~~|   ";
-    st3 = "   |oq|   ";
-    st4 = "  (|<>|)  ";
-    st5 = "   \\--/  ";
-    st6 = "   _><_   ";
-    st7 = "*--\\. /--*";
-    st8 = "   |. |  ";
-    st9 = "   |. |    ";
-    st10 = "   |__|   ";
-    st11 = "    ||    ";
-    st12 = "   _||_   ";
-}
-
-void position12(string &st1, string &st2, string &st3, string &st4, string &st5, string &st6, string &st7, string &st8, string &st9, string &st10, string &st11, string &st12)
-{
-    st1 = "   _[]_   ";
-    st2 = "   |~~|   ";
-    st3 = "   |oq|   ";
-    st4 = "  (|<>|)  ";
-    st5 = "   \\--/  ";
-    st6 = "   _><_   ";
-    st7 = " --\\. /-- ";
-    st8 = "*  |. |  *";
-    st9 = "   |. |    ";
-    st10 = "   |__|   ";
-    st11 = "    ||    ";
-    st12 = "   _||_   ";
-}
-
-void position13(string &st1, string &st2, string &st3, string &st4, string &st5, string &st6, string &st7, string &st8, string &st9, string &st10, string &st11, string &st12)
-{
-    st1 = "   _[]_   ";
-    st2 = "   |~~|   ";
-    st3 = "   |oq|   ";
-    st4 = "  (|<>|)  ";
-    st5 = "   \\--/  ";
-    st6 = "   _><_   ";
-    st7 = "  -\\. /- ";
-    st8 = " / |. | \\";
-    st9 = "*  |. |  * ";
-    st10 = "   |__|   ";
-    st11 = "    ||    ";
-    st12 = "   _||_   ";
-}
-
-void output(string st1, string st2, string st3, string st4, string st5, string st6, string st7, string st8, string st9, string st10, string st11, string st12)
-{
-    cout << st1 << endl << st2 << endl << st3 << endl << st4 << endl << st5 << endl << st6 << endl << st7 << endl << st8 << endl << st9 << endl << st10 << endl << st11 << endl << st12 << endl;
-}
-
-void dance(string st1, string st2, string st3, string st4, string st5, string st6, string st7, string st8, string st9, string st10, string st11, string st12)
-{
-    for (int i = 0; i < 2; i++)
-    {
-        position0(st1, st2, st3, st4, st5, st6, st7, st8, st9, st10, st11, st12);
-        output(st1, st2, st3, st4, st5, st6, st7, st8, st9, st10, st11, st12);
-
-        position1(st1, st2, st3, st4, st5, st6, st7, st8, st9, st10, st11, st12);
-        output(st1, st2, st3, st4, st5, st6, st7, st8, st9, st10, st11, st12);
-
-        position2(st1, st2, st3, st4, st5, st6, st7, st8, st9, st10, st11, st12);
-        output(st1, st2, st3, st4, st5, st6, st7, st8, st9, st10, st11, st12);
-
-        position3(st1, st2, st3, st4, st5, st6, st7, st8, st9, st10, st11, st12);
-        output(st1, st2, st3, st4, st5, st6, st7, st8, st9, st10, st11, st12);
-
-        position4(st1, st2, st3, st4, st5, st6, st7, st8, st9, st10, st11, st12);
-        output(st1, st2, st3, st4, st5, st6, st7, st8, st9, st10, st11, st12);
-       
-        position5(st1, st2, st3, st4, st5, st6, st7, st8, st9, st10, st11, st12);
-        output(st1, st2, st3, st4, st5, st6, st7, st8, st9, st10, st11, st12);
-
-        position6(st1, st2, st3, st4, st5, st6, st7, st8, st9, st10, st11, st12);
-        output(st1, st2, st3, st4, st5, st6, st7, st8, st9, st10, st11, st12);
-
-        position7(st1, st2, st3, st4, st5, st6, st7, st8, st9, st10, st11, st12);
-        output(st1, st2, st3, st4, st5, st6, st7, st8, st9, st10, st11, st12);
-
-        position8(st1, st2, st3, st4, st5, st6, st7, st8, st9, st10, st11, st12);
-        output(st1, st2, st3, st4, st5, st6, st7, st8, st9, st10, st11, st12);
-
-        position9(st1, st2, st3, st4, st5, st6, st7, st8, st9, st10, st11, st12);
-        output(st1, st2, st3, st4, st5, st6, st7, st8, st9, st10, st11, st12);
-
-        position10(st1, st2, st3, st4, st5, st6, st7, st8, st9, st10, st11, st12);
-        output(st1, st2, st3, st4, st5, st6, st7, st8, st9, st10, st11, st12);
-
-        position11(st1, st2, st3, st4, st5, st6, st7, st8, st9, st10, st11, st12);
-        output(st1, st2, st3, st4, st5, st6, st7, st8, st9, st10, st11, st12);
-
-        position12(st1, st2, st3, st4, st5, st6, st7, st8, st9, st10, st11, st12);
-        output(st1, st2, st3, st4, st5, st6, st7, st8, st9, st10, st11, st12);
-
-        position13(st1, st2, st3, st4, st5, st6, st7, st8, st9, st10, st11, st12);
-        output(st1, st2, st3, st4, st5, st6, st7, st8, st9, st10, st11, st12);
-    }
-    position0(st1, st2, st3, st4, st5, st6, st7, st8, st9, st10, st11, st12);
-    output(st1, st2, st3, st4, st5, st6, st7, st8, st9, st10, st11, st12);
-}
+void print(char p1[], char p2[], char p3[], char p4[], char p5[], char p6[], char p7[], char p8[], char p9[], char p10[], char p11[], char p12[]);
 
 int main()
 {
-    string st1, st2, st3, st4, st5, st6, st7, st8, st9, st10, st11, st12;
-    dance(st1, st2, st3, st4, st5, st6, st7, st8, st9, st10, st11, st12);
+	char p1[11] = { ' ', ' ', ' ', '_', '[', ']', '_', ' ', ' ', ' ', '\n' };
+	char p2[11] = { ' ', ' ', ' ', '|', '~', '~', '|', ' ', ' ', ' ', '\n' };
+	char p3[11] = { ' ', ' ', ' ', '|', 'o', 'q', '|', ' ', ' ', ' ', '\n' };
+	char p4[11] = { ' ', ' ', '(', '|', '<', '>', '|', ')', ' ', ' ', '\n' };
+	char p5[11] = { ' ', ' ', ' ', '\\', '-', '-', '/', ' ', ' ', ' ', '\n' };
+	char p6[11] = { ' ', ' ', ' ', '_', '>', '<', '_', ' ', ' ', ' ', '\n' };
+	char p7[11] = { ' ', ' ', '-', '\\', '.', ' ', '/', '-', ' ', ' ', '\n' };
+	char p8[11] = { ' ', '/', ' ', '|', '.', ' ', '|', ' ', '\\', ' ', '\n' };
+	char p9[11] = { '/', ' ', ' ', '|', '.', ' ', '|', ' ', ' ', '\\', '\n' };
+	char p10[11] = { ' ', ' ', ' ', '|', '_', '_', '|', ' ', ' ', ' ', '\n' };
+	char p11[11] = { ' ', ' ', ' ', ' ', '|', '|', ' ', ' ', ' ', ' ', '\n' };
+	char p12[11] = { ' ', ' ', ' ', '_', '|', '|', '_', ' ', ' ', ' ', '\n' };
+	print(p1, p2, p3, p4, p5, p6, p7, p8, p9, p10, p11, p12);
+	p7[1] = '-';
+	p7[8] = '-';
+	p9[0] = ' ';
+	p9[9] = ' ';
+	p8[0] = '/';
+	p8[1] = ' ';
+	p8[8] = ' ';
+	p8[9] = '\\';
+	print(p1, p2, p3, p4, p5, p6, p7, p8, p9, p10, p11, p12);
+	p7[9] = '-';
+	p8[9] = ' ';
+	p9[0] = '/';
+	p8[0] = ' ';
+	p8[1] = '/';
+	p7[1] = ' ';
+	print(p1, p2, p3, p4, p5, p6, p7, p8, p9, p10, p11, p12);
+	p7[1] = '-';
+	p9[0] = ' ';
+	p9[8] = ' ';
+	p7[9] = ' ';
+	p6[9] = '/';
+	p8[1] = ' ';
+	p8[0] = '/';
+	print(p1, p2, p3, p4, p5, p6, p7, p8, p9, p10, p11, p12);
+	p7[1] = ' ';
+	p8[0] = ' ';
+	p8[1] = '/';
+	p9[0] = '/';
+	p6[9] = ' ';
+	p7[8] = ' ';
+	p6[8] = '/';
+	p5[9] = '/';
+	print(p1, p2, p3, p4, p5, p6, p7, p8, p9, p10, p11, p12);
+	p7[1] = '-';
+	p8[1] = ' ';
+	p8[0] = '/';
+	p9[0] = ' ';
+	p5[9] = '*';
+	print(p1, p2, p3, p4, p5, p6, p7, p8, p9, p10, p11, p12);
+	p5[9] = '/';
+	p8[0] = ' ';
+	p7[0] = '-';
+	print(p1, p2, p3, p4, p5, p6, p7, p8, p9, p10, p11, p12);
+	p5[9] = '*';
+	p7[0] = ' ';
+	p6[0] = '\\';
+	print(p1, p2, p3, p4, p5, p6, p7, p8, p9, p10, p11, p12);
+	p6[0] = ' ';
+	p5[0] = '\\';
+	p7[1] = ' ';
+	p5[9] = '/';
+	p6[1] = '\\';
+	print(p1, p2, p3, p4, p5, p6, p7, p8, p9, p10, p11, p12);
+	p5[0] = '*';
+	p5[9] = '*';
+	print(p1, p2, p3, p4, p5, p6, p7, p8, p9, p10, p11, p12);
+	p5[0] = ' ';
+	p5[9] = ' ';
+	p6[0] = '*';
+	p6[9] = '*';
+	p7[1] = '-';
+	p7[8] = '-';
+	p6[1] = ' ';
+	p6[8] = ' ';
+	print(p1, p2, p3, p4, p5, p6, p7, p8, p9, p10, p11, p12);
+	p7[0] = '*';
+	p7[9] = '*';
+	p6[0] = ' ';
+	p6[9] = ' ';
+	print(p1, p2, p3, p4, p5, p6, p7, p8, p9, p10, p11, p12);
+	p8[0] = '*';
+	p8[9] = '*';
+	p7[0] = ' ';
+	p7[9] = ' ';
+	print(p1, p2, p3, p4, p5, p6, p7, p8, p9, p10, p11, p12);
+	p9[0] = '*';
+	p9[9] = '*';
+	p8[0] = ' ';
+	p8[9] = ' ';
+	p7[1] = ' ';
+	p7[8] = ' ';
+	p8[1] = '/';
+	p8[8] = '\\';
+	print(p1, p2, p3, p4, p5, p6, p7, p8, p9, p10, p11, p12);
+	p9[0] = '/';
+	p9[9] = '\\';
+	print(p1, p2, p3, p4, p5, p6, p7, p8, p9, p10, p11, p12);
+	p7[1] = '-';
+	p7[8] = '-';
+	p8[1] = ' ';
+	p8[8] = ' ';
+	p8[0] = '/';
+	p8[9] = '\\';
+	p9[0] = ' ';
+	p9[9] = ' ';
+	print(p1, p2, p3, p4, p5, p6, p7, p8, p9, p10, p11, p12);
+	p7[1] = ' ';
+	p8[0] = ' ';
+	p8[1] = '/';
+	p9[0] = '/';
+	p8[9] = ' ';
+	p7[9] = '-';
+	print(p1, p2, p3, p4, p5, p6, p7, p8, p9, p10, p11, p12);
+	p7[1] = '-';
+	p8[1] = ' ';
+	p9[0] = ' ';
+	p8[0] = '/';
+	p7[9] = ' ';
+	p6[9] = '/';
+	print(p1, p2, p3, p4, p5, p6, p7, p8, p9, p10, p11, p12);
+	p7[1] = ' ';
+	p8[0] = ' ';
+	p8[1] = '/';
+	p9[0] = '/';
+	p7[8] = ' ';
+	p6[9] = ' ';
+	p6[8] = '/';
+	p5[9] = '/';
+	print(p1, p2, p3, p4, p5, p6, p7, p8, p9, p10, p11, p12);
+	p5[9] = '*';
+	p7[1] = '-';
+	p8[1] = ' ';
+	p8[0] = '/';
+	p9[0] = ' ';
+	print(p1, p2, p3, p4, p5, p6, p7, p8, p9, p10, p11, p12);
+	p7[0] = '-';
+	p8[0] = ' ';
+	p5[9] = '/';
+	print(p1, p2, p3, p4, p5, p6, p7, p8, p9, p10, p11, p12);
+	p5[9] = '*';
+	p7[0] = ' ';
+	p6[0] = '\\';
+	print(p1, p2, p3, p4, p5, p6, p7, p8, p9, p10, p11, p12);
+	p6[0] = ' ';
+	p5[0] = '\\';
+	p7[1] = ' ';
+	p5[9] = '/';
+	p6[1] = '\\';
+	print(p1, p2, p3, p4, p5, p6, p7, p8, p9, p10, p11, p12);
+	p5[0] = '*';
+	p5[9] = '*';
+	print(p1, p2, p3, p4, p5, p6, p7, p8, p9, p10, p11, p12);
+	p5[0] = ' ';
+	p5[9] = ' ';
+	p6[0] = '*';
+	p6[9] = '*';
+	p7[1] = '-';
+	p7[8] = '-';
+	p6[1] = ' ';
+	p6[8] = ' ';
+	print(p1, p2, p3, p4, p5, p6, p7, p8, p9, p10, p11, p12);
+	p7[0] = '*';
+	p7[9] = '*';
+	p6[0] = ' ';
+	p6[9] = ' ';
+	print(p1, p2, p3, p4, p5, p6, p7, p8, p9, p10, p11, p12);
+	p8[0] = '*';
+	p8[9] = '*';
+	p7[0] = ' ';
+	p7[9] = ' ';
+	print(p1, p2, p3, p4, p5, p6, p7, p8, p9, p10, p11, p12);
+	p9[0] = '*';
+	p9[9] = '*';
+	p8[0] = ' ';
+	p8[9] = ' ';
+	p7[1] = ' ';
+	p7[8] = ' ';
+	p8[1] = '/';
+	p8[8] = '\\';
+	print(p1, p2, p3, p4, p5, p6, p7, p8, p9, p10, p11, p12);
+	p9[0] = '/';
+	p9[9] = '\\';
+	print(p1, p2, p3, p4, p5, p6, p7, p8, p9, p10, p11, p12);
+}
+
+void print(char p1[], char p2[], char p3[], char p4[], char p5[], char p6[], char p7[], char p8[], char p9[], char p10[], char p11[], char p12[])
+{
+	//system("cls");
+	for (int i = 0; i <= 10; i++)
+	{
+		cout << p1[i];
+	}
+	for (int i = 0; i <= 10; i++)
+	{
+		cout << p2[i];
+	}
+	for (int i = 0; i <= 10; i++)
+	{
+		cout << p3[i];
+	}
+	for (int i = 0; i <= 10; i++)
+	{
+		cout << p4[i];
+	}
+	for (int i = 0; i <= 10; i++)
+	{
+		cout << p5[i];
+	}
+	for (int i = 0; i <= 10; i++)
+	{
+		cout << p6[i];
+	}
+	for (int i = 0; i <= 10; i++)
+	{
+		cout << p7[i];
+	}
+	for (int i = 0; i <= 10; i++)
+	{
+		cout << p8[i];
+	}
+	for (int i = 0; i <= 10; i++)
+	{
+		cout << p9[i];
+	}
+	for (int i = 0; i <= 10; i++)
+	{
+		cout << p10[i];
+	}
+	for (int i = 0; i <= 10; i++)
+	{
+		cout << p11[i];
+	}
+	for (int i = 0; i <= 10; i++)
+	{
+		cout << p12[i];
+	}
+	//Sleep(1000);
 }
