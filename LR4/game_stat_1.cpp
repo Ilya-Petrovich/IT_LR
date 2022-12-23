@@ -19,7 +19,7 @@ int main()
 	std::cout << "Fuel consumption: " << fuelcons << "\n";
 	std::cout << "Speed: " << speed << "\n";
 	std::cout << "Maximum speed: " << maxspeed << "\n" << "\n";
-	std::cout << "Rout info" << "\n";
+	std::cout << "Route info" << "\n";
 	std::cout << "Distance: " << dist << "\n";
 	std::cout << "----------------------------------------" << "\n";
 	std::cout << "You have to drive a route " << dist << " km long." << "\n";
