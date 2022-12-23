@@ -6,7 +6,7 @@ using namespace std;
 
 int main()
 {
-	ifstream input("changed_image.bmp");
+	ifstream input("image.bmp");
 	string a;
 	if (!input.is_open()) {
 		cout << "nope\n";
