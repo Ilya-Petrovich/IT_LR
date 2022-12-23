@@ -41,17 +41,17 @@ int main() {
 		cin >> a;
 		switch (a) {
 		case 1:
-			system("cls");
+			//system("cls");
 			Dance(pers, time);
 			Menu();
 			break;
 		case 2:
-			system("cls");
+			//system("cls");
 			run();
 			Menu();
 			break;
 		case 3:
-			system("cls");
+			//system("cls");
 			down(time, 1);
 			fly(1);
 			fly(2);
@@ -59,7 +59,7 @@ int main() {
 			Menu();
 			break;
 		case 4:
-			system("cls");
+			//system("cls");
 			monetka(750);
 			Menu();
 			break;
@@ -203,8 +203,7 @@ void Dance(char pers[][11], int time) {
 
 void SSS(char pers[][11], int time, int l) {
 	ShowArray(pers, 16, 11, 1);
-	//Sleep(time);
-	//system("cls");
+	//Sleep(time);system("cls");
 }
 
 void SSS(char pers[][11], int time) {
@@ -221,6 +220,7 @@ void Menu() {
 	cout << "Throw a ball: \t\t4" << endl << endl;
 	cout << "Enter 5 for exit." << endl;
 }
+
 
 void run() {
 	for (int i = 0, j = 28; i <= 28; i++, j--) {
@@ -272,7 +272,6 @@ void run() {
 
 
 		for (int k = 0; k < 3; k++) {
-
 			if (j == 0 and !(k == 2)) {
 				continue;
 			}
@@ -295,7 +294,8 @@ void run() {
 				cout << "*" << right << "    ||    " << left << "*\n";
 				cout << "*" << right << "   _||_   " << left << "*\n";
 				cout << string(40, '*') << endl;
-				//Sleep(100); system("cls");
+				//Sleep(100);
+				//system("cls");
 				break;
 			case 0:
 				cout << "*" << right << "    | \\   " << left << "*\n";
@@ -305,11 +305,6 @@ void run() {
 				break;
 			}
 		}
-
-		sweep(string(0, ' '), string(28, ' '));
-		cout << "*" << "    ||    " << string(28, ' ') << "*\n";
-		cout << "*" << "   _||_   " << string(28, ' ') << "*\n";
-		cout << string(40, '*') << endl;
 	}
 }
 
@@ -318,16 +313,16 @@ void sweep(string r, string l) {
 	for (size_t i = 0; i < 6; i++) {
 		cout << "*" << string(38, ' ') << "*" << endl;
 	}
-	cout << "*" << r << R"(    /\    )" << l << "*" << endl;
+	cout << "*" << r << "    /\\    " << l << "*" << endl;
 	cout << "*" << r << "   |oo|   " << l << "*" << endl;
 	cout << "*" << r << "  (|..|)  " << l << "*" << endl;
 	cout << "*" << r << "   |--|   " << l << "*" << endl;
-	cout << "*" << r << R"(   \__/   )" << l << "*" << endl;
+	cout << "*" << r << "   \\__/   " << l << "*" << endl;
 	cout << "*" << r << "    ||    " << l << "*" << endl;
 	cout << "*" << r << "  -| *|-  " << l << "*" << endl;
-	cout << "*" << r << R"( / |  | \ )" << l << "*" << endl;
-	cout << "*" << r << R"(/   \/   \)" << l << "*" << endl;
-	cout << "*" << r << R"(    /\    )" << l << "*" << endl;
+	cout << "*" << r << " / |  | \\ " << l << "*" << endl;
+	cout << "*" << r << "/   \\/   \\" << l << "*" << endl;
+	cout << "*" << r << "    /\\    " << l << "*" << endl;
 }
 
 void down(int time, int l)
@@ -342,31 +337,32 @@ void down(int time, int l)
 
 			switch (i) {
 			case 0:
-				cout << "*" << R"(    /\    )" << "                            *" << endl;
+				cout << "*" << "    /\\    " << "                            *" << endl;
 				cout << "*" << "   |oo|   " << "                            *" << endl;
 				cout << "*" << "  (|..|)  " << "                            *" << endl;
 				cout << "*" << "   |--|   " << "                            *" << endl;
-				cout << "*" << R"(   \__/   )" << "                            *" << endl;
+				cout << "*" << "   \\__/   " << "                            *" << endl;
 				cout << "*" << "    ||    " << "                            *" << endl;
 				cout << "*" << "  -| *|-  " << "                            *" << endl;
-				cout << "*" << R"( / |  | \  )" << "                           *" << endl;
-				cout << "*" << R"(/   \/   \)" << "                            *" << endl;
-				cout << "*" << R"(    /\    )" << "                            *" << endl;
+				cout << "*" << " / |  | \\ " << "                            *" << endl;
+				cout << "*" << "/   \\/   \\" << "                            *" << endl;
+				cout << "*" << "    /\\    " << "                            *" << endl;
 				cout << "*" << "    ||    " << "                            *" << endl;
 				cout << "*" << "   _||_   " << "                            *" << endl;
 
 				break;
 			case 1:
-				cout << "*" << R"(    /\    )" << "                            *" << endl;
+				cout << "*" << "          " << "                            *" << endl;
+				cout << "*" << "    /\\    " << "                            *" << endl;
 				cout << "*" << "   |oo|   " << "                            *" << endl;
 				cout << "*" << "  (|..|)  " << "                            *" << endl;
 				cout << "*" << "   |--|   " << "                            *" << endl;
-				cout << "*" << R"(   \__/   )" << "                            *" << endl;
+				cout << "*" << "   \\__/   " << "                            *" << endl;
 				cout << "*" << "    ||    " << "                            *" << endl;
 				cout << "*" << "  -| *|-  " << "                            *" << endl;
-				cout << "*" << R"( / |  | \  )" << "                           *" << endl;
-				cout << "*" << R"(/   \/   \)" << "                            *" << endl;
-				cout << "*" << R"(    /\    )" << "                            *" << endl;
+				cout << "*" << " / |  | \\ " << "                            *" << endl;
+				cout << "*" << "/   \\/   \\" << "                            *" << endl;
+				cout << "*" << "    /\\    " << "                            *" << endl;
 				cout << "*" << "   _\\/_   " << "                            *" << endl;
 
 				break;
@@ -388,31 +384,32 @@ void down(int time, int l)
 
 			switch (i) {
 			case 1:
-				cout << "*" << R"(    /\    )" << "                            *" << endl;
+				cout << "*" << "    /\\    " << "                            *" << endl;
 				cout << "*" << "   |oo|   " << "                            *" << endl;
 				cout << "*" << "  (|..|)  " << "                            *" << endl;
 				cout << "*" << "   |--|   " << "                            *" << endl;
-				cout << "*" << R"(   \__/   )" << "                            *" << endl;
+				cout << "*" << "   \\__/   " << "                            *" << endl;
 				cout << "*" << "    ||    " << "                            *" << endl;
 				cout << "*" << "  -| *|-  " << "                            *" << endl;
-				cout << "*" << R"( / |  | \  )" << "                           *" << endl;
-				cout << "*" << R"(/   \/   \)" << "                            *" << endl;
-				cout << "*" << R"(    /\    )" << "                            *" << endl;
+				cout << "*" << " / |  | \\ " << "                            *" << endl;
+				cout << "*" << "/   \\/   \\" << "                            *" << endl;
+				cout << "*" << "    /\\    " << "                            *" << endl;
 				cout << "*" << "    ||    " << "                            *" << endl;
 				cout << "*" << "   _||_   " << "                            *" << endl;
 
 				break;
 			case 0:
-				cout << "*" << R"(    /\    )" << "                            *" << endl;
+				cout << "*" << "          " << "                            *" << endl;
+				cout << "*" << "    /\\    " << "                            *" << endl;
 				cout << "*" << "   |oo|   " << "                            *" << endl;
 				cout << "*" << "  (|..|)  " << "                            *" << endl;
 				cout << "*" << "   |--|   " << "                            *" << endl;
-				cout << "*" << R"(   \__/   )" << "                            *" << endl;
+				cout << "*" << "   \\__/   " << "                            *" << endl;
 				cout << "*" << "    ||    " << "                            *" << endl;
 				cout << "*" << "  -| *|-  " << "                            *" << endl;
-				cout << "*" << R"( / |  | \  )" << "                           *" << endl;
-				cout << "*" << R"(/   \/   \)" << "                            *" << endl;
-				cout << "*" << R"(    /\    )" << "                            *" << endl;
+				cout << "*" << " / |  | \\ " << "                            *" << endl;
+				cout << "*" << "/   \\/   \\" << "                            *" << endl;
+				cout << "*" << "    /\\    " << "                            *" << endl;
 				cout << "*" << "   _\\/_   " << "                            *" << endl;
 
 				break;
@@ -437,16 +434,16 @@ void fly(int p) {
 				cout << "*                                      *" << endl;
 			}
 
-			cout << "*" << R"(    /\    )" << "                            *" << endl;
+			cout << "*" << "    /\\    " << "                            *" << endl;
 			cout << "*" << "   |oo|   " << "                            *" << endl;
 			cout << "*" << "  (|..|)  " << "                            *" << endl;
 			cout << "*" << "   |--|   " << "                            *" << endl;
-			cout << "*" << R"(   \__/   )" << "                            *" << endl;
+			cout << "*" << "   \\__/   " << "                            *" << endl;
 			cout << "*" << "    ||    " << "                            *" << endl;
 			cout << "*" << "  -| *|-  " << "                            *" << endl;
-			cout << "*" << R"( / |  | \  )" << "                           *" << endl;
-			cout << "*" << R"(/   \/   \)" << "                            *" << endl;
-			cout << "*" << R"(    /\    )" << "                            *" << endl;
+			cout << "*" << " / |  | \\ " << "                            *" << endl;
+			cout << "*" << "/   \\/   \\" << "                            *" << endl;
+			cout << "*" << "    /\\    " << "                            *" << endl;
 			cout << "*" << "    ||    " << "                            *" << endl;
 			cout << "*" << "    ||    " << "                            *" << endl;
 
@@ -471,16 +468,16 @@ void fly(int p) {
 				cout << "*                                      *" << endl;
 			}
 
-			cout << "*" << R"(    /\    )" << "                            *" << endl;
+			cout << "*" << "    /\\    " << "                            *" << endl;
 			cout << "*" << "   |oo|   " << "                            *" << endl;
 			cout << "*" << "  (|..|)  " << "                            *" << endl;
 			cout << "*" << "   |--|   " << "                            *" << endl;
-			cout << "*" << R"(   \__/   )" << "                            *" << endl;
+			cout << "*" << "   \\__/   " << "                            *" << endl;
 			cout << "*" << "    ||    " << "                            *" << endl;
 			cout << "*" << "  -| *|-  " << "                            *" << endl;
-			cout << "*" << R"( / |  | \  )" << "                           *" << endl;
-			cout << "*" << R"(/   \/   \)" << "                            *" << endl;
-			cout << "*" << R"(    /\    )" << "                            *" << endl;
+			cout << "*" << " / |  | \\ " << "                            *" << endl;
+			cout << "*" << "/   \\/   \\" << "                            *" << endl;
+			cout << "*" << "    /\\    " << "                            *" << endl;
 			cout << "*" << "    ||    " << "                            *" << endl;
 			cout << "*" << "    ||    " << "                            *" << endl;
 
@@ -501,11 +498,11 @@ void fly(int p) {
 void monetka(int time) {
 	const int h = 16, w = 11;
 	char ram1[h][w]{
-		{"          "},
-		{"          "},
-		{"          "},
-		{"          "},
-		{"    /\\    "},
+		{ "          "},
+		{ "          "},
+		{ "          "},
+		{ "          "},
+		{ "    /\\    "},
 		{ "   |oo|   " },
 		{ "  (|..|)  " },
 		{ "   |--|   " },
