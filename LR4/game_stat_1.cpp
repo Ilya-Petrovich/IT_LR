@@ -9,7 +9,7 @@ int main()
 	
 	if (fuel < 0 or fuel > 50)
 	{
-		std::cout << "\nInvalid data";
+		std::cout << "\nInvalid data.\n";
 		return 0;
 	}
 
@@ -36,7 +36,7 @@ int main()
 
 	if (speed < 0)
 	{
-		std::cout << "\n" << "Invalid data";
+		std::cout << "\n" << "Invalid data.\n";
 		return 0;
 	}
 	else if (speed > maxspeed)
