@@ -13,7 +13,7 @@ void throw_ball();
 
 int main() {
     unsigned short choice = 0;
-    del_one_frame();
+    //del_one_frame();
     while (choice != 5) {
         switch (choice) {
         case 1: { dance(); break; }
