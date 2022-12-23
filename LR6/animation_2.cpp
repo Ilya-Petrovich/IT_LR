@@ -5,7 +5,7 @@ using namespace std;
 
 void menu(unsigned short& a);
 void clear();
-void head(); 
+void head();
 void leg();
 void dance();
 void run();
@@ -37,7 +37,7 @@ void menu(unsigned short& a) {
     cout << "Enter 5 for exit." << endl;
     cin >> a;
 }
-void clear() { 
+void clear() {
     system("cls");
 }
 void head() {
@@ -139,7 +139,7 @@ void dance() {
         case 13: {
             cout << "*   \\__/                               *\n";
             cout << "*    ||                                *\n";
-            cout << "*  -| *|                              *\n";
+            cout << "*  -| *|-                             *\n";
             cout << "* / |  | \\                             *\n";
             cout << "**   \\/   *                            *\n"; break; }
         }
@@ -256,7 +256,7 @@ void jump() {
             "   |--|   ",
             "   \\__/   ",
             "    ||    ",
-            "  -|  |-  ",
+            "  -| *|-  ",
             " / |  | \\ ",
             "/   \\/   \\",
             "    /\\    ",
@@ -528,7 +528,7 @@ void throw_ball() {
         case 25: {
             mass[13] = "*  -| *|-                              *\n";
             mass[14] = "* / |  | \\                             *\n";
-            mass[15] = "*    \\/   \\                            *\n";
+            mass[15] = "*/   \\/   \\                            *\n";
             break;
         }
         }
