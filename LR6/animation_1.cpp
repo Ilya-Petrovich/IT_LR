@@ -1,139 +1,159 @@
 #include <iostream>
-#include <string>
-#include <unistd.h>
 #include <vector>
+#include <string>
+#include <ctime>
+#include <unistd.h>
 using namespace std;
-int main() {
-	const int n = 12;
-	vector<string> mas = {
-		"    /\\    " ,
-		"   |oo|   " ,
-		"  (|..|)  " ,
-		"   |--|   " ,
-		"   \\__/   " ,
-		"    ||    " ,
-		"  -| *|-   " ,
-		" / |  | \\ " ,
-		"/   \\/   \\",
-		"    /\\    ",
-		"    ||    ",
-		"   _||_   " };
-	for (int i = 0; i < n; i++)
-	{
-		cout << mas[i] << endl;
-	};
-	for (int i = 0; i < 2; i++) {
-		//Sleep(300);
-		//system("cls");
-		mas[6] = "  -| *|-  ";
-		mas[7] = " / |  | \\ ";
-		mas[8] = "/   \\/   \\";
-		for (int i = 0; i < n; i++) {
-			cout << mas[i] << endl;
-		}
-		//system("cls");
-		mas[7] = "/  |  |  \\";
-		mas[8] = "    \\/    ";
-		for (int i = 0; i < n; i++) {
-			cout << mas[i] << endl;
-		}
-		//Sleep(300);
-		//system("cls");
-		mas[6] = "  -| *|---";
-		mas[7] = " / |  |   ";
-		mas[8] = "/   \\/    ";
-		for (int i = 0; i < n; i++) {
-			cout << mas[i] << endl;
-		}
-		//Sleep(300);
-		//system("cls");
-		mas[5] = "    ||   /";
-		mas[6] = " --| *|-- ";
-		mas[7] = "/  |  |   ";
-		mas[8] = "    \\/    ";
-		for (int i = 0; i < n; i++) {
-			cout << mas[i] << endl;
-		}
-		//Sleep(400);
-		//system("cls");
-		mas[4] = "   \\__/  /";
-		mas[5] = "    ||  / ";
-		mas[6] = "  -| *|-  ";
-		mas[7] = " / |  |   ";
-		mas[8] = "/   \\/    ";
-		for (int i = 0; i < n; i++) {
-			cout << mas[i] << endl;
-		}
-		//Sleep(300);
-		//system("cls");
-		mas[4] = "   \\__/  *";
-		mas[6] = " --| *|-  ";
-		mas[7] = "/  |  |   ";
-		mas[8] = "    \\/    ";
-		for (int i = 0; i < n; i++) {
-			cout << mas[i] << endl;
-		}
-		//Sleep(300);
-		//system("cls");
-		mas[4] = "   \\__/  /";
-		mas[6] = "---| *|-  ";
-		mas[7] = "   |  |   ";
-		for (int i = 0; i < n; i++) {
-			cout << mas[i] << endl;
-		}
-		//Sleep(300);
-		//system("cls");
-		mas[4] = "   \\__/  *";
-		mas[5] = "\\   ||  / ";
-		mas[6] = " --| *|-  ";
-		for (int i = 0; i < n; i++) {
-			cout << mas[i] << endl;
-		}
-		//Sleep(300);
-		//system("cls");
-		mas[4] = "\\  \\__/  /";
-		mas[5] = " \\  ||  / ";
-		mas[6] = "  -| *|-  ";
-		for (int i = 0; i < n; i++) {
-			cout << mas[i] << endl;
-		}
-		//Sleep(400);
-		//system("cls");
-		mas[4] = "*  \\__/  *";
-		for (int i = 0; i < n; i++) {
-			cout << mas[i] << endl;
-		}
-		//Sleep(300);
-		//system("cls");
-		mas[4] = "   \\__/   ";
-		mas[5] = "*   ||   *";
-		mas[6] = " --| *|-- ";
-		for (int i = 0; i < n; i++) {
-			cout << mas[i] << endl;
-		}
-		//Sleep(400);
-		//system("cls");
-		mas[5] = "    ||    ";
-		mas[6] = "*--| *|--*";
-		for (int i = 0; i < n; i++) {
-			cout << mas[i] << endl;
-		}
-		//Sleep(300);
-		//system("cls");
-		mas[6] = " --| *|-- ";
-		mas[7] = "*  |  |  *";
-		for (int i = 0; i < n; i++) {
-			cout << mas[i] << endl;
-		}
-		//Sleep(300);
-		//system("cls");
-		mas[6] = "  -| *|-  ";
-		mas[7] = " / |  | \\ ";
-		mas[8] = "*   \\/   *";
-		for (int i = 0; i < n; i++) {
-			cout << mas[i] << endl;
+
+void print (vector<string>a) {
+	for (auto c : a) {
+		cout << c << endl;
+	}
+}
+void anim1 (vector<string>b) {
+	b[6] = " --| *|-- ";
+	b[7] = "/  |  |  \\";
+	b[8][0] = ' ';
+	b[8][size(b[8]) - 1] = ' ';
+	print(b);
+}
+void anim2 (vector<string>b) {
+	b[6] = "  -| *|---";
+	b[7] = " / |  |";
+	b[8] = "/   \\/";
+	int d;
+	print(b);
+}
+void anim3 (vector<string>b) {
+	b[5] = "    ||   /";
+	b[6] = " --| *|--";
+	b[7] = "/  |  | ";
+	b[8] = "    \\/   ";
+	print(b);
+}
+void anim4 (vector<string>b) {
+	b[5][8] = '/';
+	b[4][9] = '/';
+	b[7][8] = ' ';
+	b[8][9] = ' ';
+	print(b);
+}
+void anim5 (vector<string>b) {
+	b[4][9] = '*';
+	b[5] = "    ||  / ";
+	b[6] = " --| *|- ";
+	b[7] = "/  |  | ";
+	b[8] = "    \\/   ";
+	print(b);
+}
+void anim6 (vector<string>b) {
+	b[4][9] = '/';
+	b[5] = "    ||  / ";
+	b[6] = "---| *|- ";
+	b[7] = "   |  | ";
+	b[8] = "    \\/   ";
+	print(b);
+}
+void anim7 (vector<string>b) {
+	b[4][9] = '*';
+	b[5] = "\\   ||  / ";
+	b[6] = " --| *|- ";
+	b[7] = "   |  | ";
+	b[8] = "    \\/   ";
+	print(b);
+} 
+void anim8 (vector<string>b) {
+	b[4] = "\\  \\__/  /";
+	b[5] = " \\  ||  /";
+	b[6] = "  -| *|-  ";
+	b[7] = "   |  |   ";
+	b[8] = "    \\/     ";
+	print(b);
+}
+void anim9 (vector<string>b) {
+	b[4] = "*  \\__/  *";
+	b[5] = " \\  ||  /";
+	b[6] = "  -| *|-  ";
+	b[7] = "   |  |   ";
+	b[8] = "    \\/     ";
+	print(b);
+}
+void anim10 (vector<string>b) {
+	b[4] = "   \\__/  ";
+	b[5] = "*   ||   *";
+	b[6] = " --| *|-- ";
+	b[7] = "   |  |   ";
+	b[8] = "    \\/     ";
+	print(b);
+}
+void anim11 (vector<string>b) {
+	b[4] = "   \\__/  ";
+	b[5] = "    ||    ";
+	b[6] = "*--| *|--*";
+	b[7] = "   |  |   ";
+	b[8] = "    \\/     ";
+	print (b);
+}
+void anim12 (vector<string>b) {
+	b[4] = "   \\__/  ";
+	b[5] = "    ||    ";
+	b[6] = " --| *|-- ";
+	b[7] = "*  |  |  *";
+	b[8] = "    \\/     ";
+	print (b);
+}
+void anim13 (vector<string>b) {
+	b[4] = "   \\__/  ";
+	b[5] = "    ||    ";
+	b[6] = "  -| *|-  ";
+	b[7] = " / |  |  \\";
+	b[8] = "*   \\/    *";
+	print (b);
+}
+int main () {
+	vector<string> a = { "    /\\    ",
+						"   |oo|   ",
+						"  (|..|)  ",
+						"   |--|   ",
+						"   \\__/   ",
+						"    ||     ",
+						"  -| *|-  ",
+						" / |  | \\ ",
+						"/   \\/   \\",
+						"    /\\    ",
+						"    ||    ",
+						"   _||_   " };
+	for (int j = 0; j < 2; ++j) {
+		for (int i = 0; i < 14; i++) {
+			if (i == 0)
+				print(a);
+			if (i == 1)
+				anim1(a);
+			if (i == 2)
+				anim2(a);
+			if (i == 3)
+				anim3(a);
+			if (i == 4)
+				anim4(a);
+			if (i == 5)
+				anim5(a);
+			if (i == 6)
+				anim6(a);
+			if (i == 7)
+				anim7(a);
+			if (i == 8)
+				anim8(a);
+			if (i == 9)
+				anim9(a);
+			if (i == 10)
+				anim10(a);
+			if (i == 11)
+				anim11(a);
+			if (i == 12)
+				anim12(a);
+			if (i == 13)
+				anim13(a);
 		}
 	}
 	return 0;
 }
-
