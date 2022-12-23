@@ -1,9 +1,9 @@
 #include <stdio.h>
 #include <iostream>
 void readText(char* buff, long fileSize);
-FILE* file;
 int main()
 {
+	FILE* file;
 	char filename[100];
 	std::cin >> filename;
 	file = fopen(filename, "rb");
@@ -12,13 +12,14 @@ int main()
 	fileSize = ftell(file);
 	rewind(file);
 	char* buff = new char[fileSize]();
+	fread(buff, sizeof(char), fileSize, file);
 	readText(buff, fileSize);
 	fclose(file);
+	free(buff);
 	return 0;
 }
 void readText(char* buff, long fileSize)
 {
-	fread(buff, sizeof(char), fileSize, file);
 	char firstByte, secondByte, thirdByte, fourthByte, text;
 	int sdv = fileSize - 20 * 20 * 3;
 	for (int i = sdv; i < fileSize; i += 4)
