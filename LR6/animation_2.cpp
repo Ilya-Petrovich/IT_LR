@@ -29,7 +29,7 @@ void legs() {
     std::cout << "*   _||_                               *" << std::endl;
 }
 void body() {
-    std::cout << "*" << "   \\--/                              *" << std::endl;
+    std::cout << "*" << "   \\--/                               *" << std::endl;
     std::cout << "*" << "   _><_                               *" << std::endl;
     std::cout << "*" << "  -\\. /-                              *" << std::endl;
     std::cout << "*" << " / |. | \\                             *" << std::endl;
@@ -43,7 +43,7 @@ void dance() {
         head();
         switch (k % 14) {
         case 0: {
-            std::cout << "*   \\--/                              *\n";
+            std::cout << "*   \\--/                               *\n";
             std::cout << "*   _><_                               *\n";
             std::cout << "*  -\\. /-                              *\n";
             std::cout << "* / |. | \\                             *\n";
