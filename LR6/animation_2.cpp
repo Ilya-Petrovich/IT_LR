@@ -1,1649 +1,506 @@
-#include <unistd.h>
-#include <cstdlib>
-#include <vector>
 #include <iostream>
 #include <string>
+#include "unistd.h"
+
+
 using namespace std;
 
-void print(vector<string> person);
-void menu();
-void dance(vector<string> person);
-void run(vector<string> person);
-void jump(vector<string> person);
-void ballThrow(vector<string> person);
+void rightLeft (string *firstEl, int col, int t);
+void dancing (string *firstEl, int col, int t);
+void jump (string *firstEl, int col, int t);
+void ball (string *firstEl, int col, int t);
+void show (string *firstEl, int col, int t);
 
-int main()
-{
-    int choice;
-    vector<string> person =
-    {
-    "****************************************",//0
-    "*                                      *",//1
-    "*                                      *",//2
-    "*                                      *",//3
-    "*                                      *",//4
-    "*                                      *",//5
-    "*                                      *",//6
-    "*    /\\                                *",//7
-    "*   |oo|                               *",//8
-    "*  (|..|)                              *",//9
-    "*   |--|                               *",//10
-    "*   \\__/                               *",//11
-    "*    ||                                *",//12
-    "*  -| *|-                              *",//13
-    "* / |  | \\                             *",//14
-    "*/   \\/   \\                            *",//15
-    "*    /\\                                *",//16
-    "*    ||                                *",//17
-    "*   _||_                               *",//18
-    "****************************************",//19
-    };
-    while (true)
-    {
-        cout << "Choose animation:" << endl;
-        cout << "Dance: \t\t\t1" << endl;
-        cout << "Run: \t\t\t2" << endl;
-        cout << "Sit down and jump: \t3" << endl;
-        cout << "Throw a ball: \t\t4" << endl << endl;
-        cout << "Enter 5 for exit." << endl;
-        cin >> choice;
-        switch (choice)
-        {
-        case 1: print(person); dance(person); break;
-        case 2: print(person); run(person); break;
-        case 3: print(person); jump(person); break;
-        case 4: print(person); ballThrow(person); break;
-        case 5: return 0; break;
-        }
-    }
-}
-void ballThrow(vector<string> person)
-{
-    int ballThrowDelay = 250 * 1000;
-    //usleep(ballThrowDelay);//system("clear");
-    person[7] = "*    /\\                                *";
-    person[8] = "*   |oo|                               *";
-    person[9] = "*  (|..|)                              *";
-    person[10] = "*   |--|                               *";
-    person[11] = "*   \\__/                               *";
-    person[12] = "*    ||                                *";
-    person[13] = "*  -| *|-                              *";
-    person[14] = "* / |  | \\o                            *";
-    person[15] = "*/   \\/   -                            *";
-    person[16] = "*    /\\                                *";
-    person[17] = "*    ||                                *";
-    person[18] = "*   _||_                               *";
-    print(person);//usleep(ballThrowDelay);//system("clear");
-    person[13] = "*  -| *|- o                            *";
-    person[14] = "* / |  | \\-                            *";
-    person[15] = "*/   \\/                                *";
-    print(person);//usleep(ballThrowDelay);//system("clear");
-    person[12] = "*    ||   o                            *";
-    person[13] = "*  -| *|---                            *";
-    person[14] = "* / |  |                               *";
-    print(person);//usleep(ballThrowDelay);//system("clear");
-    person[11] = "*   \\__/  o                            *";
-    person[12] = "*    ||                                *";
-    person[13] = "*  -| *|--/                            *";
-    print(person);//usleep(ballThrowDelay);//system("clear");
-    person[10] = "*   |--|  o                            *";
-    person[11] = "*   \\__/                               *";
-    person[13] = "*  -| *|---                            *";
-    print(person);//usleep(ballThrowDelay);//system("clear");
-    person[9] = "*  (|..|) o                            *";
-    person[10] = "*   |--|                               *";
-    person[13] = "*  -| *|--                             *";
-    person[14] = "* / |  |  \\                            *";
-    print(person);//usleep(ballThrowDelay);//system("clear");
-    person[8] = "*   |oo|  o                            *";
-    person[9] = "*  (|..|)                              *";
-    person[13] = "*  -| *|-                              *";
-    person[14] = "* / |  | \\                             *";
-    person[15] = "*/   \\/   \\                            *";
-    print(person);//usleep(ballThrowDelay);//system("clear");
-    person[7] = "*    /\\   o                            *";
-    person[8] = "*   |oo|                               *";
-    print(person);//usleep(ballThrowDelay);//system("clear");
-    person[6] = "*        o                             *";
-    person[7] = "*    /\\                                *";
-    print(person);//usleep(ballThrowDelay);//system("clear");
-    person[5] = "*       o                              *";
-    person[6] = "*                                      *";
-    print(person);//usleep(ballThrowDelay);//system("clear");
-    person[4] = "*      o                               *";
-    person[5] = "*                                      *";
-    print(person);//usleep(ballThrowDelay);//system("clear");
-    person[3] = "*     o                                *";
-    person[4] = "*                                      *";
-    print(person);//usleep(ballThrowDelay);//system("clear");
-    person[3] = "*    o                                 *";
-    print(person);//usleep(ballThrowDelay);//system("clear");
-    person[3] = "*                                      *";
-    person[4] = "*   o                                  *";
-    print(person);//usleep(ballThrowDelay);//system("clear");
-    person[4] = "*                                      *";
-    person[5] = "*  o                                   *";
-    print(person);//usleep(ballThrowDelay);//system("clear");
-    person[5] = "*                                      *";
-    person[6] = "* o                                    *";
-    print(person);//usleep(ballThrowDelay);//system("clear");
-    person[6] = "*                                      *";
-    person[7] = "*o   /\\                                *";
-    print(person);//usleep(ballThrowDelay);//system("clear");
-    person[7] = "*    /\\                                *";
-    person[8] = "*o  |oo|                               *";
-    print(person);//usleep(ballThrowDelay);//system("clear");
-    person[8] = "*   |oo|                               *";
-    person[9] = "*o (|..|)                              *";
-    person[13] = "* --| *|-                              *";
-    person[14] = "*/  |  | \\                             *";
-    person[15] = "*    \\/   \\                            *";
-    print(person);//usleep(ballThrowDelay);//system("clear");
-    person[9] = "*  (|..|)                              *";
-    person[10] = "*o  |--|                               *";
-    person[13] = "*---| *|-                              *";
-    person[14] = "*   |  | \\                             *";
-    print(person);//usleep(ballThrowDelay);//system("clear");
-    person[10] = "*   |--|                               *";
-    person[11] = "*o  \\__/                               *";
-    person[13] = "*\\--| *|-                              *";
-    print(person);//usleep(ballThrowDelay);//system("clear");
-    person[11] = "*   \\__/                               *";
-    person[12] = "*o   ||                                *";
-    person[13] = "*---| *|-                              *";
-    print(person);//usleep(ballThrowDelay);//system("clear");
-    person[12] = "*    ||                                *";
-    person[13] = "*o -| *|-                              *";
-    person[14] = "*-/ |  | \\                             *";
-    print(person);//usleep(ballThrowDelay);//system("clear");
-    person[13] = "*  -| *|-                              *";
-    person[14] = "*o/ |  | \\                             *";
-    person[15] = "*-   \\/   \\                            *";
-    print(person);//usleep(ballThrowDelay);//system("clear");
-    person[14] = "* / |  | \\                             *";
-    person[15] = "*/   \\/   \\                            *";
-    print(person);
+void show_run_right (string *arr, int col, string spacesRight, string spacesLeft, int t);
+
+int main() {
+	char uChoice;
+	string pers[20] = {
+		"****************************************",
+		"*                                      *",
+		"*                                      *",
+		"*                                      *",
+		"*                                      *",
+		"*                                      *",
+		"*                                      *",
+		"    /\\    ",
+		"   |oo|   ",
+		"  (|..|)  ",
+		"   |--|   ",
+		"   \\__/   ",
+		"    ||    ",
+		"  -| *|-  ",
+		" / |  | \\ ",
+		"/   \\/   \\",
+		"    /\\    ",
+		"    ||    ",
+		"   _||_   ",
+		"****************************************"
+	};
+	string *pers0 = pers;
+
+	while (1) {
+		int size_list = sizeof(pers)/sizeof(pers[0]);
+		cout << "Choose animation:" << endl << "Dance: \t\t\t1" << endl
+			<< "Run: \t\t\t2" << endl << "Sit down and jump: \t3" << endl
+			<< "Throw a ball: \t\t4" << endl << endl << "Enter 5 for exit." << endl;
+		cin >> uChoice;
+		if (uChoice == '1') {
+			//system("cls");
+			dancing(pers0, size_list, 1000);
+		} else if (uChoice == '2') {
+			//system("cls");
+			rightLeft(pers0, size_list, 1000);
+		} else if (uChoice == '3') {
+			//system("cls");
+			jump(pers0, size_list, 1000);
+		} else if (uChoice == '4') {
+			//system("cls");
+			ball(pers0, size_list, 5000);
+		} else {
+			return 0;
+		}
+	}
 }
 
-void jump(vector<string> person)
-{
-    int jumpDelay = 270 * 1000;
-    //usleep(jumpDelay);//system("clear");
-    person[7] = "*                                      *";
-    person[8] = "*    /\\                                *";
-    person[9] = "*   |oo|                               *";
-    person[10] = "*  (|..|)                              *";
-    person[11] = "*   |--|                               *";
-    person[12] = "*   \\__/                               *";
-    person[13] = "*    ||                                *";
-    person[14] = "*  -| *|-                              *";
-    person[15] = "* / |  | \\                             *";
-    person[16] = "*/   \\/   \\                            *";
-    person[17] = "*    /\\                                *";
-    person[18] = "*   _\\/_                               *";
-    print(person);//usleep(jumpDelay);//system("clear");
-    person[7] = "*    /\\                                *";
-    person[8] = "*   |oo|                               *";
-    person[9] = "*  (|..|)                              *";
-    person[10] = "*   |--|                               *";
-    person[11] = "*   \\__/                               *";
-    person[12] = "*    ||                                *";
-    person[13] = "*  -| *|-                              *";
-    person[14] = "* / |  | \\                             *";
-    person[15] = "*/   \\/   \\                            *";
-    person[16] = "*    /\\                                *";
-    person[17] = "*    ||                                *";
-    person[18] = "*    ||                                *";
-    print(person);//usleep(jumpDelay);//system("clear");
-    person[6] = "*    /\\                                *";
-    person[7] = "*   |oo|                               *";
-    person[8] = "*  (|..|)                              *";
-    person[9] = "*   |--|                               *";
-    person[10] = "*   \\__/                               *";
-    person[11] = "*    ||                                *";
-    person[12] = "*  -| *|-                              *";
-    person[13] = "* / |  | \\                             *";
-    person[14] = "*/   \\/   \\                            *";
-    person[15] = "*    /\\                                *";
-    person[16] = "*    ||                                *";
-    person[17] = "*    ||                                *";
-    person[18] = "*                                      *";
-    print(person);//usleep(jumpDelay);//system("clear");
-    person[5] = "*    /\\                                *";
-    person[6] = "*   |oo|                               *";
-    person[7] = "*  (|..|)                              *";
-    person[8] = "*   |--|                               *";
-    person[9] = "*   \\__/                               *";
-    person[10] = "*    ||                                *";
-    person[11] = "*  -| *|-                              *";
-    person[12] = "* / |  | \\                             *";
-    person[13] = "*/   \\/   \\                            *";
-    person[14] = "*    /\\                                *";
-    person[15] = "*    ||                                *";
-    person[16] = "*    ||                                *";
-    person[17] = "*                                      *";
-    print(person);//usleep(jumpDelay);//system("clear");
-    person[4] = "*    /\\                                *";
-    person[5] = "*   |oo|                               *";
-    person[6] = "*  (|..|)                              *";
-    person[7] = "*   |--|                               *";
-    person[8] = "*   \\__/                               *";
-    person[9] = "*    ||                                *";
-    person[10] = "*  -| *|-                              *";
-    person[11] = "* / |  | \\                             *";
-    person[12] = "*/   \\/   \\                            *";
-    person[13] = "*    /\\                                *";
-    person[14] = "*    ||                                *";
-    person[15] = "*    ||                                *";
-    person[16] = "*                                      *";
-    print(person);//usleep(jumpDelay);//system("clear");
-    person[3] = "*    /\\                                *";
-    person[4] = "*   |oo|                               *";
-    person[5] = "*  (|..|)                              *";
-    person[6] = "*   |--|                               *";
-    person[7] = "*   \\__/                               *";
-    person[8] = "*    ||                                *";
-    person[9] = "*  -| *|-                              *";
-    person[10] = "* / |  | \\                             *";
-    person[11] = "*/   \\/   \\                            *";
-    person[12] = "*    /\\                                *";
-    person[13] = "*    ||                                *";
-    person[14] = "*    ||                                *";
-    person[15] = "*                                      *";
-    print(person);//usleep(jumpDelay);//system("clear");
-    person[3] = "*                                      *";
-    person[4] = "*    /\\                                *";
-    person[5] = "*   |oo|                               *";
-    person[6] = "*  (|..|)                              *";
-    person[7] = "*   |--|                               *";
-    person[8] = "*   \\__/                               *";
-    person[9] = "*    ||                                *";
-    person[10] = "*  -| *|-                              *";
-    person[11] = "* / |  | \\                             *";
-    person[12] = "*/   \\/   \\                            *";
-    person[13] = "*    /\\                                *";
-    person[14] = "*    ||                                *";
-    person[15] = "*    ||                                *";
-    print(person);//usleep(jumpDelay);//system("clear");
-    person[4] = "*                                      *";
-    person[5] = "*    /\\                                *";
-    person[6] = "*   |oo|                               *";
-    person[7] = "*  (|..|)                              *";
-    person[8] = "*   |--|                               *";
-    person[9] = "*   \\__/                               *";
-    person[10] = "*    ||                                *";
-    person[11] = "*  -| *|-                              *";
-    person[12] = "* / |  | \\                             *";
-    person[13] = "*/   \\/   \\                            *";
-    person[14] = "*    /\\                                *";
-    person[15] = "*    ||                                *";
-    person[16] = "*    ||                                *";
-    print(person);//usleep(jumpDelay);//system("clear");
-    person[5] = "*                                      *";
-    person[6] = "*    /\\                                *";
-    person[7] = "*   |oo|                               *";
-    person[8] = "*  (|..|)                              *";
-    person[9] = "*   |--|                               *";
-    person[10] = "*   \\__/                               *";
-    person[11] = "*    ||                                *";
-    person[12] = "*  -| *|-                              *";
-    person[13] = "* / |  | \\                             *";
-    person[14] = "*/   \\/   \\                            *";
-    person[15] = "*    /\\                                *";
-    person[16] = "*    ||                                *";
-    person[17] = "*    ||                                *";
-    print(person);//usleep(jumpDelay);//system("clear");
-    person[6] = "*                                      *";
-    person[7] = "*    /\\                                *";
-    person[8] = "*   |oo|                               *";
-    person[9] = "*  (|..|)                              *";
-    person[10] = "*   |--|                               *";
-    person[11] = "*   \\__/                               *";
-    person[12] = "*    ||                                *";
-    person[13] = "*  -| *|-                              *";
-    person[14] = "* / |  | \\                             *";
-    person[15] = "*/   \\/   \\                            *";
-    person[16] = "*    /\\                                *";
-    person[17] = "*    ||                                *";
-    person[18] = "*    ||                                *";
-    print(person);//usleep(jumpDelay);//system("clear");
-    person[7] = "*                                      *";
-    person[8] = "*    /\\                                *";
-    person[9] = "*   |oo|                               *";
-    person[10] = "*  (|..|)                              *";
-    person[11] = "*   |--|                               *";
-    person[12] = "*   \\__/                               *";
-    person[13] = "*    ||                                *";
-    person[14] = "*  -| *|-                              *";
-    person[15] = "* / |  | \\                             *";
-    person[16] = "*/   \\/   \\                            *";
-    person[17] = "*    /\\                                *";
-    person[18] = "*   _\\/_                               *";
-    print(person);//usleep(jumpDelay);//system("clear");
-    person[7] = "*    /\\                                *";
-    person[8] = "*   |oo|                               *";
-    person[9] = "*  (|..|)                              *";
-    person[10] = "*   |--|                               *";
-    person[11] = "*   \\__/                               *";
-    person[12] = "*    ||                                *";
-    person[13] = "*  -| *|-                              *";
-    person[14] = "* / |  | \\                             *";
-    person[15] = "*/   \\/   \\                            *";
-    person[16] = "*    /\\                                *";
-    person[17] = "*    ||                                *";
-    person[18] = "*   _||_                               *";
-    print(person);//usleep(jumpDelay);
+void show(string *firstEl, int col, int t) {
+	for (int i = 0; i < col; i ++, firstEl ++) cout << *firstEl << endl;
+	usleep(t);
+	//Sleep(t);
+	//system("cls");
+	return;
 }
 
-void run(vector<string> person)
-{
-    int runDelay = 165 * 1000;
-    //usleep(runDelay);//system("clear");
-    person[17] = "*    | \\                               *";
-    person[18] = "*   _|  \\_                             *";
-
-    print(person);//usleep(runDelay);//system("clear");
-    person[7] = "*     /\\                               *";
-    person[8] = "*    |oo|                              *";
-    person[9] = "*   (|..|)                             *";
-    person[10] = "*    |--|                              *";
-    person[11] = "*    \\__/                              *";
-    person[12] = "*     ||                               *";
-    person[13] = "*   -| *|-                             *";
-    person[14] = "*  / |  | \\                            *";
-    person[15] = "* /   \\/   \\                           *";
-    person[16] = "*     /\\                               *";
-    person[17] = "*    / |                               *";
-    person[18] = "*  _/  |_                              *";
-
-    print(person);//usleep(runDelay);//system("clear");
-    person[17] = "*     ||                               *";
-    person[18] = "*    _||_                              *";
-
-    print(person);//usleep(runDelay);//system("clear");
-    person[17] = "*     | \\                              *";
-    person[18] = "*    _|  \\_                            *";
-
-    print(person);//usleep(runDelay);//system("clear");
-    person[7] = "*      /\\                              *";
-    person[8] = "*     |oo|                             *";
-    person[9] = "*    (|..|)                            *";
-    person[10] = "*     |--|                             *";
-    person[11] = "*     \\__/                             *";
-    person[12] = "*      ||                              *";
-    person[13] = "*    -| *|-                            *";
-    person[14] = "*   / |  | \\                           *";
-    person[15] = "*  /   \\/   \\                          *";
-    person[16] = "*      /\\                              *";
-    person[17] = "*     / |                              *";
-    person[18] = "*   _/  |_                             *";
-
-    print(person);//usleep(runDelay);//system("clear");
-    person[17] = "*      ||                              *";
-    person[18] = "*     _||_                             *";
-
-    print(person);//usleep(runDelay);//system("clear");
-    person[17] = "*      | \\                             *";
-    person[18] = "*     _|  \\_                           *";
-
-    print(person);//usleep(runDelay);//system("clear");
-    person[7] = "*       /\\                             *";
-    person[8] = "*      |oo|                            *";
-    person[9] = "*     (|..|)                           *";
-    person[10] = "*      |--|                            *";
-    person[11] = "*      \\__/                            *";
-    person[12] = "*       ||                             *";
-    person[13] = "*     -| *|-                           *";
-    person[14] = "*    / |  | \\                          *";
-    person[15] = "*   /   \\/   \\                         *";
-    person[16] = "*       /\\                             *";
-    person[17] = "*      / |                             *";
-    person[18] = "*    _/  |_                            *";
-
-    print(person);//usleep(runDelay);//system("clear");
-    person[17] = "*       ||                             *";
-    person[18] = "*      _||_                            *";
-
-    print(person);//usleep(runDelay);//system("clear");
-    person[17] = "*       | \\                            *";
-    person[18] = "*      _|  \\_                          *";
-
-    print(person);//usleep(runDelay);//system("clear");
-    person[7] = "*        /\\                            *";
-    person[8] = "*       |oo|                           *";
-    person[9] = "*      (|..|)                          *";
-    person[10] = "*       |--|                           *";
-    person[11] = "*       \\__/                           *";
-    person[12] = "*        ||                            *";
-    person[13] = "*      -| *|-                          *";
-    person[14] = "*     / |  | \\                         *";
-    person[15] = "*    /   \\/   \\                        *";
-    person[16] = "*        /\\                            *";
-    person[17] = "*       / |                            *";
-    person[18] = "*     _/  |_                           *";
-
-    print(person);//usleep(runDelay);//system("clear");
-    person[17] = "*        ||                            *";
-    person[18] = "*       _||_                           *";
-
-    print(person);//usleep(runDelay);//system("clear");
-    person[17] = "*        | \\                           *";
-    person[18] = "*       _|  \\_                         *";
-
-    print(person);//usleep(runDelay);//system("clear");
-    person[7] = "*         /\\                           *";
-    person[8] = "*        |oo|                          *";
-    person[9] = "*       (|..|)                         *";
-    person[10] = "*        |--|                          *";
-    person[11] = "*        \\__/                          *";
-    person[12] = "*         ||                           *";
-    person[13] = "*       -| *|-                         *";
-    person[14] = "*      / |  | \\                        *";
-    person[15] = "*     /   \\/   \\                       *";
-    person[16] = "*         /\\                           *";
-    person[17] = "*        / |                           *";
-    person[18] = "*      _/  |_                          *";
-
-    print(person);//usleep(runDelay);//system("clear");
-    person[17] = "*         ||                           *";
-    person[18] = "*        _||_                          *";
-
-    print(person);//usleep(runDelay);//system("clear");
-    person[17] = "*         | \\                          *";
-    person[18] = "*        _|  \\_                        *";
-
-    print(person);//usleep(runDelay);//system("clear");
-    person[7] = "*          /\\                          *";
-    person[8] = "*         |oo|                         *";
-    person[9] = "*        (|..|)                        *";
-    person[10] = "*         |--|                         *";
-    person[11] = "*         \\__/                         *";
-    person[12] = "*          ||                          *";
-    person[13] = "*        -| *|-                        *";
-    person[14] = "*       / |  | \\                       *";
-    person[15] = "*      /   \\/   \\                      *";
-    person[16] = "*          /\\                          *";
-    person[17] = "*         / |                          *";
-    person[18] = "*       _/  |_                         *";
-
-    print(person);//usleep(runDelay);//system("clear");
-    person[17] = "*          ||                          *";
-    person[18] = "*         _||_                         *";
-
-    print(person);//usleep(runDelay);//system("clear");
-    person[17] = "*          | \\                         *";
-    person[18] = "*         _|  \\_                       *";
-
-    print(person);//usleep(runDelay);//system("clear");
-    person[7] = "*           /\\                         *";
-    person[8] = "*          |oo|                        *";
-    person[9] = "*         (|..|)                       *";
-    person[10] = "*          |--|                        *";
-    person[11] = "*          \\__/                        *";
-    person[12] = "*           ||                         *";
-    person[13] = "*         -| *|-                       *";
-    person[14] = "*        / |  | \\                      *";
-    person[15] = "*       /   \\/   \\                     *";
-    person[16] = "*           /\\                         *";
-    person[17] = "*          / |                         *";
-    person[18] = "*        _/  |_                        *";
-
-    print(person);//usleep(runDelay);//system("clear");
-    person[17] = "*           ||                         *";
-    person[18] = "*          _||_                        *";
-
-    print(person);//usleep(runDelay);//system("clear");
-    person[17] = "*           | \\                        *";
-    person[18] = "*          _|  \\_                      *";
-
-    print(person);//usleep(runDelay);//system("clear");
-    person[7] = "*            /\\                        *";
-    person[8] = "*           |oo|                       *";
-    person[9] = "*          (|..|)                      *";
-    person[10] = "*           |--|                       *";
-    person[11] = "*           \\__/                       *";
-    person[12] = "*            ||                        *";
-    person[13] = "*          -| *|-                      *";
-    person[14] = "*         / |  | \\                     *";
-    person[15] = "*        /   \\/   \\                    *";
-    person[16] = "*            /\\                        *";
-    person[17] = "*           / |                        *";
-    person[18] = "*         _/  |_                       *";
-
-    print(person);//usleep(runDelay);//system("clear");
-    person[17] = "*            ||                        *";
-    person[18] = "*           _||_                       *";
-
-    print(person);//usleep(runDelay);//system("clear");
-    person[17] = "*            | \\                       *";
-    person[18] = "*           _|  \\_                     *";
-
-    print(person);//usleep(runDelay);//system("clear");
-    person[7] = "*             /\\                       *";
-    person[8] = "*            |oo|                      *";
-    person[9] = "*           (|..|)                     *";
-    person[10] = "*            |--|                      *";
-    person[11] = "*            \\__/                      *";
-    person[12] = "*             ||                       *";
-    person[13] = "*           -| *|-                     *";
-    person[14] = "*          / |  | \\                    *";
-    person[15] = "*         /   \\/   \\                   *";
-    person[16] = "*             /\\                       *";
-    person[17] = "*            / |                       *";
-    person[18] = "*          _/  |_                      *";
-
-    print(person);//usleep(runDelay);//system("clear");
-    person[17] = "*             ||                       *";
-    person[18] = "*            _||_                      *";
-
-    print(person);//usleep(runDelay);//system("clear");
-    person[17] = "*             | \\                      *";
-    person[18] = "*            _|  \\_                    *";
-
-    print(person);//usleep(runDelay);//system("clear");
-    person[7] = "*              /\\                      *";
-    person[8] = "*             |oo|                     *";
-    person[9] = "*            (|..|)                    *";
-    person[10] = "*             |--|                     *";
-    person[11] = "*             \\__/                     *";
-    person[12] = "*              ||                      *";
-    person[13] = "*            -| *|-                    *";
-    person[14] = "*           / |  | \\                   *";
-    person[15] = "*          /   \\/   \\                  *";
-    person[16] = "*              /\\                      *";
-    person[17] = "*             / |                      *";
-    person[18] = "*           _/  |_                     *";
-
-    print(person);//usleep(runDelay);//system("clear");
-    person[17] = "*              ||                      *";
-    person[18] = "*             _||_                     *";
-
-    print(person);//usleep(runDelay);//system("clear");
-    person[17] = "*              | \\                     *";
-    person[18] = "*             _|  \\_                   *";
-
-    print(person);//usleep(runDelay);//system("clear");
-    person[7] = "*               /\\                     *";
-    person[8] = "*              |oo|                    *";
-    person[9] = "*             (|..|)                   *";
-    person[10] = "*              |--|                    *";
-    person[11] = "*              \\__/                    *";
-    person[12] = "*               ||                     *";
-    person[13] = "*             -| *|-                   *";
-    person[14] = "*            / |  | \\                  *";
-    person[15] = "*           /   \\/   \\                 *";
-    person[16] = "*               /\\                     *";
-    person[17] = "*              / |                     *";
-    person[18] = "*            _/  |_                    *";
-
-    print(person);//usleep(runDelay);//system("clear");
-    person[17] = "*               ||                     *";
-    person[18] = "*              _||_                    *";
-
-    print(person);//usleep(runDelay);//system("clear");
-    person[17] = "*               | \\                    *";
-    person[18] = "*              _|  \\_                  *";
-
-    print(person);//usleep(runDelay);//system("clear");
-    person[7] = "*                /\\                    *";
-    person[8] = "*               |oo|                   *";
-    person[9] = "*              (|..|)                  *";
-    person[10] = "*               |--|                   *";
-    person[11] = "*               \\__/                   *";
-    person[12] = "*                ||                    *";
-    person[13] = "*              -| *|-                  *";
-    person[14] = "*             / |  | \\                 *";
-    person[15] = "*            /   \\/   \\                *";
-    person[16] = "*                /\\                    *";
-    person[17] = "*               / |                    *";
-    person[18] = "*             _/  |_                   *";
-
-    print(person);//usleep(runDelay);//system("clear");
-    person[17] = "*                ||                    *";
-    person[18] = "*               _||_                   *";
-
-    print(person);//usleep(runDelay);//system("clear");
-    person[17] = "*                | \\                   *";
-    person[18] = "*               _|  \\_                 *";
-
-    print(person);//usleep(runDelay);//system("clear");
-    person[7] = "*                 /\\                   *";
-    person[8] = "*                |oo|                  *";
-    person[9] = "*               (|..|)                 *";
-    person[10] = "*                |--|                  *";
-    person[11] = "*                \\__/                  *";
-    person[12] = "*                 ||                   *";
-    person[13] = "*               -| *|-                 *";
-    person[14] = "*              / |  | \\                *";
-    person[15] = "*             /   \\/   \\               *";
-    person[16] = "*                 /\\                   *";
-    person[17] = "*                / |                   *";
-    person[18] = "*              _/  |_                  *";
-
-    print(person);//usleep(runDelay);//system("clear");
-    person[17] = "*                 ||                   *";
-    person[18] = "*                _||_                  *";
-
-    print(person);//usleep(runDelay);//system("clear");
-    person[17] = "*                 | \\                  *";
-    person[18] = "*                _|  \\_                *";
-
-    print(person);//usleep(runDelay);//system("clear");
-    person[7] = "*                  /\\                  *";
-    person[8] = "*                 |oo|                 *";
-    person[9] = "*                (|..|)                *";
-    person[10] = "*                 |--|                 *";
-    person[11] = "*                 \\__/                 *";
-    person[12] = "*                  ||                  *";
-    person[13] = "*                -| *|-                *";
-    person[14] = "*               / |  | \\               *";
-    person[15] = "*              /   \\/   \\              *";
-    person[16] = "*                  /\\                  *";
-    person[17] = "*                 / |                  *";
-    person[18] = "*               _/  |_                 *";
-
-    print(person);//usleep(runDelay);//system("clear");
-    person[17] = "*                  ||                  *";
-    person[18] = "*                 _||_                 *";
-
-    print(person);//usleep(runDelay);//system("clear");
-    person[17] = "*                  | \\                 *";
-    person[18] = "*                 _|  \\_               *";
-
-    print(person);//usleep(runDelay);//system("clear");
-    person[7] = "*                   /\\                 *";
-    person[8] = "*                  |oo|                *";
-    person[9] = "*                 (|..|)               *";
-    person[10] = "*                  |--|                *";
-    person[11] = "*                  \\__/                *";
-    person[12] = "*                   ||                 *";
-    person[13] = "*                 -| *|-               *";
-    person[14] = "*                / |  | \\              *";
-    person[15] = "*               /   \\/   \\             *";
-    person[16] = "*                   /\\                 *";
-    person[17] = "*                  / |                 *";
-    person[18] = "*                _/  |_                *";
-
-    print(person);//usleep(runDelay);//system("clear");
-    person[17] = "*                   ||                 *";
-    person[18] = "*                  _||_                *";
-
-    print(person);//usleep(runDelay);//system("clear");
-    person[17] = "*                   | \\                *";
-    person[18] = "*                  _|  \\_              *";
-
-    print(person);//usleep(runDelay);//system("clear");
-    person[7] = "*                    /\\                *";
-    person[8] = "*                   |oo|               *";
-    person[9] = "*                  (|..|)              *";
-    person[10] = "*                   |--|               *";
-    person[11] = "*                   \\__/               *";
-    person[12] = "*                    ||                *";
-    person[13] = "*                  -| *|-              *";
-    person[14] = "*                 / |  | \\             *";
-    person[15] = "*                /   \\/   \\            *";
-    person[16] = "*                    /\\                *";
-    person[17] = "*                   / |                *";
-    person[18] = "*                 _/  |_               *";
-
-    print(person);//usleep(runDelay);//system("clear");
-    person[17] = "*                    ||                *";
-    person[18] = "*                   _||_               *";
-
-    print(person);//usleep(runDelay);//system("clear");
-    person[17] = "*                    | \\               *";
-    person[18] = "*                   _|  \\_             *";
-
-    print(person);//usleep(runDelay);//system("clear");
-    person[7] = "*                     /\\               *";
-    person[8] = "*                    |oo|              *";
-    person[9] = "*                   (|..|)             *";
-    person[10] = "*                    |--|              *";
-    person[11] = "*                    \\__/              *";
-    person[12] = "*                     ||               *";
-    person[13] = "*                   -| *|-             *";
-    person[14] = "*                  / |  | \\            *";
-    person[15] = "*                 /   \\/   \\           *";
-    person[16] = "*                     /\\               *";
-    person[17] = "*                    / |               *";
-    person[18] = "*                  _/  |_              *";
-
-    print(person);//usleep(runDelay);//system("clear");
-    person[17] = "*                     ||               *";
-    person[18] = "*                    _||_              *";
-
-    print(person);//usleep(runDelay);//system("clear");
-    person[17] = "*                     | \\              *";
-    person[18] = "*                    _|  \\_            *";
-
-    print(person);//usleep(runDelay);//system("clear");
-    person[7] = "*                      /\\              *";
-    person[8] = "*                     |oo|             *";
-    person[9] = "*                    (|..|)            *";
-    person[10] = "*                     |--|             *";
-    person[11] = "*                     \\__/             *";
-    person[12] = "*                      ||              *";
-    person[13] = "*                    -| *|-            *";
-    person[14] = "*                   / |  | \\           *";
-    person[15] = "*                  /   \\/   \\          *";
-    person[16] = "*                      /\\              *";
-    person[17] = "*                     / |              *";
-    person[18] = "*                   _/  |_             *";
-
-    print(person);//usleep(runDelay);//system("clear");
-    person[17] = "*                      ||              *";
-    person[18] = "*                     _||_             *";
-
-    print(person);//usleep(runDelay);//system("clear");
-    person[17] = "*                      | \\             *";
-    person[18] = "*                     _|  \\_           *";
-
-    print(person);//usleep(runDelay);//system("clear");
-    person[7] = "*                       /\\             *";
-    person[8] = "*                      |oo|            *";
-    person[9] = "*                     (|..|)           *";
-    person[10] = "*                      |--|            *";
-    person[11] = "*                      \\__/            *";
-    person[12] = "*                       ||             *";
-    person[13] = "*                     -| *|-           *";
-    person[14] = "*                    / |  | \\          *";
-    person[15] = "*                   /   \\/   \\         *";
-    person[16] = "*                       /\\             *";
-    person[17] = "*                      / |             *";
-    person[18] = "*                    _/  |_            *";
-
-    print(person);//usleep(runDelay);//system("clear");
-    person[17] = "*                       ||             *";
-    person[18] = "*                      _||_            *";
-
-    print(person);//usleep(runDelay);//system("clear");
-    person[17] = "*                       | \\            *";
-    person[18] = "*                      _|  \\_          *";
-
-    print(person);//usleep(runDelay);//system("clear");
-    person[7] = "*                        /\\            *";
-    person[8] = "*                       |oo|           *";
-    person[9] = "*                      (|..|)          *";
-    person[10] = "*                       |--|           *";
-    person[11] = "*                       \\__/           *";
-    person[12] = "*                        ||            *";
-    person[13] = "*                      -| *|-          *";
-    person[14] = "*                     / |  | \\         *";
-    person[15] = "*                    /   \\/   \\        *";
-    person[16] = "*                        /\\            *";
-    person[17] = "*                       / |            *";
-    person[18] = "*                     _/  |_           *";
-
-    print(person);//usleep(runDelay);//system("clear");
-    person[17] = "*                        ||            *";
-    person[18] = "*                       _||_           *";
-
-    print(person);//usleep(runDelay);//system("clear");
-    person[17] = "*                        | \\           *";
-    person[18] = "*                       _|  \\_         *";
-
-    print(person);//usleep(runDelay);//system("clear");
-    person[7] = "*                         /\\           *";
-    person[8] = "*                        |oo|          *";
-    person[9] = "*                       (|..|)         *";
-    person[10] = "*                        |--|          *";
-    person[11] = "*                        \\__/          *";
-    person[12] = "*                         ||           *";
-    person[13] = "*                       -| *|-         *";
-    person[14] = "*                      / |  | \\        *";
-    person[15] = "*                     /   \\/   \\       *";
-    person[16] = "*                         /\\           *";
-    person[17] = "*                        / |           *";
-    person[18] = "*                      _/  |_          *";
-
-    print(person);//usleep(runDelay);//system("clear");
-    person[17] = "*                         ||           *";
-    person[18] = "*                        _||_          *";
-
-    print(person);//usleep(runDelay);//system("clear");
-    person[17] = "*                         | \\          *";
-    person[18] = "*                        _|  \\_        *";
-
-    print(person);//usleep(runDelay);//system("clear");
-    person[7] = "*                          /\\          *";
-    person[8] = "*                         |oo|         *";
-    person[9] = "*                        (|..|)        *";
-    person[10] = "*                         |--|         *";
-    person[11] = "*                         \\__/         *";
-    person[12] = "*                          ||          *";
-    person[13] = "*                        -| *|-        *";
-    person[14] = "*                       / |  | \\       *";
-    person[15] = "*                      /   \\/   \\      *";
-    person[16] = "*                          /\\          *";
-    person[17] = "*                         / |          *";
-    person[18] = "*                       _/  |_         *";
-
-    print(person);//usleep(runDelay);//system("clear");
-    person[17] = "*                          ||          *";
-    person[18] = "*                         _||_         *";
-
-    print(person);//usleep(runDelay);//system("clear");
-    person[17] = "*                          | \\         *";
-    person[18] = "*                         _|  \\_       *";
-
-    print(person);//usleep(runDelay);//system("clear");
-    person[7] = "*                           /\\         *";
-    person[8] = "*                          |oo|        *";
-    person[9] = "*                         (|..|)       *";
-    person[10] = "*                          |--|        *";
-    person[11] = "*                          \\__/        *";
-    person[12] = "*                           ||         *";
-    person[13] = "*                         -| *|-       *";
-    person[14] = "*                        / |  | \\      *";
-    person[15] = "*                       /   \\/   \\     *";
-    person[16] = "*                           /\\         *";
-    person[17] = "*                          / |         *";
-    person[18] = "*                        _/  |_        *";
-
-    print(person);//usleep(runDelay);//system("clear");
-    person[17] = "*                           ||         *";
-    person[18] = "*                          _||_        *";
-
-    print(person);//usleep(runDelay);//system("clear");
-    person[17] = "*                           | \\        *";
-    person[18] = "*                          _|  \\_      *";
-
-    print(person);//usleep(runDelay);//system("clear");
-    person[7] = "*                            /\\        *";
-    person[8] = "*                           |oo|       *";
-    person[9] = "*                          (|..|)      *";
-    person[10] = "*                           |--|       *";
-    person[11] = "*                           \\__/       *";
-    person[12] = "*                            ||        *";
-    person[13] = "*                          -| *|-      *";
-    person[14] = "*                         / |  | \\     *";
-    person[15] = "*                        /   \\/   \\    *";
-    person[16] = "*                            /\\        *";
-    person[17] = "*                           / |        *";
-    person[18] = "*                         _/  |_       *";
-
-    print(person);//usleep(runDelay);//system("clear");
-    person[17] = "*                            ||        *";
-    person[18] = "*                           _||_       *";
-
-    print(person);//usleep(runDelay);//system("clear");
-    person[17] = "*                            | \\       *";
-    person[18] = "*                           _|  \\_     *";
-
-    print(person);//usleep(runDelay);//system("clear");
-    person[7] = "*                             /\\       *";
-    person[8] = "*                            |oo|      *";
-    person[9] = "*                           (|..|)     *";
-    person[10] = "*                            |--|      *";
-    person[11] = "*                            \\__/      *";
-    person[12] = "*                             ||       *";
-    person[13] = "*                           -| *|-     *";
-    person[14] = "*                          / |  | \\    *";
-    person[15] = "*                         /   \\/   \\   *";
-    person[16] = "*                             /\\       *";
-    person[17] = "*                            / |       *";
-    person[18] = "*                          _/  |_      *";
-
-    print(person);//usleep(runDelay);//system("clear");
-    person[17] = "*                             ||       *";
-    person[18] = "*                            _||_      *";
-
-    print(person);//usleep(runDelay);//system("clear");
-    person[17] = "*                             | \\      *";
-    person[18] = "*                            _|  \\_    *";
-
-    print(person);//usleep(runDelay);//system("clear");
-    person[7] = "*                              /\\      *";
-    person[8] = "*                             |oo|     *";
-    person[9] = "*                            (|..|)    *";
-    person[10] = "*                             |--|     *";
-    person[11] = "*                             \\__/     *";
-    person[12] = "*                              ||      *";
-    person[13] = "*                            -| *|-    *";
-    person[14] = "*                           / |  | \\   *";
-    person[15] = "*                          /   \\/   \\  *";
-    person[16] = "*                              /\\      *";
-    person[17] = "*                             / |      *";
-    person[18] = "*                           _/  |_     *";
-
-    print(person);//usleep(runDelay);//system("clear");
-    person[17] = "*                              ||      *";
-    person[18] = "*                             _||_     *";
-
-    print(person);//usleep(runDelay);//system("clear");
-    person[17] = "*                              | \\     *";
-    person[18] = "*                             _|  \\_   *";
-
-    print(person);//usleep(runDelay);//system("clear");
-    person[7] = "*                               /\\     *";
-    person[8] = "*                              |oo|    *";
-    person[9] = "*                             (|..|)   *";
-    person[10] = "*                              |--|    *";
-    person[11] = "*                              \\__/    *";
-    person[12] = "*                               ||     *";
-    person[13] = "*                             -| *|-   *";
-    person[14] = "*                            / |  | \\  *";
-    person[15] = "*                           /   \\/   \\ *";
-    person[16] = "*                               /\\     *";
-    person[17] = "*                              / |     *";
-    person[18] = "*                            _/  |_    *";
-
-    print(person);//usleep(runDelay);//system("clear");
-    person[17] = "*                               ||     *";
-    person[18] = "*                              _||_    *";
-
-    print(person);//usleep(runDelay);//system("clear");
-    person[17] = "*                               | \\    *";
-    person[18] = "*                              _|  \\_  *";
-
-    print(person);//usleep(runDelay);//system("clear");
-    person[7] = "*                                /\\    *";
-    person[8] = "*                               |oo|   *";
-    person[9] = "*                              (|..|)  *";
-    person[10] = "*                               |--|   *";
-    person[11] = "*                               \\__/   *";
-    person[12] = "*                                ||    *";
-    person[13] = "*                              -| *|-  *";
-    person[14] = "*                             / |  | \\ *";
-    person[15] = "*                            /   \\/   \\*";
-    person[16] = "*                                /\\    *";
-    person[17] = "*                               / |    *";
-    person[18] = "*                             _/  |_   *";
-
-    print(person);//usleep(runDelay);//system("clear");
-    person[17] = "*                                ||    *";
-    person[18] = "*                               _||_   *";
-
-    print(person);//usleep(runDelay);//system("clear");
-    person[17] = "*                                | \\   *";
-    person[18] = "*                               _|  \\_ *";
-
-    print(person);//usleep(runDelay);//system("clear");
-    person[7] = "*                               /\\     *";
-    person[8] = "*                              |oo|    *";
-    person[9] = "*                             (|..|)   *";
-    person[10] = "*                              |--|    *";
-    person[11] = "*                              \\__/    *";
-    person[12] = "*                               ||     *";
-    person[13] = "*                             -| *|-   *";
-    person[14] = "*                            / |  | \\  *";
-    person[15] = "*                           /   \\/   \\ *";
-    person[16] = "*                               /\\     *";
-    person[17] = "*                              / |     *";
-    person[18] = "*                            _/  |_    *";
-
-    print(person);//usleep(runDelay);//system("clear");
-    person[17] = "*                               ||     *";
-    person[18] = "*                              _||_    *";
-
-    print(person);//usleep(runDelay);//system("clear");
-    person[17] = "*                               | \\    *";
-    person[18] = "*                              _|  \\_  *";
-
-    print(person);//usleep(runDelay);//system("clear");
-    person[7] = "*                              /\\      *";
-    person[8] = "*                             |oo|     *";
-    person[9] = "*                            (|..|)    *";
-    person[10] = "*                             |--|     *";
-    person[11] = "*                             \\__/     *";
-    person[12] = "*                              ||      *";
-    person[13] = "*                            -| *|-    *";
-    person[14] = "*                           / |  | \\   *";
-    person[15] = "*                          /   \\/   \\  *";
-    person[16] = "*                              /\\      *";
-    person[17] = "*                             / |      *";
-    person[18] = "*                           _/  |_     *";
-
-    print(person);//usleep(runDelay);//system("clear");
-    person[17] = "*                              ||      *";
-    person[18] = "*                             _||_     *";
-
-    print(person);//usleep(runDelay);//system("clear");
-    person[17] = "*                              | \\     *";
-    person[18] = "*                             _|  \\_   *";
-
-    print(person);//usleep(runDelay);//system("clear");
-    person[7] = "*                             /\\       *";
-    person[8] = "*                            |oo|      *";
-    person[9] = "*                           (|..|)     *";
-    person[10] = "*                            |--|      *";
-    person[11] = "*                            \\__/      *";
-    person[12] = "*                             ||       *";
-    person[13] = "*                           -| *|-     *";
-    person[14] = "*                          / |  | \\    *";
-    person[15] = "*                         /   \\/   \\   *";
-    person[16] = "*                             /\\       *";
-    person[17] = "*                            / |       *";
-    person[18] = "*                          _/  |_      *";
-
-    print(person);//usleep(runDelay);//system("clear");
-    person[17] = "*                             ||       *";
-    person[18] = "*                            _||_      *";
-
-    print(person);//usleep(runDelay);//system("clear");
-    person[17] = "*                             | \\      *";
-    person[18] = "*                            _|  \\_    *";
-
-    print(person);//usleep(runDelay);//system("clear");
-    person[7] = "*                            /\\        *";
-    person[8] = "*                           |oo|       *";
-    person[9] = "*                          (|..|)      *";
-    person[10] = "*                           |--|       *";
-    person[11] = "*                           \\__/       *";
-    person[12] = "*                            ||        *";
-    person[13] = "*                          -| *|-      *";
-    person[14] = "*                         / |  | \\     *";
-    person[15] = "*                        /   \\/   \\    *";
-    person[16] = "*                            /\\        *";
-    person[17] = "*                           / |        *";
-    person[18] = "*                         _/  |_       *";
-
-    print(person);//usleep(runDelay);//system("clear");
-    person[17] = "*                            ||        *";
-    person[18] = "*                           _||_       *";
-
-    print(person);//usleep(runDelay);//system("clear");
-    person[17] = "*                            | \\       *";
-    person[18] = "*                           _|  \\_     *";
-
-    print(person);//usleep(runDelay);//system("clear");
-    person[7] = "*                           /\\         *";
-    person[8] = "*                          |oo|        *";
-    person[9] = "*                         (|..|)       *";
-    person[10] = "*                          |--|        *";
-    person[11] = "*                          \\__/        *";
-    person[12] = "*                           ||         *";
-    person[13] = "*                         -| *|-       *";
-    person[14] = "*                        / |  | \\      *";
-    person[15] = "*                       /   \\/   \\     *";
-    person[16] = "*                           /\\         *";
-    person[17] = "*                          / |         *";
-    person[18] = "*                        _/  |_        *";
-
-    print(person);//usleep(runDelay);//system("clear");
-    person[17] = "*                           ||         *";
-    person[18] = "*                          _||_        *";
-
-    print(person);//usleep(runDelay);//system("clear");
-    person[17] = "*                           | \\        *";
-    person[18] = "*                          _|  \\_      *";
-
-    print(person);//usleep(runDelay);//system("clear");
-    person[7] = "*                          /\\          *";
-    person[8] = "*                         |oo|         *";
-    person[9] = "*                        (|..|)        *";
-    person[10] = "*                         |--|         *";
-    person[11] = "*                         \\__/         *";
-    person[12] = "*                          ||          *";
-    person[13] = "*                        -| *|-        *";
-    person[14] = "*                       / |  | \\       *";
-    person[15] = "*                      /   \\/   \\      *";
-    person[16] = "*                          /\\          *";
-    person[17] = "*                         / |          *";
-    person[18] = "*                       _/  |_         *";
-
-    print(person);//usleep(runDelay);//system("clear");
-    person[17] = "*                          ||          *";
-    person[18] = "*                         _||_         *";
-
-    print(person);//usleep(runDelay);//system("clear");
-    person[17] = "*                          | \\         *";
-    person[18] = "*                         _|  \\_       *";
-
-    print(person);//usleep(runDelay);//system("clear");
-    person[7] = "*                         /\\           *";
-    person[8] = "*                        |oo|          *";
-    person[9] = "*                       (|..|)         *";
-    person[10] = "*                        |--|          *";
-    person[11] = "*                        \\__/          *";
-    person[12] = "*                         ||           *";
-    person[13] = "*                       -| *|-         *";
-    person[14] = "*                      / |  | \\        *";
-    person[15] = "*                     /   \\/   \\       *";
-    person[16] = "*                         /\\           *";
-    person[17] = "*                        / |           *";
-    person[18] = "*                      _/  |_          *";
-
-    print(person);//usleep(runDelay);//system("clear");
-    person[17] = "*                         ||           *";
-    person[18] = "*                        _||_          *";
-
-    print(person);//usleep(runDelay);//system("clear");
-    person[17] = "*                         | \\          *";
-    person[18] = "*                        _|  \\_        *";
-
-    print(person);//usleep(runDelay);//system("clear");
-    person[7] = "*                        /\\            *";
-    person[8] = "*                       |oo|           *";
-    person[9] = "*                      (|..|)          *";
-    person[10] = "*                       |--|           *";
-    person[11] = "*                       \\__/           *";
-    person[12] = "*                        ||            *";
-    person[13] = "*                      -| *|-          *";
-    person[14] = "*                     / |  | \\         *";
-    person[15] = "*                    /   \\/   \\        *";
-    person[16] = "*                        /\\            *";
-    person[17] = "*                       / |            *";
-    person[18] = "*                     _/  |_           *";
-
-    print(person);//usleep(runDelay);//system("clear");
-    person[17] = "*                        ||            *";
-    person[18] = "*                       _||_           *";
-
-    print(person);//usleep(runDelay);//system("clear");
-    person[17] = "*                        | \\           *";
-    person[18] = "*                       _|  \\_         *";
-
-    print(person);//usleep(runDelay);//system("clear");
-    person[7] = "*                       /\\             *";
-    person[8] = "*                      |oo|            *";
-    person[9] = "*                     (|..|)           *";
-    person[10] = "*                      |--|            *";
-    person[11] = "*                      \\__/            *";
-    person[12] = "*                       ||             *";
-    person[13] = "*                     -| *|-           *";
-    person[14] = "*                    / |  | \\          *";
-    person[15] = "*                   /   \\/   \\         *";
-    person[16] = "*                       /\\             *";
-    person[17] = "*                      / |             *";
-    person[18] = "*                    _/  |_            *";
-
-    print(person);//usleep(runDelay);//system("clear");
-    person[17] = "*                       ||             *";
-    person[18] = "*                      _||_            *";
-
-    print(person);//usleep(runDelay);//system("clear");
-    person[17] = "*                       | \\            *";
-    person[18] = "*                      _|  \\_          *";
-
-    print(person);//usleep(runDelay);//system("clear");
-    person[7] = "*                      /\\              *";
-    person[8] = "*                     |oo|             *";
-    person[9] = "*                    (|..|)            *";
-    person[10] = "*                     |--|             *";
-    person[11] = "*                     \\__/             *";
-    person[12] = "*                      ||              *";
-    person[13] = "*                    -| *|-            *";
-    person[14] = "*                   / |  | \\           *";
-    person[15] = "*                  /   \\/   \\          *";
-    person[16] = "*                      /\\              *";
-    person[17] = "*                     / |              *";
-    person[18] = "*                   _/  |_             *";
-
-    print(person);//usleep(runDelay);//system("clear");
-    person[17] = "*                      ||              *";
-    person[18] = "*                     _||_             *";
-
-    print(person);//usleep(runDelay);//system("clear");
-    person[17] = "*                      | \\             *";
-    person[18] = "*                     _|  \\_           *";
-
-    print(person);//usleep(runDelay);//system("clear");
-    person[7] = "*                     /\\               *";
-    person[8] = "*                    |oo|              *";
-    person[9] = "*                   (|..|)             *";
-    person[10] = "*                    |--|              *";
-    person[11] = "*                    \\__/              *";
-    person[12] = "*                     ||               *";
-    person[13] = "*                   -| *|-             *";
-    person[14] = "*                  / |  | \\            *";
-    person[15] = "*                 /   \\/   \\           *";
-    person[16] = "*                     /\\               *";
-    person[17] = "*                    / |               *";
-    person[18] = "*                  _/  |_              *";
-
-    print(person);//usleep(runDelay);//system("clear");
-    person[17] = "*                     ||               *";
-    person[18] = "*                    _||_              *";
-
-    print(person);//usleep(runDelay);//system("clear");
-    person[17] = "*                     | \\              *";
-    person[18] = "*                    _|  \\_            *";
-
-    print(person);//usleep(runDelay);//system("clear");
-    person[7] = "*                    /\\                *";
-    person[8] = "*                   |oo|               *";
-    person[9] = "*                  (|..|)              *";
-    person[10] = "*                   |--|               *";
-    person[11] = "*                   \\__/               *";
-    person[12] = "*                    ||                *";
-    person[13] = "*                  -| *|-              *";
-    person[14] = "*                 / |  | \\             *";
-    person[15] = "*                /   \\/   \\            *";
-    person[16] = "*                    /\\                *";
-    person[17] = "*                   / |                *";
-    person[18] = "*                 _/  |_               *";
-
-    print(person);//usleep(runDelay);//system("clear");
-    person[17] = "*                    ||                *";
-    person[18] = "*                   _||_               *";
-
-    print(person);//usleep(runDelay);//system("clear");
-    person[17] = "*                    | \\               *";
-    person[18] = "*                   _|  \\_             *";
-
-    print(person);//usleep(runDelay);//system("clear");
-    person[7] = "*                   /\\                 *";
-    person[8] = "*                  |oo|                *";
-    person[9] = "*                 (|..|)               *";
-    person[10] = "*                  |--|                *";
-    person[11] = "*                  \\__/                *";
-    person[12] = "*                   ||                 *";
-    person[13] = "*                 -| *|-               *";
-    person[14] = "*                / |  | \\              *";
-    person[15] = "*               /   \\/   \\             *";
-    person[16] = "*                   /\\                 *";
-    person[17] = "*                  / |                 *";
-    person[18] = "*                _/  |_                *";
-
-    print(person);//usleep(runDelay);//system("clear");
-    person[17] = "*                   ||                 *";
-    person[18] = "*                  _||_                *";
-
-    print(person);//usleep(runDelay);//system("clear");
-    person[17] = "*                   | \\                *";
-    person[18] = "*                  _|  \\_              *";
-
-    print(person);//usleep(runDelay);//system("clear");
-    person[7] = "*                  /\\                  *";
-    person[8] = "*                 |oo|                 *";
-    person[9] = "*                (|..|)                *";
-    person[10] = "*                 |--|                 *";
-    person[11] = "*                 \\__/                 *";
-    person[12] = "*                  ||                  *";
-    person[13] = "*                -| *|-                *";
-    person[14] = "*               / |  | \\               *";
-    person[15] = "*              /   \\/   \\              *";
-    person[16] = "*                  /\\                  *";
-    person[17] = "*                 / |                  *";
-    person[18] = "*               _/  |_                 *";
-
-    print(person);//usleep(runDelay);//system("clear");
-    person[17] = "*                  ||                  *";
-    person[18] = "*                 _||_                 *";
-
-    print(person);//usleep(runDelay);//system("clear");
-    person[17] = "*                  | \\                 *";
-    person[18] = "*                 _|  \\_               *";
-
-    print(person);//usleep(runDelay);//system("clear");
-    person[7] = "*                 /\\                   *";
-    person[8] = "*                |oo|                  *";
-    person[9] = "*               (|..|)                 *";
-    person[10] = "*                |--|                  *";
-    person[11] = "*                \\__/                  *";
-    person[12] = "*                 ||                   *";
-    person[13] = "*               -| *|-                 *";
-    person[14] = "*              / |  | \\                *";
-    person[15] = "*             /   \\/   \\               *";
-    person[16] = "*                 /\\                   *";
-    person[17] = "*                / |                   *";
-    person[18] = "*              _/  |_                  *";
-
-    print(person);//usleep(runDelay);//system("clear");
-    person[17] = "*                 ||                   *";
-    person[18] = "*                _||_                  *";
-
-    print(person);//usleep(runDelay);//system("clear");
-    person[17] = "*                 | \\                  *";
-    person[18] = "*                _|  \\_                *";
-
-    print(person);//usleep(runDelay);//system("clear");
-    person[7] = "*                /\\                    *";
-    person[8] = "*               |oo|                   *";
-    person[9] = "*              (|..|)                  *";
-    person[10] = "*               |--|                   *";
-    person[11] = "*               \\__/                   *";
-    person[12] = "*                ||                    *";
-    person[13] = "*              -| *|-                  *";
-    person[14] = "*             / |  | \\                 *";
-    person[15] = "*            /   \\/   \\                *";
-    person[16] = "*                /\\                    *";
-    person[17] = "*               / |                    *";
-    person[18] = "*             _/  |_                   *";
-
-    print(person);//usleep(runDelay);//system("clear");
-    person[17] = "*                ||                    *";
-    person[18] = "*               _||_                   *";
-
-    print(person);//usleep(runDelay);//system("clear");
-    person[17] = "*                | \\                   *";
-    person[18] = "*               _|  \\_                 *";
-
-    print(person);//usleep(runDelay);//system("clear");
-    person[7] = "*               /\\                     *";
-    person[8] = "*              |oo|                    *";
-    person[9] = "*             (|..|)                   *";
-    person[10] = "*              |--|                    *";
-    person[11] = "*              \\__/                    *";
-    person[12] = "*               ||                     *";
-    person[13] = "*             -| *|-                   *";
-    person[14] = "*            / |  | \\                  *";
-    person[15] = "*           /   \\/   \\                 *";
-    person[16] = "*               /\\                     *";
-    person[17] = "*              / |                     *";
-    person[18] = "*            _/  |_                    *";
-
-    print(person);//usleep(runDelay);//system("clear");
-    person[17] = "*               ||                     *";
-    person[18] = "*              _||_                    *";
-
-    print(person);//usleep(runDelay);//system("clear");
-    person[17] = "*               | \\                    *";
-    person[18] = "*              _|  \\_                  *";
-
-    print(person);//usleep(runDelay);//system("clear");
-    person[7] = "*              /\\                      *";
-    person[8] = "*             |oo|                     *";
-    person[9] = "*            (|..|)                    *";
-    person[10] = "*             |--|                     *";
-    person[11] = "*             \\__/                     *";
-    person[12] = "*              ||                      *";
-    person[13] = "*            -| *|-                    *";
-    person[14] = "*           / |  | \\                   *";
-    person[15] = "*          /   \\/   \\                  *";
-    person[16] = "*              /\\                      *";
-    person[17] = "*             / |                      *";
-    person[18] = "*           _/  |_                     *";
-
-    print(person);//usleep(runDelay);//system("clear");
-    person[17] = "*              ||                      *";
-    person[18] = "*             _||_                     *";
-
-    print(person);//usleep(runDelay);//system("clear");
-    person[17] = "*              | \\                     *";
-    person[18] = "*             _|  \\_                   *";
-
-    print(person);//usleep(runDelay);//system("clear");
-    person[7] = "*             /\\                       *";
-    person[8] = "*            |oo|                      *";
-    person[9] = "*           (|..|)                     *";
-    person[10] = "*            |--|                      *";
-    person[11] = "*            \\__/                      *";
-    person[12] = "*             ||                       *";
-    person[13] = "*           -| *|-                     *";
-    person[14] = "*          / |  | \\                    *";
-    person[15] = "*         /   \\/   \\                   *";
-    person[16] = "*             /\\                       *";
-    person[17] = "*            / |                       *";
-    person[18] = "*          _/  |_                      *";
-
-    print(person);//usleep(runDelay);//system("clear");
-    person[17] = "*             ||                       *";
-    person[18] = "*            _||_                      *";
-
-    print(person);//usleep(runDelay);//system("clear");
-    person[17] = "*             | \\                      *";
-    person[18] = "*            _|  \\_                    *";
-
-    print(person);//usleep(runDelay);//system("clear");
-    person[7] = "*            /\\                        *";
-    person[8] = "*           |oo|                       *";
-    person[9] = "*          (|..|)                      *";
-    person[10] = "*           |--|                       *";
-    person[11] = "*           \\__/                       *";
-    person[12] = "*            ||                        *";
-    person[13] = "*          -| *|-                      *";
-    person[14] = "*         / |  | \\                     *";
-    person[15] = "*        /   \\/   \\                    *";
-    person[16] = "*            /\\                        *";
-    person[17] = "*           / |                        *";
-    person[18] = "*         _/  |_                      *"; ///////////////////////////////////////////////////////////////////////////////1
-
-    print(person);//usleep(runDelay);//system("clear");
-    person[17] = "*            ||                        *";
-    person[18] = "*           _||_                       *";
-
-    print(person);//usleep(runDelay);//system("clear");
-    person[17] = "*            | \\                       *";
-    person[18] = "*           _|  \\_                     *";
-
-    print(person);//usleep(runDelay);//system("clear");
-    person[7] = "*           /\\                         *";
-    person[8] = "*          |oo|                        *";
-    person[9] = "*         (|..|)                       *";
-    person[10] = "*          |--|                        *";
-    person[11] = "*          \\__/                        *";
-    person[12] = "*           ||                         *";
-    person[13] = "*         -| *|-                       *";
-    person[14] = "*        / |  | \\                      *";
-    person[15] = "*       /   \\/   \\                     *";
-    person[16] = "*           /\\                         *";
-    person[17] = "*          / |                         *";
-    person[18] = "*        _/  |_                        *";
-
-    print(person);//usleep(runDelay);//system("clear");
-    person[17] = "*           ||                         *";
-    person[18] = "*          _||_                        *";
-
-    print(person);//usleep(runDelay);//system("clear");
-    person[17] = "*           | \\                        *";
-    person[18] = "*          _|  \\_                      *";
-
-    print(person);//usleep(runDelay);//system("clear");
-    person[7] = "*          /\\                          *";
-    person[8] = "*         |oo|                         *";
-    person[9] = "*        (|..|)                        *";
-    person[10] = "*         |--|                         *";
-    person[11] = "*         \\__/                         *";
-    person[12] = "*          ||                          *";
-    person[13] = "*        -| *|-                        *";
-    person[14] = "*       / |  | \\                       *";
-    person[15] = "*      /   \\/   \\                      *";
-    person[16] = "*          /\\                          *";
-    person[17] = "*         / |                          *";
-    person[18] = "*       _/  |_                         *";
-
-    print(person);//usleep(runDelay);//system("clear");
-    person[17] = "*          ||                          *";
-    person[18] = "*         _||_                         *";
-
-    print(person);//usleep(runDelay);//system("clear");
-    person[17] = "*          | \\                         *";
-    person[18] = "*         _|  \\_                       *";
-
-    print(person);//usleep(runDelay);//system("clear");
-    person[7] = "*         /\\                           *";
-    person[8] = "*        |oo|                          *";
-    person[9] = "*       (|..|)                         *";
-    person[10] = "*        |--|                          *";
-    person[11] = "*        \\__/                          *";
-    person[12] = "*         ||                           *";
-    person[13] = "*       -| *|-                         *";
-    person[14] = "*      / |  | \\                        *";
-    person[15] = "*     /   \\/   \\                       *";
-    person[16] = "*         /\\                           *";
-    person[17] = "*        / |                           *";
-    person[18] = "*      _/  |_                          *";
-
-    print(person);//usleep(runDelay);//system("clear");
-    person[17] = "*         ||                           *";
-    person[18] = "*        _||_                          *";
-
-    print(person);//usleep(runDelay);//system("clear");
-    person[17] = "*         | \\                          *";
-    person[18] = "*        _|  \\_                        *";
-
-    print(person);//usleep(runDelay);//system("clear");
-    person[7] = "*        /\\                            *";
-    person[8] = "*       |oo|                           *";
-    person[9] = "*      (|..|)                          *";
-    person[10] = "*       |--|                           *";
-    person[11] = "*       \\__/                           *";
-    person[12] = "*        ||                            *";
-    person[13] = "*      -| *|-                          *";
-    person[14] = "*     / |  | \\                         *";
-    person[15] = "*    /   \\/   \\                        *";
-    person[16] = "*        /\\                            *";
-    person[17] = "*       / |                            *";
-    person[18] = "*     _/  |_                           *";
-
-    print(person);//usleep(runDelay);//system("clear");
-    person[17] = "*        ||                            *";
-    person[18] = "*       _||_                           *";
-
-    print(person);//usleep(runDelay);//system("clear");
-    person[17] = "*        | \\                           *";
-    person[18] = "*       _|  \\_                         *";
-
-    print(person);//usleep(runDelay);//system("clear");
-    person[7] = "*       /\\                             *";
-    person[8] = "*      |oo|                            *";
-    person[9] = "*     (|..|)                           *";
-    person[10] = "*      |--|                            *";
-    person[11] = "*      \\__/                            *";
-    person[12] = "*       ||                             *";
-    person[13] = "*     -| *|-                           *";
-    person[14] = "*    / |  | \\                          *";
-    person[15] = "*   /   \\/   \\                         *";
-    person[16] = "*       /\\                             *";
-    person[17] = "*      / |                             *";
-    person[18] = "*    _/  |_                            *";
-
-    print(person);//usleep(runDelay);//system("clear");
-    person[17] = "*       ||                             *";
-    person[18] = "*      _||_                            *";
-
-    print(person);//usleep(runDelay);//system("clear");
-    person[17] = "*       | \\                            *";
-    person[18] = "*      _|  \\_                          *";
-
-    print(person);//usleep(runDelay);//system("clear");
-    person[7] = "*      /\\                              *";
-    person[8] = "*     |oo|                             *";
-    person[9] = "*    (|..|)                            *";
-    person[10] = "*     |--|                             *";
-    person[11] = "*     \\__/                             *";
-    person[12] = "*      ||                              *";
-    person[13] = "*    -| *|-                            *";
-    person[14] = "*   / |  | \\                           *";
-    person[15] = "*  /   \\/   \\                          *";
-    person[16] = "*      /\\                              *";
-    person[17] = "*     / |                              *";
-    person[18] = "*   _/  |_                             *";
-
-    print(person);//usleep(runDelay);//system("clear");
-    person[17] = "*      ||                              *";
-    person[18] = "*     _||_                             *";
-
-    print(person);//usleep(runDelay);//system("clear");
-    person[17] = "*      | \\                             *";
-    person[18] = "*     _|  \\_                           *";
-
-    print(person);//usleep(runDelay);//system("clear");
-    person[7] = "*     /\\                               *";
-    person[8] = "*    |oo|                              *";
-    person[9] = "*   (|..|)                             *";
-    person[10] = "*    |--|                              *";
-    person[11] = "*    \\__/                              *";
-    person[12] = "*     ||                               *";
-    person[13] = "*   -| *|-                             *";
-    person[14] = "*  / |  | \\                            *";
-    person[15] = "* /   \\/   \\                           *";
-    person[16] = "*     /\\                               *";
-    person[17] = "*    / |                               *";
-    person[18] = "*  _/  |_                              *";
-
-
-    print(person);//usleep(runDelay);//system("clear");
-    person[17] = "*     ||                               *";
-    person[18] = "*    _||_                              *";
-
-
-    print(person);//usleep(runDelay);//system("clear");
-    person[17] = "*     | \\                              *";
-    person[18] = "*    _|  \\_                            *";
-
-    print(person);//usleep(runDelay);//system("clear");
-    person[7] = "*    /\\                                *";
-    person[8] = "*   |oo|                               *";
-    person[9] = "*  (|..|)                              *";
-    person[10] = "*   |--|                               *";
-    person[11] = "*   \\__/                               *";
-    person[12] = "*    ||                                *";
-    person[13] = "*  -| *|-                              *";
-    person[14] = "* / |  | \\                             *";
-    person[15] = "*/   \\/   \\                            *";
-    person[16] = "*    /\\                                *";
-    person[17] = "*    ||                                *";
-    person[18] = "*   _||_                               *";
-
-    print(person);//usleep(runDelay);
+void ball (string *firstEl, int col, int t) {
+	string pers[col], spacesRight = "                            *";
+	string *ptpers = pers;
+	for (int i = 0; i < col; i ++, firstEl++) ( (i >= 0 && i < 7) || (i == 19) ) ?
+		pers[i] = *firstEl : pers[i] = "*" + *firstEl + spacesRight;
+	show(ptpers, col, t);
+	pers[14] = "* / |  | \\o" + spacesRight;
+	pers[15] = "*/   \\/   _" + spacesRight;
+	show(ptpers, col, t);
+	pers[13] = "*  -| *|- o" + spacesRight;
+	pers[14] = "* / |  | \\-" + spacesRight;
+	pers[15] = "*/   \\/    " + spacesRight;
+	show(ptpers, col, t);
+	pers[12] = "*    ||   o" + spacesRight;
+	pers[13] = "*  -| *|---" + spacesRight;
+	pers[14] = "* / |  |   " + spacesRight;
+	show(ptpers, col, t);
+	pers[11] = "*   \\__/  o" + spacesRight;
+	pers[12] = "*    ||    " + spacesRight;
+	pers[13] = "*  -| *|--/" + spacesRight;
+	show(ptpers, col, t);
+	pers[10] = "*   |--|  o" + spacesRight;
+	pers[11] = "*   \\__/   " + spacesRight;
+	pers[13] = "*  -| *|---" + spacesRight;
+	show(ptpers, col, t);
+	pers[9] = "*  (|..|) o" + spacesRight;
+	pers[10] = "*   |--|   " + spacesRight;
+	pers[13] = "*  -| *|-- " + spacesRight;
+	pers[14] = "* / |  |  \\" + spacesRight;
+	show(ptpers, col, t);
+	pers[8] = "*   |oo|  o" + spacesRight;
+	pers[9] = "*  (|..|)  " + spacesRight;
+	firstEl -= 10;
+	for (int i = 10; i < col-1; i ++, firstEl ++) pers[i] = "*" + *firstEl + spacesRight;
+	show(ptpers, col, t);
+	pers[7] = "*    /\\   o" + spacesRight;
+	pers[8] = "*   |oo|   " + spacesRight;
+	show(ptpers, col, t);
+	pers[6] = "*        o " + spacesRight;
+	pers[7] = "*    /\\    " + spacesRight;
+	show(ptpers, col, t);
+	pers[5] = "*       o  " + spacesRight;
+	pers[6] = "*          " + spacesRight;
+	show(ptpers, col, t);
+	pers[4] = "*      o   " + spacesRight;
+	pers[5] = "*          " + spacesRight;
+	show(ptpers, col, t);
+	pers[3] = "*     o    " + spacesRight;
+	pers[4] = "*          " + spacesRight;
+	show(ptpers, col, t);
+	pers[3] = "*    o     " + spacesRight;
+	show(ptpers, col, t);
+	pers[3] = "*          " + spacesRight;
+	pers[4] = "*   o      " + spacesRight;
+	show(ptpers, col, t);
+	pers[4] = "*          " + spacesRight;
+	pers[5] = "*  o       " + spacesRight;
+	show(ptpers, col, t);
+	pers[5] = "*          " + spacesRight;
+	pers[6] = "* o        " + spacesRight;
+	show(ptpers, col, t);
+	pers[6] = "*          " + spacesRight;
+	pers[7] = "*o   /\\    " + spacesRight;
+	show(ptpers, col, t);
+	pers[7] = "*    /\\    " + spacesRight;
+	pers[8] = "*o  |oo|   " + spacesRight;
+	show(ptpers, col, t);
+	pers[8] = "*   |oo|   " + spacesRight;
+	pers[9] = "*o (|..|)  " + spacesRight;
+	pers[13] = "* --| *|-  " + spacesRight;
+	pers[14] = "*/  |  | \\ " + spacesRight;
+	pers[15] = "*    \\/   \\" + spacesRight;
+	show(ptpers, col, t);
+	pers[9] = "*  (|..|)  " + spacesRight;
+	pers[10] = "*o  |--|   " + spacesRight;
+	pers[13] = "*---| *|-  " + spacesRight;
+	pers[14] = "*   |  | \\ " + spacesRight;
+	show(ptpers, col, t);
+	pers[10] = "*   |--|   " + spacesRight;
+	pers[11] = "*o  \\__/   " + spacesRight;
+	pers[13] = "*\\--| *|-  " + spacesRight;
+	show(ptpers, col, t);
+	pers[11] = "*   \\__/   " + spacesRight;
+	pers[12] = "*o   ||    " + spacesRight;
+	pers[13] = "*---| *|-  " + spacesRight;
+	show(ptpers, col, t);
+	pers[12] = "*    ||    " + spacesRight;
+	pers[13] = "*o -| *|-  " + spacesRight;
+	pers[14] = "*-/ |  | \\ " + spacesRight;
+	show(ptpers, col, t);
+	pers[13] = "*  -| *|-  " + spacesRight;
+	pers[14] = "*o/ |  | \\ " + spacesRight;
+	pers[15] = "*_   \\/   \\" + spacesRight;
+	show(ptpers, col, t);
+	pers[14] = "* / |  | \\ " + spacesRight;
+	pers[15] = "*/   \\/   \\" + spacesRight;
+	show(ptpers, col, t);
+	//system("cls");
+	return;
 }
-void dance(vector<string> person)
-{
-    int delay = 350 * 1000;
-    for (int i = 0; i < 2; i++)
-    {
-        //usleep(delay);//system("clear");
-        person[13] = "* --| *|--                             *";
-        person[14] = "*/  |  |  \\                            *";
-        person[15] = "*    \\/                                *";
-        print(person);//usleep(delay);//system("clear");
-        person[13] = "*  -| *|---                            *";
-        person[14] = "* / |  |                               *";
-        person[15] = "*/   \\/                                *";
-        print(person);//usleep(delay);//system("clear");
-        person[12] = "*    ||   /                            *";
-        person[13] = "* --| *|--                             *";
-        person[14] = "*/  |  |                               *";
-        person[15] = "*    \\/                                *";
-        print(person);//usleep(delay);//system("clear");
-        person[11] = "*   \\__/  /                            *";
-        person[12] = "*    ||  /                             *";
-        person[13] = "*  -| *|-                              *";
-        person[14] = "* / |  |                               *";
-        person[15] = "*/   \\/                                *";
-        print(person);//usleep(delay);//system("clear");
-        person[11] = "*   \\__/  *                            *";
-        person[13] = "* --| *|-                              *";
-        person[14] = "*/  |  |                               *";
-        person[15] = "*    \\/                                *";
-        print(person);//usleep(delay);//system("clear");
-        person[11] = "*   \\__/  /                            *";
-        person[13] = "*---| *|-                              *";
-        person[14] = "*   |  |                               *";
-        print(person);//usleep(delay);//system("clear");
-        person[11] = "*   \\__/  *                            *";
-        person[12] = "*\\   ||  /                             *";
-        person[13] = "* --| *|-                              *";
-        print(person);//usleep(delay);//system("clear");
-        person[11] = "*\\  \\__/  /                            *";
-        person[12] = "* \\  ||  /                             *";
-        person[13] = "*  -| *|-                              *";
-        print(person);//usleep(delay);//system("clear");
-        person[11] = "**  \\__/  *                            *";
-        print(person);//usleep(delay);//system("clear");
-        person[11] = "*   \\__/                               *";
-        person[12] = "**   ||   *                            *";
-        person[13] = "* --| *|--                             *";
-        print(person);//usleep(delay);//system("clear");
-        person[12] = "*    ||                                *";
-        person[13] = "**--| *|--*                            *";
-        print(person);//usleep(delay);//system("clear");
-        person[13] = "* --| *|--                             *";
-        person[14] = "**  |  |  *                            *";
-        print(person);//usleep(delay);//system("clear");
-        person[13] = "*  -| *|-                              *";
-        person[14] = "* / |  | \\                             *";
-        person[15] = "**   \\/   *                            *";
-        print(person);//usleep(delay);//system("clear");
-        person[15] = "*/   \\/   \\                            *";
-        print(person);//usleep(delay);
-    }
+
+void jump (string *firstEl, int col, int t) {
+	string pers[col], spacesRight = "                            *";
+	string *ptpers = pers;
+	for (int i = 0; i < col; i ++, firstEl++) ( (i >= 0 && i < 7) || (i == 19) ) ?
+		pers[i] = *firstEl : pers[i] = "*" + *firstEl + spacesRight;
+	firstEl -= 20;
+
+	show (ptpers, col, t);
+	string emptyStr = pers[1];
+	string a = pers[7], b = pers[8], c = pers[9], d = pers[10], e = pers[11], f = pers[12], 
+		g = pers[13], h = pers[14], ii = pers[15], k = pers[16], l = pers[17], m = pers[18];
+	
+	pers[6] = emptyStr;
+	pers[7] = emptyStr;
+	pers[8] = emptyStr;
+	pers[9] = a;
+	pers[10] = b;
+	pers[11] = c;
+	pers[12] = d;
+	pers[13] = e;
+	pers[14] = f;
+	pers[15] = g;
+	pers[16] = h;
+	pers[17] = "*    /\\    " + spacesRight;
+	pers[18] = "*   _\\/_   " + spacesRight;
+	for (int q = 18; q >= 14; q --) {
+		show (ptpers, col, t);
+		pers[q-11] = a;
+		pers[q-10] = b;
+		pers[q-9] = c;
+		pers[q-8] = d;
+		pers[q-7] = e;
+		pers[q-6] = f;
+		pers[q-5] = g;
+		pers[q-4] = h;
+		pers[q-3] = ii;
+		pers[q-2] = k;
+		pers[q-1] = l;
+		pers[q] = "*    ||    " + spacesRight;
+		if (q != 18) pers[q+1] = emptyStr;
+	}
+	show(ptpers, col, t);
+	for (int q = 13; q <= 16; q ++) {
+		pers[q-11] = emptyStr;
+		show (ptpers, col, t);
+		pers[q-9] = a;
+		pers[q-8] = b;
+		pers[q-7] = c;
+		pers[q-6] = d;
+		pers[q-5] = e;
+		pers[q-4] = f;
+		pers[q-3] = g;
+		pers[q-2] = h;
+		pers[q-1] = ii;
+		pers[q] = k;
+		pers[q+1] = l;
+		pers[q+2] = "*    ||    " + spacesRight;
+	}
+	
+	pers[6] = emptyStr;
+	pers[7] = a;
+	pers[8] = b;
+	pers[9] = c;
+	pers[10] = d;
+	pers[11] = e;
+	pers[12] = f;
+	pers[13] = g;
+	pers[14] = h;
+	pers[15] = ii;
+	pers[16] = k;
+	pers[17] = l;
+	pers[18] = "*    ||    " + spacesRight;
+	show (ptpers, col, t);
+	pers[6] = emptyStr;
+	pers[7] = emptyStr;
+	pers[8] = emptyStr;
+	pers[9] = a;
+	pers[10] = b;
+	pers[11] = c;
+	pers[12] = d;
+	pers[13] = e;
+	pers[14] = f;
+	pers[15] = g;
+	pers[16] = h;
+	pers[17] = "*    /\\    " + spacesRight;
+	pers[18] = "*   _\\/_   " + spacesRight;
+	show(ptpers, col, t);
+	for (int i = 0; i < col; i ++, firstEl++) ( (i >= 0 && i < 7) || (i == 19) ) ?
+		pers[i] = *firstEl : pers[i] = "*" + *firstEl + spacesRight;
+	show(ptpers, col, t);
+	return;
 }
-void menu()
-{
-    //system("clear");
-    cout << "Choose animation:" << endl;
-    cout << "Dance:                     1" << endl;
-    cout << "Run:                       2" << endl;
-    cout << "Sit down and jump:         3" << endl;
-    cout << "Throw a ball:              4" << endl;
-    cout << "\nEnter 5 for exit." << endl;
+
+void dancing (string *firstEl, int col, int t) {
+	string pers[col], spacesRight = "                            *";
+	string *ptpers = pers;
+	for (int i = 0; i < col; i++, firstEl++) ( (i >= 0 && i < 7) || (i == 19) ) ? pers[i] = *firstEl
+		: pers[i] = "*" + *firstEl  + spacesRight;
+	for (int i = 0; i < col; i++) ((i >= 0 && i < 7) || i == 19) ? cout << pers[i] << endl :
+		cout << pers[i] << endl;
+		
+	for (int q = 0; q < 2; q++) {
+		pers[13] = "* --| *|-- " + spacesRight;
+		pers[14] = "*/  |  |  \\" + spacesRight;
+		pers[15] = "*    \\/    " + spacesRight;
+		usleep(t);
+		//system("cls");
+		
+		for (int i = 0; i < col; i++) {
+			cout << pers[i] << endl;
+		}
+		pers[13] = "*  -| *|---" + spacesRight;
+		pers[14] = "* / |  |   " + spacesRight;
+		pers[15] = "*/   \\/    " + spacesRight;
+		usleep(t);
+		//system("cls");
+		
+		for (int i = 0; i < col; i++) {
+			cout << pers[i] << endl;
+		}
+		pers[12] = "*    ||   /" + spacesRight;
+		pers[13] = "* --| *|-- " + spacesRight;
+		pers[14] = "*/  |  |   " + spacesRight;
+		pers[15] = "*    \\/    " + spacesRight;
+		usleep(t);
+		//system("cls");
+		
+		for (int i = 0; i < col; i++) {
+			cout << pers[i] << endl;
+		}
+		pers[11] = "*   \\__/  /" + spacesRight;
+		pers[12] = "*    ||  / " + spacesRight;
+		pers[13] = "*  -| *|-  " + spacesRight;
+		pers[14] = "* / |  |   " + spacesRight;
+		pers[15] = "*/   \\/    " + spacesRight;
+		usleep(t);
+		//system("cls");
+
+		for (int i = 0; i < col; i++) {
+			cout << pers[i] << endl;
+		}
+		pers[11] = "*   \\__/  *" + spacesRight;
+		pers[12] = "*    ||  / " + spacesRight;
+		pers[13] = "* --| *|-  " + spacesRight;
+		pers[14] = "*/  |  |   " + spacesRight;
+		pers[15] = "*    \\/    " + spacesRight;
+		usleep(t);
+		//system("cls");
+		
+		for (int i = 0; i < col; i++) {
+			cout << pers[i] << endl;
+		}
+		pers[11] = "*   \\__/  /" + spacesRight;
+		pers[12] = "*    ||  / " + spacesRight;
+		pers[13] = "*---| *|-  " + spacesRight;
+		pers[14] = "*   |  |   " + spacesRight;
+		pers[15] = "*    \\/    " + spacesRight;
+		usleep(t);
+		//system("cls");
+		
+		for (int i = 0; i < col; i++) {
+			cout << pers[i] << endl;
+		}
+		pers[11] = "*   \\__/  *" + spacesRight;
+		pers[12] = "*\\   ||  / " + spacesRight;
+		pers[13] = "* --| *|-  " + spacesRight;
+		pers[14] = "*   |  |   " + spacesRight;
+		pers[15] = "*    \\/    " + spacesRight;
+		usleep(t);
+		//system("cls");
+		
+		for (int i = 0; i < col; i++) {
+			cout << pers[i] << endl;
+		}
+		pers[11] = "*\\  \\__/  /" + spacesRight;
+		pers[12] = "* \\  ||  / " + spacesRight;
+		pers[13] = "*  -| *|-  " + spacesRight;
+		pers[14] = "*   |  |   " + spacesRight;
+		pers[15] = "*    \\/    " + spacesRight;
+		usleep(t);
+		//system("cls");
+		
+		for (int i = 0; i < col; i++) {
+			cout << pers[i] << endl;
+		}
+		pers[11] = "**  \\__/  *" + spacesRight;
+		pers[12] = "* \\  ||  / " + spacesRight;
+		pers[14] = "*   |  |   " + spacesRight;
+		//pers[16] = "*    \\/    " + spacesRight;
+		usleep(t);
+		//system("cls");
+		
+		for (int i = 0; i < col; i++) {
+			cout << pers[i] << endl;
+		}
+		pers[11] = "*   \\__/   " + spacesRight;
+		pers[12] = "**   ||   *" + spacesRight;
+		pers[13] = "* --| *|-- " + spacesRight;
+		pers[14] = "*   |  |   " + spacesRight;
+		pers[15] = "*    \\/    " + spacesRight;
+		usleep(t);
+		//system("cls");
+		
+		for (int i = 0; i < col; i++) {
+			cout << pers[i] << endl;
+		}
+		pers[12] = "*    ||    " + spacesRight;
+		pers[13] = "**--| *|--*" + spacesRight;
+		pers[14] = "*   |  |   " + spacesRight;
+		pers[15] = "*    \\/    " + spacesRight;
+		usleep(t);
+		//system("cls");
+		
+		for (int i = 0; i < col; i++) {
+			cout << pers[i] << endl;
+		}
+		pers[13] = "* --| *|-- " + spacesRight;
+		pers[14] = "**  |  |  *" + spacesRight;
+		pers[15] = "*    \\/    " + spacesRight;
+		usleep(t);
+		//system("cls");
+		
+		for (int i = 0; i < col; i++) {
+			cout << pers[i] << endl;
+		}
+		pers[13] = "*  -| *|-  " + spacesRight;
+		pers[14] = "* / |  | \\ " + spacesRight;
+		pers[15] = "**   \\/   *" + spacesRight;
+		usleep(t);
+		//system("cls");
+		
+		for (int i = 0; i < col; i++) {
+			cout << pers[i] << endl;
+		}
+		pers[15] = "*/   \\/   \\" + spacesRight;
+		usleep(t);
+		//system("cls");
+		
+		for (int i = 0; i < col; i++) {
+			cout << pers[i] << endl;
+		}	
+	}
+	//system("cls");
+	return;
 }
-void print(vector<string> person)
-{
-    for (auto c : person)
-        cout << c << endl;
+
+
+void show_run_right (string *arr, int col, string spacesRight, string spacesLeft, int t) {
+	for (int i = 0; i < col; i ++) {
+		if ( (i<7) || (i == 19) ) cout << arr[i] << endl;
+		else cout << spacesLeft << arr[i] << spacesRight;
+	}
+	usleep(t);
+	return;
+}
+void rightLeft (string *firstEl, int col, int t) {
+	string pers[col];
+	for (int i = 0; i < col; i++, firstEl++) pers[i] = *firstEl;
+	for (int i = 0; i < col; i ++) {
+		if ((i < 7) || (i == 19)) cout << pers[i] << endl;
+		else {
+			cout << "*" << pers[i];
+			for (int i = 0; i < 28; i ++) cout << " ";
+			cout << "*\n";
+		}
+	}
+	usleep(t);
+	//system("cls");
+	
+	
+	for (int i = 0; i < 28; i ++) {
+		string spacesLeft = "*";
+		for (int q = 0; q < i; q ++) spacesLeft += " ";
+		for (int step = 0; step < 3; step ++) {
+			if (step == 0) {
+				pers[17] = "    | \\   ";
+				pers[18] = "   _|  \\_ ";
+				string spacesRight = "";
+				for (int z = 0; z < (39-10-(i+1)); z ++) spacesRight += " ";
+				spacesRight += "*\n";
+				show_run_right (pers, col, spacesRight, spacesLeft, t);
+			} else if (step == 1) {
+				spacesLeft += " ";
+				pers[17] = "   / |    ";
+				pers[18] = " _/  |_   ";
+				string spacesRight = "";
+				for (int z = 0; z < (39-10-(i+1)-1); z ++) spacesRight += " ";
+				spacesRight += "*\n";
+				show_run_right (pers, col, spacesRight, spacesLeft, t);
+			} else {
+				pers[17] = "    ||    ";
+				pers[18] = "   _||_   ";
+				string spacesRight = "";
+				for (int z = 0; z < (39-10-(i+1)-1); z ++) spacesRight += " ";
+				spacesRight += "*\n";
+				show_run_right (pers, col, spacesRight, spacesLeft, t);
+			}
+		}
+	}
+	
+	for (int i = 28; i > 0; i --) {
+		string spacesLeft = "*";
+		for (int q = 0; q < i; q ++) spacesLeft += " ";
+		for (int step = 0; step < 3; step ++) {
+			if (step == 0) {
+				pers[17] = "   / |    ";
+				pers[18] = " _/  |_   ";
+				string spacesRight = "";
+				for (int z = 0; z < (39-10-(i+1)); z ++) spacesRight += " ";
+				spacesRight += "*\n";
+				show_run_right (pers, col, spacesRight, spacesLeft, t);
+			} else if (step == 1) {
+				spacesLeft = "*";
+				for (int q = 0; q < i-1; q ++) spacesLeft += " ";
+				pers[17] = "    | \\   ";
+				pers[18] = "   _|  \\_ ";
+				string spacesRight = "";
+				for (int z = 0; z < (39-10-(i+1)+1); z ++) spacesRight += " ";
+				spacesRight += "*\n";
+				show_run_right (pers, col, spacesRight, spacesLeft, t);
+			} else {
+				pers[17] = "    ||    ";
+				pers[18] = "   _||_   ";
+				string spacesRight = "";
+				for (int z = 0; z < (39-10-(i+1)+1); z ++) spacesRight += " ";
+				spacesRight += "*\n";
+				show_run_right (pers, col, spacesRight, spacesLeft, t);
+			}
+		}
+	}
+	return;
 }
