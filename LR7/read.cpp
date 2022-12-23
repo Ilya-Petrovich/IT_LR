@@ -1,4 +1,3 @@
-#define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 #include <iostream>
 void readText(char* buff, long fileSize);
@@ -29,6 +28,6 @@ void readText(char* buff, long fileSize)
 		thirdByte = (buff[i+2] & 3) << 2;
 		fourthByte = (buff[i+3] & 3);
 		text = firstByte | secondByte | thirdByte | fourthByte;
-		std::cout << text;
+		printf("%c", text);
 	}
 }
