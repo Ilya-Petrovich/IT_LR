@@ -1,88 +1,119 @@
-#include<iostream>
-#include<string>
-#include<unistd.h>
-using namespace std;
-void foo(string* ar);
+#include <iostream>
+
+// void deloneframe();
+void head(); void legs();
+void dance();
+
 int main() {
-	string  ar[12];
-	string str1 = ar[0] = "   ()()   ";
-	string str2 = ar[1] = "   ()()   ";
-	string str3 = ar[2] = "   ()()   ";
-	string str4 = ar[3] = "   |..|   ";
-	string str5 = ar[4] = "  \\|  |/  ";
-	string str6 = ar[5] = "  /|UU|\\  ";
-	string str7 = ar[6] = "  --\\/--  ";
-	string str8 = ar[7] = " /  ||  \\ ";
-	string str9 = ar[8] = "/   ||   \\";
-	string str10 = ar[9] = "    /\\    ";
-	string str11 = ar[10] = "    ||    ";
-	string str12 = ar[11] = "   _||_   ";
-	foo(&ar[0]);
-	ar[6] = " ---\\/--- ";
-	ar[7] = "/   ||   \\";
-	ar[8] = "    ||    ";
-	foo(&ar[0]);
-	ar[6] = "  --\\/----";
-	ar[7] = " /  ||    ";
-	ar[8] = "/   ||    ";
-	foo(&ar[0]);
-	ar[5] = "  /|UU|\\ /";
-	ar[6] = " ---\\/--- ";
-	ar[7] = "/   ||    ";
-	ar[8] = "    ||    ";
-	foo(&ar[0]);
-	ar[4] = "  \\|  |/ /";
-	ar[5] = "  /|UU|\\/ ";
-	ar[6] = "  --\\/--  ";
-	ar[7] = " /  ||    ";
-	ar[8] = "/   ||    ";
-	foo(&ar[0]);
-	ar[4] = "  \\|  |/ *";
-	ar[5] = "  /|UU|\\/ ";
-	ar[6] = " ---\\/--  ";
-	ar[7] = "/   ||    ";
-	ar[8] = "    ||    ";
-	foo(&ar[0]);
-	ar[4] = "  \\|  |/ /";
-	ar[5] = "  /|UU|\\/ ";
-	ar[6] = "----\\/--  ";
-	ar[7] = "    ||    ";
-	foo(&ar[0]);
-	ar[4] = "  \\|  |/ *";
-	ar[5] = "\\ /|UU|\\/ ";
-	ar[6] = " ---\\/--  ";
-	foo(&ar[0]);
-	ar[4] = "\\ \\|  |/ /";
-	ar[5] = " \\/|UU|\\/ ";
-	ar[6] = "  --\\/--  ";
-	foo(&ar[0]);
-	ar[4] = "* \\|  |/ *";
-	foo(&ar[0]);
-	ar[4] = "  \\|  |/  ";
-	ar[5] = "* /|UU|\\ *";
-	ar[6] = " ---\\/--- ";
-	foo(&ar[0]);
-	ar[5] = "  /|UU|\\  ";
-	ar[6] = "*---\\/---*";
-	foo(&ar[0]);
-	ar[6] = " ---\\/--- ";
-	ar[7] = "*   ||   *";
-	foo(&ar[0]);
-	ar[6] = "  --\\/--  ";
-	ar[7] = " /  ||  \\ ";
-	ar[8] = "*   ||   *";
-	foo(&ar[0]);
-	ar[6] = "  --\\/--  ";
-	ar[7] = " /  ||  \\ ";
-	ar[8] = "/   ||   \\";
-	foo(&ar[0]);
-	return 0;
+    // deloneframe();
+    dance();
+    return 0;
 }
-inline void foo(string* ar) {
-	for (int i = 0; i < 12; i++) {
-		cout << *ar << endl;
-		*ar++;
-	}
-	//Sleep(1000);
-	//system("cls");
+
+// void deloneframe() {system("cls");}
+void head() {
+    std::cout << "   ()()   \n";
+    std::cout << "   ()()   \n";
+    std::cout << "   ()()   \n";
+    std::cout << "   |..|   \n";
+}
+void legs() {
+    std::cout << "    /\\    \n";
+    std::cout << "    ||    \n";
+    std::cout << "   _||_   \n";
+}
+void dance() {
+    for (int i = 0; i <= 28; i++) {
+        // deloneframe();
+        head();
+        switch (i % 14) {
+            case 0: { 
+                std::cout << "  \\|  |/  \n";
+                std::cout << "  /|UU|\\  \n";
+                std::cout << "  --\\/--  \n";
+                std::cout << " /  ||  \\ \n";
+                std::cout << "/   ||   \\\n";break;}
+            case 1: {
+                std::cout << "  \\|  |/  \n";
+                std::cout << "  /|UU|\\  \n";
+                std::cout << " ---\\/--- \n";
+                std::cout << "/   ||   \\\n";
+                std::cout << "    ||    \n";break;}
+            case 2: { 
+                std::cout << "  \\|  |/  \n";
+                std::cout << "  /|UU|\\  \n";
+                std::cout << "  --\\/----\n";
+                std::cout << " /  ||    \n";
+                std::cout << "/   ||    \n"; break;}
+            case 3: { 
+                std::cout << "  \\|  |/  \n";
+                std::cout << "  /|UU|\\ /\n";
+                std::cout << " ---\\/--- \n";
+                std::cout << "/   ||    \n";
+                std::cout << "    ||    \n"; break;}
+            case 4: { 
+                std::cout << "  \\|  |/ /\n";
+                std::cout << "  /|UU|\\/ \n";
+                std::cout << "  --\\/--  \n";
+                std::cout << " /  ||    \n";
+                std::cout << "/   ||    \n"; break;}
+            case 5: { 
+                std::cout << "  \\|  |/ *\n";
+                std::cout << "  /|UU|\\/ \n";
+                std::cout << " ---\\/--  \n";
+                std::cout << "/   ||    \n";
+                std::cout << "    ||    \n"; break;}
+            case 6: { 
+                std::cout << "  \\|  |/ /\n";
+                std::cout << "  /|UU|\\/ \n";
+                std::cout << "----\\/--  \n";
+                std::cout << "    ||    \n";
+                std::cout << "    ||    \n"; break;}
+            case 7: { 
+                std::cout << "  \\|  |/ *\n";
+                std::cout << "\\ /|UU|\\/ \n";
+                std::cout << " ---\\/--  \n";
+                std::cout << "    ||    \n";
+                std::cout << "    ||    \n"; break;}
+            case 8: { 
+                std::cout << "\\ \\|  |/ /\n";
+                std::cout << " \\/|UU|\\/ \n";
+                std::cout << "  --\\/--  \n";
+                std::cout << "    ||    \n";
+                std::cout << "    ||    \n"; break;}
+            case 9: { 
+                std::cout << "* \\|  |/ *\n";
+                std::cout << " \\/|UU|\\/ \n";
+                std::cout << "  --\\/--  \n";
+                std::cout << "    ||    \n";
+                std::cout << "    ||    \n"; break;}
+            case 10: { 
+                std::cout << "  \\|  |/  \n";
+                std::cout << "* /|UU|\\ *\n";
+                std::cout << " ---\\/--- \n";
+                std::cout << "    ||    \n";
+                std::cout << "    ||    \n"; break;}
+            case 11: { 
+                std::cout << "  \\|  |/  \n";
+                std::cout << "  /|UU|\\  \n";
+                std::cout << "*---\\/---*\n";
+                std::cout << "    ||    \n";
+                std::cout << "    ||    \n"; break;}
+            case 12: { 
+                std::cout << "  \\|  |/  \n";
+                std::cout << "  /|UU|\\  \n";
+                std::cout << " ---\\/--- \n";
+                std::cout << "*   ||   *\n";
+                std::cout << "    ||    \n"; break;}
+            case 13: { 
+                std::cout << "  \\|  |/  \n";
+                std::cout << "  /|UU|\\  \n";
+                std::cout << "  --\\/--  \n";
+                std::cout << " /  ||  \\ \n";
+                std::cout << "*   ||   *\n"; break;}
+        }
+        legs();
+        // Sleep(500);
+        // deloneframe();
+    }
 }
