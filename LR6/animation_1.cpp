@@ -101,7 +101,7 @@ int main() {
 		}
 
 		//Sleep(600);
-		system("clear")
+		system("clear");
 		z[4][9] = '/';
 		z[6][0] = '-';
 		z[7][0] = ' ';
