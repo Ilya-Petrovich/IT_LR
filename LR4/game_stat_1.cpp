@@ -79,7 +79,7 @@ int main()
 
 	if (dtraveled == dist)
 	{
-		std::cout << "Congratulations! You have reached destionation point!" << std::endl;
+		std::cout << "Congratulations! You have reached destination point!" << std::endl;
 	}
 	else std::cout << "You haven't reached destination point. " << dist - dtraveled << " km left." << std::endl;
 	return 0;
