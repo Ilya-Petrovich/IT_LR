@@ -185,5 +185,17 @@ int main() {
         std::cout << "    ||    " << std::endl;
         std::cout << "   _||_   " << std::endl;
     }
+    std::cout << "    /\\    " << std::endl;
+    std::cout << "   |oo|   " << std::endl;
+    std::cout << "  (|..|)  " << std::endl;
+    std::cout << "   |--|   " << std::endl;
+    std::cout << "   \\__/   " << std::endl;
+    std::cout << "    ||    " << std::endl;
+    std::cout << "  -| *|-  " << std::endl;
+    std::cout << " / |  | \\ " << std::endl;
+    std::cout << "/   \\/   \\" << std::endl;
+    std::cout << "    /\\    " << std::endl;
+    std::cout << "    ||    " << std::endl;
+    std::cout << "   _||_   " << std::endl;
     return 0;
 }
