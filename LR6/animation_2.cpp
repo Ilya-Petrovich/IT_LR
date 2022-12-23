@@ -497,7 +497,7 @@ void brosww(string* firstEl)
 	//system("cls");
 
 	p[14] = "* / |. | \\                             *";
-	p[155] = "*/  |. |  \\                            *";
+	p[15] = "*/  |. |  \\                            *";
 	for (int i = 0; i < h; i++) cout << p[i] << "\n";
 	//usleep(sleep_time * 1000);
 	//system("cls");
