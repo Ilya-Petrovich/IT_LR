@@ -54,7 +54,7 @@ int main()
 	}
 
 	std::cout << "Your speed before start: " << speed << " km/h" << "\n" << "\n";
-	std::cout << "Fuel comsumption with choosen speed: " << fuelcons << " litres per 100 km" << "\n" << "\n";
+	std::cout << "Fuel consumption with choosen speed: " << fuelcons << " litres per 100 km" << "\n" << "\n";
 	std::cout << "Destination result" << "\n";
 	if (speed != 0)
 	{
