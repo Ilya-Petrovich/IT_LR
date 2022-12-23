@@ -1,23 +1,28 @@
 #include <iostream>
+#include <cmath>
 using namespace std;
-int main()
-{
-	int a, b, c;
-	cout << "Type the first number: "; cin >> a;
-	cout << "Type the second number: "; cin >> b;
-	cout << "Type the third number: "; cin >> c;
-	if (a >= 0 and c >= 0 and b > 0 and a > b) {
-		cout << a << " + " << b << " = " << a + b << '\n';
-		cout << a << " - " << b << " = " << a - b << '\n';
-		cout << a << " * " << b << " = " << a * b << '\n';
-		cout << a << " / " << b << " = " << a / b << '\n';
-		cout << a << " / " << b << " = " << (float)a / (float)b << '\n';
-		cout << a << " % " << b << " = " << a % b << '\n';
-		cout << a << " + " << b << " * " << c << " = " << a + b * c << '\n';
-		cout << "(" << a << " + " << b << ")" << " * " << c << " = " << (a + b) * c << '\n';
+int main() {
+	int num_1, num_2, num_3;
+	cout << "Type the first number: ";
+	cin >> num_1;
+	cout << "Type the second number: ";
+	cin >> num_2;
+	cout << "Type the third number: ";
+	cin >> num_3;
+	if (num_1 > num_2 && num_1 >= 0 && num_2 > 0 && num_3 >= 0)
+	{
+		cout << num_1 << " + " << num_2 << " = " << num_1 + num_2 << endl;
+		cout << num_1 << " - " << num_2 << " = " << num_1 - num_2 << endl;
+		cout << num_1 << " * " << num_2 << " = " << num_1 * num_2 << endl;
+		cout << num_1 << " / " << num_2 << " = " << num_1 / num_2 << endl;
+		cout << double(num_1) << ".0" << " / " << double(num_2) << ".0" << " = " << double(num_1) / double(num_2) << endl;
+		cout << num_1 << " % " << num_2 << " = " << num_1 % num_2 << endl;
+		cout << num_1 << " + " << num_2 << " * " << num_3 << " = " << num_1 + num_2 * num_3 << endl;
+		cout << "(" << num_1 << " + " << num_2 << ")" << " * " << num_3 << " = " << (num_1 + num_2) * num_3 << endl;
 	}
 	else {
-		cout << "Invalid data";
+		cout << "Invalid data" << endl;
 	}
+	system("pause");
 	return 0;
 }
