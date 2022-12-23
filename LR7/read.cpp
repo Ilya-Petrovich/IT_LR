@@ -64,6 +64,7 @@ void writeText(char* buff, long fileSize)
     fclose(file_write);
 
 }
+/*a*/
 
 int main()
 {
