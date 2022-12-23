@@ -91,7 +91,7 @@ int Run()
 		}
 		i++;
 	}
-	while (i != 0)
+	while (i != 1)
 	{
 		for (int ii = 0; ii < 3; ii++)
 		{
@@ -110,6 +110,17 @@ int Run()
 		}
 		i--;
 	}
+	
+	for (int j = 0; j < 20; j++)
+			{
+				int probel = 0;
+				string line_anim = AnimRun(j, probel, 2);
+				if (j == 0 || j == 19)
+					cout << "****************************************\n";
+				else
+					cout << "*" << Probels(begin_prob) << line_anim << Probels(38-begin_prob-probel) << "*\n"; 
+			}
+	begin_prob--;
 	for (int j = 0; j < 20; j++)
 			{
 				int probel = 0;
