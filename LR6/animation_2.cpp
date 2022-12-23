@@ -1,5 +1,4 @@
-﻿
-#include<iostream>
+﻿#include<iostream>
 #include <unistd.h>
 #include<string>
 #define OPEN
@@ -337,7 +336,7 @@ void down(int time, int l)
 
 			switch (i) {
 			case 0:
-				cout << "*" << "    /\\    " << "                            *" << endl;
+				cout << "*" << "    /\\   " << "                             *" << endl;
 				cout << "*" << "   |oo|   " << "                            *" << endl;
 				cout << "*" << "  (|..|)  " << "                            *" << endl;
 				cout << "*" << "   |--|   " << "                            *" << endl;
@@ -353,7 +352,7 @@ void down(int time, int l)
 				break;
 			case 1:
 				cout << "*" << "          " << "                            *" << endl;
-				cout << "*" << "    /\\    " << "                            *" << endl;
+				cout << "*" << "    /\\   " << "                             *" << endl;
 				cout << "*" << "   |oo|   " << "                            *" << endl;
 				cout << "*" << "  (|..|)  " << "                            *" << endl;
 				cout << "*" << "   |--|   " << "                            *" << endl;
@@ -384,7 +383,7 @@ void down(int time, int l)
 
 			switch (i) {
 			case 1:
-				cout << "*" << "    /\\    " << "                            *" << endl;
+				cout << "*" << "    /\\   " << "                             *" << endl;
 				cout << "*" << "   |oo|   " << "                            *" << endl;
 				cout << "*" << "  (|..|)  " << "                            *" << endl;
 				cout << "*" << "   |--|   " << "                            *" << endl;
@@ -400,7 +399,7 @@ void down(int time, int l)
 				break;
 			case 0:
 				cout << "*" << "          " << "                            *" << endl;
-				cout << "*" << "    /\\    " << "                            *" << endl;
+				cout << "*" << "    /\\   " << "                             *" << endl;
 				cout << "*" << "   |oo|   " << "                            *" << endl;
 				cout << "*" << "  (|..|)  " << "                            *" << endl;
 				cout << "*" << "   |--|   " << "                            *" << endl;
@@ -434,7 +433,7 @@ void fly(int p) {
 				cout << "*                                      *" << endl;
 			}
 
-			cout << "*" << "    /\\    " << "                            *" << endl;
+			cout << "*" << "    /\\   " << "                             *" << endl;
 			cout << "*" << "   |oo|   " << "                            *" << endl;
 			cout << "*" << "  (|..|)  " << "                            *" << endl;
 			cout << "*" << "   |--|   " << "                            *" << endl;
@@ -468,7 +467,7 @@ void fly(int p) {
 				cout << "*                                      *" << endl;
 			}
 
-			cout << "*" << "    /\\    " << "                            *" << endl;
+			cout << "*" << "    /\\   " << "                             *" << endl;
 			cout << "*" << "   |oo|   " << "                            *" << endl;
 			cout << "*" << "  (|..|)  " << "                            *" << endl;
 			cout << "*" << "   |--|   " << "                            *" << endl;
@@ -503,7 +502,7 @@ void monetka(int time) {
 		{ "          "},
 		{ "          "},
 		{ "    /\\    "},
-		{ "   |oo|   " },
+		{ "   |oo|   "},
 		{ "  (|..|)  " },
 		{ "   |--|   " },
 		{ "   \\__/   " },
