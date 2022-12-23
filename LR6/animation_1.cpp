@@ -1,5 +1,5 @@
 #include <iostream> 
-#include <windows.h> 
+#include <unistd.h> 
 #include <conio.h> 
 
 using namespace std;
@@ -23,8 +23,8 @@ int main()
         cout << "    ||       " << endl;
         cout << "   _||_      " << endl;
 
-        Sleep(300);
-        system("cls");
+        //Sleep(300);
+        //system("cls");
 
         cout << "------------" << endl;
         cout << "   _[]_   " << endl;
@@ -40,8 +40,8 @@ int main()
         cout << "    ||       " << endl;
         cout << "   _||_      " << endl;
 
-        Sleep(300);
-        system("cls");
+        //Sleep(300);
+        //system("cls");
 
         cout << "------------" << endl;
         cout << "   _[]_   " << endl;
@@ -57,8 +57,8 @@ int main()
         cout << "    ||    " << endl;
         cout << "   _||_   " << endl;
 
-        Sleep(300);
-        system("cls");
+        //Sleep(300);
+        //system("cls");
 
         cout << "------------" << endl;
         cout << "   _[]_   " << endl;
@@ -74,8 +74,8 @@ int main()
         cout << "    ||      " << endl;
         cout << "   _||_     " << endl;
 
-        Sleep(300);
-        system("cls");
+        //Sleep(300);
+        //system("cls");
 
         cout << "------------" << endl;
         cout << "   _[]_    " << endl;
@@ -91,8 +91,8 @@ int main()
         cout << "    ||    " << endl;
         cout << "   _||_   " << endl;
 
-        Sleep(300);
-        system("cls");
+        //Sleep(300);
+        //system("cls");
 
         cout << "------------" << endl;
         cout << "   _[]_    " << endl;
@@ -109,8 +109,8 @@ int main()
         cout << "   _||_    " << endl;
 
 
-        Sleep(300);
-        system("cls");
+        //Sleep(300);
+        //system("cls");
 
         cout << "------------" << endl;
         cout << "   _[]_   " << endl;
@@ -126,8 +126,8 @@ int main()
         cout << "    ||    " << endl;
         cout << "   _||_   " << endl;
 
-        Sleep(300);
-        system("cls");
+        //Sleep(300);
+        //system("cls");
         cout << "------------" << endl;
         cout << "   _[]_   " << endl;
         cout << "   |~~|   " << endl;
@@ -142,8 +142,8 @@ int main()
         cout << "    ||    " << endl;
         cout << "   _||_   " << endl;
 
-        Sleep(300);
-        system("cls");
+        //Sleep(300);
+        //system("cls");
 
 
         cout << "------------" << endl;
@@ -160,8 +160,8 @@ int main()
         cout << "    ||    " << endl;
         cout << "   _||_   " << endl;
 
-        Sleep(300);
-        system("cls");
+        //Sleep(300);
+        //system("cls");
 
         cout << "------------" << endl;
         cout << "   _[]_   " << endl;
@@ -177,8 +177,8 @@ int main()
         cout << "    ||    " << endl;
         cout << "   _||_   " << endl;
 
-        Sleep(300);
-        system("cls");
+        //Sleep(300);
+        //system("cls");
 
         cout << "------------" << endl;
         cout << "   _[]_   " << endl;
@@ -194,8 +194,8 @@ int main()
         cout << "    ||    " << endl;
         cout << "   _||_   " << endl;
 
-        Sleep(300);
-        system("cls");
+        //Sleep(300);
+        //system("cls");
 
         cout << "------------" << endl;
         cout << "   _[]_   " << endl;
@@ -211,8 +211,8 @@ int main()
         cout << "    ||    " << endl;
         cout << "   _||_   " << endl;
 
-        Sleep(300);
-        system("cls");
+        //Sleep(300);
+        //system("cls");
 
         cout << "------------" << endl;
         cout << "   _[]_   " << endl;
@@ -229,8 +229,8 @@ int main()
         cout << "   _||_    " << endl;
 
 
-        Sleep(300);
-        system("cls");
+        //Sleep(300);
+        //system("cls");
 
         cout << "------------" << endl;
         cout << "   _[]_   " << endl;
@@ -247,8 +247,8 @@ int main()
         cout << "   _||_   " << endl;
 
 
-        Sleep(300);
-        system("cls");
+        //Sleep(300);
+        //system("cls");
 
      
 
