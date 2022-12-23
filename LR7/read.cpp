@@ -6,7 +6,7 @@ using namespace std;
 
 void ReadText(char* buff, long fSize);
 
-int main1() {
+int main() {
     FILE* file;
     char filename[100];
     cout << "Input file name"; cin >> filename;
