@@ -1,80 +1,80 @@
 ﻿#define _CRT_SECURE_NO_WARNINGS
-#include<stdio.h>
-#include<iostream>
+#include <iostream>
+#include <stdio.h>
 
 using namespace std;
-
-void writeText(char* buff, long fileSize);
 void readText(char* buff, long fileSize);
 void changeColor(char* buff, long fileSize);
+void writeText(char* buff, long fileSize);
 
 int main() {
+
 	FILE* file;
 
-	char filename[100];
+	char filename[10];
 	cin >> filename;
-
 	file = fopen(filename, "rb");
+
 	long fileSize;
 	fseek(file, 0, SEEK_END);
 	fileSize = ftell(file);
 	rewind(file);
+
 	char* buff = new char[fileSize]();
 	fread(buff, sizeof(char), fileSize, file);
+
 	readText(buff, fileSize);
 
-	file = fopen(filename, "wb");
-	//changeColor(buff, fileSize);
-	//writeText(buff, fileSize);
-	fwrite(buff, sizeof(char), fileSize, file);
-
 	fclose(file);
-	free(buff);
+	cin >> filename;
+	file = fopen(filename, "wb");
+	changeColor(buff, fileSize);
+	writeText(buff, fileSize);
+	fwrite(buff, sizeof(char), fileSize, file);
+	fclose(file);
+	delete[] buff;
 	return 0;
 }
+void readText(char* buff, long fileSize) {
+	char firstByte, secondByte, thirdByte, fourthByte, symbol;
+	int mask = 0x03;
 
+	for (int i = 138; i < fileSize; i += 4) {
+		firstByte = (buff[i] & mask) << 6;
+		secondByte = (buff[i + 1] & mask) << 4;
+		thirdByte = (buff[i + 2] & mask) << 2;
+		fourthByte = buff[i + 3] & mask;
+		symbol = firstByte | secondByte | thirdByte | fourthByte;
+		cout << symbol;
+	}
+	cout << endl;
+}
 void changeColor(char* buff, long fileSize) {
-	int m = 3, b = 255, g = 255, r = 0;
 
 	for (int i = 138; i < fileSize; i += 3) {
-		buff[i] = b;
-		buff[i + 1] = g;
-		buff[i + 2] = r;
+		buff[i] = 230;
+		buff[i + 1] = 216;
+		buff[i + 2] = 173;
 	}
 }
-
-void readText(char* buff, long fileSize) {
-	int fsize = fileSize, m = 3, eb;
-	unsigned int fb, sb, tb, fob;
-
-	for (int i = 138; i < fsize; i += 4) {
-		fb = (buff[i] & m) << 6;
-		sb = (buff[i + 1] & m) << 4;
-		tb = (buff[i + 2] & m) << 2;
-		fob = (buff[i + 3] & m);
-		eb = fb | sb | tb | fob;
-		printf("%c", eb);
-	}
-}
-
 void writeText(char* buff, long fileSize) {
-	char n[10] = { 'P','I','-','2','-','2','2','-','9' };
-	int count = 0, clean_byte = 252, ten_byte = 2;
+
+	char text[12] = { "PI-2-22-9" };
+	int count = 0;
 
 	for (int i = 138; i < fileSize; i += 4) {
 
-		if (count < 10) {
-			buff[i] = (buff[i] & clean_byte) | ((n[count] >> 6) & 3);
-			buff[i + 1] = (buff[i + 1] & clean_byte) | ((n[count] >> 4) & 3);
-			buff[i + 2] = (buff[i + 2] & clean_byte) | ((n[count] >> 2) & 3);
-			buff[i + 3] = (buff[i + 3] & clean_byte) | ((n[count]) & 3);
+		if (count < 12) {
+			buff[i] = (buff[i] & 0xfc) | ((text[count] >> 6) & 0x3);
+			buff[i + 1] = (buff[i + 1] & 0xfc) | ((text[count] >> 4) & 0x3);
+			buff[i + 2] = (buff[i + 2] & 0xfc) | ((text[count] >> 2) & 0x3);
+			buff[i + 3] = (buff[i + 3] & 0xfc) | (text[count] & 0x3);
 		}
 		else {
-			//i = fileSize;
-			buff[i] = buff[i] & clean_byte;
-			buff[i + 1] = (buff[i + 1] & clean_byte) | ten_byte;
-			buff[i + 2] = buff[i + 2] & clean_byte;
-			buff[i + 3] = buff[i + 3] & clean_byte;
+			buff[i] = buff[i] & 0xfc;
+			buff[i + 1] = buff[i + 1] & 0xfc;
+			buff[i + 2] = buff[i + 2] & 0xfc;
+			buff[i + 3] = buff[i + 3] & 0xfc;
 		}
 		count++;
 	}
