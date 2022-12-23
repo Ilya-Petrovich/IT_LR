@@ -2,8 +2,8 @@
 
 int main()
 {
-	int fuel, speed = 0, maxspeed = 110, time = 0, fuelcap = 50;
-	double dist = 360, fuelcons = 0, dtraveled = 0, s, cfuel = 0;
+	int speed = 0, maxspeed = 110, time = 0, fuelcap = 50;
+	double dist = 360, fuelcons = 0, dtraveled = 0, s, cfuel = 0, fuel;
 
 	std::cout << "How much fuel do you have at start? "; std::cin >> fuel;
 	
