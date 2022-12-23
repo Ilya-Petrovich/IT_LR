@@ -1036,7 +1036,7 @@ int main() {
 			//system("cls");
 
 		}
-		system("cls");
+		//system("cls");
 		chars[3][5] = 'o', chars[3][6] = ' ';
 		for (int i = 0; i < 20; i++) {
 			//cout << " ";
