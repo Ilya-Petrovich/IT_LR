@@ -208,10 +208,7 @@ void run(char pers[12][11], int h, int w) {
 		}
 
 	}
-	cout << string(40, '*') << endl;
-	body(pers, h, w, cnt, 40, 12);
-	legs(cnt2, 40, 12);
-	cout << string(40, '*') << endl;
+	output(pers, h, w);
 }
 
 void body(char pers[12][11], int h, int w, int cnt, int ls, int rs) {
