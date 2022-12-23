@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+       <meta charset="UTF-8">
+       <title>...</title>
+       <link rel="stylesheet" type="text/css" href="style.css>
+       <script src="script.js"></script>
+</head>
+<body>
+<p align=left><b style="color:red"><i>О</i></b><b><i>ктябрь уж наступил,</i></b></p>
+<p align=right><i>Уж роща отряхает</i></p>
+<p align=center>
+<</body>
+</html>
