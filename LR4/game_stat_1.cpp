@@ -17,7 +17,6 @@ int main()
 	std::cout << "Fuel: " << fuel << "\n";
 	std::cout << "Fuel capacity: " << fuelcap << "\n";
 	std::cout << "Fuel consumption: " << fuelcons << "\n";
-	std::cout << "Fuel: " << fuel << "\n";
 	std::cout << "Speed: " << speed << "\n";
 	std::cout << "Maximum speed: " << maxspeed << "\n" << "\n";
 	std::cout << "Rout info" << "\n";
