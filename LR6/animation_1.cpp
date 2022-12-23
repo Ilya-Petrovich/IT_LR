@@ -138,6 +138,6 @@ int main()
 		p[7] = " / |  | \\ ";
 		p[8] = "/   \\/   \\";
 	}
-	for (int i = 0; i < b; i++) cout << s[i] << "\n"; 
+	for (int i = 0; i < b; i++) cout << p[i] << "\n"; 
 	return 0;
 }
