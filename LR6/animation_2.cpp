@@ -139,7 +139,7 @@ void dance() {
         case 13: {
             cout << "*   \\__/                               *\n";
             cout << "*    ||                                *\n";
-            cout << "*  -| *|-                             *\n";
+            cout << "*  -| *|-                              *\n";
             cout << "* / |  | \\                             *\n";
             cout << "**   \\/   *                            *\n"; break; }
         }
