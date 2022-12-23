@@ -1,28 +1,23 @@
 ﻿#include <iostream>
-
-using namespace std;
-
 int main() {
-	setlocale(LC_ALL, "Russian");
-	int a, b, c;
-	cout << "Введите первое число: ";
-	cin >> a;
-	cout << "Введите второе число: ";
-	cin >> b;
-	cout << "Введите третье число: ";
-	cin >> c;
-	if (not(a < b || a < 0 || b < 0 || c < 0)) {
-		cout << a << " + " << b << " = " << a + b << '\n';
-		cout << a << " - " << b << " = " << a - b << '\n';
-		cout << a << " * " << b << " = " << a * b << '\n';
-		cout << a << " / " << b << " = " << a / b << '\n';
-		cout << double(a) << ".0" << " / " << double(b) << ".0" << " = " <<(double) a / b << '\n';
-		cout << a << " % " << b << " = " << a % b << '\n';
-		cout << a << " + " << b << " * " << c << " = " << a + b * c << '\n';
-		cout << '('<< a << " + " << b << ')' << " * " << c << " = " <<(a + b) * c << '\n';
-	}
-	else {
-		cout << "Invalid data\n";
+	int num_1, num_2, num_3;
+	std::cout << "Type the first number: "; 
+	std::cin >> num_1;
+	std::cout << "Type the second number: "; 
+	std::cin >> num_2;
+	std::cout << "Type the third number: "; 
+	std::cin >> num_3;
+	if (num_1 > num_2 && num_1 > 0 && num_2 > 0 && num_3 >= 0) {
+		std::cout << num_1 << " + " << num_2 << " = " << num_1 + num_2 << std::endl;
+		std::cout << num_1 << " - " << num_2 << " = " << num_1 - num_2 << std::endl;
+		std::cout << num_1 << " * " << num_2 << " = " << num_1 * num_2 << std::endl;
+		std::cout << num_1 << " / " << num_2 << " = " << num_1 / num_2 << std::endl;
+		std::cout << num_1 << ".0 / " << num_2 << ".0 = " << (float) num_1 / num_2 << std::endl;
+		std::cout << num_1 << " % " << num_2 << " = " <<  num_1 % num_2 << std::endl;
+		std::cout << num_1 << " + " << num_2 << " * " << num_3 << " = " << num_1 + (num_2 * num_3) << std::endl;
+		std::cout << "(" << num_1 << " + " << num_2 << ")" << " * " << num_3 << " = " << (num_1 + num_2) * num_3 << std::endl;
+	} else {
+		std::cout << "Invalid data" << std::endl;
 	}
 	return 0;
 }
