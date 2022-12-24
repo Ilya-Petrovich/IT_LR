@@ -565,7 +565,7 @@ int main() {
 
 		if (number == 2) {
 			for (int k = 0; k < 28; k++) {
-				for (int i = 0; i < 2; i++)
+				for (int i = 0; i < 20; i++)
 				{
 					//cout << " ";
 					for (int j = 0; j < 40; j++)
