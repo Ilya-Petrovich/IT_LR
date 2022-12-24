@@ -1,8 +1,7 @@
-#include<iostream>
+#include <iostream>
 #include <unistd.h>
 using namespace std;
-int main()
-{
+int main() {
     int i = 0;
 
     std::string s1("    /\\    ");
@@ -117,7 +116,4 @@ int main()
         s9[0] = '/'; s9[9] = '\\';
         std::cout << s1 << "\n" << s2 << "\n" << s3 << "\n" << s4 << "\n" << s5 << "\n" << s6 << "\n" << s7 << "\n" << s8 << "\n" << s9 << "\n" << s10 << "\n" << s11 << "\n" << s12 << "\n";
     }
-    cout << endl;
-    system("pause");
-    return 0;
 }
