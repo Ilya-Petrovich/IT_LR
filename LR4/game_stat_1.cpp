@@ -14,12 +14,17 @@ int main() {
 		}
 		cout << "\n\nWhat speed will you choose? "; cin >> s;
 		cout << "Your speed before start: ";
-		if (s >= 0 && s <= 110) {
+		if (s > 0 && s <= 110) {
+			cout << s;
+		}
+		else if (s > 110) {
+			s = 110;
 			cout << s;
 		}
 		else {
-			s = 110;
-			cout << s;
+			cout << "\nInvalid Data" << endl << endl;
+			system("pause");
+			return 0;
 		}
 		cout << " km/h";
 		if (s == 0) {
@@ -30,10 +35,10 @@ int main() {
 		else {
 			fct = s / 10 * s / 10 / 4 - 4.5 * s / 10 + 30;
 			d = f / fct * 100;
+			if (d > 360) {
+				d = 360;
+			}
 			t = d / s * 3600;
-		}
-		if (d > 360) {
-			d = 360;
 		}
 		fc = d / 100 * fct;
 		fr = f - fc;
