@@ -1,5 +1,4 @@
 #include <iostream>
-
 int main() {
 	int num_1, num_2, num_3;
 	std::cout << "Type the first number: ";
