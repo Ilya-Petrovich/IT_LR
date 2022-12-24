@@ -1,5 +1,6 @@
 ﻿#include<iostream>
 #include <unistd.h>
+//#include <windows.h>
 #include<string>
 #define OPEN
 
@@ -322,6 +323,7 @@ void sweep(string r, string l) {
 	cout << "*" << r << " / |  | \\ " << l << "*" << endl;
 	cout << "*" << r << "/   \\/   \\" << l << "*" << endl;
 	cout << "*" << r << "    /\\    " << l << "*" << endl;
+
 }
 
 void down(int time, int l)
@@ -336,7 +338,7 @@ void down(int time, int l)
 
 			switch (i) {
 			case 0:
-				cout << "*" << "    /\\   " << "                             *" << endl;
+				cout << "*" << "    /\\    " << "                            *" << endl;
 				cout << "*" << "   |oo|   " << "                            *" << endl;
 				cout << "*" << "  (|..|)  " << "                            *" << endl;
 				cout << "*" << "   |--|   " << "                            *" << endl;
@@ -352,7 +354,7 @@ void down(int time, int l)
 				break;
 			case 1:
 				cout << "*" << "          " << "                            *" << endl;
-				cout << "*" << "    /\\   " << "                             *" << endl;
+				cout << "*" << "    /\\    " << "                            *" << endl;
 				cout << "*" << "   |oo|   " << "                            *" << endl;
 				cout << "*" << "  (|..|)  " << "                            *" << endl;
 				cout << "*" << "   |--|   " << "                            *" << endl;
@@ -501,18 +503,18 @@ void monetka(int time) {
 		{ "          "},
 		{ "          "},
 		{ "          "},
-		{ "    /\\    "},
-		{ "   |oo|   "},
-		{ "  (|..|)  " },
-		{ "   |--|   " },
-		{ "   \\__/   " },
-		{ "    ||    " },
-		{ "  -| *|-  " },
-		{ " / |  | \\ " },
-		{ "/   \\/   \\" },
-		{ "    /\\    " },
-		{ "    ||    " },
-		{ "   _||_   " }
+		{"    /\\    "},
+		{"   |oo|   "},
+		{"  (|..|)  "},
+		{"   |--|   "},
+		{"   \\__/   "},
+		{"    ||    "},
+		{"  -| *|-  "},
+		{" / |  | \\ "},
+		{"/   \\/   \\"},
+		{"    /\\    "},
+		{"    ||    "},
+		{"   _||_   "}
 	};
 
 	SSS(ram1, time, 1);
