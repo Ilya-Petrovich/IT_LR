@@ -61,11 +61,11 @@ int main(){
 		std::cout << "----------------------------------------\n";
 
 		if (Distance == 360) {
-			std::cout << "Congratulations! You have reached destination point!";
+			std::cout << "Congratulations! You have reached destination point!\n";
 			return 0;
 		}
 
-		std::cout << "You haven't reached destination point. " << 360 - Distance << " km left.";
+		std::cout << "You haven't reached destination point. " << 360 - Distance << " km left.\n";
 	}
 
 }
