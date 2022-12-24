@@ -15,7 +15,7 @@ int main() {
 	file = fopen(filename, "rb");
 
 	long fileSize;
-	fseek(file, 0, SEEK_END);
+	fseek(file, 0, SEEK_END); 
 	fileSize = ftell(file);
 	rewind(file); 
 
