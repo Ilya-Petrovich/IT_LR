@@ -21,7 +21,7 @@ void fourteenthAnim(string arr[]);
 
 int main()
 {
-	//system("clear");	
+	//system("cls");	
 	string A[]
 	{
 			"   ()()   ",     // Список начинается с 0
@@ -42,7 +42,7 @@ int main()
 		for (int j = 0; j < 14; j++) {
 			stAnim(A);
 			func[j](A);
-			//system("clear");
+			//system("cls");
 			if (i == 1 && j == 13) stAnim(A);
 		}
 	}
@@ -53,7 +53,7 @@ void stAnim(string arr[]) {
 	for (int i = 0; i < 12; i++) {
 		cout << arr[i] << endl;
 	}
-	//sleep(1);
+	//sleep(333);
 }
 
 void firstAnim(string arr[]) {
