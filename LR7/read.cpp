@@ -10,8 +10,8 @@ int main() {
 
 	FILE* file;
 
-	char filename[10];
-	cin >> filename;
+	char filename[] = "image.bmp";
+	//cin >> filename;
 	file = fopen(filename, "rb");
 
 	long fileSize;
@@ -24,8 +24,9 @@ int main() {
 	readText(buff, fileSize);
 
 	fclose(file);
-	cin >> filename;
-	file = fopen(filename, "wb");
+	//cin >> filename;
+	char new_filename[] = "changed_image.bmp";
+	file = fopen(new_filename, "wb");
 	changeColor(buff, fileSize);
 	writeText(buff, fileSize);
 	fwrite(buff, sizeof(char), fileSize, file);
