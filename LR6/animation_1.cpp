@@ -1,4 +1,4 @@
-﻿#include <iostream>
+#include <iostream>
 #include <unistd.h>
 
 using namespace std;
@@ -12,9 +12,9 @@ void fifthAnim(string arr[]);
 void sixthAnim(string arr[]);
 void seventhAnim(string arr[]);
 void eighthAnim(string arr[]);
-void ninththAnim(string arr[]);
-void tenththAnim(string arr[]);
-void elevenththAnim(string arr[]);
+void ninthAnim(string arr[]);
+void tenthAnim(string arr[]);
+void eleventhAnim(string arr[]);
 void twelfthAnim(string arr[]);
 void thirteenthAnim(string arr[]);
 void fourteenthAnim(string arr[]);
@@ -28,14 +28,14 @@ int main()
 			"   ()()   ",     //1
 			"   ()()   ",     //2
 			"   |..|   ",     //3...
-			"  \\|  |/  ",    
-			"  /|UU|\\  ",    
-			"  --\\/--  ",    
-			" /  ||  \\ ",    
-			"/   ||   \\",    
-			"    /\\    ",    
-			"    ||    ",     
-			"   _||_   ",     
+			"  \\|  |/  ",
+			"  /|UU|\\  ",
+			"  --\\/--  ",
+			" /  ||  \\ ",
+			"/   ||   \\",
+			"    /\\    ",
+			"    ||    ",
+			"   _||_   ",
 	};
 	void (*func[14])(string[]) = { firstAnim, secondAnim, thirdAnim, fourthAnim, fifthAnim, sixthAnim, seventhAnim, eighthAnim, ninthAnim, tenthAnim, eleventhAnim, twelfthAnim, thirteenthAnim, fourteenthAnim };
 	for (int i = 0; i < 2; i++) {
