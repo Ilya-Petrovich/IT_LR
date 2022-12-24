@@ -6,9 +6,7 @@ void readText(char* buff, long fileSize, FILE* file, int smech);
 
 int main() {
 	FILE* file;
-    	char filename[100];
-    	std::cout << "Input file for read: "; std::cin >> filename;
-   	file = fopen(filename, "rb");
+   	file = fopen("image.bmp", "rb");
 	long fileSize;
 	fseek(file, 0, SEEK_END);
 	fileSize = ftell(file);
