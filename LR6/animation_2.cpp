@@ -243,6 +243,7 @@ void run() {
 
 			switch (k) {
 			case 0:
+				cout << "*" << right << "    /\\    " << left << "*" << endl;
 				cout << "*" << right << "   / |    " << left << "*\n";
 				cout << "*" << right << " _/  |_   " << left << "*\n";
 				cout << string(40, '*') << endl;
@@ -250,12 +251,14 @@ void run() {
 				break;
 
 			case 1:
+				cout << "*" << right << "    /\\    " << left << "*" << endl;
 				cout << "*" << right << "    ||    " << left << "*\n";
 				cout << "*" << right << "   _||_   " << left << "*\n";
 				cout << string(40, '*') << endl;
 				//Sleep(100); system("cls");
 				break;
 			case 2:
+				cout << "*" << right << "    /\\    " << left << "*" << endl;
 				cout << "*" << right << "    | \\   " << left << "*\n";
 				cout << "*" << right << "   _|  \\_ " << left << "*\n";
 				cout << string(40, '*') << endl;
@@ -285,6 +288,7 @@ void run() {
 
 			switch (k) {
 			case 2:
+				cout << "*" << right << "    /\\    " << left << "*" << endl;
 				cout << "*" << right << "   / |    " << left << "*\n";
 				cout << "*" << right << " _/  |_   " << left << "*\n";
 				cout << string(40, '*') << endl;
@@ -292,12 +296,14 @@ void run() {
 				break;
 
 			case 1:
+				cout << "*" << right << "    /\\    " << left << "*" << endl;
 				cout << "*" << right << "    ||    " << left << "*\n";
 				cout << "*" << right << "   _||_   " << left << "*\n";
 				cout << string(40, '*') << endl;
 				//Sleep(100); system("cls");
 				break;
 			case 0:
+				cout << "*" << right << "    /\\    " << left << "*" << endl;
 				cout << "*" << right << "    | \\   " << left << "*\n";
 				cout << "*" << right << "   _|  \\_ " << left << "*\n";
 				cout << string(40, '*') << endl;
@@ -329,7 +335,6 @@ void sweep(string r, string l) {
 	cout << "*" << r << "  -| *|-  " << l << "*" << endl;
 	cout << "*" << r << " / |  | \\ " << l << "*" << endl;
 	cout << "*" << r << "/   \\/   \\" << l << "*" << endl;
-	cout << "*" << r << "    /\\    " << l << "*" << endl;
 
 }
 
