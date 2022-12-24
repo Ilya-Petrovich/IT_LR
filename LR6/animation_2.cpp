@@ -272,6 +272,7 @@ void run() {
 
 
 		for (int k = 0; k < 3; k++) {
+			//c++;
 			if (j == 0 and !(k == 2)) {
 				continue;
 			}
@@ -294,8 +295,7 @@ void run() {
 				cout << "*" << right << "    ||    " << left << "*\n";
 				cout << "*" << right << "   _||_   " << left << "*\n";
 				cout << string(40, '*') << endl;
-				//Sleep(100);
-				//system("cls");
+				//Sleep(100); system("cls");
 				break;
 			case 0:
 				cout << "*" << right << "    | \\   " << left << "*\n";
@@ -305,8 +305,15 @@ void run() {
 				break;
 			}
 		}
+
+		/*sweep(string(0, ' '), string(28, ' '));
+		cout << "*" << "    ||    " << string(28, ' ') << "*\n";
+		cout << "*" << "   _||_   " << string(28, ' ') << "*\n";
+		cout << string(40, '*') << endl;*/
+		//cout << c + 1 << endl;
 	}
 }
+
 
 void sweep(string r, string l) {
 	cout << string(40, '*') << endl;
