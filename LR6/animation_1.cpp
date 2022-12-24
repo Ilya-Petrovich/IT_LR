@@ -1,159 +1,126 @@
-#include <iostream>
-#include <vector>
-#include <string>
-#include <ctime>
-#include <unistd.h>
+﻿#include<iostream>
+#include<unistd.h>
+
 using namespace std;
 
-void print (vector<string>a) {
-	for (auto c : a) {
-		cout << c << endl;
-	}
-}
-void anim1 (vector<string>b) {
-	b[6] = " --| *|-- ";
-	b[7] = "/  |  |  \\";
-	b[8][0] = ' ';
-	b[8][size(b[8]) - 1] = ' ';
-	print(b);
-}
-void anim2 (vector<string>b) {
-	b[6] = "  -| *|---";
-	b[7] = " / |  |";
-	b[8] = "/   \\/";
-	int d;
-	print(b);
-}
-void anim3 (vector<string>b) {
-	b[5] = "    ||   /";
-	b[6] = " --| *|--";
-	b[7] = "/  |  | ";
-	b[8] = "    \\/   ";
-	print(b);
-}
-void anim4 (vector<string>b) {
-	b[5][8] = '/';
-	b[4][9] = '/';
-	b[7][8] = ' ';
-	b[8][9] = ' ';
-	print(b);
-}
-void anim5 (vector<string>b) {
-	b[4][9] = '*';
-	b[5] = "    ||  / ";
-	b[6] = " --| *|- ";
-	b[7] = "/  |  | ";
-	b[8] = "    \\/   ";
-	print(b);
-}
-void anim6 (vector<string>b) {
-	b[4][9] = '/';
-	b[5] = "    ||  / ";
-	b[6] = "---| *|- ";
-	b[7] = "   |  | ";
-	b[8] = "    \\/   ";
-	print(b);
-}
-void anim7 (vector<string>b) {
-	b[4][9] = '*';
-	b[5] = "\\   ||  / ";
-	b[6] = " --| *|- ";
-	b[7] = "   |  | ";
-	b[8] = "    \\/   ";
-	print(b);
-} 
-void anim8 (vector<string>b) {
-	b[4] = "\\  \\__/  /";
-	b[5] = " \\  ||  /";
-	b[6] = "  -| *|-  ";
-	b[7] = "   |  |   ";
-	b[8] = "    \\/     ";
-	print(b);
-}
-void anim9 (vector<string>b) {
-	b[4] = "*  \\__/  *";
-	b[5] = " \\  ||  /";
-	b[6] = "  -| *|-  ";
-	b[7] = "   |  |   ";
-	b[8] = "    \\/     ";
-	print(b);
-}
-void anim10 (vector<string>b) {
-	b[4] = "   \\__/  ";
-	b[5] = "*   ||   *";
-	b[6] = " --| *|-- ";
-	b[7] = "   |  |   ";
-	b[8] = "    \\/     ";
-	print(b);
-}
-void anim11 (vector<string>b) {
-	b[4] = "   \\__/  ";
-	b[5] = "    ||    ";
-	b[6] = "*--| *|--*";
-	b[7] = "   |  |   ";
-	b[8] = "    \\/     ";
-	print (b);
-}
-void anim12 (vector<string>b) {
-	b[4] = "   \\__/  ";
-	b[5] = "    ||    ";
-	b[6] = " --| *|-- ";
-	b[7] = "*  |  |  *";
-	b[8] = "    \\/     ";
-	print (b);
-}
-void anim13 (vector<string>b) {
-	b[4] = "   \\__/  ";
-	b[5] = "    ||    ";
-	b[6] = "  -| *|-  ";
-	b[7] = " / |  |  \\";
-	b[8] = "*   \\/    *";
-	print (b);
-}
-int main () {
-	vector<string> a = { "    /\\    ",
-						"   |oo|   ",
-						"  (|..|)  ",
-						"   |--|   ",
-						"   \\__/   ",
-						"    ||     ",
-						"  -| *|-  ",
-						" / |  | \\ ",
-						"/   \\/   \\",
-						"    /\\    ",
-						"    ||    ",
-						"   _||_   " };
-	for (int j = 0; j < 2; ++j) {
-		for (int i = 0; i < 14; i++) {
-			if (i == 0)
-				print(a);
-			if (i == 1)
-				anim1(a);
-			if (i == 2)
-				anim2(a);
-			if (i == 3)
-				anim3(a);
-			if (i == 4)
-				anim4(a);
-			if (i == 5)
-				anim5(a);
-			if (i == 6)
-				anim6(a);
-			if (i == 7)
-				anim7(a);
-			if (i == 8)
-				anim8(a);
-			if (i == 9)
-				anim9(a);
-			if (i == 10)
-				anim10(a);
-			if (i == 11)
-				anim11(a);
-			if (i == 12)
-				anim12(a);
-			if (i == 13)
-				anim13(a);
+void ShowArray(char pers[12][11], int height, int width) {
+	for (int i = 0; i < height; i++) {
+		for (int j = 0; j < width - 1; j++) {
+			cout << pers[i][j];
 		}
+
+		cout << endl;
 	}
-	return 0;
+}
+
+void SSS(char pers[][11], int t) {
+	ShowArray(pers, 12, 11);
+	//Sleep(t);
+	//system("cls");
+}
+
+
+int main() {
+	const int h = 12, w = 11, t = 750;
+
+	char pers[h][w] = {
+		{"    /\\    "},
+		{"   |oo|   "},
+		{"  (|..|)  "},
+		{"   |--|   "},
+		{"   \\__/   "},
+		{"    ||    "},
+		{"  -| *|-  "},
+		{" / |  | \\ "},
+		{"/   \\/   \\"},
+		{"    /\\    "},
+		{"    ||    "},
+		{"   _||_   "}
+	};
+
+	SSS(pers, t);
+
+	for (int i = 0; i < 2; i++) {
+		pers[6][1] = '-'; pers[7][1] = ' ';
+		pers[6][8] = '-'; pers[7][8] = ' ';
+		pers[8][0] = ' '; pers[8][9] = ' ';
+		pers[7][0] = '/'; pers[7][9] = '\\';
+
+		SSS(pers, t);
+
+		pers[6][1] = ' '; pers[7][0] = ' ';
+		pers[7][9] = ' '; pers[6][9] = '-';
+		pers[7][1] = '/'; pers[8][0] = '/';
+
+		SSS(pers, t);
+
+		pers[6][9] = ' '; pers[6][1] = '-';
+		pers[7][1] = ' '; pers[8][0] = ' ';
+		pers[7][0] = '/'; pers[5][9] = '/';
+
+		SSS(pers, t);
+
+		pers[6][1] = ' '; pers[7][0] = ' ';
+		pers[7][1] = '/'; pers[8][0] = '/';
+		pers[6][8] = ' '; pers[5][10] = ' ';
+		pers[5][8] = '/'; pers[5][9] = ' ';
+		pers[4][9] = '/';
+
+		SSS(pers, t);
+
+		pers[4][9] = '*'; pers[7][1] = ' ';
+		pers[8][0] = ' '; pers[6][1] = '-';
+		pers[7][0] = '/';
+
+		SSS(pers, t);
+
+		pers[4][9] = '/'; pers[7][0] = ' ';
+		pers[6][0] = '-';
+
+		SSS(pers, t);
+
+		pers[4][9] = '*'; pers[6][0] = ' ';
+		pers[5][0] = '\\';
+
+		SSS(pers, t);
+
+		pers[4][9] = '/'; pers[6][1] = ' ';
+		pers[5][1] = '\\'; pers[4][0] = '\\';
+		pers[5][0] = ' ';
+
+		SSS(pers, t);
+
+		pers[4][0] = '*'; pers[4][9] = '*';
+
+		SSS(pers, t);
+
+		pers[4][0] = ' '; pers[4][9] = ' ';
+		pers[5][1] = ' '; pers[5][8] = ' ';
+		pers[6][1] = '-'; pers[6][8] = '-';
+		pers[5][0] = '*'; pers[5][9] = '*';
+
+		SSS(pers, t);
+
+		pers[5][0] = ' '; pers[5][9] = ' ';
+		pers[6][0] = '*'; pers[6][9] = '*';
+
+		SSS(pers, t);
+
+		pers[6][0] = ' '; pers[6][9] = ' ';
+		pers[7][0] = '*'; pers[7][9] = '*';
+
+		SSS(pers, t);
+
+		pers[7][0] = ' '; pers[7][9] = ' ';
+		pers[6][1] = ' '; pers[6][8] = ' ';
+		pers[7][1] = '/'; pers[7][8] = '\\';
+		pers[8][0] = '*'; pers[8][9] = '*';
+
+		SSS(pers, t);
+
+		pers[8][0] = '/'; pers[8][9] = '\\';
+
+		SSS(pers, t);
+
+	}
 }
