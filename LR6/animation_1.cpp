@@ -3,26 +3,26 @@
 
 using namespace std;
 
-void current(string arr[]);
-void firstStage(string arr[]);
-void secondStage(string arr[]);
-void thirdStage(string arr[]);
-void fourthStage(string arr[]);
-void fifthStage(string arr[]);
-void sixthStage(string arr[]);
-void seventhStage(string arr[]);
-void eightStage(string arr[]);
-void nineStage(string arr[]);
-void tenStage(string arr[]);
-void elevenStage(string arr[]);
-void twelveStage(string arr[]);
-void thirteenStage(string arr[]);
-void finalStage(string arr[]);
+void stAnim(string arr[]);
+void firstAnim(string arr[]);
+void secondAnim(string arr[]);
+void thirdAnim(string arr[]);
+void fourthAnim(string arr[]);
+void fifthAnim(string arr[]);
+void sixthAnim(string arr[]);
+void seventhAnim(string arr[]);
+void eighthAnim(string arr[]);
+void ninththAnim(string arr[]);
+void tenththAnim(string arr[]);
+void elevenththAnim(string arr[]);
+void twelfthAnim(string arr[]);
+void thirteenthAnim(string arr[]);
+void fourteenthAnim(string arr[]);
 
 int main()
 {
 	//system("clear");	
-	string S[]
+	string A[]
 	{
 			"   ()()   ",     // Список начинается с 0
 			"   ()()   ",     //1
@@ -37,45 +37,45 @@ int main()
 			"    ||    ",     
 			"   _||_   ",     
 	};
-	void (*func[14])(string[]) = { firstStage, secondStage, thirdStage, fourthStage, fifthStage, sixthStage, seventhStage, eightStage, nineStage, tenStage, elevenStage, twelveStage, thirteenStage, finalStage };
+	void (*func[14])(string[]) = { firstAnim, secondAnim, thirdAnim, fourthAnim, fifthAnim, sixthAnim, seventhAnim, eighthAnim, ninthAnim, tenthAnim, eleventhAnim, twelfthAnim, thirteenthAnim, fourteenthAnim };
 	for (int i = 0; i < 2; i++) {
 		for (int j = 0; j < 14; j++) {
-			current(S);
-			func[j](S);
+			stAnim(A);
+			func[j](A);
 			//system("clear");
-			if (i == 1 && j == 13) current(S);
+			if (i == 1 && j == 13) stAnim(A);
 		}
 	}
 	return 0;
 }
 
-void current(string arr[]) {
+void stAnim(string arr[]) {
 	for (int i = 0; i < 12; i++) {
 		cout << arr[i] << endl;
 	}
 	//sleep(1);
 }
 
-void firstStage(string arr[]) {
+void firstAnim(string arr[]) {
 	arr[6] = " ---\\/--- ";
 	arr[7] = "/   ||   \\";
 	arr[8] = "    ||    ";
 }
 
-void secondStage(string arr[]) {
+void secondAnim(string arr[]) {
 	arr[6] = "  --\\/----";
 	arr[7] = " /  ||    ";
 	arr[8] = "/   ||    ";
 }
 
-void thirdStage(string arr[]) {
+void thirdAnim(string arr[]) {
 	arr[5] = "  /|UU|\\ /";
 	arr[6] = " ---\\/--- ";
 	arr[7] = "/   ||    ";
 	arr[8] = "    ||    ";
 }
 
-void fourthStage(string arr[]) {
+void fourthAnim(string arr[]) {
 	arr[4] = "  \\|  |/ /";
 	arr[5] = "  /|UU|\\/ ";
 	arr[6] = "  --\\/--  ";
@@ -83,7 +83,7 @@ void fourthStage(string arr[]) {
 	arr[8] = "/   ||    ";
 }
 
-void fifthStage(string arr[]) {
+void fifthAnim(string arr[]) {
 	arr[4] = "  \\|  |/ *";
 	arr[5] = "  /|UU|\\/ ";
 	arr[6] = " ---\\/--  ";
@@ -91,50 +91,50 @@ void fifthStage(string arr[]) {
 	arr[8] = "    ||    ";
 }
 
-void sixthStage(string arr[]) {
+void sixthAnim(string arr[]) {
 	arr[4] = "  \\|  |/ /";
 	arr[6] = "----\\/--  ";
 	arr[7] = "    ||    ";
 }
 
-void seventhStage(string arr[]) {
+void seventhAnim(string arr[]) {
 	arr[4] = "  \\|  |/ *";
 	arr[5] = "\\ /|UU|\\/ ";
 	arr[6] = " ---\\/--  ";
 }
 
-void eightStage(string arr[]) {
+void eighthAnim(string arr[]) {
 	arr[4] = "\\ \\|  |/ /";
 	arr[5] = " \\/|UU|\\/ ";
 	arr[6] = "  --\\/--  ";
 }
 
-void nineStage(string arr[]) {
+void ninthAnim(string arr[]) {
 	arr[4] = "* \\|  |/ *";
 }
 
-void tenStage(string arr[]) {
+void tenthAnim(string arr[]) {
 	arr[4] = "  \\|  |/  ";
 	arr[5] = "* /|UU|\\ *";
 	arr[6] = " ---\\/--- ";
 }
 
-void elevenStage(string arr[]) {
+void eleventhAnim(string arr[]) {
 	arr[5] = "  /|UU|\\  ";
 	arr[6] = "*---\\/---*";
 }
 
-void twelveStage(string arr[]) {
+void twelfthAnim(string arr[]) {
 	arr[6] = " ---\\/--- ";
 	arr[7] = "*   ||   *";
 }
 
-void thirteenStage(string arr[]) {
+void thirteenthAnim(string arr[]) {
 	arr[6] = "  --\\/--  ";
 	arr[7] = " /  ||  \\ ";
 	arr[8] = "*   ||   *";
 }
 
-void finalStage(string arr[]) {
+void fourteenthAnim(string arr[]) {
 	arr[8] = "/   ||   \\";
 }
