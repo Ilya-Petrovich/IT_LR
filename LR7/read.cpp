@@ -6,7 +6,7 @@ void ReadText(char* buff, long fSize);
 int main() {
     FILE* file;
     char filename[100];
-    std::cout << "Input file for read: "; std::cin >> filename;
+    std::cin >> filename;
     file = fopen(filename, "rb");
 
     long fSize;
