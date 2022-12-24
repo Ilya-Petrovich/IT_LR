@@ -14,7 +14,7 @@ int main() {
 		}
 		cout << "\n\nWhat speed will you choose? "; cin >> s;
 		cout << "Your speed before start: ";
-		if (s > 0 && s <= 110) {
+		if (s >= 0 && s <= 110) {
 			cout << s;
 		}
 		else if (s > 110) {
