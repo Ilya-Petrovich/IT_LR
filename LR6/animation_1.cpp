@@ -1,355 +1,173 @@
 #include <iostream>
-#include <bits/stdc++.h>
+#include <string>
 #include <unistd.h>
+
 using namespace std;
 
-const int a = 10, b = 12;
+void dancing(string* firstEl,  int t);
 
-int main()
-{
-    for (int i = 1; i < 3; i++)
-        string anim[b] = {
-            "   ()()   ",
-            "   ()()   ",
-            "   ()()   ",
-            "   |..|   ",
-            "  \\|  |/  ",
-            "  /|UU|\\  ",
-            "  --\\/--  ",
-            " /  ||  \\ ",
-            "/   ||   \\",
-            "    /\\    ",
-            "    ||    ",
-            "   _||_   ",
-    };
+int main() {
+	string pers[12] = {
+	"   ()()   ",
+	"   ()()   ",
+	"   ()()   ",
+	"   |..|   ",
+	"  \\|  |/  ",
+	"  /|UU|\\  ",
+	"  --\\/--  ",
+	" /  ||  \\ ",
+	"/   ||   \\",
+	"    /\\    ",
+	"    ||    ",
+	"   _||_   ",
+	};
 
-    for (int i = 0; i < 2; i++)
-    {
-        for (int i = 0; i < b; i++) cout << anim[i] << "\n";
+	
 
+	string* pers0 = pers;
+	dancing(pers0, 500);
 
-        cout << "   ()()   " << endl;
-        cout << "   ()()   " << endl;
-        cout << "   ()()   " << endl;
-        cout << "   |..|   " << endl;
-        cout << "  \\|  |/  " << endl;
-        cout << "  /|UU|\\  " << endl;
-        cout << "  --\\/--  " << endl;
-        cout << " /  ||  \\ " << endl;
-        cout << "/   ||   \\" << endl;
-        cout << "    /\\    " << endl;
-        cout << "    ||    " << endl;
-        cout << "   _||_   " << endl;
+	return 0;
+}
 
-        //Sleep(200);
-        //Sleep(300);
-        //system("cls");
-        anim[6] = " ---\\/--- ";
-        anim[7] = "/   ||   \\";
-        anim[8] = "    ||    ";
-        for (int i = 0; i < b; i++) cout << anim[i] << "\n";
+void dancing(string* firstEl, int t) {
+	int col = 12;
+	string pers[12];
+	string* ptpers = pers;
+	for (int i = 0; i < col; i++, firstEl++) pers[i] = *firstEl;
+	for (int i = 0; i < col; i++) cout << pers[i] << endl;
 
-        cout << "   ()()   " << endl;
-        cout << "   ()()   " << endl;
-        cout << "   ()()   " << endl;
-        cout << "   |..|   " << endl;
-        cout << "  \\|  |/  " << endl;
-        cout << "  /|UU|\\  " << endl;
-        cout << " ---\\/--- " << endl;
-        cout << "/   ||   \\" << endl;
-        cout << "    ||    " << endl;
-        cout << "    /\\    " << endl;
-        cout << "    ||    " << endl;
-        cout << "   _||_   " << endl;
-        //Sleep(300);
-        //system("cls");
-        anim[6] = "  --\\/----";
-        anim[7] = " /  ||    ";
-        anim[8] = "/   ||    ";
-        for (int i = 0; i < b; i++) cout << anim[i] << "\n";
+	for (int q = 0; q < 2; q++) {
+		pers[6] = " ---\\/--- ";
+		pers[7] = "/   ||   \\";
+		pers[8] = "    ||    ";
+		//Sleep(t);
+		//system("cls");
 
-        //Sleep(300);
-        //system("cls");
+		for (int i = 0; i < col; i++) {
+			cout << pers[i]<< endl;
+		}
+		pers[6] = "  --\\/----";
+		pers[7] = " /  ||    ";
+		pers[8] = "/   ||    ";
+		//Sleep(t);
+		//system("cls");
 
-        anim[5] = "  /|UU|\\ /";
-        anim[6] = " ---\\/--- ";
-        anim[7] = "/   ||    ";
-        anim[8] = "    ||    ";
+		for (int i = 0; i < col; i++) {
+			cout<< pers[i]<< endl;
+		}
+		pers[5] = "  /|UU|\\ /";
+		pers[6] = " ---\\/--- ";
+		pers[7] = "/   ||    ";
+		pers[8] = "    ||    ";
+		//Sleep(t);
+		//system("cls");
 
-        //Sleep(200);
-        for (int i = 0; i < b; i++) cout << anim[i] << "\n";
-        //Sleep(300);
-        //system("cls");
+		for (int i = 0; i < col; i++) {
+			cout<< pers[i]<< endl;
+		}
+		pers[4] = "  \\|  |/ /";
+		pers[5] = "  /|UU|\\/ ";
+		pers[6] = "  --\\/--  ";
+		pers[7] = " /  ||    ";
+		pers[8] = "/   ||    ";
+		//Sleep(t);
+		//system("cls");
 
-        cout << "   ()()   " << endl;
-        cout << "   ()()   " << endl;
-        cout << "   ()()   " << endl;
-        cout << "   |..|   " << endl;
-        cout << "  \\|  |/  " << endl;
-        cout << "  /|UU|\\  " << endl;
-        cout << "  --\\/----" << endl;
-        cout << " /  ||    " << endl;
-        cout << "/   ||    " << endl;
-        cout << "    /\\    " << endl;
-        cout << "    ||    " << endl;
-        cout << "   _||_   " << endl;
+		for (int i = 0; i < col; i++) {
+			cout << pers[i] << endl;
+		}
+		pers[4] = "  \\|  |/ *";
+		pers[5] = "  /|UU|\\/ ";
+		pers[6] = " ---\\/--  ";
+		pers[7] = "/   ||    ";
+		pers[8] = "    ||    ";
+		//Sleep(t);
+		//system("cls");
 
-        //Sleep(200);
-        //system("cls");
-        anim[4] = "  \\|  |/ /";
-        anim[5] = "  /|UU|\\/ ";
-        anim[6] = "  --\\/--  ";
-        anim[7] = " /  ||    ";
-        anim[8] = "/   ||    ";
+		for (int i = 0; i < col; i++) {
+			cout << pers[i] << endl;
+		}
+		pers[4] = "  \\|  |/ /";
+		pers[5] = "  /|UU|\\/ ";
+		pers[6] = "----\\/--  ";
+		pers[7] = "    ||    ";
+		pers[8] = "    ||    ";
+		//Sleep(t);
+		//system("cls");
 
-        cout << "   ()()   " << endl;
-        cout << "   ()()   " << endl;
-        cout << "   ()()   " << endl;
-        cout << "   |..|   " << endl;
-        cout << "  \\|  |/  " << endl;
-        cout << "  /|UU|\\ /" << endl;
-        cout << " ---\\/--- " << endl;
-        cout << "/   ||    " << endl;
-        cout << "    ||    " << endl;
-        cout << "    /\\    " << endl;
-        cout << "    ||    " << endl;
-        cout << "   _||_   " << endl;
-        //Sleep(200);
-        for (int i = 0; i < b; i++) cout << anim[i] << "\n";
-        //Sleep(300);
-        //system("cls");
+		for (int i = 0; i < col; i++) {
+			cout << pers[i] << endl;
+		}
+		pers[4] = "  \\|  |/ *";
+		pers[5] = "\\ /|UU|\\/ ";
+		pers[6] = " ---\\/--  ";
+		//Sleep(t);
+		//system("cls");
 
-        cout << "   ()()   " << endl;
-        cout << "   ()()   " << endl;
-        cout << "   ()()   " << endl;
-        cout << "   |..|   " << endl;
-        cout << "  \\|  |/ /" << endl;
-        cout << "  /|UU|\\/ " << endl;
-        cout << "  --\\/--  " << endl;
-        cout << " /  ||    " << endl;
-        cout << "/   ||    " << endl;
-        cout << "    /\\    " << endl;
-        cout << "    ||    " << endl;
-        cout << "   _||_   " << endl;
+		for (int i = 0; i < col; i++) {
+			cout << pers[i] << endl;
+		}
+		pers[4] = "\\ \\|  |/ /";
+		pers[5] = " \\/|UU|\\/ ";
+		pers[6] = "  --\\/--  ";
+		//Sleep(t);
+		//system("cls");
 
+		for (int i = 0; i < col; i++) {
+			cout << pers[i] << endl;
+		}
+		pers[4] = "* \\|  |/ *";
+		pers[5] = " \\/|UU|\\/ ";
+		pers[6] = "  --\\/--  ";
+		//Sleep(t);
+		//system("cls");
 
-        //Sleep(200);
-        anim[4] = "  \\|  |/ *";
-        anim[5] = "  /|UU|\\/ ";
-        anim[6] = " ---\\/--  ";
-        anim[7] = "/   ||    ";
-        anim[8] = "    ||    ";
+		for (int i = 0; i < col; i++) {
+			cout << pers[i] << endl;
+		}
+		pers[4] = "  \\|  |/  ";
+		pers[5] = "* /|UU|\\ *";
+		pers[6] = " ---\\/--- ";
+		//Sleep(t);
+		//system("cls");
 
-        for (int i = 0; i < b; i++) cout << anim[i] << "\n";
-        //Sleep(300);
-        //system("cls");
+		for (int i = 0; i < col; i++) {
+			cout << pers[i] << endl;
+		}
+		pers[5] = "  /|UU|\\  ";
+		pers[6] = "*---\\/---*";
+		//Sleep(t);
+		//system("cls");
 
-        cout << "   ()()   " << endl;
-        cout << "   ()()   " << endl;
-        cout << "   ()()   " << endl;
-        cout << "   |..|   " << endl;
-        cout << "  \\|  |/ *" << endl;
-        cout << "  /|UU|\\/ " << endl;
-        cout << " ---\\/--  " << endl;
-        cout << "/   ||    " << endl;
-        cout << "    ||    " << endl;
-        cout << "    /\\    " << endl;
-        cout << "    ||    " << endl;
-        cout << "   _||_   " << endl;
+		for (int i = 0; i < col; i++) {
+			cout << pers[i] << endl;
+		}
+		pers[6] = " ---\\/--- ";
+		pers[7] = "*   ||   *";
+		//Sleep(t);
+		//system("cls");
 
-        //Sleep(200);
-        anim[4] = "  \\|  |/ /";
-        anim[5] = "  /|UU|\\/ ";
-        anim[6] = "----\\/--  ";
-        anim[7] = "    ||    ";
+		for (int i = 0; i < col; i++) {
+			cout << pers[i] << endl;
+		}
+		pers[6] = "  --\\/--  ";
+		pers[7] = " /  ||  \\ ";
+		pers[8] = "*   ||   *";
+		//Sleep(t);
+		//system("cls");
 
+		for (int i = 0; i < col; i++) {
+			cout << pers[i] << endl;
+		}
+		pers[8] = "/   ||   \\";
+		//Sleep(t);
+		//system("cls");
 
-        for (int i = 0; i < b; i++) cout << anim[i] << "\n";
-        //Sleep(300);
-        //system("cls");
-
-        cout << "   ()()   " << endl;
-        cout << "   ()()   " << endl;
-        cout << "   ()()   " << endl;
-        cout << "   |..|   " << endl;
-        cout << "  \\|  |/ /" << endl;
-        cout << "  /|UU|\\/ " << endl;
-        cout << "----\\/--  " << endl;
-        cout << "    ||    " << endl;
-        cout << "    ||    " << endl;
-        cout << "    /\\    " << endl;
-        cout << "    ||    " << endl;
-        cout << "   _||_   " << endl;
-
-        //Sleep(200);
-        anim[4] = "  \\|  |/ *";
-        anim[5] = "\\ /|UU|\\/ ";
-        anim[6] = " ---\\/--  ";
-        anim[7] = "    ||    ";
-
-
-        for (int i = 0; i < b; i++) cout << anim[i] << "\n";
-        //Sleep(300);
-        //system("cls");
-
-        cout << "   ()()   " << endl;
-        cout << "   ()()   " << endl;
-        cout << "   ()()   " << endl;
-        cout << "   |..|   " << endl;
-        cout << "  \\|  |/ *" << endl;
-        cout << "\\ /|UU|\\/ " << endl;
-        cout << " ---\\/--  " << endl;
-        cout << "    ||    " << endl;
-        cout << "    ||    " << endl;
-        cout << "    /\\    " << endl;
-        cout << "    ||    " << endl;
-        cout << "   _||_   " << endl;
-
-        //Sleep(200);
-        anim[4] = "\\ \\|  |/ /";
-        anim[5] = " \\/|UU|\\/ ";
-        anim[6] = "  --\\/--  ";
-        anim[7] = "    ||    ";
-
-
-        for (int i = 0; i < b; i++) cout << anim[i] << "\n";
-        //Sleep(300);
-        //system("cls");
-
-        cout << "   ()()   " << endl;
-        cout << "   ()()   " << endl;
-        cout << "   ()()   " << endl;
-        cout << "   |..|   " << endl;
-        cout << "\\ \\|  |/ /" << endl;
-        cout << " \\/|UU|\\/ " << endl;
-        cout << "  --\\/--  " << endl;
-        cout << "    ||    " << endl;
-        cout << "    ||    " << endl;
-        cout << "    /\\    " << endl;
-        cout << "    ||    " << endl;
-        cout << "   _||_   " << endl;
-
-
-        //Sleep(200);
-        anim[4] = "* \\|  |/ *";
-        anim[5] = " \\/|UU|\\/ ";
-        anim[7] = "    ||    ";
-
-
-        for (int i = 0; i < b; i++) cout << anim[i] << "\n";
-        //Sleep(300);
-        //system("cls");
-
-        cout << "   ()()   " << endl;
-        cout << "   ()()   " << endl;
-        cout << "   ()()   " << endl;
-        cout << "   |..|   " << endl;
-        cout << "* \\|  |/ *" << endl;
-        cout << " \\/|UU|\\/ " << endl;
-        cout << "  --\\/--  " << endl;
-        cout << "    ||    " << endl;
-        cout << "    ||    " << endl;
-        cout << "    /\\    " << endl;
-        cout << "    ||    " << endl;
-        cout << "   _||_   " << endl;
-
-        //Sleep(200);
-        anim[4] = "  \\|  |/  ";
-        anim[5] = "* /|UU|\\ *";
-        anim[6] = " ---\\/--- ";
-        anim[7] = "    ||    ";
-
-
-        for (int i = 0; i < b; i++) cout << anim[i] << "\n";
-        //Sleep(300);
-        //system("cls");
-
-        cout << "   ()()   " << endl;
-        cout << "   ()()   " << endl;
-        cout << "   ()()   " << endl;
-        cout << "   |..|   " << endl;
-        cout << "  \\|  |/  " << endl;
-        cout << "* /|UU|\\ *" << endl;
-        cout << " ---\\/--- " << endl;
-        cout << "    ||    " << endl;
-        cout << "    ||    " << endl;
-        cout << "    /\\    " << endl;
-        cout << "    ||    " << endl;
-        cout << "   _||_   " << endl;
-
-        //Sleep(200);
-        anim[5] = "  /|UU|\\  ";
-        anim[6] = "*---\\/---*";
-        anim[7] = "    ||    ";
-
-        for (int i = 0; i < b; i++) cout << anim[i] << "\n";
-        //Sleep(300);
-        //system("cls");
-
-        anim[6] = " ---\\/--- ";
-        anim[7] = "*   ||   *";
-
-
-        cout << "   ()()   " << endl;
-        cout << "   ()()   " << endl;
-        cout << "   ()()   " << endl;
-        cout << "   |..|   " << endl;
-        cout << "  \\|  |/  " << endl;
-        cout << "  /|UU|\\  " << endl;
-        cout << "*---\\/---*" << endl;
-        cout << "    ||    " << endl;
-        cout << "    ||    " << endl;
-        cout << "    /\\    " << endl;
-        cout << "    ||    " << endl;
-        cout << "   _||_   " << endl;
-
-        //Sleep(200);
-        for (int i = 0; i < b; i++) cout << anim[i] << "\n";
-        //Sleep(300);
-        //system("cls");
-
-        cout << "   ()()   " << endl;
-        cout << "   ()()   " << endl;
-        cout << "   ()()   " << endl;
-        cout << "   |..|   " << endl;
-        cout << "  \\|  |/  " << endl;
-        cout << "  /|UU|\\  " << endl;
-        cout << " ---\\/--- " << endl;
-        cout << "*   ||   *" << endl;
-        cout << "    ||    " << endl;
-        cout << "    /\\    " << endl;
-        cout << "    ||    " << endl;
-        cout << "   _||_   " << endl;
-
-        //Sleep(200);
-        anim[6] = "  --\\/--  ";
-        anim[7] = " /  ||  \\ ";
-        anim[8] = "*   ||   *";
-
-        for (int i = 0; i < b; i++) cout << anim[i] << "\n";
-        //Sleep(300);
-        //system("cls");
-
-        cout << "   ()()   " << endl;
-        cout << "   ()()   " << endl;
-        cout << "   ()()   " << endl;
-        cout << "   |..|   " << endl;
-        cout << "  \\|  |/  " << endl;
-        cout << "  /|UU|\\  " << endl;
-        cout << "  --\\/--  " << endl;
-        cout << " /  ||  \\ " << endl;
-        cout << "*   ||   *" << endl;
-        cout << "    /\\    " << endl;
-        cout << "    ||    " << endl;
-        cout << "   _||_   " << endl;
-        anim[7] = " /  ||  \\ ";
-        anim[8] = "/   ||   \\";
-
-
-    }
-    for (int i = 0; i < b; i++) cout << anim[i] << "\n";
-
-    //system("pause>>nul");
-    return 0;
-
+		for (int i = 0; i < col; i++) {
+			cout << pers[i] << endl;
+		}
+	}
+	//system("cls");
+	return;
 }
