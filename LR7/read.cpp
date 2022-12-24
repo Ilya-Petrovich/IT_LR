@@ -10,7 +10,7 @@ void readText(char* buff, long filesize);
 void changeColor(char* buff, long filesize);
 void writeText(char* buff, long filesize);
 
-int main(){
+int main() {
     setlocale(LC_ALL, "Russian");
     char filename[100];
     cin >> filename;
@@ -25,7 +25,6 @@ int main(){
     readText(buff,filesize);
     changeColor(buff,filesize);
     writeText(buff,filesize);
-    writeTextMask(buff,filesize);
     free(buff);
     return 0;
 }
