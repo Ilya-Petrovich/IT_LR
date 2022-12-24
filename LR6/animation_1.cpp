@@ -63,9 +63,9 @@ void firstStage(string arr[]) {
 }
 
 void secondStage(string arr[]) {
-	arr[6] = "  --\\. /---  ";
-	arr[7] = " /  |. |  ";
-	arr[8] = "/   |. |  ";
+	arr[6] = "   -\\. /---  ";
+	arr[7] = "  / |. |  ";
+	arr[8] = " /  |. |  ";
 }
 
 void thirdStage(string arr[]) {
