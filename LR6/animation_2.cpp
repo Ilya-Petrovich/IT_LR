@@ -1,509 +1,549 @@
-#include <cstdlib>
-#include <iostream>
-#include <ctime>
-#include <cmath>
-#include <string>
-//include <windows.h>
+#include<bits/stdc++.h>
+#include <unistd.h>
 using namespace std;
 
-int Dance();
-int Run();
-int Jump();
-int Ball();
-string Probels(int n);
-string AnimDance(int n, int &nn, int i);
-string AnimRun(int n, int &nn, int i);
-string AnimJump(int n, int &nn, int i);
-string AnimBall(int n, int &nn, int i);
+const int w = 40, h = 20;
+const int sleep_time = 75;
+
+void dance(string *firstEl);
+void run(string *firstEl);
+void jump(string *firstEl);
+void throww(string *firstEl);
+void solve(string *firstEl);
+
 int main()
 {
-	int n = 0;
-	while (n != 5)
+	string p[h] = {
+		"****************************************",  //  0
+		"*                                      *",  //  1
+		"*                                      *",  //  2
+		"*                                      *",  //  3
+		"*                                      *",  //  4
+		"*                                      *",  //  5
+		"*                                      *",  //  6
+		"*   _[]_                               *",  //  7
+		"*   |~~|                               *",  //  8
+		"*   |oq|                               *",  //  9
+		"*  (|<>|)                              *",  //  10
+		"*   \\--/                               *", //  11
+		"*   _><_                               *",  //  12
+		"*  -\\. /-                              *", //  13
+		"* / |. | \\                             *", //  14
+		"*/  |. |  \\                            *", //  15
+		"*   |__|                               *",  //  16
+		"*    ||                                *",  //  17
+		"*   _||_                               *",  //  18
+		"****************************************"   //  19
+	};
+	
+	string *p0 = p;
+	solve(p0);
+	
+	return 0;
+}
+
+void dance(string *firstEl)
+{
+	string *p = new string[h];
+	for (int i = 0; i < h; i++) p[i] = *(firstEl + i);
+	//system("cls");
+	
+	for(int i = 0; i < h; i++) cout << p[i] << "\n"; // 1
+	//usleep(sleep_time * 1000);
+	//system("cls");
+	
+	for(int i = 0; i < 2; i++)
 	{
+		p[13] = "* --\\. /--                             *";
+		p[14] = "*/  |. |  \\                            *";
+		p[15] = "*   |. |                               *";
+		for(int i = 0; i < h; i++) cout << p[i] << "\n"; // 2
+		//usleep(sleep_time * 1000);
 		//system("cls");
-		std::cout << "Choose animation:" << std::endl;
-		std::cout << "Dance: \t\t\t1" << std::endl;
-		std::cout << "Run: \t\t\t2" << std::endl;
-		std::cout << "Sit down and jump: \t3" << std::endl;
-		std::cout << "Throw a ball: \t\t4" << std::endl << std::endl;
-		std::cout << "Enter 5 for exit." << std::endl;
+		
+		p[13] = "*  -\\. /---                            *";
+		p[14] = "* / |. |                               *";
+		p[15] = "*/  |. |                               *";
+		for(int i = 0; i < h; i++) cout << p[i] << "\n"; // 3
+		//usleep(sleep_time * 1000);
+		//system("cls");
+		
+		p[12] = "*   _><_  /                            *";
+		p[13] = "* --\\. /--                             *";
+		p[14] = "*/  |. |                               *";
+		p[15] = "*   |. |                               *";
+		for(int i = 0; i < h; i++) cout << p[i] << "\n"; // 4
+		//usleep(sleep_time * 1000);
+		//system("cls");
+		
+		p[11] = "*   \\--/  /                            *";
+		p[12] = "*   _><_ /                             *";
+		p[13] = "*  -\\. /-                              *";
+		p[14] = "* / |. |                               *";
+		p[15] = "*/  |. |                               *";
+		for(int i = 0; i < h; i++) cout << p[i] << "\n"; // 5
+		//usleep(sleep_time * 1000);
+		//system("cls");
+		
+		p[11] = "*   \\--/  *                            *";
+		p[12] = "*   _><_ /                             *";
+		p[13] = "* --\\. /-                              *";
+		p[14] = "*/  |. |                               *";
+		p[15] = "*   |. |                               *";
+		for(int i = 0; i < h; i++) cout << p[i] << "\n"; // 7
+		//usleep(sleep_time * 1000);
+		//system("cls");
+		
+		p[11] = "*   \\--/  /                            *";
+		p[12] = "*   _><_ /                             *";
+		p[13] = "*---\\. /-                              *";
+		p[14] = "*   |. |                               *";
+		for(int i = 0; i < h; i++) cout << p[i] << "\n"; // 8
+		//usleep(sleep_time * 1000);
+		//system("cls");
+		
+		p[11] = "*   \\--/  *                            *";
+		p[12] = "*\\  _><_ /                             *";
+		p[13] = "* --\\. /-                              *";
+		for(int i = 0; i < h; i++) cout << p[i] << "\n"; // 9
+		//usleep(sleep_time * 1000);
+		//system("cls");
+		
+		p[11] = "*\\  \\--/  /                            *";
+		p[12] = "* \\ _><_ /                             *";
+		p[13] = "*  -\\. /-                              *";
+		for(int i = 0; i < h; i++) cout << p[i] << "\n"; // 10
+		//usleep(sleep_time * 1000);
+		//system("cls");
+		
+		p[11] = "**  \\--/  *                            *";
+		for(int i = 0; i < h; i++) cout << p[i] << "\n"; // 11
+		//usleep(sleep_time * 1000);
+		//system("cls");
+		
+		p[11] = "*   \\--/                               *";
+		p[12] = "**  _><_  *                            *";
+		p[13] = "* --\\. /--                             *";
+		for(int i = 0; i < h; i++) cout << p[i] << "\n"; // 12
+		//usleep(sleep_time * 1000);
+		//system("cls");
+		
+		p[12] = "*   _><_                               *";
+		p[13] = "**--\\. /--*                            *";
+		for(int i = 0; i < h; i++) cout << p[i] << "\n"; // 13
+		//usleep(sleep_time * 1000);
+		//system("cls");
+		
+		p[13] = "* --\\. /--                             *";
+		p[14] = "**  |. |  *                            *";
+		for(int i = 0; i < h; i++) cout << p[i] << "\n"; // 14
+		//usleep(sleep_time * 1000);
+		//system("cls");
+		
+		p[13] = "*  -\\. /-                              *";
+		p[14] = "* / |. | \\                             *";
+		p[15] = "**  |. |  *                            *";
+		for(int i = 0; i < h; i++) cout << p[i] << "\n"; // 15
+		//usleep(sleep_time * 1000);
+		//system("cls");
+		
+		p[15] = "*/  |. |  \\                            *";
+		for(int i = 0; i < h; i++) cout << p[i] << "\n"; // 16
+		//usleep(sleep_time * 1000);
+		//system("cls");
+	}
+	
+	delete [] p;
+}
+
+void run(string *firstEl)
+{
+	string *p = new string[h];
+	for (int i = 0; i < h; i++) p[i] = *(firstEl + i);
+	
+	//system("cls");
+	//for(int i = 0; i < h; i++) cout << p[i] << "\n";
+	int cnt = 0, step = 0;
+	
+	while(cnt + 10 != 40-2)
+    {
+		string f, s;
+		if (step % 3 == 0)
+		{
+			f = "    ||    ";
+			s = "   _||_   ";
+		}
+		
+		else if (step % 3 == 1)
+		{
+			f = "    | \\   ";
+			s = "   _|  \\_ ";
+		}
+		else if (step % 3 == 2)
+		{
+			f = "   / |    ";
+			s = " _/  |_   ";
+			cnt++;
+		}
+		
+		cout << p[0] << "\n" << p[1] << "\n" << p[2] << "\n" << p[3] << "\n" << p[4] << "\n" << p[5] << "\n" << p[6] << "\n";
+		string s1, s2;
+		s1 = ""; s2 = "";
+		for(int i = 0; i < cnt; i++) s1 += " ";
+		for(int j = 0; j < 28-cnt; j++) s2 += " ";
+		cout << "*" << s1 << "   _[]_   " << s2 << "*\n";
+		cout << "*" << s1 << "   |~~|   " << s2 << "*\n";
+		cout << "*" << s1 << "   |oq|   " << s2 << "*\n";
+		cout << "*" << s1 << "  (|<>|)  " << s2 << "*\n";
+		cout << "*" << s1 << "   \\--/   " << s2 << "*\n";
+		cout << "*" << s1 << "   _><_   " << s2 << "*\n";
+		cout << "*" << s1 << "  -\\. /-  " << s2 << "*\n";
+		cout << "*" << s1 << " / |. | \\ " << s2 << "*\n";
+		cout << "*" << s1 << "/  |. |  \\" << s2 << "*\n";
+		cout << "*" << s1 << "   |__|   " << s2 << "*\n";
+		cout << "*" << s1 << f << s2 << "*\n";
+		cout << "*" << s1 << s << s2 << "*\n";
+		cout << p[19] << "\n";
+		
+		step++;
+		
+		//usleep(sleep_time * 1000);
+		//system("cls");
+	}
+	
+	while(cnt != 0)
+	{
+		//cout << step << " " << cnt << "\n";
+		//if (cnt == 1 && step == 1) break;
+		string f, s;
+		if (step % 3 == 0)
+		{
+			f = "    ||    ";
+			s = "   _||_   ";
+		}
+		else if (step % 3 == 1)
+		{
+			f = "    | \\   ";
+			s = "   _|  \\_ ";
+			cnt--;
+		}
+		else if (step % 3 == 2)
+		{
+			f = "   / |    ";
+			s = " _/  |_   ";
+		}
+		
+		cout << p[0] << "\n" << p[1] << "\n" << p[2] << "\n" << p[3] << "\n" << p[4] << "\n" << p[5] << "\n" << p[6] << "\n";
+		string s1, s2;
+		s1 = ""; s2 = "";
+		for(int i = 0; i < cnt; i++) s1 += " ";
+		for(int j = 0; j < 28-cnt; j++) s2 += " ";
+		cout << "*" << s1 << "   _[]_   " << s2 << "*\n";
+		cout << "*" << s1 << "   |~~|   " << s2 << "*\n";
+		cout << "*" << s1 << "   |oq|   " << s2 << "*\n";
+		cout << "*" << s1 << "  (|<>|)  " << s2 << "*\n";
+		cout << "*" << s1 << "   \\--/   " << s2 << "*\n";
+		cout << "*" << s1 << "   _><_   " << s2 << "*\n";
+		cout << "*" << s1 << "  -\\. /-  " << s2 << "*\n";
+		cout << "*" << s1 << " / |. | \\ " << s2 << "*\n";
+		cout << "*" << s1 << "/  |. |  \\" << s2 << "*\n";
+		cout << "*" << s1 << "   |__|   " << s2 << "*\n";
+		cout << "*" << s1 << f << s2 << "*\n";
+		cout << "*" << s1 << s << s2 << "*\n";
+		cout << p[19] << "\n";
+		
+		step--;
+		
+		//usleep(sleep_time * 1000);
+		//system("cls");
+	}
+	
+	for(int i = 0; i < h; i++) cout << p[i] << "\n";
+	//usleep(sleep_time * 1000);
+	//system("cls");
+	
+	delete [] p;
+}
+
+void jump(string *firstEl)
+{
+	string *p = new string[h];
+	for (int i = 0; i < h; i++) p[i] = *(firstEl + i);
+	
+	//system("cls");
+	for(int i = 0; i < h; i++) cout << p[i] << "\n";   // 1
+	//usleep(sleep_time * 1000);
+	//system("cls");
+	
+	for(int i = 0; i < 7; i++) cout << p[i] << "\n";    // 2
+	cout << p[6] << "\n";
+	for(int i = 7; i < 17; i++) cout << p[i] << "\n";
+	cout << "*   _\\/_                               *\n";
+	cout << p[19] << "\n";
+	//usleep(sleep_time * 1000);
+	//system("cls");
+	
+	p[18] = "*    ||                                *";
+	for(int i = 0; i < h; i++) cout << p[i] << "\n";    // 3
+	//usleep(sleep_time * 1000);
+	//system("cls");
+	
+	for(int i = 0; i < 3; i++)
+	{
+		for(int j = 0; j < 6 - i; j++) cout << p[j] << "\n";
+		for(int j = 7; j < 19; j++) cout << p[j] << "\n";
+		for(int j = 0; j <= i; j++) cout << p[1] << "\n";
+		cout << p[19] << "\n";
+		//usleep(sleep_time * 1000);
+		//system("cls");
+	}
+	
+	for(int i = 3; i > -2; i--)
+	{
+		for(int j = 0; j < 6 - i; j++) cout << p[j] << "\n";
+		for(int j = 7; j < 19; j++) cout << p[j] << "\n";
+		for(int j = 0; j <= i; j++) cout << p[1] << "\n";
+		cout << p[19] << "\n";
+		//usleep(sleep_time * 1000);
+		//system("cls");
+	}
+	
+	for(int i = 0; i < 7; i++) cout << p[i] << "\n";    
+	cout << p[6] << "\n";
+	for(int i = 7; i < 17; i++) cout << p[i] << "\n";
+	cout << "*   _\\/_                               *\n";
+	cout << p[19] << "\n";
+	//usleep(sleep_time * 1000);
+	//system("cls");
+	
+	p[18] = "*   _||_                               *";
+	for(int i = 0; i < h; i++) cout << p[i] << "\n";   // 1
+	//usleep(sleep_time * 1000);
+	//system("cls");
+	
+	delete [] p;
+}
+
+void throww(string *firstEl)
+{
+	string *p = new string[h];
+	for (int i = 0; i < h; i++) p[i] = *(firstEl + i);
+	
+	//system("cls");
+	for(int i = 0; i < h; i++) cout << p[i] << "\n";
+	//usleep(sleep_time * 1000);
+	//system("cls");
+	
+	p[14] = "* / |. | \\o                            *";
+	p[15] = "*/  |. |  -                            *";
+	for(int i = 0; i < h; i++) cout << p[i] << "\n";
+	//usleep(sleep_time * 1000);
+	//system("cls");
+	
+	p[13] = "*  -\\. /- o                            *";
+	p[14] = "* / |. | \\-                            *";
+	p[15] = "*/  |. |                               *";
+	for(int i = 0; i < h; i++) cout << p[i] << "\n";
+	//usleep(sleep_time * 1000);
+	//system("cls");
+	
+	p[12] = "*   _><_  o                            *";
+	p[13] = "*  -\\. /---                            *";
+	p[14] = "* / |. |                               *";
+	for(int i = 0; i < h; i++) cout << p[i] << "\n";
+	//usleep(sleep_time * 1000);
+	//system("cls");
+	
+	p[11] = "*   \\--/  o                            *";
+	p[12] = "*   _><_                               *";
+	p[13] = "*  -\\. /--/                            *";
+	for(int i = 0; i < h; i++) cout << p[i] << "\n";
+	//usleep(sleep_time * 1000);
+	//system("cls");
+	
+	p[10] = "*  (|<>|) o                            *";
+	p[11] = "*   \\--/                               *";
+	p[13] = "*  -\\. /---                            *";
+	for(int i = 0; i < h; i++) cout << p[i] << "\n";
+	//usleep(sleep_time * 1000);
+	//system("cls");
+	
+	p[9] = "*   |oq|  o                            *";
+	p[10] = "*  (|<>|)                              *";
+	p[13] = "*  -\\. /--                             *";
+	p[14] = "* / |. |  \\                            *";
+	for(int i = 0; i < h; i++) cout << p[i] << "\n";
+	//usleep(sleep_time * 1000);
+	//system("cls");
+	
+	p[8] = "*   |~~|  o                            *";
+	p[9] = "*   |oq|                               *";
+	p[13] = "*  -\\. /-                              *";
+	p[14] = "* / |. | \\                             *";
+	p[15] = "*/  |. |  \\                            *";
+	for(int i = 0; i < h; i++) cout << p[i] << "\n";
+	//usleep(sleep_time * 1000);
+	//system("cls");
+	
+	p[7] = "*   _[]_  o                            *";
+	p[8] = "*   |~~|                               *";
+	for(int i = 0; i < h; i++) cout << p[i] << "\n";
+	//usleep(sleep_time * 1000);
+	//system("cls");
+	
+	p[6] = "*        o                             *";
+	p[7] = "*   _[]_                               *";
+	for(int i = 0; i < h; i++) cout << p[i] << "\n";
+	//usleep(sleep_time * 1000);
+	//system("cls");
+	
+	p[5] = "*       o                              *";
+	p[6] = "*                                      *";
+	for(int i = 0; i < h; i++) cout << p[i] << "\n";
+	//usleep(sleep_time * 1000);
+	//system("cls");
+	
+	p[4] = "*      o                               *";
+	p[5] = "*                                      *";
+	for(int i = 0; i < h; i++) cout << p[i] << "\n";
+	//usleep(sleep_time * 1000);
+	//system("cls");
+	
+	p[3] = "*     o                                *"; // pik
+	p[4] = "*                                      *";
+	for(int i = 0; i < h; i++) cout << p[i] << "\n";
+	//usleep(sleep_time * 1000);
+	//system("cls");
+	
+	p[3] = "*    o                                 *"; // pik
+	for(int i = 0; i < h; i++) cout << p[i] << "\n";
+	//usleep(sleep_time * 1000);
+	//system("cls");
+	
+	p[3] = "*                                      *";
+	p[4] = "*   o                                  *";
+	for(int i = 0; i < h; i++) cout << p[i] << "\n";
+	//usleep(sleep_time * 1000);
+	//system("cls");
+	
+	p[4] = "*                                      *";
+	p[5] = "*  o                                   *";
+	for(int i = 0; i < h; i++) cout << p[i] << "\n";
+	//usleep(sleep_time * 1000);
+	//system("cls");
+	
+	p[5] = "*                                      *";
+	p[6] = "* o                                    *";
+	for(int i = 0; i < h; i++) cout << p[i] << "\n";
+	//usleep(sleep_time * 1000);
+	//system("cls");
+	
+	p[6] = "*                                      *";
+	p[7] = "*o  _[]_                               *";
+	for(int i = 0; i < h; i++) cout << p[i] << "\n";
+	//usleep(sleep_time * 1000);
+	//system("cls");
+	
+	p[7] = "*   _[]_                               *";
+	p[8] = "*o  |~~|                               *";
+	for(int i = 0; i < h; i++) cout << p[i] << "\n";
+	//usleep(sleep_time * 1000);
+	//system("cls");
+	
+	p[8] = "*   |~~|                               *";
+	p[9] = "*o  |oq|                               *";
+	p[13] = "* --\\. /-                              *";
+	p[14] = "*/  |. | \\                             *";
+	p[15] = "*   |. |  \\                            *";
+	for(int i = 0; i < h; i++) cout << p[i] << "\n";
+	//usleep(sleep_time * 1000);
+	//system("cls");
+	
+	p[9] = "*   |oq|                               *";
+	p[10] = "*o (|<>|)                              *";
+	p[13] = "*---\\. /-                              *";
+	p[14] = "*   |. | \\                             *";
+	for(int i = 0; i < h; i++) cout << p[i] << "\n";
+	//usleep(sleep_time * 1000);
+	//system("cls");
+	
+	p[9] = "*   |oq|                               *";
+	p[10] = "*  (|<>|)                              *";
+	p[11] = "*o  \\--/                               *";
+	p[13] = "*\\--\\. /-                              *";
+	for(int i = 0; i < h; i++) cout << p[i] << "\n";
+	//usleep(sleep_time * 1000);
+	//system("cls");
+	
+	p[11] = "*   \\--/                               *";
+	p[12] = "*o  _><_                               *";
+	p[13] = "*---\\. /-                              *";
+	for(int i = 0; i < h; i++) cout << p[i] << "\n";
+	//usleep(sleep_time * 1000);
+	//system("cls");
+	
+	p[12] = "*   _><_                               *";
+	p[13] = "*o -\\. /-                              *";
+	p[14] = "*-/ |. | \\                             *";
+	for(int i = 0; i < h; i++) cout << p[i] << "\n";
+	//usleep(sleep_time * 1000);
+	//system("cls");
+	
+	p[13] = "*  -\\. /-                              *";
+	p[14] = "*o/ |. | \\                             *";
+	p[15] = "*-  |. |  \\                            *";
+	for(int i = 0; i < h; i++) cout << p[i] << "\n";
+	//usleep(sleep_time * 1000);
+	//system("cls");
+	
+	p[14] = "* / |. | \\                             *";
+	p[15] = "*/  |. |  \\                            *";
+	for(int i = 0; i < h; i++) cout << p[i] << "\n";
+	//usleep(sleep_time * 1000);
+	//system("cls");
+	
+	delete [] p;
+}
+
+void solve(string *firstEl)
+{
+	string *p = new string[h];
+	for (int i = 0; i < h; i++) p[i] = *(firstEl + i);
+	int n = 0;
+	string *p0 = p;
+	while(n != 5)
+	{
+		cout << "Choose animation:" << endl;
+		cout << "Dance: \t\t\t1" << endl;
+		cout << "Run: \t\t\t2" << endl;
+		cout << "Sit down and jump: \t3" << endl;
+		cout << "Throw a ball: \t\t4" << endl << endl;
+		cout << "Enter 5 for exit." << endl;
+
 		cin >> n;
-		//system("cls");
 		switch(n)
 		{
-			case 1: {Dance(); break;}
-			case 2: {Run(); break;}
-			case 3: {Jump(); break;}
-			case 4: {Ball(); break;}
-			case 5: {return 0; break;}		
+			case 1:
+				dance(p0);
+				break;
+			case 2:
+				run(p0);
+				break;
+			case 3:
+				jump(p0);
+				break;
+			case 4:
+				throww(p0);
+				break;
+			case 5:
+				break;	
+			default:
+				cout << "Invalid input.\n";
+				break;
 		}
-	}
-
-	return 0;
-
-}
-
-
-
-int Dance()
-{
-	for (int i = 0; i < 29; i++)
-	{
-		for (int j = 0; j < 20; j++)
-		{
-			int probel = 0;
-			string line_anim = AnimDance(j, probel, i);
-			if (j == 0 || j == 19)
-				cout << "****************************************\n";
-			else
-			{
-				cout << "*" << line_anim + Probels(38 - probel) << "*" << "\n";
-			}			
-		}
-		//Sleep(800);
-		//system("cls");
-	}
-	return 0;
-}
-
-int Run()
-{
-	int a[3] = {0, 2, 1};
-	int cnt = 0;
-	int i = 0;
-	int begin_prob = 0;
-	while (i != 28)
-	{
-		for (int ii = 0; ii < 3; ii++)
-		{
-			cnt++;
-			for (int j = 0; j < 20; j++)
-			{
-				int probel = 0;
-				string line_anim = AnimRun(j, probel, ii);
-				if (j == 0 || j == 19)
-					cout << "****************************************\n";
-				else
-					cout << "*" << Probels(begin_prob) << line_anim << Probels(38-begin_prob-probel) << "*\n"; 
-			}
-			if (ii == 1)
-				begin_prob++;
-		}
-		i++;
-	}
-	while (i != 1)
-	{
-		for (int ii = 0; ii < 3; ii++)
-		{
-			cnt++;
-			for (int j = 0; j < 20; j++)
-			{
-				int probel = 0;
-				string line_anim = AnimRun(j, probel, a[ii]);
-				if (j == 0 || j == 19)
-					cout << "****************************************\n";
-				else
-					cout << "*" << Probels(begin_prob) << line_anim << Probels(38-begin_prob-probel) << "*\n"; 
-			}
-			if (ii == 1)
-				begin_prob--;
-		}
-		i--;
 	}
 	
-	for (int j = 0; j < 20; j++)
-			{
-				int probel = 0;
-				string line_anim = AnimRun(j, probel, 2);
-				if (j == 0 || j == 19)
-					cout << "****************************************\n";
-				else
-					cout << "*" << Probels(begin_prob) << line_anim << Probels(38-begin_prob-probel) << "*\n"; 
-			}
-	begin_prob--;
-	for (int j = 0; j < 20; j++)
-			{
-				int probel = 0;
-				string line_anim = AnimRun(j, probel, 0);
-				if (j == 0 || j == 19)
-					cout << "****************************************\n";
-				else
-					cout << "*" << Probels(begin_prob) << line_anim << Probels(38-begin_prob-probel) << "*\n"; 
-			}
-	return 0;
-}
-
-int Jump()
-{
-	int probel_up = 6;
-	for (int i = 0; i < 13; i++)
-	{
-		for (int j = 0; j < 20; j++)
-		{
-			int probel = 0;
-			string line_anim = "";
-			if (j == 0 || j == 19)
-				cout << "****************************************" << "\n";
-			else
-			{
-
-				if (j < probel_up || j >= 19 - (6 - probel_up))
-				{
-					line_anim = "";
-					probel = line_anim.size();			
-				}
-				else
-					line_anim = AnimJump(j-probel_up-1, probel, i);
-				cout << "*" + line_anim + Probels(38-probel) + "*\n";
-			}
-		}
-		if (probel_up > 2 && i < 6 && i > 1)
-			probel_up--; 
-		if (probel_up < 6 && i >= 6)
-			probel_up++;
-		//Sleep(1000);
-		//system("cls");
-	}	
-	return 0;
-}
-
-int Ball()
-{
-	for (int i = 0; i < 26; i++)
-	{
-		for (int j = 0; j < 20; j++)
-		{
-			int probel = 0;
-			string line_anim = AnimBall(j, probel, i);
-			if (j == 0 || j == 19)
-				cout << "****************************************\n";
-			else
-			{
-				cout << "*" << line_anim + Probels(38 - probel) << "*" << "\n";
-			}			
-		}
-		//Sleep(800);
-		//system("cls");
-	}
-	return 0;
-}
-
-string Probels(int n)
-{
-	string a = "";
-	for (int i = 0; i < n; i++)
-	{
-		a += " ";
-	}
-	return a;
-}
-
-string AnimDance(int n, int &nn, int i)
-{
-	if (i >= 14)
-	{
-		i -= 14;
-	}
-	string A[20] = {"", "", "", "", "", "", "",
-		"   _[]_",
-		"   |~~|",
-		"   |oq|",
-		"  (|<>|)",
-		"   \\--/",
-		"   _><_",
-		"  -\\. /-",
-		" / |. | \\",
-		"/  |. |  \\",
-		"   |__|",
-		"    ||",
-		"   _||_",
-	};
-	if (i == 1)
-	{
-		A[13] = " --\\. /--";
-		A[14] = "/  |. |  \\";
-		A[15] = "   |. |";
-	}
-	if (i == 2)
-	{
-		A[13] = "  -\\. /---";
-		A[14] = " / |. |";
-		A[15] = "/  |. |";
-	}
-	if (i == 3)
-	{
-		A[12] = "   _><_  /";
-		A[13] = " --\\. /--";
-		A[14] = "/  |. |";
-		A[15] = "   |. |";
-	}
-	if (i == 4)
-	{
-		A[11] = "   \\--/  /";
-		A[12] = "   _><_ /";
-		A[13] = "  -\\. /-";
-		A[14] = " / |. |";
-		A[15] = "/  |. |";
-	}
-	if (i == 5)
-	{
-		A[11] = "   \\--/  *";
-		A[12] = "   _><_ /";
-		A[13] = " --\\. /-";
-		A[14] = "/  |. |";
-		A[15] = "   |. |";
-	}
-	if (i == 6)
-	{
-		A[11] = "   \\--/  /";
-		A[12] = "   _><_ /";
-		A[13] = "---\\. /-";
-		A[14] = "   |. |";
-		A[15] = "   |. |";
-	}
-	if (i == 7)
-	{
-		A[11] = "   \\--/  *";
-		A[12] = "\\  _><_ /";
-		A[13] = " --\\. /-";
-		A[14] = "   |. |";
-		A[15] = "   |. |";
-	}
-	if (i == 8)
-	{
-		A[11] = "\\  \\--/  /";
-		A[12] = " \\ _><_ /";
-		A[13] = "  -\\. /-";
-		A[14] = "   |. |";
-		A[15] = "   |. |";
-	}
-	if (i == 9)
-	{
-		A[11] = "*  \\--/  *";
-		A[12] = " \\ _><_ /";
-		A[13] = "  -\\. /-";
-		A[14] = "   |. |";
-		A[15] = "   |. |";
-	}
-	if (i == 10)
-	{
-		A[12] = "*  _><_  *";
-		A[13] = " --\\. /--";
-		A[14] = "   |. |";
-		A[15] = "   |. |";
-	}
-	if (i == 11)
-	{
-		A[13] = "*--\\. /--*";
-		A[14] = "   |. |";
-		A[15] = "   |. |";
-	}
-	if (i == 12)
-	{
-		A[13] = " --\\. /--";
-		A[14] = "*  |. |  *";
-		A[15] = "   |. |";
-	}
-	if (i == 13)
-	{
-		A[13] = "  -\\. /-";
-		A[14] = " / |. | \\";
-		A[15] = "*  |. |  *";
-	}
-	nn = A[n].size();
-	return A[n];
-}
-
-string AnimRun(int n, int &nn, int i)
-{
-	string A[20] = {"", "", "", "", "", "", "",
-		"   _[]_",
-		"   |~~|",
-		"   |oq|",
-		"  (|<>|)",
-		"   \\--/",
-		"   _><_",
-		"  -\\. /-",
-		" / |. | \\",
-		"/  |. |  \\",
-		"   |__|",
-		"    ||",
-		"   _||_",
-	};
-	if (i == 2)
-	{
-		A[17] = "   / |";
-		A[18] = " _/  |_";
-	}
-	if (i == 1)
-	{
-		A[17] = "    | \\";
-		A[18] = "   _|  \\_";
-	}
 	
-	nn = A[n].size();
-	return A[n];
-}
-
-string AnimJump(int n, int &nn, int i)
-{
-	string A[12] = {
-		"   _[]_",
-		"   |~~|",
-		"   |oq|",
-		"  (|<>|)",
-		"   \\--/",
-		"   _><_",
-		"  -\\. /-",
-		" / |. | \\",
-		"/  |. |  \\",
-		"   |__|",
-		"    ||",
-		"   _||_"
-	};
-	if (i == 1 || i == 11)
-	{
-		A[0] = "";
-		A[1] = "   _[]_";
-		A[2] = "   |~~|";
-		A[3] = "   |oq|";
-		A[4] = "  (|<>|)";
-		A[5] = "   \\--/";
-		A[6] = "   _><_";
-		A[7] = "  -\\. /-";
-		A[8] = " / |. | \\";
-		A[9] = "/  |. |  \\";
-		A[10] = "   |__|";
-		A[11] = "   _\\/_";
-	}
-	if (i > 1 && i != 11 && i != 12)
-	{
-		A[11] = "    ||";
-	}
-	
-	nn = A[n].size();
-	return A[n];
-}
-
-string AnimBall(int n, int &nn, int i)
-{
-	string A[20] = {"", "", "", "", "", "", "",
-		"   _[]_",
-		"   |~~|",
-		"   |oq|",
-		"  (|<>|)",
-		"   \\--/",
-		"   _><_",
-		"  -\\. /-",
-		" / |. | \\",
-		"/  |. |  \\",
-		"   |__|",
-		"    ||",
-		"   _||_",
-	};
-	if (i == 1)
-	{
-		A[14] = " / |. | \\o";
-		A[15] = "/  |. |  -";
-	}
-	if (i == 2)
-	{
-		A[13] = "  -\\. /- o";
-		A[14] = " / |. | \\-";
-		A[15] = "/  |. |";
-	}
-	if (i == 3)
-	{
-		A[12] = "   _><_  o";
-		A[13] = "  -\\. /---";
-		A[14] = " / |. |";
-		A[15] = "/  |. |";
-	}
-	if (i == 4)
-	{
-		A[11] = "   \\--/  o";
-		A[13] = "  -\\. /--/";
-		A[14] = " / |. |";
-		A[15] = "/  |. |";
-	}
-	if (i == 5)
-	{
-		A[10] = "  (|<>|) o";
-		A[13] = "  -\\. /---";
-		A[14] = " / |. |";
-		A[15] = "/  |. |";
-	}
-	if (i == 6)
-	{
-		A[9] = "   |oq|  o";
-		A[13] = "  -\\. /--";
-		A[14] = " / |. |  \\";
-		A[15] = "/  |. |";
-	}
-	if (i == 7)
-		A[8] = "   |~~|  o";
-	if (i == 8)
-		A[7] = "   _[]_  o";
-	if (i == 9)
-	    A[6] = "        o";
-	if (i == 10)
-		A[5] = "       o";
-	if (i == 11)
-		A[4] = "      o";
-	if (i == 12)
-		A[3] = "     o";
-	if (i == 13)
-		A[3] = "    o";
-	if (i == 14)
-		A[4] = "   o";
-	if (i == 15)
-		A[5] = "  o";
-	if (i == 16)
-		A[6] = " o";
-	if (i == 17)
-		A[7] = "o  _[]_";
-	if (i == 18)
-		A[8] = "o  |~~|";
-	if (i == 19)
-	{
-		A[9] = "o  |oq|";
-		A[13] = " --\\. /-";
-		A[14] = "/  |. | \\";
-		A[15] = "   |. |  \\";
-	}
-	if (i == 20)
-	{
-		A[10] = "o (|<>|)";
-		A[13] = "---\\. /-";
-		A[14] = "   |. | \\";
-		A[15] = "   |. |  \\";
-	}
-	if (i == 21)
-	{
-		A[11] = "o  \\--/";
-		A[13] = "\\--\\. /-";
-		A[14] = "   |. | \\";
-		A[15] = "   |. |  \\";
-	}
-	if (i == 22)
-	{
-		A[12] = "o  _><_";
-		A[13] = "---\\. /-";
-		A[14] = "   |. | \\";
-		A[15] = "   |. |  \\";
-	}
-	if (i == 23)
-	{
-		A[13] = "o -\\. /-";
-		A[14] = "-/ |. | \\";
-		A[15] = "   |. |  \\";
-	}
-	if (i == 24)
-	{
-		A[13] = "  -\\. /-";
-		A[14] = "o/ |. | \\";
-		A[15] = "-  |. |  \\";
-	}
-	nn = A[n].size();
-	return A[n];
+	delete [] p;
+	return;
 }
