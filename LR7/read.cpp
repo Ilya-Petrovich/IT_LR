@@ -5,18 +5,20 @@ void readText(char* buff, long fileSize, FILE* file, int smech) {
 	int firstbyte, secondbyte, thirdbyte, fourthbyte, simbol;
 	fread(buff, sizeof(char), fileSize, file);
 	for (int i = smech; i <= fileSize; i += 4) {
-		firstbyte = buff[i] & 0b00000011;
-		secondbyte = (buff[i + 1] & 0b00000011) << 2;
-		thirdbyte = (buff[i + 2 & 0b00000011]) << 4;
-		fourthbyte = (buff[i + 3] & 0b00000011) << 6;
-		simbol = firstbyte | secondbyte | thirdbyte | fourthbyte;
-		std::cout << simbol;
+		firstbyte = (buff[i] & 3) << 6;
+		secondbyte = (buff[i + 1] & 3) << 4;
+		thirdbyte = (buff[i + 2] & 3) << 2;
+		fourthbyte = (buff[i + 3] & 3);
+		simbol = (firstbyte | secondbyte | thirdbyte | fourthbyte);
+		std::cout << char(simbol);
 	}
 }
 
 int main() {
 	FILE* file;
-	file = fopen("image.bmp", "rb");
+    	char filename[100];
+    	std::cout << "Input file for read: "; std::cin >> filename;
+   	file = fopen(filename, "rb");
 	long fileSize;
 	fseek(file, 0, SEEK_END);
 	fileSize = ftell(file);
