@@ -1,4 +1,4 @@
-#define _CRT_SECURE_NO_WARNINGS
+//#define _CRT_SECURE_NO_WARNINGS
 #include<stdio.h>
 #include<iostream>
 
@@ -24,8 +24,8 @@ int main() {
 	readText(buff, fileSize);
 
 	file = fopen(filename, "wb");
-	changeColor(buff, fileSize);
-	writeText(buff, fileSize);
+	//changeColor(buff, fileSize);
+	//writeText(buff, fileSize);
 	fwrite(buff, sizeof(char), fileSize, file);
 
 	fclose(file);
@@ -70,7 +70,7 @@ void writeText(char* buff, long fileSize) {
 			buff[i + 3] = (buff[i + 3] & clean_byte) | ((n[count]) & 3);
 		}
 		else {
-			i = fileSize;
+			//i = fileSize;
 			buff[i] = buff[i] & clean_byte;
 			buff[i + 1] = (buff[i + 1] & clean_byte) | ten_byte;
 			buff[i + 2] = buff[i + 2] & clean_byte;
