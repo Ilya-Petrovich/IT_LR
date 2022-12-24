@@ -1,141 +1,228 @@
 #include <iostream>
-#include <windows.h>//Заменить на unistd.h
+#include <windows.h>
 
 using namespace std;
 
-void n(const int s, string p[]) {
+/*void n(const int s, string p[]) {
     Sleep(500);
-    system("cls");//Удалить
+    system("cls");//�������
     for (int i = 0; i < s; i++) {
         cout << p[i] << endl;
     }
-}
+}*/
 void main() {
     const int s = 12;
     string p[s] = { "   _[]_   ", "   |~~|   ", "   |oq|   ", "  (|<>|)  ", "   \\--/   ", "   _><_   ", "  -\\. /-  "," / |. | \\ ", "/  |. |  \\", "   |__|   ", "    ||    ", "   _||_   " };
-    n(s, p);
+    for (int i = 0; i < s; i++) {
+        cout << p[i] << endl;
+    }
+    //n(s, p);
     p[6] = " --\\. /-- ";
     p[7] = "/  |. |  \\";
     p[8] = "   |. |  ";
-    n(s, p);
+    for (int i = 0; i < s; i++) {
+        cout << p[i] << endl;
+    }
+    //n(s, p);
     p[6] = "  -\\. /--- ";
     p[7] = " / |. |  ";
     p[8] = "/  |. |  ";
-    n(s, p);
+    for (int i = 0; i < s; i++) {
+        cout << p[i] << endl;
+    }
+    //n(s, p);
     p[5] = "   _><_  /";
     p[6] = " --\\. /-- ";
     p[7] = "/  |. |  ";
     p[8] = "   |. |  ";
-    n(s, p);
+    for (int i = 0; i < s; i++) {
+        cout << p[i] << endl;
+    }
+    //n(s, p);
     p[4] = "   \\--/   /";
     p[5] = "   _><_  /";
     p[6] = "  -\\. /- ";
     p[7] = " / |. |  ";
     p[8] = "/  |. |  ";
-    n(s, p);
+    for (int i = 0; i < s; i++) {
+        cout << p[i] << endl;
+    }
+    //n(s, p);
     p[4] = "   \\--/   *";
     p[5] = "   _><_  /";
     p[6] = " --\\. /- ";
     p[7] = "/  |. |  ";
     p[8] = "   |. |  ";
-    n(s, p);
+    for (int i = 0; i < s; i++) {
+        cout << p[i] << endl;
+    }
+    //n(s, p);
     p[4] = "   \\--/   /";
     p[5] = "   _><_  /";
     p[6] = "---\\. /- ";
     p[7] = "   |. |  ";
     p[8] = "   |. |  ";
-    n(s, p);
+    for (int i = 0; i < s; i++) {
+        cout << p[i] << endl;
+    }
+    //n(s, p);
     p[4] = "   \\--/   *";
     p[5] = "\\  _><_  /";
     p[6] = " --\\. /- ";
     p[7] = "   |. |  ";
     p[8] = "   |. |  ";
-    n(s, p);
+    for (int i = 0; i < s; i++) {
+        cout << p[i] << endl;
+    }
+    //n(s, p);
     p[4] = "\\  \\--/   /";
     p[5] = " \\ _><_  /";
     p[6] = "  -\\. /- ";
     p[7] = "   |. |  ";
     p[8] = "   |. |  ";
-    n(s, p);
+    for (int i = 0; i < s; i++) {
+        cout << p[i] << endl;
+    }
+    //n(s, p);
     p[4] = "*  \\--/   *";
-    n(s, p);
+    for (int i = 0; i < s; i++) {
+        cout << p[i] << endl;
+    }
+    //n(s, p);
     p[4] = "   \\--/   ";
     p[5] = "*  _><_   *";
     p[6] = " --\\. /--";
-    n(s, p);
+    for (int i = 0; i < s; i++) {
+        cout << p[i] << endl;
+    }
+    //n(s, p);
     p[4] = "   \\--/   ";
     p[5] = "   _><_   ";
     p[6] = "*--\\. /--*";
-    n(s, p);
+    for (int i = 0; i < s; i++) {
+        cout << p[i] << endl;
+    }
+    //n(s, p);
     p[6] = " --\\. /--";
     p[7] = "*  |. |  *";
-    n(s, p);
+    for (int i = 0; i < s; i++) {
+        cout << p[i] << endl;
+    }
+    //n(s, p);
     p[6] = "  -\\. /-";
     p[7] = " / |. | \\";
     p[8] = "*  |. |  *";
-    n(s, p);
+    for (int i = 0; i < s; i++) {
+        cout << p[i] << endl;
+    }
+    //n(s, p);
     p[8] = "/  |. |  \\";
-    n(s, p);
+    for (int i = 0; i < s; i++) {
+        cout << p[i] << endl;
+    }
+    //n(s, p);
     p[6] = " --\\. /-- ";
     p[7] = "/  |. |  \\";
     p[8] = "   |. |  ";
-    n(s, p);
+    for (int i = 0; i < s; i++) {
+        cout << p[i] << endl;
+    }
+    //n(s, p);
     p[6] = "  -\\. /--- ";
     p[7] = " / |. |  ";
     p[8] = "/  |. |  ";
-    n(s, p);
+    for (int i = 0; i < s; i++) {
+        cout << p[i] << endl;
+    }
+    //n(s, p);
     p[5] = "   _><_  /";
     p[6] = " --\\. /-- ";
     p[7] = "/  |. |  ";
     p[8] = "   |. |  ";
-    n(s, p);
+    for (int i = 0; i < s; i++) {
+        cout << p[i] << endl;
+    }
+    //n(s, p);
     p[4] = "   \\--/   /";
     p[5] = "   _><_  /";
     p[6] = "  -\\. /- ";
     p[7] = " / |. |  ";
     p[8] = "/  |. |  ";
-    n(s, p);
+    for (int i = 0; i < s; i++) {
+        cout << p[i] << endl;
+    }
+    //n(s, p);
     p[4] = "   \\--/   *";
     p[5] = "   _><_  /";
     p[6] = " --\\. /- ";
     p[7] = "/  |. |  ";
     p[8] = "   |. |  ";
-    n(s, p);
+    for (int i = 0; i < s; i++) {
+        cout << p[i] << endl;
+    }
+    //n(s, p);
     p[4] = "   \\--/   /";
     p[5] = "   _><_  /";
     p[6] = "---\\. /- ";
     p[7] = "   |. |  ";
     p[8] = "   |. |  ";
-    n(s, p);
+    for (int i = 0; i < s; i++) {
+        cout << p[i] << endl;
+    }
+    //n(s, p);
     p[4] = "   \\--/   *";
     p[5] = "\\  _><_  /";
     p[6] = " --\\. /- ";
     p[7] = "   |. |  ";
     p[8] = "   |. |  ";
-    n(s, p);
+    for (int i = 0; i < s; i++) {
+        cout << p[i] << endl;
+    }
+    //n(s, p);
     p[4] = "\\  \\--/   /";
     p[5] = " \\ _><_  /";
     p[6] = "  -\\. /- ";
     p[7] = "   |. |  ";
     p[8] = "   |. |  ";
-    n(s, p);
+    for (int i = 0; i < s; i++) {
+        cout << p[i] << endl;
+    }
+    //n(s, p);
     p[4] = "*  \\--/   *";
-    n(s, p);
+    for (int i = 0; i < s; i++) {
+        cout << p[i] << endl;
+    }
+    //n(s, p);
     p[4] = "   \\--/   ";
     p[5] = "*  _><_   *";
     p[6] = " --\\. /--";
-    n(s, p);
+    for (int i = 0; i < s; i++) {
+        cout << p[i] << endl;
+    }
+    //n(s, p);
     p[4] = "   \\--/   ";
     p[5] = "   _><_   ";
     p[6] = "*--\\. /--*";
-    n(s, p);
+    for (int i = 0; i < s; i++) {
+        cout << p[i] << endl;
+    }
+    //n(s, p);
     p[6] = " --\\. /--";
     p[7] = "*  |. |  *";
-    n(s, p);
+    for (int i = 0; i < s; i++) {
+        cout << p[i] << endl;
+    }
+    //n(s, p);
     p[6] = "  -\\. /-";
     p[7] = " / |. | \\";
     p[8] = "*  |. |  *";
-    n(s, p);
+    for (int i = 0; i < s; i++) {
+        cout << p[i] << endl;
+    }
+    //n(s, p);
     p[8] = "/  |. |  \\";
-    n(s, p);
+    for (int i = 0; i < s; i++) {
+        cout << p[i] << endl;
+    }
+    //n(s, p);
 }
