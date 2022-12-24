@@ -1,4 +1,3 @@
-#define _CRT_SECURE_NO_WARNINGS
 #include <iostream>
 #include <stdio.h>
 #include <cstring>
@@ -10,7 +9,6 @@ FILE* file;
 void readText(char* buff, long filesize);
 void changeColor(char* buff, long filesize);
 void writeText(char* buff, long filesize);
-void writeTextMask(char* buff, long filesize);
 
 int main(){
     setlocale(LC_ALL, "Russian");
