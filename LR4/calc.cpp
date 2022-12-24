@@ -1,27 +1,21 @@
-
 #include <iostream>
 using namespace std;
 int main() {
-	setlocale(LC_ALL, "Russian");
-	int a, b, c;
-	cout << "¬ведите первое число:= ";
-	cin >> a;
-	cout << "¬ведите второе число:=  ";
-	cin >> b;
-	cout << "¬ведите третье число:= ";
-	cin >> c;
-	if (not(a < b || a < 0 || b < 0 || c < 0)) {
-		cout << a << " + " << b << " = " << a + b << '\n';
-		cout << a << " - " << b << " = " << a - b << '\n';
-		cout << a << " * " << b << " = " << a * b << '\n';
-		cout << a << " / " << b << " = " << a / b << '\n';
-		cout << double(a) << ".0" << " / " << double(b) << ".0" << " = " <<(double) a / b << '\n';
-		cout << a << " % " << b << " = " << a % b << '\n';
-		cout << a << " + " << b << " * " << c << " = " << a + b * c << '\n';
-		cout << '('<< a << " + " << b << ')' << " * " << c << " = " <<(a + b) * c << '\n';
+	int num1, num2, num3;
+	cout << "Type the first number: "; cin >> num1;
+	cout << "Type the second number: "; cin >> num2;
+	cout << "Type the third number: "; cin >> num3;
+	if (!(num1 > num2&& num1 >= 0 && num2 > 0 && num3 >= 0)) {
+		cout << "Invalid data" << endl;
+		return 0;
 	}
-	else {
-		cout << "Invalid data\n";
-	}
+	cout << num1 << " + " << num2 << " = " << num1 + num2 << endl;
+	cout << num1 << " - " << num2 << " = " << num1 - num2 << endl;
+	cout << num1 << " * " << num2 << " = " << num1 * num2 << endl;
+	cout << num1 << " / " << num2 << " = " << num1 / num2 << endl;
+	cout << num1 << ".0" << " / " << num2 << ".0" << " = " << (double)num1 / num2 << endl;
+	cout << num1 << " % " << num2 << " = " << num1 % num2 << endl;
+	cout << num1 << " + " << num2 << " * " << num3 << " = " << num1 + num2 * num3 << endl;
+	cout << "(" << num1 << " + " << num2 << ")" << " * " << num3 << " = " << (num1 + num2) * num3 << endl;
 	return 0;
 }
