@@ -93,7 +93,6 @@ void fifthStage(string arr[]) {
 
 void sixthStage(string arr[]) {
 	arr[4] = "   \\--/  / ";
-	arr[5] = "   _><_ / ";
 	arr[6] = "---\\. /-  ";
 	arr[7] = "   |. |  ";
 }
