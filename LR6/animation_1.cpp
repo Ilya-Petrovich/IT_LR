@@ -37,13 +37,13 @@ void print(vector<string> person)
 }
 
 void sleep() {
-    usleep(delay);
+    Sleep(1000);
     system("clear");
 }
 
 void dance(vector<string> person)
 {
-    int delay = 350*1000;
+    int delay = 350 * 1000;
     for (int i = 0; i < 2; i++)
     {
         person[6] = " --| *|-- ";
