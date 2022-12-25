@@ -23,9 +23,9 @@ int main() {
 	fread(buff, sizeof(char), fileSize, file);
 	readText(buff, fileSize);
 
-	/*fclose(file);
+	fclose(file);
 	cin >> filename;
-	file = fopen(filename, "wb");
+	/*file = fopen(filename, "wb");
 	changeColor(buff, fileSize);
 	writeText(buff, fileSize);
 	fwrite(buff, sizeof(char), fileSize, file);*/
@@ -50,9 +50,9 @@ void readText(char* buff, long fileSize) {
 void changeColor(char* buff, long fileSize) {
 
 	for (int i = 138; i < fileSize; i += 3) {
-		buff[i] = 180;	// first byte - 01001101
-		buff[i + 1] = 105;	// second byte - 01001100
-		buff[i + 2] = 255;	// third byte - 11011110
+		buff[i] = 139;	// first byte - 01001101
+		buff[i + 1] = 0;	// second byte - 01001100
+		buff[i + 2] = 139;	// third byte - 11011110
 	}
 }
 void writeText(char* buff, long fileSize) {
