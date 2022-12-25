@@ -1,81 +1,61 @@
 //#define _CRT_SECURE_NO_WARNINGS
-#include<stdio.h>
-#include<iostream>
+#include <stdio.h>
+#include <iostream>
 
-using namespace std;
-
-void writeText(char* buff, long fileSize);
-void readText(char* buff, long fileSize);
-void changeColor(char* buff, long fileSize);
+void ChangeColor(char* buff, long fSize);
+void WriteText(char* buff, long fSize);
 
 int main() {
-	FILE* file;
+    FILE* file;
+    char filename[100];
+    std::cout << "Input filename for read: "; std::cin >> filename;
+    file = fopen(filename, "rb");
 
-	char filename[100];
-	cin >> filename;
+    long fSize;
+    fseek(file, 0, SEEK_END);
+    fSize = ftell(file);
+    rewind(file);
 
-	file = fopen(filename, "rb");
-	long fileSize;
-	fseek(file, 0, SEEK_END);
-	fileSize = ftell(file);
-	rewind(file);
-	char* buff = new char[fileSize]();
-	fread(buff, sizeof(char), fileSize, file);
-	readText(buff, fileSize);
+    char* buff = new char[fSize]();
+    fread(buff, 1, fSize, file);
+    fclose(file);
 
-	file = fopen(filename, "wb");
-	//changeColor(buff, fileSize);
-	//writeText(buff, fileSize);
-	fwrite(buff, sizeof(char), fileSize, file);
+    std::cout << "Input filename for write: "; std::cin >> filename;
+    file = fopen(filename, "wb");
 
-	fclose(file);
-	free(buff);
-	return 0;
+    ChangeColor(buff, fSize);
+    WriteText(buff, fSize);
+
+    fwrite(buff, fSize, 1, file);
+
+    fclose(file);
+
+    free(buff);
 }
 
-void changeColor(char* buff, long fileSize) {
-	int m = 3, b = 209, g = 206, r = 0;
-
-	for (int i = 138; i < fileSize; i += 3) {
-		buff[i] = b;
-		buff[i + 1] = g;
-		buff[i + 2] = r;
-	}
+void ChangeColor(char* buff, long fSize) {
+    std::cout << std::endl << std::endl << std::endl;
+    for (int i = 138; i < fSize;) {
+        buff[i] = 209 & 0xfc; // change B-num
+        buff[i + 1] = 206 & 0xfc; // change G-num
+        buff[i + 2] = 0 & 0xfc; // change R-num
+        i += 3;
+    }
 }
-
-void readText(char* buff, long fileSize) {
-	int fsize = fileSize, m = 3, eb;
-	unsigned int fb, sb, tb, fob;
-
-	for (int i = 138; i < fsize; i += 4) {
-		fb = (buff[i] & m) << 6;
-		sb = (buff[i + 1] & m) << 4;
-		tb = (buff[i + 2] & m) << 2;
-		fob = (buff[i + 3] & m);
-		eb = fb | sb | tb | fob;
-		printf("%c", eb);
-	}
-}
-
-void writeText(char* buff, long fileSize) {
-	char n[10] = { 'P','I','-','2','-','2','2','-','1','1' };
-	int count = 0, clean_byte = 252, ten_byte = 2;
-
-	for (int i = 138; i < fileSize; i += 4) {
-
-		if (count < 10) {
-			buff[i] = (buff[i] & clean_byte) | ((n[count] >> 6) & 3);
-			buff[i + 1] = (buff[i + 1] & clean_byte) | ((n[count] >> 4) & 3);
-			buff[i + 2] = (buff[i + 2] & clean_byte) | ((n[count] >> 2) & 3);
-			buff[i + 3] = (buff[i + 3] & clean_byte) | ((n[count]) & 3);
-		}
-		else {
-			//i = fileSize;
-			buff[i] = buff[i] & clean_byte;
-			buff[i + 1] = (buff[i + 1] & clean_byte) | ten_byte;
-			buff[i + 2] = buff[i + 2] & clean_byte;
-			buff[i + 3] = buff[i + 3] & clean_byte;
-		}
-		count++;
-	}
+void WriteText(char* buff, long fSize) {
+    std::string text = "PI-2-22-11"; // change your group-num text
+    int start_of_byte = fSize - 1200;
+    std::string::iterator it = text.begin();
+    for (std::string::iterator it = text.begin(); it != text.end(); ++it) {
+        char symbol = *it;
+        int first_byte_of_symbol = (int)((symbol & (3 << 6)) >> 6);
+        int second_byte_of_symbol = (int)((symbol & (3 << 4)) >> 4);
+        int third_byte_of_symbol = (int)((symbol & (3 << 2)) >> 2);
+        int fourth_byte_of_symbol = (int)(symbol & 3);
+        buff[start_of_byte] = (buff[start_of_byte] & 0xfc) | first_byte_of_symbol;
+        buff[start_of_byte + 1] = (buff[start_of_byte + 1] & 0xfc) | second_byte_of_symbol;
+        buff[start_of_byte + 2] = (buff[start_of_byte + 2] & 0xfc) | third_byte_of_symbol;
+        buff[start_of_byte + 3] = (buff[start_of_byte + 3] & 0xfc) | fourth_byte_of_symbol;
+        start_of_byte += 4;
+    }
 }
