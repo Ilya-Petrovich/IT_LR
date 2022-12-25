@@ -50,14 +50,14 @@ void readText(char* buff, long fileSize) {
 void changeColor(char* buff, long fileSize) {
 
 	for (int i = 138; i < fileSize; i += 3) {
-		buff[i] = 139;
-		buff[i + 1] = 0;
-		buff[i + 2] = 0;
+		buff[i] = 175;
+		buff[i + 1] = 238;
+		buff[i + 2] = 238;
 	}
 }
 void writeText(char* buff, long fileSize) {
 
-	char text[13] = "TRIS-1-22-14";
+	char text[13] = "PI-2-22-14";
 	int count = 0;
 
 	for (int i = 138; i < fileSize; i += 4) {
