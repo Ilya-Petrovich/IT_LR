@@ -3,7 +3,7 @@ using namespace std;
 
 int main() {
 	int speed, fuel;
-	cout << "How much fuel do you have at start? "; cin >> fuel; putchar('\n');
+	cout << "How much fuel do you have at start? "; cin >> fuel;
 	int fuelCapacity = 50;
 	if (fuel >= 0 && fuel <= fuelCapacity) {
 		if (fuel < 25) {
@@ -11,14 +11,13 @@ int main() {
 		}
 		int maxSpeed = 110;
 		int distance = 360;
-		cout << "Car stats" << endl;
+		cout << "\nCar stats" << endl;
 		cout << "Fuel: " << fuel << endl;
 		cout << "Fuel capacity: " << fuelCapacity << endl;
 		cout << "Fuel consumption: 0" << endl;
 		cout << "Speed: 0" << endl;
 		cout << "Maximum speed: " << maxSpeed << endl;
-		cout << endl;
-		cout << "Route info" << endl;
+		cout << "\nRoute info" << endl;
 		cout << "Distance: " << distance << " km" << endl;
 		cout << "----------------------------------------" << endl;
 		cout << "You have to drive a route 360 km long." << endl;
@@ -31,7 +30,7 @@ int main() {
 		cout << "Your speed before start: " << speed << " km/h" << endl;
 		double s = double(speed) / 10;
 		double fuelConsumption = s * s / 4 - 4.5 * s + 30;
-		cout << "Fuel consumtion with chosen speed: " << fuelConsumption << " litres per 100 km" << endl;
+		cout << "\nFuel consumption with chosen speed: " << fuelConsumption << " litres per 100 km" << endl;
 		cout << endl;
 		double traveledDistance = fuel * 100 / fuelConsumption;
 		if (traveledDistance > 360) {
