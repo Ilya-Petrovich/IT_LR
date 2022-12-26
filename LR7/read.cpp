@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <bitset>
 
-using namespace std;/
+using namespace std;
 
 void readText(char* buff, long fileSize);
 int main()
