@@ -36,14 +36,14 @@ int main() {
 void ChangeColor(char* buff, long fSize) {
     std::cout << std::endl << std::endl << std::endl;
     for (int i = 138; i < fSize;) {
-        buff[i] = 255 & 0xffff; // change B-num 
-        buff[i + 1] = 255 & 0xffff; // change G-num 
-        buff[i + 2] = 0 & 0xffff; // change R-num 
+        buff[i] = 255 & 0xffff;
+        buff[i + 1] = 255 & 0xffff;  
+        buff[i + 2] = 0 & 0xffff; 
         i += 3;
     }
 }
 void WriteText(char* buff, long fSize) {
-    std::string text = "PI-2-22-9"; // change your group-num text 
+    std::string text = "PI-2-22-9";
     int start_of_byte = fSize - 1200;
     std::string::iterator it = text.begin();
     for (std::string::iterator it = text.begin(); it != text.end(); ++it) {
