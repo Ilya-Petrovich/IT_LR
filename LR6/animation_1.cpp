@@ -1,6 +1,6 @@
 #include <iostream>
 #include <string>
-#include <windows.h>
+#include <unistd.h>
 
 using namespace std;
 
@@ -123,50 +123,20 @@ void anim14(string a[]) {
 
 int main() {
 	pechat(a);
-	Sleep(500);
-	system("cls");
 	for (int i = 1; i <= 2; i++) {
 		anim1(a);
-		Sleep(500);
-		system("cls");
 		anim2(a);
-		Sleep(500);
-		system("cls");
 		anim3(a);
-		Sleep(500);
-		system("cls");
 		anim4(a);
-		Sleep(500);
-		system("cls");
 		anim5(a);
-		Sleep(500);
-		system("cls");
 		anim6(a);
-		Sleep(500);
-		system("cls");
 		anim7(a);
-		Sleep(500);
-		system("cls");
 		anim8(a);
-		Sleep(500);
-		system("cls");
 		anim9(a);
-		Sleep(500);
-		system("cls");
 		anim10(a);
-		Sleep(500);
-		system("cls");
 		anim11(a);
-		Sleep(500);
-		system("cls");
 		anim12(a);
-		Sleep(500);
-		system("cls");
 		anim13(a);
-		Sleep(500);
-		system("cls");
 		anim14(a);
-		Sleep(500);
-		system("cls");
 	}
 }
