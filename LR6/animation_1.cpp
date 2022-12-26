@@ -2,206 +2,206 @@
 #include <unistd.h>
 using namespace std;
 int main() {
-	const int line = 12;
+	const int rows = 12;
 	int l = 0;
 
-	string z[line] = {
-	" ()() ",
-	" ()() ",
-	" ()() ",
-	" |..| ",
-	" \\| |/ ",
-	" /|UU|\\ ",
-	" —\\/— ",
-	" / || \\ ",
-	"/ || \\",
-	" /\\ ",
-	" || ",
-	" _||_ "
+	string m[rows] = { "    /\\    ",
+					 "   |oo|   ",
+					 "  (|..|)  ",
+					 "   |--|   ",
+					 "   \\__/   ",
+					 "    ||    ",
+					 "  -| *|-  ",
+					 " / |  | \\ ",
+					 "/   \\/   \\",
+					 "    /\\    ",
+					 "    ||    ",
+					 "   _||_   "
 	};
 
-	for (int i = 0; i < line; i++) {
-		cout << z[i] << endl;
+	for (int i = 0; i < rows; i++) {
+		cout << m[i] << endl;
 	}
 
 	while (l < 2) {
-		//Sleep(600);
-		system("clear");
-		z[6][1] = '-';
-		z[6][8] = '-';
-		z[7][0] = '/';
-		z[7][1] = ' ';
-		z[7][8] = ' ';
-		z[7][9] = '\\';
-		z[8][0] = ' ';
-		z[8][9] = ' ';
+		//Sleep(700);
+		//system("cls");
+		m[6][1] = '-';
+		m[6][8] = '-';
+		m[7][0] = '/';
+		m[7][1] = ' ';
+		m[7][8] = ' ';
+		m[7][9] = '\\';
+		m[8][0] = ' ';
+		m[8][9] = ' ';
 
-		for (int i = 0; i < line; i++) {
-			cout << z[i] << endl;
+		for (int i = 0; i < rows; i++) {
+			cout << m[i] << endl;
 		}
 
-		//Sleep(600);
-		system("clear");
-		z[6][1] = ' ';
-		z[6][8] = '-';
-		z[6][9] = '-';
-		z[7][0] = ' ';
-		z[7][1] = '/';
-		z[7][8] = ' ';
-		z[7][9] = ' ';
-		z[8][0] = '/';
+		//Sleep(700);
+		//system("cls");
+		m[6][1] = ' ';
+		m[6][8] = '-';
+		m[6][9] = '-';
+		m[7][0] = ' ';
+		m[7][1] = '/';
+		m[7][8] = ' ';
+		m[7][9] = ' ';
+		m[8][0] = '/';
 
-		for (int i = 0; i < line; i++) {
-			cout << z[i] << endl;
+		for (int i = 0; i < rows; i++) {
+			cout << m[i] << endl;
 		}
 
-		//Sleep(600);
-		system("clear");
-		z[5][9] = '/';
-		z[6][1] = '-';
-		z[6][9] = ' ';
-		z[6][8] = '-';
-		z[7][0] = '/';
-		z[7][1] = ' ';
-		z[7][9] = ' ';
-		z[7][8] = ' ';
-		z[8][0] = ' ';
+		//Sleep(700);
+		//system("cls");
+		m[5][9] = '/';
+		m[6][1] = '-';
+		m[6][9] = ' ';
+		m[6][8] = '-';
+		m[7][0] = '/';
+		m[7][1] = ' ';
+		m[7][9] = ' ';
+		m[7][8] = ' ';
+		m[8][0] = ' ';
 
-		for (int i = 0; i < line; i++) {
-			cout << z[i] << endl;
+		for (int i = 0; i < rows; i++) {
+			cout << m[i] << endl;
 		}
-		//Sleep(600);
-		system("clear");
-		z[5][8] = '/';
-		z[5][9] = ' ';
-		z[4][9] = '/';
-		z[6][1] = ' ';
-		z[6][8] = ' ';
-		z[6][9] = ' ';
-		z[7][0] = ' ';
-		z[7][1] = '/';
-		z[8][0] = '/';
+		//Sleep(700);
+		//system("cls");
+		m[5][8] = '/';
+		m[5][9] = ' ';
+		m[4][9] = '/';
+		m[6][1] = ' ';
+		m[6][8] = ' ';
+		m[6][9] = ' ';
+		m[7][0] = ' ';
+		m[7][1] = '/';
+		m[8][0] = '/';
 
-		for (int i = 0; i < line; i++) {
-			cout << z[i] << endl;
-		}
-
-		//Sleep(600);
-		system("clear");
-		z[5][8] = '/';
-		z[5][9] = ' ';
-		z[4][9] = '*';
-		z[6][1] = '-';
-		z[7][0] = '/';
-		z[7][1] = ' ';
-		z[8][0] = ' ';
-
-		for (int i = 0; i < line; i++) {
-			cout << z[i] << endl;
+		for (int i = 0; i < rows; i++) {
+			cout << m[i] << endl;
 		}
 
-		//Sleep(600);
-		system("clear");
-		z[4][9] = '/';
-		z[6][0] = '-';
-		z[7][0] = ' ';
+		//Sleep(700);
+		//system("cls");
+		m[5][8] = '/';
+		m[5][9] = ' ';
+		m[4][9] = '*';
+		m[6][1] = '-';
+		m[7][0] = '/';
+		m[7][1] = ' ';
+		m[8][0] = ' ';
 
-		for (int i = 0; i < line; i++) {
-			cout << z[i] << endl;
+		for (int i = 0; i < rows; i++) {
+			cout << m[i] << endl;
 		}
 
-		//Sleep(600);
-		system("clear");
-		z[4][9] = '*';
-		z[5][0] = '\\';
-		z[6][0] = ' ';
+		//Sleep(700);
+		//system("cls");
+		m[4][9] = '/';
+		m[6][0] = '-';
+		m[7][0] = ' ';
 
-		for (int i = 0; i < line; i++) {
-			cout << z[i] << endl;
+		for (int i = 0; i < rows; i++) {
+			cout << m[i] << endl;
 		}
 
-		//Sleep(600);
-		system("clear");
-		z[4][9] = '/';
-		z[4][0] = '\\';
-		z[5][0] = ' ';
-		z[5][1] = '\\';
-		z[6][0] = ' ';
-		z[6][1] = ' ';
+		//Sleep(700);
+		//system("cls");
+		m[4][9] = '*';
+		m[5][0] = '\\';
+		m[6][0] = ' ';
 
-		for (int i = 0; i < line; i++) {
-			cout << z[i] << endl;
+		for (int i = 0; i < rows; i++) {
+			cout << m[i] << endl;
 		}
 
-		//Sleep(600);
-		system("clear");
-		z[4][9] = '*';
-		z[4][0] = '*';
+		//Sleep(700);
+		//system("cls");
+		m[4][9] = '/';
+		m[4][0] = '\\';
+		m[5][0] = ' ';
+		m[5][1] = '\\';
+		m[6][0] = ' ';
+		m[6][1] = ' ';
 
-		for (int i = 0; i < line; i++) {
-			cout << z[i] << endl;
+		for (int i = 0; i < rows; i++) {
+			cout << m[i] << endl;
 		}
 
-		//Sleep(600);
-		system("clear");
-		z[4][9] = ' ';
-		z[4][0] = ' ';
-		z[5][0] = '*';
-		z[5][1] = ' ';
-		z[5][8] = ' ';
-		z[5][9] = '*';
-		z[6][1] = '-';
-		z[6][8] = '-';
+		//Sleep(700);
+		//system("cls");
+		m[4][9] = '*';
+		m[4][0] = '*';
 
-		for (int i = 0; i < line; i++) {
-			cout << z[i] << endl;
+		for (int i = 0; i < rows; i++) {
+			cout << m[i] << endl;
 		}
 
-		//Sleep(600);
-		system("clear");
-		z[5][0] = ' ';
-		z[5][9] = ' ';
-		z[6][0] = '*';
-		z[6][9] = '*';
+		//Sleep(700);
+		//system("cls");
+		m[4][9] = ' ';
+		m[4][0] = ' ';
+		m[5][0] = '*';
+		m[5][1] = ' ';
+		m[5][8] = ' ';
+		m[5][9] = '*';
+		m[6][1] = '-';
+		m[6][8] = '-';
 
-		for (int i = 0; i < line; i++) {
-			cout << z[i] << endl;
+		for (int i = 0; i < rows; i++) {
+			cout << m[i] << endl;
 		}
 
-		//Sleep(600);
-		system("clear");
-		z[6][0] = ' ';
-		z[6][9] = ' ';
-		z[7][0] = '*';
-		z[7][9] = '*';
+		//Sleep(700);
+		//system("cls");
+		m[5][0] = ' ';
+		m[5][9] = ' ';
+		m[6][0] = '*';
+		m[6][9] = '*';
 
-		for (int i = 0; i < line; i++) {
-			cout << z[i] << endl;
+		for (int i = 0; i < rows; i++) {
+			cout << m[i] << endl;
 		}
 
-		//Sleep(600);
-		system("clear");
-		z[6][1] = ' ';
-		z[6][8] = ' ';
-		z[7][1] = '/';
-		z[7][8] = '\\';
-		z[7][0] = ' ';
-		z[7][9] = ' ';
-		z[8][0] = '*';
-		z[8][9] = '*';
+		//Sleep(700);
+		//system("cls");
+		m[6][0] = ' ';
+		m[6][9] = ' ';
+		m[7][0] = '*';
+		m[7][9] = '*';
 
-		for (int i = 0; i < line; i++) {
-			cout << z[i] << endl;
+		for (int i = 0; i < rows; i++) {
+			cout << m[i] << endl;
 		}
 
-		//Sleep(600);
-		system("clear");
-		z[8][0] = '/';
-		z[8][9] = '\\';
+		//Sleep(700);
+		//system("cls");
+		m[6][1] = ' ';
+		m[6][8] = ' ';
+		m[7][1] = '/';
+		m[7][8] = '\\';
+		m[7][0] = ' ';
+		m[7][9] = ' ';
+		m[8][0] = '*';
+		m[8][9] = '*';
 
-		for (int i = 0; i < line; i++) {
-			cout << z[i] << endl;
+		for (int i = 0; i < rows; i++) {
+			cout << m[i] << endl;
+		}
+
+		//Sleep(700);
+		//system("cls");
+		m[8][0] = '/';
+		m[8][9] = '\\';
+
+		for (int i = 0; i < rows; i++) {
+			cout << m[i] << endl;
 		}
 		l++;
 	}
 }
+
