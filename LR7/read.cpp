@@ -20,9 +20,9 @@ void readText(char* buff, long fileSize) {
 void changeColor(char* buff, long fileSize) {
 
 	for (int i = 138; i < fileSize; i += 3) {
-		buff[i] = 255;	// first byte - 01001101
+		buff[i] = 0;	// first byte - 01001101
 		buff[i + 1] = 255;	// second byte - 01001100
-		buff[i + 2] = 0;	// third byte - 11011110
+		buff[i + 2] = 255;	// third byte - 11011110
 	}
 }
 void writeText(char* buff, long fileSize) {
