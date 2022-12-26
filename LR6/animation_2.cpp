@@ -154,8 +154,8 @@ void run() {
             magic(move_right, move_left);
             switch (k) {
             case 0: {
-                std::cout << "*" << move_right << "   / |   " << move_left << " *\n";
-                std::cout << "*" << move_right << " _/  |_   " << move_left << "*\n";
+                std::cout << "*" << move_right << "    / |  " << move_left << " *\n";
+                std::cout << "*" << move_right << "  _/  |_  " << move_left << "*\n";
                 std::cout << std::string(40, '*') << '\n';
                 //Sleep(500); //system("cls");
                 break;
@@ -169,7 +169,7 @@ void run() {
             }
             case 2: {
                 std::cout << "*" << move_right << "    | \\   " << move_left << "*\n";
-                std::cout << "*" << move_right << "   _|  \\_   " << move_left << "\b\b*\n";
+                std::cout << "*" << move_right << "   _|  \\_ " << move_left << "*\n";
                 std::cout << std::string(40, '*') << '\n';
                 //Sleep(500); //system("cls"); 
                 break;
