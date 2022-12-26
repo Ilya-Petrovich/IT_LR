@@ -1,7 +1,7 @@
 #include <iostream>
 void readText(char* buff, long fileSize);
 void read(char* buff, long fileSize);
-int main()
+void main()
 {
 	long fileSize;
 	char* buff = new char[fileSize]();
