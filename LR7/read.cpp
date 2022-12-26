@@ -1,6 +1,7 @@
 ﻿#include <stdio.h>
 #include <iostream>
 void ReadText(char* buff, long fSize);
+
 int main()
 {
     FILE* file;

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> <!-- Определяем кодировку символов документа -->
+    <title>...</title> <!-- Задаем заголовок документа -->
+    <link rel="stylesheet" type="text/css" href="style.css"> <!-- Подключаем внешнюю таблицу стилей -->
+    <style type = "text/css">
+        td{
+            background-color: white;
+        }
+        th{
+            background-color: white;
+        }
+        .margin_p{
+            margin: 0px;
+        }
+        td{
+        	font-size: 21pt;
+        	border-style: solid;
+        	border-width: 2px;
+        	border-top-color: silver;
+        	border-left-color: silver;
+        	border-right-color: black;
+        	border-bottom-color: black;
+
+        }
+        th{
+        	font-size: 23pt;
+        }
+        table{
+        	border-style: solid;
+        	border-width: 2px;
+        	border-top-color: black;
+        	border-left-color: black;
+        	border-right-color: silver;
+        	border-bottom-color: silver;
+        }
+
+    </style>
+
+</head>
+<body>
+    <br clear="right">
+    <table border="5" style="background-color: gray;" cellspacing="15" align="center">
+        <tr>
+            <th colspan="3">
+                УЧЕБНАЯ ТАБЛИЦА
+            </th>
+        </tr>
+        <tr>
+            <td >Это первая ячейка</td>
+            <td >Это вторая ячейка</td>
+            <td rowspan="3" align="center">А это три ячейки <br> третьего столбца <br> объединились в од-<br>ну большую</td>
+        </tr>
+        <tr>
+            <td colspan="2" >Это единственная ячейка второй строки,<br> объединяющая оба столбца</td>
+        </tr>
+        <tr>
+            <td>Это первая ячейка<br> третьей строки</td>
+            <td>А это вторая ячейка<br> третьей строки</td>
+        </tr>
+            <tr>
+                <td colspan="3" height="10">
+                    <p class="margin_p" align=center>конец</p>
+                </td>
+        </tr>
+    </table>
+</body>
+</html>
