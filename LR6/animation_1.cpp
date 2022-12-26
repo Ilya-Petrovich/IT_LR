@@ -1,141 +1,142 @@
 #include <iostream>
-#include <unistd.h>
+#include <string>
+#include <windows.h>
 
 using namespace std;
 
+string a[12]{
+	"   _[]_   ", //0
+	"   |oq|   ", //1
+	"   |~~|   ", //2
+	"  (|<>|)  ", //3
+	"   \\--/   ", //4
+	"   _><_   ", //5
+	"  -\\. /-  ", //6 
+	" / |. | \\ ", //7
+	"/  |. |  \\", //8
+	"   |__|   ", //9
+	"    ||    ", //10
+	"   _||_   " //11
+};
 
-void current(string arr[]);
-void firstStage(string arr[]);
-void secondStage(string arr[]);
-void thirdStage(string arr[]);
-void fourthStage(string arr[]);
-void fifthStage(string arr[]);
-void sixthStage(string arr[]);
-void seventhStage(string arr[]);
-void eightStage(string arr[]);
-void nineStage(string arr[]);
-void tenStage(string arr[]);
-void elevenStage(string arr[]);
-void twelveStage(string arr[]);
-void thirteenStage(string arr[]);
-void finalStage(string arr[]);
-
-int main()
-{
-	//system("clear");	
-	string S[]
-	{
-			"   _[]_   ",     //0
-			"   |~~|   ",     //1
-			"   |oq|   ",     //2
-			"  (|<>|)  ",     //3
-			"   \\--/  ",    //4
-			"   _><_   ",    //5
-			"  -\\. /-  ",    //6
-			" / |. | \\ ",    //7
-			"/  |. |  \\",    //8
-			"   |__|   ",    //9
-			"    ||    ",     //10
-			"   _||_   ",     //11
-	};
-	void (*func[14])(string[]) = { firstStage, secondStage, thirdStage, fourthStage, fifthStage, sixthStage, seventhStage, eightStage, nineStage, tenStage, elevenStage, twelveStage, thirteenStage, finalStage };
-	for (int i = 0; i < 2; i++) {
-		for (int j = 0; j < 14; j++) {
-			current(S);
-			func[j](S);
-			//system("clear");
-			if (i == 1 && j == 13) current(S);
-		}
-	}
-	return 0;
-}
-
-void current(string arr[]) {
+void pechat(string a[]) {
 	for (int i = 0; i < 12; i++) {
-		cout << arr[i] << endl;
+		cout << a[i] << endl;
 	}
-	//sleep(1);
 }
 
-void firstStage(string arr[]) {
-	arr[6] = " --\\. /--  ";
-	arr[7] = "/  |. |  \\ ";
-	arr[8] = "   |. |  ";
+void stage1(string a[]) {
+	a[6] = " --\\. /-- ";
+	a[7] = "/  |. |  \\";
+	a[8] = "   |. |   ";
+	pechat(a);
 }
 
-void secondStage(string arr[]) {
-	arr[6] = "  -\\. /---  ";
-	arr[7] = " / |. |  ";
-	arr[8] = "/  |. |  ";
+void stage2(string a[]) {
+	a[6] = "  -\\. /---";
+	a[7] = " / |. |   ";
+	a[8] = "/  |. |   ";
+	pechat(a);
 }
 
-void thirdStage(string arr[]) {
-	arr[5] = "   _><_  / ";
-	arr[6] = " --\\. /--  ";
-	arr[7] = "/  |. |  ";
-	arr[8] = "   |. |  ";
+void stage3(string a[]) {
+	a[5] = "   _><_  /";
+	a[6] = " --\\. /-- ";
+	a[7] = "/  |. |   ";
+	a[8] = "   |. |   ";
+	pechat(a);
 }
 
-void fourthStage(string arr[]) {
-	arr[4] = "   \\--/  / ";
-	arr[5] = "   _><_ / ";
-	arr[6] = "  -\\. /-  ";
-	arr[7] = " / |. |  ";
-	arr[8] = "/  |. |  ";
+void stage4(string a[]) {
+	a[4] = "   \\--/  /";
+	a[5] = "   _><_ / ";
+	a[6] = "  -\\. /-  ";
+	a[7] = " / |. |   ";
+	a[8] = "/  |. |   ";
+	pechat(a);
 }
 
-void fifthStage(string arr[]) {
-	arr[4] = "   \\--/  * ";
-	arr[5] = "   _><_ / ";
-	arr[6] = " --\\. /-  ";
-	arr[7] = "/  |. |  ";
-	arr[8] = "   |. |  ";
+void stage5(string a[]) {
+	a[4] = "   \\--/  *";
+	a[6] = " --\\. /-  ";
+	a[7] = "/  |. |   ";
+	a[8] = "   |. |   ";
+	pechat(a);
 }
 
-void sixthStage(string arr[]) {
-	arr[4] = "   \\--/  / ";
-	arr[6] = "---\\. /-  ";
-	arr[7] = "   |. |  ";
+void stage6(string a[]) {
+	a[4] = "   \\--/  /";
+	a[6] = "---\\. /-  ";
+	a[7] = "   |. |   ";
+	pechat(a);
 }
 
-void seventhStage(string arr[]) {
-	arr[4] = "   \\--/  * ";
-	arr[5] = "\\  _><_ / ";
-	arr[6] = " --\\. /-  ";
+void stage7(string a[]) {
+	a[4] = "   \\--/  *";
+	a[5] = "\\  _><_ / ";
+	a[6] = " --\\. /-  ";
+	pechat(a);
 }
 
-void eightStage(string arr[]) {
-	arr[4] = "\\  \\--/  / ";
-	arr[5] = " \\ _><_ / ";
-	arr[6] = "  -\\. /-  ";
+void stage8(string a[]) {
+	a[4] = "\\  \\--/  /";
+	a[5] = " \\ _><_ / ";
+	a[6] = "  -\\. /-  ";
+	pechat(a);
 }
 
-void nineStage(string arr[]) {
-	arr[4] = "*  \\--/  * ";
+void stage9(string a[]) {
+	a[4] = "*  \\--/  *";
+	pechat(a);
 }
 
-void tenStage(string arr[]) {
-	arr[4] = "   \\--/    ";
-	arr[5] = "*  _><_  * ";
-	arr[6] = " --\\. /--  ";
+void stage10(string a[]) {
+	a[4] = "   \\--/   ";
+	a[5] = "*  _><_  *";
+	a[6] = " --\\. /-- ";
+	pechat(a);
 }
 
-void elevenStage(string arr[]) {
-	arr[5] = "   _><_    ";
-	arr[6] = "*--\\. /--*  ";
+void stage11(string a[]) {
+	a[5] = "   _><_   ";
+	a[6] = "*--\\. /--*";
+	pechat(a);
 }
 
-void twelveStage(string arr[]) {
-	arr[6] = " --\\. /--  ";
-	arr[7] = "*  |. |  * ";
+void stage12(string a[]) {
+	a[6] = " --\\. /-- ";
+	a[7] = "*  |. |  *";
+	pechat(a);
 }
 
-void thirteenStage(string arr[]) {
-	arr[6] = "  -\\. /-  ";
-	arr[7] = " / |. | \\ ";
-	arr[8] = "*  |. |  *";
+void stage13(string a[]) {
+	a[6] = "  -\\. /-  ";
+	a[7] = " / |. | \\ ";
+	a[8] = "*  |. |  *";
+	pechat(a);
 }
 
-void finalStage(string arr[]) {
-	arr[8] = "/  |. |  \\ ";
+void stage14(string a[]) {
+	a[8] = "/  |. |  \\";
+	pechat(a);
+}
+
+int main() {
+	pechat(a);
+	for (int i = 1; i <= 2; i++) {
+		stage1(a);
+		stage2(a);
+		stage3(a);
+		stage4(a);
+		stage5(a);
+		stage6(a);
+		stage7(a);
+		stage8(a);
+		stage9(a);
+		stage10(a);
+		stage11(a);
+		stage12(a);
+		stage13(a);
+		stage14(a);
+	}
 }
