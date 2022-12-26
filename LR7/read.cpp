@@ -1,63 +1,78 @@
-#include <stdio.h>
-#include <iostream>
+#define _CRT_SECURE_NO_WARNINGS
+#include<stdio.h>
+#include<iostream>
 
 using namespace std;
 
-void ChangeColor(char* buff, long fSize);
-void WriteText(char* buff, long fSize);
+void writeText(char* buff, long fileSize);
+void readText(char* buff, long fileSize);
+void changeColor(char* buff, long fileSize);
 
 int main() {
-    FILE* file;
+	FILE* file;
 
-    char filename[100];
-    cin >> filename;
+	char filename[100];
+	cin >> filename;
 
-    file = fopen(filename, "rb");
-    long fSize;
-    fseek(file, 0, SEEK_END);
-    fSize = ftell(file);
-    rewind(file);
+	file = fopen(filename, "rb");
+	long fileSize;
+	fseek(file, 0, SEEK_END);
+	fileSize = ftell(file);
+	rewind(file);
+	char* buff = new char[fileSize]();
+	fread(buff, sizeof(char), fileSize, file);
+	readText(buff, fileSize);
 
-    char* buff = new char[fSize]();
-    fread(buff, 1, fSize, file);
-    fclose(file);
+	file = fopen(filename, "wb");
+	fwrite(buff, sizeof(char), fileSize, file);
 
-    cin >> filename;
-    file = fopen(filename, "wb");
-
-    ChangeColor(buff, fSize);
-    WriteText(buff, fSize);
-
-    fwrite(buff, fSize, 1, file);
-
-    fclose(file);
-
-    free(buff);
+	fclose(file);
+	free(buff);
+	return 0;
 }
 
-void ChangeColor(char* buff, long fSize) {
-    cout << endl << endl << endl;
-    for (int i = 138; i < fSize;) {
-        buff[i] = 113 & 0xfc;
-        buff[i + 1] = 179 & 0xfc;
-        buff[i + 2] = 60 & 0xfc;
-        i += 3;
-    }
+void changeColor(char* buff, long fileSize) {
+	int m = 3, b = 204, g = 209, r = 72;
+
+	for (int i = 138; i < fileSize; i += 3) {
+		buff[i] = 113;
+		buff[i + 1] = 179;
+		buff[i + 2] = 60;
+	}
 }
-void WriteText(char* buff, long fSize) {
-    string text = "PI-2-22-3";
-    int start_of_byte = fSize - 1200;
-    string::iterator it = text.begin();
-    for (string::iterator it = text.begin(); it != text.end(); ++it) {
-        char symbol = *it;
-        int first_byte_of_symbol = (int)((symbol & (3 << 6)) >> 6);
-        int second_byte_of_symbol = (int)((symbol & (3 << 4)) >> 4);
-        int third_byte_of_symbol = (int)((symbol & (3 << 2)) >> 2);
-        int fourth_byte_of_symbol = (int)(symbol & 3);
-        buff[start_of_byte] = (buff[start_of_byte] & 0xfc) | first_byte_of_symbol;
-        buff[start_of_byte + 1] = (buff[start_of_byte + 1] & 0xfc) | second_byte_of_symbol;
-        buff[start_of_byte + 2] = (buff[start_of_byte + 2] & 0xfc) | third_byte_of_symbol;
-        buff[start_of_byte + 3] = (buff[start_of_byte + 3] & 0xfc) | fourth_byte_of_symbol;
-        start_of_byte += 4;
-    }
+
+void readText(char* buff, long fileSize) {
+	int fsize = fileSize, m = 3, eb;
+	unsigned int fb, sb, tb, fob;
+
+	for (int i = 138; i < fsize; i += 4) {
+		fb = (buff[i] & m) << 6;
+		sb = (buff[i + 1] & m) << 4;
+		tb = (buff[i + 2] & m) << 2;
+		fob = (buff[i + 3] & m);
+		eb = fb | sb | tb | fob;
+		printf("%c", eb);
+	}
+}
+
+void writeText(char* buff, long fileSize) {
+	char n[10] = { 'P','I','-','2','-','2','2','-','3' };
+	int count = 0, clean_byte = 252, ten_byte = 2;
+
+	for (int i = 138; i < fileSize; i += 4) {
+
+		if (count < 10) {
+			buff[i] = (buff[i] & clean_byte) | ((n[count] >> 6) & 3);
+			buff[i + 1] = (buff[i + 1] & clean_byte) | ((n[count] >> 4) & 3);
+			buff[i + 2] = (buff[i + 2] & clean_byte) | ((n[count] >> 2) & 3);
+			buff[i + 3] = (buff[i + 3] & clean_byte) | ((n[count]) & 3);
+		}
+		else {
+			buff[i] = buff[i] & clean_byte;
+			buff[i + 1] = (buff[i + 1] & clean_byte) | ten_byte;
+			buff[i + 2] = buff[i + 2] & clean_byte;
+			buff[i + 3] = buff[i + 3] & clean_byte;
+		}
+		count++;
+	}
 }
