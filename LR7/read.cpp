@@ -1,40 +1,31 @@
-#include <stdio.h>
+#define _CRT_SECURE_NO_WARNINGS
 #include <iostream>
-
+#include <stdio.h>
 using namespace std;
-
-void ReadText(char* buff, long fSize);
-
+void readText(char*& buff, long& fileSize) {
+	FILE* file;
+	char filename[100];
+	cin >> filename;
+	file = fopen(filename, "rb");
+	fseek(file, 0, SEEK_END);
+	fileSize = ftell(file);
+	rewind(file);
+	buff = new char[fileSize]();
+	fread(buff, sizeof(char), fileSize, file);
+	fwrite(buff, sizeof(char), fileSize, file);
+}
 int main() {
-    FILE* file;
-    char filename[100];
-    cout << "Input file name"; cin >> filename;
-    file = fopen(filename, "rb");
-
-    long fSize;
-    fseek(file, 0, SEEK_END);
-    fSize = ftell(file);
-    rewind(file);
-
-    char* buff = new char[fSize]();
-    fread(buff, 1, fSize, file);
-    ReadText(buff, fSize);
-
-    fclose(file);
-    free(buff);
-    return 0;
+	char firstByte, secondByte, thirdByte, fourthByte, united_byte,mask = 0x3;
+	char* buff = NULL;
+	long fileSize = 0,start = 138;
+	readText(buff, fileSize);
+	for (int i = 142; i < fileSize; i+=4) {
+		firstByte = (buff[i-4] & mask) << 6;
+		secondByte = (buff[i-3] & mask) << 4;
+		thirdByte = (buff[i-2] & mask) << 2;
+		fourthByte = (buff[i - 1] & mask) ;
+		united_byte =  firstByte | secondByte | thirdByte | fourthByte;
+		cout << united_byte;
+	}
+	return 0;
 }
-
-void ReadText(char* buff, long fSize) {
-    int i = fSize - 1200; //byte's size = 4 byte
-
-    while (i < fSize) {
-        int first_byte = buff[i] & 3;
-        int second_byte = buff[i + 1] & 3;
-        int third_byte = buff[i + 2] & 3;
-        int fourth_byte = buff[i + 3] & 3;
-        cout << (char)((first_byte << 6) | (second_byte << 4) | (third_byte << 2) | fourth_byte);
-        i += 4;
-    }
-}
-
