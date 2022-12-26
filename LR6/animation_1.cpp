@@ -4,7 +4,7 @@
 
 using namespace std;
 
-string a[12]{  /asdasdsadasd
+string a[12]{  
 	"   _[]_   ", //0
 	"   |~~|   ", //1
 	"   |oq|   ", //2
