@@ -4,7 +4,6 @@
 // void rmFrame();
 void head(); void legs();
 void dance();
-
 int main() {
     // rmFrame();
     dance();
