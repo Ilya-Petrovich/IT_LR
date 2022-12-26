@@ -22,8 +22,7 @@ int main()
         cout << n_1 << " % " << n_2 << " = " << n_1 % n_2 << endl;
         cout << n_1 << " + " << n_2 << " * " << n_3 << " = " << n_1 + n_2 * n_3 << endl;
         cout << "(" << n_1 << " + " << n_2 << ")" << " * " << n_3 << " = " << (n_1 + n_2) * n_3 << endl;
-    }
-    else {
+    }else {
         cout << "Invalid data" << endl;
     }
 
