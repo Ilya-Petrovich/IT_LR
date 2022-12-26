@@ -29,7 +29,7 @@ void dance() {
         head();
         switch (i % 14) {
             case 0: { 
-                std::cout << "  \\|  |/  \n";
+                std::cout << " \\|  |/  \n";
                 std::cout << "  /|UU|\\  \n";
                 std::cout << "  --\\/--  \n";
                 std::cout << " /  ||  \\ \n";
