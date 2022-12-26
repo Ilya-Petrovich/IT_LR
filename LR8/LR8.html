@@ -1,0 +1,121 @@
+﻿
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>TRP-2-22-10</title>
+    <style>
+        .siteWidth {
+            width: 1600px;
+        }
+
+        .doubleUnderline {
+            text-decoration: underline;
+            border-bottom: 3px solid #000;
+        }
+
+        .text {
+            font-size: 20px;
+        }
+
+        table {
+            border: 3px inset grey;
+            background: grey;
+        }
+
+        td {
+            border: 3px outset grey;
+            background: white;
+        }
+    </style>
+</head>
+<body class="siteWidth">
+
+    <p><font size="5"><b><i><font color="red">О</font>ктябрь уж наступил,</i></b></font></p>
+    <p align="right"><font size="5"><i>Уж роща отряхает</i></font></p>
+    <p align="center"><font face="Arial" size="5"><i>Последние листы</i></font></p>
+    <p><font size="5"><i>С нагих своих ветвей.</i></font></p>
+    <p><i><font face="Arial" color="green" size="7">Дохнул осенний </font><font face="Arial" color="blue" size="5">хлад</font>,</i></p>
+    <p><font size="5"><i><strike>Дорога промерзает,</strike></i></font></p>
+    <p align="center"><font size="5"><i>Журча, <sup>еще </sup>бежит</i></font></p>
+    <p align="right"><font size="7"><i>За <sub><span class="doubleUnderline">мельницу</span></sub><sup> ручей</sup>.</i></font></p>
+
+
+
+    <img src="apple.png" width="180" height="180"
+         alt="Яблоко" align="left"
+         vspace="0" hspace="50" />
+
+    <div class="text">
+        <br /><br />
+        Этот рисунок находится слева и текст<br />
+        выравнивается по левой границе. Эффект<br />
+        достигается без таблицы.<br />
+        <br /><br /><br />
+    </div>
+    <br />
+    <img src="orange.png" width="200" height="200"
+         alt="Апельсин" align="left"
+         vspace="0" hspace="50" />
+
+    <div align="center" class="text">
+        <br /><br />
+        Этот рисунок находится слева и текст<br />
+        выравнивается по центру. Эффект достигается без<br />
+        таблицы.<br />
+        <br /><br /><br />
+    </div>
+    <br />
+    <img src="pear.png" width="200" height="200"
+         alt="Груша" align="right"
+         vspace="0" hspace="50" />
+
+    <div align="right" class="text">
+        <br /><br />
+        Этот рисунок находится справа и текст<br />
+        выравнивается по правой границе. Эффект<br />
+        достигается без таблицы.<br />
+        <br /><br /><br />
+    </div>
+    <br />
+    <br />
+    <table class="text" align="center" cellspacing="7">
+        <thead>
+            <tr>
+                <td colspan="3" align="center"><h2>Учебная таблица</h2></td>
+            </tr>
+        </thead>
+        <tr>
+            <td>Это первая ячейка</td>
+            <td>Это вторая ячейка</td>
+            <td rowspan="3" align="center">
+                А это три ячейки<br />
+                третьего столбца<br />
+                объединились в од-<br />
+                ну большую
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                Это единственная ячейка второй строки,<br />
+                объединяющая оба столбца
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Это первая ячейка<br />
+                третьей строки
+            </td>
+            <td>
+                А это вторая ячей-<br />
+                ка третьей строки
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3" align="center">конец</td>
+        </tr>
+    </table>
+
+</body>
+</html>
