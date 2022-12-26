@@ -5,7 +5,6 @@
 using namespace std;
 
 void menu(unsigned short& a);
-void del_one_frame();
 void head(); void leg();
 void dance(); void run(); void jump();
 void magic(std::string move_left, std::string move_right);
@@ -13,7 +12,6 @@ void throw_ball();
 
 int main() {
     unsigned short choice = 0;
-    //del_one_frame();
     while (choice != 5) {
         switch (choice) {
         case 1: { dance(); break; }
@@ -34,8 +32,8 @@ void menu(unsigned short& a) {
     std::cout << "Throw a ball: \t\t4" << std::endl << std::endl;
     std::cout << "Enter 5 for exit." << std::endl;
     std::cin >> a;
-}
-void del_one_frame() { //system("cls");
+    //system("cls");  
+    //system("cls");
 }
 void head() {
     std::cout << "*    /\\                                *\n";
@@ -50,7 +48,7 @@ void leg() {
 }
 void dance() {
     for (int k = 0; k <= 28; k++) {
-        //del_one_frame();
+        //system("cls");
         std::cout << std::string(40, '*') << '\n';
         for (int i = 0; i < 6; i++) { std::cout << "*                                      *\n"; }
         head();
@@ -143,7 +141,7 @@ void dance() {
         leg();
         std::cout << std::string(40, '*') << '\n';
         //Sleep(300);
-        //del_one_frame();
+        //system("cls");
     }
 }
 void run() {
@@ -159,21 +157,21 @@ void run() {
                 std::cout << "*" << move_right << "   / |   " << move_left << " *\n";
                 std::cout << "*" << move_right << " _/  |_   " << move_left << "*\n";
                 std::cout << std::string(40, '*') << '\n';
-                //Sleep(500); del_one_frame(); 
+                //Sleep(500); //system("cls");
                 break;
             }
             case 1: {
                 std::cout << "*" << move_right << "    ||    " << move_left << "*\n";
                 std::cout << "*" << move_right << "   _||_   " << move_left << "*\n";
                 std::cout << std::string(40, '*') << '\n';
-                //Sleep(500); del_one_frame(); 
+                //Sleep(500); //system("cls"); 
                 break;
             }
             case 2: {
                 std::cout << "*" << move_right << "    | \\   " << move_left << "*\n";
                 std::cout << "*" << move_right << "   _|  \\_   " << move_left << "\b\b*\n";
                 std::cout << std::string(40, '*') << '\n';
-                //Sleep(500); del_one_frame(); 
+                //Sleep(500); //system("cls"); 
                 break;
             }
             }
@@ -190,7 +188,7 @@ void run() {
             std::cout << "*" << move_right << "   _||_   " << move_left << "*\n";
             std::cout << std::string(40, '*') << '\n';
             //Sleep(500); 
-            del_one_frame(); break;
+            //system("cls"); break;
         }
         for (; k < 3; k++) {
             magic(move_right, move_left);
@@ -200,7 +198,7 @@ void run() {
                 std::cout << "*" << move_right << " _/  |_   " << move_left << "*\n";
                 std::cout << std::string(40, '*') << '\n';
                 //Sleep(500);
-                del_one_frame();
+                //system("cls");
                 break;
             }
             case 1: {
@@ -208,7 +206,7 @@ void run() {
                 std::cout << "*" << move_right << "   _||_   " << move_left << "*\n";
                 std::cout << std::string(40, '*') << '\n';
                 //Sleep(500);
-                del_one_frame();
+                //system("cls");
                 break;
             }
             case 2: {
@@ -216,7 +214,7 @@ void run() {
                 std::cout << "*" << move_right << "   _|  \\_   " << move_left << "\b\b*\n";
                 std::cout << std::string(40, '*') << '\n';
                 //Sleep(500);
-                del_one_frame();
+                //system("cls");
                 break;
             }
             }
