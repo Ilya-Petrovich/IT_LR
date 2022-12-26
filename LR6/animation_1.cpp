@@ -1,96 +1,198 @@
-#define _CRT_SECURE_NO_WARNINGS
 #include <iostream>
-#include <stdio.h>
+#include <unistd.h>
 
-void ReadText(char* buff, long fileSize)
+using namespace std;
+
+const int h = 12, w = 10, sleeptime = 500;
+
+void output(char person[h][w])
 {
-    int first_byte, second_byte, third_byte, fourth_byte, symbol;
-    std::string result = "";
-
-    for (int i = fileSize - 1200; i < fileSize; i += 4) {
-        first_byte = buff[i];
-        second_byte = buff[i + 1];
-        third_byte = buff[i + 2];
-        fourth_byte = buff[i + 3];
-
-        symbol = ((first_byte & 3) << 6) | ((second_byte & 3) << 4) | ((third_byte & 3) << 2) | (fourth_byte & 3);
-        result += char(symbol);
+    for (int i = 0; i < h; i++) {
+        for (int j = 0; j < w; j++) {
+            cout << person[i][j];
+        }
+        cout << endl;
     }
-    std::cout << result << std::endl;
+
+    // usleep(sleeptime * 1000);
+    // system("cls");
 }
 
-void changeColor(char* buff, long fileSize)
+void pos2(char person[h][w])
 {
-    FILE* file_changeColor;
-    file_changeColor = fopen("changed_image.bmp", "wb");
-
-    for (int i = fileSize - 1200; i < fileSize; i += 3) {
-        buff[i] = 215; //&252 ???
-        buff[i + 1] = 235;
-        buff[i + 2] = 250;
-    }
-    fwrite(buff, sizeof(char), fileSize, file_changeColor);
-    fclose(file_changeColor);
+    person[6][1] = '-';
+    person[6][8] = '-';
+    person[7][1] = ' ';
+    person[7][8] = ' ';
+    person[7][0] = '/';
+    person[7][9] = '\\';
+    person[8][0] = ' ';
+    person[8][9] = ' ';
 }
 
-void writeText(char* buff, long fileSize)
+void pos3(char person[h][w])
 {
-    int first_part, second_part, third_part, fourth_part;
-    std::string text = "TRP-1-22-24";
+    person[6][1] = ' ';
+    person[6][9] = '-';
+    person[7][1] = '/';
+    person[7][0] = ' ';
+    person[7][9] = ' ';
+    person[8][0] = '/';
+}
 
-    FILE* file_write;
-    file_write = fopen("changed_image.bmp", "rb");
+void pos4(char person[h][w])
+{
+    person[6][1] = '-';
+    person[6][9] = ' ';
+    person[5][9] = '/';
+    person[7][0] = '/';
+    person[7][1] = ' ';
+    person[8][0] = ' ';
+}
 
-    fread(buff, sizeof(char), fileSize, file_write);
+void pos5(char person[h][w])
+{
+    person[4][9] = '/';
+    person[5][9] = ' ';
+    person[5][8] = '/';
+    person[6][1] = ' ';
+    person[6][8] = ' ';
+    person[7][0] = ' ';
+    person[7][1] = '/';
+    person[8][0] = '/';
+}
+void pos6(char person[h][w])
+{
+    person[6][1] = '-';
+    person[4][9] = '*';
+    person[7][0] = '/';
+    person[7][1] = ' ';
+    person[8][0] = ' ';
+}
 
-    //cleaning
-    for (int i = fileSize - 1200; i < fileSize; i++) {
-        buff[i] &= 252;
-    }
+void pos7(char person[h][w])
+{
+    person[4][9] = '/';
+    person[6][0] = '-';
+    person[7][0] = ' ';
+}
 
-    //writing
-    for (unsigned int i = 0; i < text.size(); i++) {
-        first_part = (text[i] & 192) >> 6;
-        second_part = (text[i] & 48) >> 4;
-        third_part = (text[i] & 12) >> 2;
-        fourth_part = text[i] & 3;
+void pos8(char person[h][w])
+{
+    person[4][9] = '*';
+    person[5][0] = '\\';
+    person[6][0] = ' ';
+}
 
-        buff[fileSize - 1200 + i * 4] = (buff[fileSize - 1200 + i * 4] & 252) | first_part;
-        buff[fileSize - 1200 + i * 4 + 1] = (buff[fileSize - 1200 + i * 4 + 1] & 252) | second_part;
-        buff[fileSize - 1200 + i * 4 + 2] = (buff[fileSize - 1200 + i * 4 + 2] & 252) | third_part;
-        buff[fileSize - 1200 + i * 4 + 3] = (buff[fileSize - 1200 + i * 4 + 3] & 252) | fourth_part;
-    }
+void pos9(char person[h][w])
+{
+    person[4][0] = '\\';
+    person[4][9] = '/';
+    person[5][1] = '\\';
+    person[5][0] = ' ';
+    person[6][1] = ' ';
+}
 
-    file_write = fopen("changed_image.bmp", "wb");
+void pos10(char person[h][w])
+{
+    person[4][0] = '*';
+    person[4][9] = '*';
+}
 
-    fwrite(buff, sizeof(char), fileSize, file_write);
-    fclose(file_write);
+void pos11(char person[h][w])
+{
+    person[4][0] = ' ';
+    person[4][9] = ' ';
+    person[5][0] = '*';
+    person[5][9] = '*';
+    person[5][1] = ' ';
+    person[5][8] = ' ';
+    person[6][1] = '-';
+    person[6][8] = '-';
+}
 
+void pos12(char person[h][w])
+{
+    person[5][0] = ' ';
+    person[5][9] = ' ';
+    person[6][0] = '*';
+    person[6][9] = '*';
+}
+
+void pos13(char person[h][w])
+{
+    person[6][0] = ' ';
+    person[6][9] = ' ';
+    person[7][0] = '*';
+    person[7][9] = '*';
+}
+
+void pos14(char person[h][w])
+{
+    person[6][1] = ' ';
+    person[6][8] = ' ';
+    person[7][1] = '/';
+    person[7][8] = '\\';
+    person[7][0] = ' ';
+    person[7][9] = ' ';
+    person[8][0] = '*';
+    person[8][9] = '*';
+}
+
+void pos15(char person[h][w])
+{
+    person[8][0] = '/';
+    person[8][9] = '\\';
 }
 
 int main()
 {
-    FILE* file;
-    char filename[100];
-    std::cin >> filename;
-    file = fopen(filename, "rb");
-
-    long fileSize;
-    fseek(file, 0, SEEK_END);
-    fileSize = ftell(file);
-    rewind(file);
-
-    char* buff = new char[fileSize]();
-
-    fread(buff, sizeof(char), fileSize, file);
-
-    ReadText(buff, fileSize);
-    changeColor(buff, fileSize);
-
-    writeText(buff, fileSize);
-
-    fclose(file);
-    free(buff);
+    char person[h][w]
+    {
+        {' ',' ',' ','_','[',']','_',' ',' ',' '},
+        {' ',' ',' ','|','~','~','|',' ',' ',' '},
+        {' ',' ',' ','|','o','q','|',' ',' ',' '},
+        {' ',' ','(','|','<','>','|',')',' ',' '},
+        {' ',' ',' ','\\','-','-','/',' ',' ',' '},
+        {' ',' ',' ','_','>','<','_',' ',' ',' '},
+        {' ',' ','-','\\','.',' ','/','-',' ',' '},
+        {' ','/',' ','|','.',' ','|',' ','\\',' '},
+        {'/',' ',' ','|','.',' ','|',' ',' ','\\'},
+        {' ',' ',' ','|','_','_','|',' ',' ',' '},
+        {' ',' ',' ',' ','|','|',' ',' ',' ',' '},
+        {' ',' ',' ','_','|','|','_',' ',' ',' '},
+    };
+    for (int i = 0; i < 2; i++) {
+        output(person);
+        pos2(person);
+        output(person);
+        pos3(person);
+        output(person);
+        pos4(person);
+        output(person);
+        pos5(person);
+        output(person);
+        pos6(person);
+        output(person);
+        pos7(person);
+        output(person);
+        pos8(person);
+        output(person);
+        pos9(person);
+        output(person);
+        pos10(person);
+        output(person);
+        pos11(person);
+        output(person);
+        pos12(person);
+        output(person);
+        pos13(person);
+        output(person);
+        pos14(person);
+        output(person);
+        pos15(person);
+    }
+    output(person);
 
     return 0;
 }
