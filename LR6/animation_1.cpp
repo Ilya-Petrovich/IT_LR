@@ -37,7 +37,7 @@ void print(vector<string> person)
 }
 
 void sleep() {
-    Sleep(1000);
+    sleep(1000);
     system("clear");
 }
 
