@@ -1,9 +1,8 @@
 #include <iostream>
 
 int main(){
-	int Fuel,Speed;
-	double Distance, FuelConsumption, FuelCons, dist=0;
-
+    int fuel, Time;
+    float speed, s, FuelConsumption, distance;
     std::cout << "How much fuel do you have at start? ";
     std::cin >> fuel;
     if (fuel > 50 || fuel < 0) {
@@ -44,5 +43,6 @@ int main(){
     else {
         std::cout << "\nCongratulations! You have reached destination point!\n";
     }
+    return 0;
 
 }
