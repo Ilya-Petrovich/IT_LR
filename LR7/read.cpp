@@ -23,12 +23,8 @@ int main() {
 	char* buff = new char[fileSize]();
 	fread(buff, sizeof(char), fileSize, file);
 	readText(buff, fileSize);
-	fclose(file);
-	cin >> filename;
-	file = fopen(filename, "wb");
-	changeColor(buff, fileSize);
-	writeText(buff, fileSize);
-	fwrite(buff, sizeof(char), fileSize, file);
+
+	
 	fclose(file);
 	delete[] buff;
 	return 0;
@@ -38,9 +34,9 @@ void readText(char* buff, long fileSize) {
 	int mask = 0x03;
 
 	for (int i = 138; i < fileSize; i += 4) {
-		firstByte = (buff[i] & mask) << 6;
-		secondByte = (buff[i + 1] & mask) << 4;
-		thirdByte = (buff[i + 2] & mask) << 2;
+		firstByte = (buff[i] & mask) << 6;	
+		secondByte = (buff[i + 1] & mask) << 4;	
+		thirdByte = (buff[i + 2] & mask) << 2;	
 		fourthByte = buff[i + 3] & mask;
 		sign = firstByte | secondByte | thirdByte | fourthByte;
 		printf("%c", sign);
@@ -50,14 +46,14 @@ void readText(char* buff, long fileSize) {
 void changeColor(char* buff, long fileSize) {
 
 	for (int i = 138; i < fileSize; i += 3) {
-		buff[i] = 205;
-		buff[i + 1] = 0;
-		buff[i + 2] = 0;
+		buff[i] = 205;	
+		buff[i + 1] = 90;
+		buff[i + 2] = 106;
 	}
 }
 void writeText(char* buff, long fileSize) {
 
-	char text[13] = "TRIS-1-22-4";
+	char text[12]; cin >> text;
 	int count = 0;
 
 	for (int i = 138; i < fileSize; i += 4) {
