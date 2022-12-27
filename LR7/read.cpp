@@ -22,7 +22,7 @@ void readText(char* buff, long fileSize, FILE* file) {
 }
 int main() {
 	FILE* file;
-	fopen_s(&file,"image.bmp", "rb");
+	file = fopen("image.bmp", "rb");
 	long fileSize;
 	fseek(file, 0, SEEK_END);
 	fileSize = ftell(file);
