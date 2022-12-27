@@ -1,4 +1,4 @@
-#include <stdio.h>
+include <stdio.h>
 #include <iostream>
 
 void ReadText(char* buff, long fSize);
