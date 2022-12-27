@@ -20,14 +20,13 @@ int main() {
     readText(buff, fileSize);
     fclose(file);
 
-    file = fopen(filename, "wb");
+    /*file = fopen("changed_image.bmp", "wb");
     changeColor(buff, fileSize);
     writeText(buff, fileSize);
     fwrite(buff, sizeof(char), fileSize, file);
     fclose(file);
-
+    */
     free(buff);
-    delete[] buff;
 
     return 0;
 }
