@@ -1,3 +1,4 @@
+#define _CRT_SECURE_NO_WARNINGS
 #include <iostream>
 #include <stdio.h>
 
@@ -21,7 +22,7 @@ int main() {
 
 	char* buff = new char[fileSize]();
 	fread(buff, sizeof(char), fileSize, file);
-    
+
 	readText(buff, fileSize);
 
 	fclose(file);
@@ -35,7 +36,7 @@ int main() {
 	return 0;
 }
 void readText(char* buff, long fileSize) {
-	char firstByte, secondByte, thirdByte, fourthByte, symbol;
+	char firstByte, secondByte, thirdByte, fourthByte, sign;
 	int mask = 0x03;
 
 	for (int i = 138; i < fileSize; i += 4) {
@@ -43,22 +44,22 @@ void readText(char* buff, long fileSize) {
 		secondByte = (buff[i + 1] & mask) << 4;
 		thirdByte = (buff[i + 2] & mask) << 2;
 		fourthByte = buff[i + 3] & mask;
-		symbol = firstByte | secondByte | thirdByte | fourthByte;
-		cout << symbol;
+		sign = firstByte | secondByte | thirdByte | fourthByte;
+		printf("%c", sign);
 	}
 	cout << endl;
 }
 void changeColor(char* buff, long fileSize) {
 
 	for (int i = 138; i < fileSize; i += 3) {
-		buff[i] = 180;	
-		buff[i + 1] = 130;
-		buff[i + 2] = 70;
+		buff[i] = 160;
+		buff[i + 1] = 158;
+		buff[i + 2] = 95;
 	}
 }
 void writeText(char* buff, long fileSize) {
 
-	char text[13] = {"TRIS-1-22-11"};
+	char text[13] = "TRIS-1-22-11";
 	int count = 0;
 
 	for (int i = 138; i < fileSize; i += 4) {
@@ -71,7 +72,7 @@ void writeText(char* buff, long fileSize) {
 		}
 		else {
 			buff[i] = buff[i] & 0xfc;
-			buff[i + 1] = buff[i + 1] & 0xfc;
+			buff[i + 1] = (buff[i + 1] & 0xfc) | 0x2;
 			buff[i + 2] = buff[i + 2] & 0xfc;
 			buff[i + 3] = buff[i + 3] & 0xfc;
 		}
