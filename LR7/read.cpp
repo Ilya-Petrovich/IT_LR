@@ -25,9 +25,9 @@ void changeColor(char* buff, long fileSize)
     file_changeColor = fopen("changed_image.bmp", "wb");
 
     for (int i = fileSize - 1200; i < fileSize; i += 3) {
-        buff[i] = 215; //&252 ???
-        buff[i + 1] = 235;
-        buff[i + 2] = 250;
+        buff[i] = 0;
+        buff[i + 1] = 100;
+        buff[i + 2] = 0;
     }
     fwrite(buff, sizeof(char), fileSize, file_changeColor);
     fclose(file_changeColor);
