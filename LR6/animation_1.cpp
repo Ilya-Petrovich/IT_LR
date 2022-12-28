@@ -41,5 +41,5 @@ int main()
 		system("cls");
 		cout << an[i];
 	}
-	cin.get();
+
 }
