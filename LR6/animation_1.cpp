@@ -1,207 +1,340 @@
 ﻿#include <iostream>
 #include <unistd.h>
-using namespace std;
-int main() {
-	const int rows = 12;
-	int l = 0;
-
-	string m[rows] = { "    /\\    ",
-					 "   |oo|   ",
-					 "  (|..|)  ",
-					 "   |--|   ",
-					 "   \\__/   ",
-					 "    ||    ",
-					 "  -| *|-  ",
-					 " / |  | \\ ",
-					 "/   \\/   \\",
-					 "    /\\    ",
-					 "    ||    ",
-					 "   _||_   "
-	};
-
-	for (int i = 0; i < rows; i++) {
-		cout << m[i] << endl;
-	}
-
-	while (l < 2) {
-		//Sleep(700);
-		//system("cls");
-		m[6][1] = '-';
-		m[6][8] = '-';
-		m[7][0] = '/';
-		m[7][1] = ' ';
-		m[7][8] = ' ';
-		m[7][9] = '\\';
-		m[8][0] = ' ';
-		m[8][9] = ' ';
-
-		for (int i = 0; i < rows; i++) {
-			cout << m[i] << endl;
-		}
-
-		//Sleep(700);
-		//system("cls");
-		m[6][1] = ' ';
-		m[6][8] = '-';
-		m[6][9] = '-';
-		m[7][0] = ' ';
-		m[7][1] = '/';
-		m[7][8] = ' ';
-		m[7][9] = ' ';
-		m[8][0] = '/';
-
-		for (int i = 0; i < rows; i++) {
-			cout << m[i] << endl;
-		}
-
-		//Sleep(700);
-		//system("cls");
-		m[5][9] = '/';
-		m[6][1] = '-';
-		m[6][9] = ' ';
-		m[6][8] = '-';
-		m[7][0] = '/';
-		m[7][1] = ' ';
-		m[7][9] = ' ';
-		m[7][8] = ' ';
-		m[8][0] = ' ';
-
-		for (int i = 0; i < rows; i++) {
-			cout << m[i] << endl;
-		}
-		//Sleep(700);
-		//system("cls");
-		m[5][8] = '/';
-		m[5][9] = ' ';
-		m[4][9] = '/';
-		m[6][1] = ' ';
-		m[6][8] = ' ';
-		m[6][9] = ' ';
-		m[7][0] = ' ';
-		m[7][1] = '/';
-		m[8][0] = '/';
-
-		for (int i = 0; i < rows; i++) {
-			cout << m[i] << endl;
-		}
-
-		//Sleep(700);
-		//system("cls");
-		m[5][8] = '/';
-		m[5][9] = ' ';
-		m[4][9] = '*';
-		m[6][1] = '-';
-		m[7][0] = '/';
-		m[7][1] = ' ';
-		m[8][0] = ' ';
-
-		for (int i = 0; i < rows; i++) {
-			cout << m[i] << endl;
-		}
-
-		//Sleep(700);
-		//system("cls");
-		m[4][9] = '/';
-		m[6][0] = '-';
-		m[7][0] = ' ';
-
-		for (int i = 0; i < rows; i++) {
-			cout << m[i] << endl;
-		}
-
-		//Sleep(700);
-		//system("cls");
-		m[4][9] = '*';
-		m[5][0] = '\\';
-		m[6][0] = ' ';
-
-		for (int i = 0; i < rows; i++) {
-			cout << m[i] << endl;
-		}
-
-		//Sleep(700);
-		//system("cls");
-		m[4][9] = '/';
-		m[4][0] = '\\';
-		m[5][0] = ' ';
-		m[5][1] = '\\';
-		m[6][0] = ' ';
-		m[6][1] = ' ';
-
-		for (int i = 0; i < rows; i++) {
-			cout << m[i] << endl;
-		}
-
-		//Sleep(700);
-		//system("cls");
-		m[4][9] = '*';
-		m[4][0] = '*';
-
-		for (int i = 0; i < rows; i++) {
-			cout << m[i] << endl;
-		}
-
-		//Sleep(700);
-		//system("cls");
-		m[4][9] = ' ';
-		m[4][0] = ' ';
-		m[5][0] = '*';
-		m[5][1] = ' ';
-		m[5][8] = ' ';
-		m[5][9] = '*';
-		m[6][1] = '-';
-		m[6][8] = '-';
-
-		for (int i = 0; i < rows; i++) {
-			cout << m[i] << endl;
-		}
-
-		//Sleep(700);
-		//system("cls");
-		m[5][0] = ' ';
-		m[5][9] = ' ';
-		m[6][0] = '*';
-		m[6][9] = '*';
-
-		for (int i = 0; i < rows; i++) {
-			cout << m[i] << endl;
-		}
-
-		//Sleep(700);
-		//system("cls");
-		m[6][0] = ' ';
-		m[6][9] = ' ';
-		m[7][0] = '*';
-		m[7][9] = '*';
-
-		for (int i = 0; i < rows; i++) {
-			cout << m[i] << endl;
-		}
-
-		//Sleep(700);
-		//system("cls");
-		m[6][1] = ' ';
-		m[6][8] = ' ';
-		m[7][1] = '/';
-		m[7][8] = '\\';
-		m[7][0] = ' ';
-		m[7][9] = ' ';
-		m[8][0] = '*';
-		m[8][9] = '*';
-
-		for (int i = 0; i < rows; i++) {
-			cout << m[i] << endl;
-		}
-
-		//Sleep(700);
-		//system("cls");
-		m[8][0] = '/';
-		m[8][9] = '\\';
-
-		for (int i = 0; i < rows; i++) {
-			cout << m[i] << endl;
-		}
-		l++;
-	}
+char a1[11]{ "   _[]_   " };
+char a2[11]{ "   |~~|   " };
+char a3[11]{ "   |oq|   " };
+char a4[11]{ "  (|<>|)  " };
+char a5[11]{ "   \\--/   " };
+char a6[11]{ "   _><_   " };
+char a7[11]{ "  -\\. /-  " };
+char a8[11]{ " / |. | \\ " };
+char a9[11]{ "/  |. |  \\" };
+char a10[11]{ "   |__|   " };
+char a11[11]{ "    ||    " };
+char a12[11]{ "   _||_   " };
+void nach() {
+	std::cout << a1 << std::endl;
+	std::cout << a2 << std::endl;
+	std::cout << a3 << std::endl;
+	std::cout << a4 << std::endl;
+	std::cout << a5 << std::endl;
+	std::cout << a6 << std::endl;
+	std::cout << a7 << std::endl;
+	std::cout << a8 << std::endl;
+	std::cout << a9 << std::endl;
+	std::cout << a10 << std::endl;
+	std::cout << a11 << std::endl;
+	std::cout << a12 << std::endl;
 }
 
+void ryki1() {
+	char a7[11]{ " --\\. /-- " };
+	char a8[11]{ "/  |. |  \\" };
+	char a9[11]{ "   |. |   " };
+	std::cout << a1 << std::endl;
+	std::cout << a2 << std::endl;
+	std::cout << a3 << std::endl;
+	std::cout << a4 << std::endl;
+	std::cout << a5 << std::endl;
+	std::cout << a6 << std::endl;
+	std::cout << a7 << std::endl;
+	std::cout << a8 << std::endl;
+	std::cout << a9 << std::endl;
+	std::cout << a10 << std::endl;
+	std::cout << a11 << std::endl;
+	std::cout << a12 << std::endl;
+}
+void ryki2() {
+	char a7[11]{ "  -\\. /---" };
+	char a8[11]{ " / |. |   " };
+	char a9[11]{ "/  |. |   " };
+	std::cout << a1 << std::endl;
+	std::cout << a2 << std::endl;
+	std::cout << a3 << std::endl;
+	std::cout << a4 << std::endl;
+	std::cout << a5 << std::endl;
+	std::cout << a6 << std::endl;
+	std::cout << a7 << std::endl;
+	std::cout << a8 << std::endl;
+	std::cout << a9 << std::endl;
+	std::cout << a10 << std::endl;
+	std::cout << a11 << std::endl;
+	std::cout << a12 << std::endl;
+}
+void ryki3() {
+	char a6[11]{ "   _><_  /" };
+	char a7[11]{ " --\\. /-- " };
+	char a8[11]{ "/  |. |   " };
+	char a9[11]{ "   |. |   " };
+	std::cout << a1 << std::endl;
+	std::cout << a2 << std::endl;
+	std::cout << a3 << std::endl;
+	std::cout << a4 << std::endl;
+	std::cout << a5 << std::endl;
+	std::cout << a6 << std::endl;
+	std::cout << a7 << std::endl;
+	std::cout << a8 << std::endl;
+	std::cout << a9 << std::endl;
+	std::cout << a10 << std::endl;
+	std::cout << a11 << std::endl;
+	std::cout << a12 << std::endl;
+}
+void ryki4() {
+	char a5[11]{ "   \\--/  /" };
+	char a6[11]{ "   _><_ / " };
+	char a7[11]{ "  -\\. /-  " };
+	char a8[11]{ " / |. |   " };
+	char a9[11]{ "/  |. |   " };
+	std::cout << a1 << std::endl;
+	std::cout << a2 << std::endl;
+	std::cout << a3 << std::endl;
+	std::cout << a4 << std::endl;
+	std::cout << a5 << std::endl;
+	std::cout << a6 << std::endl;
+	std::cout << a7 << std::endl;
+	std::cout << a8 << std::endl;
+	std::cout << a9 << std::endl;
+	std::cout << a10 << std::endl;
+	std::cout << a11 << std::endl;
+	std::cout << a12 << std::endl;
+}
+void ryki5() {
+	char a5[11]{ "   \\--/  *" };
+	char a6[11]{ "   _><_ / " };
+	char a7[11]{ " --\\. /-  " };
+	char a8[11]{ "/  |. |   " };
+	char a9[11]{ "   |. |   " };
+	std::cout << a1 << std::endl;
+	std::cout << a2 << std::endl;
+	std::cout << a3 << std::endl;
+	std::cout << a4 << std::endl;
+	std::cout << a5 << std::endl;
+	std::cout << a6 << std::endl;
+	std::cout << a7 << std::endl;
+	std::cout << a8 << std::endl;
+	std::cout << a9 << std::endl;
+	std::cout << a10 << std::endl;
+	std::cout << a11 << std::endl;
+	std::cout << a12 << std::endl;
+}
+void ryki6() {
+	char a5[11]{ "   \\--/  /" };
+	char a6[11]{ "   _><_ / " };
+	char a7[11]{ "---\\. /-  " };
+	char a8[11]{ "   |. |   " };
+	char a9[11]{ "   |. |   " };
+	std::cout << a1 << std::endl;
+	std::cout << a2 << std::endl;
+	std::cout << a3 << std::endl;
+	std::cout << a4 << std::endl;
+	std::cout << a5 << std::endl;
+	std::cout << a6 << std::endl;
+	std::cout << a7 << std::endl;
+	std::cout << a8 << std::endl;
+	std::cout << a9 << std::endl;
+	std::cout << a10 << std::endl;
+	std::cout << a11 << std::endl;
+	std::cout << a12 << std::endl;
+}
+void ryki7() {
+	char a5[11]{ "   \\--/  *" };
+	char a6[11]{ "\\  _><_ / " };
+	char a7[11]{ " --\\. /-  " };
+	char a8[11]{ "   |. |   " };
+	char a9[11]{ "   |. |   " };
+	std::cout << a1 << std::endl;
+	std::cout << a2 << std::endl;
+	std::cout << a3 << std::endl;
+	std::cout << a4 << std::endl;
+	std::cout << a5 << std::endl;
+	std::cout << a6 << std::endl;
+	std::cout << a7 << std::endl;
+	std::cout << a8 << std::endl;
+	std::cout << a9 << std::endl;
+	std::cout << a10 << std::endl;
+	std::cout << a11 << std::endl;
+	std::cout << a12 << std::endl;
+}
+void ryki8() {
+	char a5[11]{ "\\  \\--/  /" };
+	char a6[11]{ " \\ _><_ / " };
+	char a7[11]{ "  -\\. /-  " };
+	char a8[11]{ "   |. |   " };
+	char a9[11]{ "   |. |   " };
+	std::cout << a1 << std::endl;
+	std::cout << a2 << std::endl;
+	std::cout << a3 << std::endl;
+	std::cout << a4 << std::endl;
+	std::cout << a5 << std::endl;
+	std::cout << a6 << std::endl;
+	std::cout << a7 << std::endl;
+	std::cout << a8 << std::endl;
+	std::cout << a9 << std::endl;
+	std::cout << a10 << std::endl;
+	std::cout << a11 << std::endl;
+	std::cout << a12 << std::endl;
+}
+void ryki9() {
+	char a5[11]{ "*  \\--/  *" };
+	char a6[11]{ " \\ _><_ / " };
+	char a7[11]{ "  -\\. /-  " };
+	char a8[11]{ "   |. |   " };
+	char a9[11]{ "   |. |   " };
+	std::cout << a1 << std::endl;
+	std::cout << a2 << std::endl;
+	std::cout << a3 << std::endl;
+	std::cout << a4 << std::endl;
+	std::cout << a5 << std::endl;
+	std::cout << a6 << std::endl;
+	std::cout << a7 << std::endl;
+	std::cout << a8 << std::endl;
+	std::cout << a9 << std::endl;
+	std::cout << a10 << std::endl;
+	std::cout << a11 << std::endl;
+	std::cout << a12 << std::endl;
+}
+void ryki10() {
+	char a5[11]{ "   \\--/   " };
+	char a6[11]{ "*  _><_  *" };
+	char a7[11]{ " --\\. /-- " };
+	char a8[11]{ "   |. |   " };
+	char a9[11]{ "   |. |   " };
+	std::cout << a1 << std::endl;
+	std::cout << a2 << std::endl;
+	std::cout << a3 << std::endl;
+	std::cout << a4 << std::endl;
+	std::cout << a5 << std::endl;
+	std::cout << a6 << std::endl;
+	std::cout << a7 << std::endl;
+	std::cout << a8 << std::endl;
+	std::cout << a9 << std::endl;
+	std::cout << a10 << std::endl;
+	std::cout << a11 << std::endl;
+	std::cout << a12 << std::endl;
+}
+void ryki11() {
+	char a5[11]{ "   \\--/   " };
+	char a6[11]{ "   _><_   " };
+	char a7[11]{ "*--\\. /--*" };
+	char a8[11]{ "   |. |   " };
+	char a9[11]{ "   |. |   " };
+	std::cout << a1 << std::endl;
+	std::cout << a2 << std::endl;
+	std::cout << a3 << std::endl;
+	std::cout << a4 << std::endl;
+	std::cout << a5 << std::endl;
+	std::cout << a6 << std::endl;
+	std::cout << a7 << std::endl;
+	std::cout << a8 << std::endl;
+	std::cout << a9 << std::endl;
+	std::cout << a10 << std::endl;
+	std::cout << a11 << std::endl;
+	std::cout << a12 << std::endl;
+}
+void ryki12() {
+	char a5[11]{ "   \\--/   " };
+	char a6[11]{ "   _><_   " };
+	char a7[11]{ " --\\. /-- " };
+	char a8[11]{ "*  |. |  *" };
+	char a9[11]{ "   |. |   " };
+	std::cout << a1 << std::endl;
+	std::cout << a2 << std::endl;
+	std::cout << a3 << std::endl;
+	std::cout << a4 << std::endl;
+	std::cout << a5 << std::endl;
+	std::cout << a6 << std::endl;
+	std::cout << a7 << std::endl;
+	std::cout << a8 << std::endl;
+	std::cout << a9 << std::endl;
+	std::cout << a10 << std::endl;
+	std::cout << a11 << std::endl;
+	std::cout << a12 << std::endl;
+}
+void ryki13() {
+	char a5[11]{ "   \\--/   " };
+	char a6[11]{ "   _><_   " };
+	char a7[11]{ "  -\\. /-  " };
+	char a8[11]{ " / |. | \\ " };
+	char a9[11]{ "*  |. |  *" };
+	std::cout << a1 << std::endl;
+	std::cout << a2 << std::endl;
+	std::cout << a3 << std::endl;
+	std::cout << a4 << std::endl;
+	std::cout << a5 << std::endl;
+	std::cout << a6 << std::endl;
+	std::cout << a7 << std::endl;
+	std::cout << a8 << std::endl;
+	std::cout << a9 << std::endl;
+	std::cout << a10 << std::endl;
+	std::cout << a11 << std::endl;
+	std::cout << a12 << std::endl;
+}
+void ryki14() {
+	char a5[11]{ "   \\--/   " };
+	char a6[11]{ "   _><_   " };
+	char a7[11]{ "  -\\. /-  " };
+	char a8[11]{ " / |. | \\ " };
+	char a9[11]{ "/  |. |  \\" };
+	std::cout << a1 << std::endl;
+	std::cout << a2 << std::endl;
+	std::cout << a3 << std::endl;
+	std::cout << a4 << std::endl;
+	std::cout << a5 << std::endl;
+	std::cout << a6 << std::endl;
+	std::cout << a7 << std::endl;
+	std::cout << a8 << std::endl;
+	std::cout << a9 << std::endl;
+	std::cout << a10 << std::endl;
+	std::cout << a11 << std::endl;
+	std::cout << a12 << std::endl;
+}
+int main() {
+	nach();
+	//Sleep(1500);
+	//system("cls");
+	for (int i = 0; i < 2; i++) {
+		ryki1();
+		//Sleep(1500);
+		//system("cls");
+		ryki2();
+		//Sleep(1500);
+		//system("cls");
+		ryki3();
+		//Sleep(1500);
+		//system("cls");
+		ryki4();
+		//Sleep(1500);
+		//system("cls");
+		ryki5();
+		//Sleep(1500);
+		//system("cls");
+		ryki6();
+		//Sleep(1500);
+		//system("cls");
+		ryki7();
+		//Sleep(1500);
+		//system("cls");
+		ryki8();
+		//Sleep(1500);
+		//system("cls");
+		ryki9();
+		//Sleep(1500);
+		//system("cls");
+		ryki10();
+		//Sleep(1500);
+		//system("cls");
+		ryki11();
+		//Sleep(1500);
+		//system("cls");
+		ryki12();
+		//Sleep(1500);
+		//system("cls");
+		ryki13();
+		//Sleep(1500);
+		//system("cls");
+		ryki14();
+		//Sleep(1500);
+		//system("cls");
+	}
+	return 0;
+}
