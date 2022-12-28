@@ -36,7 +36,7 @@ void changeColor(char* buff, long fileSize)
 void writeText(char* buff, long fileSize)
 {
     int first_part, second_part, third_part, fourth_part;
-    std::string text = "TRP-1-22-31";
+    std::string text = "TRP-1-22-31 ";
 
     FILE* file_write;
     file_write = fopen("changed_image.bmp", "rb");
