@@ -1,7 +1,7 @@
 #include<iostream>
 //#include <windows.h>
 #include<string>
-#define OPEN
+#define O
 
 using namespace std;
 
@@ -232,8 +232,6 @@ void run() {
 		if (i == 0) {
 			k = 1;
 		}
-
-
 
 		for (; k < 3; k++) {
 			if (i == 28 and k == 2) {
