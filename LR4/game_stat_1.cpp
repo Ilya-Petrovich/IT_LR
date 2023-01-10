@@ -2,6 +2,7 @@
 using namespace std;
 
 double f, s, speed, fuelConsumption, distancetraveled, fuelconsumed, distance = 360, fuelremained, asd, k = 3.6;
+bool str = false;
 int timespent;
 
 void start();
@@ -47,10 +48,10 @@ void start()
 	cin >> f;
 	if (f >= 0 and f <= 50)
 	{
-		fuel_n();
 
 		cout << "\nCar stats" << endl;
 		cout << "Fuel: " << f << endl;
+		fuel_n();
 		cout << "Fuel capacity: 50" << endl;
 		cout << "Fuel consumption: 0" << endl;
 		cout << "Speed: 0" << endl;
@@ -59,8 +60,10 @@ void start()
 		cout << "Distance: 360 km" << endl;
 		cout << "----------------------------------------" << endl;
 		cout << "You have to drive a route 360 km long." << endl;
-		cout << "But first you need to check if you have enough fuel." << endl;
-		cout << endl;
+		cout << "But first you need to check if you have enough fuel.\n" << endl;
+		if (str) {
+			cout << "Your fuel before start: " << f << endl << endl;
+		}
 		cout << "What speed will you choose? ";
 
 		cin >> speed;
@@ -112,6 +115,7 @@ void fuel_n()
 	if (f < 25)
 	{
 		f += 25;
+		str = true;
 	}
 
 	else
