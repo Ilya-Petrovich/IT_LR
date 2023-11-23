@@ -5,6 +5,7 @@ int main() {
 	setlocale(LC_ALL, "RUS");
 
 	int num_1, num_2, num_3;
+	// lol
 
 	cout << "Type the first number: ";
 	cin >> num_1;
